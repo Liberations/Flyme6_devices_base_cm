@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/display/DisplayPowerState;
 
     .prologue
-    .line 303
     iput-object p1, p0, Lcom/android/server/display/DisplayPowerState$3;->this$0:Lcom/android/server/display/DisplayPowerState;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,14 +42,12 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 306
     iget-object v1, p0, Lcom/android/server/display/DisplayPowerState$3;->this$0:Lcom/android/server/display/DisplayPowerState;
 
     const/4 v2, 0x0
 
     invoke-static {v1, v2}, Lcom/android/server/display/DisplayPowerState;->-set3(Lcom/android/server/display/DisplayPowerState;Z)Z
 
-    .line 308
     iget-object v1, p0, Lcom/android/server/display/DisplayPowerState$3;->this$0:Lcom/android/server/display/DisplayPowerState;
 
     invoke-static {v1}, Lcom/android/server/display/DisplayPowerState;->-get7(Lcom/android/server/display/DisplayPowerState;)I
@@ -59,7 +56,6 @@
 
     if-eq v1, v3, :cond_2
 
-    .line 309
     iget-object v1, p0, Lcom/android/server/display/DisplayPowerState$3;->this$0:Lcom/android/server/display/DisplayPowerState;
 
     invoke-static {v1}, Lcom/android/server/display/DisplayPowerState;->-get3(Lcom/android/server/display/DisplayPowerState;)F
@@ -78,7 +74,6 @@
 
     move-result v0
 
-    .line 310
     .local v0, "brightness":I
     :goto_0
     iget-object v1, p0, Lcom/android/server/display/DisplayPowerState$3;->this$0:Lcom/android/server/display/DisplayPowerState;
@@ -99,37 +94,31 @@
 
     if-eqz v1, :cond_3
 
-    .line 311
     invoke-static {}, Lcom/android/server/display/DisplayPowerState;->-get0()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 312
-    const-string/jumbo v1, "DisplayPowerState"
+    const-string v1, "DisplayPowerState"
 
-    const-string/jumbo v2, "Screen ready"
+    const-string v2, "Screen ready"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 314
     :cond_0
     iget-object v1, p0, Lcom/android/server/display/DisplayPowerState$3;->this$0:Lcom/android/server/display/DisplayPowerState;
 
     invoke-static {v1, v3}, Lcom/android/server/display/DisplayPowerState;->-set2(Lcom/android/server/display/DisplayPowerState;Z)Z
 
-    .line 315
     iget-object v1, p0, Lcom/android/server/display/DisplayPowerState$3;->this$0:Lcom/android/server/display/DisplayPowerState;
 
     invoke-static {v1}, Lcom/android/server/display/DisplayPowerState;->-wrap0(Lcom/android/server/display/DisplayPowerState;)V
 
-    .line 305
     :cond_1
     :goto_1
     return-void
 
-    .line 309
     .end local v0    # "brightness":I
     :cond_2
     const/4 v0, 0x0
@@ -137,7 +126,6 @@
     .restart local v0    # "brightness":I
     goto :goto_0
 
-    .line 317
     :cond_3
     invoke-static {}, Lcom/android/server/display/DisplayPowerState;->-get0()Z
 
@@ -145,10 +133,9 @@
 
     if-eqz v1, :cond_1
 
-    .line 318
-    const-string/jumbo v1, "DisplayPowerState"
+    const-string v1, "DisplayPowerState"
 
-    const-string/jumbo v2, "Screen not ready"
+    const-string v2, "Screen not ready"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 

@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/SystemServer;
 
     .prologue
-    .line 241
     iput-object p1, p0, Lcom/android/server/SystemServer$1;->this$0:Lcom/android/server/SystemServer;
 
     invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
@@ -38,13 +37,11 @@
     .locals 2
 
     .prologue
-    .line 244
-    const-string/jumbo v0, "system_server"
+    const-string v0, "system_server"
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/android/internal/os/SamplingProfilerIntegration;->writeSnapshot(Ljava/lang/String;Landroid/content/pm/PackageInfo;)V
 
-    .line 243
     return-void
 .end method

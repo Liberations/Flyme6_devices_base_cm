@@ -33,7 +33,6 @@
     .param p3, "val$canDoze"    # Z
 
     .prologue
-    .line 1095
     iput-object p1, p0, Landroid/service/dreams/DreamService$DreamServiceWrapper$1;->this$1:Landroid/service/dreams/DreamService$DreamServiceWrapper;
 
     iput-object p2, p0, Landroid/service/dreams/DreamService$DreamServiceWrapper$1;->val$windowToken:Landroid/os/IBinder;
@@ -51,7 +50,6 @@
     .locals 3
 
     .prologue
-    .line 1098
     iget-object v0, p0, Landroid/service/dreams/DreamService$DreamServiceWrapper$1;->this$1:Landroid/service/dreams/DreamService$DreamServiceWrapper;
 
     iget-object v0, v0, Landroid/service/dreams/DreamService$DreamServiceWrapper;->this$0:Landroid/service/dreams/DreamService;
@@ -62,6 +60,5 @@
 
     invoke-static {v0, v1, v2}, Landroid/service/dreams/DreamService;->-wrap0(Landroid/service/dreams/DreamService;Landroid/os/IBinder;Z)V
 
-    .line 1097
     return-void
 .end method

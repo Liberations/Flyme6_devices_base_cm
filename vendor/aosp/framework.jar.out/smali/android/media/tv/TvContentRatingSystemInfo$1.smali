@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 84
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 87
     new-instance v0, Landroid/media/tv/TvContentRatingSystemInfo;
 
     const/4 v1, 0x0
@@ -60,7 +58,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 86
     invoke-virtual {p0, p1}, Landroid/media/tv/TvContentRatingSystemInfo$1;->createFromParcel(Landroid/os/Parcel;)Landroid/media/tv/TvContentRatingSystemInfo;
 
     move-result-object v0
@@ -73,7 +70,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 92
     new-array v0, p1, [Landroid/media/tv/TvContentRatingSystemInfo;
 
     return-object v0
@@ -84,7 +80,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 91
     invoke-virtual {p0, p1}, Landroid/media/tv/TvContentRatingSystemInfo$1;->newArray(I)[Landroid/media/tv/TvContentRatingSystemInfo;
 
     move-result-object v0

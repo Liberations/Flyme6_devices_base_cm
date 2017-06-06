@@ -24,10 +24,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 155
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 154
     return-void
 .end method
 
@@ -38,17 +36,14 @@
     .param p1, "phase"    # I
 
     .prologue
-    .line 166
     const/16 v0, 0x226
 
     if-ne p1, v0, :cond_0
 
-    .line 167
     iget-object v0, p0, Lcom/android/server/MountService$Lifecycle;->mMountService:Lcom/android/server/MountService;
 
     invoke-static {v0}, Lcom/android/server/MountService;->-wrap11(Lcom/android/server/MountService;)V
 
-    .line 165
     :cond_0
     return-void
 .end method
@@ -58,12 +53,10 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 178
     iget-object v0, p0, Lcom/android/server/MountService$Lifecycle;->mMountService:Lcom/android/server/MountService;
 
     invoke-static {v0, p1}, Lcom/android/server/MountService;->-wrap7(Lcom/android/server/MountService;I)V
 
-    .line 177
     return-void
 .end method
 
@@ -71,7 +64,6 @@
     .locals 2
 
     .prologue
-    .line 160
     new-instance v0, Lcom/android/server/MountService;
 
     invoke-virtual {p0}, Lcom/android/server/MountService$Lifecycle;->getContext()Landroid/content/Context;
@@ -82,14 +74,12 @@
 
     iput-object v0, p0, Lcom/android/server/MountService$Lifecycle;->mMountService:Lcom/android/server/MountService;
 
-    .line 161
-    const-string/jumbo v0, "mount"
+    const-string v0, "mount"
 
     iget-object v1, p0, Lcom/android/server/MountService$Lifecycle;->mMountService:Lcom/android/server/MountService;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/MountService$Lifecycle;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 159
     return-void
 .end method
 
@@ -98,11 +88,9 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 173
     iget-object v0, p0, Lcom/android/server/MountService$Lifecycle;->mMountService:Lcom/android/server/MountService;
 
     invoke-static {v0, p1}, Lcom/android/server/MountService;->-wrap8(Lcom/android/server/MountService;I)V
 
-    .line 172
     return-void
 .end method

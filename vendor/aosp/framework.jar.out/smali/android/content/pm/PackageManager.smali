@@ -494,7 +494,6 @@
     .locals 0
 
     .prologue
-    .line 67
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -509,42 +508,33 @@
 
     const/4 v0, 0x2
 
-    .line 4736
     packed-switch p0, :pswitch_data_0
 
-    .line 4743
     :pswitch_0
     return v1
 
-    .line 4737
     :pswitch_1
     const/4 v0, 0x0
 
     return v0
 
-    .line 4738
     :pswitch_2
     return v1
 
-    .line 4739
     :pswitch_3
     return v0
 
-    .line 4740
     :pswitch_4
     return v0
 
-    .line 4741
     :pswitch_5
     return v0
 
-    .line 4742
     :pswitch_6
     const/4 v0, 0x3
 
     return v0
 
-    .line 4736
     :pswitch_data_0
     .packed-switch -0x5
         :pswitch_6
@@ -562,10 +552,8 @@
     .param p0, "status"    # I
 
     .prologue
-    .line 4723
     packed-switch p0, :pswitch_data_0
 
-    .line 4730
     :pswitch_0
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
@@ -573,43 +561,36 @@
 
     return-object v0
 
-    .line 4724
     :pswitch_1
-    const-string/jumbo v0, "DELETE_SUCCEEDED"
+    const-string v0, "DELETE_SUCCEEDED"
 
     return-object v0
 
-    .line 4725
     :pswitch_2
-    const-string/jumbo v0, "DELETE_FAILED_INTERNAL_ERROR"
+    const-string v0, "DELETE_FAILED_INTERNAL_ERROR"
 
     return-object v0
 
-    .line 4726
     :pswitch_3
-    const-string/jumbo v0, "DELETE_FAILED_DEVICE_POLICY_MANAGER"
+    const-string v0, "DELETE_FAILED_DEVICE_POLICY_MANAGER"
 
     return-object v0
 
-    .line 4727
     :pswitch_4
-    const-string/jumbo v0, "DELETE_FAILED_USER_RESTRICTED"
+    const-string v0, "DELETE_FAILED_USER_RESTRICTED"
 
     return-object v0
 
-    .line 4728
     :pswitch_5
-    const-string/jumbo v0, "DELETE_FAILED_OWNER_BLOCKED"
+    const-string v0, "DELETE_FAILED_OWNER_BLOCKED"
 
     return-object v0
 
-    .line 4729
     :pswitch_6
-    const-string/jumbo v0, "DELETE_FAILED_ABORTED"
+    const-string v0, "DELETE_FAILED_ABORTED"
 
     return-object v0
 
-    .line 4723
     :pswitch_data_0
     .packed-switch -0x5
         :pswitch_6
@@ -628,16 +609,13 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 4713
     invoke-static {p0}, Landroid/content/pm/PackageManager;->deleteStatusToString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4714
     .local v0, "str":Ljava/lang/String;
     if-eqz p1, :cond_0
 
-    .line 4715
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -646,7 +624,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, ": "
+    const-string v2, ": "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -662,7 +640,6 @@
 
     return-object v1
 
-    .line 4717
     :cond_0
     return-object v0
 .end method
@@ -682,187 +659,142 @@
 
     const/4 v0, 0x4
 
-    .line 4664
     sparse-switch p0, :sswitch_data_0
 
-    .line 4707
     const/4 v0, 0x1
 
     return v0
 
-    .line 4665
     :sswitch_0
     const/4 v0, 0x0
 
     return v0
 
-    .line 4666
     :sswitch_1
     return v1
 
-    .line 4667
     :sswitch_2
     return v0
 
-    .line 4668
     :sswitch_3
     return v0
 
-    .line 4669
     :sswitch_4
     return v3
 
-    .line 4670
     :sswitch_5
     return v1
 
-    .line 4671
     :sswitch_6
     return v1
 
-    .line 4672
     :sswitch_7
     return v1
 
-    .line 4673
     :sswitch_8
     return v1
 
-    .line 4674
     :sswitch_9
     return v2
 
-    .line 4675
     :sswitch_a
     return v1
 
-    .line 4676
     :sswitch_b
     return v0
 
-    .line 4677
     :sswitch_c
     return v2
 
-    .line 4678
     :sswitch_d
     return v1
 
-    .line 4679
     :sswitch_e
     return v2
 
-    .line 4680
     :sswitch_f
     return v0
 
-    .line 4681
     :sswitch_10
     return v2
 
-    .line 4682
     :sswitch_11
     return v2
 
-    .line 4683
     :sswitch_12
     return v3
 
-    .line 4684
     :sswitch_13
     return v3
 
-    .line 4685
     :sswitch_14
     return v3
 
-    .line 4686
     :sswitch_15
     return v4
 
-    .line 4687
     :sswitch_16
     return v4
 
-    .line 4688
     :sswitch_17
     return v0
 
-    .line 4689
     :sswitch_18
     return v0
 
-    .line 4690
     :sswitch_19
     return v0
 
-    .line 4691
     :sswitch_1a
     return v0
 
-    .line 4692
     :sswitch_1b
     return v0
 
-    .line 4693
     :sswitch_1c
     return v0
 
-    .line 4694
     :sswitch_1d
     return v0
 
-    .line 4695
     :sswitch_1e
     return v0
 
-    .line 4696
     :sswitch_1f
     return v0
 
-    .line 4697
     :sswitch_20
     return v0
 
-    .line 4698
     :sswitch_21
     return v0
 
-    .line 4699
     :sswitch_22
     return v0
 
-    .line 4700
     :sswitch_23
     return v0
 
-    .line 4701
     :sswitch_24
     return v0
 
-    .line 4702
     :sswitch_25
     const/4 v0, 0x1
 
     return v0
 
-    .line 4703
     :sswitch_26
     return v2
 
-    .line 4704
     :sswitch_27
     return v1
 
-    .line 4705
     :sswitch_28
     return v2
 
-    .line 4706
     :sswitch_29
     return v4
 
-    .line 4664
     :sswitch_data_0
     .sparse-switch
         -0x73 -> :sswitch_29
@@ -915,263 +847,219 @@
     .param p0, "status"    # I
 
     .prologue
-    .line 4616
     sparse-switch p0, :sswitch_data_0
 
-    .line 4658
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 
-    .line 4617
     :sswitch_0
-    const-string/jumbo v0, "INSTALL_SUCCEEDED"
+    const-string v0, "INSTALL_SUCCEEDED"
 
     return-object v0
 
-    .line 4618
     :sswitch_1
-    const-string/jumbo v0, "INSTALL_FAILED_ALREADY_EXISTS"
+    const-string v0, "INSTALL_FAILED_ALREADY_EXISTS"
 
     return-object v0
 
-    .line 4619
     :sswitch_2
-    const-string/jumbo v0, "INSTALL_FAILED_INVALID_APK"
+    const-string v0, "INSTALL_FAILED_INVALID_APK"
 
     return-object v0
 
-    .line 4620
     :sswitch_3
-    const-string/jumbo v0, "INSTALL_FAILED_INVALID_URI"
+    const-string v0, "INSTALL_FAILED_INVALID_URI"
 
     return-object v0
 
-    .line 4621
     :sswitch_4
-    const-string/jumbo v0, "INSTALL_FAILED_INSUFFICIENT_STORAGE"
+    const-string v0, "INSTALL_FAILED_INSUFFICIENT_STORAGE"
 
     return-object v0
 
-    .line 4622
     :sswitch_5
-    const-string/jumbo v0, "INSTALL_FAILED_DUPLICATE_PACKAGE"
+    const-string v0, "INSTALL_FAILED_DUPLICATE_PACKAGE"
 
     return-object v0
 
-    .line 4623
     :sswitch_6
-    const-string/jumbo v0, "INSTALL_FAILED_NO_SHARED_USER"
+    const-string v0, "INSTALL_FAILED_NO_SHARED_USER"
 
     return-object v0
 
-    .line 4624
     :sswitch_7
-    const-string/jumbo v0, "INSTALL_FAILED_UPDATE_INCOMPATIBLE"
+    const-string v0, "INSTALL_FAILED_UPDATE_INCOMPATIBLE"
 
     return-object v0
 
-    .line 4625
     :sswitch_8
-    const-string/jumbo v0, "INSTALL_FAILED_SHARED_USER_INCOMPATIBLE"
+    const-string v0, "INSTALL_FAILED_SHARED_USER_INCOMPATIBLE"
 
     return-object v0
 
-    .line 4626
     :sswitch_9
-    const-string/jumbo v0, "INSTALL_FAILED_MISSING_SHARED_LIBRARY"
+    const-string v0, "INSTALL_FAILED_MISSING_SHARED_LIBRARY"
 
     return-object v0
 
-    .line 4627
     :sswitch_a
-    const-string/jumbo v0, "INSTALL_FAILED_REPLACE_COULDNT_DELETE"
+    const-string v0, "INSTALL_FAILED_REPLACE_COULDNT_DELETE"
 
     return-object v0
 
-    .line 4628
     :sswitch_b
-    const-string/jumbo v0, "INSTALL_FAILED_DEXOPT"
+    const-string v0, "INSTALL_FAILED_DEXOPT"
 
     return-object v0
 
-    .line 4629
     :sswitch_c
-    const-string/jumbo v0, "INSTALL_FAILED_OLDER_SDK"
+    const-string v0, "INSTALL_FAILED_OLDER_SDK"
 
     return-object v0
 
-    .line 4630
     :sswitch_d
-    const-string/jumbo v0, "INSTALL_FAILED_CONFLICTING_PROVIDER"
+    const-string v0, "INSTALL_FAILED_CONFLICTING_PROVIDER"
 
     return-object v0
 
-    .line 4631
     :sswitch_e
-    const-string/jumbo v0, "INSTALL_FAILED_NEWER_SDK"
+    const-string v0, "INSTALL_FAILED_NEWER_SDK"
 
     return-object v0
 
-    .line 4632
     :sswitch_f
-    const-string/jumbo v0, "INSTALL_FAILED_TEST_ONLY"
+    const-string v0, "INSTALL_FAILED_TEST_ONLY"
 
     return-object v0
 
-    .line 4633
     :sswitch_10
-    const-string/jumbo v0, "INSTALL_FAILED_CPU_ABI_INCOMPATIBLE"
+    const-string v0, "INSTALL_FAILED_CPU_ABI_INCOMPATIBLE"
 
     return-object v0
 
-    .line 4634
     :sswitch_11
-    const-string/jumbo v0, "INSTALL_FAILED_MISSING_FEATURE"
+    const-string v0, "INSTALL_FAILED_MISSING_FEATURE"
 
     return-object v0
 
-    .line 4635
     :sswitch_12
-    const-string/jumbo v0, "INSTALL_FAILED_CONTAINER_ERROR"
+    const-string v0, "INSTALL_FAILED_CONTAINER_ERROR"
 
     return-object v0
 
-    .line 4636
     :sswitch_13
-    const-string/jumbo v0, "INSTALL_FAILED_INVALID_INSTALL_LOCATION"
+    const-string v0, "INSTALL_FAILED_INVALID_INSTALL_LOCATION"
 
     return-object v0
 
-    .line 4637
     :sswitch_14
-    const-string/jumbo v0, "INSTALL_FAILED_MEDIA_UNAVAILABLE"
+    const-string v0, "INSTALL_FAILED_MEDIA_UNAVAILABLE"
 
     return-object v0
 
-    .line 4638
     :sswitch_15
-    const-string/jumbo v0, "INSTALL_FAILED_VERIFICATION_TIMEOUT"
+    const-string v0, "INSTALL_FAILED_VERIFICATION_TIMEOUT"
 
     return-object v0
 
-    .line 4639
     :sswitch_16
-    const-string/jumbo v0, "INSTALL_FAILED_VERIFICATION_FAILURE"
+    const-string v0, "INSTALL_FAILED_VERIFICATION_FAILURE"
 
     return-object v0
 
-    .line 4640
     :sswitch_17
-    const-string/jumbo v0, "INSTALL_FAILED_PACKAGE_CHANGED"
+    const-string v0, "INSTALL_FAILED_PACKAGE_CHANGED"
 
     return-object v0
 
-    .line 4641
     :sswitch_18
-    const-string/jumbo v0, "INSTALL_FAILED_UID_CHANGED"
+    const-string v0, "INSTALL_FAILED_UID_CHANGED"
 
     return-object v0
 
-    .line 4642
     :sswitch_19
-    const-string/jumbo v0, "INSTALL_FAILED_VERSION_DOWNGRADE"
+    const-string v0, "INSTALL_FAILED_VERSION_DOWNGRADE"
 
     return-object v0
 
-    .line 4643
     :sswitch_1a
-    const-string/jumbo v0, "INSTALL_PARSE_FAILED_NOT_APK"
+    const-string v0, "INSTALL_PARSE_FAILED_NOT_APK"
 
     return-object v0
 
-    .line 4644
     :sswitch_1b
-    const-string/jumbo v0, "INSTALL_PARSE_FAILED_BAD_MANIFEST"
+    const-string v0, "INSTALL_PARSE_FAILED_BAD_MANIFEST"
 
     return-object v0
 
-    .line 4645
     :sswitch_1c
-    const-string/jumbo v0, "INSTALL_PARSE_FAILED_UNEXPECTED_EXCEPTION"
+    const-string v0, "INSTALL_PARSE_FAILED_UNEXPECTED_EXCEPTION"
 
     return-object v0
 
-    .line 4646
     :sswitch_1d
-    const-string/jumbo v0, "INSTALL_PARSE_FAILED_NO_CERTIFICATES"
+    const-string v0, "INSTALL_PARSE_FAILED_NO_CERTIFICATES"
 
     return-object v0
 
-    .line 4647
     :sswitch_1e
-    const-string/jumbo v0, "INSTALL_PARSE_FAILED_INCONSISTENT_CERTIFICATES"
+    const-string v0, "INSTALL_PARSE_FAILED_INCONSISTENT_CERTIFICATES"
 
     return-object v0
 
-    .line 4648
     :sswitch_1f
-    const-string/jumbo v0, "INSTALL_PARSE_FAILED_CERTIFICATE_ENCODING"
+    const-string v0, "INSTALL_PARSE_FAILED_CERTIFICATE_ENCODING"
 
     return-object v0
 
-    .line 4649
     :sswitch_20
-    const-string/jumbo v0, "INSTALL_PARSE_FAILED_BAD_PACKAGE_NAME"
+    const-string v0, "INSTALL_PARSE_FAILED_BAD_PACKAGE_NAME"
 
     return-object v0
 
-    .line 4650
     :sswitch_21
-    const-string/jumbo v0, "INSTALL_PARSE_FAILED_BAD_SHARED_USER_ID"
+    const-string v0, "INSTALL_PARSE_FAILED_BAD_SHARED_USER_ID"
 
     return-object v0
 
-    .line 4651
     :sswitch_22
-    const-string/jumbo v0, "INSTALL_PARSE_FAILED_MANIFEST_MALFORMED"
+    const-string v0, "INSTALL_PARSE_FAILED_MANIFEST_MALFORMED"
 
     return-object v0
 
-    .line 4652
     :sswitch_23
-    const-string/jumbo v0, "INSTALL_PARSE_FAILED_MANIFEST_EMPTY"
+    const-string v0, "INSTALL_PARSE_FAILED_MANIFEST_EMPTY"
 
     return-object v0
 
-    .line 4653
     :sswitch_24
-    const-string/jumbo v0, "INSTALL_FAILED_INTERNAL_ERROR"
+    const-string v0, "INSTALL_FAILED_INTERNAL_ERROR"
 
     return-object v0
 
-    .line 4654
     :sswitch_25
-    const-string/jumbo v0, "INSTALL_FAILED_USER_RESTRICTED"
+    const-string v0, "INSTALL_FAILED_USER_RESTRICTED"
 
     return-object v0
 
-    .line 4655
     :sswitch_26
-    const-string/jumbo v0, "INSTALL_FAILED_DUPLICATE_PERMISSION"
+    const-string v0, "INSTALL_FAILED_DUPLICATE_PERMISSION"
 
     return-object v0
 
-    .line 4656
     :sswitch_27
-    const-string/jumbo v0, "INSTALL_FAILED_NO_MATCHING_ABIS"
+    const-string v0, "INSTALL_FAILED_NO_MATCHING_ABIS"
 
     return-object v0
 
-    .line 4657
     :sswitch_28
-    const-string/jumbo v0, "INSTALL_FAILED_ABORTED"
+    const-string v0, "INSTALL_FAILED_ABORTED"
 
     return-object v0
 
-    .line 4616
     :sswitch_data_0
     .sparse-switch
         -0x73 -> :sswitch_28
@@ -1224,16 +1112,13 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 4606
     invoke-static {p0}, Landroid/content/pm/PackageManager;->installStatusToString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4607
     .local v0, "str":Ljava/lang/String;
     if-eqz p1, :cond_0
 
-    .line 4608
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1242,7 +1127,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, ": "
+    const-string v2, ": "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1258,7 +1143,6 @@
 
     return-object v1
 
-    .line 4610
     :cond_0
     return-object v0
 .end method
@@ -1272,7 +1156,6 @@
 
     const/4 v1, 0x0
 
-    .line 4504
     if-ltz p0, :cond_0
 
     const/16 v2, 0x64
@@ -1294,53 +1177,44 @@
     .param p0, "flag"    # I
 
     .prologue
-    .line 4749
     sparse-switch p0, :sswitch_data_0
 
-    .line 4756
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 
-    .line 4750
     :sswitch_0
-    const-string/jumbo v0, "GRANTED_BY_DEFAULT"
+    const-string v0, "GRANTED_BY_DEFAULT"
 
     return-object v0
 
-    .line 4751
     :sswitch_1
-    const-string/jumbo v0, "POLICY_FIXED"
+    const-string v0, "POLICY_FIXED"
 
     return-object v0
 
-    .line 4752
     :sswitch_2
-    const-string/jumbo v0, "SYSTEM_FIXED"
+    const-string v0, "SYSTEM_FIXED"
 
     return-object v0
 
-    .line 4753
     :sswitch_3
-    const-string/jumbo v0, "USER_SET"
+    const-string v0, "USER_SET"
 
     return-object v0
 
-    .line 4754
     :sswitch_4
-    const-string/jumbo v0, "REVOKE_ON_UPGRADE"
+    const-string v0, "REVOKE_ON_UPGRADE"
 
     return-object v0
 
-    .line 4755
     :sswitch_5
-    const-string/jumbo v0, "USER_FIXED"
+    const-string v0, "USER_FIXED"
 
     return-object v0
 
-    .line 4749
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_3
@@ -1385,10 +1259,9 @@
     .param p5, "userId"    # I
 
     .prologue
-    .line 4254
     new-instance v0, Ljava/lang/RuntimeException;
 
-    const-string/jumbo v1, "Not implemented. Must override in a subclass."
+    const-string v1, "Not implemented. Must override in a subclass."
 
     invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
@@ -1400,44 +1273,38 @@
     .param p1, "permissions"    # [Ljava/lang/String;
 
     .prologue
-    .line 2686
     invoke-static {p1}, Lcom/android/internal/util/ArrayUtils;->isEmpty([Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 2687
     new-instance v1, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v2, "permission cannot be null or empty"
+    const-string v2, "permission cannot be null or empty"
 
     invoke-direct {v1, v2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 2689
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
-    const-string/jumbo v1, "android.content.pm.action.REQUEST_PERMISSIONS"
+    const-string v1, "android.content.pm.action.REQUEST_PERMISSIONS"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 2690
     .local v0, "intent":Landroid/content/Intent;
-    const-string/jumbo v1, "android.content.pm.extra.REQUEST_PERMISSIONS_NAMES"
+    const-string v1, "android.content.pm.extra.REQUEST_PERMISSIONS_NAMES"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2691
     invoke-virtual {p0}, Landroid/content/pm/PackageManager;->getPermissionControllerPackageName()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2692
     return-object v0
 .end method
 
@@ -1480,12 +1347,10 @@
     .param p3, "pi"    # Landroid/content/IntentSender;
 
     .prologue
-    .line 4139
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0, p1, p2, p3}, Landroid/content/pm/PackageManager;->freeStorage(Ljava/lang/String;JLandroid/content/IntentSender;)V
 
-    .line 4138
     return-void
 .end method
 
@@ -1498,12 +1363,10 @@
     .param p3, "observer"    # Landroid/content/pm/IPackageDataObserver;
 
     .prologue
-    .line 4108
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0, p1, p2, p3}, Landroid/content/pm/PackageManager;->freeStorageAndNotify(Ljava/lang/String;JLandroid/content/pm/IPackageDataObserver;)V
 
-    .line 4107
     return-void
 .end method
 
@@ -1754,18 +1617,15 @@
     .prologue
     const/4 v12, 0x0
 
-    .line 3616
     new-instance v11, Landroid/content/pm/PackageParser;
 
     invoke-direct {v11}, Landroid/content/pm/PackageParser;-><init>()V
 
-    .line 3617
     .local v11, "parser":Landroid/content/pm/PackageParser;
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 3619
     .local v0, "apkFile":Ljava/io/File;
     const/4 v2, 0x0
 
@@ -1774,27 +1634,22 @@
 
     move-result-object v1
 
-    .line 3620
     .local v1, "pkg":Landroid/content/pm/PackageParser$Package;
     and-int/lit8 v2, p2, 0x40
 
     if-eqz v2, :cond_0
 
-    .line 3621
     const/4 v2, 0x0
 
     invoke-virtual {v11, v1, v2}, Landroid/content/pm/PackageParser;->collectCertificates(Landroid/content/pm/PackageParser$Package;I)V
 
-    .line 3622
     invoke-virtual {v11, v1}, Landroid/content/pm/PackageParser;->collectManifestDigest(Landroid/content/pm/PackageParser$Package;)V
 
-    .line 3624
     :cond_0
     new-instance v9, Landroid/content/pm/PackageUserState;
 
     invoke-direct {v9}, Landroid/content/pm/PackageUserState;-><init>()V
 
-    .line 3625
     .local v9, "state":Landroid/content/pm/PackageUserState;
     const-wide/16 v4, 0x0
 
@@ -1814,13 +1669,11 @@
 
     return-object v2
 
-    .line 3626
     .end local v1    # "pkg":Landroid/content/pm/PackageParser$Package;
     .end local v9    # "state":Landroid/content/pm/PackageUserState;
     :catch_0
     move-exception v10
 
-    .line 3627
     .local v10, "e":Landroid/content/pm/PackageParser$PackageParserException;
     return-object v12
 .end method
@@ -1870,14 +1723,12 @@
     .param p2, "observer"    # Landroid/content/pm/IPackageStatsObserver;
 
     .prologue
-    .line 4173
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
 
     invoke-virtual {p0, p1, v0, p2}, Landroid/content/pm/PackageManager;->getPackageSizeInfo(Ljava/lang/String;ILandroid/content/pm/IPackageStatsObserver;)V
 
-    .line 4172
     return-void
 .end method
 
@@ -2164,7 +2015,6 @@
     .end annotation
 
     .prologue
-    .line 4499
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -2385,10 +2235,9 @@
     .end annotation
 
     .prologue
-    .line 4288
     new-instance v0, Ljava/lang/RuntimeException;
 
-    const-string/jumbo v1, "Not implemented. Must override in a subclass."
+    const-string v1, "Not implemented. Must override in a subclass."
 
     invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 

@@ -24,14 +24,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 29
     new-instance v0, Landroid/graphics/Insets;
 
     invoke-direct {v0, v1, v1, v1, v1}, Landroid/graphics/Insets;-><init>(IIII)V
 
     sput-object v0, Landroid/graphics/Insets;->NONE:Landroid/graphics/Insets;
 
-    .line 28
     return-void
 .end method
 
@@ -43,22 +41,16 @@
     .param p4, "bottom"    # I
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     iput p1, p0, Landroid/graphics/Insets;->left:I
 
-    .line 38
     iput p2, p0, Landroid/graphics/Insets;->top:I
 
-    .line 39
     iput p3, p0, Landroid/graphics/Insets;->right:I
 
-    .line 40
     iput p4, p0, Landroid/graphics/Insets;->bottom:I
 
-    .line 36
     return-void
 .end method
 
@@ -70,7 +62,6 @@
     .param p3, "bottom"    # I
 
     .prologue
-    .line 56
     if-nez p0, :cond_0
 
     if-nez p1, :cond_0
@@ -79,12 +70,10 @@
 
     if-nez p3, :cond_0
 
-    .line 57
     sget-object v0, Landroid/graphics/Insets;->NONE:Landroid/graphics/Insets;
 
     return-object v0
 
-    .line 59
     :cond_0
     new-instance v0, Landroid/graphics/Insets;
 
@@ -98,7 +87,6 @@
     .param p0, "r"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 70
     if-nez p0, :cond_0
 
     sget-object v0, Landroid/graphics/Insets;->NONE:Landroid/graphics/Insets;
@@ -133,12 +121,10 @@
 
     const/4 v3, 0x0
 
-    .line 83
     if-ne p0, p1, :cond_0
 
     return v4
 
-    .line 84
     :cond_0
     if-eqz p1, :cond_1
 
@@ -158,10 +144,8 @@
     :cond_2
     move-object v0, p1
 
-    .line 86
     check-cast v0, Landroid/graphics/Insets;
 
-    .line 88
     .local v0, "insets":Landroid/graphics/Insets;
     iget v1, p0, Landroid/graphics/Insets;->bottom:I
 
@@ -171,7 +155,6 @@
 
     return v3
 
-    .line 89
     :cond_3
     iget v1, p0, Landroid/graphics/Insets;->left:I
 
@@ -181,7 +164,6 @@
 
     return v3
 
-    .line 90
     :cond_4
     iget v1, p0, Landroid/graphics/Insets;->right:I
 
@@ -191,7 +173,6 @@
 
     return v3
 
-    .line 91
     :cond_5
     iget v1, p0, Landroid/graphics/Insets;->top:I
 
@@ -201,7 +182,6 @@
 
     return v3
 
-    .line 93
     :cond_6
     return v4
 .end method
@@ -210,10 +190,8 @@
     .locals 3
 
     .prologue
-    .line 98
     iget v0, p0, Landroid/graphics/Insets;->left:I
 
-    .line 99
     .local v0, "result":I
     mul-int/lit8 v1, v0, 0x1f
 
@@ -221,21 +199,18 @@
 
     add-int v0, v1, v2
 
-    .line 100
     mul-int/lit8 v1, v0, 0x1f
 
     iget v2, p0, Landroid/graphics/Insets;->right:I
 
     add-int v0, v1, v2
 
-    .line 101
     mul-int/lit8 v1, v0, 0x1f
 
     iget v2, p0, Landroid/graphics/Insets;->bottom:I
 
     add-int v0, v1, v2
 
-    .line 102
     return v0
 .end method
 
@@ -243,77 +218,60 @@
     .locals 2
 
     .prologue
-    .line 107
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "Insets{left="
+    const-string v1, "Insets{left="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 108
     iget v1, p0, Landroid/graphics/Insets;->left:I
 
-    .line 107
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 109
-    const-string/jumbo v1, ", top="
+    const-string v1, ", top="
 
-    .line 107
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 109
     iget v1, p0, Landroid/graphics/Insets;->top:I
 
-    .line 107
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 110
-    const-string/jumbo v1, ", right="
+    const-string v1, ", right="
 
-    .line 107
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 110
     iget v1, p0, Landroid/graphics/Insets;->right:I
 
-    .line 107
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 111
-    const-string/jumbo v1, ", bottom="
+    const-string v1, ", bottom="
 
-    .line 107
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 111
     iget v1, p0, Landroid/graphics/Insets;->bottom:I
 
-    .line 107
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 112
     const/16 v1, 0x7d
 
-    .line 107
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     move-result-object v0

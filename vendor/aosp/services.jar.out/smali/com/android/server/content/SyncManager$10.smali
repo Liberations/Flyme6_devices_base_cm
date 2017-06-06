@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/content/SyncManager;
 
     .prologue
-    .line 526
     iput-object p1, p0, Lcom/android/server/content/SyncManager$10;->this$0:Lcom/android/server/content/SyncManager;
 
     invoke-direct {p0}, Landroid/content/ISyncStatusObserver$Stub;-><init>()V
@@ -39,11 +38,9 @@
     .param p1, "which"    # I
 
     .prologue
-    .line 530
     iget-object v0, p0, Lcom/android/server/content/SyncManager$10;->this$0:Lcom/android/server/content/SyncManager;
 
     invoke-static {v0}, Lcom/android/server/content/SyncManager;->-wrap16(Lcom/android/server/content/SyncManager;)V
 
-    .line 528
     return-void
 .end method

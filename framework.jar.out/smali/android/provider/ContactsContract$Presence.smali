@@ -22,7 +22,6 @@
     .locals 1
 
     .prologue
-    .line 5395
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/provider/ContactsContract$StatusUpdates;-><init>(Landroid/provider/ContactsContract$StatusUpdates;)V

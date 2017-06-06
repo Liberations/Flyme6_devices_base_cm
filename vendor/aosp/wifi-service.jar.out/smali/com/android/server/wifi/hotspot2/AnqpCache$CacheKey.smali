@@ -43,19 +43,14 @@
     .param p4, "hessid"    # J
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     iput-object p1, p0, Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;->mSSID:Ljava/lang/String;
 
-    .line 33
     iput-wide p2, p0, Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;->mBSSID:J
 
-    .line 34
     iput-wide p4, p0, Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;->mHESSID:J
 
-    .line 31
     return-void
 .end method
 
@@ -67,7 +62,6 @@
     .prologue
     const-wide/16 v8, 0x0
 
-    .line 57
     invoke-virtual {p0}, Lcom/android/server/wifi/hotspot2/NetworkDetail;->getAnqpDomainID()I
 
     move-result v0
@@ -88,7 +82,6 @@
 
     if-eqz p1, :cond_1
 
-    .line 62
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/wifi/hotspot2/NetworkDetail;->getHESSID()J
 
@@ -104,20 +97,16 @@
 
     if-lez v0, :cond_2
 
-    .line 63
     const/4 v1, 0x0
 
-    .line 64
     .local v1, "ssid":Ljava/lang/String;
     const-wide/16 v2, 0x0
 
-    .line 65
     .local v2, "bssid":J
     invoke-virtual {p0}, Lcom/android/server/wifi/hotspot2/NetworkDetail;->getHESSID()J
 
     move-result-wide v4
 
-    .line 73
     .end local v1    # "ssid":Ljava/lang/String;
     .local v4, "hessid":J
     :goto_0
@@ -127,7 +116,6 @@
 
     return-object v0
 
-    .line 58
     .end local v2    # "bssid":J
     .end local v4    # "hessid":J
     :cond_1
@@ -135,21 +123,17 @@
 
     move-result-object v1
 
-    .line 59
     .local v1, "ssid":Ljava/lang/String;
     invoke-virtual {p0}, Lcom/android/server/wifi/hotspot2/NetworkDetail;->getBSSID()J
 
     move-result-wide v2
 
-    .line 60
     .restart local v2    # "bssid":J
     const-wide/16 v4, 0x0
 
-    .line 57
     .restart local v4    # "hessid":J
     goto :goto_0
 
-    .line 68
     .end local v1    # "ssid":Ljava/lang/String;
     .end local v2    # "bssid":J
     .end local v4    # "hessid":J
@@ -158,11 +142,9 @@
 
     move-result-object v1
 
-    .line 69
     .restart local v1    # "ssid":Ljava/lang/String;
     const-wide/16 v2, 0x0
 
-    .line 70
     .restart local v2    # "bssid":J
     const-wide/16 v4, 0x0
 
@@ -181,13 +163,10 @@
 
     const/4 v2, 0x0
 
-    .line 91
     if-ne p1, p0, :cond_0
 
-    .line 92
     return v1
 
-    .line 94
     :cond_0
     if-eqz p1, :cond_1
 
@@ -199,17 +178,14 @@
 
     if-eq v3, v4, :cond_2
 
-    .line 95
     :cond_1
     return v2
 
     :cond_2
     move-object v0, p1
 
-    .line 97
     check-cast v0, Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;
 
-    .line 98
     .local v0, "that":Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;
     iget-object v3, v0, Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;->mSSID:Ljava/lang/String;
 
@@ -221,7 +197,6 @@
 
     if-nez v3, :cond_4
 
-    .line 99
     iget-wide v4, v0, Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;->mBSSID:J
 
     iget-wide v6, p0, Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;->mBSSID:J
@@ -230,7 +205,6 @@
 
     if-nez v3, :cond_4
 
-    .line 100
     iget-wide v4, v0, Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;->mHESSID:J
 
     iget-wide v6, p0, Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;->mHESSID:J
@@ -239,20 +213,17 @@
 
     if-nez v3, :cond_3
 
-    .line 98
     :goto_0
     return v1
 
     :cond_3
     move v1, v2
 
-    .line 100
     goto :goto_0
 
     :cond_4
     move v1, v2
 
-    .line 98
     goto :goto_0
 .end method
 
@@ -266,14 +237,12 @@
 
     const/16 v4, 0x20
 
-    .line 78
     iget-wide v0, p0, Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;->mHESSID:J
 
     cmp-long v0, v0, v2
 
     if-eqz v0, :cond_0
 
-    .line 79
     iget-wide v0, p0, Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;->mHESSID:J
 
     ushr-long/2addr v0, v4
@@ -288,7 +257,6 @@
 
     return v0
 
-    .line 81
     :cond_0
     iget-wide v0, p0, Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;->mBSSID:J
 
@@ -296,7 +264,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 82
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;->mSSID:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -323,7 +290,6 @@
 
     return v0
 
-    .line 85
     :cond_1
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;->mSSID:Ljava/lang/String;
 
@@ -340,19 +306,17 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 105
     iget-wide v0, p0, Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;->mHESSID:J
 
     cmp-long v0, v0, v2
 
     if-eqz v0, :cond_0
 
-    .line 106
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "HESSID:"
+    const-string v1, "HESSID:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -374,7 +338,6 @@
 
     return-object v0
 
-    .line 108
     :cond_0
     iget-wide v0, p0, Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;->mBSSID:J
 
@@ -382,7 +345,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 109
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -397,30 +359,24 @@
 
     move-result-object v0
 
-    .line 110
-    const-string/jumbo v1, ":<"
+    const-string v1, ":<"
 
-    .line 109
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 110
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/AnqpCache$CacheKey;->mSSID:Ljava/lang/String;
 
     invoke-static {v1}, Lcom/android/server/wifi/hotspot2/Utils;->toUnicodeEscapedString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 109
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 110
-    const-string/jumbo v1, ">"
+    const-string v1, ">"
 
-    .line 109
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -431,7 +387,6 @@
 
     return-object v0
 
-    .line 113
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 

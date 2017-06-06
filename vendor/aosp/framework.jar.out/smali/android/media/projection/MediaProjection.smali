@@ -50,23 +50,18 @@
     .param p2, "impl"    # Landroid/media/projection/IMediaProjection;
 
     .prologue
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
     new-instance v1, Landroid/util/ArrayMap;
 
     invoke-direct {v1}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v1, p0, Landroid/media/projection/MediaProjection;->mCallbacks:Ljava/util/Map;
 
-    .line 56
     iput-object p1, p0, Landroid/media/projection/MediaProjection;->mContext:Landroid/content/Context;
 
-    .line 57
     iput-object p2, p0, Landroid/media/projection/MediaProjection;->mImpl:Landroid/media/projection/IMediaProjection;
 
-    .line 59
     :try_start_0
     iget-object v1, p0, Landroid/media/projection/MediaProjection;->mImpl:Landroid/media/projection/IMediaProjection;
 
@@ -80,18 +75,15 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 54
     return-void
 
-    .line 60
     :catch_0
     move-exception v0
 
-    .line 61
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
-    const-string/jumbo v2, "Failed to start media projection"
+    const-string v2, "Failed to start media projection"
 
     invoke-direct {v1, v2, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
@@ -108,7 +100,6 @@
     .param p4, "bufferSizeInBytes"    # I
 
     .prologue
-    .line 148
     const/4 v0, 0x0
 
     return-object v0
@@ -126,10 +117,9 @@
     .param p8, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 136
     iget-object v1, p0, Landroid/media/projection/MediaProjection;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v2, "display"
+    const-string v2, "display"
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -156,7 +146,6 @@
 
     move-object/from16 v9, p8
 
-    .line 137
     invoke-virtual/range {v0 .. v9}, Landroid/hardware/display/DisplayManager;->createVirtualDisplay(Landroid/media/projection/MediaProjection;Ljava/lang/String;IIILandroid/view/Surface;ILandroid/hardware/display/VirtualDisplay$Callback;Landroid/os/Handler;)Landroid/hardware/display/VirtualDisplay;
 
     move-result-object v1
@@ -176,10 +165,9 @@
     .param p8, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 103
     iget-object v1, p0, Landroid/media/projection/MediaProjection;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v2, "display"
+    const-string v2, "display"
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -187,13 +175,11 @@
 
     check-cast v0, Landroid/hardware/display/DisplayManager;
 
-    .line 104
     .local v0, "dm":Landroid/hardware/display/DisplayManager;
     if-eqz p5, :cond_0
 
     const/4 v10, 0x4
 
-    .line 106
     .local v10, "flags":I
     :goto_0
     or-int/lit8 v1, v10, 0x10
@@ -216,14 +202,12 @@
 
     move-object/from16 v9, p8
 
-    .line 105
     invoke-virtual/range {v0 .. v9}, Landroid/hardware/display/DisplayManager;->createVirtualDisplay(Landroid/media/projection/MediaProjection;Ljava/lang/String;IIILandroid/view/Surface;ILandroid/hardware/display/VirtualDisplay$Callback;Landroid/os/Handler;)Landroid/hardware/display/VirtualDisplay;
 
     move-result-object v1
 
     return-object v1
 
-    .line 104
     .end local v10    # "flags":I
     :cond_0
     const/4 v10, 0x0
@@ -236,7 +220,6 @@
     .locals 1
 
     .prologue
-    .line 167
     iget-object v0, p0, Landroid/media/projection/MediaProjection;->mImpl:Landroid/media/projection/IMediaProjection;
 
     return-object v0
@@ -248,29 +231,24 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 75
     if-nez p1, :cond_0
 
-    .line 76
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "callback should not be null"
+    const-string v1, "callback should not be null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 78
     :cond_0
     if-nez p2, :cond_1
 
-    .line 79
     new-instance p2, Landroid/os/Handler;
 
     .end local p2    # "handler":Landroid/os/Handler;
     invoke-direct {p2}, Landroid/os/Handler;-><init>()V
 
-    .line 81
     .restart local p2    # "handler":Landroid/os/Handler;
     :cond_1
     iget-object v0, p0, Landroid/media/projection/MediaProjection;->mCallbacks:Ljava/util/Map;
@@ -281,7 +259,6 @@
 
     invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 74
     return-void
 .end method
 
@@ -289,7 +266,6 @@
     .locals 3
 
     .prologue
-    .line 156
     :try_start_0
     iget-object v1, p0, Landroid/media/projection/MediaProjection;->mImpl:Landroid/media/projection/IMediaProjection;
 
@@ -297,19 +273,16 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 154
     :goto_0
     return-void
 
-    .line 157
     :catch_0
     move-exception v0
 
-    .line 158
     .local v0, "e":Landroid/os/RemoteException;
-    const-string/jumbo v1, "MediaProjection"
+    const-string v1, "MediaProjection"
 
-    const-string/jumbo v2, "Unable to stop projection"
+    const-string v2, "Unable to stop projection"
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -321,24 +294,20 @@
     .param p1, "callback"    # Landroid/media/projection/MediaProjection$Callback;
 
     .prologue
-    .line 91
     if-nez p1, :cond_0
 
-    .line 92
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "callback should not be null"
+    const-string v1, "callback should not be null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 94
     :cond_0
     iget-object v0, p0, Landroid/media/projection/MediaProjection;->mCallbacks:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 90
     return-void
 .end method

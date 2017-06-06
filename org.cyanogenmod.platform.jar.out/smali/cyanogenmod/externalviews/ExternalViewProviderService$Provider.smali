@@ -49,22 +49,18 @@
     .param p2, "options"    # Landroid/os/Bundle;
 
     .prologue
-    .line 212
     iput-object p1, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider;->this$0:Lcyanogenmod/externalviews/ExternalViewProviderService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 209
     new-instance v0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;
 
     invoke-direct {v0, p0, p0}, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;-><init>(Lcyanogenmod/externalviews/ExternalViewProviderService$Provider;Lcyanogenmod/externalviews/ExternalViewProviderService$Provider;)V
 
     iput-object v0, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider;->mImpl:Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;
 
-    .line 213
     iput-object p2, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider;->mOptions:Landroid/os/Bundle;
 
-    .line 212
     return-void
 .end method
 
@@ -74,7 +70,6 @@
     .locals 1
 
     .prologue
-    .line 217
     iget-object v0, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider;->mOptions:Landroid/os/Bundle;
 
     return-object v0
@@ -84,7 +79,6 @@
     .locals 1
 
     .prologue
-    .line 233
     const/16 v0, 0x320
 
     return v0
@@ -94,7 +88,6 @@
     .locals 1
 
     .prologue
-    .line 229
     const/16 v0, 0x7d2
 
     return v0
@@ -104,7 +97,6 @@
     .locals 0
 
     .prologue
-    .line 220
     return-void
 .end method
 
@@ -115,7 +107,6 @@
     .locals 0
 
     .prologue
-    .line 226
     return-void
 .end method
 
@@ -123,7 +114,6 @@
     .locals 0
 
     .prologue
-    .line 224
     return-void
 .end method
 
@@ -131,7 +121,6 @@
     .locals 0
 
     .prologue
-    .line 223
     return-void
 .end method
 
@@ -139,7 +128,6 @@
     .locals 0
 
     .prologue
-    .line 222
     return-void
 .end method
 
@@ -147,6 +135,5 @@
     .locals 0
 
     .prologue
-    .line 225
     return-void
 .end method

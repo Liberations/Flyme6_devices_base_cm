@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 654
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,16 +44,13 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 662
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 663
     .local v0, "N":I
     new-array v3, v0, [[I
 
-    .line 664
     .local v3, "stateSpecs":[[I
     const/4 v2, 0x0
 
@@ -62,25 +58,21 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
-    .line 665
     invoke-virtual {p1}, Landroid/os/Parcel;->createIntArray()[I
 
     move-result-object v4
 
     aput-object v4, v3, v2
 
-    .line 664
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 667
     :cond_0
     invoke-virtual {p1}, Landroid/os/Parcel;->createIntArray()[I
 
     move-result-object v1
 
-    .line 668
     .local v1, "colors":[I
     new-instance v4, Landroid/content/res/ColorStateList;
 
@@ -94,7 +86,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 661
     invoke-virtual {p0, p1}, Landroid/content/res/ColorStateList$1;->createFromParcel(Landroid/os/Parcel;)Landroid/content/res/ColorStateList;
 
     move-result-object v0
@@ -107,7 +98,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 657
     new-array v0, p1, [Landroid/content/res/ColorStateList;
 
     return-object v0
@@ -118,7 +108,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 656
     invoke-virtual {p0, p1}, Landroid/content/res/ColorStateList$1;->newArray(I)[Landroid/content/res/ColorStateList;
 
     move-result-object v0

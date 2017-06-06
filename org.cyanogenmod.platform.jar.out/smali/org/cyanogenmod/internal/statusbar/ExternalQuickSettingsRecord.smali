@@ -17,13 +17,10 @@
     .param p1, "tile"    # Lcyanogenmod/app/StatusBarPanelCustomTile;
 
     .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
     iput-object p1, p0, Lorg/cyanogenmod/internal/statusbar/ExternalQuickSettingsRecord;->sbTile:Lcyanogenmod/app/StatusBarPanelCustomTile;
 
-    .line 34
     return-void
 .end method
 
@@ -33,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 39
     iget-object v0, p0, Lorg/cyanogenmod/internal/statusbar/ExternalQuickSettingsRecord;->sbTile:Lcyanogenmod/app/StatusBarPanelCustomTile;
 
     invoke-virtual {v0}, Lcyanogenmod/app/StatusBarPanelCustomTile;->getCustomTile()Lcyanogenmod/app/CustomTile;
@@ -47,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 51
     iget-object v0, p0, Lorg/cyanogenmod/internal/statusbar/ExternalQuickSettingsRecord;->sbTile:Lcyanogenmod/app/StatusBarPanelCustomTile;
 
     invoke-virtual {v0}, Lcyanogenmod/app/StatusBarPanelCustomTile;->getKey()Ljava/lang/String;
@@ -61,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 43
     iget-object v0, p0, Lorg/cyanogenmod/internal/statusbar/ExternalQuickSettingsRecord;->sbTile:Lcyanogenmod/app/StatusBarPanelCustomTile;
 
     invoke-virtual {v0}, Lcyanogenmod/app/StatusBarPanelCustomTile;->getUser()Landroid/os/UserHandle;
@@ -75,7 +69,6 @@
     .locals 1
 
     .prologue
-    .line 47
     iget-object v0, p0, Lorg/cyanogenmod/internal/statusbar/ExternalQuickSettingsRecord;->sbTile:Lcyanogenmod/app/StatusBarPanelCustomTile;
 
     invoke-virtual {v0}, Lcyanogenmod/app/StatusBarPanelCustomTile;->getUserId()I

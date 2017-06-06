@@ -43,24 +43,20 @@
     .locals 1
 
     .prologue
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/graphics/LegacyFontListParser$Family;->nameset:Ljava/util/List;
 
-    .line 54
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/graphics/LegacyFontListParser$Family;->fileset:Ljava/util/List;
 
-    .line 52
     return-void
 .end method
 
@@ -72,7 +68,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 57
     iget-object v0, p0, Landroid/graphics/LegacyFontListParser$Family;->nameset:Ljava/util/List;
 
     if-eqz v0, :cond_0
@@ -85,11 +80,9 @@
 
     if-eqz v0, :cond_1
 
-    .line 60
     :cond_0
     return-object v1
 
-    .line 58
     :cond_1
     iget-object v0, p0, Landroid/graphics/LegacyFontListParser$Family;->nameset:Ljava/util/List;
 

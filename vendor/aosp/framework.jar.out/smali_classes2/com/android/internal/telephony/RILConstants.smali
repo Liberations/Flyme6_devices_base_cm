@@ -600,19 +600,15 @@
     .locals 2
 
     .prologue
-    .line 109
-    const-string/jumbo v0, "ro.telephony.default_network"
+    const-string v0, "ro.telephony.default_network"
 
-    .line 110
     const/4 v1, 0x0
 
-    .line 109
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
     sput v0, Lcom/android/internal/telephony/RILConstants;->PREFERRED_NETWORK_MODE:I
 
-    .line 32
     return-void
 .end method

@@ -221,42 +221,29 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 152
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 153
     iput v0, p0, Landroid/content/res/StringBlock$StyleIDs;->boldId:I
 
-    .line 154
     iput v0, p0, Landroid/content/res/StringBlock$StyleIDs;->italicId:I
 
-    .line 155
     iput v0, p0, Landroid/content/res/StringBlock$StyleIDs;->underlineId:I
 
-    .line 156
     iput v0, p0, Landroid/content/res/StringBlock$StyleIDs;->ttId:I
 
-    .line 157
     iput v0, p0, Landroid/content/res/StringBlock$StyleIDs;->bigId:I
 
-    .line 158
     iput v0, p0, Landroid/content/res/StringBlock$StyleIDs;->smallId:I
 
-    .line 159
     iput v0, p0, Landroid/content/res/StringBlock$StyleIDs;->subId:I
 
-    .line 160
     iput v0, p0, Landroid/content/res/StringBlock$StyleIDs;->supId:I
 
-    .line 161
     iput v0, p0, Landroid/content/res/StringBlock$StyleIDs;->strikeId:I
 
-    .line 162
     iput v0, p0, Landroid/content/res/StringBlock$StyleIDs;->listItemId:I
 
-    .line 163
     iput v0, p0, Landroid/content/res/StringBlock$StyleIDs;->marqueeId:I
 
-    .line 152
     return-void
 .end method

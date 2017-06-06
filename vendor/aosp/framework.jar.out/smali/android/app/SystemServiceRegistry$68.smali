@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 704
     invoke-direct {p0}, Landroid/app/SystemServiceRegistry$CachedServiceFetcher;-><init>()V
 
     return-void
@@ -41,7 +40,6 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 707
     new-instance v0, Landroid/hardware/radio/RadioManager;
 
     invoke-direct {v0, p1}, Landroid/hardware/radio/RadioManager;-><init>(Landroid/content/Context;)V
@@ -54,7 +52,6 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 706
     invoke-virtual {p0, p1}, Landroid/app/SystemServiceRegistry$68;->createService(Landroid/app/ContextImpl;)Landroid/hardware/radio/RadioManager;
 
     move-result-object v0

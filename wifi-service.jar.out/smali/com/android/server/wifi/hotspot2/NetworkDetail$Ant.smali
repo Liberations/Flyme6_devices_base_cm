@@ -74,55 +74,49 @@
 
     const/4 v3, 0x0
 
-    .line 47
     new-instance v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    const-string/jumbo v1, "Private"
+    const-string v1, "Private"
 
     invoke-direct {v0, v1, v3}, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;->Private:Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    .line 48
     new-instance v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    const-string/jumbo v1, "PrivateWithGuest"
+    const-string v1, "PrivateWithGuest"
 
     invoke-direct {v0, v1, v4}, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;->PrivateWithGuest:Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    .line 49
     new-instance v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    const-string/jumbo v1, "ChargeablePublic"
+    const-string v1, "ChargeablePublic"
 
     invoke-direct {v0, v1, v5}, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;->ChargeablePublic:Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    .line 50
     new-instance v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    const-string/jumbo v1, "FreePublic"
+    const-string v1, "FreePublic"
 
     invoke-direct {v0, v1, v6}, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;->FreePublic:Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    .line 51
     new-instance v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    const-string/jumbo v1, "Personal"
+    const-string v1, "Personal"
 
     invoke-direct {v0, v1, v7}, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;->Personal:Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    .line 52
     new-instance v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    const-string/jumbo v1, "EmergencyOnly"
+    const-string v1, "EmergencyOnly"
 
     const/4 v2, 0x5
 
@@ -130,10 +124,9 @@
 
     sput-object v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;->EmergencyOnly:Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    .line 53
     new-instance v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    const-string/jumbo v1, "Resvd6"
+    const-string v1, "Resvd6"
 
     const/4 v2, 0x6
 
@@ -141,10 +134,9 @@
 
     sput-object v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;->Resvd6:Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    .line 54
     new-instance v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    const-string/jumbo v1, "Resvd7"
+    const-string v1, "Resvd7"
 
     const/4 v2, 0x7
 
@@ -152,10 +144,9 @@
 
     sput-object v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;->Resvd7:Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    .line 55
     new-instance v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    const-string/jumbo v1, "Resvd8"
+    const-string v1, "Resvd8"
 
     const/16 v2, 0x8
 
@@ -163,10 +154,9 @@
 
     sput-object v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;->Resvd8:Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    .line 56
     new-instance v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    const-string/jumbo v1, "Resvd9"
+    const-string v1, "Resvd9"
 
     const/16 v2, 0x9
 
@@ -174,10 +164,9 @@
 
     sput-object v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;->Resvd9:Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    .line 57
     new-instance v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    const-string/jumbo v1, "Resvd10"
+    const-string v1, "Resvd10"
 
     const/16 v2, 0xa
 
@@ -185,10 +174,9 @@
 
     sput-object v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;->Resvd10:Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    .line 58
     new-instance v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    const-string/jumbo v1, "Resvd11"
+    const-string v1, "Resvd11"
 
     const/16 v2, 0xb
 
@@ -196,10 +184,9 @@
 
     sput-object v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;->Resvd11:Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    .line 59
     new-instance v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    const-string/jumbo v1, "Resvd12"
+    const-string v1, "Resvd12"
 
     const/16 v2, 0xc
 
@@ -207,10 +194,9 @@
 
     sput-object v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;->Resvd12:Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    .line 60
     new-instance v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    const-string/jumbo v1, "Resvd13"
+    const-string v1, "Resvd13"
 
     const/16 v2, 0xd
 
@@ -218,10 +204,9 @@
 
     sput-object v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;->Resvd13:Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    .line 61
     new-instance v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    const-string/jumbo v1, "TestOrExperimental"
+    const-string v1, "TestOrExperimental"
 
     const/16 v2, 0xe
 
@@ -229,10 +214,9 @@
 
     sput-object v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;->TestOrExperimental:Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    .line 62
     new-instance v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    const-string/jumbo v1, "Wildcard"
+    const-string v1, "Wildcard"
 
     const/16 v2, 0xf
 
@@ -240,7 +224,6 @@
 
     sput-object v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;->Wildcard:Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
-    .line 46
     const/16 v0, 0x10
 
     new-array v0, v0, [Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
@@ -340,7 +323,6 @@
     .locals 0
 
     .prologue
-    .line 46
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -351,7 +333,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 46
     const-class v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -367,7 +348,6 @@
     .locals 1
 
     .prologue
-    .line 46
     sget-object v0, Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;->$VALUES:[Lcom/android/server/wifi/hotspot2/NetworkDetail$Ant;
 
     return-object v0

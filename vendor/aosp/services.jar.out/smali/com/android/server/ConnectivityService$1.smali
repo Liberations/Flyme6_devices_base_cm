@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/ConnectivityService;
 
     .prologue
-    .line 1298
     iput-object p1, p0, Lcom/android/server/ConnectivityService$1;->this$0:Lcom/android/server/ConnectivityService;
 
     invoke-direct {p0}, Lcom/android/server/net/BaseNetworkObserver;-><init>()V
@@ -41,17 +40,14 @@
     .param p3, "tsNanos"    # J
 
     .prologue
-    .line 1301
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 1302
     .local v0, "deviceType":I
     iget-object v1, p0, Lcom/android/server/ConnectivityService$1;->this$0:Lcom/android/server/ConnectivityService;
 
     invoke-static {v1, v0, p2, p3, p4}, Lcom/android/server/ConnectivityService;->-wrap22(Lcom/android/server/ConnectivityService;IZJ)V
 
-    .line 1300
     return-void
 .end method

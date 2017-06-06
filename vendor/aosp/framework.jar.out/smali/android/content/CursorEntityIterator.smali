@@ -18,23 +18,18 @@
     .param p1, "cursor"    # Landroid/database/Cursor;
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/content/CursorEntityIterator;->mIsClosed:Z
 
-    .line 38
     iput-object p1, p0, Landroid/content/CursorEntityIterator;->mCursor:Landroid/database/Cursor;
 
-    .line 39
     iget-object v0, p0, Landroid/content/CursorEntityIterator;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 36
     return-void
 .end method
 
@@ -44,32 +39,27 @@
     .locals 2
 
     .prologue
-    .line 106
     iget-boolean v0, p0, Landroid/content/CursorEntityIterator;->mIsClosed:Z
 
     if-eqz v0, :cond_0
 
-    .line 107
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v1, "closing when already closed"
+    const-string v1, "closing when already closed"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 109
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/content/CursorEntityIterator;->mIsClosed:Z
 
-    .line 110
     iget-object v0, p0, Landroid/content/CursorEntityIterator;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 105
     return-void
 .end method
 
@@ -85,21 +75,18 @@
     .locals 2
 
     .prologue
-    .line 59
     iget-boolean v0, p0, Landroid/content/CursorEntityIterator;->mIsClosed:Z
 
     if-eqz v0, :cond_0
 
-    .line 60
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v1, "calling hasNext() when the iterator is closed"
+    const-string v1, "calling hasNext() when the iterator is closed"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 63
     :cond_0
     iget-object v0, p0, Landroid/content/CursorEntityIterator;->mCursor:Landroid/database/Cursor;
 
@@ -124,21 +111,18 @@
     .locals 3
 
     .prologue
-    .line 76
     iget-boolean v1, p0, Landroid/content/CursorEntityIterator;->mIsClosed:Z
 
     if-eqz v1, :cond_0
 
-    .line 77
     new-instance v1, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v2, "calling next() when the iterator is closed"
+    const-string v2, "calling next() when the iterator is closed"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 79
     :cond_0
     invoke-virtual {p0}, Landroid/content/CursorEntityIterator;->hasNext()Z
 
@@ -146,16 +130,14 @@
 
     if-nez v1, :cond_1
 
-    .line 80
     new-instance v1, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v2, "you may only call next() if hasNext() is true"
+    const-string v2, "you may only call next() if hasNext() is true"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 84
     :cond_1
     :try_start_0
     iget-object v1, p0, Landroid/content/CursorEntityIterator;->mCursor:Landroid/database/Cursor;
@@ -168,15 +150,13 @@
 
     return-object v1
 
-    .line 85
     :catch_0
     move-exception v0
 
-    .line 86
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
-    const-string/jumbo v2, "caught a remote exception, this process will die soon"
+    const-string v2, "caught a remote exception, this process will die soon"
 
     invoke-direct {v1, v2, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
@@ -187,7 +167,6 @@
     .locals 1
 
     .prologue
-    .line 75
     invoke-virtual {p0}, Landroid/content/CursorEntityIterator;->next()Landroid/content/Entity;
 
     move-result-object v0
@@ -199,10 +178,9 @@
     .locals 2
 
     .prologue
-    .line 91
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    const-string/jumbo v1, "remove not supported by EntityIterators"
+    const-string v1, "remove not supported by EntityIterators"
 
     invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
@@ -213,26 +191,22 @@
     .locals 2
 
     .prologue
-    .line 95
     iget-boolean v0, p0, Landroid/content/CursorEntityIterator;->mIsClosed:Z
 
     if-eqz v0, :cond_0
 
-    .line 96
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v1, "calling reset() when the iterator is closed"
+    const-string v1, "calling reset() when the iterator is closed"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 98
     :cond_0
     iget-object v0, p0, Landroid/content/CursorEntityIterator;->mCursor:Landroid/database/Cursor;
 
     invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 94
     return-void
 .end method

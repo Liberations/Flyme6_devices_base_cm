@@ -37,18 +37,15 @@
     .locals 1
 
     .prologue
-    .line 226
     .local p0, "this":Landroid/os/AsyncTask$SerialExecutor;, "Landroid/os/AsyncTask<TParams;TProgress;TResult;>.SerialExecutor;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 227
     new-instance v0, Ljava/util/ArrayDeque;
 
     invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
 
     iput-object v0, p0, Landroid/os/AsyncTask$SerialExecutor;->mTasks:Ljava/util/ArrayDeque;
 
-    .line 226
     return-void
 .end method
 
@@ -72,7 +69,6 @@
     .local p0, "this":Landroid/os/AsyncTask$SerialExecutor;, "Landroid/os/AsyncTask<TParams;TProgress;TResult;>.SerialExecutor;"
     monitor-enter p0
 
-    .line 231
     :try_start_0
     iget-object v0, p0, Landroid/os/AsyncTask$SerialExecutor;->mTasks:Ljava/util/ArrayDeque;
 
@@ -82,12 +78,10 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayDeque;->offer(Ljava/lang/Object;)Z
 
-    .line 240
     iget-object v0, p0, Landroid/os/AsyncTask$SerialExecutor;->mActive:Ljava/lang/Runnable;
 
     if-nez v0, :cond_0
 
-    .line 241
     invoke-virtual {p0}, Landroid/os/AsyncTask$SerialExecutor;->scheduleNext()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -95,7 +89,6 @@
     :cond_0
     monitor-exit p0
 
-    .line 230
     return-void
 
     :catchall_0
@@ -113,7 +106,6 @@
     .local p0, "this":Landroid/os/AsyncTask$SerialExecutor;, "Landroid/os/AsyncTask<TParams;TProgress;TResult;>.SerialExecutor;"
     monitor-enter p0
 
-    .line 246
     :try_start_0
     iget-object v0, p0, Landroid/os/AsyncTask$SerialExecutor;->mTasks:Ljava/util/ArrayDeque;
 
@@ -127,7 +119,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 247
     sget-object v0, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
 
     iget-object v1, p0, Landroid/os/AsyncTask$SerialExecutor;->mActive:Ljava/lang/Runnable;
@@ -139,7 +130,6 @@
     :cond_0
     monitor-exit p0
 
-    .line 245
     return-void
 
     :catchall_0

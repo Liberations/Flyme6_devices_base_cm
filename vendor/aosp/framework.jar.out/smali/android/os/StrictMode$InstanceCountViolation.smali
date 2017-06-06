@@ -33,30 +33,24 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 2495
     new-array v0, v5, [Ljava/lang/StackTraceElement;
 
-    .line 2496
     new-instance v1, Ljava/lang/StackTraceElement;
 
-    const-string/jumbo v2, "android.os.StrictMode"
+    const-string v2, "android.os.StrictMode"
 
-    const-string/jumbo v3, "setClassInstanceLimit"
+    const-string v3, "setClassInstanceLimit"
 
-    .line 2497
-    const-string/jumbo v4, "StrictMode.java"
+    const-string v4, "StrictMode.java"
 
-    .line 2496
     invoke-direct {v1, v2, v3, v4, v5}, Ljava/lang/StackTraceElement;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    .line 2495
     sput-object v0, Landroid/os/StrictMode$InstanceCountViolation;->FAKE_STACK:[Ljava/lang/StackTraceElement;
 
-    .line 2490
     return-void
 .end method
 
@@ -67,7 +61,6 @@
     .param p4, "limit"    # I
 
     .prologue
-    .line 2501
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -80,7 +73,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "; instances="
+    const-string v1, "; instances="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -90,7 +83,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "; limit="
+    const-string v1, "; limit="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -106,20 +99,15 @@
 
     invoke-direct {p0, v0}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
 
-    .line 2502
     sget-object v0, Landroid/os/StrictMode$InstanceCountViolation;->FAKE_STACK:[Ljava/lang/StackTraceElement;
 
     invoke-virtual {p0, v0}, Landroid/os/StrictMode$InstanceCountViolation;->setStackTrace([Ljava/lang/StackTraceElement;)V
 
-    .line 2503
     iput-object p1, p0, Landroid/os/StrictMode$InstanceCountViolation;->mClass:Ljava/lang/Class;
 
-    .line 2504
     iput-wide p2, p0, Landroid/os/StrictMode$InstanceCountViolation;->mInstances:J
 
-    .line 2505
     iput p4, p0, Landroid/os/StrictMode$InstanceCountViolation;->mLimit:I
 
-    .line 2500
     return-void
 .end method

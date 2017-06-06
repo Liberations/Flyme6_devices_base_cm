@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 247
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 250
     new-instance v0, Landroid/content/ClipDescription;
 
     invoke-direct {v0, p1}, Landroid/content/ClipDescription;-><init>(Landroid/os/Parcel;)V
@@ -58,7 +56,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 249
     invoke-virtual {p0, p1}, Landroid/content/ClipDescription$1;->createFromParcel(Landroid/os/Parcel;)Landroid/content/ClipDescription;
 
     move-result-object v0
@@ -71,7 +68,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 254
     new-array v0, p1, [Landroid/content/ClipDescription;
 
     return-object v0
@@ -82,7 +78,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 253
     invoke-virtual {p0, p1}, Landroid/content/ClipDescription$1;->newArray(I)[Landroid/content/ClipDescription;
 
     move-result-object v0

@@ -19,17 +19,14 @@
     .locals 1
 
     .prologue
-    .line 540
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 541
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Landroid/os/BinderProxy;->mSelf:Ljava/lang/ref/WeakReference;
 
-    .line 540
     return-void
 .end method
 
@@ -41,25 +38,21 @@
     .param p0, "recipient"    # Landroid/os/IBinder$DeathRecipient;
 
     .prologue
-    .line 558
     :try_start_0
     invoke-interface {p0}, Landroid/os/IBinder$DeathRecipient;->binderDied()V
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 555
     :goto_0
     return-void
 
-    .line 560
     :catch_0
     move-exception v0
 
-    .line 561
     .local v0, "exc":Ljava/lang/RuntimeException;
-    const-string/jumbo v1, "BinderNative"
+    const-string v1, "BinderNative"
 
-    const-string/jumbo v2, "Uncaught exception from death notification"
+    const-string v2, "Uncaught exception from death notification"
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -79,25 +72,20 @@
     .end annotation
 
     .prologue
-    .line 514
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 515
     .local v0, "data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 516
     .local v1, "reply":Landroid/os/Parcel;
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeFileDescriptor(Ljava/io/FileDescriptor;)V
 
-    .line 517
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    .line 519
     const v2, 0x5f444d50
 
     const/4 v3, 0x0
@@ -105,31 +93,23 @@
     :try_start_0
     invoke-virtual {p0, v2, v0, v1, v3}, Landroid/os/BinderProxy;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 520
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 522
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 523
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 513
     return-void
 
-    .line 521
     :catchall_0
     move-exception v2
 
-    .line 522
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 523
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 521
     throw v2
 .end method
 
@@ -144,25 +124,20 @@
     .end annotation
 
     .prologue
-    .line 528
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 529
     .local v0, "data":Landroid/os/Parcel;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    .line 530
     .local v1, "reply":Landroid/os/Parcel;
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeFileDescriptor(Ljava/io/FileDescriptor;)V
 
-    .line 531
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    .line 533
     const v2, 0x5f444d50
 
     const/4 v3, 0x1
@@ -172,26 +147,19 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 535
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 536
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 527
     return-void
 
-    .line 534
     :catchall_0
     move-exception v2
 
-    .line 535
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 536
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 534
     throw v2
 .end method
 
@@ -204,26 +172,20 @@
     .end annotation
 
     .prologue
-    .line 547
     :try_start_0
     invoke-direct {p0}, Landroid/os/BinderProxy;->destroy()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 549
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 545
     return-void
 
-    .line 548
     :catchall_0
     move-exception v0
 
-    .line 549
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 548
     throw v0
 .end method
 
@@ -254,7 +216,6 @@
     .param p1, "descriptor"    # Ljava/lang/String;
 
     .prologue
-    .line 498
     const/4 v0, 0x0
 
     return-object v0
@@ -273,12 +234,10 @@
     .end annotation
 
     .prologue
-    .line 502
-    const-string/jumbo v0, "Unreasonably large binder buffer"
+    const-string v0, "Unreasonably large binder buffer"
 
     invoke-static {p0, p1, p2, v0}, Landroid/os/Binder;->checkParcel(Landroid/os/IBinder;ILandroid/os/Parcel;Ljava/lang/String;)V
 
-    .line 503
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/os/BinderProxy;->transactNative(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v0

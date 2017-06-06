@@ -30,7 +30,6 @@
     .param p1, "this$0"    # Lcom/android/server/policy/ImmersiveModeConfirmation;
 
     .prologue
-    .line 340
     iput-object p1, p0, Lcom/android/server/policy/ImmersiveModeConfirmation$H;->this$0:Lcom/android/server/policy/ImmersiveModeConfirmation;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -55,16 +54,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 346
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 345
     :goto_0
     return-void
 
-    .line 348
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/policy/ImmersiveModeConfirmation$H;->this$0:Lcom/android/server/policy/ImmersiveModeConfirmation;
 
@@ -72,7 +68,6 @@
 
     goto :goto_0
 
-    .line 351
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/policy/ImmersiveModeConfirmation$H;->this$0:Lcom/android/server/policy/ImmersiveModeConfirmation;
 
@@ -80,7 +75,6 @@
 
     goto :goto_0
 
-    .line 346
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

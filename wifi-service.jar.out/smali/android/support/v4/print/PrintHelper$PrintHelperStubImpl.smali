@@ -32,21 +32,16 @@
     .prologue
     const/4 v0, 0x2
 
-    .line 114
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 115
     iput v0, p0, Landroid/support/v4/print/PrintHelper$PrintHelperStubImpl;->mScaleMode:I
 
-    .line 116
     iput v0, p0, Landroid/support/v4/print/PrintHelper$PrintHelperStubImpl;->mColorMode:I
 
-    .line 117
     const/4 v0, 0x1
 
     iput v0, p0, Landroid/support/v4/print/PrintHelper$PrintHelperStubImpl;->mOrientation:I
 
-    .line 114
     return-void
 .end method
 
@@ -65,7 +60,6 @@
     .locals 1
 
     .prologue
-    .line 125
     iget v0, p0, Landroid/support/v4/print/PrintHelper$PrintHelperStubImpl;->mColorMode:I
 
     return v0
@@ -75,7 +69,6 @@
     .locals 1
 
     .prologue
-    .line 137
     iget v0, p0, Landroid/support/v4/print/PrintHelper$PrintHelperStubImpl;->mOrientation:I
 
     return v0
@@ -85,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 141
     iget v0, p0, Landroid/support/v4/print/PrintHelper$PrintHelperStubImpl;->mScaleMode:I
 
     return v0
@@ -98,7 +90,6 @@
     .param p3, "callback"    # Landroid/support/v4/print/PrintHelper$OnPrintFinishCallback;
 
     .prologue
-    .line 145
     return-void
 .end method
 
@@ -109,7 +100,6 @@
     .param p3, "callback"    # Landroid/support/v4/print/PrintHelper$OnPrintFinishCallback;
 
     .prologue
-    .line 149
     return-void
 .end method
 
@@ -118,10 +108,8 @@
     .param p1, "colorMode"    # I
 
     .prologue
-    .line 130
     iput p1, p0, Landroid/support/v4/print/PrintHelper$PrintHelperStubImpl;->mColorMode:I
 
-    .line 129
     return-void
 .end method
 
@@ -130,7 +118,6 @@
     .param p1, "orientation"    # I
 
     .prologue
-    .line 134
     iput p1, p0, Landroid/support/v4/print/PrintHelper$PrintHelperStubImpl;->mOrientation:I
 
     return-void
@@ -141,9 +128,7 @@
     .param p1, "scaleMode"    # I
 
     .prologue
-    .line 120
     iput p1, p0, Landroid/support/v4/print/PrintHelper$PrintHelperStubImpl;->mScaleMode:I
 
-    .line 119
     return-void
 .end method

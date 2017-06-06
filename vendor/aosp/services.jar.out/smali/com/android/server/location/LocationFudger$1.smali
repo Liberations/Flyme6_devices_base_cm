@@ -25,7 +25,6 @@
     .param p2, "$anonymous0"    # Landroid/os/Handler;
 
     .prologue
-    .line 144
     iput-object p1, p0, Lcom/android/server/location/LocationFudger$1;->this$0:Lcom/android/server/location/LocationFudger;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -40,7 +39,6 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 147
     iget-object v0, p0, Lcom/android/server/location/LocationFudger$1;->this$0:Lcom/android/server/location/LocationFudger;
 
     iget-object v1, p0, Lcom/android/server/location/LocationFudger$1;->this$0:Lcom/android/server/location/LocationFudger;
@@ -51,6 +49,5 @@
 
     invoke-static {v0, v1}, Lcom/android/server/location/LocationFudger;->-wrap1(Lcom/android/server/location/LocationFudger;F)V
 
-    .line 146
     return-void
 .end method

@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,12 +44,10 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 55
     new-instance v0, Landroid/content/pm/FeatureGroupInfo;
 
     invoke-direct {v0}, Landroid/content/pm/FeatureGroupInfo;-><init>()V
 
-    .line 56
     .local v0, "group":Landroid/content/pm/FeatureGroupInfo;
     sget-object v1, Landroid/content/pm/FeatureInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -62,7 +59,6 @@
 
     iput-object v1, v0, Landroid/content/pm/FeatureGroupInfo;->features:[Landroid/content/pm/FeatureInfo;
 
-    .line 57
     return-object v0
 .end method
 
@@ -71,7 +67,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Landroid/content/pm/FeatureGroupInfo$1;->createFromParcel(Landroid/os/Parcel;)Landroid/content/pm/FeatureGroupInfo;
 
     move-result-object v0
@@ -84,7 +79,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 62
     new-array v0, p1, [Landroid/content/pm/FeatureGroupInfo;
 
     return-object v0
@@ -95,7 +89,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 61
     invoke-virtual {p0, p1}, Landroid/content/pm/FeatureGroupInfo$1;->newArray(I)[Landroid/content/pm/FeatureGroupInfo;
 
     move-result-object v0

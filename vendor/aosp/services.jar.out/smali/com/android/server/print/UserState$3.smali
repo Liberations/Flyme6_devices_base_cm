@@ -32,7 +32,6 @@
     .end annotation
 
     .prologue
-    .line 459
     iput-object p2, p0, Lcom/android/server/print/UserState$3;->this$0:Lcom/android/server/print/UserState;
 
     invoke-direct {p0, p1, p3, p4}, Lcom/android/server/print/UserState$PrintJobStateChangeListenerRecord;-><init>(Lcom/android/server/print/UserState;Landroid/print/IPrintJobStateChangeListener;I)V
@@ -46,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 462
     iget-object v0, p0, Lcom/android/server/print/UserState$3;->this$0:Lcom/android/server/print/UserState;
 
     invoke-static {v0}, Lcom/android/server/print/UserState;->-get3(Lcom/android/server/print/UserState;)Ljava/util/List;
@@ -55,6 +53,5 @@
 
     invoke-interface {v0, p0}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 461
     return-void
 .end method

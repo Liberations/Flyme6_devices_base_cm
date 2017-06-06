@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/hardware/camera2/utils/CloseableLock;
 
     .prologue
-    .line 74
     iput-object p1, p0, Landroid/hardware/camera2/utils/CloseableLock$ScopedLock;->this$0:Landroid/hardware/camera2/utils/CloseableLock;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,11 +50,9 @@
     .locals 1
 
     .prologue
-    .line 79
     iget-object v0, p0, Landroid/hardware/camera2/utils/CloseableLock$ScopedLock;->this$0:Landroid/hardware/camera2/utils/CloseableLock;
 
     invoke-virtual {v0}, Landroid/hardware/camera2/utils/CloseableLock;->releaseLock()V
 
-    .line 78
     return-void
 .end method

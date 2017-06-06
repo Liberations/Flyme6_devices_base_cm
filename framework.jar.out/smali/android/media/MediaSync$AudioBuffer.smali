@@ -30,18 +30,13 @@
     .param p3, "presentationTimeUs"    # J
 
     .prologue
-    .line 177
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 179
     iput-object p1, p0, Landroid/media/MediaSync$AudioBuffer;->mByteBuffer:Ljava/nio/ByteBuffer;
 
-    .line 180
     iput p2, p0, Landroid/media/MediaSync$AudioBuffer;->mBufferIndex:I
 
-    .line 181
     iput-wide p3, p0, Landroid/media/MediaSync$AudioBuffer;->mPresentationTimeUs:J
 
-    .line 178
     return-void
 .end method

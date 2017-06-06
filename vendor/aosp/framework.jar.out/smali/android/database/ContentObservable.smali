@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0}, Landroid/database/Observable;-><init>()V
 
     return-void
@@ -34,12 +33,10 @@
     .end annotation
 
     .prologue
-    .line 50
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Landroid/database/ContentObservable;->dispatchChange(ZLandroid/net/Uri;)V
 
-    .line 49
     return-void
 .end method
 
@@ -49,12 +46,10 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 67
     iget-object v3, p0, Landroid/database/ContentObservable;->mObservers:Ljava/util/ArrayList;
 
     monitor-enter v3
 
-    .line 68
     :try_start_0
     iget-object v2, p0, Landroid/database/ContentObservable;->mObservers:Ljava/util/ArrayList;
 
@@ -77,7 +72,6 @@
 
     check-cast v0, Landroid/database/ContentObserver;
 
-    .line 69
     .local v0, "observer":Landroid/database/ContentObserver;
     if-eqz p1, :cond_1
 
@@ -87,7 +81,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 70
     :cond_1
     invoke-virtual {v0, p1, p2}, Landroid/database/ContentObserver;->dispatchChange(ZLandroid/net/Uri;)V
     :try_end_0
@@ -95,7 +88,6 @@
 
     goto :goto_0
 
-    .line 67
     .end local v0    # "observer":Landroid/database/ContentObserver;
     .end local v1    # "observer$iterator":Ljava/util/Iterator;
     :catchall_0
@@ -109,7 +101,6 @@
     :cond_2
     monitor-exit v3
 
-    .line 66
     return-void
 .end method
 
@@ -120,12 +111,10 @@
     .end annotation
 
     .prologue
-    .line 85
     iget-object v3, p0, Landroid/database/ContentObservable;->mObservers:Ljava/util/ArrayList;
 
     monitor-enter v3
 
-    .line 86
     :try_start_0
     iget-object v2, p0, Landroid/database/ContentObservable;->mObservers:Ljava/util/ArrayList;
 
@@ -147,7 +136,6 @@
 
     check-cast v0, Landroid/database/ContentObserver;
 
-    .line 87
     .local v0, "observer":Landroid/database/ContentObserver;
     const/4 v2, 0x0
 
@@ -157,7 +145,6 @@
 
     goto :goto_0
 
-    .line 85
     .end local v0    # "observer":Landroid/database/ContentObserver;
     .end local v1    # "observer$iterator":Ljava/util/Iterator;
     :catchall_0
@@ -171,7 +158,6 @@
     :cond_0
     monitor-exit v3
 
-    .line 84
     return-void
 .end method
 
@@ -180,10 +166,8 @@
     .param p1, "observer"    # Landroid/database/ContentObserver;
 
     .prologue
-    .line 32
     invoke-super {p0, p1}, Landroid/database/Observable;->registerObserver(Ljava/lang/Object;)V
 
-    .line 31
     return-void
 .end method
 
@@ -192,7 +176,6 @@
     .param p1, "observer"    # Ljava/lang/Object;
 
     .prologue
-    .line 31
     check-cast p1, Landroid/database/ContentObserver;
 
     .end local p1    # "observer":Ljava/lang/Object;

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 190
     .local p1, "this$0":Landroid/hardware/camera2/utils/TaskDrainer;, "Landroid/hardware/camera2/utils/TaskDrainer<TT;>;"
     iput-object p1, p0, Landroid/hardware/camera2/utils/TaskDrainer$1;->this$0:Landroid/hardware/camera2/utils/TaskDrainer;
 
@@ -41,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 197
     iget-object v0, p0, Landroid/hardware/camera2/utils/TaskDrainer$1;->this$0:Landroid/hardware/camera2/utils/TaskDrainer;
 
     invoke-static {v0}, Landroid/hardware/camera2/utils/TaskDrainer;->-get0(Landroid/hardware/camera2/utils/TaskDrainer;)Landroid/hardware/camera2/utils/TaskDrainer$DrainListener;
@@ -50,6 +48,5 @@
 
     invoke-interface {v0}, Landroid/hardware/camera2/utils/TaskDrainer$DrainListener;->onDrained()V
 
-    .line 192
     return-void
 .end method

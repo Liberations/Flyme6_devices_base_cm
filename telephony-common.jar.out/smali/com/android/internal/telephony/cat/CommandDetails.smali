@@ -42,15 +42,12 @@
     .locals 1
 
     .prologue
-    .line 67
     new-instance v0, Lcom/android/internal/telephony/cat/CommandDetails$1;
 
     invoke-direct {v0}, Lcom/android/internal/telephony/cat/CommandDetails$1;-><init>()V
 
-    .line 66
     sput-object v0, Lcom/android/internal/telephony/cat/CommandDetails;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 30
     return-void
 .end method
 
@@ -58,7 +55,6 @@
     .locals 0
 
     .prologue
-    .line 41
     invoke-direct {p0}, Lcom/android/internal/telephony/cat/ValueObject;-><init>()V
 
     return-void
@@ -71,10 +67,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 51
     invoke-direct {p0}, Lcom/android/internal/telephony/cat/ValueObject;-><init>()V
 
-    .line 52
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -86,28 +80,24 @@
     :cond_0
     iput-boolean v0, p0, Lcom/android/internal/telephony/cat/CommandDetails;->compRequired:Z
 
-    .line 53
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/telephony/cat/CommandDetails;->commandNumber:I
 
-    .line 54
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/telephony/cat/CommandDetails;->typeOfCommand:I
 
-    .line 55
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/telephony/cat/CommandDetails;->commandQualifier:I
 
-    .line 51
     return-void
 .end method
 
@@ -120,28 +110,24 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 45
     iget-boolean v1, p0, Lcom/android/internal/telephony/cat/CommandDetails;->compRequired:Z
 
     iget-boolean v2, p1, Lcom/android/internal/telephony/cat/CommandDetails;->compRequired:Z
 
     if-ne v1, v2, :cond_0
 
-    .line 46
     iget v1, p0, Lcom/android/internal/telephony/cat/CommandDetails;->commandNumber:I
 
     iget v2, p1, Lcom/android/internal/telephony/cat/CommandDetails;->commandNumber:I
 
     if-ne v1, v2, :cond_0
 
-    .line 47
     iget v1, p0, Lcom/android/internal/telephony/cat/CommandDetails;->commandQualifier:I
 
     iget v2, p1, Lcom/android/internal/telephony/cat/CommandDetails;->commandQualifier:I
 
     if-ne v1, v2, :cond_0
 
-    .line 48
     iget v1, p0, Lcom/android/internal/telephony/cat/CommandDetails;->typeOfCommand:I
 
     iget v2, p1, Lcom/android/internal/telephony/cat/CommandDetails;->typeOfCommand:I
@@ -150,7 +136,6 @@
 
     const/4 v0, 0x1
 
-    .line 45
     :cond_0
     return v0
 .end method
@@ -159,7 +144,6 @@
     .locals 1
 
     .prologue
-    .line 81
     const/4 v0, 0x0
 
     return v0
@@ -169,7 +153,6 @@
     .locals 1
 
     .prologue
-    .line 38
     sget-object v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;->COMMAND_DETAILS:Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
     return-object v0
@@ -179,12 +162,11 @@
     .locals 2
 
     .prologue
-    .line 86
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "CmdDetails: compRequired="
+    const-string v1, "CmdDetails: compRequired="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -196,50 +178,38 @@
 
     move-result-object v0
 
-    .line 87
-    const-string/jumbo v1, " commandNumber="
+    const-string v1, " commandNumber="
 
-    .line 86
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 87
     iget v1, p0, Lcom/android/internal/telephony/cat/CommandDetails;->commandNumber:I
 
-    .line 86
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 88
-    const-string/jumbo v1, " typeOfCommand="
+    const-string v1, " typeOfCommand="
 
-    .line 86
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 88
     iget v1, p0, Lcom/android/internal/telephony/cat/CommandDetails;->typeOfCommand:I
 
-    .line 86
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 89
-    const-string/jumbo v1, " commandQualifier="
+    const-string v1, " commandQualifier="
 
-    .line 86
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 89
     iget v1, p0, Lcom/android/internal/telephony/cat/CommandDetails;->commandQualifier:I
 
-    .line 86
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -257,7 +227,6 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 60
     iget-boolean v0, p0, Lcom/android/internal/telephony/cat/CommandDetails;->compRequired:Z
 
     if-eqz v0, :cond_0
@@ -267,25 +236,20 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 61
     iget v0, p0, Lcom/android/internal/telephony/cat/CommandDetails;->commandNumber:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 62
     iget v0, p0, Lcom/android/internal/telephony/cat/CommandDetails;->typeOfCommand:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 63
     iget v0, p0, Lcom/android/internal/telephony/cat/CommandDetails;->commandQualifier:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 59
     return-void
 
-    .line 60
     :cond_0
     const/4 v0, 0x0
 

@@ -44,12 +44,10 @@
     .locals 3
 
     .prologue
-    .line 76
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljavax/net/ssl/TrustManager;
 
-    .line 77
     new-instance v1, Landroid/net/SSLCertificateSocketFactory$1;
 
     invoke-direct {v1}, Landroid/net/SSLCertificateSocketFactory$1;-><init>()V
@@ -58,10 +56,8 @@
 
     aput-object v1, v0, v2
 
-    .line 76
     sput-object v0, Landroid/net/SSLCertificateSocketFactory;->INSECURE_TRUST_MANAGER:[Ljavax/net/ssl/TrustManager;
 
-    .line 73
     return-void
 .end method
 
@@ -72,14 +68,12 @@
     .end annotation
 
     .prologue
-    .line 99
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-direct {p0, p1, v0, v1}, Landroid/net/SSLCertificateSocketFactory;-><init>(ILandroid/net/SSLSessionCache;Z)V
 
-    .line 98
     return-void
 .end method
 
@@ -92,46 +86,33 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 102
     invoke-direct {p0}, Ljavax/net/ssl/SSLSocketFactory;-><init>()V
 
-    .line 84
     iput-object v0, p0, Landroid/net/SSLCertificateSocketFactory;->mInsecureFactory:Ljavax/net/ssl/SSLSocketFactory;
 
-    .line 85
     iput-object v0, p0, Landroid/net/SSLCertificateSocketFactory;->mSecureFactory:Ljavax/net/ssl/SSLSocketFactory;
 
-    .line 86
     iput-object v0, p0, Landroid/net/SSLCertificateSocketFactory;->mTrustManagers:[Ljavax/net/ssl/TrustManager;
 
-    .line 87
     iput-object v0, p0, Landroid/net/SSLCertificateSocketFactory;->mKeyManagers:[Ljavax/net/ssl/KeyManager;
 
-    .line 88
     iput-object v0, p0, Landroid/net/SSLCertificateSocketFactory;->mNpnProtocols:[B
 
-    .line 89
     iput-object v0, p0, Landroid/net/SSLCertificateSocketFactory;->mAlpnProtocols:[B
 
-    .line 90
     iput-object v0, p0, Landroid/net/SSLCertificateSocketFactory;->mChannelIdPrivateKey:Ljava/security/PrivateKey;
 
-    .line 104
     iput p1, p0, Landroid/net/SSLCertificateSocketFactory;->mHandshakeTimeoutMillis:I
 
-    .line 105
     if-nez p2, :cond_0
 
     :goto_0
     iput-object v0, p0, Landroid/net/SSLCertificateSocketFactory;->mSessionCache:Lcom/android/org/conscrypt/SSLClientSessionCache;
 
-    .line 106
     iput-boolean p3, p0, Landroid/net/SSLCertificateSocketFactory;->mSecure:Z
 
-    .line 103
     return-void
 
-    .line 105
     :cond_0
     iget-object v0, p2, Landroid/net/SSLSessionCache;->mSessionCache:Lcom/android/org/conscrypt/SSLClientSessionCache;
 
@@ -143,19 +124,17 @@
     .param p0, "socket"    # Ljava/net/Socket;
 
     .prologue
-    .line 421
     instance-of v0, p0, Lcom/android/org/conscrypt/OpenSSLSocketImpl;
 
     if-nez v0, :cond_0
 
-    .line 422
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Socket not created by this factory: "
+    const-string v2, "Socket not created by this factory: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -173,7 +152,6 @@
 
     throw v0
 
-    .line 426
     :cond_0
     check-cast p0, Lcom/android/org/conscrypt/OpenSSLSocketImpl;
 
@@ -186,7 +164,6 @@
     .param p0, "handshakeTimeoutMillis"    # I
 
     .prologue
-    .line 117
     new-instance v0, Landroid/net/SSLCertificateSocketFactory;
 
     const/4 v1, 0x0
@@ -204,7 +181,6 @@
     .param p1, "cache"    # Landroid/net/SSLSessionCache;
 
     .prologue
-    .line 130
     new-instance v0, Landroid/net/SSLCertificateSocketFactory;
 
     const/4 v1, 0x1
@@ -220,7 +196,6 @@
     .prologue
     monitor-enter p0
 
-    .line 230
     :try_start_0
     iget-boolean v0, p0, Landroid/net/SSLCertificateSocketFactory;->mSecure:Z
 
@@ -232,25 +207,21 @@
 
     if-eqz v0, :cond_3
 
-    .line 231
     :cond_0
     iget-object v0, p0, Landroid/net/SSLCertificateSocketFactory;->mInsecureFactory:Ljavax/net/ssl/SSLSocketFactory;
 
     if-nez v0, :cond_1
 
-    .line 232
     iget-boolean v0, p0, Landroid/net/SSLCertificateSocketFactory;->mSecure:Z
 
     if-eqz v0, :cond_2
 
-    .line 233
-    const-string/jumbo v0, "SSLCertificateSocketFactory"
+    const-string v0, "SSLCertificateSocketFactory"
 
-    const-string/jumbo v1, "*** BYPASSING SSL SECURITY CHECKS (socket.relaxsslcheck=yes) ***"
+    const-string v1, "*** BYPASSING SSL SECURITY CHECKS (socket.relaxsslcheck=yes) ***"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 237
     :goto_0
     iget-object v0, p0, Landroid/net/SSLCertificateSocketFactory;->mKeyManagers:[Ljavax/net/ssl/KeyManager;
 
@@ -262,7 +233,6 @@
 
     iput-object v0, p0, Landroid/net/SSLCertificateSocketFactory;->mInsecureFactory:Ljavax/net/ssl/SSLSocketFactory;
 
-    .line 239
     :cond_1
     iget-object v0, p0, Landroid/net/SSLCertificateSocketFactory;->mInsecureFactory:Ljavax/net/ssl/SSLSocketFactory;
     :try_end_0
@@ -272,12 +242,11 @@
 
     return-object v0
 
-    .line 235
     :cond_2
     :try_start_1
-    const-string/jumbo v0, "SSLCertificateSocketFactory"
+    const-string v0, "SSLCertificateSocketFactory"
 
-    const-string/jumbo v1, "Bypassing SSL security checks at caller\'s request"
+    const-string v1, "Bypassing SSL security checks at caller\'s request"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
@@ -292,14 +261,12 @@
 
     throw v0
 
-    .line 241
     :cond_3
     :try_start_2
     iget-object v0, p0, Landroid/net/SSLCertificateSocketFactory;->mSecureFactory:Ljavax/net/ssl/SSLSocketFactory;
 
     if-nez v0, :cond_4
 
-    .line 242
     iget-object v0, p0, Landroid/net/SSLCertificateSocketFactory;->mKeyManagers:[Ljavax/net/ssl/KeyManager;
 
     iget-object v1, p0, Landroid/net/SSLCertificateSocketFactory;->mTrustManagers:[Ljavax/net/ssl/TrustManager;
@@ -310,7 +277,6 @@
 
     iput-object v0, p0, Landroid/net/SSLCertificateSocketFactory;->mSecureFactory:Ljavax/net/ssl/SSLSocketFactory;
 
-    .line 244
     :cond_4
     iget-object v0, p0, Landroid/net/SSLCertificateSocketFactory;->mSecureFactory:Ljavax/net/ssl/SSLSocketFactory;
     :try_end_2
@@ -329,17 +295,14 @@
     .end annotation
 
     .prologue
-    .line 168
     new-instance v0, Lorg/apache/http/conn/ssl/SSLSocketFactory;
 
-    .line 169
     new-instance v1, Landroid/net/SSLCertificateSocketFactory;
 
     const/4 v2, 0x1
 
     invoke-direct {v1, p0, p1, v2}, Landroid/net/SSLCertificateSocketFactory;-><init>(ILandroid/net/SSLSessionCache;Z)V
 
-    .line 168
     invoke-direct {v0, v1}, Lorg/apache/http/conn/ssl/SSLSocketFactory;-><init>(Ljavax/net/ssl/SSLSocketFactory;)V
 
     return-object v0
@@ -351,7 +314,6 @@
     .param p1, "cache"    # Landroid/net/SSLSessionCache;
 
     .prologue
-    .line 146
     new-instance v0, Landroid/net/SSLCertificateSocketFactory;
 
     const/4 v1, 0x0
@@ -365,10 +327,9 @@
     .locals 2
 
     .prologue
-    .line 224
-    const-string/jumbo v0, "1"
+    const-string v0, "1"
 
-    const-string/jumbo v1, "ro.debuggable"
+    const-string v1, "ro.debuggable"
 
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -380,10 +341,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 225
-    const-string/jumbo v0, "yes"
+    const-string v0, "yes"
 
-    const-string/jumbo v1, "socket.relaxsslcheck"
+    const-string v1, "socket.relaxsslcheck"
 
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -393,7 +353,6 @@
 
     move-result v0
 
-    .line 224
     :goto_0
     return v0
 
@@ -409,19 +368,16 @@
     .param p2, "trustManagers"    # [Ljavax/net/ssl/TrustManager;
 
     .prologue
-    .line 213
     :try_start_0
     invoke-static {}, Lcom/android/org/conscrypt/OpenSSLContextImpl;->getPreferred()Lcom/android/org/conscrypt/OpenSSLContextImpl;
 
     move-result-object v1
 
-    .line 214
     .local v1, "sslContext":Lcom/android/org/conscrypt/OpenSSLContextImpl;
     const/4 v2, 0x0
 
     invoke-virtual {v1, p1, p2, v2}, Lcom/android/org/conscrypt/OpenSSLContextImpl;->engineInit([Ljavax/net/ssl/KeyManager;[Ljavax/net/ssl/TrustManager;Ljava/security/SecureRandom;)V
 
-    .line 215
     invoke-virtual {v1}, Lcom/android/org/conscrypt/OpenSSLContextImpl;->engineGetClientSessionContext()Lcom/android/org/conscrypt/ClientSessionContext;
 
     move-result-object v2
@@ -430,7 +386,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/org/conscrypt/ClientSessionContext;->setPersistentCache(Lcom/android/org/conscrypt/SSLClientSessionCache;)V
 
-    .line 216
     invoke-virtual {v1}, Lcom/android/org/conscrypt/OpenSSLContextImpl;->engineGetSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
     :try_end_0
     .catch Ljava/security/KeyManagementException; {:try_start_0 .. :try_end_0} :catch_0
@@ -439,18 +394,15 @@
 
     return-object v2
 
-    .line 217
     .end local v1    # "sslContext":Lcom/android/org/conscrypt/OpenSSLContextImpl;
     :catch_0
     move-exception v0
 
-    .line 218
     .local v0, "e":Ljava/security/KeyManagementException;
-    const-string/jumbo v2, "SSLCertificateSocketFactory"
+    const-string v2, "SSLCertificateSocketFactory"
 
     invoke-static {v2, v0}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 219
     invoke-static {}, Ljavax/net/ssl/SSLSocketFactory;->getDefault()Ljavax/net/SocketFactory;
 
     move-result-object v2
@@ -467,25 +419,21 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 308
     array-length v6, p0
 
     if-nez v6, :cond_0
 
-    .line 309
     new-instance v6, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v7, "items.length == 0"
+    const-string v7, "items.length == 0"
 
     invoke-direct {v6, v7}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v6
 
-    .line 311
     :cond_0
     const/4 v5, 0x0
 
-    .line 312
     .local v5, "totalLength":I
     array-length v8, p0
 
@@ -496,7 +444,6 @@
 
     aget-object v4, p0, v6
 
-    .line 313
     .local v4, "s":[B
     array-length v9, v4
 
@@ -508,7 +455,6 @@
 
     if-le v9, v10, :cond_2
 
-    .line 314
     :cond_1
     new-instance v6, Ljava/lang/IllegalArgumentException;
 
@@ -516,7 +462,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "s.length == 0 || s.length > 255: "
+    const-string v8, "s.length == 0 || s.length > 255: "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -536,7 +482,6 @@
 
     throw v6
 
-    .line 316
     :cond_2
     array-length v9, v4
 
@@ -544,21 +489,17 @@
 
     add-int/2addr v5, v9
 
-    .line 312
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
-    .line 318
     .end local v4    # "s":[B
     :cond_3
     new-array v3, v5, [B
 
-    .line 319
     .local v3, "result":[B
     const/4 v1, 0x0
 
-    .line 320
     .local v1, "pos":I
     array-length v9, p0
 
@@ -573,7 +514,6 @@
 
     aget-object v4, p0, v8
 
-    .line 321
     .restart local v4    # "s":[B
     add-int/lit8 v1, v2, 0x1
 
@@ -585,7 +525,6 @@
 
     aput-byte v6, v3, v2
 
-    .line 322
     array-length v10, v4
 
     move v6, v7
@@ -599,7 +538,6 @@
 
     aget-byte v0, v4, v6
 
-    .line 323
     .local v0, "b":B
     add-int/lit8 v1, v2, 0x1
 
@@ -607,7 +545,6 @@
     .restart local v1    # "pos":I
     aput-byte v0, v3, v2
 
-    .line 322
     add-int/lit8 v6, v6, 0x1
 
     move v2, v1
@@ -616,7 +553,6 @@
     .restart local v2    # "pos":I
     goto :goto_2
 
-    .line 320
     .end local v0    # "b":B
     :cond_4
     add-int/lit8 v6, v8, 0x1
@@ -625,7 +561,6 @@
 
     goto :goto_1
 
-    .line 326
     .end local v4    # "s":[B
     :cond_5
     return-object v3
@@ -642,21 +577,18 @@
     .end annotation
 
     .prologue
-    .line 190
     instance-of v2, p0, Ljavax/net/ssl/SSLSocket;
 
     if-nez v2, :cond_0
 
-    .line 191
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v3, "Attempt to verify non-SSL socket"
+    const-string v3, "Attempt to verify non-SSL socket"
 
     invoke-direct {v2, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v2
 
-    .line 194
     :cond_0
     invoke-static {}, Landroid/net/SSLCertificateSocketFactory;->isSslCheckRelaxed()Z
 
@@ -666,32 +598,26 @@
 
     move-object v1, p0
 
-    .line 197
     check-cast v1, Ljavax/net/ssl/SSLSocket;
 
-    .line 198
     .local v1, "ssl":Ljavax/net/ssl/SSLSocket;
     invoke-virtual {v1}, Ljavax/net/ssl/SSLSocket;->startHandshake()V
 
-    .line 200
     invoke-virtual {v1}, Ljavax/net/ssl/SSLSocket;->getSession()Ljavax/net/ssl/SSLSession;
 
     move-result-object v0
 
-    .line 201
     .local v0, "session":Ljavax/net/ssl/SSLSession;
     if-nez v0, :cond_1
 
-    .line 202
     new-instance v2, Ljavax/net/ssl/SSLException;
 
-    const-string/jumbo v3, "Cannot verify SSL socket without session"
+    const-string v3, "Cannot verify SSL socket without session"
 
     invoke-direct {v2, v3}, Ljavax/net/ssl/SSLException;-><init>(Ljava/lang/String;)V
 
     throw v2
 
-    .line 204
     :cond_1
     invoke-static {}, Ljavax/net/ssl/HttpsURLConnection;->getDefaultHostnameVerifier()Ljavax/net/ssl/HostnameVerifier;
 
@@ -703,14 +629,13 @@
 
     if-nez v2, :cond_2
 
-    .line 205
     new-instance v2, Ljavax/net/ssl/SSLPeerUnverifiedException;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "Cannot verify hostname: "
+    const-string v4, "Cannot verify hostname: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -728,7 +653,6 @@
 
     throw v2
 
-    .line 189
     .end local v0    # "session":Ljavax/net/ssl/SSLSession;
     .end local v1    # "ssl":Ljavax/net/ssl/SSLSocket;
     :cond_2
@@ -746,7 +670,6 @@
     .end annotation
 
     .prologue
-    .line 458
     invoke-direct {p0}, Landroid/net/SSLCertificateSocketFactory;->getDelegate()Ljavax/net/ssl/SSLSocketFactory;
 
     move-result-object v1
@@ -757,28 +680,23 @@
 
     check-cast v0, Lcom/android/org/conscrypt/OpenSSLSocketImpl;
 
-    .line 459
     .local v0, "s":Lcom/android/org/conscrypt/OpenSSLSocketImpl;
     iget-object v1, p0, Landroid/net/SSLCertificateSocketFactory;->mNpnProtocols:[B
 
     invoke-virtual {v0, v1}, Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setNpnProtocols([B)V
 
-    .line 460
     iget-object v1, p0, Landroid/net/SSLCertificateSocketFactory;->mAlpnProtocols:[B
 
     invoke-virtual {v0, v1}, Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setAlpnProtocols([B)V
 
-    .line 461
     iget v1, p0, Landroid/net/SSLCertificateSocketFactory;->mHandshakeTimeoutMillis:I
 
     invoke-virtual {v0, v1}, Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setHandshakeTimeout(I)V
 
-    .line 462
     iget-object v1, p0, Landroid/net/SSLCertificateSocketFactory;->mChannelIdPrivateKey:Ljava/security/PrivateKey;
 
     invoke-virtual {v0, v1}, Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setChannelIdPrivateKey(Ljava/security/PrivateKey;)V
 
-    .line 463
     return-object v0
 .end method
 
@@ -793,7 +711,6 @@
     .end annotation
 
     .prologue
-    .line 531
     invoke-direct {p0}, Landroid/net/SSLCertificateSocketFactory;->getDelegate()Ljavax/net/ssl/SSLSocketFactory;
 
     move-result-object v1
@@ -804,36 +721,29 @@
 
     check-cast v0, Lcom/android/org/conscrypt/OpenSSLSocketImpl;
 
-    .line 532
     .local v0, "s":Lcom/android/org/conscrypt/OpenSSLSocketImpl;
     iget-object v1, p0, Landroid/net/SSLCertificateSocketFactory;->mNpnProtocols:[B
 
     invoke-virtual {v0, v1}, Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setNpnProtocols([B)V
 
-    .line 533
     iget-object v1, p0, Landroid/net/SSLCertificateSocketFactory;->mAlpnProtocols:[B
 
     invoke-virtual {v0, v1}, Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setAlpnProtocols([B)V
 
-    .line 534
     iget v1, p0, Landroid/net/SSLCertificateSocketFactory;->mHandshakeTimeoutMillis:I
 
     invoke-virtual {v0, v1}, Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setHandshakeTimeout(I)V
 
-    .line 535
     iget-object v1, p0, Landroid/net/SSLCertificateSocketFactory;->mChannelIdPrivateKey:Ljava/security/PrivateKey;
 
     invoke-virtual {v0, v1}, Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setChannelIdPrivateKey(Ljava/security/PrivateKey;)V
 
-    .line 536
     iget-boolean v1, p0, Landroid/net/SSLCertificateSocketFactory;->mSecure:Z
 
     if-eqz v1, :cond_0
 
-    .line 537
     invoke-static {v0, p1}, Landroid/net/SSLCertificateSocketFactory;->verifyHostname(Ljava/net/Socket;Ljava/lang/String;)V
 
-    .line 539
     :cond_0
     return-object v0
 .end method
@@ -851,7 +761,6 @@
     .end annotation
 
     .prologue
-    .line 511
     invoke-direct {p0}, Landroid/net/SSLCertificateSocketFactory;->getDelegate()Ljavax/net/ssl/SSLSocketFactory;
 
     move-result-object v1
@@ -862,36 +771,29 @@
 
     check-cast v0, Lcom/android/org/conscrypt/OpenSSLSocketImpl;
 
-    .line 513
     .local v0, "s":Lcom/android/org/conscrypt/OpenSSLSocketImpl;
     iget-object v1, p0, Landroid/net/SSLCertificateSocketFactory;->mNpnProtocols:[B
 
     invoke-virtual {v0, v1}, Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setNpnProtocols([B)V
 
-    .line 514
     iget-object v1, p0, Landroid/net/SSLCertificateSocketFactory;->mAlpnProtocols:[B
 
     invoke-virtual {v0, v1}, Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setAlpnProtocols([B)V
 
-    .line 515
     iget v1, p0, Landroid/net/SSLCertificateSocketFactory;->mHandshakeTimeoutMillis:I
 
     invoke-virtual {v0, v1}, Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setHandshakeTimeout(I)V
 
-    .line 516
     iget-object v1, p0, Landroid/net/SSLCertificateSocketFactory;->mChannelIdPrivateKey:Ljava/security/PrivateKey;
 
     invoke-virtual {v0, v1}, Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setChannelIdPrivateKey(Ljava/security/PrivateKey;)V
 
-    .line 517
     iget-boolean v1, p0, Landroid/net/SSLCertificateSocketFactory;->mSecure:Z
 
     if-eqz v1, :cond_0
 
-    .line 518
     invoke-static {v0, p1}, Landroid/net/SSLCertificateSocketFactory;->verifyHostname(Ljava/net/Socket;Ljava/lang/String;)V
 
-    .line 520
     :cond_0
     return-object v0
 .end method
@@ -907,7 +809,6 @@
     .end annotation
 
     .prologue
-    .line 494
     invoke-direct {p0}, Landroid/net/SSLCertificateSocketFactory;->getDelegate()Ljavax/net/ssl/SSLSocketFactory;
 
     move-result-object v1
@@ -918,28 +819,23 @@
 
     check-cast v0, Lcom/android/org/conscrypt/OpenSSLSocketImpl;
 
-    .line 495
     .local v0, "s":Lcom/android/org/conscrypt/OpenSSLSocketImpl;
     iget-object v1, p0, Landroid/net/SSLCertificateSocketFactory;->mNpnProtocols:[B
 
     invoke-virtual {v0, v1}, Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setNpnProtocols([B)V
 
-    .line 496
     iget-object v1, p0, Landroid/net/SSLCertificateSocketFactory;->mAlpnProtocols:[B
 
     invoke-virtual {v0, v1}, Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setAlpnProtocols([B)V
 
-    .line 497
     iget v1, p0, Landroid/net/SSLCertificateSocketFactory;->mHandshakeTimeoutMillis:I
 
     invoke-virtual {v0, v1}, Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setHandshakeTimeout(I)V
 
-    .line 498
     iget-object v1, p0, Landroid/net/SSLCertificateSocketFactory;->mChannelIdPrivateKey:Ljava/security/PrivateKey;
 
     invoke-virtual {v0, v1}, Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setChannelIdPrivateKey(Ljava/security/PrivateKey;)V
 
-    .line 499
     return-object v0
 .end method
 
@@ -956,7 +852,6 @@
     .end annotation
 
     .prologue
-    .line 476
     invoke-direct {p0}, Landroid/net/SSLCertificateSocketFactory;->getDelegate()Ljavax/net/ssl/SSLSocketFactory;
 
     move-result-object v1
@@ -967,28 +862,23 @@
 
     check-cast v0, Lcom/android/org/conscrypt/OpenSSLSocketImpl;
 
-    .line 478
     .local v0, "s":Lcom/android/org/conscrypt/OpenSSLSocketImpl;
     iget-object v1, p0, Landroid/net/SSLCertificateSocketFactory;->mNpnProtocols:[B
 
     invoke-virtual {v0, v1}, Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setNpnProtocols([B)V
 
-    .line 479
     iget-object v1, p0, Landroid/net/SSLCertificateSocketFactory;->mAlpnProtocols:[B
 
     invoke-virtual {v0, v1}, Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setAlpnProtocols([B)V
 
-    .line 480
     iget v1, p0, Landroid/net/SSLCertificateSocketFactory;->mHandshakeTimeoutMillis:I
 
     invoke-virtual {v0, v1}, Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setHandshakeTimeout(I)V
 
-    .line 481
     iget-object v1, p0, Landroid/net/SSLCertificateSocketFactory;->mChannelIdPrivateKey:Ljava/security/PrivateKey;
 
     invoke-virtual {v0, v1}, Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setChannelIdPrivateKey(Ljava/security/PrivateKey;)V
 
-    .line 482
     return-object v0
 .end method
 
@@ -1005,7 +895,6 @@
     .end annotation
 
     .prologue
-    .line 437
     invoke-direct {p0}, Landroid/net/SSLCertificateSocketFactory;->getDelegate()Ljavax/net/ssl/SSLSocketFactory;
 
     move-result-object v1
@@ -1016,36 +905,29 @@
 
     check-cast v0, Lcom/android/org/conscrypt/OpenSSLSocketImpl;
 
-    .line 438
     .local v0, "s":Lcom/android/org/conscrypt/OpenSSLSocketImpl;
     iget-object v1, p0, Landroid/net/SSLCertificateSocketFactory;->mNpnProtocols:[B
 
     invoke-virtual {v0, v1}, Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setNpnProtocols([B)V
 
-    .line 439
     iget-object v1, p0, Landroid/net/SSLCertificateSocketFactory;->mAlpnProtocols:[B
 
     invoke-virtual {v0, v1}, Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setAlpnProtocols([B)V
 
-    .line 440
     iget v1, p0, Landroid/net/SSLCertificateSocketFactory;->mHandshakeTimeoutMillis:I
 
     invoke-virtual {v0, v1}, Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setHandshakeTimeout(I)V
 
-    .line 441
     iget-object v1, p0, Landroid/net/SSLCertificateSocketFactory;->mChannelIdPrivateKey:Ljava/security/PrivateKey;
 
     invoke-virtual {v0, v1}, Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setChannelIdPrivateKey(Ljava/security/PrivateKey;)V
 
-    .line 442
     iget-boolean v1, p0, Landroid/net/SSLCertificateSocketFactory;->mSecure:Z
 
     if-eqz v1, :cond_0
 
-    .line 443
     invoke-static {v0, p2}, Landroid/net/SSLCertificateSocketFactory;->verifyHostname(Ljava/net/Socket;Ljava/lang/String;)V
 
-    .line 445
     :cond_0
     return-object v0
 .end method
@@ -1055,7 +937,6 @@
     .param p1, "socket"    # Ljava/net/Socket;
 
     .prologue
-    .line 352
     invoke-static {p1}, Landroid/net/SSLCertificateSocketFactory;->castToOpenSSLSocket(Ljava/net/Socket;)Lcom/android/org/conscrypt/OpenSSLSocketImpl;
 
     move-result-object v0
@@ -1071,7 +952,6 @@
     .locals 1
 
     .prologue
-    .line 544
     invoke-direct {p0}, Landroid/net/SSLCertificateSocketFactory;->getDelegate()Ljavax/net/ssl/SSLSocketFactory;
 
     move-result-object v0
@@ -1088,7 +968,6 @@
     .param p1, "socket"    # Ljava/net/Socket;
 
     .prologue
-    .line 338
     invoke-static {p1}, Landroid/net/SSLCertificateSocketFactory;->castToOpenSSLSocket(Ljava/net/Socket;)Lcom/android/org/conscrypt/OpenSSLSocketImpl;
 
     move-result-object v0
@@ -1104,7 +983,6 @@
     .locals 1
 
     .prologue
-    .line 549
     invoke-direct {p0}, Landroid/net/SSLCertificateSocketFactory;->getDelegate()Ljavax/net/ssl/SSLSocketFactory;
 
     move-result-object v0
@@ -1121,14 +999,12 @@
     .param p1, "protocols"    # [[B
 
     .prologue
-    .line 300
     invoke-static {p1}, Landroid/net/SSLCertificateSocketFactory;->toLengthPrefixedList([[B)[B
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/net/SSLCertificateSocketFactory;->mAlpnProtocols:[B
 
-    .line 299
     return-void
 .end method
 
@@ -1137,10 +1013,8 @@
     .param p1, "privateKey"    # Ljava/security/PrivateKey;
 
     .prologue
-    .line 377
     iput-object p1, p0, Landroid/net/SSLCertificateSocketFactory;->mChannelIdPrivateKey:Ljava/security/PrivateKey;
 
-    .line 376
     return-void
 .end method
 
@@ -1150,14 +1024,12 @@
     .param p2, "hostName"    # Ljava/lang/String;
 
     .prologue
-    .line 401
     invoke-static {p1}, Landroid/net/SSLCertificateSocketFactory;->castToOpenSSLSocket(Ljava/net/Socket;)Lcom/android/org/conscrypt/OpenSSLSocketImpl;
 
     move-result-object v0
 
     invoke-virtual {v0, p2}, Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setHostname(Ljava/lang/String;)V
 
-    .line 400
     return-void
 .end method
 
@@ -1168,16 +1040,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 359
     iput-object p1, p0, Landroid/net/SSLCertificateSocketFactory;->mKeyManagers:[Ljavax/net/ssl/KeyManager;
 
-    .line 362
     iput-object v0, p0, Landroid/net/SSLCertificateSocketFactory;->mSecureFactory:Ljavax/net/ssl/SSLSocketFactory;
 
-    .line 363
     iput-object v0, p0, Landroid/net/SSLCertificateSocketFactory;->mInsecureFactory:Ljavax/net/ssl/SSLSocketFactory;
 
-    .line 358
     return-void
 .end method
 
@@ -1186,14 +1054,12 @@
     .param p1, "npnProtocols"    # [[B
 
     .prologue
-    .line 277
     invoke-static {p1}, Landroid/net/SSLCertificateSocketFactory;->toLengthPrefixedList([[B)[B
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/net/SSLCertificateSocketFactory;->mNpnProtocols:[B
 
-    .line 276
     return-void
 .end method
 
@@ -1208,14 +1074,12 @@
     .end annotation
 
     .prologue
-    .line 417
     invoke-static {p1}, Landroid/net/SSLCertificateSocketFactory;->castToOpenSSLSocket(Ljava/net/Socket;)Lcom/android/org/conscrypt/OpenSSLSocketImpl;
 
     move-result-object v0
 
     invoke-virtual {v0, p2}, Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setSoWriteTimeout(I)V
 
-    .line 416
     return-void
 .end method
 
@@ -1224,15 +1088,12 @@
     .param p1, "trustManager"    # [Ljavax/net/ssl/TrustManager;
 
     .prologue
-    .line 252
     iput-object p1, p0, Landroid/net/SSLCertificateSocketFactory;->mTrustManagers:[Ljavax/net/ssl/TrustManager;
 
-    .line 255
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/net/SSLCertificateSocketFactory;->mSecureFactory:Ljavax/net/ssl/SSLSocketFactory;
 
-    .line 251
     return-void
 .end method
 
@@ -1242,13 +1103,11 @@
     .param p2, "useSessionTickets"    # Z
 
     .prologue
-    .line 389
     invoke-static {p1}, Landroid/net/SSLCertificateSocketFactory;->castToOpenSSLSocket(Ljava/net/Socket;)Lcom/android/org/conscrypt/OpenSSLSocketImpl;
 
     move-result-object v0
 
     invoke-virtual {v0, p2}, Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setUseSessionTickets(Z)V
 
-    .line 388
     return-void
 .end method

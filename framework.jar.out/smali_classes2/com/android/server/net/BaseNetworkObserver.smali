@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 29
     invoke-direct {p0}, Landroid/net/INetworkManagementEventObserver$Stub;-><init>()V
 
     return-void
@@ -22,7 +21,6 @@
     .param p2, "address"    # Landroid/net/LinkAddress;
 
     .prologue
-    .line 46
     return-void
 .end method
 
@@ -32,7 +30,6 @@
     .param p2, "address"    # Landroid/net/LinkAddress;
 
     .prologue
-    .line 41
     return-void
 .end method
 
@@ -41,7 +38,6 @@
     .param p1, "iface"    # Ljava/lang/String;
 
     .prologue
-    .line 56
     return-void
 .end method
 
@@ -52,7 +48,6 @@
     .param p3, "tsNanos"    # J
 
     .prologue
-    .line 61
     return-void
 .end method
 
@@ -63,7 +58,6 @@
     .param p4, "servers"    # [Ljava/lang/String;
 
     .prologue
-    .line 76
     return-void
 .end method
 
@@ -73,7 +67,6 @@
     .param p2, "up"    # Z
 
     .prologue
-    .line 51
     return-void
 .end method
 
@@ -82,7 +75,6 @@
     .param p1, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 66
     return-void
 .end method
 
@@ -91,7 +83,6 @@
     .param p1, "iface"    # Ljava/lang/String;
 
     .prologue
-    .line 36
     return-void
 .end method
 
@@ -101,7 +92,6 @@
     .param p2, "up"    # Z
 
     .prologue
-    .line 31
     return-void
 .end method
 
@@ -111,7 +101,6 @@
     .param p2, "iface"    # Ljava/lang/String;
 
     .prologue
-    .line 71
     return-void
 .end method
 
@@ -120,7 +109,6 @@
     .param p1, "route"    # Landroid/net/RouteInfo;
 
     .prologue
-    .line 86
     return-void
 .end method
 
@@ -129,6 +117,5 @@
     .param p1, "route"    # Landroid/net/RouteInfo;
 
     .prologue
-    .line 81
     return-void
 .end method

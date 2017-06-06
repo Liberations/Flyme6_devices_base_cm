@@ -52,52 +52,46 @@
 
     const/4 v2, 0x0
 
-    .line 190
     new-instance v0, Lcyanogenmod/themes/ThemeChangeRequest$RequestType;
 
-    const-string/jumbo v1, "USER_REQUEST"
+    const-string v1, "USER_REQUEST"
 
     invoke-direct {v0, v1, v2}, Lcyanogenmod/themes/ThemeChangeRequest$RequestType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcyanogenmod/themes/ThemeChangeRequest$RequestType;->USER_REQUEST:Lcyanogenmod/themes/ThemeChangeRequest$RequestType;
 
-    .line 191
     new-instance v0, Lcyanogenmod/themes/ThemeChangeRequest$RequestType;
 
-    const-string/jumbo v1, "USER_REQUEST_MIXNMATCH"
+    const-string v1, "USER_REQUEST_MIXNMATCH"
 
     invoke-direct {v0, v1, v3}, Lcyanogenmod/themes/ThemeChangeRequest$RequestType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcyanogenmod/themes/ThemeChangeRequest$RequestType;->USER_REQUEST_MIXNMATCH:Lcyanogenmod/themes/ThemeChangeRequest$RequestType;
 
-    .line 192
     new-instance v0, Lcyanogenmod/themes/ThemeChangeRequest$RequestType;
 
-    const-string/jumbo v1, "THEME_UPDATED"
+    const-string v1, "THEME_UPDATED"
 
     invoke-direct {v0, v1, v4}, Lcyanogenmod/themes/ThemeChangeRequest$RequestType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcyanogenmod/themes/ThemeChangeRequest$RequestType;->THEME_UPDATED:Lcyanogenmod/themes/ThemeChangeRequest$RequestType;
 
-    .line 193
     new-instance v0, Lcyanogenmod/themes/ThemeChangeRequest$RequestType;
 
-    const-string/jumbo v1, "THEME_REMOVED"
+    const-string v1, "THEME_REMOVED"
 
     invoke-direct {v0, v1, v5}, Lcyanogenmod/themes/ThemeChangeRequest$RequestType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcyanogenmod/themes/ThemeChangeRequest$RequestType;->THEME_REMOVED:Lcyanogenmod/themes/ThemeChangeRequest$RequestType;
 
-    .line 194
     new-instance v0, Lcyanogenmod/themes/ThemeChangeRequest$RequestType;
 
-    const-string/jumbo v1, "THEME_RESET"
+    const-string v1, "THEME_RESET"
 
     invoke-direct {v0, v1, v6}, Lcyanogenmod/themes/ThemeChangeRequest$RequestType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcyanogenmod/themes/ThemeChangeRequest$RequestType;->THEME_RESET:Lcyanogenmod/themes/ThemeChangeRequest$RequestType;
 
-    .line 189
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcyanogenmod/themes/ThemeChangeRequest$RequestType;
@@ -131,7 +125,6 @@
     .locals 0
 
     .prologue
-    .line 189
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -142,7 +135,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 189
     const-class v0, Lcyanogenmod/themes/ThemeChangeRequest$RequestType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -158,7 +150,6 @@
     .locals 1
 
     .prologue
-    .line 189
     sget-object v0, Lcyanogenmod/themes/ThemeChangeRequest$RequestType;->$VALUES:[Lcyanogenmod/themes/ThemeChangeRequest$RequestType;
 
     return-object v0

@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 162
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 166
     new-instance v0, Lcyanogenmod/media/AudioSessionInfo;
 
     const/4 v1, 0x0
@@ -60,7 +58,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 165
     invoke-virtual {p0, p1}, Lcyanogenmod/media/AudioSessionInfo$1;->createFromParcel(Landroid/os/Parcel;)Lcyanogenmod/media/AudioSessionInfo;
 
     move-result-object v0
@@ -73,7 +70,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 171
     new-array v0, p1, [Lcyanogenmod/media/AudioSessionInfo;
 
     return-object v0
@@ -84,7 +80,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 170
     invoke-virtual {p0, p1}, Lcyanogenmod/media/AudioSessionInfo$1;->newArray(I)[Lcyanogenmod/media/AudioSessionInfo;
 
     move-result-object v0

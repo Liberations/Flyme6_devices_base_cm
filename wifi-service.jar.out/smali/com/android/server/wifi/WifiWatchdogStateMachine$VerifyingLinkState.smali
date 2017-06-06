@@ -26,7 +26,6 @@
     .param p1, "this$0"    # Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     .prologue
-    .line 607
     iput-object p1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$VerifyingLinkState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -42,10 +41,8 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 614
     iput v4, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$VerifyingLinkState;->mSampleCount:I
 
-    .line 615
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$VerifyingLinkState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     invoke-static {v0}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->-get2(Lcom/android/server/wifi/WifiWatchdogStateMachine;)Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;
@@ -62,7 +59,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->newLinkDetected()V
 
-    .line 616
     :cond_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$VerifyingLinkState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
@@ -88,7 +84,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->sendMessage(Landroid/os/Message;)V
 
-    .line 612
     return-void
 .end method
 
@@ -103,21 +98,17 @@
 
     const/4 v8, 0x1
 
-    .line 621
     iget v4, p1, Landroid/os/Message;->what:I
 
     sparse-switch v4, :sswitch_data_0
 
-    .line 674
     return v9
 
-    .line 623
     :sswitch_0
     iget-object v4, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$VerifyingLinkState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     invoke-static {v4}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->-wrap7(Lcom/android/server/wifi/WifiWatchdogStateMachine;)V
 
-    .line 624
     iget-object v4, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$VerifyingLinkState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     invoke-static {v4}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->-get10(Lcom/android/server/wifi/WifiWatchdogStateMachine;)Z
@@ -126,18 +117,15 @@
 
     if-nez v4, :cond_0
 
-    .line 625
     iget-object v4, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$VerifyingLinkState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     invoke-static {v4, v8}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->-wrap4(Lcom/android/server/wifi/WifiWatchdogStateMachine;Z)V
 
-    .line 676
     :cond_0
     :goto_0
     :sswitch_1
     return v8
 
-    .line 630
     :sswitch_2
     iget-object v4, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$VerifyingLinkState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
@@ -151,7 +139,6 @@
 
     goto :goto_0
 
-    .line 634
     :sswitch_3
     iget v4, p1, Landroid/os/Message;->arg1:I
 
@@ -163,7 +150,6 @@
 
     if-ne v4, v5, :cond_0
 
-    .line 635
     iget-object v4, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$VerifyingLinkState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     invoke-static {v4}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->-get16(Lcom/android/server/wifi/WifiWatchdogStateMachine;)Lcom/android/internal/util/AsyncChannel;
@@ -174,7 +160,6 @@
 
     invoke-virtual {v4, v5}, Lcom/android/internal/util/AsyncChannel;->sendMessage(I)V
 
-    .line 636
     iget-object v4, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$VerifyingLinkState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     iget-object v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$VerifyingLinkState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -197,15 +182,12 @@
 
     move-result-object v5
 
-    .line 637
     const-wide/16 v6, 0x3e8
 
-    .line 636
     invoke-virtual {v4, v5, v6, v7}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->sendMessageDelayed(Landroid/os/Message;J)V
 
     goto :goto_0
 
-    .line 642
     :sswitch_4
     iget-object v4, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$VerifyingLinkState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
@@ -219,16 +201,13 @@
 
     if-eqz v4, :cond_0
 
-    .line 645
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/net/wifi/RssiPacketCountInfo;
 
-    .line 646
     .local v0, "info":Landroid/net/wifi/RssiPacketCountInfo;
     iget v1, v0, Landroid/net/wifi/RssiPacketCountInfo;->rssi:I
 
-    .line 649
     .local v1, "rssi":I
     iget-object v4, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$VerifyingLinkState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
@@ -246,20 +225,17 @@
 
     sub-long v2, v4, v6
 
-    .line 650
     .local v2, "time":J
     cmp-long v4, v2, v10
 
     if-gtz v4, :cond_1
 
-    .line 653
     iget-object v4, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$VerifyingLinkState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     invoke-static {v4, v8}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->-wrap4(Lcom/android/server/wifi/WifiWatchdogStateMachine;Z)V
 
     goto :goto_0
 
-    .line 655
     :cond_1
     iget-object v4, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$VerifyingLinkState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
@@ -273,7 +249,6 @@
 
     if-lt v1, v4, :cond_2
 
-    .line 656
     iget v4, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$VerifyingLinkState;->mSampleCount:I
 
     add-int/lit8 v4, v4, 0x1
@@ -292,7 +267,6 @@
 
     if-lt v4, v5, :cond_0
 
-    .line 659
     iget-object v4, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$VerifyingLinkState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     invoke-static {v4}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->-get2(Lcom/android/server/wifi/WifiWatchdogStateMachine;)Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;
@@ -301,20 +275,17 @@
 
     invoke-static {v4, v10, v11}, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->-set0(Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;J)J
 
-    .line 660
     iget-object v4, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$VerifyingLinkState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     invoke-static {v4, v8}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->-wrap4(Lcom/android/server/wifi/WifiWatchdogStateMachine;Z)V
 
     goto/16 :goto_0
 
-    .line 663
     :cond_2
     iput v9, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$VerifyingLinkState;->mSampleCount:I
 
     goto/16 :goto_0
 
-    .line 621
     :sswitch_data_0
     .sparse-switch
         0x21006 -> :sswitch_0

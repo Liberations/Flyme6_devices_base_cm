@@ -24,10 +24,8 @@
     .param p1, "phys"    # Landroid/view/SurfaceControl$PhysicalDisplayInfo;
 
     .prologue
-    .line 618
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 619
     iget v0, p1, Landroid/view/SurfaceControl$PhysicalDisplayInfo;->width:I
 
     iget v1, p1, Landroid/view/SurfaceControl$PhysicalDisplayInfo;->height:I
@@ -40,7 +38,6 @@
 
     iput-object v0, p0, Lcom/android/server/display/LocalDisplayAdapter$DisplayModeRecord;->mMode:Landroid/view/Display$Mode;
 
-    .line 618
     return-void
 .end method
 
@@ -53,7 +50,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 630
     iget-object v3, p0, Lcom/android/server/display/LocalDisplayAdapter$DisplayModeRecord;->mMode:Landroid/view/Display$Mode;
 
     invoke-virtual {v3}, Landroid/view/Display$Mode;->getRefreshRate()F
@@ -64,7 +60,6 @@
 
     move-result v1
 
-    .line 631
     .local v1, "modeRefreshRate":I
     iget v3, p1, Landroid/view/SurfaceControl$PhysicalDisplayInfo;->refreshRate:F
 
@@ -72,7 +67,6 @@
 
     move-result v0
 
-    .line 632
     .local v0, "displayInfoRefreshRate":I
     iget-object v3, p0, Lcom/android/server/display/LocalDisplayAdapter$DisplayModeRecord;->mMode:Landroid/view/Display$Mode;
 
@@ -84,7 +78,6 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 633
     iget-object v3, p0, Lcom/android/server/display/LocalDisplayAdapter$DisplayModeRecord;->mMode:Landroid/view/Display$Mode;
 
     invoke-virtual {v3}, Landroid/view/Display$Mode;->getPhysicalHeight()I
@@ -95,12 +88,10 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 634
     if-ne v1, v0, :cond_0
 
     const/4 v2, 0x1
 
-    .line 632
     :cond_0
     return v2
 .end method
@@ -109,12 +100,11 @@
     .locals 2
 
     .prologue
-    .line 638
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "DisplayModeRecord{mMode="
+    const-string v1, "DisplayModeRecord{mMode="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -126,7 +116,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

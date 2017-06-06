@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,10 +22,8 @@
     .param p4, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 34
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/app/Activity;->dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 33
     return-void
 .end method
 
@@ -35,9 +32,7 @@
     .param p0, "activity"    # Landroid/app/Activity;
 
     .prologue
-    .line 29
     invoke-virtual {p0}, Landroid/app/Activity;->invalidateOptionsMenu()V
 
-    .line 28
     return-void
 .end method

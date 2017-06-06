@@ -33,20 +33,15 @@
     .param p4, "_observer"    # Landroid/app/backup/IRestoreObserver;
 
     .prologue
-    .line 390
     iput-object p1, p0, Lcom/android/server/backup/BackupManagerService$RestoreGetSetsParams;->this$0:Lcom/android/server/backup/BackupManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 392
     iput-object p2, p0, Lcom/android/server/backup/BackupManagerService$RestoreGetSetsParams;->transport:Lcom/android/internal/backup/IBackupTransport;
 
-    .line 393
     iput-object p3, p0, Lcom/android/server/backup/BackupManagerService$RestoreGetSetsParams;->session:Lcom/android/server/backup/BackupManagerService$ActiveRestoreSession;
 
-    .line 394
     iput-object p4, p0, Lcom/android/server/backup/BackupManagerService$RestoreGetSetsParams;->observer:Landroid/app/backup/IRestoreObserver;
 
-    .line 391
     return-void
 .end method

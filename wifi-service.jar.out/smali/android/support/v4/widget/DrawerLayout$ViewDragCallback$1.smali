@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Landroid/support/v4/widget/DrawerLayout$ViewDragCallback;
 
     .prologue
-    .line 1902
     iput-object p1, p0, Landroid/support/v4/widget/DrawerLayout$ViewDragCallback$1;->this$1:Landroid/support/v4/widget/DrawerLayout$ViewDragCallback;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +40,9 @@
     .locals 1
 
     .prologue
-    .line 1904
     iget-object v0, p0, Landroid/support/v4/widget/DrawerLayout$ViewDragCallback$1;->this$1:Landroid/support/v4/widget/DrawerLayout$ViewDragCallback;
 
     invoke-static {v0}, Landroid/support/v4/widget/DrawerLayout$ViewDragCallback;->-wrap0(Landroid/support/v4/widget/DrawerLayout$ViewDragCallback;)V
 
-    .line 1903
     return-void
 .end method

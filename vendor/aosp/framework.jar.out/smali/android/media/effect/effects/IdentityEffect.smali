@@ -10,10 +10,8 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 30
     invoke-direct {p0, p1, p2}, Landroid/media/effect/FilterEffect;-><init>(Landroid/media/effect/EffectContext;Ljava/lang/String;)V
 
-    .line 29
     return-void
 .end method
 
@@ -27,34 +25,26 @@
     .param p4, "outputTexId"    # I
 
     .prologue
-    .line 35
     invoke-virtual {p0}, Landroid/media/effect/effects/IdentityEffect;->beginGLEffect()V
 
-    .line 37
     invoke-virtual {p0, p1, p2, p3}, Landroid/media/effect/effects/IdentityEffect;->frameFromTexture(III)Landroid/filterfw/core/Frame;
 
     move-result-object v0
 
-    .line 38
     .local v0, "inputFrame":Landroid/filterfw/core/Frame;
     invoke-virtual {p0, p4, p2, p3}, Landroid/media/effect/effects/IdentityEffect;->frameFromTexture(III)Landroid/filterfw/core/Frame;
 
     move-result-object v1
 
-    .line 40
     .local v1, "outputFrame":Landroid/filterfw/core/Frame;
     invoke-virtual {v1, v0}, Landroid/filterfw/core/Frame;->setDataFromFrame(Landroid/filterfw/core/Frame;)V
 
-    .line 42
     invoke-virtual {v0}, Landroid/filterfw/core/Frame;->release()Landroid/filterfw/core/Frame;
 
-    .line 43
     invoke-virtual {v1}, Landroid/filterfw/core/Frame;->release()Landroid/filterfw/core/Frame;
 
-    .line 45
     invoke-virtual {p0}, Landroid/media/effect/effects/IdentityEffect;->endGLEffect()V
 
-    .line 34
     return-void
 .end method
 
@@ -62,7 +52,6 @@
     .locals 0
 
     .prologue
-    .line 55
     return-void
 .end method
 
@@ -72,14 +61,13 @@
     .param p2, "value"    # Ljava/lang/Object;
 
     .prologue
-    .line 50
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Unknown parameter "
+    const-string v2, "Unknown parameter "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -89,10 +77,8 @@
 
     move-result-object v1
 
-    .line 51
-    const-string/jumbo v2, " for IdentityEffect!"
+    const-string v2, " for IdentityEffect!"
 
-    .line 50
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1

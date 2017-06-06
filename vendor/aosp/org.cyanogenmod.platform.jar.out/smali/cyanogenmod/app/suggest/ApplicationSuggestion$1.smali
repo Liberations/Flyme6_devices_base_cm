@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 36
     new-instance v0, Lcyanogenmod/app/suggest/ApplicationSuggestion;
 
     const/4 v1, 0x0
@@ -60,7 +58,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 35
     invoke-virtual {p0, p1}, Lcyanogenmod/app/suggest/ApplicationSuggestion$1;->createFromParcel(Landroid/os/Parcel;)Lcyanogenmod/app/suggest/ApplicationSuggestion;
 
     move-result-object v0
@@ -73,7 +70,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 40
     new-array v0, p1, [Lcyanogenmod/app/suggest/ApplicationSuggestion;
 
     return-object v0
@@ -84,7 +80,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 39
     invoke-virtual {p0, p1}, Lcyanogenmod/app/suggest/ApplicationSuggestion$1;->newArray(I)[Lcyanogenmod/app/suggest/ApplicationSuggestion;
 
     move-result-object v0

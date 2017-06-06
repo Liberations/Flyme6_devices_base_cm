@@ -35,7 +35,6 @@
     .param p2, "$anonymous0"    # I
 
     .prologue
-    .line 53
     iput-object p1, p0, Landroid/net/wifi/p2p/WifiP2pGroupList$2;->this$0:Landroid/net/wifi/p2p/WifiP2pGroupList;
 
     invoke-direct {p0, p2}, Landroid/util/LruCache;-><init>(I)V
@@ -53,7 +52,6 @@
     .param p4, "newValue"    # Landroid/net/wifi/p2p/WifiP2pGroup;
 
     .prologue
-    .line 57
     iget-object v0, p0, Landroid/net/wifi/p2p/WifiP2pGroupList$2;->this$0:Landroid/net/wifi/p2p/WifiP2pGroupList;
 
     invoke-static {v0}, Landroid/net/wifi/p2p/WifiP2pGroupList;->-get1(Landroid/net/wifi/p2p/WifiP2pGroupList;)Landroid/net/wifi/p2p/WifiP2pGroupList$GroupDeleteListener;
@@ -70,12 +68,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 56
     :cond_0
     :goto_0
     return-void
 
-    .line 58
     :cond_1
     iget-object v0, p0, Landroid/net/wifi/p2p/WifiP2pGroupList$2;->this$0:Landroid/net/wifi/p2p/WifiP2pGroupList;
 
@@ -100,7 +96,6 @@
     .param p4, "newValue"    # Ljava/lang/Object;
 
     .prologue
-    .line 55
     check-cast p2, Ljava/lang/Integer;
 
     .end local p2    # "netId":Ljava/lang/Object;

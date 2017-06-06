@@ -25,21 +25,16 @@
     .param p1, "ourConnectionServiceImpl"    # Landroid/telecom/ConnectionService;
 
     .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 31
     iput-object v0, p0, Landroid/telecom/RemoteConnectionManager;->mRemoteConnectionServices:Ljava/util/Map;
 
-    .line 36
     iput-object p1, p0, Landroid/telecom/RemoteConnectionManager;->mOurConnectionServiceImpl:Landroid/telecom/ConnectionService;
 
-    .line 35
     return-void
 .end method
 
@@ -51,7 +46,6 @@
     .param p2, "outgoingConnectionServiceRpc"    # Lcom/android/internal/telecom/IConnectionService;
 
     .prologue
-    .line 42
     iget-object v2, p0, Landroid/telecom/RemoteConnectionManager;->mRemoteConnectionServices:Ljava/util/Map;
 
     invoke-interface {v2, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -60,17 +54,13 @@
 
     if-nez v2, :cond_0
 
-    .line 44
     :try_start_0
     new-instance v1, Landroid/telecom/RemoteConnectionService;
 
-    .line 46
     iget-object v2, p0, Landroid/telecom/RemoteConnectionManager;->mOurConnectionServiceImpl:Landroid/telecom/ConnectionService;
 
-    .line 44
     invoke-direct {v1, p2, v2}, Landroid/telecom/RemoteConnectionService;-><init>(Lcom/android/internal/telecom/IConnectionService;Landroid/telecom/ConnectionService;)V
 
-    .line 47
     .local v1, "remoteConnectionService":Landroid/telecom/RemoteConnectionService;
     iget-object v2, p0, Landroid/telecom/RemoteConnectionManager;->mRemoteConnectionServices:Ljava/util/Map;
 
@@ -78,13 +68,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 41
     .end local v1    # "remoteConnectionService":Landroid/telecom/RemoteConnectionService;
     :cond_0
     :goto_0
     return-void
 
-    .line 48
     :catch_0
     move-exception v0
 
@@ -98,7 +86,6 @@
     .param p2, "b"    # Landroid/telecom/RemoteConnection;
 
     .prologue
-    .line 77
     invoke-virtual {p1}, Landroid/telecom/RemoteConnection;->getConnectionService()Lcom/android/internal/telecom/IConnectionService;
 
     move-result-object v1
@@ -109,7 +96,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 79
     :try_start_0
     invoke-virtual {p1}, Landroid/telecom/RemoteConnection;->getConnectionService()Lcom/android/internal/telecom/IConnectionService;
 
@@ -127,19 +113,16 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 76
     :goto_0
     return-void
 
-    .line 83
     :cond_0
-    const-string/jumbo v1, "Request to conference incompatible remote connections (%s,%s) (%s,%s)"
+    const-string v1, "Request to conference incompatible remote connections (%s,%s) (%s,%s)"
 
     const/4 v2, 0x4
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    .line 84
     invoke-virtual {p1}, Landroid/telecom/RemoteConnection;->getConnectionService()Lcom/android/internal/telecom/IConnectionService;
 
     move-result-object v3
@@ -156,7 +139,6 @@
 
     aput-object v3, v2, v4
 
-    .line 85
     invoke-virtual {p2}, Landroid/telecom/RemoteConnection;->getConnectionService()Lcom/android/internal/telecom/IConnectionService;
 
     move-result-object v3
@@ -173,12 +155,10 @@
 
     aput-object v3, v2, v4
 
-    .line 83
     invoke-static {p0, v1, v2}, Landroid/telecom/Log;->w(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 80
     :catch_0
     move-exception v0
 
@@ -195,25 +175,21 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 57
     invoke-virtual {p2}, Landroid/telecom/ConnectionRequest;->getAccountHandle()Landroid/telecom/PhoneAccountHandle;
 
     move-result-object v0
 
-    .line 58
     .local v0, "accountHandle":Landroid/telecom/PhoneAccountHandle;
     if-nez v0, :cond_0
 
-    .line 59
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v4, "accountHandle must be specified."
+    const-string v4, "accountHandle must be specified."
 
     invoke-direct {v3, v4}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v3
 
-    .line 62
     :cond_0
     invoke-virtual {p2}, Landroid/telecom/ConnectionRequest;->getAccountHandle()Landroid/telecom/PhoneAccountHandle;
 
@@ -223,7 +199,6 @@
 
     move-result-object v1
 
-    .line 63
     .local v1, "componentName":Landroid/content/ComponentName;
     iget-object v3, p0, Landroid/telecom/RemoteConnectionManager;->mRemoteConnectionServices:Ljava/util/Map;
 
@@ -233,14 +208,13 @@
 
     if-nez v3, :cond_1
 
-    .line 64
     new-instance v3, Ljava/lang/UnsupportedOperationException;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "accountHandle not supported: "
+    const-string v5, "accountHandle not supported: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -258,7 +232,6 @@
 
     throw v3
 
-    .line 68
     :cond_1
     iget-object v3, p0, Landroid/telecom/RemoteConnectionManager;->mRemoteConnectionServices:Ljava/util/Map;
 
@@ -268,18 +241,15 @@
 
     check-cast v2, Landroid/telecom/RemoteConnectionService;
 
-    .line 69
     .local v2, "remoteService":Landroid/telecom/RemoteConnectionService;
     if-eqz v2, :cond_2
 
-    .line 70
     invoke-virtual {v2, p1, p2, p3}, Landroid/telecom/RemoteConnectionService;->createRemoteConnection(Landroid/telecom/PhoneAccountHandle;Landroid/telecom/ConnectionRequest;Z)Landroid/telecom/RemoteConnection;
 
     move-result-object v3
 
     return-object v3
 
-    .line 73
     :cond_2
     return-object v4
 .end method

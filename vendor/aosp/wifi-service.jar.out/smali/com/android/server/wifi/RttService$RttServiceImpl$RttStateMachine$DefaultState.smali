@@ -24,7 +24,6 @@
     .param p1, "this$2"    # Lcom/android/server/wifi/RttService$RttServiceImpl$RttStateMachine;
 
     .prologue
-    .line 249
     iput-object p1, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$RttStateMachine$DefaultState;->this$2:Lcom/android/server/wifi/RttService$RttServiceImpl$RttStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -41,14 +40,13 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 252
-    const-string/jumbo v0, "RttService"
+    const-string v0, "RttService"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "DefaultState got"
+    const-string v2, "DefaultState got"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -64,17 +62,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 253
     iget v0, p1, Landroid/os/Message;->what:I
 
     sparse-switch v0, :sswitch_data_0
 
-    .line 266
     const/4 v0, 0x0
 
     return v0
 
-    .line 255
     :sswitch_0
     iget-object v0, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$RttStateMachine$DefaultState;->this$2:Lcom/android/server/wifi/RttService$RttServiceImpl$RttStateMachine;
 
@@ -84,11 +79,9 @@
 
     invoke-static {v0, v1}, Lcom/android/server/wifi/RttService$RttServiceImpl$RttStateMachine;->-wrap1(Lcom/android/server/wifi/RttService$RttServiceImpl$RttStateMachine;Lcom/android/internal/util/IState;)V
 
-    .line 268
     :goto_0
     return v3
 
-    .line 258
     :sswitch_1
     iget-object v0, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$RttStateMachine$DefaultState;->this$2:Lcom/android/server/wifi/RttService$RttServiceImpl$RttStateMachine;
 
@@ -96,13 +89,12 @@
 
     goto :goto_0
 
-    .line 261
     :sswitch_2
     iget-object v0, p0, Lcom/android/server/wifi/RttService$RttServiceImpl$RttStateMachine$DefaultState;->this$2:Lcom/android/server/wifi/RttService$RttServiceImpl$RttStateMachine;
 
     iget-object v0, v0, Lcom/android/server/wifi/RttService$RttServiceImpl$RttStateMachine;->this$1:Lcom/android/server/wifi/RttService$RttServiceImpl;
 
-    const-string/jumbo v1, "Try later"
+    const-string v1, "Try later"
 
     const/4 v2, -0x2
 
@@ -110,11 +102,9 @@
 
     goto :goto_0
 
-    .line 264
     :sswitch_3
     return v3
 
-    .line 253
     nop
 
     :sswitch_data_0

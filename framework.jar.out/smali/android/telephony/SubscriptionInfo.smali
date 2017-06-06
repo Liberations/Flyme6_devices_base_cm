@@ -64,14 +64,12 @@
     .locals 1
 
     .prologue
-    .line 300
     new-instance v0, Landroid/telephony/SubscriptionInfo$1;
 
     invoke-direct {v0}, Landroid/telephony/SubscriptionInfo$1;-><init>()V
 
     sput-object v0, Landroid/telephony/SubscriptionInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 35
     return-void
 .end method
 
@@ -93,52 +91,36 @@
     .param p14, "userNwMode"    # I
 
     .prologue
-    .line 119
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 122
     iput p1, p0, Landroid/telephony/SubscriptionInfo;->mId:I
 
-    .line 123
     iput-object p2, p0, Landroid/telephony/SubscriptionInfo;->mIccId:Ljava/lang/String;
 
-    .line 124
     iput p3, p0, Landroid/telephony/SubscriptionInfo;->mSimSlotIndex:I
 
-    .line 125
     iput-object p4, p0, Landroid/telephony/SubscriptionInfo;->mDisplayName:Ljava/lang/CharSequence;
 
-    .line 126
     iput-object p5, p0, Landroid/telephony/SubscriptionInfo;->mCarrierName:Ljava/lang/CharSequence;
 
-    .line 127
     iput p6, p0, Landroid/telephony/SubscriptionInfo;->mNameSource:I
 
-    .line 128
     iput p7, p0, Landroid/telephony/SubscriptionInfo;->mIconTint:I
 
-    .line 129
     iput-object p8, p0, Landroid/telephony/SubscriptionInfo;->mNumber:Ljava/lang/String;
 
-    .line 130
     iput p9, p0, Landroid/telephony/SubscriptionInfo;->mDataRoaming:I
 
-    .line 131
     iput-object p10, p0, Landroid/telephony/SubscriptionInfo;->mIconBitmap:Landroid/graphics/Bitmap;
 
-    .line 132
     iput p11, p0, Landroid/telephony/SubscriptionInfo;->mMcc:I
 
-    .line 133
     iput p12, p0, Landroid/telephony/SubscriptionInfo;->mMnc:I
 
-    .line 134
     iput p14, p0, Landroid/telephony/SubscriptionInfo;->mUserNwMode:I
 
-    .line 135
     iput-object p13, p0, Landroid/telephony/SubscriptionInfo;->mCountryIso:Ljava/lang/String;
 
-    .line 121
     return-void
 .end method
 
@@ -149,21 +131,17 @@
     .prologue
     const/16 v3, 0x9
 
-    .line 355
     const/4 v0, 0x0
 
-    .line 356
     .local v0, "iccIdToPrint":Ljava/lang/String;
     if-eqz p0, :cond_0
 
-    .line 357
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v1
 
     if-le v1, v3, :cond_1
 
-    .line 358
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -178,7 +156,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "XXXXXXXXXXX"
+    const-string v2, "XXXXXXXXXXX"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -188,13 +166,11 @@
 
     move-result-object v0
 
-    .line 363
     .end local v0    # "iccIdToPrint":Ljava/lang/String;
     :cond_0
     :goto_0
     return-object v0
 
-    .line 360
     .restart local v0    # "iccIdToPrint":Ljava/lang/String;
     :cond_1
     move-object v0, p0
@@ -210,14 +186,12 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 207
     iget-object v10, p0, Landroid/telephony/SubscriptionInfo;->mIconBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v10}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v6
 
-    .line 208
     .local v6, "width":I
     iget-object v10, p0, Landroid/telephony/SubscriptionInfo;->mIconBitmap:Landroid/graphics/Bitmap;
 
@@ -225,7 +199,6 @@
 
     move-result v1
 
-    .line 209
     .local v1, "height":I
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -235,7 +208,6 @@
 
     move-result-object v3
 
-    .line 212
     .local v3, "metrics":Landroid/util/DisplayMetrics;
     iget-object v10, p0, Landroid/telephony/SubscriptionInfo;->mIconBitmap:Landroid/graphics/Bitmap;
 
@@ -247,19 +219,16 @@
 
     move-result-object v7
 
-    .line 214
     .local v7, "workingBitmap":Landroid/graphics/Bitmap;
     new-instance v0, Landroid/graphics/Canvas;
 
     invoke-direct {v0, v7}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 215
     .local v0, "canvas":Landroid/graphics/Canvas;
     new-instance v4, Landroid/graphics/Paint;
 
     invoke-direct {v4}, Landroid/graphics/Paint;-><init>()V
 
-    .line 218
     .local v4, "paint":Landroid/graphics/Paint;
     new-instance v10, Landroid/graphics/PorterDuffColorFilter;
 
@@ -271,7 +240,6 @@
 
     invoke-virtual {v4, v10}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
-    .line 219
     iget-object v10, p0, Landroid/telephony/SubscriptionInfo;->mIconBitmap:Landroid/graphics/Bitmap;
 
     const/4 v11, 0x0
@@ -280,18 +248,15 @@
 
     invoke-virtual {v0, v10, v11, v12, v4}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 220
     const/4 v10, 0x0
 
     invoke-virtual {v4, v10}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
-    .line 223
     const/4 v10, 0x1
 
     invoke-virtual {v4, v10}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 224
-    const-string/jumbo v10, "sans-serif"
+    const-string v10, "sans-serif"
 
     const/4 v11, 0x0
 
@@ -301,12 +266,10 @@
 
     invoke-virtual {v4, v10}, Landroid/graphics/Paint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
-    .line 225
     const/4 v10, -0x1
 
     invoke-virtual {v4, v10}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 227
     iget v10, v3, Landroid/util/DisplayMetrics;->density:F
 
     const/high16 v11, 0x41800000    # 16.0f
@@ -315,8 +278,7 @@
 
     invoke-virtual {v4, v10}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    .line 229
-    const-string/jumbo v10, "%d"
+    const-string v10, "%d"
 
     const/4 v11, 0x1
 
@@ -338,13 +300,11 @@
 
     move-result-object v2
 
-    .line 230
     .local v2, "index":Ljava/lang/String;
     new-instance v5, Landroid/graphics/Rect;
 
     invoke-direct {v5}, Landroid/graphics/Rect;-><init>()V
 
-    .line 231
     .local v5, "textBound":Landroid/graphics/Rect;
     const/4 v10, 0x0
 
@@ -352,7 +312,6 @@
 
     invoke-virtual {v4, v2, v10, v11, v5}, Landroid/graphics/Paint;->getTextBounds(Ljava/lang/String;IILandroid/graphics/Rect;)V
 
-    .line 232
     int-to-float v10, v6
 
     const/high16 v11, 0x40000000    # 2.0f
@@ -367,7 +326,6 @@
 
     sub-float v8, v10, v11
 
-    .line 233
     .local v8, "xOffset":F
     int-to-float v10, v1
 
@@ -383,11 +341,9 @@
 
     sub-float v9, v10, v11
 
-    .line 234
     .local v9, "yOffset":F
     invoke-virtual {v0, v2, v8, v9, v4}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    .line 236
     return-object v7
 .end method
 
@@ -395,7 +351,6 @@
     .locals 1
 
     .prologue
-    .line 348
     const/4 v0, 0x0
 
     return v0
@@ -405,7 +360,6 @@
     .locals 1
 
     .prologue
-    .line 178
     iget-object v0, p0, Landroid/telephony/SubscriptionInfo;->mCarrierName:Ljava/lang/CharSequence;
 
     return-object v0
@@ -415,7 +369,6 @@
     .locals 1
 
     .prologue
-    .line 297
     iget-object v0, p0, Landroid/telephony/SubscriptionInfo;->mCountryIso:Ljava/lang/String;
 
     return-object v0
@@ -425,7 +378,6 @@
     .locals 1
 
     .prologue
-    .line 268
     iget v0, p0, Landroid/telephony/SubscriptionInfo;->mDataRoaming:I
 
     return v0
@@ -435,7 +387,6 @@
     .locals 1
 
     .prologue
-    .line 163
     iget-object v0, p0, Landroid/telephony/SubscriptionInfo;->mDisplayName:Ljava/lang/CharSequence;
 
     return-object v0
@@ -445,7 +396,6 @@
     .locals 1
 
     .prologue
-    .line 149
     iget-object v0, p0, Landroid/telephony/SubscriptionInfo;->mIccId:Ljava/lang/String;
 
     return-object v0
@@ -455,7 +405,6 @@
     .locals 1
 
     .prologue
-    .line 245
     iget v0, p0, Landroid/telephony/SubscriptionInfo;->mIconTint:I
 
     return v0
@@ -465,7 +414,6 @@
     .locals 1
 
     .prologue
-    .line 275
     iget v0, p0, Landroid/telephony/SubscriptionInfo;->mMcc:I
 
     return v0
@@ -475,7 +423,6 @@
     .locals 1
 
     .prologue
-    .line 282
     iget v0, p0, Landroid/telephony/SubscriptionInfo;->mMnc:I
 
     return v0
@@ -485,7 +432,6 @@
     .locals 1
 
     .prologue
-    .line 195
     iget v0, p0, Landroid/telephony/SubscriptionInfo;->mNameSource:I
 
     return v0
@@ -495,7 +441,6 @@
     .locals 1
 
     .prologue
-    .line 260
     iget-object v0, p0, Landroid/telephony/SubscriptionInfo;->mNumber:Ljava/lang/String;
 
     return-object v0
@@ -505,7 +450,6 @@
     .locals 1
 
     .prologue
-    .line 156
     iget v0, p0, Landroid/telephony/SubscriptionInfo;->mSimSlotIndex:I
 
     return v0
@@ -515,7 +459,6 @@
     .locals 1
 
     .prologue
-    .line 142
     iget v0, p0, Landroid/telephony/SubscriptionInfo;->mId:I
 
     return v0
@@ -525,7 +468,6 @@
     .locals 1
 
     .prologue
-    .line 290
     iget v0, p0, Landroid/telephony/SubscriptionInfo;->mUserNwMode:I
 
     return v0
@@ -536,10 +478,8 @@
     .param p1, "name"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 186
     iput-object p1, p0, Landroid/telephony/SubscriptionInfo;->mCarrierName:Ljava/lang/CharSequence;
 
-    .line 185
     return-void
 .end method
 
@@ -548,10 +488,8 @@
     .param p1, "name"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 171
     iput-object p1, p0, Landroid/telephony/SubscriptionInfo;->mDisplayName:Ljava/lang/CharSequence;
 
-    .line 170
     return-void
 .end method
 
@@ -560,10 +498,8 @@
     .param p1, "iconTint"    # I
 
     .prologue
-    .line 253
     iput p1, p0, Landroid/telephony/SubscriptionInfo;->mIconTint:I
 
-    .line 252
     return-void
 .end method
 
@@ -571,20 +507,18 @@
     .locals 3
 
     .prologue
-    .line 368
     iget-object v1, p0, Landroid/telephony/SubscriptionInfo;->mIccId:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/telephony/SubscriptionInfo;->givePrintableIccid(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 369
     .local v0, "iccIdToPrint":Ljava/lang/String;
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "{id="
+    const-string v2, "{id="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -596,7 +530,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, ", iccId="
+    const-string v2, ", iccId="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -606,7 +540,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, " simSlotIndex="
+    const-string v2, " simSlotIndex="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -618,154 +552,116 @@
 
     move-result-object v1
 
-    .line 370
-    const-string/jumbo v2, " displayName="
+    const-string v2, " displayName="
 
-    .line 369
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 370
     iget-object v2, p0, Landroid/telephony/SubscriptionInfo;->mDisplayName:Ljava/lang/CharSequence;
 
-    .line 369
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 370
-    const-string/jumbo v2, " carrierName="
+    const-string v2, " carrierName="
 
-    .line 369
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 370
     iget-object v2, p0, Landroid/telephony/SubscriptionInfo;->mCarrierName:Ljava/lang/CharSequence;
 
-    .line 369
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 371
-    const-string/jumbo v2, " nameSource="
+    const-string v2, " nameSource="
 
-    .line 369
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 371
     iget v2, p0, Landroid/telephony/SubscriptionInfo;->mNameSource:I
 
-    .line 369
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 371
-    const-string/jumbo v2, " iconTint="
+    const-string v2, " iconTint="
 
-    .line 369
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 371
     iget v2, p0, Landroid/telephony/SubscriptionInfo;->mIconTint:I
 
-    .line 369
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 372
-    const-string/jumbo v2, " dataRoaming="
+    const-string v2, " dataRoaming="
 
-    .line 369
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 372
     iget v2, p0, Landroid/telephony/SubscriptionInfo;->mDataRoaming:I
 
-    .line 369
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 372
-    const-string/jumbo v2, " iconBitmap="
+    const-string v2, " iconBitmap="
 
-    .line 369
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 372
     iget-object v2, p0, Landroid/telephony/SubscriptionInfo;->mIconBitmap:Landroid/graphics/Bitmap;
 
-    .line 369
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 372
-    const-string/jumbo v2, " mcc "
+    const-string v2, " mcc "
 
-    .line 369
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 372
     iget v2, p0, Landroid/telephony/SubscriptionInfo;->mMcc:I
 
-    .line 369
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 373
-    const-string/jumbo v2, " mnc "
+    const-string v2, " mnc "
 
-    .line 369
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 373
     iget v2, p0, Landroid/telephony/SubscriptionInfo;->mMnc:I
 
-    .line 369
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 373
-    const-string/jumbo v2, " mUserNwMode="
+    const-string v2, " mUserNwMode="
 
-    .line 369
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 373
     iget v2, p0, Landroid/telephony/SubscriptionInfo;->mUserNwMode:I
 
-    .line 369
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 373
-    const-string/jumbo v2, "}"
+    const-string v2, "}"
 
-    .line 369
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -783,76 +679,61 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 330
     iget v0, p0, Landroid/telephony/SubscriptionInfo;->mId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 331
     iget-object v0, p0, Landroid/telephony/SubscriptionInfo;->mIccId:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 332
     iget v0, p0, Landroid/telephony/SubscriptionInfo;->mSimSlotIndex:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 333
     iget-object v0, p0, Landroid/telephony/SubscriptionInfo;->mDisplayName:Ljava/lang/CharSequence;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeCharSequence(Ljava/lang/CharSequence;)V
 
-    .line 334
     iget-object v0, p0, Landroid/telephony/SubscriptionInfo;->mCarrierName:Ljava/lang/CharSequence;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeCharSequence(Ljava/lang/CharSequence;)V
 
-    .line 335
     iget v0, p0, Landroid/telephony/SubscriptionInfo;->mNameSource:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 336
     iget v0, p0, Landroid/telephony/SubscriptionInfo;->mIconTint:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 337
     iget-object v0, p0, Landroid/telephony/SubscriptionInfo;->mNumber:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 338
     iget v0, p0, Landroid/telephony/SubscriptionInfo;->mDataRoaming:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 339
     iget v0, p0, Landroid/telephony/SubscriptionInfo;->mMcc:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 340
     iget v0, p0, Landroid/telephony/SubscriptionInfo;->mMnc:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 341
     iget v0, p0, Landroid/telephony/SubscriptionInfo;->mUserNwMode:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 342
     iget-object v0, p0, Landroid/telephony/SubscriptionInfo;->mCountryIso:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 343
     iget-object v0, p0, Landroid/telephony/SubscriptionInfo;->mIconBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0, p1, p2}, Landroid/graphics/Bitmap;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 329
     return-void
 .end method

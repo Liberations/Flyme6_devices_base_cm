@@ -30,12 +30,10 @@
     .param p2, "viewId"    # I
 
     .prologue
-    .line 658
     iput-object p1, p0, Landroid/widget/TabHost$ViewIdContentStrategy;->this$0:Landroid/widget/TabHost;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 659
     invoke-static {p1}, Landroid/widget/TabHost;->-get0(Landroid/widget/TabHost;)Landroid/widget/FrameLayout;
 
     move-result-object v0
@@ -46,22 +44,18 @@
 
     iput-object v0, p0, Landroid/widget/TabHost$ViewIdContentStrategy;->mView:Landroid/view/View;
 
-    .line 660
     iget-object v0, p0, Landroid/widget/TabHost$ViewIdContentStrategy;->mView:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 661
     iget-object v0, p0, Landroid/widget/TabHost$ViewIdContentStrategy;->mView:Landroid/view/View;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 658
     return-void
 
-    .line 663
     :cond_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -69,7 +63,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Could not create tab content because could not find view with id "
+    const-string v2, "Could not create tab content because could not find view with id "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -105,14 +99,12 @@
     .locals 2
 
     .prologue
-    .line 669
     iget-object v0, p0, Landroid/widget/TabHost$ViewIdContentStrategy;->mView:Landroid/view/View;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 670
     iget-object v0, p0, Landroid/widget/TabHost$ViewIdContentStrategy;->mView:Landroid/view/View;
 
     return-object v0
@@ -122,13 +114,11 @@
     .locals 2
 
     .prologue
-    .line 674
     iget-object v0, p0, Landroid/widget/TabHost$ViewIdContentStrategy;->mView:Landroid/view/View;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 673
     return-void
 .end method

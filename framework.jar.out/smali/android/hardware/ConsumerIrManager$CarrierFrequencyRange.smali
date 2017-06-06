@@ -30,18 +30,14 @@
     .param p3, "max"    # I
 
     .prologue
-    .line 105
     iput-object p1, p0, Landroid/hardware/ConsumerIrManager$CarrierFrequencyRange;->this$0:Landroid/hardware/ConsumerIrManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 106
     iput p2, p0, Landroid/hardware/ConsumerIrManager$CarrierFrequencyRange;->mMinFrequency:I
 
-    .line 107
     iput p3, p0, Landroid/hardware/ConsumerIrManager$CarrierFrequencyRange;->mMaxFrequency:I
 
-    .line 105
     return-void
 .end method
 
@@ -51,7 +47,6 @@
     .locals 1
 
     .prologue
-    .line 121
     iget v0, p0, Landroid/hardware/ConsumerIrManager$CarrierFrequencyRange;->mMaxFrequency:I
 
     return v0
@@ -61,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 114
     iget v0, p0, Landroid/hardware/ConsumerIrManager$CarrierFrequencyRange;->mMinFrequency:I
 
     return v0

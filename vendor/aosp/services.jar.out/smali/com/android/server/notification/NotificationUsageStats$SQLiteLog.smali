@@ -112,25 +112,19 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 775
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 776
     new-instance v6, Landroid/os/HandlerThread;
 
-    const-string/jumbo v0, "notification-sqlite-log"
+    const-string v0, "notification-sqlite-log"
 
-    .line 777
     const/16 v1, 0xa
 
-    .line 776
     invoke-direct {v6, v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;I)V
 
-    .line 778
     .local v6, "backgroundThread":Landroid/os/HandlerThread;
     invoke-virtual {v6}, Landroid/os/HandlerThread;->start()V
 
-    .line 779
     new-instance v0, Lcom/android/server/notification/NotificationUsageStats$SQLiteLog$1;
 
     invoke-virtual {v6}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -141,10 +135,9 @@
 
     iput-object v0, p0, Lcom/android/server/notification/NotificationUsageStats$SQLiteLog;->mWriteHandler:Landroid/os/Handler;
 
-    .line 803
     new-instance v0, Lcom/android/server/notification/NotificationUsageStats$SQLiteLog$2;
 
-    const-string/jumbo v3, "notification_log.db"
+    const-string v3, "notification_log.db"
 
     const/4 v4, 0x0
 
@@ -158,7 +151,6 @@
 
     iput-object v0, p0, Lcom/android/server/notification/NotificationUsageStats$SQLiteLog;->mHelper:Landroid/database/sqlite/SQLiteOpenHelper;
 
-    .line 775
     return-void
 .end method
 
@@ -172,12 +164,10 @@
     .end annotation
 
     .prologue
-    .line 857
     new-instance v4, Lorg/json/JSONArray;
 
     invoke-direct {v4}, Lorg/json/JSONArray;-><init>()V
 
-    .line 858
     .local v4, "frequencies":Lorg/json/JSONArray;
     iget-object v11, p0, Lcom/android/server/notification/NotificationUsageStats$SQLiteLog;->mHelper:Landroid/database/sqlite/SQLiteOpenHelper;
 
@@ -185,19 +175,17 @@
 
     move-result-object v3
 
-    .line 859
     .local v3, "db":Landroid/database/sqlite/SQLiteDatabase;
     invoke-direct {p0}, Lcom/android/server/notification/NotificationUsageStats$SQLiteLog;->getMidnightMs()J
 
     move-result-wide v6
 
-    .line 860
     .local v6, "midnight":J
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v12, "SELECT event_user_id, pkg, CAST((("
+    const-string v12, "SELECT event_user_id, pkg, CAST((("
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -207,178 +195,134 @@
 
     move-result-object v11
 
-    .line 864
-    const-string/jumbo v12, " - "
+    const-string v12, " - "
 
-    .line 860
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v11
 
-    .line 864
-    const-string/jumbo v12, "event_time_ms"
+    const-string v12, "event_time_ms"
 
-    .line 860
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v11
 
-    .line 864
-    const-string/jumbo v12, ") / "
+    const-string v12, ") / "
 
-    .line 860
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v11
 
-    .line 864
     const-wide/32 v12, 0x5265c00
 
-    .line 860
     invoke-virtual {v11, v12, v13}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v11
 
-    .line 864
-    const-string/jumbo v12, ") AS int) "
+    const-string v12, ") AS int) "
 
-    .line 860
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v11
 
-    .line 865
-    const-string/jumbo v12, "AS day, "
+    const-string v12, "AS day, "
 
-    .line 860
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v11
 
-    .line 866
-    const-string/jumbo v12, "COUNT(*) AS cnt "
+    const-string v12, "COUNT(*) AS cnt "
 
-    .line 860
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v11
 
-    .line 867
-    const-string/jumbo v12, "FROM "
+    const-string v12, "FROM "
 
-    .line 860
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v11
 
-    .line 867
-    const-string/jumbo v12, "log"
+    const-string v12, "log"
 
-    .line 860
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v11
 
-    .line 867
-    const-string/jumbo v12, " "
+    const-string v12, " "
 
-    .line 860
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v11
 
-    .line 868
-    const-string/jumbo v12, "WHERE "
+    const-string v12, "WHERE "
 
-    .line 860
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v11
 
-    .line 869
-    const-string/jumbo v12, "event_type"
+    const-string v12, "event_type"
 
-    .line 860
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v11
 
-    .line 869
-    const-string/jumbo v12, "="
+    const-string v12, "="
 
-    .line 860
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v11
 
-    .line 869
     const/4 v12, 0x1
 
-    .line 860
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v11
 
-    .line 870
-    const-string/jumbo v12, " AND "
+    const-string v12, " AND "
 
-    .line 860
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v11
 
-    .line 870
-    const-string/jumbo v12, "event_time_ms"
+    const-string v12, "event_time_ms"
 
-    .line 860
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v11
 
-    .line 870
-    const-string/jumbo v12, " > "
+    const-string v12, " > "
 
-    .line 860
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v11
 
-    .line 870
     iget-wide v12, p1, Lcom/android/server/notification/NotificationManagerService$DumpFilter;->since:J
 
-    .line 860
     invoke-virtual {v11, v12, v13}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v11
 
-    .line 871
-    const-string/jumbo v12, " GROUP BY "
+    const-string v12, " GROUP BY "
 
-    .line 860
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v11
 
-    .line 871
-    const-string/jumbo v12, "event_user_id"
+    const-string v12, "event_user_id"
 
-    .line 860
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v11
 
-    .line 871
-    const-string/jumbo v12, ", day, "
+    const-string v12, ", day, "
 
-    .line 860
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v11
 
-    .line 871
-    const-string/jumbo v12, "pkg"
+    const-string v12, "pkg"
 
-    .line 860
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v11
@@ -387,7 +331,6 @@
 
     move-result-object v8
 
-    .line 872
     .local v8, "q":Ljava/lang/String;
     const/4 v11, 0x0
 
@@ -395,7 +338,6 @@
 
     move-result-object v1
 
-    .line 874
     .local v1, "cursor":Landroid/database/Cursor;
     :try_start_0
     invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
@@ -407,14 +349,12 @@
 
     if-nez v11, :cond_2
 
-    .line 875
     const/4 v11, 0x0
 
     invoke-interface {v1, v11}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v10
 
-    .line 876
     .local v10, "userId":I
     const/4 v11, 0x1
 
@@ -422,7 +362,6 @@
 
     move-result-object v5
 
-    .line 877
     .local v5, "pkg":Ljava/lang/String;
     if-eqz p1, :cond_0
 
@@ -432,7 +371,6 @@
 
     if-eqz v11, :cond_1
 
-    .line 878
     :cond_0
     const/4 v11, 0x2
 
@@ -440,7 +378,6 @@
 
     move-result v2
 
-    .line 879
     .local v2, "day":I
     const/4 v11, 0x3
 
@@ -448,37 +385,30 @@
 
     move-result v0
 
-    .line 880
     .local v0, "count":I
     new-instance v9, Lorg/json/JSONObject;
 
     invoke-direct {v9}, Lorg/json/JSONObject;-><init>()V
 
-    .line 881
     .local v9, "row":Lorg/json/JSONObject;
-    const-string/jumbo v11, "user_id"
+    const-string v11, "user_id"
 
     invoke-virtual {v9, v11, v10}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 882
-    const-string/jumbo v11, "package"
+    const-string v11, "package"
 
     invoke-virtual {v9, v11, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 883
-    const-string/jumbo v11, "day"
+    const-string v11, "day"
 
     invoke-virtual {v9, v11, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 884
-    const-string/jumbo v11, "count"
+    const-string v11, "count"
 
     invoke-virtual {v9, v11, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 885
     invoke-virtual {v4, v9}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
 
-    .line 874
     .end local v0    # "count":I
     .end local v2    # "day":I
     .end local v9    # "row":Lorg/json/JSONObject;
@@ -489,23 +419,18 @@
 
     goto :goto_0
 
-    .line 887
     .end local v5    # "pkg":Ljava/lang/String;
     .end local v10    # "userId":I
     :catchall_0
     move-exception v11
 
-    .line 888
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    .line 887
     throw v11
 
-    .line 888
     :cond_2
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    .line 890
     return-object v4
 .end method
 
@@ -515,12 +440,10 @@
     .prologue
     const/16 v5, 0x3b
 
-    .line 924
     new-instance v0, Ljava/util/GregorianCalendar;
 
     invoke-direct {v0}, Ljava/util/GregorianCalendar;-><init>()V
 
-    .line 925
     .local v0, "midnight":Ljava/util/GregorianCalendar;
     const/4 v1, 0x1
 
@@ -534,7 +457,6 @@
 
     move-result v2
 
-    .line 926
     const/4 v3, 0x5
 
     invoke-virtual {v0, v3}, Ljava/util/GregorianCalendar;->get(I)I
@@ -545,10 +467,8 @@
 
     move v6, v5
 
-    .line 925
     invoke-virtual/range {v0 .. v6}, Ljava/util/GregorianCalendar;->set(IIIIII)V
 
-    .line 927
     invoke-virtual {v0}, Ljava/util/GregorianCalendar;->getTimeInMillis()J
 
     move-result-wide v2
@@ -561,12 +481,10 @@
     .param p1, "db"    # Landroid/database/sqlite/SQLiteDatabase;
 
     .prologue
-    .line 951
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
-    .line 952
     .local v4, "nowMs":J
     sget-wide v6, Lcom/android/server/notification/NotificationUsageStats$SQLiteLog;->sNumWrites:J
 
@@ -576,7 +494,6 @@
 
     if-gtz v1, :cond_0
 
-    .line 953
     sget-wide v6, Lcom/android/server/notification/NotificationUsageStats$SQLiteLog;->sLastPruneMs:J
 
     sub-long v6, v4, v6
@@ -587,27 +504,22 @@
 
     if-lez v1, :cond_1
 
-    .line 954
     :cond_0
     const-wide/16 v6, 0x0
 
     sput-wide v6, Lcom/android/server/notification/NotificationUsageStats$SQLiteLog;->sNumWrites:J
 
-    .line 955
     sput-wide v4, Lcom/android/server/notification/NotificationUsageStats$SQLiteLog;->sLastPruneMs:J
 
-    .line 956
     const-wide/32 v6, 0x240c8400
 
     sub-long v2, v4, v6
 
-    .line 957
     .local v2, "horizonStartMs":J
-    const-string/jumbo v1, "log"
+    const-string v1, "log"
 
-    const-string/jumbo v6, "event_time_ms < ?"
+    const-string v6, "event_time_ms < ?"
 
-    .line 958
     const/4 v7, 0x1
 
     new-array v7, v7, [Ljava/lang/String;
@@ -620,20 +532,18 @@
 
     aput-object v8, v7, v9
 
-    .line 957
     invoke-virtual {p1, v1, v6, v7}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v0
 
-    .line 959
     .local v0, "deletedRows":I
-    const-string/jumbo v1, "NotificationSQLiteLog"
+    const-string v1, "NotificationSQLiteLog"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "Pruned event entries: "
+    const-string v7, "Pruned event entries: "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -649,7 +559,6 @@
 
     invoke-static {v1, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 949
     .end local v0    # "deletedRows":I
     .end local v2    # "horizonStartMs":J
     :cond_1
@@ -662,8 +571,7 @@
     .param p1, "outCv"    # Landroid/content/ContentValues;
 
     .prologue
-    .line 969
-    const-string/jumbo v0, "nid"
+    const-string v0, "nid"
 
     iget-object v1, p0, Lcom/android/server/notification/NotificationRecord;->sbn:Landroid/service/notification/StatusBarNotification;
 
@@ -677,7 +585,6 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 970
     iget-object v0, p0, Lcom/android/server/notification/NotificationRecord;->sbn:Landroid/service/notification/StatusBarNotification;
 
     invoke-virtual {v0}, Landroid/service/notification/StatusBarNotification;->getTag()Ljava/lang/String;
@@ -686,8 +593,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 971
-    const-string/jumbo v0, "tag"
+    const-string v0, "tag"
 
     iget-object v1, p0, Lcom/android/server/notification/NotificationRecord;->sbn:Landroid/service/notification/StatusBarNotification;
 
@@ -697,9 +603,8 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 973
     :cond_0
-    const-string/jumbo v0, "when_ms"
+    const-string v0, "when_ms"
 
     iget-object v1, p0, Lcom/android/server/notification/NotificationRecord;->sbn:Landroid/service/notification/StatusBarNotification;
 
@@ -713,8 +618,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 974
-    const-string/jumbo v0, "flags"
+    const-string v0, "flags"
 
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
@@ -728,8 +632,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 975
-    const-string/jumbo v0, "priority"
+    const-string v0, "priority"
 
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
@@ -743,7 +646,6 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 976
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
     move-result-object v0
@@ -752,8 +654,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 977
-    const-string/jumbo v0, "category"
+    const-string v0, "category"
 
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
@@ -763,9 +664,8 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 979
     :cond_1
-    const-string/jumbo v1, "action_count"
+    const-string v1, "action_count"
 
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
@@ -775,7 +675,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 980
     invoke-virtual {p0}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
     move-result-object v0
@@ -784,7 +683,6 @@
 
     array-length v0, v0
 
-    .line 979
     :goto_0
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -792,10 +690,8 @@
 
     invoke-virtual {p1, v1, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 968
     return-void
 
-    .line 980
     :cond_2
     const/4 v0, 0x0
 
@@ -808,8 +704,7 @@
     .param p1, "outCv"    # Landroid/content/ContentValues;
 
     .prologue
-    .line 964
-    const-string/jumbo v0, "key"
+    const-string v0, "key"
 
     iget-object v1, p0, Lcom/android/server/notification/NotificationRecord;->sbn:Landroid/service/notification/StatusBarNotification;
 
@@ -819,8 +714,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 965
-    const-string/jumbo v0, "pkg"
+    const-string v0, "pkg"
 
     iget-object v1, p0, Lcom/android/server/notification/NotificationRecord;->sbn:Landroid/service/notification/StatusBarNotification;
 
@@ -830,7 +724,6 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 963
     return-void
 .end method
 
@@ -840,8 +733,7 @@
     .param p1, "outCv"    # Landroid/content/ContentValues;
 
     .prologue
-    .line 984
-    const-string/jumbo v0, "posttime_ms"
+    const-string v0, "posttime_ms"
 
     iget-object v1, p0, Lcom/android/server/notification/NotificationRecord;->stats:Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;
 
@@ -855,8 +747,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 985
-    const-string/jumbo v0, "airtime_ms"
+    const-string v0, "airtime_ms"
 
     iget-object v1, p0, Lcom/android/server/notification/NotificationRecord;->stats:Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;
 
@@ -870,8 +761,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 986
-    const-string/jumbo v0, "expansion_count"
+    const-string v0, "expansion_count"
 
     iget-object v1, p0, Lcom/android/server/notification/NotificationRecord;->stats:Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;
 
@@ -883,8 +773,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 987
-    const-string/jumbo v0, "expansion_airtime_ms"
+    const-string v0, "expansion_airtime_ms"
 
     iget-object v1, p0, Lcom/android/server/notification/NotificationRecord;->stats:Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;
 
@@ -898,8 +787,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 988
-    const-string/jumbo v0, "first_expansion_time_ms"
+    const-string v0, "first_expansion_time_ms"
 
     iget-object v1, p0, Lcom/android/server/notification/NotificationRecord;->stats:Lcom/android/server/notification/NotificationUsageStats$SingleNotificationStats;
 
@@ -911,7 +799,6 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 983
     return-void
 .end method
 
@@ -922,14 +809,12 @@
     .param p4, "r"    # Lcom/android/server/notification/NotificationRecord;
 
     .prologue
-    .line 931
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 932
     .local v0, "cv":Landroid/content/ContentValues;
-    const-string/jumbo v2, "event_user_id"
+    const-string v2, "event_user_id"
 
     iget-object v3, p4, Lcom/android/server/notification/NotificationRecord;->sbn:Landroid/service/notification/StatusBarNotification;
 
@@ -947,8 +832,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 933
-    const-string/jumbo v2, "event_time_ms"
+    const-string v2, "event_time_ms"
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -956,8 +840,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 934
-    const-string/jumbo v2, "event_type"
+    const-string v2, "event_type"
 
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -965,18 +848,14 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 935
     invoke-static {p4, v0}, Lcom/android/server/notification/NotificationUsageStats$SQLiteLog;->putNotificationIdentifiers(Lcom/android/server/notification/NotificationRecord;Landroid/content/ContentValues;)V
 
-    .line 936
     const/4 v2, 0x1
 
     if-ne p3, v2, :cond_1
 
-    .line 937
     invoke-static {p4, v0}, Lcom/android/server/notification/NotificationUsageStats$SQLiteLog;->putNotificationDetails(Lcom/android/server/notification/NotificationRecord;Landroid/content/ContentValues;)V
 
-    .line 941
     :goto_0
     iget-object v2, p0, Lcom/android/server/notification/NotificationUsageStats$SQLiteLog;->mHelper:Landroid/database/sqlite/SQLiteOpenHelper;
 
@@ -984,9 +863,8 @@
 
     move-result-object v1
 
-    .line 942
     .local v1, "db":Landroid/database/sqlite/SQLiteDatabase;
-    const-string/jumbo v2, "log"
+    const-string v2, "log"
 
     const/4 v3, 0x0
 
@@ -1000,14 +878,13 @@
 
     if-gez v2, :cond_0
 
-    .line 943
-    const-string/jumbo v2, "NotificationSQLiteLog"
+    const-string v2, "NotificationSQLiteLog"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "Error while trying to insert values: "
+    const-string v4, "Error while trying to insert values: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1023,7 +900,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 945
     :cond_0
     sget-wide v2, Lcom/android/server/notification/NotificationUsageStats$SQLiteLog;->sNumWrites:J
 
@@ -1033,13 +909,10 @@
 
     sput-wide v2, Lcom/android/server/notification/NotificationUsageStats$SQLiteLog;->sNumWrites:J
 
-    .line 946
     invoke-direct {p0, v1}, Lcom/android/server/notification/NotificationUsageStats$SQLiteLog;->pruneIfNecessary(Landroid/database/sqlite/SQLiteDatabase;)V
 
-    .line 930
     return-void
 
-    .line 939
     .end local v1    # "db":Landroid/database/sqlite/SQLiteDatabase;
     :cond_1
     invoke-static {p4, v0}, Lcom/android/server/notification/NotificationUsageStats$SQLiteLog;->putPosttimeVisibility(Lcom/android/server/notification/NotificationRecord;Landroid/content/ContentValues;)V
@@ -1056,10 +929,8 @@
     .param p3, "filter"    # Lcom/android/server/notification/NotificationManagerService$DumpFilter;
 
     .prologue
-    .line 992
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/notification/NotificationUsageStats$SQLiteLog;->printPostFrequencies(Ljava/io/PrintWriter;Ljava/lang/String;Lcom/android/server/notification/NotificationManagerService$DumpFilter;)V
 
-    .line 991
     return-void
 .end method
 
@@ -1068,15 +939,13 @@
     .param p1, "filter"    # Lcom/android/server/notification/NotificationManagerService$DumpFilter;
 
     .prologue
-    .line 996
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    .line 998
     .local v0, "dump":Lorg/json/JSONObject;
     :try_start_0
-    const-string/jumbo v2, "post_frequency"
+    const-string v2, "post_frequency"
 
     invoke-direct {p0, p1}, Lcom/android/server/notification/NotificationUsageStats$SQLiteLog;->JsonPostFrequencies(Lcom/android/server/notification/NotificationManagerService$DumpFilter;)Lorg/json/JSONArray;
 
@@ -1086,11 +955,9 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1002
     :goto_0
     return-object v0
 
-    .line 999
     :catch_0
     move-exception v1
 
@@ -1103,7 +970,6 @@
     .param p1, "notification"    # Lcom/android/server/notification/NotificationRecord;
 
     .prologue
-    .line 845
     iget-object v0, p0, Lcom/android/server/notification/NotificationUsageStats$SQLiteLog;->mWriteHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/notification/NotificationUsageStats$SQLiteLog;->mWriteHandler:Landroid/os/Handler;
@@ -1116,7 +982,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 844
     return-void
 .end method
 
@@ -1125,7 +990,6 @@
     .param p1, "notification"    # Lcom/android/server/notification/NotificationRecord;
 
     .prologue
-    .line 853
     iget-object v0, p0, Lcom/android/server/notification/NotificationUsageStats$SQLiteLog;->mWriteHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/notification/NotificationUsageStats$SQLiteLog;->mWriteHandler:Landroid/os/Handler;
@@ -1138,7 +1002,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 852
     return-void
 .end method
 
@@ -1147,7 +1010,6 @@
     .param p1, "notification"    # Lcom/android/server/notification/NotificationRecord;
 
     .prologue
-    .line 841
     iget-object v0, p0, Lcom/android/server/notification/NotificationUsageStats$SQLiteLog;->mWriteHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/notification/NotificationUsageStats$SQLiteLog;->mWriteHandler:Landroid/os/Handler;
@@ -1160,7 +1022,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 840
     return-void
 .end method
 
@@ -1169,7 +1030,6 @@
     .param p1, "notification"    # Lcom/android/server/notification/NotificationRecord;
 
     .prologue
-    .line 849
     iget-object v0, p0, Lcom/android/server/notification/NotificationUsageStats$SQLiteLog;->mWriteHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/notification/NotificationUsageStats$SQLiteLog;->mWriteHandler:Landroid/os/Handler;
@@ -1182,7 +1042,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 848
     return-void
 .end method
 
@@ -1193,26 +1052,23 @@
     .param p3, "filter"    # Lcom/android/server/notification/NotificationManagerService$DumpFilter;
 
     .prologue
-    .line 894
     iget-object v9, p0, Lcom/android/server/notification/NotificationUsageStats$SQLiteLog;->mHelper:Landroid/database/sqlite/SQLiteOpenHelper;
 
     invoke-virtual {v9}, Landroid/database/sqlite/SQLiteOpenHelper;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v3
 
-    .line 895
     .local v3, "db":Landroid/database/sqlite/SQLiteDatabase;
     invoke-direct {p0}, Lcom/android/server/notification/NotificationUsageStats$SQLiteLog;->getMidnightMs()J
 
     move-result-wide v4
 
-    .line 896
     .local v4, "midnight":J
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "SELECT event_user_id, pkg, CAST((("
+    const-string v10, "SELECT event_user_id, pkg, CAST((("
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1222,154 +1078,116 @@
 
     move-result-object v9
 
-    .line 900
-    const-string/jumbo v10, " - "
+    const-string v10, " - "
 
-    .line 896
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v9
 
-    .line 900
-    const-string/jumbo v10, "event_time_ms"
+    const-string v10, "event_time_ms"
 
-    .line 896
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v9
 
-    .line 900
-    const-string/jumbo v10, ") / "
+    const-string v10, ") / "
 
-    .line 896
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v9
 
-    .line 900
     const-wide/32 v10, 0x5265c00
 
-    .line 896
     invoke-virtual {v9, v10, v11}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v9
 
-    .line 900
-    const-string/jumbo v10, ") AS int) "
+    const-string v10, ") AS int) "
 
-    .line 896
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v9
 
-    .line 901
-    const-string/jumbo v10, "AS day, "
+    const-string v10, "AS day, "
 
-    .line 896
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v9
 
-    .line 902
-    const-string/jumbo v10, "COUNT(*) AS cnt "
+    const-string v10, "COUNT(*) AS cnt "
 
-    .line 896
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v9
 
-    .line 903
-    const-string/jumbo v10, "FROM "
+    const-string v10, "FROM "
 
-    .line 896
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v9
 
-    .line 903
-    const-string/jumbo v10, "log"
+    const-string v10, "log"
 
-    .line 896
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v9
 
-    .line 903
-    const-string/jumbo v10, " "
+    const-string v10, " "
 
-    .line 896
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v9
 
-    .line 904
-    const-string/jumbo v10, "WHERE "
+    const-string v10, "WHERE "
 
-    .line 896
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v9
 
-    .line 905
-    const-string/jumbo v10, "event_type"
+    const-string v10, "event_type"
 
-    .line 896
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v9
 
-    .line 905
-    const-string/jumbo v10, "="
+    const-string v10, "="
 
-    .line 896
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v9
 
-    .line 905
     const/4 v10, 0x1
 
-    .line 896
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v9
 
-    .line 905
-    const-string/jumbo v10, " "
+    const-string v10, " "
 
-    .line 896
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v9
 
-    .line 906
-    const-string/jumbo v10, "GROUP BY "
+    const-string v10, "GROUP BY "
 
-    .line 896
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v9
 
-    .line 906
-    const-string/jumbo v10, "event_user_id"
+    const-string v10, "event_user_id"
 
-    .line 896
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v9
 
-    .line 906
-    const-string/jumbo v10, ", day, "
+    const-string v10, ", day, "
 
-    .line 896
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v9
 
-    .line 906
-    const-string/jumbo v10, "pkg"
+    const-string v10, "pkg"
 
-    .line 896
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v9
@@ -1378,7 +1196,6 @@
 
     move-result-object v7
 
-    .line 907
     .local v7, "q":Ljava/lang/String;
     const/4 v9, 0x0
 
@@ -1386,7 +1203,6 @@
 
     move-result-object v1
 
-    .line 909
     .local v1, "cursor":Landroid/database/Cursor;
     :try_start_0
     invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
@@ -1398,14 +1214,12 @@
 
     if-nez v9, :cond_2
 
-    .line 910
     const/4 v9, 0x0
 
     invoke-interface {v1, v9}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v8
 
-    .line 911
     .local v8, "userId":I
     const/4 v9, 0x1
 
@@ -1413,7 +1227,6 @@
 
     move-result-object v6
 
-    .line 912
     .local v6, "pkg":Ljava/lang/String;
     if-eqz p3, :cond_0
 
@@ -1423,7 +1236,6 @@
 
     if-eqz v9, :cond_1
 
-    .line 913
     :cond_0
     const/4 v9, 0x2
 
@@ -1431,7 +1243,6 @@
 
     move-result v2
 
-    .line 914
     .local v2, "day":I
     const/4 v9, 0x3
 
@@ -1439,7 +1250,6 @@
 
     move-result v0
 
-    .line 915
     .local v0, "count":I
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -1449,7 +1259,7 @@
 
     move-result-object v9
 
-    const-string/jumbo v10, "post_frequency{user_id="
+    const-string v10, "post_frequency{user_id="
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1459,7 +1269,7 @@
 
     move-result-object v9
 
-    const-string/jumbo v10, ",pkg="
+    const-string v10, ",pkg="
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1469,10 +1279,8 @@
 
     move-result-object v9
 
-    .line 916
-    const-string/jumbo v10, ",day="
+    const-string v10, ",day="
 
-    .line 915
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v9
@@ -1481,10 +1289,8 @@
 
     move-result-object v9
 
-    .line 916
-    const-string/jumbo v10, ",count="
+    const-string v10, ",count="
 
-    .line 915
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v9
@@ -1493,10 +1299,8 @@
 
     move-result-object v9
 
-    .line 916
-    const-string/jumbo v10, "}"
+    const-string v10, "}"
 
-    .line 915
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v9
@@ -1507,7 +1311,6 @@
 
     invoke-virtual {p1, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 909
     .end local v0    # "count":I
     .end local v2    # "day":I
     :cond_1
@@ -1517,22 +1320,17 @@
 
     goto :goto_0
 
-    .line 918
     .end local v6    # "pkg":Ljava/lang/String;
     .end local v8    # "userId":I
     :catchall_0
     move-exception v9
 
-    .line 919
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    .line 918
     throw v9
 
-    .line 919
     :cond_2
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    .line 893
     return-void
 .end method

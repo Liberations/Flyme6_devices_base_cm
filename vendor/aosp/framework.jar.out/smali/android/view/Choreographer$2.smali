@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 126
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,8 +30,7 @@
     .locals 1
 
     .prologue
-    .line 127
-    const-string/jumbo v0, "FRAME_CALLBACK_TOKEN"
+    const-string v0, "FRAME_CALLBACK_TOKEN"
 
     return-object v0
 .end method

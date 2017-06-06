@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 1407
     invoke-direct {p0}, Landroid/support/v4/view/ViewCompat$JBViewCompatImpl;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 1411
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatJellybeanMr1;->getLabelFor(Landroid/view/View;)I
 
     move-result v0
@@ -45,7 +43,6 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 1426
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatJellybeanMr1;->getLayoutDirection(Landroid/view/View;)I
 
     move-result v0
@@ -58,7 +55,6 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 1441
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatJellybeanMr1;->getPaddingEnd(Landroid/view/View;)I
 
     move-result v0
@@ -71,7 +67,6 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 1436
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatJellybeanMr1;->getPaddingStart(Landroid/view/View;)I
 
     move-result v0
@@ -84,7 +79,6 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 1451
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatJellybeanMr1;->getWindowSystemUiVisibility(Landroid/view/View;)I
 
     move-result v0
@@ -97,7 +91,6 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 1456
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatJellybeanMr1;->isPaddingRelative(Landroid/view/View;)Z
 
     move-result v0
@@ -111,10 +104,8 @@
     .param p2, "id"    # I
 
     .prologue
-    .line 1416
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewCompatJellybeanMr1;->setLabelFor(Landroid/view/View;I)V
 
-    .line 1415
     return-void
 .end method
 
@@ -124,10 +115,8 @@
     .param p2, "paint"    # Landroid/graphics/Paint;
 
     .prologue
-    .line 1421
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewCompatJellybeanMr1;->setLayerPaint(Landroid/view/View;Landroid/graphics/Paint;)V
 
-    .line 1420
     return-void
 .end method
 
@@ -137,10 +126,8 @@
     .param p2, "layoutDirection"    # I
 
     .prologue
-    .line 1431
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewCompatJellybeanMr1;->setLayoutDirection(Landroid/view/View;I)V
 
-    .line 1430
     return-void
 .end method
 
@@ -153,9 +140,7 @@
     .param p5, "bottom"    # I
 
     .prologue
-    .line 1446
     invoke-static {p1, p2, p3, p4, p5}, Landroid/support/v4/view/ViewCompatJellybeanMr1;->setPaddingRelative(Landroid/view/View;IIII)V
 
-    .line 1445
     return-void
 .end method

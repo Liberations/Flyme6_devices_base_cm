@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 23
     invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
 
     return-void

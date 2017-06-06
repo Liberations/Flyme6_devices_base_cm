@@ -33,7 +33,6 @@
     .param p1, "this$0"    # Landroid/database/sqlite/SQLiteDatabase;
 
     .prologue
-    .line 81
     iput-object p1, p0, Landroid/database/sqlite/SQLiteDatabase$1;->this$0:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
@@ -47,7 +46,6 @@
     .locals 1
 
     .prologue
-    .line 84
     iget-object v0, p0, Landroid/database/sqlite/SQLiteDatabase$1;->this$0:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->createSession()Landroid/database/sqlite/SQLiteSession;
@@ -61,7 +59,6 @@
     .locals 1
 
     .prologue
-    .line 83
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase$1;->initialValue()Landroid/database/sqlite/SQLiteSession;
 
     move-result-object v0

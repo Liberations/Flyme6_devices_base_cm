@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,9 +19,7 @@
     .param p1, "split"    # Z
 
     .prologue
-    .line 27
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setMotionEventSplittingEnabled(Z)V
 
-    .line 26
     return-void
 .end method

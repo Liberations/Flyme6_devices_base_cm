@@ -46,7 +46,6 @@
     .param p4, "val$callback"    # Lcom/android/internal/widget/LockPatternChecker$OnCheckCallback;
 
     .prologue
-    .line 159
     iput-object p1, p0, Lcom/android/internal/widget/LockPatternChecker$4;->val$utils:Lcom/android/internal/widget/LockPatternUtils;
 
     iput-object p2, p0, Lcom/android/internal/widget/LockPatternChecker$4;->val$password:Ljava/lang/String;
@@ -67,7 +66,6 @@
     .param p1, "args"    # [Ljava/lang/Void;
 
     .prologue
-    .line 165
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/widget/LockPatternChecker$4;->val$utils:Lcom/android/internal/widget/LockPatternUtils;
 
@@ -87,11 +85,9 @@
 
     return-object v1
 
-    .line 166
     :catch_0
     move-exception v0
 
-    .line 167
     .local v0, "ex":Lcom/android/internal/widget/LockPatternUtils$RequestThrottledException;
     invoke-virtual {v0}, Lcom/android/internal/widget/LockPatternUtils$RequestThrottledException;->getTimeoutMs()I
 
@@ -99,7 +95,6 @@
 
     iput v1, p0, Lcom/android/internal/widget/LockPatternChecker$4;->mThrottleTimeout:I
 
-    .line 168
     const/4 v1, 0x0
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -114,7 +109,6 @@
     .param p1, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 163
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1    # "args":[Ljava/lang/Object;
@@ -130,7 +124,6 @@
     .param p1, "result"    # Ljava/lang/Boolean;
 
     .prologue
-    .line 174
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternChecker$4;->val$callback:Lcom/android/internal/widget/LockPatternChecker$OnCheckCallback;
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
@@ -141,7 +134,6 @@
 
     invoke-interface {v0, v1, v2}, Lcom/android/internal/widget/LockPatternChecker$OnCheckCallback;->onChecked(ZI)V
 
-    .line 173
     return-void
 .end method
 
@@ -150,7 +142,6 @@
     .param p1, "result"    # Ljava/lang/Object;
 
     .prologue
-    .line 173
     check-cast p1, Ljava/lang/Boolean;
 
     .end local p1    # "result":Ljava/lang/Object;

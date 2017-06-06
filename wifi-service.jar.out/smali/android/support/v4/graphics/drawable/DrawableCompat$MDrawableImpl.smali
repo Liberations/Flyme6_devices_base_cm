@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 198
     invoke-direct {p0}, Landroid/support/v4/graphics/drawable/DrawableCompat$LollipopMr1DrawableImpl;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
     .param p1, "drawable"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 206
     invoke-static {p1}, Landroid/support/v4/graphics/drawable/DrawableCompatApi23;->getLayoutDirection(Landroid/graphics/drawable/Drawable;)I
 
     move-result v0
@@ -46,9 +44,7 @@
     .param p2, "layoutDirection"    # I
 
     .prologue
-    .line 201
     invoke-static {p1, p2}, Landroid/support/v4/graphics/drawable/DrawableCompatApi23;->setLayoutDirection(Landroid/graphics/drawable/Drawable;I)V
 
-    .line 200
     return-void
 .end method

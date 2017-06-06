@@ -30,7 +30,6 @@
     .param p2, "val$mcr"    # Landroid/app/SharedPreferencesImpl$MemoryCommitResult;
 
     .prologue
-    .line 485
     iput-object p1, p0, Landroid/app/SharedPreferencesImpl$EditorImpl$3;->this$1:Landroid/app/SharedPreferencesImpl$EditorImpl;
 
     iput-object p2, p0, Landroid/app/SharedPreferencesImpl$EditorImpl$3;->val$mcr:Landroid/app/SharedPreferencesImpl$MemoryCommitResult;
@@ -46,13 +45,11 @@
     .locals 2
 
     .prologue
-    .line 487
     iget-object v0, p0, Landroid/app/SharedPreferencesImpl$EditorImpl$3;->this$1:Landroid/app/SharedPreferencesImpl$EditorImpl;
 
     iget-object v1, p0, Landroid/app/SharedPreferencesImpl$EditorImpl$3;->val$mcr:Landroid/app/SharedPreferencesImpl$MemoryCommitResult;
 
     invoke-static {v0, v1}, Landroid/app/SharedPreferencesImpl$EditorImpl;->-wrap0(Landroid/app/SharedPreferencesImpl$EditorImpl;Landroid/app/SharedPreferencesImpl$MemoryCommitResult;)V
 
-    .line 486
     return-void
 .end method

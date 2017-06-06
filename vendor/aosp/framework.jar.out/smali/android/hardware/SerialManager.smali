@@ -20,16 +20,12 @@
     .param p2, "service"    # Landroid/hardware/ISerialManager;
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     iput-object p1, p0, Landroid/hardware/SerialManager;->mContext:Landroid/content/Context;
 
-    .line 41
     iput-object p2, p0, Landroid/hardware/SerialManager;->mService:Landroid/hardware/ISerialManager;
 
-    .line 39
     return-void
 .end method
 
@@ -39,7 +35,6 @@
     .locals 3
 
     .prologue
-    .line 51
     :try_start_0
     iget-object v1, p0, Landroid/hardware/SerialManager;->mService:Landroid/hardware/ISerialManager;
 
@@ -51,19 +46,16 @@
 
     return-object v1
 
-    .line 52
     :catch_0
     move-exception v0
 
-    .line 53
     .local v0, "e":Landroid/os/RemoteException;
-    const-string/jumbo v1, "SerialManager"
+    const-string v1, "SerialManager"
 
-    const-string/jumbo v2, "RemoteException in getSerialPorts"
+    const-string v2, "RemoteException in getSerialPorts"
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 54
     const/4 v1, 0x0
 
     return-object v1
@@ -82,7 +74,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 71
     :try_start_0
     iget-object v3, p0, Landroid/hardware/SerialManager;->mService:Landroid/hardware/ISerialManager;
 
@@ -90,23 +81,18 @@
 
     move-result-object v1
 
-    .line 72
     .local v1, "pfd":Landroid/os/ParcelFileDescriptor;
     if-eqz v1, :cond_0
 
-    .line 73
     new-instance v2, Landroid/hardware/SerialPort;
 
     invoke-direct {v2, p1}, Landroid/hardware/SerialPort;-><init>(Ljava/lang/String;)V
 
-    .line 74
     .local v2, "port":Landroid/hardware/SerialPort;
     invoke-virtual {v2, v1, p2}, Landroid/hardware/SerialPort;->open(Landroid/os/ParcelFileDescriptor;I)V
 
-    .line 75
     return-object v2
 
-    .line 77
     .end local v2    # "port":Landroid/hardware/SerialPort;
     :cond_0
     new-instance v3, Ljava/io/IOException;
@@ -115,7 +101,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "Could not open serial port "
+    const-string v5, "Could not open serial port "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -135,19 +121,16 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 79
     .end local v1    # "pfd":Landroid/os/ParcelFileDescriptor;
     :catch_0
     move-exception v0
 
-    .line 80
     .local v0, "e":Landroid/os/RemoteException;
-    const-string/jumbo v3, "SerialManager"
+    const-string v3, "SerialManager"
 
-    const-string/jumbo v4, "exception in UsbManager.openDevice"
+    const-string v4, "exception in UsbManager.openDevice"
 
     invoke-static {v3, v4, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 82
     return-object v6
 .end method

@@ -13,9 +13,7 @@
     .param p2, "algorithm"    # Ljava/lang/String;
 
     .prologue
-    .line 29
     invoke-direct {p0, p1, p2}, Landroid/security/keystore/AndroidKeyStoreKey;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 28
     return-void
 .end method

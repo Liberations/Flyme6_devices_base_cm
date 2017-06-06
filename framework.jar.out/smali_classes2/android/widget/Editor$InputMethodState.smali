@@ -39,16 +39,13 @@
     .locals 1
 
     .prologue
-    .line 5093
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5095
     new-instance v0, Landroid/view/inputmethod/ExtractedText;
 
     invoke-direct {v0}, Landroid/view/inputmethod/ExtractedText;-><init>()V
 
     iput-object v0, p0, Landroid/widget/Editor$InputMethodState;->mExtractedText:Landroid/view/inputmethod/ExtractedText;
 
-    .line 5093
     return-void
 .end method

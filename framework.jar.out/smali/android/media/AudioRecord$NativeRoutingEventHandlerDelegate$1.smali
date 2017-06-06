@@ -31,7 +31,6 @@
     .param p4, "val$listener"    # Landroid/media/AudioRecord$OnRoutingChangedListener;
 
     .prologue
-    .line 1368
     iput-object p1, p0, Landroid/media/AudioRecord$NativeRoutingEventHandlerDelegate$1;->this$1:Landroid/media/AudioRecord$NativeRoutingEventHandlerDelegate;
 
     iput-object p3, p0, Landroid/media/AudioRecord$NativeRoutingEventHandlerDelegate$1;->val$record:Landroid/media/AudioRecord;
@@ -50,26 +49,22 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 1371
     iget-object v0, p0, Landroid/media/AudioRecord$NativeRoutingEventHandlerDelegate$1;->val$record:Landroid/media/AudioRecord;
 
     if-nez v0, :cond_0
 
-    .line 1372
     return-void
 
-    .line 1374
     :cond_0
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1381
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "Unknown native event type: "
+    const-string v1, "Unknown native event type: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -87,18 +82,15 @@
 
     invoke-static {v0}, Landroid/media/AudioRecord;->-wrap0(Ljava/lang/String;)V
 
-    .line 1370
     :cond_1
     :goto_0
     return-void
 
-    .line 1376
     :pswitch_0
     iget-object v0, p0, Landroid/media/AudioRecord$NativeRoutingEventHandlerDelegate$1;->val$listener:Landroid/media/AudioRecord$OnRoutingChangedListener;
 
     if-eqz v0, :cond_1
 
-    .line 1377
     iget-object v0, p0, Landroid/media/AudioRecord$NativeRoutingEventHandlerDelegate$1;->val$listener:Landroid/media/AudioRecord$OnRoutingChangedListener;
 
     iget-object v1, p0, Landroid/media/AudioRecord$NativeRoutingEventHandlerDelegate$1;->val$record:Landroid/media/AudioRecord;
@@ -107,7 +99,6 @@
 
     goto :goto_0
 
-    .line 1374
     :pswitch_data_0
     .packed-switch 0x3e8
         :pswitch_0

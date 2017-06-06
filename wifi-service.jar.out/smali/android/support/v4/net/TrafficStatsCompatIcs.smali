@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,10 +17,8 @@
     .locals 0
 
     .prologue
-    .line 29
     invoke-static {}, Landroid/net/TrafficStats;->clearThreadStatsTag()V
 
-    .line 28
     return-void
 .end method
 
@@ -29,7 +26,6 @@
     .locals 1
 
     .prologue
-    .line 33
     invoke-static {}, Landroid/net/TrafficStats;->getThreadStatsTag()I
 
     move-result v0
@@ -42,10 +38,8 @@
     .param p0, "operationCount"    # I
 
     .prologue
-    .line 37
     invoke-static {p0}, Landroid/net/TrafficStats;->incrementOperationCount(I)V
 
-    .line 36
     return-void
 .end method
 
@@ -55,10 +49,8 @@
     .param p1, "operationCount"    # I
 
     .prologue
-    .line 41
     invoke-static {p0, p1}, Landroid/net/TrafficStats;->incrementOperationCount(II)V
 
-    .line 40
     return-void
 .end method
 
@@ -67,10 +59,8 @@
     .param p0, "tag"    # I
 
     .prologue
-    .line 45
     invoke-static {p0}, Landroid/net/TrafficStats;->setThreadStatsTag(I)V
 
-    .line 44
     return-void
 .end method
 
@@ -84,10 +74,8 @@
     .end annotation
 
     .prologue
-    .line 49
     invoke-static {p0}, Landroid/net/TrafficStats;->tagSocket(Ljava/net/Socket;)V
 
-    .line 48
     return-void
 .end method
 
@@ -101,9 +89,7 @@
     .end annotation
 
     .prologue
-    .line 53
     invoke-static {p0}, Landroid/net/TrafficStats;->untagSocket(Ljava/net/Socket;)V
 
-    .line 52
     return-void
 .end method

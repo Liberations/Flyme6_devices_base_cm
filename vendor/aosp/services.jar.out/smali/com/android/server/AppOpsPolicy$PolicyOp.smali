@@ -30,19 +30,14 @@
     .param p3, "show"    # I
 
     .prologue
-    .line 111
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 112
     iput p1, p0, Lcom/android/server/AppOpsPolicy$PolicyOp;->op:I
 
-    .line 113
     iput p2, p0, Lcom/android/server/AppOpsPolicy$PolicyOp;->mode:I
 
-    .line 114
     iput p3, p0, Lcom/android/server/AppOpsPolicy$PolicyOp;->show:I
 
-    .line 111
     return-void
 .end method
 
@@ -52,12 +47,11 @@
     .locals 2
 
     .prologue
-    .line 119
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "PolicyOp [op="
+    const-string v1, "PolicyOp [op="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -69,7 +63,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, ", mode="
+    const-string v1, ", mode="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -81,7 +75,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, ", show="
+    const-string v1, ", show="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -93,10 +87,8 @@
 
     move-result-object v0
 
-    .line 120
-    const-string/jumbo v1, "]"
+    const-string v1, "]"
 
-    .line 119
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0

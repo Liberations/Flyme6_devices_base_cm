@@ -46,7 +46,6 @@
     .param p1, "this$0"    # Landroid/media/MediaRecorder;
 
     .prologue
-    .line 365
     iput-object p1, p0, Landroid/media/MediaRecorder$AudioEncoder;->this$0:Landroid/media/MediaRecorder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

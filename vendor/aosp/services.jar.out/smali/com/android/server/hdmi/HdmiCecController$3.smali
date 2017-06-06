@@ -36,7 +36,6 @@
     .param p4, "val$callback"    # Lcom/android/server/hdmi/HdmiCecController$AllocateAddressCallback;
 
     .prologue
-    .line 161
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecController$3;->this$0:Lcom/android/server/hdmi/HdmiCecController;
 
     iput p2, p0, Lcom/android/server/hdmi/HdmiCecController$3;->val$deviceType:I
@@ -56,7 +55,6 @@
     .locals 4
 
     .prologue
-    .line 164
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecController$3;->this$0:Lcom/android/server/hdmi/HdmiCecController;
 
     iget v1, p0, Lcom/android/server/hdmi/HdmiCecController$3;->val$deviceType:I
@@ -67,6 +65,5 @@
 
     invoke-static {v0, v1, v2, v3}, Lcom/android/server/hdmi/HdmiCecController;->-wrap4(Lcom/android/server/hdmi/HdmiCecController;IILcom/android/server/hdmi/HdmiCecController$AllocateAddressCallback;)V
 
-    .line 163
     return-void
 .end method

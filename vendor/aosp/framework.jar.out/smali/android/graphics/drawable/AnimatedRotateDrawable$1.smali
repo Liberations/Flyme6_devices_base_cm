@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/graphics/drawable/AnimatedRotateDrawable;
 
     .prologue
-    .line 264
     iput-object p1, p0, Landroid/graphics/drawable/AnimatedRotateDrawable$1;->this$0:Landroid/graphics/drawable/AnimatedRotateDrawable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 3
 
     .prologue
-    .line 269
     iget-object v0, p0, Landroid/graphics/drawable/AnimatedRotateDrawable$1;->this$0:Landroid/graphics/drawable/AnimatedRotateDrawable;
 
     invoke-static {v0}, Landroid/graphics/drawable/AnimatedRotateDrawable;->-get0(Landroid/graphics/drawable/AnimatedRotateDrawable;)F
@@ -58,7 +56,6 @@
 
     invoke-static {v0, v1}, Landroid/graphics/drawable/AnimatedRotateDrawable;->-set0(Landroid/graphics/drawable/AnimatedRotateDrawable;F)F
 
-    .line 270
     iget-object v0, p0, Landroid/graphics/drawable/AnimatedRotateDrawable$1;->this$0:Landroid/graphics/drawable/AnimatedRotateDrawable;
 
     invoke-static {v0}, Landroid/graphics/drawable/AnimatedRotateDrawable;->-get0(Landroid/graphics/drawable/AnimatedRotateDrawable;)F
@@ -79,24 +76,20 @@
 
     if-lez v0, :cond_0
 
-    .line 271
     iget-object v0, p0, Landroid/graphics/drawable/AnimatedRotateDrawable$1;->this$0:Landroid/graphics/drawable/AnimatedRotateDrawable;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Landroid/graphics/drawable/AnimatedRotateDrawable;->-set0(Landroid/graphics/drawable/AnimatedRotateDrawable;F)F
 
-    .line 273
     :cond_0
     iget-object v0, p0, Landroid/graphics/drawable/AnimatedRotateDrawable$1;->this$0:Landroid/graphics/drawable/AnimatedRotateDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/AnimatedRotateDrawable;->invalidateSelf()V
 
-    .line 274
     iget-object v0, p0, Landroid/graphics/drawable/AnimatedRotateDrawable$1;->this$0:Landroid/graphics/drawable/AnimatedRotateDrawable;
 
     invoke-static {v0}, Landroid/graphics/drawable/AnimatedRotateDrawable;->-wrap0(Landroid/graphics/drawable/AnimatedRotateDrawable;)V
 
-    .line 266
     return-void
 .end method

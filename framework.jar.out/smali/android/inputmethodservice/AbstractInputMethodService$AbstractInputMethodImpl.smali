@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/inputmethodservice/AbstractInputMethodService;
 
     .prologue
-    .line 56
     iput-object p1, p0, Landroid/inputmethodservice/AbstractInputMethodService$AbstractInputMethodImpl;->this$0:Landroid/inputmethodservice/AbstractInputMethodService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "callback"    # Landroid/view/inputmethod/InputMethod$SessionCallback;
 
     .prologue
-    .line 63
     iget-object v0, p0, Landroid/inputmethodservice/AbstractInputMethodService$AbstractInputMethodImpl;->this$0:Landroid/inputmethodservice/AbstractInputMethodService;
 
     invoke-virtual {v0}, Landroid/inputmethodservice/AbstractInputMethodService;->onCreateInputMethodSessionInterface()Landroid/inputmethodservice/AbstractInputMethodService$AbstractInputMethodSessionImpl;
@@ -51,7 +49,6 @@
 
     invoke-interface {p1, v0}, Landroid/view/inputmethod/InputMethod$SessionCallback;->sessionCreated(Landroid/view/inputmethod/InputMethodSession;)V
 
-    .line 62
     return-void
 .end method
 
@@ -60,13 +57,11 @@
     .param p1, "session"    # Landroid/view/inputmethod/InputMethodSession;
 
     .prologue
-    .line 81
     check-cast p1, Landroid/inputmethodservice/AbstractInputMethodService$AbstractInputMethodSessionImpl;
 
     .end local p1    # "session":Landroid/view/inputmethod/InputMethodSession;
     invoke-virtual {p1}, Landroid/inputmethodservice/AbstractInputMethodService$AbstractInputMethodSessionImpl;->revokeSelf()V
 
-    .line 80
     return-void
 .end method
 
@@ -76,12 +71,10 @@
     .param p2, "enabled"    # Z
 
     .prologue
-    .line 72
     check-cast p1, Landroid/inputmethodservice/AbstractInputMethodService$AbstractInputMethodSessionImpl;
 
     .end local p1    # "session":Landroid/view/inputmethod/InputMethodSession;
     invoke-virtual {p1, p2}, Landroid/inputmethodservice/AbstractInputMethodService$AbstractInputMethodSessionImpl;->setEnabled(Z)V
 
-    .line 71
     return-void
 .end method

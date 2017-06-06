@@ -35,24 +35,20 @@
     .locals 1
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
 
-    .line 59
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/transition/TransitionValues;->targetedTransitions:Ljava/util/ArrayList;
 
-    .line 44
     return-void
 .end method
 
@@ -63,12 +59,10 @@
     .param p1, "other"    # Ljava/lang/Object;
 
     .prologue
-    .line 63
     instance-of v0, p1, Landroid/transition/TransitionValues;
 
     if-eqz v0, :cond_0
 
-    .line 64
     iget-object v1, p0, Landroid/transition/TransitionValues;->view:Landroid/view/View;
 
     move-object v0, p1
@@ -79,7 +73,6 @@
 
     if-ne v1, v0, :cond_0
 
-    .line 65
     iget-object v0, p0, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
 
     check-cast p1, Landroid/transition/TransitionValues;
@@ -93,12 +86,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 66
     const/4 v0, 0x1
 
     return v0
 
-    .line 70
     :cond_0
     const/4 v0, 0x0
 
@@ -109,7 +100,6 @@
     .locals 2
 
     .prologue
-    .line 75
     iget-object v0, p0, Landroid/transition/TransitionValues;->view:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->hashCode()I
@@ -133,12 +123,11 @@
     .locals 5
 
     .prologue
-    .line 80
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "TransitionValues@"
+    const-string v4, "TransitionValues@"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -156,7 +145,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, ":\n"
+    const-string v4, ":\n"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -166,7 +155,6 @@
 
     move-result-object v0
 
-    .line 81
     .local v0, "returnValue":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -176,7 +164,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "    view = "
+    const-string v4, "    view = "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -188,7 +176,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "\n"
+    const-string v4, "\n"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -198,7 +186,6 @@
 
     move-result-object v0
 
-    .line 82
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -207,7 +194,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "    values:"
+    const-string v4, "    values:"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -217,7 +204,6 @@
 
     move-result-object v0
 
-    .line 83
     iget-object v3, p0, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
 
     invoke-interface {v3}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -242,7 +228,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 84
     .local v1, "s":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -252,7 +237,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "    "
+    const-string v4, "    "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -262,7 +247,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, ": "
+    const-string v4, ": "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -278,7 +263,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "\n"
+    const-string v4, "\n"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -290,7 +275,6 @@
 
     goto :goto_0
 
-    .line 86
     .end local v1    # "s":Ljava/lang/String;
     :cond_0
     return-object v0

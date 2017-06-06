@@ -61,19 +61,16 @@
     .locals 1
 
     .prologue
-    .line 742
     new-instance v0, Ljava/util/Stack;
 
     invoke-direct {v0}, Ljava/util/Stack;-><init>()V
 
     sput-object v0, Lcom/android/internal/util/AsyncChannel$SyncMessenger;->sStack:Ljava/util/Stack;
 
-    .line 744
     const/4 v0, 0x0
 
     sput v0, Lcom/android/internal/util/AsyncChannel$SyncMessenger;->sCount:I
 
-    .line 740
     return-void
 .end method
 
@@ -81,7 +78,6 @@
     .locals 0
 
     .prologue
-    .line 753
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -91,12 +87,10 @@
     .locals 6
 
     .prologue
-    .line 784
     sget-object v2, Lcom/android/internal/util/AsyncChannel$SyncMessenger;->sStack:Ljava/util/Stack;
 
     monitor-enter v2
 
-    .line 785
     :try_start_0
     sget-object v1, Lcom/android/internal/util/AsyncChannel$SyncMessenger;->sStack:Ljava/util/Stack;
 
@@ -106,12 +100,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 786
     new-instance v0, Lcom/android/internal/util/AsyncChannel$SyncMessenger;
 
     invoke-direct {v0}, Lcom/android/internal/util/AsyncChannel$SyncMessenger;-><init>()V
 
-    .line 787
     .local v0, "sm":Lcom/android/internal/util/AsyncChannel$SyncMessenger;
     new-instance v1, Landroid/os/HandlerThread;
 
@@ -119,7 +111,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "SyncHandler-"
+    const-string v4, "SyncHandler-"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -143,12 +135,10 @@
 
     iput-object v1, v0, Lcom/android/internal/util/AsyncChannel$SyncMessenger;->mHandlerThread:Landroid/os/HandlerThread;
 
-    .line 788
     iget-object v1, v0, Lcom/android/internal/util/AsyncChannel$SyncMessenger;->mHandlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v1}, Landroid/os/HandlerThread;->start()V
 
-    .line 789
     new-instance v1, Lcom/android/internal/util/AsyncChannel$SyncMessenger$SyncHandler;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -165,7 +155,6 @@
 
     iput-object v1, v0, Lcom/android/internal/util/AsyncChannel$SyncMessenger;->mHandler:Lcom/android/internal/util/AsyncChannel$SyncMessenger$SyncHandler;
 
-    .line 790
     new-instance v1, Landroid/os/Messenger;
 
     iget-object v3, v0, Lcom/android/internal/util/AsyncChannel$SyncMessenger;->mHandler:Lcom/android/internal/util/AsyncChannel$SyncMessenger$SyncHandler;
@@ -179,10 +168,8 @@
     :goto_0
     monitor-exit v2
 
-    .line 795
     return-object v0
 
-    .line 792
     .end local v0    # "sm":Lcom/android/internal/util/AsyncChannel$SyncMessenger;
     :cond_0
     :try_start_1
@@ -199,7 +186,6 @@
     .restart local v0    # "sm":Lcom/android/internal/util/AsyncChannel$SyncMessenger;
     goto :goto_0
 
-    .line 784
     .end local v0    # "sm":Lcom/android/internal/util/AsyncChannel$SyncMessenger;
     :catchall_0
     move-exception v1
@@ -213,12 +199,10 @@
     .locals 2
 
     .prologue
-    .line 802
     sget-object v1, Lcom/android/internal/util/AsyncChannel$SyncMessenger;->sStack:Ljava/util/Stack;
 
     monitor-enter v1
 
-    .line 803
     :try_start_0
     sget-object v0, Lcom/android/internal/util/AsyncChannel$SyncMessenger;->sStack:Ljava/util/Stack;
 
@@ -228,10 +212,8 @@
 
     monitor-exit v1
 
-    .line 801
     return-void
 
-    .line 802
     :catchall_0
     move-exception v0
 
@@ -248,24 +230,20 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 814
     invoke-static {}, Lcom/android/internal/util/AsyncChannel$SyncMessenger;->obtain()Lcom/android/internal/util/AsyncChannel$SyncMessenger;
 
     move-result-object v3
 
-    .line 816
     .local v3, "sm":Lcom/android/internal/util/AsyncChannel$SyncMessenger;
     if-eqz p0, :cond_0
 
     if-eqz p1, :cond_0
 
-    .line 817
     :try_start_0
     iget-object v4, v3, Lcom/android/internal/util/AsyncChannel$SyncMessenger;->mMessenger:Landroid/os/Messenger;
 
     iput-object v4, p1, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
 
-    .line 818
     iget-object v4, v3, Lcom/android/internal/util/AsyncChannel$SyncMessenger;->mHandler:Lcom/android/internal/util/AsyncChannel$SyncMessenger$SyncHandler;
 
     invoke-static {v4}, Lcom/android/internal/util/AsyncChannel$SyncMessenger$SyncHandler;->-get0(Lcom/android/internal/util/AsyncChannel$SyncMessenger$SyncHandler;)Ljava/lang/Object;
@@ -277,11 +255,9 @@
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 819
     :try_start_1
     invoke-virtual {p0, p1}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
 
-    .line 820
     iget-object v4, v3, Lcom/android/internal/util/AsyncChannel$SyncMessenger;->mHandler:Lcom/android/internal/util/AsyncChannel$SyncMessenger$SyncHandler;
 
     invoke-static {v4}, Lcom/android/internal/util/AsyncChannel$SyncMessenger$SyncHandler;->-get0(Lcom/android/internal/util/AsyncChannel$SyncMessenger$SyncHandler;)Ljava/lang/Object;
@@ -298,7 +274,6 @@
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 830
     :goto_0
     iget-object v4, v3, Lcom/android/internal/util/AsyncChannel$SyncMessenger;->mHandler:Lcom/android/internal/util/AsyncChannel$SyncMessenger$SyncHandler;
 
@@ -306,14 +281,11 @@
 
     move-result-object v2
 
-    .line 831
     .local v2, "resultMsg":Landroid/os/Message;
     invoke-direct {v3}, Lcom/android/internal/util/AsyncChannel$SyncMessenger;->recycle()V
 
-    .line 832
     return-object v2
 
-    .line 818
     .end local v2    # "resultMsg":Landroid/os/Message;
     :catchall_0
     move-exception v4
@@ -326,11 +298,9 @@
     .catch Ljava/lang/InterruptedException; {:try_start_3 .. :try_end_3} :catch_0
     .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 825
     :catch_0
     move-exception v1
 
-    .line 826
     .local v1, "e":Ljava/lang/InterruptedException;
     iget-object v4, v3, Lcom/android/internal/util/AsyncChannel$SyncMessenger;->mHandler:Lcom/android/internal/util/AsyncChannel$SyncMessenger$SyncHandler;
 
@@ -338,7 +308,6 @@
 
     goto :goto_0
 
-    .line 823
     .end local v1    # "e":Ljava/lang/InterruptedException;
     :cond_0
     :try_start_4
@@ -353,11 +322,9 @@
 
     goto :goto_0
 
-    .line 827
     :catch_1
     move-exception v0
 
-    .line 828
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v4, v3, Lcom/android/internal/util/AsyncChannel$SyncMessenger;->mHandler:Lcom/android/internal/util/AsyncChannel$SyncMessenger$SyncHandler;
 

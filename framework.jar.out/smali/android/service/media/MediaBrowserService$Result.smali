@@ -40,16 +40,13 @@
     .param p2, "debug"    # Ljava/lang/Object;
 
     .prologue
-    .line 119
     .local p0, "this":Landroid/service/media/MediaBrowserService$Result;, "Landroid/service/media/MediaBrowserService$Result<TT;>;"
     iput-object p1, p0, Landroid/service/media/MediaBrowserService$Result;->this$0:Landroid/service/media/MediaBrowserService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 120
     iput-object p2, p0, Landroid/service/media/MediaBrowserService$Result;->mDebug:Ljava/lang/Object;
 
-    .line 119
     return-void
 .end method
 
@@ -59,29 +56,25 @@
     .locals 3
 
     .prologue
-    .line 139
     .local p0, "this":Landroid/service/media/MediaBrowserService$Result;, "Landroid/service/media/MediaBrowserService$Result<TT;>;"
     iget-boolean v0, p0, Landroid/service/media/MediaBrowserService$Result;->mDetachCalled:Z
 
     if-eqz v0, :cond_0
 
-    .line 140
     new-instance v0, Ljava/lang/IllegalStateException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "detach() called when detach() had already been called for: "
+    const-string v2, "detach() called when detach() had already been called for: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 141
     iget-object v2, p0, Landroid/service/media/MediaBrowserService$Result;->mDebug:Ljava/lang/Object;
 
-    .line 140
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -94,29 +87,25 @@
 
     throw v0
 
-    .line 143
     :cond_0
     iget-boolean v0, p0, Landroid/service/media/MediaBrowserService$Result;->mSendResultCalled:Z
 
     if-eqz v0, :cond_1
 
-    .line 144
     new-instance v0, Ljava/lang/IllegalStateException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "detach() called when sendResult() had already been called for: "
+    const-string v2, "detach() called when sendResult() had already been called for: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 145
     iget-object v2, p0, Landroid/service/media/MediaBrowserService$Result;->mDebug:Ljava/lang/Object;
 
-    .line 144
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -129,13 +118,11 @@
 
     throw v0
 
-    .line 147
     :cond_1
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/service/media/MediaBrowserService$Result;->mDetachCalled:Z
 
-    .line 138
     return-void
 .end method
 
@@ -143,7 +130,6 @@
     .locals 1
 
     .prologue
-    .line 151
     .local p0, "this":Landroid/service/media/MediaBrowserService$Result;, "Landroid/service/media/MediaBrowserService$Result<TT;>;"
     iget-boolean v0, p0, Landroid/service/media/MediaBrowserService$Result;->mDetachCalled:Z
 
@@ -169,7 +155,6 @@
     .end annotation
 
     .prologue
-    .line 158
     .local p0, "this":Landroid/service/media/MediaBrowserService$Result;, "Landroid/service/media/MediaBrowserService$Result<TT;>;"
     .local p1, "result":Ljava/lang/Object;, "TT;"
     return-void
@@ -184,21 +169,19 @@
     .end annotation
 
     .prologue
-    .line 127
     .local p0, "this":Landroid/service/media/MediaBrowserService$Result;, "Landroid/service/media/MediaBrowserService$Result<TT;>;"
     .local p1, "result":Ljava/lang/Object;, "TT;"
     iget-boolean v0, p0, Landroid/service/media/MediaBrowserService$Result;->mSendResultCalled:Z
 
     if-eqz v0, :cond_0
 
-    .line 128
     new-instance v0, Ljava/lang/IllegalStateException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "sendResult() called twice for: "
+    const-string v2, "sendResult() called twice for: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -218,15 +201,12 @@
 
     throw v0
 
-    .line 130
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/service/media/MediaBrowserService$Result;->mSendResultCalled:Z
 
-    .line 131
     invoke-virtual {p0, p1}, Landroid/service/media/MediaBrowserService$Result;->onResultSent(Ljava/lang/Object;)V
 
-    .line 126
     return-void
 .end method

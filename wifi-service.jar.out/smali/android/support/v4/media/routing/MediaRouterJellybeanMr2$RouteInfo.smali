@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
     .param p0, "routeObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 31
     check-cast p0, Landroid/media/MediaRouter$RouteInfo;
 
     .end local p0    # "routeObj":Ljava/lang/Object;
@@ -46,7 +44,6 @@
     .param p0, "routeObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 35
     check-cast p0, Landroid/media/MediaRouter$RouteInfo;
 
     .end local p0    # "routeObj":Ljava/lang/Object;

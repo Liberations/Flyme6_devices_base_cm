@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 433
     invoke-direct {p0}, Landroid/app/SystemServiceRegistry$CachedServiceFetcher;-><init>()V
 
     return-void
@@ -41,7 +40,6 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 436
     new-instance v0, Landroid/telecom/TelecomManager;
 
     invoke-virtual {p1}, Landroid/app/ContextImpl;->getOuterContext()Landroid/content/Context;
@@ -58,7 +56,6 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 435
     invoke-virtual {p0, p1}, Landroid/app/SystemServiceRegistry$36;->createService(Landroid/app/ContextImpl;)Landroid/telecom/TelecomManager;
 
     move-result-object v0

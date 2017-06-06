@@ -30,7 +30,6 @@
     .param p2, "val$token"    # Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
     .prologue
-    .line 633
     iput-object p1, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$1;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
     iput-object p2, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$1;->val$token:Landroid/support/v4/media/session/MediaSessionCompat$Token;
@@ -46,7 +45,6 @@
     .locals 8
 
     .prologue
-    .line 636
     iget-object v4, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$1;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
     invoke-static {v4}, Landroid/support/v4/media/MediaBrowserServiceCompat;->-get0(Landroid/support/v4/media/MediaBrowserServiceCompat;)Landroid/support/v4/util/ArrayMap;
@@ -75,7 +73,6 @@
 
     check-cast v2, Landroid/os/IBinder;
 
-    .line 637
     .local v2, "key":Landroid/os/IBinder;
     iget-object v4, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$1;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
@@ -89,7 +86,6 @@
 
     check-cast v0, Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;
 
-    .line 639
     .local v0, "connection":Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;
     :try_start_0
     iget-object v4, v0, Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;->callbacks:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;
@@ -102,33 +98,29 @@
 
     iget-object v6, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$1;->val$token:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
-    .line 640
     iget-object v7, v0, Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;->root:Landroid/support/v4/media/MediaBrowserServiceCompat$BrowserRoot;
 
     invoke-virtual {v7}, Landroid/support/v4/media/MediaBrowserServiceCompat$BrowserRoot;->getExtras()Landroid/os/Bundle;
 
     move-result-object v7
 
-    .line 639
     invoke-interface {v4, v5, v6, v7}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;->onConnect(Ljava/lang/String;Landroid/support/v4/media/session/MediaSessionCompat$Token;Landroid/os/Bundle;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 641
     :catch_0
     move-exception v1
 
-    .line 642
     .local v1, "e":Landroid/os/RemoteException;
-    const-string/jumbo v4, "MediaBrowserServiceCompat"
+    const-string v4, "MediaBrowserServiceCompat"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "Connection for "
+    const-string v6, "Connection for "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -140,7 +132,7 @@
 
     move-result-object v5
 
-    const-string/jumbo v6, " is no longer valid."
+    const-string v6, " is no longer valid."
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -152,7 +144,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 643
     iget-object v4, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$1;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
     invoke-static {v4}, Landroid/support/v4/media/MediaBrowserServiceCompat;->-get0(Landroid/support/v4/media/MediaBrowserServiceCompat;)Landroid/support/v4/util/ArrayMap;
@@ -163,7 +154,6 @@
 
     goto :goto_0
 
-    .line 635
     .end local v0    # "connection":Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;
     .end local v1    # "e":Landroid/os/RemoteException;
     .end local v2    # "key":Landroid/os/IBinder;

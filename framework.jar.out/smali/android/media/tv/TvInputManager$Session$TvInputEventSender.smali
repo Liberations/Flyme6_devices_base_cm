@@ -26,13 +26,10 @@
     .param p3, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 2091
     iput-object p1, p0, Landroid/media/tv/TvInputManager$Session$TvInputEventSender;->this$1:Landroid/media/tv/TvInputManager$Session;
 
-    .line 2092
     invoke-direct {p0, p2, p3}, Landroid/view/InputEventSender;-><init>(Landroid/view/InputChannel;Landroid/os/Looper;)V
 
-    .line 2091
     return-void
 .end method
 
@@ -44,13 +41,11 @@
     .param p2, "handled"    # Z
 
     .prologue
-    .line 2097
     iget-object v0, p0, Landroid/media/tv/TvInputManager$Session$TvInputEventSender;->this$1:Landroid/media/tv/TvInputManager$Session;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, p1, p2, v1}, Landroid/media/tv/TvInputManager$Session;->finishedInputEvent(IZZ)V
 
-    .line 2096
     return-void
 .end method

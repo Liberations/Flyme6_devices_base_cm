@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 
     .prologue
-    .line 750
     iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi23;->this$1:Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 
     const/4 v0, 0x0
@@ -55,11 +54,9 @@
     .param p2, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 754
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi23;->this$1:Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 
     invoke-virtual {v0, p1, p2}, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onPlayFromUri(Landroid/net/Uri;Landroid/os/Bundle;)V
 
-    .line 753
     return-void
 .end method

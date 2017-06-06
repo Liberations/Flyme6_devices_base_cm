@@ -15,7 +15,6 @@
     .locals 1
 
     .prologue
-    .line 32
     new-instance v0, Ljava/util/Date;
 
     invoke-direct {v0}, Ljava/util/Date;-><init>()V
@@ -26,7 +25,6 @@
 
     sput-object v0, Lorg/ksoap2/serialization/MarshalDate;->DATE_CLASS:Ljava/lang/Class;
 
-    .line 31
     return-void
 .end method
 
@@ -34,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -56,7 +53,6 @@
     .end annotation
 
     .prologue
-    .line 37
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->nextText()Ljava/lang/String;
 
     move-result-object v0
@@ -75,16 +71,14 @@
     .param p1, "cm"    # Lorg/ksoap2/serialization/SoapSerializationEnvelope;
 
     .prologue
-    .line 45
     iget-object v0, p1, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->xsd:Ljava/lang/String;
 
-    const-string/jumbo v1, "dateTime"
+    const-string v1, "dateTime"
 
     sget-object v2, Lorg/ksoap2/serialization/MarshalDate;->DATE_CLASS:Ljava/lang/Class;
 
     invoke-virtual {p1, v0, v1, v2, p0}, Lorg/ksoap2/serialization/SoapSerializationEnvelope;->addMapping(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;Lorg/ksoap2/serialization/Marshal;)V
 
-    .line 44
     return-void
 .end method
 
@@ -99,7 +93,6 @@
     .end annotation
 
     .prologue
-    .line 41
     check-cast p2, Ljava/util/Date;
 
     .end local p2    # "obj":Ljava/lang/Object;
@@ -111,6 +104,5 @@
 
     invoke-interface {p1, v0}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 40
     return-void
 .end method

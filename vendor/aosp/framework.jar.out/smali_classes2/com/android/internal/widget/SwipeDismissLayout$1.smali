@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/internal/widget/SwipeDismissLayout;
 
     .prologue
-    .line 79
     iput-object p1, p0, Lcom/android/internal/widget/SwipeDismissLayout$1;->this$0:Lcom/android/internal/widget/SwipeDismissLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 86
     iget-object v0, p0, Lcom/android/internal/widget/SwipeDismissLayout$1;->this$0:Lcom/android/internal/widget/SwipeDismissLayout;
 
     invoke-static {v0}, Lcom/android/internal/widget/SwipeDismissLayout;->-get1(Lcom/android/internal/widget/SwipeDismissLayout;)Z
@@ -60,7 +58,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 87
     iget-object v0, p0, Lcom/android/internal/widget/SwipeDismissLayout$1;->this$0:Lcom/android/internal/widget/SwipeDismissLayout;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/SwipeDismissLayout;->getContext()Landroid/content/Context;
@@ -71,7 +68,6 @@
 
     invoke-virtual {v0}, Landroid/app/Activity;->convertFromTranslucent()V
 
-    .line 81
     :cond_0
     return-void
 .end method

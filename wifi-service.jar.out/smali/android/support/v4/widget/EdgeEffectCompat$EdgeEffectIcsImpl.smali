@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 97
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +35,6 @@
     .param p2, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 127
     invoke-static {p1, p2}, Landroid/support/v4/widget/EdgeEffectCompatIcs;->draw(Ljava/lang/Object;Landroid/graphics/Canvas;)Z
 
     move-result v0
@@ -49,10 +47,8 @@
     .param p1, "edgeEffect"    # Ljava/lang/Object;
 
     .prologue
-    .line 111
     invoke-static {p1}, Landroid/support/v4/widget/EdgeEffectCompatIcs;->finish(Ljava/lang/Object;)V
 
-    .line 110
     return-void
 .end method
 
@@ -61,7 +57,6 @@
     .param p1, "edgeEffect"    # Ljava/lang/Object;
 
     .prologue
-    .line 107
     invoke-static {p1}, Landroid/support/v4/widget/EdgeEffectCompatIcs;->isFinished(Ljava/lang/Object;)Z
 
     move-result v0
@@ -74,7 +69,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 99
     invoke-static {p1}, Landroid/support/v4/widget/EdgeEffectCompatIcs;->newEdgeEffect(Landroid/content/Context;)Ljava/lang/Object;
 
     move-result-object v0
@@ -88,7 +82,6 @@
     .param p2, "velocity"    # I
 
     .prologue
-    .line 123
     invoke-static {p1, p2}, Landroid/support/v4/widget/EdgeEffectCompatIcs;->onAbsorb(Ljava/lang/Object;I)Z
 
     move-result v0
@@ -102,7 +95,6 @@
     .param p2, "deltaDistance"    # F
 
     .prologue
-    .line 115
     invoke-static {p1, p2}, Landroid/support/v4/widget/EdgeEffectCompatIcs;->onPull(Ljava/lang/Object;F)Z
 
     move-result v0
@@ -117,7 +109,6 @@
     .param p3, "displacement"    # F
 
     .prologue
-    .line 131
     invoke-static {p1, p2}, Landroid/support/v4/widget/EdgeEffectCompatIcs;->onPull(Ljava/lang/Object;F)Z
 
     move-result v0
@@ -130,7 +121,6 @@
     .param p1, "edgeEffect"    # Ljava/lang/Object;
 
     .prologue
-    .line 119
     invoke-static {p1}, Landroid/support/v4/widget/EdgeEffectCompatIcs;->onRelease(Ljava/lang/Object;)Z
 
     move-result v0
@@ -145,9 +135,7 @@
     .param p3, "height"    # I
 
     .prologue
-    .line 103
     invoke-static {p1, p2, p3}, Landroid/support/v4/widget/EdgeEffectCompatIcs;->setSize(Ljava/lang/Object;II)V
 
-    .line 102
     return-void
 .end method

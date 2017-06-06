@@ -56,16 +56,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 164
     sput-boolean v0, Landroid/view/HardwareRenderer;->sRendererDisabled:Z
 
-    .line 171
     sput-boolean v0, Landroid/view/HardwareRenderer;->sSystemRendererDisabled:Z
 
-    .line 188
     sput-boolean v0, Landroid/view/HardwareRenderer;->sTrimForeground:Z
 
-    .line 33
     return-void
 .end method
 
@@ -73,15 +69,12 @@
     .locals 1
 
     .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 174
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/view/HardwareRenderer;->mRequested:Z
 
-    .line 33
     return-void
 .end method
 
@@ -91,10 +84,8 @@
     .param p1, "translucent"    # Z
 
     .prologue
-    .line 434
     const/4 v0, 0x0
 
-    .line 435
     .local v0, "renderer":Landroid/view/HardwareRenderer;
     invoke-static {}, Landroid/view/DisplayListCanvas;->isAvailable()Z
 
@@ -102,13 +93,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 436
     new-instance v0, Landroid/view/ThreadedRenderer;
 
     .end local v0    # "renderer":Landroid/view/HardwareRenderer;
     invoke-direct {v0, p0, p1}, Landroid/view/ThreadedRenderer;-><init>(Landroid/content/Context;Z)V
 
-    .line 438
     :cond_0
     return-object v0
 .end method
@@ -120,16 +109,12 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 182
     sput-boolean v0, Landroid/view/HardwareRenderer;->sRendererDisabled:Z
 
-    .line 183
     if-eqz p0, :cond_0
 
-    .line 184
     sput-boolean v0, Landroid/view/HardwareRenderer;->sSystemRendererDisabled:Z
 
-    .line 181
     :cond_0
     return-void
 .end method
@@ -138,12 +123,10 @@
     .locals 1
 
     .prologue
-    .line 197
     const/4 v0, 0x1
 
     sput-boolean v0, Landroid/view/HardwareRenderer;->sTrimForeground:Z
 
-    .line 196
     return-void
 .end method
 
@@ -151,7 +134,6 @@
     .locals 1
 
     .prologue
-    .line 208
     invoke-static {}, Landroid/view/DisplayListCanvas;->isAvailable()Z
 
     move-result v0
@@ -164,10 +146,9 @@
     .param p0, "cacheDir"    # Ljava/io/File;
 
     .prologue
-    .line 300
     new-instance v0, Ljava/io/File;
 
-    const-string/jumbo v1, "com.android.opengl.shaders_cache"
+    const-string v1, "com.android.opengl.shaders_cache"
 
     invoke-direct {v0, p0, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
@@ -177,7 +158,6 @@
 
     invoke-static {v0}, Landroid/view/ThreadedRenderer;->setupShadersDiskCache(Ljava/lang/String;)V
 
-    .line 299
     return-void
 .end method
 
@@ -186,10 +166,8 @@
     .param p0, "level"    # I
 
     .prologue
-    .line 450
     invoke-static {p0}, Landroid/view/ThreadedRenderer;->trimMemory(I)V
 
-    .line 449
     return-void
 .end method
 
@@ -250,36 +228,30 @@
     .end annotation
 
     .prologue
-    .line 385
     invoke-virtual {p0}, Landroid/view/HardwareRenderer;->isRequested()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 387
     invoke-virtual {p0}, Landroid/view/HardwareRenderer;->isEnabled()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 388
     invoke-virtual {p0, p4}, Landroid/view/HardwareRenderer;->initialize(Landroid/view/Surface;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 389
     invoke-virtual {p0, p1, p2, p3, p5}, Landroid/view/HardwareRenderer;->setup(IILandroid/view/View$AttachInfo;Landroid/graphics/Rect;)V
 
-    .line 390
     const/4 v0, 0x1
 
     return v0
 
-    .line 394
     :cond_0
     const/4 v0, 0x0
 
@@ -296,7 +268,6 @@
     .locals 1
 
     .prologue
-    .line 459
     iget-boolean v0, p0, Landroid/view/HardwareRenderer;->mEnabled:Z
 
     return v0
@@ -306,7 +277,6 @@
     .locals 1
 
     .prologue
-    .line 478
     iget-boolean v0, p0, Landroid/view/HardwareRenderer;->mRequested:Z
 
     return v0
@@ -335,10 +305,8 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 468
     iput-boolean p1, p0, Landroid/view/HardwareRenderer;->mEnabled:Z
 
-    .line 467
     return-void
 .end method
 
@@ -356,10 +324,8 @@
     .param p1, "requested"    # Z
 
     .prologue
-    .line 488
     iput-boolean p1, p0, Landroid/view/HardwareRenderer;->mRequested:Z
 
-    .line 487
     return-void
 .end method
 

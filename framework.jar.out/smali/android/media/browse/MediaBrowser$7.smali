@@ -36,7 +36,6 @@
     .param p4, "val$parentId"    # Ljava/lang/String;
 
     .prologue
-    .line 513
     iput-object p1, p0, Landroid/media/browse/MediaBrowser$7;->this$0:Landroid/media/browse/MediaBrowser;
 
     iput-object p2, p0, Landroid/media/browse/MediaBrowser$7;->val$callback:Landroid/service/media/IMediaBrowserServiceCallbacks;
@@ -56,12 +55,11 @@
     .locals 5
 
     .prologue
-    .line 518
     iget-object v2, p0, Landroid/media/browse/MediaBrowser$7;->this$0:Landroid/media/browse/MediaBrowser;
 
     iget-object v3, p0, Landroid/media/browse/MediaBrowser$7;->val$callback:Landroid/service/media/IMediaBrowserServiceCallbacks;
 
-    const-string/jumbo v4, "onLoadChildren"
+    const-string v4, "onLoadChildren"
 
     invoke-static {v2, v3, v4}, Landroid/media/browse/MediaBrowser;->-wrap1(Landroid/media/browse/MediaBrowser;Landroid/service/media/IMediaBrowserServiceCallbacks;Ljava/lang/String;)Z
 
@@ -69,10 +67,8 @@
 
     if-nez v2, :cond_0
 
-    .line 519
     return-void
 
-    .line 522
     :cond_0
     iget-object v2, p0, Landroid/media/browse/MediaBrowser$7;->val$list:Landroid/content/pm/ParceledListSlice;
 
@@ -80,16 +76,13 @@
 
     move-result-object v0
 
-    .line 526
     .local v0, "data":Ljava/util/List;, "Ljava/util/List<Landroid/media/browse/MediaBrowser$MediaItem;>;"
     if-nez v0, :cond_1
 
-    .line 527
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
-    .line 531
     :cond_1
     iget-object v2, p0, Landroid/media/browse/MediaBrowser$7;->this$0:Landroid/media/browse/MediaBrowser;
 
@@ -105,14 +98,11 @@
 
     check-cast v1, Landroid/media/browse/MediaBrowser$Subscription;
 
-    .line 532
     .local v1, "subscription":Landroid/media/browse/MediaBrowser$Subscription;
     if-nez v1, :cond_2
 
-    .line 537
     return-void
 
-    .line 541
     :cond_2
     iget-object v2, v1, Landroid/media/browse/MediaBrowser$Subscription;->callback:Landroid/media/browse/MediaBrowser$SubscriptionCallback;
 
@@ -120,6 +110,5 @@
 
     invoke-virtual {v2, v3, v0}, Landroid/media/browse/MediaBrowser$SubscriptionCallback;->onChildrenLoaded(Ljava/lang/String;Ljava/util/List;)V
 
-    .line 515
     return-void
 .end method

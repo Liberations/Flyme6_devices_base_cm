@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Landroid/app/EnterTransitionCoordinator;
 
     .prologue
-    .line 528
     iput-object p1, p0, Landroid/app/EnterTransitionCoordinator$9;->this$0:Landroid/app/EnterTransitionCoordinator;
 
     invoke-direct {p0}, Landroid/transition/Transition$TransitionListenerAdapter;-><init>()V
@@ -39,14 +38,11 @@
     .param p1, "transition"    # Landroid/transition/Transition;
 
     .prologue
-    .line 531
     invoke-virtual {p1, p0}, Landroid/transition/Transition;->removeListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
 
-    .line 532
     iget-object v0, p0, Landroid/app/EnterTransitionCoordinator$9;->this$0:Landroid/app/EnterTransitionCoordinator;
 
     invoke-static {v0}, Landroid/app/EnterTransitionCoordinator;->-wrap1(Landroid/app/EnterTransitionCoordinator;)V
 
-    .line 530
     return-void
 .end method

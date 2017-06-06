@@ -27,7 +27,6 @@
     .param p2, "val$listener"    # Landroid/hardware/hdmi/HdmiControlManager$HotplugEventListener;
 
     .prologue
-    .line 433
     iput-object p1, p0, Landroid/hardware/hdmi/HdmiControlManager$1;->this$0:Landroid/hardware/hdmi/HdmiControlManager;
 
     iput-object p2, p0, Landroid/hardware/hdmi/HdmiControlManager$1;->val$listener:Landroid/hardware/hdmi/HdmiControlManager$HotplugEventListener;
@@ -44,11 +43,9 @@
     .param p1, "event"    # Landroid/hardware/hdmi/HdmiHotplugEvent;
 
     .prologue
-    .line 436
     iget-object v0, p0, Landroid/hardware/hdmi/HdmiControlManager$1;->val$listener:Landroid/hardware/hdmi/HdmiControlManager$HotplugEventListener;
 
     invoke-interface {v0, p1}, Landroid/hardware/hdmi/HdmiControlManager$HotplugEventListener;->onReceived(Landroid/hardware/hdmi/HdmiHotplugEvent;)V
 
-    .line 435
     return-void
 .end method

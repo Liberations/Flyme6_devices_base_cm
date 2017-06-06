@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,7 +34,6 @@
     .param p1, "config"    # Landroid/view/ViewConfiguration;
 
     .prologue
-    .line 40
     invoke-virtual {p1}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
 
     move-result v0
@@ -48,7 +46,6 @@
     .param p1, "config"    # Landroid/view/ViewConfiguration;
 
     .prologue
-    .line 46
     const/4 v0, 0x1
 
     return v0

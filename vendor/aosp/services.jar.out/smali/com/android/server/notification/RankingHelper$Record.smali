@@ -21,6 +21,8 @@
 # instance fields
 .field keyguard:I
 
+.field notificationSoundTimeout:J
+
 .field peekable:Z
 
 .field pkg:Ljava/lang/String;
@@ -37,12 +39,10 @@
     .locals 1
 
     .prologue
-    .line 482
     const/16 v0, -0x2710
 
     sput v0, Lcom/android/server/notification/RankingHelper$Record;->UNKNOWN_UID:I
 
-    .line 481
     return-void
 .end method
 
@@ -52,31 +52,28 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 481
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 485
     sget v0, Lcom/android/server/notification/RankingHelper$Record;->UNKNOWN_UID:I
 
     iput v0, p0, Lcom/android/server/notification/RankingHelper$Record;->uid:I
 
-    .line 486
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/notification/RankingHelper$Record;->priority:I
 
-    .line 487
     iput-boolean v1, p0, Lcom/android/server/notification/RankingHelper$Record;->peekable:Z
 
-    .line 488
     const/16 v0, -0x3e8
 
     iput v0, p0, Lcom/android/server/notification/RankingHelper$Record;->visibility:I
 
-    .line 489
     iput v1, p0, Lcom/android/server/notification/RankingHelper$Record;->keyguard:I
 
-    .line 481
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Lcom/android/server/notification/RankingHelper$Record;->notificationSoundTimeout:J
+
     return-void
 .end method
 

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 328
     invoke-direct {p0}, Landroid/app/SystemServiceRegistry$CachedServiceFetcher;-><init>()V
 
     return-void
@@ -41,14 +40,12 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 331
-    const-string/jumbo v1, "location"
+    const-string v1, "location"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 332
     .local v0, "b":Landroid/os/IBinder;
     new-instance v1, Landroid/location/LocationManager;
 
@@ -66,7 +63,6 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 330
     invoke-virtual {p0, p1}, Landroid/app/SystemServiceRegistry$24;->createService(Landroid/app/ContextImpl;)Landroid/location/LocationManager;
 
     move-result-object v0

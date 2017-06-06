@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lcom/android/server/accessibility/AccessibilityManagerService$Service;
 
     .prologue
-    .line 2069
     iput-object p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$Service$2;->this$1:Lcom/android/server/accessibility/AccessibilityManagerService$Service;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 3
 
     .prologue
-    .line 2075
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$Service$2;->this$1:Lcom/android/server/accessibility/AccessibilityManagerService$Service;
 
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$Service$2;->this$1:Lcom/android/server/accessibility/AccessibilityManagerService$Service;
@@ -54,6 +52,5 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/accessibility/AccessibilityManagerService$Service;->onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
 
-    .line 2071
     return-void
 .end method

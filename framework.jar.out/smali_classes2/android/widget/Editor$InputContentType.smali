@@ -35,14 +35,11 @@
     .locals 1
 
     .prologue
-    .line 5083
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5084
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/widget/Editor$InputContentType;->imeOptions:I
 
-    .line 5083
     return-void
 .end method

@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 131
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,14 +44,12 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 134
     const-class v0, Landroid/telecom/ParcelableConference;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v12
 
-    .line 135
     .local v12, "classLoader":Ljava/lang/ClassLoader;
     invoke-virtual {p1, v12}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
@@ -60,25 +57,21 @@
 
     check-cast v1, Landroid/telecom/PhoneAccountHandle;
 
-    .line 136
     .local v1, "phoneAccount":Landroid/telecom/PhoneAccountHandle;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 137
     .local v2, "state":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 138
     .local v3, "capabilities":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 139
     .local v4, "properties":I
     new-instance v5, Ljava/util/ArrayList;
 
@@ -86,16 +79,13 @@
 
     invoke-direct {v5, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 140
     .local v5, "connectionIds":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-virtual {p1, v5, v12}, Landroid/os/Parcel;->readList(Ljava/util/List;Ljava/lang/ClassLoader;)V
 
-    .line 141
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v8
 
-    .line 143
     .local v8, "connectTimeMillis":J
     invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
@@ -105,13 +95,11 @@
 
     move-result-object v6
 
-    .line 144
     .local v6, "videoCallProvider":Lcom/android/internal/telecom/IVideoProvider;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v7
 
-    .line 145
     .local v7, "videoState":I
     invoke-virtual {p1, v12}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
@@ -119,13 +107,11 @@
 
     check-cast v10, Landroid/telecom/StatusHints;
 
-    .line 146
     .local v10, "statusHints":Landroid/telecom/StatusHints;
     invoke-virtual {p1, v12}, Landroid/os/Parcel;->readBundle(Ljava/lang/ClassLoader;)Landroid/os/Bundle;
 
     move-result-object v11
 
-    .line 148
     .local v11, "extras":Landroid/os/Bundle;
     new-instance v0, Landroid/telecom/ParcelableConference;
 
@@ -139,7 +125,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 133
     invoke-virtual {p0, p1}, Landroid/telecom/ParcelableConference$1;->createFromParcel(Landroid/os/Parcel;)Landroid/telecom/ParcelableConference;
 
     move-result-object v0
@@ -152,7 +137,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 155
     new-array v0, p1, [Landroid/telecom/ParcelableConference;
 
     return-object v0
@@ -163,7 +147,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 154
     invoke-virtual {p0, p1}, Landroid/telecom/ParcelableConference$1;->newArray(I)[Landroid/telecom/ParcelableConference;
 
     move-result-object v0

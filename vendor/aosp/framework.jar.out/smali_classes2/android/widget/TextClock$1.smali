@@ -25,7 +25,6 @@
     .param p2, "$anonymous0"    # Landroid/os/Handler;
 
     .prologue
-    .line 140
     iput-object p1, p0, Landroid/widget/TextClock$1;->this$0:Landroid/widget/TextClock;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -40,17 +39,14 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 143
     iget-object v0, p0, Landroid/widget/TextClock$1;->this$0:Landroid/widget/TextClock;
 
     invoke-static {v0}, Landroid/widget/TextClock;->-wrap0(Landroid/widget/TextClock;)V
 
-    .line 144
     iget-object v0, p0, Landroid/widget/TextClock$1;->this$0:Landroid/widget/TextClock;
 
     invoke-static {v0}, Landroid/widget/TextClock;->-wrap2(Landroid/widget/TextClock;)V
 
-    .line 142
     return-void
 .end method
 
@@ -60,16 +56,13 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 149
     iget-object v0, p0, Landroid/widget/TextClock$1;->this$0:Landroid/widget/TextClock;
 
     invoke-static {v0}, Landroid/widget/TextClock;->-wrap0(Landroid/widget/TextClock;)V
 
-    .line 150
     iget-object v0, p0, Landroid/widget/TextClock$1;->this$0:Landroid/widget/TextClock;
 
     invoke-static {v0}, Landroid/widget/TextClock;->-wrap2(Landroid/widget/TextClock;)V
 
-    .line 148
     return-void
 .end method

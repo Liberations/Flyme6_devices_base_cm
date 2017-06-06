@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 139
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "p"    # Landroid/os/Parcel;
 
     .prologue
-    .line 141
     new-instance v0, Landroid/os/BatteryProperties;
 
     const/4 v1, 0x0
@@ -60,7 +58,6 @@
     .param p1, "p"    # Landroid/os/Parcel;
 
     .prologue
-    .line 140
     invoke-virtual {p0, p1}, Landroid/os/BatteryProperties$1;->createFromParcel(Landroid/os/Parcel;)Landroid/os/BatteryProperties;
 
     move-result-object v0
@@ -73,7 +70,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 145
     new-array v0, p1, [Landroid/os/BatteryProperties;
 
     return-object v0
@@ -84,7 +80,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 144
     invoke-virtual {p0, p1}, Landroid/os/BatteryProperties$1;->newArray(I)[Landroid/os/BatteryProperties;
 
     move-result-object v0

@@ -48,23 +48,18 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 51
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/policy/ShortcutManager;->mShortcuts:Landroid/util/SparseArray;
 
-    .line 56
     iput-object p1, p0, Lcom/android/server/policy/ShortcutManager;->mContext:Landroid/content/Context;
 
-    .line 57
     invoke-direct {p0}, Lcom/android/server/policy/ShortcutManager;->loadShortcuts()V
 
-    .line 55
     return-void
 .end method
 
@@ -72,7 +67,6 @@
     .locals 22
 
     .prologue
-    .line 96
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/policy/ShortcutManager;->mContext:Landroid/content/Context;
@@ -83,7 +77,6 @@
 
     move-result-object v11
 
-    .line 98
     .local v11, "packageManager":Landroid/content/pm/PackageManager;
     :try_start_0
     move-object/from16 v0, p0
@@ -96,27 +89,22 @@
 
     move-result-object v19
 
-    .line 99
     const v20, 0x1110003
 
-    .line 98
     invoke-virtual/range {v19 .. v20}, Landroid/content/res/Resources;->getXml(I)Landroid/content/res/XmlResourceParser;
 
     move-result-object v14
 
-    .line 100
     .local v14, "parser":Landroid/content/res/XmlResourceParser;
-    const-string/jumbo v19, "bookmarks"
+    const-string v19, "bookmarks"
 
     move-object/from16 v0, v19
 
     invoke-static {v14, v0}, Lcom/android/internal/util/XmlUtils;->beginDocument(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)V
 
-    .line 103
     :goto_0
     invoke-static {v14}, Lcom/android/internal/util/XmlUtils;->nextElement(Lorg/xmlpull/v1/XmlPullParser;)V
 
-    .line 105
     invoke-interface {v14}, Landroid/content/res/XmlResourceParser;->getEventType()I
 
     move-result v19
@@ -129,16 +117,14 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 95
     .end local v14    # "parser":Landroid/content/res/XmlResourceParser;
     :cond_0
     :goto_1
     return-void
 
-    .line 109
     .restart local v14    # "parser":Landroid/content/res/XmlResourceParser;
     :cond_1
-    const-string/jumbo v19, "bookmark"
+    const-string v19, "bookmark"
 
     invoke-interface {v14}, Landroid/content/res/XmlResourceParser;->getName()Ljava/lang/String;
 
@@ -150,8 +136,7 @@
 
     if-eqz v19, :cond_0
 
-    .line 113
-    const-string/jumbo v19, "package"
+    const-string v19, "package"
 
     const/16 v20, 0x0
 
@@ -163,9 +148,8 @@
 
     move-result-object v12
 
-    .line 114
     .local v12, "packageName":Ljava/lang/String;
-    const-string/jumbo v19, "class"
+    const-string v19, "class"
 
     const/16 v20, 0x0
 
@@ -177,9 +161,8 @@
 
     move-result-object v3
 
-    .line 115
     .local v3, "className":Ljava/lang/String;
-    const-string/jumbo v19, "shortcut"
+    const-string v19, "shortcut"
 
     const/16 v20, 0x0
 
@@ -191,9 +174,8 @@
 
     move-result-object v17
 
-    .line 116
     .local v17, "shortcutName":Ljava/lang/String;
-    const-string/jumbo v19, "category"
+    const-string v19, "category"
 
     const/16 v20, 0x0
 
@@ -205,7 +187,6 @@
 
     move-result-object v2
 
-    .line 118
     .local v2, "categoryName":Ljava/lang/String;
     invoke-static/range {v17 .. v17}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -213,14 +194,13 @@
 
     if-eqz v19, :cond_2
 
-    .line 119
-    const-string/jumbo v19, "ShortcutManager"
+    const-string v19, "ShortcutManager"
 
     new-instance v20, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v20 .. v20}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v21, "Unable to get shortcut for: "
+    const-string v21, "Unable to get shortcut for: "
 
     invoke-virtual/range {v20 .. v21}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -232,7 +212,7 @@
 
     move-result-object v20
 
-    const-string/jumbo v21, "/"
+    const-string v21, "/"
 
     invoke-virtual/range {v20 .. v21}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -255,7 +235,6 @@
 
     goto :goto_0
 
-    .line 161
     .end local v2    # "categoryName":Ljava/lang/String;
     .end local v3    # "className":Ljava/lang/String;
     .end local v12    # "packageName":Ljava/lang/String;
@@ -264,11 +243,10 @@
     :catch_0
     move-exception v7
 
-    .line 162
     .local v7, "e":Lorg/xmlpull/v1/XmlPullParserException;
-    const-string/jumbo v19, "ShortcutManager"
+    const-string v19, "ShortcutManager"
 
-    const-string/jumbo v20, "Got exception parsing bookmarks."
+    const-string v20, "Got exception parsing bookmarks."
 
     move-object/from16 v0, v19
 
@@ -278,7 +256,6 @@
 
     goto :goto_1
 
-    .line 123
     .end local v7    # "e":Lorg/xmlpull/v1/XmlPullParserException;
     .restart local v2    # "categoryName":Ljava/lang/String;
     .restart local v3    # "className":Ljava/lang/String;
@@ -297,16 +274,13 @@
 
     move-result v16
 
-    .line 127
     .local v16, "shortcutChar":I
     if-eqz v12, :cond_3
 
     if-eqz v3, :cond_3
 
-    .line 128
     const/4 v9, 0x0
 
-    .line 129
     .local v9, "info":Landroid/content/pm/ActivityInfo;
     new-instance v4, Landroid/content/ComponentName;
 
@@ -315,7 +289,6 @@
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 131
     .local v4, "componentName":Landroid/content/ComponentName;
     const/16 v19, 0x0
 
@@ -330,30 +303,26 @@
 
     move-result-object v9
 
-    .line 145
     .local v9, "info":Landroid/content/pm/ActivityInfo;
     :goto_2
     :try_start_3
     new-instance v10, Landroid/content/Intent;
 
-    const-string/jumbo v19, "android.intent.action.MAIN"
+    const-string v19, "android.intent.action.MAIN"
 
     move-object/from16 v0, v19
 
     invoke-direct {v10, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 146
     .local v10, "intent":Landroid/content/Intent;
-    const-string/jumbo v19, "android.intent.category.LAUNCHER"
+    const-string v19, "android.intent.category.LAUNCHER"
 
     move-object/from16 v0, v19
 
     invoke-virtual {v10, v0}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 147
     invoke-virtual {v10, v4}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 148
     invoke-virtual {v9, v11}, Landroid/content/pm/ActivityInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
 
     move-result-object v19
@@ -362,7 +331,6 @@
 
     move-result-object v18
 
-    .line 158
     .end local v4    # "componentName":Landroid/content/ComponentName;
     .end local v9    # "info":Landroid/content/pm/ActivityInfo;
     .local v18, "title":Ljava/lang/String;
@@ -373,7 +341,6 @@
 
     invoke-direct {v15, v0, v10}, Lcom/android/server/policy/ShortcutManager$ShortcutInfo;-><init>(Ljava/lang/String;Landroid/content/Intent;)V
 
-    .line 159
     .local v15, "shortcut":Lcom/android/server/policy/ShortcutManager$ShortcutInfo;
     move-object/from16 v0, p0
 
@@ -392,7 +359,6 @@
 
     goto/16 :goto_0
 
-    .line 163
     .end local v2    # "categoryName":Ljava/lang/String;
     .end local v3    # "className":Ljava/lang/String;
     .end local v10    # "intent":Landroid/content/Intent;
@@ -405,11 +371,10 @@
     :catch_1
     move-exception v6
 
-    .line 164
     .local v6, "e":Ljava/io/IOException;
-    const-string/jumbo v19, "ShortcutManager"
+    const-string v19, "ShortcutManager"
 
-    const-string/jumbo v20, "Got exception parsing bookmarks."
+    const-string v20, "Got exception parsing bookmarks."
 
     move-object/from16 v0, v19
 
@@ -419,7 +384,6 @@
 
     goto/16 :goto_1
 
-    .line 132
     .end local v6    # "e":Ljava/io/IOException;
     .restart local v2    # "categoryName":Ljava/lang/String;
     .restart local v3    # "className":Ljava/lang/String;
@@ -432,7 +396,6 @@
     :catch_2
     move-exception v5
 
-    .line 134
     .local v5, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const/16 v19, 0x1
 
@@ -447,14 +410,12 @@
 
     aput-object v12, v19, v20
 
-    .line 133
     move-object/from16 v0, v19
 
     invoke-virtual {v11, v0}, Landroid/content/pm/PackageManager;->canonicalToCurrentPackageNames([Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v13
 
-    .line 135
     .local v13, "packages":[Ljava/lang/String;
     new-instance v4, Landroid/content/ComponentName;
 
@@ -470,7 +431,6 @@
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_4 .. :try_end_4} :catch_0
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
 
-    .line 137
     .restart local v4    # "componentName":Landroid/content/ComponentName;
     const/16 v19, 0x0
 
@@ -488,21 +448,19 @@
     .local v9, "info":Landroid/content/pm/ActivityInfo;
     goto :goto_2
 
-    .line 138
     .local v9, "info":Landroid/content/pm/ActivityInfo;
     :catch_3
     move-exception v8
 
-    .line 139
     .local v8, "e1":Landroid/content/pm/PackageManager$NameNotFoundException;
     :try_start_6
-    const-string/jumbo v19, "ShortcutManager"
+    const-string v19, "ShortcutManager"
 
     new-instance v20, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v20 .. v20}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v21, "Unable to add bookmark: "
+    const-string v21, "Unable to add bookmark: "
 
     invoke-virtual/range {v20 .. v21}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -514,10 +472,8 @@
 
     move-result-object v20
 
-    .line 140
-    const-string/jumbo v21, "/"
+    const-string v21, "/"
 
-    .line 139
     invoke-virtual/range {v20 .. v21}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v20
@@ -540,7 +496,6 @@
 
     goto/16 :goto_0
 
-    .line 149
     .end local v4    # "componentName":Landroid/content/ComponentName;
     .end local v5    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     .end local v8    # "e1":Landroid/content/pm/PackageManager$NameNotFoundException;
@@ -549,8 +504,7 @@
     :cond_3
     if-eqz v2, :cond_4
 
-    .line 150
-    const-string/jumbo v19, "android.intent.action.MAIN"
+    const-string v19, "android.intent.action.MAIN"
 
     move-object/from16 v0, v19
 
@@ -558,24 +512,22 @@
 
     move-result-object v10
 
-    .line 151
     .restart local v10    # "intent":Landroid/content/Intent;
-    const-string/jumbo v18, ""
+    const-string v18, ""
 
     .restart local v18    # "title":Ljava/lang/String;
     goto/16 :goto_3
 
-    .line 153
     .end local v10    # "intent":Landroid/content/Intent;
     .end local v18    # "title":Ljava/lang/String;
     :cond_4
-    const-string/jumbo v19, "ShortcutManager"
+    const-string v19, "ShortcutManager"
 
     new-instance v20, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v20 .. v20}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v21, "Unable to add bookmark for shortcut "
+    const-string v21, "Unable to add bookmark for shortcut "
 
     invoke-virtual/range {v20 .. v21}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -589,10 +541,8 @@
 
     move-result-object v20
 
-    .line 154
-    const-string/jumbo v21, ": missing package/class or category attributes"
+    const-string v21, ": missing package/class or category attributes"
 
-    .line 153
     invoke-virtual/range {v20 .. v21}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v20
@@ -620,20 +570,16 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 76
     const/4 v0, 0x0
 
-    .line 79
     .local v0, "shortcut":Lcom/android/server/policy/ShortcutManager$ShortcutInfo;
     invoke-virtual {p1, p2, p3}, Landroid/view/KeyCharacterMap;->get(II)I
 
     move-result v1
 
-    .line 80
     .local v1, "shortcutChar":I
     if-eqz v1, :cond_0
 
-    .line 81
     iget-object v3, p0, Lcom/android/server/policy/ShortcutManager;->mShortcuts:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -643,11 +589,9 @@
     .end local v0    # "shortcut":Lcom/android/server/policy/ShortcutManager$ShortcutInfo;
     check-cast v0, Lcom/android/server/policy/ShortcutManager$ShortcutInfo;
 
-    .line 85
     :cond_0
     if-nez v0, :cond_1
 
-    .line 86
     invoke-virtual {p1, p2}, Landroid/view/KeyCharacterMap;->getDisplayLabel(I)C
 
     move-result v3
@@ -656,10 +600,8 @@
 
     move-result v1
 
-    .line 87
     if-eqz v1, :cond_1
 
-    .line 88
     iget-object v3, p0, Lcom/android/server/policy/ShortcutManager;->mShortcuts:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -668,7 +610,6 @@
 
     check-cast v0, Lcom/android/server/policy/ShortcutManager$ShortcutInfo;
 
-    .line 92
     :cond_1
     if-eqz v0, :cond_2
 

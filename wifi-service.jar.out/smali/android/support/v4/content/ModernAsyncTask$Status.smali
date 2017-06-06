@@ -44,37 +44,30 @@
 
     const/4 v2, 0x0
 
-    .line 91
     new-instance v0, Landroid/support/v4/content/ModernAsyncTask$Status;
 
-    const-string/jumbo v1, "PENDING"
+    const-string v1, "PENDING"
 
     invoke-direct {v0, v1, v2}, Landroid/support/v4/content/ModernAsyncTask$Status;-><init>(Ljava/lang/String;I)V
 
-    .line 94
     sput-object v0, Landroid/support/v4/content/ModernAsyncTask$Status;->PENDING:Landroid/support/v4/content/ModernAsyncTask$Status;
 
-    .line 95
     new-instance v0, Landroid/support/v4/content/ModernAsyncTask$Status;
 
-    const-string/jumbo v1, "RUNNING"
+    const-string v1, "RUNNING"
 
     invoke-direct {v0, v1, v3}, Landroid/support/v4/content/ModernAsyncTask$Status;-><init>(Ljava/lang/String;I)V
 
-    .line 98
     sput-object v0, Landroid/support/v4/content/ModernAsyncTask$Status;->RUNNING:Landroid/support/v4/content/ModernAsyncTask$Status;
 
-    .line 99
     new-instance v0, Landroid/support/v4/content/ModernAsyncTask$Status;
 
-    const-string/jumbo v1, "FINISHED"
+    const-string v1, "FINISHED"
 
     invoke-direct {v0, v1, v4}, Landroid/support/v4/content/ModernAsyncTask$Status;-><init>(Ljava/lang/String;I)V
 
-    .line 102
     sput-object v0, Landroid/support/v4/content/ModernAsyncTask$Status;->FINISHED:Landroid/support/v4/content/ModernAsyncTask$Status;
 
-    .line 90
     const/4 v0, 0x3
 
     new-array v0, v0, [Landroid/support/v4/content/ModernAsyncTask$Status;
@@ -100,7 +93,6 @@
     .locals 0
 
     .prologue
-    .line 90
     .local p0, "this":Landroid/support/v4/content/ModernAsyncTask$Status;, "Landroid/support/v4/content/ModernAsyncTask<TParams;TProgress;TResult;>.Status;"
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
@@ -112,7 +104,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 90
     const-class v0, Landroid/support/v4/content/ModernAsyncTask$Status;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -128,7 +119,6 @@
     .locals 1
 
     .prologue
-    .line 90
     sget-object v0, Landroid/support/v4/content/ModernAsyncTask$Status;->$VALUES:[Landroid/support/v4/content/ModernAsyncTask$Status;
 
     return-object v0

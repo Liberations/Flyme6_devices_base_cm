@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/pm/UserContentObserver;
 
     .prologue
-    .line 35
     iput-object p1, p0, Lcom/android/server/pm/UserContentObserver$1;->this$0:Lcom/android/server/pm/UserContentObserver;
 
     invoke-direct {p0}, Landroid/app/IUserSwitchObserver$Stub;-><init>()V
@@ -39,7 +38,6 @@
     .param p1, "newProfileId"    # I
 
     .prologue
-    .line 44
     return-void
 .end method
 
@@ -53,7 +51,6 @@
     .end annotation
 
     .prologue
-    .line 41
     iget-object v0, p0, Lcom/android/server/pm/UserContentObserver$1;->this$0:Lcom/android/server/pm/UserContentObserver;
 
     invoke-static {v0}, Lcom/android/server/pm/UserContentObserver;->-get0(Lcom/android/server/pm/UserContentObserver;)Landroid/os/Handler;
@@ -68,7 +65,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 40
     return-void
 .end method
 
@@ -78,6 +74,5 @@
     .param p2, "reply"    # Landroid/os/IRemoteCallback;
 
     .prologue
-    .line 37
     return-void
 .end method

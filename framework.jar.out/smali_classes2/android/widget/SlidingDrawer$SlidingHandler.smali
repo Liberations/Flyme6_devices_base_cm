@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Landroid/widget/SlidingDrawer;
 
     .prologue
-    .line 977
     iput-object p1, p0, Landroid/widget/SlidingDrawer$SlidingHandler;->this$0:Landroid/widget/SlidingDrawer;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -49,16 +48,13 @@
     .param p1, "m"    # Landroid/os/Message;
 
     .prologue
-    .line 979
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 978
     :goto_0
     return-void
 
-    .line 981
     :pswitch_0
     iget-object v0, p0, Landroid/widget/SlidingDrawer$SlidingHandler;->this$0:Landroid/widget/SlidingDrawer;
 
@@ -66,7 +62,6 @@
 
     goto :goto_0
 
-    .line 979
     :pswitch_data_0
     .packed-switch 0x3e8
         :pswitch_0

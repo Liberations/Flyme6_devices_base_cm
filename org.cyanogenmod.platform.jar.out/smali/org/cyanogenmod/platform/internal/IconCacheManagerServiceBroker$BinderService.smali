@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/cyanogenmod/platform/internal/IconCacheManagerServiceBroker;
 
     .prologue
-    .line 59
     iput-object p1, p0, Lorg/cyanogenmod/platform/internal/IconCacheManagerServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/IconCacheManagerServiceBroker;
 
     invoke-direct {p0}, Lorg/cyanogenmod/internal/themes/IIconCacheManager$Stub;-><init>()V
@@ -55,7 +54,6 @@
     .end annotation
 
     .prologue
-    .line 62
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/IconCacheManagerServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/IconCacheManagerServiceBroker;
 
     invoke-virtual {v0}, Lorg/cyanogenmod/platform/internal/IconCacheManagerServiceBroker;->getBrokeredService()Landroid/os/IInterface;

@@ -73,15 +73,12 @@
     .locals 1
 
     .prologue
-    .line 523
     new-instance v0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent$1;
 
     invoke-direct {v0}, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent$1;-><init>()V
 
-    .line 522
     sput-object v0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 484
     return-void
 .end method
 
@@ -98,37 +95,26 @@
     .param p9, "data"    # [B
 
     .prologue
-    .line 508
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 511
     iput p1, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->status:I
 
-    .line 512
     iput p2, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->soundModelHandle:I
 
-    .line 513
     iput-boolean p3, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->captureAvailable:Z
 
-    .line 514
     iput p4, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->captureSession:I
 
-    .line 515
     iput p5, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->captureDelayMs:I
 
-    .line 516
     iput p6, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->capturePreambleMs:I
 
-    .line 517
     iput-boolean p7, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->triggerInData:Z
 
-    .line 518
     iput-object p8, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->captureFormat:Landroid/media/AudioFormat;
 
-    .line 519
     iput-object p9, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->data:[B
 
-    .line 510
     return-void
 .end method
 
@@ -139,18 +125,15 @@
     .prologue
     const/4 v13, 0x1
 
-    .line 534
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 535
     .local v1, "status":I
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 536
     .local v2, "soundModelHandle":I
     invoke-virtual {p0}, Landroid/os/Parcel;->readByte()B
 
@@ -160,26 +143,22 @@
 
     const/4 v3, 0x1
 
-    .line 537
     .local v3, "captureAvailable":Z
     :goto_0
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 538
     .local v4, "captureSession":I
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 539
     .local v5, "captureDelayMs":I
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 540
     .local v6, "capturePreambleMs":I
     invoke-virtual {p0}, Landroid/os/Parcel;->readByte()B
 
@@ -189,12 +168,10 @@
 
     const/4 v7, 0x1
 
-    .line 541
     .local v7, "triggerInData":Z
     :goto_1
     const/4 v8, 0x0
 
-    .line 542
     .local v8, "captureFormat":Landroid/media/AudioFormat;
     invoke-virtual {p0}, Landroid/os/Parcel;->readByte()B
 
@@ -202,24 +179,20 @@
 
     if-ne v0, v13, :cond_0
 
-    .line 543
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v12
 
-    .line 544
     .local v12, "sampleRate":I
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v11
 
-    .line 545
     .local v11, "encoding":I
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v10
 
-    .line 546
     .local v10, "channelMask":I
     new-instance v0, Landroid/media/AudioFormat$Builder;
 
@@ -241,7 +214,6 @@
 
     move-result-object v8
 
-    .line 552
     .end local v8    # "captureFormat":Landroid/media/AudioFormat;
     .end local v10    # "channelMask":I
     .end local v11    # "encoding":I
@@ -251,7 +223,6 @@
 
     move-result-object v9
 
-    .line 553
     .local v9, "data":[B
     new-instance v0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;
 
@@ -259,7 +230,6 @@
 
     return-object v0
 
-    .line 536
     .end local v3    # "captureAvailable":Z
     .end local v4    # "captureSession":I
     .end local v5    # "captureDelayMs":I
@@ -272,7 +242,6 @@
     .restart local v3    # "captureAvailable":Z
     goto :goto_0
 
-    .line 540
     .restart local v4    # "captureSession":I
     .restart local v5    # "captureDelayMs":I
     .restart local v6    # "capturePreambleMs":I
@@ -289,7 +258,6 @@
     .locals 1
 
     .prologue
-    .line 559
     const/4 v0, 0x0
 
     return v0
@@ -304,20 +272,15 @@
 
     const/4 v3, 0x0
 
-    .line 604
     if-ne p0, p1, :cond_0
 
-    .line 605
     return v4
 
-    .line 606
     :cond_0
     if-nez p1, :cond_1
 
-    .line 607
     return v3
 
-    .line 608
     :cond_1
     invoke-virtual {p0}, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->getClass()Ljava/lang/Class;
 
@@ -329,16 +292,13 @@
 
     if-eq v1, v2, :cond_2
 
-    .line 609
     return v3
 
     :cond_2
     move-object v0, p1
 
-    .line 610
     check-cast v0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;
 
-    .line 611
     .local v0, "other":Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;
     iget-boolean v1, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->captureAvailable:Z
 
@@ -346,10 +306,8 @@
 
     if-eq v1, v2, :cond_3
 
-    .line 612
     return v3
 
-    .line 613
     :cond_3
     iget v1, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->captureDelayMs:I
 
@@ -357,10 +315,8 @@
 
     if-eq v1, v2, :cond_4
 
-    .line 614
     return v3
 
-    .line 615
     :cond_4
     iget v1, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->capturePreambleMs:I
 
@@ -368,10 +324,8 @@
 
     if-eq v1, v2, :cond_5
 
-    .line 616
     return v3
 
-    .line 617
     :cond_5
     iget v1, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->captureSession:I
 
@@ -379,10 +333,8 @@
 
     if-eq v1, v2, :cond_6
 
-    .line 618
     return v3
 
-    .line 619
     :cond_6
     iget-object v1, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->data:[B
 
@@ -394,10 +346,8 @@
 
     if-nez v1, :cond_7
 
-    .line 620
     return v3
 
-    .line 621
     :cond_7
     iget v1, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->soundModelHandle:I
 
@@ -405,10 +355,8 @@
 
     if-eq v1, v2, :cond_8
 
-    .line 622
     return v3
 
-    .line 623
     :cond_8
     iget v1, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->status:I
 
@@ -416,10 +364,8 @@
 
     if-eq v1, v2, :cond_9
 
-    .line 624
     return v3
 
-    .line 625
     :cond_9
     iget-boolean v1, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->triggerInData:Z
 
@@ -427,10 +373,8 @@
 
     if-eq v1, v2, :cond_a
 
-    .line 626
     return v3
 
-    .line 627
     :cond_a
     iget-object v1, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->captureFormat:Landroid/media/AudioFormat;
 
@@ -446,10 +390,8 @@
 
     if-eq v1, v2, :cond_b
 
-    .line 628
     return v3
 
-    .line 629
     :cond_b
     iget-object v1, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->captureFormat:Landroid/media/AudioFormat;
 
@@ -465,10 +407,8 @@
 
     if-eq v1, v2, :cond_c
 
-    .line 630
     return v3
 
-    .line 631
     :cond_c
     iget-object v1, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->captureFormat:Landroid/media/AudioFormat;
 
@@ -484,10 +424,8 @@
 
     if-eq v1, v2, :cond_d
 
-    .line 632
     return v3
 
-    .line 633
     :cond_d
     return v4
 .end method
@@ -500,10 +438,8 @@
 
     const/16 v3, 0x4cf
 
-    .line 584
     const/16 v0, 0x1f
 
-    .line 586
     .local v0, "prime":I
     iget-boolean v2, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->captureAvailable:Z
 
@@ -514,7 +450,6 @@
     :goto_0
     add-int/lit8 v1, v2, 0x1f
 
-    .line 587
     .local v1, "result":I
     mul-int/lit8 v2, v1, 0x1f
 
@@ -522,21 +457,18 @@
 
     add-int v1, v2, v5
 
-    .line 588
     mul-int/lit8 v2, v1, 0x1f
 
     iget v5, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->capturePreambleMs:I
 
     add-int v1, v2, v5
 
-    .line 589
     mul-int/lit8 v2, v1, 0x1f
 
     iget v5, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->captureSession:I
 
     add-int v1, v2, v5
 
-    .line 590
     mul-int/lit8 v2, v1, 0x1f
 
     iget-boolean v5, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->triggerInData:Z
@@ -546,12 +478,10 @@
     :goto_1
     add-int v1, v2, v3
 
-    .line 591
     iget-object v2, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->captureFormat:Landroid/media/AudioFormat;
 
     if-eqz v2, :cond_0
 
-    .line 592
     mul-int/lit8 v2, v1, 0x1f
 
     iget-object v3, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->captureFormat:Landroid/media/AudioFormat;
@@ -562,7 +492,6 @@
 
     add-int v1, v2, v3
 
-    .line 593
     mul-int/lit8 v2, v1, 0x1f
 
     iget-object v3, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->captureFormat:Landroid/media/AudioFormat;
@@ -573,7 +502,6 @@
 
     add-int v1, v2, v3
 
-    .line 594
     mul-int/lit8 v2, v1, 0x1f
 
     iget-object v3, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->captureFormat:Landroid/media/AudioFormat;
@@ -584,7 +512,6 @@
 
     add-int v1, v2, v3
 
-    .line 596
     :cond_0
     mul-int/lit8 v2, v1, 0x1f
 
@@ -596,35 +523,30 @@
 
     add-int v1, v2, v3
 
-    .line 597
     mul-int/lit8 v2, v1, 0x1f
 
     iget v3, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->soundModelHandle:I
 
     add-int v1, v2, v3
 
-    .line 598
     mul-int/lit8 v2, v1, 0x1f
 
     iget v3, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->status:I
 
     add-int v1, v2, v3
 
-    .line 599
     return v1
 
     .end local v1    # "result":I
     :cond_1
     move v2, v4
 
-    .line 586
     goto :goto_0
 
     .restart local v1    # "result":I
     :cond_2
     move v3, v4
 
-    .line 590
     goto :goto_1
 .end method
 
@@ -632,12 +554,11 @@
     .locals 3
 
     .prologue
-    .line 638
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "RecognitionEvent [status="
+    const-string v1, "RecognitionEvent [status="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -649,7 +570,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, ", soundModelHandle="
+    const-string v1, ", soundModelHandle="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -661,150 +582,118 @@
 
     move-result-object v0
 
-    .line 639
-    const-string/jumbo v1, ", captureAvailable="
+    const-string v1, ", captureAvailable="
 
-    .line 638
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 639
     iget-boolean v1, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->captureAvailable:Z
 
-    .line 638
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 639
-    const-string/jumbo v1, ", captureSession="
+    const-string v1, ", captureSession="
 
-    .line 638
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 640
     iget v1, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->captureSession:I
 
-    .line 638
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 640
-    const-string/jumbo v1, ", captureDelayMs="
+    const-string v1, ", captureDelayMs="
 
-    .line 638
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 640
     iget v1, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->captureDelayMs:I
 
-    .line 638
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 641
-    const-string/jumbo v1, ", capturePreambleMs="
+    const-string v1, ", capturePreambleMs="
 
-    .line 638
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 641
     iget v1, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->capturePreambleMs:I
 
-    .line 638
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 642
-    const-string/jumbo v1, ", triggerInData="
+    const-string v1, ", triggerInData="
 
-    .line 638
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 642
     iget-boolean v1, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->triggerInData:Z
 
-    .line 638
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 643
     iget-object v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->captureFormat:Landroid/media/AudioFormat;
 
     if-nez v0, :cond_0
 
-    const-string/jumbo v0, ""
+    const-string v0, ""
 
-    .line 638
     :goto_0
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 645
     iget-object v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->captureFormat:Landroid/media/AudioFormat;
 
     if-nez v0, :cond_1
 
-    const-string/jumbo v0, ""
+    const-string v0, ""
 
-    .line 638
     :goto_1
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 647
     iget-object v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->captureFormat:Landroid/media/AudioFormat;
 
     if-nez v0, :cond_2
 
-    const-string/jumbo v0, ""
+    const-string v0, ""
 
-    .line 638
     :goto_2
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 649
-    const-string/jumbo v1, ", data="
+    const-string v1, ", data="
 
-    .line 638
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 649
     iget-object v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->data:[B
 
     if-nez v0, :cond_3
 
     const/4 v0, 0x0
 
-    .line 638
     :goto_3
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 649
-    const-string/jumbo v1, "]"
+    const-string v1, "]"
 
-    .line 638
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -815,13 +704,12 @@
 
     return-object v0
 
-    .line 644
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, ", sampleRate="
+    const-string v2, ", sampleRate="
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -843,13 +731,12 @@
 
     goto :goto_0
 
-    .line 646
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, ", encoding="
+    const-string v2, ", encoding="
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -871,13 +758,12 @@
 
     goto :goto_1
 
-    .line 648
     :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, ", channelMask="
+    const-string v2, ", channelMask="
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -899,7 +785,6 @@
 
     goto :goto_2
 
-    .line 649
     :cond_3
     iget-object v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->data:[B
 
@@ -918,17 +803,14 @@
 
     const/4 v2, 0x0
 
-    .line 564
     iget v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->status:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 565
     iget v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->soundModelHandle:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 566
     iget-boolean v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->captureAvailable:Z
 
     if-eqz v0, :cond_0
@@ -940,22 +822,18 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 567
     iget v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->captureSession:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 568
     iget v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->captureDelayMs:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 569
     iget v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->capturePreambleMs:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 570
     iget-boolean v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->triggerInData:Z
 
     if-eqz v0, :cond_1
@@ -967,15 +845,12 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 571
     iget-object v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->captureFormat:Landroid/media/AudioFormat;
 
     if-eqz v0, :cond_2
 
-    .line 572
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 573
     iget-object v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->captureFormat:Landroid/media/AudioFormat;
 
     invoke-virtual {v0}, Landroid/media/AudioFormat;->getSampleRate()I
@@ -984,7 +859,6 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 574
     iget-object v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->captureFormat:Landroid/media/AudioFormat;
 
     invoke-virtual {v0}, Landroid/media/AudioFormat;->getEncoding()I
@@ -993,7 +867,6 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 575
     iget-object v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->captureFormat:Landroid/media/AudioFormat;
 
     invoke-virtual {v0}, Landroid/media/AudioFormat;->getChannelMask()I
@@ -1002,28 +875,23 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 579
     :goto_2
     iget-object v0, p0, Landroid/hardware/soundtrigger/SoundTrigger$RecognitionEvent;->data:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBlob([B)V
 
-    .line 563
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 566
     goto :goto_0
 
     :cond_1
     move v0, v2
 
-    .line 570
     goto :goto_1
 
-    .line 577
     :cond_2
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeByte(B)V
 

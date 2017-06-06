@@ -27,7 +27,6 @@
     .param p2, "val$rtl"    # Landroid/widget/GridLayout$Alignment;
 
     .prologue
-    .line 2846
     iput-object p1, p0, Landroid/widget/GridLayout$8;->val$ltr:Landroid/widget/GridLayout$Alignment;
 
     iput-object p2, p0, Landroid/widget/GridLayout$8;->val$rtl:Landroid/widget/GridLayout$Alignment;
@@ -46,7 +45,6 @@
     .param p3, "mode"    # I
 
     .prologue
-    .line 2854
     invoke-virtual {p1}, Landroid/view/View;->isLayoutRtl()Z
 
     move-result v0
@@ -74,7 +72,6 @@
     .param p2, "cellDelta"    # I
 
     .prologue
-    .line 2849
     invoke-virtual {p1}, Landroid/view/View;->isLayoutRtl()Z
 
     move-result v0

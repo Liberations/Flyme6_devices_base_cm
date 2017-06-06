@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 373
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 376
     const/4 v0, 0x0
 
     return-object v0
@@ -56,7 +54,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 375
     invoke-virtual {p0, p1}, Landroid/net/wifi/passpoint/WifiPasspointPolicy$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/wifi/passpoint/WifiPasspointPolicy;
 
     move-result-object v0
@@ -69,7 +66,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 381
     new-array v0, p1, [Landroid/net/wifi/passpoint/WifiPasspointPolicy;
 
     return-object v0
@@ -80,7 +76,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 380
     invoke-virtual {p0, p1}, Landroid/net/wifi/passpoint/WifiPasspointPolicy$1;->newArray(I)[Landroid/net/wifi/passpoint/WifiPasspointPolicy;
 
     move-result-object v0

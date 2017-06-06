@@ -28,7 +28,6 @@
     .param p3, "val$popup"    # Landroid/widget/Spinner$DropdownPopup;
 
     .prologue
-    .line 271
     iput-object p1, p0, Landroid/widget/Spinner$1;->this$0:Landroid/widget/Spinner;
 
     iput-object p3, p0, Landroid/widget/Spinner$1;->val$popup:Landroid/widget/Spinner$DropdownPopup;
@@ -44,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 274
     iget-object v0, p0, Landroid/widget/Spinner$1;->val$popup:Landroid/widget/Spinner$DropdownPopup;
 
     return-object v0
@@ -54,7 +52,6 @@
     .locals 3
 
     .prologue
-    .line 279
     iget-object v0, p0, Landroid/widget/Spinner$1;->this$0:Landroid/widget/Spinner;
 
     invoke-static {v0}, Landroid/widget/Spinner;->-get1(Landroid/widget/Spinner;)Landroid/widget/Spinner$SpinnerPopup;
@@ -67,7 +64,6 @@
 
     if-nez v0, :cond_0
 
-    .line 280
     iget-object v0, p0, Landroid/widget/Spinner$1;->this$0:Landroid/widget/Spinner;
 
     invoke-static {v0}, Landroid/widget/Spinner;->-get1(Landroid/widget/Spinner;)Landroid/widget/Spinner$SpinnerPopup;
@@ -88,7 +84,6 @@
 
     invoke-interface {v0, v1, v2}, Landroid/widget/Spinner$SpinnerPopup;->show(II)V
 
-    .line 282
     :cond_0
     const/4 v0, 0x1
 

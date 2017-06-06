@@ -23,11 +23,9 @@
     .param p1, "profile"    # Lcom/android/internal/os/PowerProfile;
 
     .prologue
-    .line 28
     invoke-direct {p0}, Lcom/android/internal/os/PowerCalculator;-><init>()V
 
-    .line 29
-    const-string/jumbo v0, "bluetooth.controller.idle"
+    const-string v0, "bluetooth.controller.idle"
 
     invoke-virtual {p1, v0}, Lcom/android/internal/os/PowerProfile;->getAveragePower(Ljava/lang/String;)D
 
@@ -35,8 +33,7 @@
 
     iput-wide v0, p0, Lcom/android/internal/os/BluetoothPowerCalculator;->mIdleMa:D
 
-    .line 30
-    const-string/jumbo v0, "bluetooth.controller.rx"
+    const-string v0, "bluetooth.controller.rx"
 
     invoke-virtual {p1, v0}, Lcom/android/internal/os/PowerProfile;->getAveragePower(Ljava/lang/String;)D
 
@@ -44,8 +41,7 @@
 
     iput-wide v0, p0, Lcom/android/internal/os/BluetoothPowerCalculator;->mRxMa:D
 
-    .line 31
-    const-string/jumbo v0, "bluetooth.controller.tx"
+    const-string v0, "bluetooth.controller.tx"
 
     invoke-virtual {p1, v0}, Lcom/android/internal/os/PowerProfile;->getAveragePower(Ljava/lang/String;)D
 
@@ -53,7 +49,6 @@
 
     iput-wide v0, p0, Lcom/android/internal/os/BluetoothPowerCalculator;->mTxMa:D
 
-    .line 28
     return-void
 .end method
 
@@ -68,7 +63,6 @@
     .param p7, "statsType"    # I
 
     .prologue
-    .line 36
     return-void
 .end method
 
@@ -81,10 +75,8 @@
     .param p7, "statsType"    # I
 
     .prologue
-    .line 44
     const/4 v12, 0x0
 
-    .line 43
     move-object/from16 v0, p2
 
     move/from16 v1, p7
@@ -93,11 +85,9 @@
 
     move-result-wide v2
 
-    .line 46
     .local v2, "idleTimeMs":J
     const/4 v12, 0x2
 
-    .line 45
     move-object/from16 v0, p2
 
     move/from16 v1, p7
@@ -106,11 +96,9 @@
 
     move-result-wide v10
 
-    .line 48
     .local v10, "txTimeMs":J
     const/4 v12, 0x1
 
-    .line 47
     move-object/from16 v0, p2
 
     move/from16 v1, p7
@@ -119,17 +107,14 @@
 
     move-result-wide v6
 
-    .line 49
     .local v6, "rxTimeMs":J
     add-long v12, v2, v10
 
     add-long v8, v12, v6
 
-    .line 51
     .local v8, "totalTimeMs":J
     const/4 v12, 0x3
 
-    .line 50
     move-object/from16 v0, p2
 
     move/from16 v1, p7
@@ -140,13 +125,10 @@
 
     long-to-double v12, v12
 
-    .line 51
     const-wide v14, 0x414b774000000000L    # 3600000.0
 
-    .line 50
     div-double v4, v12, v14
 
-    .line 53
     .local v4, "powerMah":D
     const-wide/16 v12, 0x0
 
@@ -154,7 +136,6 @@
 
     if-nez v12, :cond_0
 
-    .line 55
     long-to-double v12, v2
 
     move-object/from16 v0, p0
@@ -187,23 +168,18 @@
 
     add-double/2addr v12, v14
 
-    .line 56
     const-wide v14, 0x414b774000000000L    # 3600000.0
 
-    .line 55
     div-double v4, v12, v14
 
-    .line 64
     :cond_0
     move-object/from16 v0, p1
 
     iput-wide v4, v0, Lcom/android/internal/os/BatterySipper;->usagePowerMah:D
 
-    .line 65
     move-object/from16 v0, p1
 
     iput-wide v8, v0, Lcom/android/internal/os/BatterySipper;->usageTimeMs:J
 
-    .line 42
     return-void
 .end method

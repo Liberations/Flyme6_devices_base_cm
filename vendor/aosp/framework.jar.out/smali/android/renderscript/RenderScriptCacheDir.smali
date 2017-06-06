@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,9 +22,7 @@
     .param p0, "cacheDir"    # Ljava/io/File;
 
     .prologue
-    .line 35
     sput-object p0, Landroid/renderscript/RenderScriptCacheDir;->mCacheDir:Ljava/io/File;
 
-    .line 33
     return-void
 .end method

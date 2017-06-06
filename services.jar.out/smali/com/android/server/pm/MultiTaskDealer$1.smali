@@ -32,14 +32,12 @@
     .param p2, "val$taskName"    # Ljava/lang/String;
 
     .prologue
-    .line 82
     iput-object p1, p0, Lcom/android/server/pm/MultiTaskDealer$1;->this$0:Lcom/android/server/pm/MultiTaskDealer;
 
     iput-object p2, p0, Lcom/android/server/pm/MultiTaskDealer$1;->val$taskName:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 84
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v1, 0x1
@@ -48,7 +46,6 @@
 
     iput-object v0, p0, Lcom/android/server/pm/MultiTaskDealer$1;->mCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 82
     return-void
 .end method
 
@@ -59,7 +56,6 @@
     .param p1, "r"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 88
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -72,7 +68,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "-"
+    const-string v2, "-"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

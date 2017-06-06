@@ -30,7 +30,6 @@
     .param p2, "val$listener"    # Landroid/graphics/drawable/Icon$OnDrawableLoadedListener;
 
     .prologue
-    .line 759
     iput-object p1, p0, Landroid/graphics/drawable/Icon$LoadDrawableTask$1;->this$1:Landroid/graphics/drawable/Icon$LoadDrawableTask;
 
     iput-object p2, p0, Landroid/graphics/drawable/Icon$LoadDrawableTask$1;->val$listener:Landroid/graphics/drawable/Icon$OnDrawableLoadedListener;
@@ -46,7 +45,6 @@
     .locals 2
 
     .prologue
-    .line 762
     iget-object v1, p0, Landroid/graphics/drawable/Icon$LoadDrawableTask$1;->val$listener:Landroid/graphics/drawable/Icon$OnDrawableLoadedListener;
 
     iget-object v0, p0, Landroid/graphics/drawable/Icon$LoadDrawableTask$1;->this$1:Landroid/graphics/drawable/Icon$LoadDrawableTask;
@@ -59,6 +57,5 @@
 
     invoke-interface {v1, v0}, Landroid/graphics/drawable/Icon$OnDrawableLoadedListener;->onDrawableLoaded(Landroid/graphics/drawable/Drawable;)V
 
-    .line 761
     return-void
 .end method

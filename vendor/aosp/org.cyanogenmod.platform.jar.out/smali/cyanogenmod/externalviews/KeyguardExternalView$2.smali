@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcyanogenmod/externalviews/KeyguardExternalView;
 
     .prologue
-    .line 157
     iput-object p1, p0, Lcyanogenmod/externalviews/KeyguardExternalView$2;->this$0:Lcyanogenmod/externalviews/KeyguardExternalView;
 
     invoke-direct {p0}, Lcyanogenmod/externalviews/IKeyguardExternalViewCallbacks$Stub;-><init>()V
@@ -43,7 +42,6 @@
     .end annotation
 
     .prologue
-    .line 177
     return-void
 .end method
 
@@ -51,7 +49,6 @@
     .locals 1
 
     .prologue
-    .line 188
     iget-object v0, p0, Lcyanogenmod/externalviews/KeyguardExternalView$2;->this$0:Lcyanogenmod/externalviews/KeyguardExternalView;
 
     invoke-static {v0}, Lcyanogenmod/externalviews/KeyguardExternalView;->-get7(Lcyanogenmod/externalviews/KeyguardExternalView;)Lcyanogenmod/externalviews/KeyguardExternalView$OnWindowAttachmentChangedListener;
@@ -60,7 +57,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 189
     iget-object v0, p0, Lcyanogenmod/externalviews/KeyguardExternalView$2;->this$0:Lcyanogenmod/externalviews/KeyguardExternalView;
 
     invoke-static {v0}, Lcyanogenmod/externalviews/KeyguardExternalView;->-get7(Lcyanogenmod/externalviews/KeyguardExternalView;)Lcyanogenmod/externalviews/KeyguardExternalView$OnWindowAttachmentChangedListener;
@@ -69,7 +65,6 @@
 
     invoke-interface {v0}, Lcyanogenmod/externalviews/KeyguardExternalView$OnWindowAttachmentChangedListener;->onAttachedToWindow()V
 
-    .line 187
     :cond_0
     return-void
 .end method
@@ -78,7 +73,6 @@
     .locals 1
 
     .prologue
-    .line 195
     iget-object v0, p0, Lcyanogenmod/externalviews/KeyguardExternalView$2;->this$0:Lcyanogenmod/externalviews/KeyguardExternalView;
 
     invoke-static {v0}, Lcyanogenmod/externalviews/KeyguardExternalView;->-get7(Lcyanogenmod/externalviews/KeyguardExternalView;)Lcyanogenmod/externalviews/KeyguardExternalView$OnWindowAttachmentChangedListener;
@@ -87,7 +81,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 196
     iget-object v0, p0, Lcyanogenmod/externalviews/KeyguardExternalView$2;->this$0:Lcyanogenmod/externalviews/KeyguardExternalView;
 
     invoke-static {v0}, Lcyanogenmod/externalviews/KeyguardExternalView;->-get7(Lcyanogenmod/externalviews/KeyguardExternalView;)Lcyanogenmod/externalviews/KeyguardExternalView$OnWindowAttachmentChangedListener;
@@ -96,7 +89,6 @@
 
     invoke-interface {v0}, Lcyanogenmod/externalviews/KeyguardExternalView$OnWindowAttachmentChangedListener;->onDetachedFromWindow()V
 
-    .line 194
     :cond_0
     return-void
 .end method
@@ -110,7 +102,6 @@
     .end annotation
 
     .prologue
-    .line 160
     iget-object v0, p0, Lcyanogenmod/externalviews/KeyguardExternalView$2;->this$0:Lcyanogenmod/externalviews/KeyguardExternalView;
 
     invoke-static {v0}, Lcyanogenmod/externalviews/KeyguardExternalView;->-get1(Lcyanogenmod/externalviews/KeyguardExternalView;)Lcyanogenmod/externalviews/KeyguardExternalView$KeyguardExternalViewCallbacks;
@@ -119,7 +110,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 161
     iget-object v0, p0, Lcyanogenmod/externalviews/KeyguardExternalView$2;->this$0:Lcyanogenmod/externalviews/KeyguardExternalView;
 
     invoke-static {v0}, Lcyanogenmod/externalviews/KeyguardExternalView;->-get1(Lcyanogenmod/externalviews/KeyguardExternalView;)Lcyanogenmod/externalviews/KeyguardExternalView$KeyguardExternalViewCallbacks;
@@ -132,7 +122,6 @@
 
     return v0
 
-    .line 164
     :cond_0
     const/4 v0, 0x0
 
@@ -149,7 +138,6 @@
     .end annotation
 
     .prologue
-    .line 169
     iget-object v0, p0, Lcyanogenmod/externalviews/KeyguardExternalView$2;->this$0:Lcyanogenmod/externalviews/KeyguardExternalView;
 
     invoke-static {v0}, Lcyanogenmod/externalviews/KeyguardExternalView;->-get1(Lcyanogenmod/externalviews/KeyguardExternalView;)Lcyanogenmod/externalviews/KeyguardExternalView$KeyguardExternalViewCallbacks;
@@ -158,7 +146,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 170
     iget-object v0, p0, Lcyanogenmod/externalviews/KeyguardExternalView$2;->this$0:Lcyanogenmod/externalviews/KeyguardExternalView;
 
     invoke-static {v0}, Lcyanogenmod/externalviews/KeyguardExternalView;->-get1(Lcyanogenmod/externalviews/KeyguardExternalView;)Lcyanogenmod/externalviews/KeyguardExternalView$KeyguardExternalViewCallbacks;
@@ -171,7 +158,6 @@
 
     return v0
 
-    .line 173
     :cond_0
     const/4 v0, 0x0
 
@@ -183,12 +169,10 @@
     .param p1, "isInteractive"    # Z
 
     .prologue
-    .line 183
     iget-object v0, p0, Lcyanogenmod/externalviews/KeyguardExternalView$2;->this$0:Lcyanogenmod/externalviews/KeyguardExternalView;
 
     invoke-static {v0, p1}, Lcyanogenmod/externalviews/KeyguardExternalView;->-set1(Lcyanogenmod/externalviews/KeyguardExternalView;Z)Z
 
-    .line 182
     return-void
 .end method
 
@@ -196,7 +180,6 @@
     .locals 1
 
     .prologue
-    .line 202
     iget-object v0, p0, Lcyanogenmod/externalviews/KeyguardExternalView$2;->this$0:Lcyanogenmod/externalviews/KeyguardExternalView;
 
     invoke-static {v0}, Lcyanogenmod/externalviews/KeyguardExternalView;->-get1(Lcyanogenmod/externalviews/KeyguardExternalView;)Lcyanogenmod/externalviews/KeyguardExternalView$KeyguardExternalViewCallbacks;
@@ -205,7 +188,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 203
     iget-object v0, p0, Lcyanogenmod/externalviews/KeyguardExternalView$2;->this$0:Lcyanogenmod/externalviews/KeyguardExternalView;
 
     invoke-static {v0}, Lcyanogenmod/externalviews/KeyguardExternalView;->-get1(Lcyanogenmod/externalviews/KeyguardExternalView;)Lcyanogenmod/externalviews/KeyguardExternalView$KeyguardExternalViewCallbacks;
@@ -214,7 +196,6 @@
 
     invoke-interface {v0}, Lcyanogenmod/externalviews/KeyguardExternalView$KeyguardExternalViewCallbacks;->slideLockscreenIn()V
 
-    .line 201
     :cond_0
     return-void
 .end method

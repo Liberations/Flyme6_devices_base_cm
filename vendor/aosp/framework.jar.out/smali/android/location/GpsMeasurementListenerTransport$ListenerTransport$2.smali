@@ -40,7 +40,6 @@
     .param p2, "val$status"    # I
 
     .prologue
-    .line 66
     iput-object p1, p0, Landroid/location/GpsMeasurementListenerTransport$ListenerTransport$2;->this$1:Landroid/location/GpsMeasurementListenerTransport$ListenerTransport;
 
     iput p2, p0, Landroid/location/GpsMeasurementListenerTransport$ListenerTransport$2;->val$status:I
@@ -62,12 +61,10 @@
     .end annotation
 
     .prologue
-    .line 69
     iget v0, p0, Landroid/location/GpsMeasurementListenerTransport$ListenerTransport$2;->val$status:I
 
     invoke-interface {p1, v0}, Landroid/location/GpsMeasurementsEvent$Listener;->onStatusChanged(I)V
 
-    .line 68
     return-void
 .end method
 
@@ -81,7 +78,6 @@
     .end annotation
 
     .prologue
-    .line 68
     check-cast p1, Landroid/location/GpsMeasurementsEvent$Listener;
 
     .end local p1    # "listener":Ljava/lang/Object;

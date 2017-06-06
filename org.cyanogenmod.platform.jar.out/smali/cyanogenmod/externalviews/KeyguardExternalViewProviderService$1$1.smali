@@ -40,7 +40,6 @@
     .param p2, "val$options"    # Landroid/os/Bundle;
 
     .prologue
-    .line 106
     iput-object p1, p0, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$1$1;->this$1:Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$1;
 
     iput-object p2, p0, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$1$1;->val$options:Landroid/os/Bundle;
@@ -61,15 +60,12 @@
     .end annotation
 
     .prologue
-    .line 109
     iget-object v0, p0, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$1$1;->this$1:Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$1;
 
     iget-object v0, v0, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$1;->this$0:Lcyanogenmod/externalviews/KeyguardExternalViewProviderService;
 
-    .line 110
     iget-object v1, p0, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$1$1;->val$options:Landroid/os/Bundle;
 
-    .line 109
     invoke-virtual {v0, v1}, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService;->createExternalView(Landroid/os/Bundle;)Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider;
 
     move-result-object v0
@@ -90,7 +86,6 @@
     .end annotation
 
     .prologue
-    .line 108
     invoke-virtual {p0}, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$1$1;->call()Landroid/os/IBinder;
 
     move-result-object v0

@@ -47,67 +47,54 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 60
     new-instance v0, Ljava/io/File;
 
     invoke-static {v3}, Landroid/os/Environment;->getUserSystemDirectory(I)Ljava/io/File;
 
     move-result-object v1
 
-    .line 61
-    const-string/jumbo v2, "wallpaper"
+    const-string v2, "wallpaper"
 
-    .line 60
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 59
     sput-object v0, Landroid/app/backup/WallpaperBackupHelper;->WALLPAPER_IMAGE:Ljava/lang/String;
 
-    .line 63
     new-instance v0, Ljava/io/File;
 
     invoke-static {v3}, Landroid/os/Environment;->getUserSystemDirectory(I)Ljava/io/File;
 
     move-result-object v1
 
-    .line 64
-    const-string/jumbo v2, "wallpaper_info.xml"
+    const-string v2, "wallpaper_info.xml"
 
-    .line 63
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 62
     sput-object v0, Landroid/app/backup/WallpaperBackupHelper;->WALLPAPER_INFO:Ljava/lang/String;
 
-    .line 75
     new-instance v0, Ljava/io/File;
 
     invoke-static {v3}, Landroid/os/Environment;->getUserSystemDirectory(I)Ljava/io/File;
 
     move-result-object v1
 
-    .line 76
-    const-string/jumbo v2, "wallpaper-tmp"
+    const-string v2, "wallpaper-tmp"
 
-    .line 75
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 74
     sput-object v0, Landroid/app/backup/WallpaperBackupHelper;->STAGE_FILE:Ljava/lang/String;
 
-    .line 38
     return-void
 .end method
 
@@ -118,20 +105,15 @@
     .param p3, "keys"    # [Ljava/lang/String;
 
     .prologue
-    .line 92
     invoke-direct {p0, p1}, Landroid/app/backup/FileBackupHelperBase;-><init>(Landroid/content/Context;)V
 
-    .line 94
     iput-object p1, p0, Landroid/app/backup/WallpaperBackupHelper;->mContext:Landroid/content/Context;
 
-    .line 95
     iput-object p2, p0, Landroid/app/backup/WallpaperBackupHelper;->mFiles:[Ljava/lang/String;
 
-    .line 96
     iput-object p3, p0, Landroid/app/backup/WallpaperBackupHelper;->mKeys:[Ljava/lang/String;
 
-    .line 99
-    const-string/jumbo v4, "window"
+    const-string v4, "window"
 
     invoke-virtual {p1, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -139,9 +121,8 @@
 
     check-cast v2, Landroid/view/WindowManager;
 
-    .line 101
     .local v2, "wm":Landroid/view/WindowManager;
-    const-string/jumbo v4, "wallpaper"
+    const-string v4, "wallpaper"
 
     invoke-virtual {p1, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -149,23 +130,19 @@
 
     check-cast v3, Landroid/app/WallpaperManager;
 
-    .line 102
     .local v3, "wpm":Landroid/app/WallpaperManager;
     invoke-interface {v2}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object v0
 
-    .line 103
     .local v0, "d":Landroid/view/Display;
     new-instance v1, Landroid/graphics/Point;
 
     invoke-direct {v1}, Landroid/graphics/Point;-><init>()V
 
-    .line 104
     .local v1, "size":Landroid/graphics/Point;
     invoke-virtual {v0, v1}, Landroid/view/Display;->getSize(Landroid/graphics/Point;)V
 
-    .line 105
     iget v4, v1, Landroid/graphics/Point;->x:I
 
     iget v5, v1, Landroid/graphics/Point;->y:I
@@ -178,7 +155,6 @@
 
     iput-wide v4, p0, Landroid/app/backup/WallpaperBackupHelper;->mDesiredMinWidth:D
 
-    .line 106
     invoke-virtual {v3}, Landroid/app/WallpaperManager;->getDesiredMinimumHeight()I
 
     move-result v4
@@ -187,7 +163,6 @@
 
     iput-wide v4, p0, Landroid/app/backup/WallpaperBackupHelper;->mDesiredMinHeight:D
 
-    .line 107
     iget-wide v4, p0, Landroid/app/backup/WallpaperBackupHelper;->mDesiredMinHeight:D
 
     const-wide/16 v6, 0x0
@@ -196,14 +171,12 @@
 
     if-gtz v4, :cond_0
 
-    .line 108
     iget v4, v1, Landroid/graphics/Point;->y:I
 
     int-to-double v4, v4
 
     iput-wide v4, p0, Landroid/app/backup/WallpaperBackupHelper;->mDesiredMinHeight:D
 
-    .line 91
     :cond_0
     return-void
 .end method
@@ -217,14 +190,12 @@
     .param p3, "newState"    # Landroid/os/ParcelFileDescriptor;
 
     .prologue
-    .line 123
     iget-object v0, p0, Landroid/app/backup/WallpaperBackupHelper;->mFiles:[Ljava/lang/String;
 
     iget-object v1, p0, Landroid/app/backup/WallpaperBackupHelper;->mKeys:[Ljava/lang/String;
 
     invoke-static {p1, p2, p3, v0, v1}, Landroid/app/backup/WallpaperBackupHelper;->performBackup_checked(Landroid/os/ParcelFileDescriptor;Landroid/app/backup/BackupDataOutput;Landroid/os/ParcelFileDescriptor;[Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 122
     return-void
 .end method
 
@@ -233,12 +204,10 @@
     .param p1, "data"    # Landroid/app/backup/BackupDataInputStream;
 
     .prologue
-    .line 132
     invoke-virtual {p1}, Landroid/app/backup/BackupDataInputStream;->getKey()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 133
     .local v1, "key":Ljava/lang/String;
     iget-object v5, p0, Landroid/app/backup/WallpaperBackupHelper;->mKeys:[Ljava/lang/String;
 
@@ -248,8 +217,7 @@
 
     if-eqz v5, :cond_2
 
-    .line 134
-    const-string/jumbo v5, "/data/data/com.android.settings/files/wallpaper"
+    const-string v5, "/data/data/com.android.settings/files/wallpaper"
 
     invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -257,14 +225,12 @@
 
     if-eqz v5, :cond_3
 
-    .line 136
     new-instance v0, Ljava/io/File;
 
     sget-object v5, Landroid/app/backup/WallpaperBackupHelper;->STAGE_FILE:Ljava/lang/String;
 
     invoke-direct {v0, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 137
     .local v0, "f":Ljava/io/File;
     invoke-virtual {p0, v0, p1}, Landroid/app/backup/WallpaperBackupHelper;->writeFile(Ljava/io/File;Landroid/app/backup/BackupDataInputStream;)Z
 
@@ -272,23 +238,19 @@
 
     if-eqz v5, :cond_2
 
-    .line 140
     new-instance v4, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v4}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 141
     .local v4, "options":Landroid/graphics/BitmapFactory$Options;
     const/4 v5, 0x1
 
     iput-boolean v5, v4, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 142
     sget-object v5, Landroid/app/backup/WallpaperBackupHelper;->STAGE_FILE:Ljava/lang/String;
 
     invoke-static {v5, v4}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
-    .line 155
     iget-wide v6, p0, Landroid/app/backup/WallpaperBackupHelper;->mDesiredMinHeight:D
 
     iget v5, v4, Landroid/graphics/BitmapFactory$Options;->outHeight:I
@@ -297,7 +259,6 @@
 
     div-double v2, v6, v8
 
-    .line 156
     .local v2, "heightRatio":D
     iget v5, v4, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
@@ -309,7 +270,6 @@
 
     if-ltz v5, :cond_0
 
-    .line 157
     iget v5, v4, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
     int-to-double v6, v5
@@ -320,80 +280,63 @@
 
     if-gez v5, :cond_1
 
-    .line 164
     :cond_0
-    const-string/jumbo v5, "WallpaperBackupHelper"
+    const-string v5, "WallpaperBackupHelper"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "Restored image dimensions (w="
+    const-string v7, "Restored image dimensions (w="
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v6
 
-    .line 165
     iget v7, v4, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
-    .line 164
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v6
 
-    .line 165
-    const-string/jumbo v7, ", h="
+    const-string v7, ", h="
 
-    .line 164
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v6
 
-    .line 165
     iget v7, v4, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
-    .line 164
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v6
 
-    .line 166
-    const-string/jumbo v7, ") too far off target (tw="
+    const-string v7, ") too far off target (tw="
 
-    .line 164
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v6
 
-    .line 167
     iget-wide v8, p0, Landroid/app/backup/WallpaperBackupHelper;->mDesiredMinWidth:D
 
-    .line 164
     invoke-virtual {v6, v8, v9}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     move-result-object v6
 
-    .line 167
-    const-string/jumbo v7, ", th="
+    const-string v7, ", th="
 
-    .line 164
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v6
 
-    .line 167
     iget-wide v8, p0, Landroid/app/backup/WallpaperBackupHelper;->mDesiredMinHeight:D
 
-    .line 164
     invoke-virtual {v6, v8, v9}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     move-result-object v6
 
-    .line 168
-    const-string/jumbo v7, "); falling back to default wallpaper."
+    const-string v7, "); falling back to default wallpaper."
 
-    .line 164
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v6
@@ -404,13 +347,10 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 169
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 170
     return-void
 
-    .line 158
     :cond_1
     const-wide v6, 0x3ff599999999999aL    # 1.35
 
@@ -418,21 +358,18 @@
 
     if-gez v5, :cond_0
 
-    .line 159
     const-wide/16 v6, 0x0
 
     cmpg-double v5, v2, v6
 
     if-lez v5, :cond_0
 
-    .line 179
-    const-string/jumbo v5, "WallpaperBackupHelper"
+    const-string v5, "WallpaperBackupHelper"
 
-    const-string/jumbo v6, "Applying restored wallpaper image."
+    const-string v6, "Applying restored wallpaper image."
 
     invoke-static {v5, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 180
     new-instance v5, Ljava/io/File;
 
     sget-object v6, Landroid/app/backup/WallpaperBackupHelper;->WALLPAPER_IMAGE:Ljava/lang/String;
@@ -441,7 +378,6 @@
 
     invoke-virtual {v0, v5}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
-    .line 131
     .end local v0    # "f":Ljava/io/File;
     .end local v2    # "heightRatio":D
     .end local v4    # "options":Landroid/graphics/BitmapFactory$Options;
@@ -449,9 +385,8 @@
     :goto_0
     return-void
 
-    .line 182
     :cond_3
-    const-string/jumbo v5, "/data/system/wallpaper_info.xml"
+    const-string v5, "/data/system/wallpaper_info.xml"
 
     invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -459,14 +394,12 @@
 
     if-eqz v5, :cond_2
 
-    .line 184
     new-instance v0, Ljava/io/File;
 
     sget-object v5, Landroid/app/backup/WallpaperBackupHelper;->WALLPAPER_INFO:Ljava/lang/String;
 
     invoke-direct {v0, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 185
     .restart local v0    # "f":Ljava/io/File;
     invoke-virtual {p0, v0, p1}, Landroid/app/backup/WallpaperBackupHelper;->writeFile(Ljava/io/File;Landroid/app/backup/BackupDataInputStream;)Z
 

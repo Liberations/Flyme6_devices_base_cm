@@ -49,17 +49,14 @@
     .locals 4
 
     .prologue
-    .line 499
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 497
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mLock:Ljava/lang/Object;
 
-    .line 500
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -74,21 +71,18 @@
 
     iput-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mHandler:Landroid/os/Handler;
 
-    .line 501
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mClientCallbacks:Ljava/util/Map;
 
-    .line 502
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mWatcherCallbacks:Ljava/util/Map;
 
-    .line 499
     return-void
 .end method
 
@@ -99,12 +93,10 @@
     .param p1, "callback"    # Landroid/media/projection/IMediaProjectionCallback;
 
     .prologue
-    .line 506
     iget-object v1, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 507
     :try_start_0
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mClientCallbacks:Ljava/util/Map;
 
@@ -118,10 +110,8 @@
 
     monitor-exit v1
 
-    .line 505
     return-void
 
-    .line 506
     :catchall_0
     move-exception v0
 
@@ -135,12 +125,10 @@
     .param p1, "callback"    # Landroid/media/projection/IMediaProjectionWatcherCallback;
 
     .prologue
-    .line 512
     iget-object v1, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 513
     :try_start_0
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mWatcherCallbacks:Ljava/util/Map;
 
@@ -154,10 +142,8 @@
 
     monitor-exit v1
 
-    .line 511
     return-void
 
-    .line 512
     :catchall_0
     move-exception v0
 
@@ -171,26 +157,21 @@
     .param p1, "projection"    # Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;
 
     .prologue
-    .line 530
     if-nez p1, :cond_0
 
-    .line 531
-    const-string/jumbo v3, "MediaProjectionManagerService"
+    const-string v3, "MediaProjectionManagerService"
 
-    const-string/jumbo v4, "Tried to dispatch start notification for a null media projection. Ignoring!"
+    const-string v4, "Tried to dispatch start notification for a null media projection. Ignoring!"
 
     invoke-static {v3, v4}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 533
     return-void
 
-    .line 535
     :cond_0
     iget-object v4, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 536
     :try_start_0
     iget-object v3, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mWatcherCallbacks:Ljava/util/Map;
 
@@ -216,13 +197,11 @@
 
     check-cast v0, Landroid/media/projection/IMediaProjectionWatcherCallback;
 
-    .line 537
     .local v0, "callback":Landroid/media/projection/IMediaProjectionWatcherCallback;
     invoke-virtual {p1}, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;->getProjectionInfo()Landroid/media/projection/MediaProjectionInfo;
 
     move-result-object v2
 
-    .line 538
     .local v2, "info":Landroid/media/projection/MediaProjectionInfo;
     iget-object v3, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mHandler:Landroid/os/Handler;
 
@@ -236,7 +215,6 @@
 
     goto :goto_0
 
-    .line 535
     .end local v0    # "callback":Landroid/media/projection/IMediaProjectionWatcherCallback;
     .end local v1    # "callback$iterator":Ljava/util/Iterator;
     .end local v2    # "info":Landroid/media/projection/MediaProjectionInfo;
@@ -251,7 +229,6 @@
     :cond_1
     monitor-exit v4
 
-    .line 529
     return-void
 .end method
 
@@ -260,26 +237,21 @@
     .param p1, "projection"    # Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;
 
     .prologue
-    .line 544
     if-nez p1, :cond_0
 
-    .line 545
-    const-string/jumbo v4, "MediaProjectionManagerService"
+    const-string v4, "MediaProjectionManagerService"
 
-    const-string/jumbo v5, "Tried to dispatch stop notification for a null media projection. Ignoring!"
+    const-string v5, "Tried to dispatch stop notification for a null media projection. Ignoring!"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 547
     return-void
 
-    .line 549
     :cond_0
     iget-object v5, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mLock:Ljava/lang/Object;
 
     monitor-enter v5
 
-    .line 550
     :try_start_0
     iget-object v4, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mClientCallbacks:Ljava/util/Map;
 
@@ -305,7 +277,6 @@
 
     check-cast v0, Landroid/media/projection/IMediaProjectionCallback;
 
-    .line 551
     .local v0, "callback":Landroid/media/projection/IMediaProjectionCallback;
     iget-object v4, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mHandler:Landroid/os/Handler;
 
@@ -319,7 +290,6 @@
 
     goto :goto_0
 
-    .line 549
     .end local v0    # "callback":Landroid/media/projection/IMediaProjectionCallback;
     .end local v2    # "callback$iterator":Ljava/util/Iterator;
     :catchall_0
@@ -329,7 +299,6 @@
 
     throw v4
 
-    .line 554
     .restart local v2    # "callback$iterator":Ljava/util/Iterator;
     :cond_1
     :try_start_1
@@ -356,13 +325,11 @@
 
     check-cast v1, Landroid/media/projection/IMediaProjectionWatcherCallback;
 
-    .line 555
     .local v1, "callback":Landroid/media/projection/IMediaProjectionWatcherCallback;
     invoke-virtual {p1}, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;->getProjectionInfo()Landroid/media/projection/MediaProjectionInfo;
 
     move-result-object v3
 
-    .line 556
     .local v3, "info":Landroid/media/projection/MediaProjectionInfo;
     iget-object v4, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mHandler:Landroid/os/Handler;
 
@@ -381,7 +348,6 @@
     :cond_2
     monitor-exit v5
 
-    .line 543
     return-void
 .end method
 
@@ -390,12 +356,10 @@
     .param p1, "callback"    # Landroid/media/projection/IMediaProjectionCallback;
 
     .prologue
-    .line 518
     iget-object v1, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 519
     :try_start_0
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mClientCallbacks:Ljava/util/Map;
 
@@ -409,10 +373,8 @@
 
     monitor-exit v1
 
-    .line 517
     return-void
 
-    .line 518
     :catchall_0
     move-exception v0
 
@@ -426,12 +388,10 @@
     .param p1, "callback"    # Landroid/media/projection/IMediaProjectionWatcherCallback;
 
     .prologue
-    .line 524
     iget-object v1, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 525
     :try_start_0
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->mWatcherCallbacks:Ljava/util/Map;
 
@@ -445,10 +405,8 @@
 
     monitor-exit v1
 
-    .line 523
     return-void
 
-    .line 524
     :catchall_0
     move-exception v0
 

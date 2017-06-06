@@ -93,32 +93,27 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 73
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 50
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/ThermalObserver;->mLock:Ljava/lang/Object;
 
-    .line 53
     new-instance v0, Lcom/android/server/ThermalObserver$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/ThermalObserver$1;-><init>(Lcom/android/server/ThermalObserver;)V
 
     iput-object v0, p0, Lcom/android/server/ThermalObserver;->mThermalWarningObserver:Landroid/os/UEventObserver;
 
-    .line 60
     new-instance v0, Lcom/android/server/ThermalObserver$2;
 
     invoke-direct {v0, p0, v2}, Lcom/android/server/ThermalObserver$2;-><init>(Lcom/android/server/ThermalObserver;Z)V
 
     iput-object v0, p0, Lcom/android/server/ThermalObserver;->mHandler:Landroid/os/Handler;
 
-    .line 74
-    const-string/jumbo v0, "power"
+    const-string v0, "power"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -128,10 +123,9 @@
 
     iput-object v0, p0, Lcom/android/server/ThermalObserver;->mPowerManager:Landroid/os/PowerManager;
 
-    .line 75
     iget-object v0, p0, Lcom/android/server/ThermalObserver;->mPowerManager:Landroid/os/PowerManager;
 
-    const-string/jumbo v1, "ThermalObserver"
+    const-string v1, "ThermalObserver"
 
     invoke-virtual {v0, v2, v1}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
 
@@ -139,14 +133,12 @@
 
     iput-object v0, p0, Lcom/android/server/ThermalObserver;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 77
     iget-object v0, p0, Lcom/android/server/ThermalObserver;->mThermalWarningObserver:Landroid/os/UEventObserver;
 
-    const-string/jumbo v1, "DEVPATH=/devices/virtual/switch/thermalstate"
+    const-string v1, "DEVPATH=/devices/virtual/switch/thermalstate"
 
     invoke-virtual {v0, v1}, Landroid/os/UEventObserver;->startObserving(Ljava/lang/String;)V
 
-    .line 72
     return-void
 .end method
 
@@ -155,12 +147,10 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 90
     iget-object v3, p0, Lcom/android/server/ThermalObserver;->mLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 91
     :try_start_0
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -168,33 +158,27 @@
 
     iput-object v2, p0, Lcom/android/server/ThermalObserver;->mLastState:Ljava/lang/Integer;
 
-    .line 92
     new-instance v0, Landroid/content/Intent;
 
-    const-string/jumbo v2, "android.intent.action.THERMAL_EVENT"
+    const-string v2, "android.intent.action.THERMAL_EVENT"
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 93
     .local v0, "intent":Landroid/content/Intent;
     const/high16 v2, 0x20000000
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 97
     packed-switch p1, :pswitch_data_0
 
-    .line 106
     const/4 v1, 0x0
 
-    .line 110
     .local v1, "thermalState":I
     :goto_0
-    const-string/jumbo v2, "android.intent.extra.THERMAL_STATE"
+    const-string v2, "android.intent.extra.THERMAL_STATE"
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 112
     invoke-virtual {p0}, Lcom/android/server/ThermalObserver;->getContext()Landroid/content/Context;
 
     move-result-object v2
@@ -207,28 +191,22 @@
 
     monitor-exit v3
 
-    .line 89
     return-void
 
-    .line 99
     .end local v1    # "thermalState":I
     :pswitch_0
     const/4 v1, 0x1
 
-    .line 100
     .restart local v1    # "thermalState":I
     goto :goto_0
 
-    .line 102
     .end local v1    # "thermalState":I
     :pswitch_1
     const/4 v1, 0x2
 
-    .line 103
     .restart local v1    # "thermalState":I
     goto :goto_0
 
-    .line 90
     .end local v0    # "intent":Landroid/content/Intent;
     .end local v1    # "thermalState":I
     :catchall_0
@@ -238,7 +216,6 @@
 
     throw v2
 
-    .line 97
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -251,31 +228,25 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 81
     new-instance v0, Landroid/os/Message;
 
     invoke-direct {v0}, Landroid/os/Message;-><init>()V
 
-    .line 82
     .local v0, "message":Landroid/os/Message;
     const/4 v1, 0x0
 
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 83
     iput p1, v0, Landroid/os/Message;->arg1:I
 
-    .line 85
     iget-object v1, p0, Lcom/android/server/ThermalObserver;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 86
     iget-object v1, p0, Lcom/android/server/ThermalObserver;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 80
     return-void
 .end method
 
@@ -285,8 +256,7 @@
     .locals 3
 
     .prologue
-    .line 118
-    const-string/jumbo v0, "ThermalObserver"
+    const-string v0, "ThermalObserver"
 
     new-instance v1, Lcom/android/server/ThermalObserver$BinderService;
 
@@ -296,6 +266,5 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/ThermalObserver;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 117
     return-void
 .end method

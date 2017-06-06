@@ -17,10 +17,8 @@
     .end annotation
 
     .prologue
-    .line 11
     invoke-direct {p0, p1, p2, p3, p4}, Lorg/ksoap2/transport/HttpsServiceConnectionSE;-><init>(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 10
     return-void
 .end method
 
@@ -32,8 +30,7 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 18
-    const-string/jumbo v0, "Connection"
+    const-string v0, "Connection"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -41,7 +38,7 @@
 
     if-eqz v0, :cond_0
 
-    const-string/jumbo v0, "close"
+    const-string v0, "close"
 
     invoke-virtual {v0, p2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -49,13 +46,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 19
     return-void
 
-    .line 21
     :cond_0
     invoke-super {p0, p1, p2}, Lorg/ksoap2/transport/HttpsServiceConnectionSE;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 15
     return-void
 .end method

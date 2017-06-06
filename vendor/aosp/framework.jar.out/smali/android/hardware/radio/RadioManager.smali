@@ -70,13 +70,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 1305
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1306
     iput-object p1, p0, Landroid/hardware/radio/RadioManager;->mContext:Landroid/content/Context;
 
-    .line 1305
     return-void
 .end method
 
@@ -105,13 +102,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1288
     if-nez p4, :cond_0
 
-    .line 1289
     return-object v1
 
-    .line 1291
     :cond_0
     new-instance v0, Landroid/hardware/radio/RadioModule;
 
@@ -127,21 +121,17 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/hardware/radio/RadioModule;-><init>(ILandroid/hardware/radio/RadioManager$BandConfig;ZLandroid/hardware/radio/RadioTuner$Callback;Landroid/os/Handler;)V
 
-    .line 1292
     .local v0, "module":Landroid/hardware/radio/RadioModule;
     if-eqz v0, :cond_1
 
-    .line 1293
     invoke-virtual {v0}, Landroid/hardware/radio/RadioModule;->initCheck()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 1294
     const/4 v0, 0x0
 
-    .line 1297
     .end local v0    # "module":Landroid/hardware/radio/RadioModule;
     :cond_1
     return-object v0

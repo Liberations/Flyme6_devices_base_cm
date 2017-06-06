@@ -32,45 +32,34 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 257
     invoke-direct {p0, p1}, Landroid/graphics/drawable/DrawableWrapper$DrawableWrapperState;-><init>(Landroid/graphics/drawable/DrawableWrapper$DrawableWrapperState;)V
 
-    .line 251
     iput v0, p0, Landroid/graphics/drawable/InsetDrawable$InsetState;->mInsetLeft:I
 
-    .line 252
     iput v0, p0, Landroid/graphics/drawable/InsetDrawable$InsetState;->mInsetTop:I
 
-    .line 253
     iput v0, p0, Landroid/graphics/drawable/InsetDrawable$InsetState;->mInsetRight:I
 
-    .line 254
     iput v0, p0, Landroid/graphics/drawable/InsetDrawable$InsetState;->mInsetBottom:I
 
-    .line 259
     if-eqz p1, :cond_0
 
-    .line 260
     iget v0, p1, Landroid/graphics/drawable/InsetDrawable$InsetState;->mInsetLeft:I
 
     iput v0, p0, Landroid/graphics/drawable/InsetDrawable$InsetState;->mInsetLeft:I
 
-    .line 261
     iget v0, p1, Landroid/graphics/drawable/InsetDrawable$InsetState;->mInsetTop:I
 
     iput v0, p0, Landroid/graphics/drawable/InsetDrawable$InsetState;->mInsetTop:I
 
-    .line 262
     iget v0, p1, Landroid/graphics/drawable/InsetDrawable$InsetState;->mInsetRight:I
 
     iput v0, p0, Landroid/graphics/drawable/InsetDrawable$InsetState;->mInsetRight:I
 
-    .line 263
     iget v0, p1, Landroid/graphics/drawable/InsetDrawable$InsetState;->mInsetBottom:I
 
     iput v0, p0, Landroid/graphics/drawable/InsetDrawable$InsetState;->mInsetBottom:I
 
-    .line 256
     :cond_0
     return-void
 .end method
@@ -82,7 +71,6 @@
     .param p1, "res"    # Landroid/content/res/Resources;
 
     .prologue
-    .line 269
     new-instance v0, Landroid/graphics/drawable/InsetDrawable;
 
     const/4 v1, 0x0

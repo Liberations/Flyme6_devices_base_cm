@@ -16,17 +16,14 @@
     .locals 1
 
     .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     new-instance v0, Landroid/database/DataSetObservable;
 
     invoke-direct {v0}, Landroid/database/DataSetObservable;-><init>()V
 
     iput-object v0, p0, Landroid/widget/BaseAdapter;->mDataSetObservable:Landroid/database/DataSetObservable;
 
-    .line 30
     return-void
 .end method
 
@@ -36,7 +33,6 @@
     .locals 1
 
     .prologue
-    .line 63
     const/4 v0, 0x1
 
     return v0
@@ -49,7 +45,6 @@
     .param p3, "parent"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 71
     invoke-virtual {p0, p1, p2, p3}, Landroid/widget/BaseAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v0
@@ -62,7 +57,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 75
     const/4 v0, 0x0
 
     return v0
@@ -72,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 79
     const/4 v0, 0x1
 
     return v0
@@ -82,7 +75,6 @@
     .locals 1
 
     .prologue
-    .line 34
     const/4 v0, 0x0
 
     return v0
@@ -94,7 +86,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 83
     invoke-virtual {p0}, Landroid/widget/BaseAdapter;->getCount()I
 
     move-result v1
@@ -112,7 +103,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 67
     const/4 v0, 0x1
 
     return v0
@@ -122,12 +112,10 @@
     .locals 1
 
     .prologue
-    .line 50
     iget-object v0, p0, Landroid/widget/BaseAdapter;->mDataSetObservable:Landroid/database/DataSetObservable;
 
     invoke-virtual {v0}, Landroid/database/DataSetObservable;->notifyChanged()V
 
-    .line 49
     return-void
 .end method
 
@@ -135,12 +123,10 @@
     .locals 1
 
     .prologue
-    .line 59
     iget-object v0, p0, Landroid/widget/BaseAdapter;->mDataSetObservable:Landroid/database/DataSetObservable;
 
     invoke-virtual {v0}, Landroid/database/DataSetObservable;->notifyInvalidated()V
 
-    .line 58
     return-void
 .end method
 
@@ -149,12 +135,10 @@
     .param p1, "observer"    # Landroid/database/DataSetObserver;
 
     .prologue
-    .line 38
     iget-object v0, p0, Landroid/widget/BaseAdapter;->mDataSetObservable:Landroid/database/DataSetObservable;
 
     invoke-virtual {v0, p1}, Landroid/database/DataSetObservable;->registerObserver(Ljava/lang/Object;)V
 
-    .line 37
     return-void
 .end method
 
@@ -163,11 +147,9 @@
     .param p1, "observer"    # Landroid/database/DataSetObserver;
 
     .prologue
-    .line 42
     iget-object v0, p0, Landroid/widget/BaseAdapter;->mDataSetObservable:Landroid/database/DataSetObservable;
 
     invoke-virtual {v0, p1}, Landroid/database/DataSetObservable;->unregisterObserver(Ljava/lang/Object;)V
 
-    .line 41
     return-void
 .end method

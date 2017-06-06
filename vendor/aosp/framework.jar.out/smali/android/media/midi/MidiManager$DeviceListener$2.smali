@@ -30,7 +30,6 @@
     .param p2, "val$deviceF"    # Landroid/media/midi/MidiDeviceInfo;
 
     .prologue
-    .line 95
     iput-object p1, p0, Landroid/media/midi/MidiManager$DeviceListener$2;->this$1:Landroid/media/midi/MidiManager$DeviceListener;
 
     iput-object p2, p0, Landroid/media/midi/MidiManager$DeviceListener$2;->val$deviceF:Landroid/media/midi/MidiDeviceInfo;
@@ -46,7 +45,6 @@
     .locals 2
 
     .prologue
-    .line 97
     iget-object v0, p0, Landroid/media/midi/MidiManager$DeviceListener$2;->this$1:Landroid/media/midi/MidiManager$DeviceListener;
 
     invoke-static {v0}, Landroid/media/midi/MidiManager$DeviceListener;->-get0(Landroid/media/midi/MidiManager$DeviceListener;)Landroid/media/midi/MidiManager$DeviceCallback;
@@ -57,6 +55,5 @@
 
     invoke-virtual {v0, v1}, Landroid/media/midi/MidiManager$DeviceCallback;->onDeviceRemoved(Landroid/media/midi/MidiDeviceInfo;)V
 
-    .line 96
     return-void
 .end method

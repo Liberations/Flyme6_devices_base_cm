@@ -54,12 +54,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 43
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Landroid/widget/ZoomButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 42
     return-void
 .end method
 
@@ -69,12 +67,10 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 47
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Landroid/widget/ZoomButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 46
     return-void
 .end method
 
@@ -85,12 +81,10 @@
     .param p3, "defStyleAttr"    # I
 
     .prologue
-    .line 51
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, p3, v0}, Landroid/widget/ZoomButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 50
     return-void
 .end method
 
@@ -102,32 +96,26 @@
     .param p4, "defStyleRes"    # I
 
     .prologue
-    .line 55
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/ImageButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 30
     new-instance v0, Landroid/widget/ZoomButton$1;
 
     invoke-direct {v0, p0}, Landroid/widget/ZoomButton$1;-><init>(Landroid/widget/ZoomButton;)V
 
     iput-object v0, p0, Landroid/widget/ZoomButton;->mRunnable:Ljava/lang/Runnable;
 
-    .line 39
     const-wide/16 v0, 0x3e8
 
     iput-wide v0, p0, Landroid/widget/ZoomButton;->mZoomSpeed:J
 
-    .line 56
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Landroid/widget/ZoomButton;->mHandler:Landroid/os/Handler;
 
-    .line 57
     invoke-virtual {p0, p0}, Landroid/widget/ZoomButton;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    .line 54
     return-void
 .end method
 
@@ -139,10 +127,8 @@
     .param p2, "direction"    # I
 
     .prologue
-    .line 100
     invoke-virtual {p0}, Landroid/widget/ZoomButton;->clearFocus()V
 
-    .line 101
     invoke-super {p0, p1, p2}, Landroid/widget/ImageButton;->dispatchUnhandledMove(Landroid/view/View;I)Z
 
     move-result v0
@@ -154,7 +140,6 @@
     .locals 1
 
     .prologue
-    .line 106
     const-class v0, Landroid/widget/ZoomButton;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -170,12 +155,10 @@
     .param p2, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 81
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/widget/ZoomButton;->mIsInLongpress:Z
 
-    .line 82
     invoke-super {p0, p1, p2}, Landroid/widget/ImageButton;->onKeyUp(ILandroid/view/KeyEvent;)Z
 
     move-result v0
@@ -190,17 +173,14 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 74
     iput-boolean v2, p0, Landroid/widget/ZoomButton;->mIsInLongpress:Z
 
-    .line 75
     iget-object v0, p0, Landroid/widget/ZoomButton;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Landroid/widget/ZoomButton;->mRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 76
     return v2
 .end method
 
@@ -209,7 +189,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 62
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
@@ -218,7 +197,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 63
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
@@ -227,13 +205,11 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 64
     :cond_0
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/widget/ZoomButton;->mIsInLongpress:Z
 
-    .line 66
     :cond_1
     invoke-super {p0, p1}, Landroid/widget/ImageButton;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -247,19 +223,15 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 87
     if-nez p1, :cond_0
 
-    .line 93
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/widget/ZoomButton;->setPressed(Z)V
 
-    .line 95
     :cond_0
     invoke-super {p0, p1}, Landroid/widget/ImageButton;->setEnabled(Z)V
 
-    .line 86
     return-void
 .end method
 
@@ -268,9 +240,7 @@
     .param p1, "speed"    # J
 
     .prologue
-    .line 70
     iput-wide p1, p0, Landroid/widget/ZoomButton;->mZoomSpeed:J
 
-    .line 69
     return-void
 .end method

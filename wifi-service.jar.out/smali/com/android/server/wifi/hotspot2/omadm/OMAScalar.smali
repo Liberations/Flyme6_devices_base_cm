@@ -16,13 +16,10 @@
     .param p4, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 14
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/wifi/hotspot2/omadm/OMANode;-><init>(Lcom/android/server/wifi/hotspot2/omadm/OMANode;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 15
     iput-object p4, p0, Lcom/android/server/wifi/hotspot2/omadm/OMAScalar;->mValue:Ljava/lang/String;
 
-    .line 13
     return-void
 .end method
 
@@ -41,7 +38,6 @@
     .end annotation
 
     .prologue
-    .line 50
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -54,7 +50,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 44
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -75,7 +70,6 @@
     .end annotation
 
     .prologue
-    .line 34
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -103,7 +97,6 @@
     .end annotation
 
     .prologue
-    .line 24
     .local p1, "path":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     new-instance v0, Lcom/android/server/wifi/hotspot2/omadm/OMAException;
 
@@ -111,7 +104,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Scalar encountered in list path: "
+    const-string v2, "Scalar encountered in list path: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -154,7 +147,6 @@
     .end annotation
 
     .prologue
-    .line 19
     .local p1, "path":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/omadm/OMAScalar;->mValue:Ljava/lang/String;
 
@@ -165,7 +157,6 @@
     .locals 1
 
     .prologue
-    .line 39
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/omadm/OMAScalar;->mValue:Ljava/lang/String;
 
     return-object v0
@@ -175,7 +166,6 @@
     .locals 1
 
     .prologue
-    .line 29
     const/4 v0, 0x1
 
     return v0
@@ -192,34 +182,28 @@
     .end annotation
 
     .prologue
-    .line 64
     invoke-static {p2, p1}, Lcom/android/server/wifi/hotspot2/omadm/OMAConstants;->indent(ILjava/io/OutputStream;)V
 
-    .line 65
     invoke-virtual {p0}, Lcom/android/server/wifi/hotspot2/omadm/OMAScalar;->getName()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v0, p1}, Lcom/android/server/wifi/hotspot2/omadm/OMAConstants;->serializeString(Ljava/lang/String;Ljava/io/OutputStream;)V
 
-    .line 66
     const/16 v0, 0x3d
 
     invoke-virtual {p1, v0}, Ljava/io/OutputStream;->write(I)V
 
-    .line 67
     invoke-virtual {p0}, Lcom/android/server/wifi/hotspot2/omadm/OMAScalar;->getValue()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v0, p1}, Lcom/android/server/wifi/hotspot2/omadm/OMAConstants;->serializeString(Ljava/lang/String;Ljava/io/OutputStream;)V
 
-    .line 68
     const/16 v0, 0xa
 
     invoke-virtual {p1, v0}, Ljava/io/OutputStream;->write(I)V
 
-    .line 63
     return-void
 .end method
 
@@ -229,7 +213,6 @@
     .param p2, "level"    # I
 
     .prologue
-    .line 55
     invoke-virtual {p0}, Lcom/android/server/wifi/hotspot2/omadm/OMAScalar;->getPathString()Ljava/lang/String;
 
     move-result-object v0
@@ -248,15 +231,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 56
     invoke-virtual {p0}, Lcom/android/server/wifi/hotspot2/omadm/OMAScalar;->getContext()Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 57
-    const-string/jumbo v0, " ("
+    const-string v0, " ("
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -274,12 +255,10 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 59
     :cond_0
     const/16 v0, 0xa
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 54
     return-void
 .end method

@@ -62,52 +62,36 @@
 
     const/4 v0, 0x0
 
-    .line 95
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 97
     iput-wide p1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mCtime:J
 
-    .line 98
     iput-wide p3, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mExpTime:J
 
-    .line 99
     iput-object p5, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mRealm:Ljava/lang/String;
 
-    .line 100
     iput-boolean p6, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mCheckAAACert:Z
 
-    .line 101
     iput-object p7, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mEAPMethod:Lcom/android/server/wifi/anqp/eap/EAPMethod;
 
-    .line 102
     iput-object p8, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mImsi:Lcom/android/server/wifi/IMSIParameter;
 
-    .line 104
     iput-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mCertType:Lcom/android/server/wifi/hotspot2/pps/Credential$CertType;
 
-    .line 105
     iput-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mFingerPrint:[B
 
-    .line 107
     iput-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mUserName:Ljava/lang/String;
 
-    .line 108
     iput-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mPassword:Ljava/lang/String;
 
-    .line 109
     iput-boolean v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mDisregardPassword:Z
 
-    .line 110
     iput-boolean v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mMachineManaged:Z
 
-    .line 111
     iput-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mSTokenApp:Ljava/lang/String;
 
-    .line 112
     iput-boolean v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mShare:Z
 
-    .line 96
     return-void
 .end method
 
@@ -126,52 +110,36 @@
 
     const/4 v0, 0x0
 
-    .line 75
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 77
     iput-wide p1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mCtime:J
 
-    .line 78
     iput-wide p3, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mExpTime:J
 
-    .line 79
     iput-object p5, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mRealm:Ljava/lang/String;
 
-    .line 80
     iput-boolean p6, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mCheckAAACert:Z
 
-    .line 81
     iput-object p7, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mEAPMethod:Lcom/android/server/wifi/anqp/eap/EAPMethod;
 
-    .line 82
     iput-object p8, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mCertType:Lcom/android/server/wifi/hotspot2/pps/Credential$CertType;
 
-    .line 83
     iput-object p9, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mFingerPrint:[B
 
-    .line 85
     iput-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mUserName:Ljava/lang/String;
 
-    .line 86
     iput-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mPassword:Ljava/lang/String;
 
-    .line 87
     iput-boolean v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mDisregardPassword:Z
 
-    .line 88
     iput-boolean v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mMachineManaged:Z
 
-    .line 89
     iput-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mSTokenApp:Ljava/lang/String;
 
-    .line 90
     iput-boolean v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mShare:Z
 
-    .line 92
     iput-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mImsi:Lcom/android/server/wifi/IMSIParameter;
 
-    .line 76
     return-void
 .end method
 
@@ -189,42 +157,32 @@
     .param p12, "share"    # Z
 
     .prologue
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
     iput-wide p1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mCtime:J
 
-    .line 51
     iput-wide p3, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mExpTime:J
 
-    .line 52
     iput-object p5, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mRealm:Ljava/lang/String;
 
-    .line 53
     iput-boolean p6, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mCheckAAACert:Z
 
-    .line 54
     iput-object p7, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mEAPMethod:Lcom/android/server/wifi/anqp/eap/EAPMethod;
 
-    .line 55
     iput-object p8, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mUserName:Ljava/lang/String;
 
-    .line 57
     invoke-static {p9}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 58
     const/4 v1, 0x0
 
     invoke-static {p9, v1}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
 
     move-result-object v0
 
-    .line 59
     .local v0, "pwOctets":[B
     new-instance v1, Ljava/lang/String;
 
@@ -234,41 +192,32 @@
 
     iput-object v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mPassword:Ljava/lang/String;
 
-    .line 63
     .end local v0    # "pwOctets":[B
     :goto_0
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mDisregardPassword:Z
 
-    .line 65
     iput-boolean p10, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mMachineManaged:Z
 
-    .line 66
     iput-object p11, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mSTokenApp:Ljava/lang/String;
 
-    .line 67
     iput-boolean p12, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mShare:Z
 
-    .line 69
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mCertType:Lcom/android/server/wifi/hotspot2/pps/Credential$CertType;
 
-    .line 70
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mFingerPrint:[B
 
-    .line 72
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mImsi:Lcom/android/server/wifi/IMSIParameter;
 
-    .line 49
     return-void
 
-    .line 61
     :cond_0
     const/4 v1, 0x0
 
@@ -295,43 +244,34 @@
 
     const/4 v9, 0x0
 
-    .line 132
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 134
     iput-wide v10, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mCtime:J
 
-    .line 135
     iput-wide v10, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mExpTime:J
 
-    .line 136
     invoke-virtual {p1}, Landroid/net/wifi/WifiEnterpriseConfig;->getRealm()Ljava/lang/String;
 
     move-result-object v7
 
     iput-object v7, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mRealm:Ljava/lang/String;
 
-    .line 137
     iput-boolean v9, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mCheckAAACert:Z
 
-    .line 138
     invoke-virtual {p1}, Landroid/net/wifi/WifiEnterpriseConfig;->getEapMethod()I
 
     move-result v7
 
-    .line 139
     invoke-virtual {p1}, Landroid/net/wifi/WifiEnterpriseConfig;->getPhase2Method()I
 
     move-result v10
 
-    .line 138
     invoke-static {v7, v10}, Lcom/android/server/wifi/hotspot2/pps/Credential;->mapEapMethod(II)Lcom/android/server/wifi/anqp/eap/EAPMethod;
 
     move-result-object v7
 
     iput-object v7, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mEAPMethod:Lcom/android/server/wifi/anqp/eap/EAPMethod;
 
-    .line 140
     iget-object v7, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mEAPMethod:Lcom/android/server/wifi/anqp/eap/EAPMethod;
 
     invoke-virtual {v7}, Lcom/android/server/wifi/anqp/eap/EAPMethod;->getEAPMethodID()Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
@@ -347,22 +287,19 @@
     :goto_0
     iput-object v7, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mCertType:Lcom/android/server/wifi/hotspot2/pps/Credential$CertType;
 
-    .line 143
     invoke-virtual {p1}, Landroid/net/wifi/WifiEnterpriseConfig;->getClientCertificate()Ljava/security/cert/X509Certificate;
 
     move-result-object v7
 
     if-eqz v7, :cond_2
 
-    .line 146
     :try_start_0
-    const-string/jumbo v7, "SHA-256"
+    const-string v7, "SHA-256"
 
     invoke-static {v7}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v1
 
-    .line 147
     .local v1, "digester":Ljava/security/MessageDigest;
     invoke-virtual {p1}, Landroid/net/wifi/WifiEnterpriseConfig;->getClientCertificate()Ljava/security/cert/X509Certificate;
 
@@ -378,17 +315,14 @@
 
     move-result-object v2
 
-    .line 177
     .end local v1    # "digester":Ljava/security/MessageDigest;
     :goto_1
     iput-object v2, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mFingerPrint:[B
 
-    .line 178
     invoke-virtual {p1}, Landroid/net/wifi/WifiEnterpriseConfig;->getPlmn()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 179
     .local v5, "imsi":Ljava/lang/String;
     if-eqz v5, :cond_0
 
@@ -404,21 +338,18 @@
     :goto_2
     iput-object v7, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mImsi:Lcom/android/server/wifi/IMSIParameter;
 
-    .line 180
     invoke-virtual {p1}, Landroid/net/wifi/WifiEnterpriseConfig;->getIdentity()Ljava/lang/String;
 
     move-result-object v7
 
     iput-object v7, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mUserName:Ljava/lang/String;
 
-    .line 181
     invoke-virtual {p1}, Landroid/net/wifi/WifiEnterpriseConfig;->getPassword()Ljava/lang/String;
 
     move-result-object v7
 
     iput-object v7, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mPassword:Ljava/lang/String;
 
-    .line 182
     if-eqz p3, :cond_6
 
     iget-object v7, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mPassword:Ljava/lang/String;
@@ -436,30 +367,23 @@
     :goto_3
     iput-boolean v7, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mDisregardPassword:Z
 
-    .line 183
     iput-boolean v9, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mMachineManaged:Z
 
-    .line 184
     iput-object v8, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mSTokenApp:Ljava/lang/String;
 
-    .line 185
     iput-boolean v9, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mShare:Z
 
-    .line 133
     return-void
 
     .end local v5    # "imsi":Ljava/lang/String;
     :cond_1
     move-object v7, v8
 
-    .line 140
     goto :goto_0
 
-    .line 148
     :catch_0
     move-exception v3
 
-    .line 149
     .local v3, "gse":Ljava/security/GeneralSecurityException;
     invoke-virtual {p0}, Lcom/android/server/wifi/hotspot2/pps/Credential;->getClass()Ljava/lang/Class;
 
@@ -469,12 +393,11 @@
 
     move-result-object v7
 
-    .line 150
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "Failed to generate certificate fingerprint: "
+    const-string v11, "Failed to generate certificate fingerprint: "
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -488,16 +411,13 @@
 
     move-result-object v10
 
-    .line 149
     invoke-static {v7, v10}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 151
     const/4 v2, 0x0
 
     .local v2, "fingerPrint":[B
     goto :goto_1
 
-    .line 153
     .end local v2    # "fingerPrint":[B
     .end local v3    # "gse":Ljava/security/GeneralSecurityException;
     :cond_2
@@ -507,18 +427,16 @@
 
     if-eqz v7, :cond_4
 
-    .line 154
     invoke-virtual {p1}, Landroid/net/wifi/WifiEnterpriseConfig;->getClientCertificateAlias()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 155
     .local v0, "alias":Ljava/lang/String;
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "USRCERT_"
+    const-string v10, "USRCERT_"
 
     invoke-virtual {v7, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -536,19 +454,16 @@
 
     move-result-object v6
 
-    .line 156
     .local v6, "octets":[B
     if-eqz v6, :cond_3
 
-    .line 158
     :try_start_1
-    const-string/jumbo v7, "SHA-256"
+    const-string v7, "SHA-256"
 
     invoke-static {v7}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v1
 
-    .line 159
     .restart local v1    # "digester":Ljava/security/MessageDigest;
     invoke-virtual {v1, v6}, Ljava/security/MessageDigest;->digest([B)[B
     :try_end_1
@@ -559,13 +474,11 @@
     .local v2, "fingerPrint":[B
     goto/16 :goto_1
 
-    .line 160
     .end local v1    # "digester":Ljava/security/MessageDigest;
     .end local v2    # "fingerPrint":[B
     :catch_1
     move-exception v3
 
-    .line 161
     .restart local v3    # "gse":Ljava/security/GeneralSecurityException;
     invoke-virtual {p0}, Lcom/android/server/wifi/hotspot2/pps/Credential;->getClass()Ljava/lang/Class;
 
@@ -579,7 +492,7 @@
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "Failed to construct digest: "
+    const-string v11, "Failed to construct digest: "
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -595,13 +508,11 @@
 
     invoke-static {v7, v10}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 162
     const/4 v2, 0x0
 
     .local v2, "fingerPrint":[B
     goto/16 :goto_1
 
-    .line 167
     .end local v2    # "fingerPrint":[B
     .end local v3    # "gse":Ljava/security/GeneralSecurityException;
     :cond_3
@@ -610,10 +521,8 @@
 
     move-result-object v7
 
-    .line 168
     const/4 v10, 0x0
 
-    .line 167
     invoke-static {v7, v10}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
     :try_end_2
     .catch Ljava/lang/IllegalArgumentException; {:try_start_2 .. :try_end_2} :catch_2
@@ -623,12 +532,10 @@
     .local v2, "fingerPrint":[B
     goto/16 :goto_1
 
-    .line 169
     .end local v2    # "fingerPrint":[B
     :catch_2
     move-exception v4
 
-    .line 170
     .local v4, "ie":Ljava/lang/IllegalArgumentException;
     invoke-virtual {p0}, Lcom/android/server/wifi/hotspot2/pps/Credential;->getClass()Ljava/lang/Class;
 
@@ -638,17 +545,15 @@
 
     move-result-object v7
 
-    const-string/jumbo v10, "Bad base 64 alias"
+    const-string v10, "Bad base 64 alias"
 
     invoke-static {v7, v10}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 171
     const/4 v2, 0x0
 
     .local v2, "fingerPrint":[B
     goto/16 :goto_1
 
-    .line 175
     .end local v0    # "alias":Ljava/lang/String;
     .end local v2    # "fingerPrint":[B
     .end local v4    # "ie":Ljava/lang/IllegalArgumentException;
@@ -659,7 +564,6 @@
     .restart local v2    # "fingerPrint":[B
     goto/16 :goto_1
 
-    .line 179
     .end local v2    # "fingerPrint":[B
     .restart local v5    # "imsi":Ljava/lang/String;
     :cond_5
@@ -672,7 +576,6 @@
     :cond_6
     move v7, v9
 
-    .line 182
     goto/16 :goto_3
 .end method
 
@@ -682,78 +585,62 @@
     .param p2, "password"    # Ljava/lang/String;
 
     .prologue
-    .line 115
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 116
     iget-wide v0, p1, Lcom/android/server/wifi/hotspot2/pps/Credential;->mCtime:J
 
     iput-wide v0, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mCtime:J
 
-    .line 117
     iget-wide v0, p1, Lcom/android/server/wifi/hotspot2/pps/Credential;->mExpTime:J
 
     iput-wide v0, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mExpTime:J
 
-    .line 118
     iget-object v0, p1, Lcom/android/server/wifi/hotspot2/pps/Credential;->mRealm:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mRealm:Ljava/lang/String;
 
-    .line 119
     iget-boolean v0, p1, Lcom/android/server/wifi/hotspot2/pps/Credential;->mCheckAAACert:Z
 
     iput-boolean v0, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mCheckAAACert:Z
 
-    .line 120
     iget-object v0, p1, Lcom/android/server/wifi/hotspot2/pps/Credential;->mUserName:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mUserName:Ljava/lang/String;
 
-    .line 121
     iput-object p2, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mPassword:Ljava/lang/String;
 
-    .line 122
     iget-boolean v0, p1, Lcom/android/server/wifi/hotspot2/pps/Credential;->mDisregardPassword:Z
 
     iput-boolean v0, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mDisregardPassword:Z
 
-    .line 123
     iget-boolean v0, p1, Lcom/android/server/wifi/hotspot2/pps/Credential;->mMachineManaged:Z
 
     iput-boolean v0, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mMachineManaged:Z
 
-    .line 124
     iget-object v0, p1, Lcom/android/server/wifi/hotspot2/pps/Credential;->mSTokenApp:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mSTokenApp:Ljava/lang/String;
 
-    .line 125
     iget-boolean v0, p1, Lcom/android/server/wifi/hotspot2/pps/Credential;->mShare:Z
 
     iput-boolean v0, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mShare:Z
 
-    .line 126
     iget-object v0, p1, Lcom/android/server/wifi/hotspot2/pps/Credential;->mEAPMethod:Lcom/android/server/wifi/anqp/eap/EAPMethod;
 
     iput-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mEAPMethod:Lcom/android/server/wifi/anqp/eap/EAPMethod;
 
-    .line 127
     iget-object v0, p1, Lcom/android/server/wifi/hotspot2/pps/Credential;->mCertType:Lcom/android/server/wifi/hotspot2/pps/Credential$CertType;
 
     iput-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mCertType:Lcom/android/server/wifi/hotspot2/pps/Credential$CertType;
 
-    .line 128
     iget-object v0, p1, Lcom/android/server/wifi/hotspot2/pps/Credential;->mFingerPrint:[B
 
     iput-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mFingerPrint:[B
 
-    .line 129
     iget-object v0, p1, Lcom/android/server/wifi/hotspot2/pps/Credential;->mImsi:Lcom/android/server/wifi/IMSIParameter;
 
     iput-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mImsi:Lcom/android/server/wifi/IMSIParameter;
 
-    .line 115
     return-void
 .end method
 
@@ -767,8 +654,7 @@
     .end annotation
 
     .prologue
-    .line 189
-    const-string/jumbo v0, "x509v3"
+    const-string v0, "x509v3"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -776,14 +662,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 190
     sget-object v0, Lcom/android/server/wifi/hotspot2/pps/Credential$CertType;->x509v3:Lcom/android/server/wifi/hotspot2/pps/Credential$CertType;
 
     return-object v0
 
-    .line 191
     :cond_0
-    const-string/jumbo v0, "802.1ar"
+    const-string v0, "802.1ar"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -791,12 +675,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 192
     sget-object v0, Lcom/android/server/wifi/hotspot2/pps/Credential$CertType;->IEEE:Lcom/android/server/wifi/hotspot2/pps/Credential$CertType;
 
     return-object v0
 
-    .line 194
     :cond_1
     new-instance v0, Lcom/android/server/wifi/hotspot2/omadm/OMAException;
 
@@ -804,7 +686,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Invalid cert type: \'"
+    const-string v2, "Invalid cert type: \'"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -814,7 +696,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "\'"
+    const-string v2, "\'"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -842,10 +724,8 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 199
     packed-switch p0, :pswitch_data_0
 
-    .line 228
     :pswitch_0
     if-ltz p0, :cond_0
 
@@ -855,12 +735,10 @@
 
     if-ge p0, v2, :cond_0
 
-    .line 229
     sget-object v2, Landroid/net/wifi/WifiEnterpriseConfig$Eap;->strings:[Ljava/lang/String;
 
     aget-object v1, v2, p0
 
-    .line 233
     .local v1, "methodName":Ljava/lang/String;
     :goto_0
     new-instance v2, Ljava/io/IOException;
@@ -869,7 +747,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "EAP method id "
+    const-string v4, "EAP method id "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -879,7 +757,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, " is not valid for Passpoint"
+    const-string v4, " is not valid for Passpoint"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -893,7 +771,6 @@
 
     throw v2
 
-    .line 201
     .end local v1    # "methodName":Ljava/lang/String;
     :pswitch_1
     new-instance v2, Lcom/android/server/wifi/anqp/eap/EAPMethod;
@@ -904,18 +781,16 @@
 
     return-object v2
 
-    .line 205
     :pswitch_2
     packed-switch p1, :pswitch_data_1
 
-    .line 216
     new-instance v2, Ljava/io/IOException;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "TTLS phase2 method "
+    const-string v4, "TTLS phase2 method "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -925,10 +800,8 @@
 
     move-result-object v3
 
-    .line 217
-    const-string/jumbo v4, " not valid for Passpoint"
+    const-string v4, " not valid for Passpoint"
 
-    .line 216
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
@@ -941,7 +814,6 @@
 
     throw v2
 
-    .line 207
     :pswitch_3
     new-instance v0, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth;
 
@@ -949,7 +821,6 @@
 
     invoke-direct {v0, v2}, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth;-><init>(Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth$NonEAPType;)V
 
-    .line 219
     .local v0, "inner":Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth;
     :goto_1
     new-instance v2, Lcom/android/server/wifi/anqp/eap/EAPMethod;
@@ -960,7 +831,6 @@
 
     return-object v2
 
-    .line 210
     .end local v0    # "inner":Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth;
     :pswitch_4
     new-instance v0, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth;
@@ -969,11 +839,9 @@
 
     invoke-direct {v0, v2}, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth;-><init>(Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth$NonEAPType;)V
 
-    .line 211
     .restart local v0    # "inner":Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth;
     goto :goto_1
 
-    .line 213
     .end local v0    # "inner":Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth;
     :pswitch_5
     new-instance v0, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth;
@@ -982,11 +850,9 @@
 
     invoke-direct {v0, v2}, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth;-><init>(Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth$NonEAPType;)V
 
-    .line 214
     .restart local v0    # "inner":Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth;
     goto :goto_1
 
-    .line 221
     .end local v0    # "inner":Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth;
     :pswitch_6
     new-instance v2, Lcom/android/server/wifi/anqp/eap/EAPMethod;
@@ -997,7 +863,6 @@
 
     return-object v2
 
-    .line 223
     :pswitch_7
     new-instance v2, Lcom/android/server/wifi/anqp/eap/EAPMethod;
 
@@ -1007,7 +872,6 @@
 
     return-object v2
 
-    .line 225
     :pswitch_8
     new-instance v2, Lcom/android/server/wifi/anqp/eap/EAPMethod;
 
@@ -1017,7 +881,6 @@
 
     return-object v2
 
-    .line 231
     :cond_0
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
@@ -1026,7 +889,6 @@
     .restart local v1    # "methodName":Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 199
     nop
 
     :pswitch_data_0
@@ -1039,7 +901,6 @@
         :pswitch_8
     .end packed-switch
 
-    .line 205
     :pswitch_data_1
     .packed-switch 0x1
         :pswitch_3
@@ -1056,10 +917,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 312
     if-nez p0, :cond_1
 
-    .line 313
     if-nez p1, :cond_0
 
     const/4 v0, 0x1
@@ -1067,7 +926,6 @@
     :cond_0
     return v0
 
-    .line 316
     :cond_1
     if-eqz p1, :cond_2
 
@@ -1090,12 +948,10 @@
 
     const/4 v6, 0x0
 
-    .line 279
     if-ne p0, p1, :cond_0
 
     return v7
 
-    .line 280
     :cond_0
     if-eqz p1, :cond_1
 
@@ -1115,10 +971,8 @@
     :cond_2
     move-object v0, p1
 
-    .line 282
     check-cast v0, Lcom/android/server/wifi/hotspot2/pps/Credential;
 
-    .line 284
     .local v0, "that":Lcom/android/server/wifi/hotspot2/pps/Credential;
     iget-boolean v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mCheckAAACert:Z
 
@@ -1128,7 +982,6 @@
 
     return v6
 
-    .line 285
     :cond_3
     iget-wide v2, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mCtime:J
 
@@ -1140,7 +993,6 @@
 
     return v6
 
-    .line 286
     :cond_4
     iget-wide v2, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mExpTime:J
 
@@ -1152,7 +1004,6 @@
 
     return v6
 
-    .line 287
     :cond_5
     iget-boolean v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mMachineManaged:Z
 
@@ -1162,7 +1013,6 @@
 
     return v6
 
-    .line 288
     :cond_6
     iget-boolean v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mShare:Z
 
@@ -1172,7 +1022,6 @@
 
     return v6
 
-    .line 289
     :cond_7
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mCertType:Lcom/android/server/wifi/hotspot2/pps/Credential$CertType;
 
@@ -1182,7 +1031,6 @@
 
     return v6
 
-    .line 290
     :cond_8
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mEAPMethod:Lcom/android/server/wifi/anqp/eap/EAPMethod;
 
@@ -1196,7 +1044,6 @@
 
     return v6
 
-    .line 291
     :cond_9
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mFingerPrint:[B
 
@@ -1210,7 +1057,6 @@
 
     return v6
 
-    .line 292
     :cond_a
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mImsi:Lcom/android/server/wifi/IMSIParameter;
 
@@ -1222,10 +1068,8 @@
 
     if-nez v1, :cond_b
 
-    .line 293
     return v6
 
-    .line 296
     :cond_b
     iget-boolean v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mDisregardPassword:Z
 
@@ -1241,7 +1085,6 @@
 
     if-eqz v1, :cond_d
 
-    .line 300
     :cond_c
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mRealm:Ljava/lang/String;
 
@@ -1255,11 +1098,9 @@
 
     return v6
 
-    .line 297
     :cond_d
     return v6
 
-    .line 301
     :cond_e
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mSTokenApp:Ljava/lang/String;
 
@@ -1271,10 +1112,8 @@
 
     if-nez v1, :cond_f
 
-    .line 302
     return v6
 
-    .line 304
     :cond_f
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mUserName:Ljava/lang/String;
 
@@ -1286,10 +1125,8 @@
 
     if-nez v1, :cond_10
 
-    .line 305
     return v6
 
-    .line 308
     :cond_10
     return v7
 .end method
@@ -1298,7 +1135,6 @@
     .locals 1
 
     .prologue
-    .line 262
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mCertType:Lcom/android/server/wifi/hotspot2/pps/Credential$CertType;
 
     return-object v0
@@ -1308,7 +1144,6 @@
     .locals 2
 
     .prologue
-    .line 270
     iget-wide v0, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mCtime:J
 
     return-wide v0
@@ -1318,7 +1153,6 @@
     .locals 1
 
     .prologue
-    .line 238
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mEAPMethod:Lcom/android/server/wifi/anqp/eap/EAPMethod;
 
     return-object v0
@@ -1328,7 +1162,6 @@
     .locals 2
 
     .prologue
-    .line 274
     iget-wide v0, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mExpTime:J
 
     return-wide v0
@@ -1338,7 +1171,6 @@
     .locals 1
 
     .prologue
-    .line 266
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mFingerPrint:[B
 
     return-object v0
@@ -1348,7 +1180,6 @@
     .locals 1
 
     .prologue
-    .line 246
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mImsi:Lcom/android/server/wifi/IMSIParameter;
 
     return-object v0
@@ -1358,7 +1189,6 @@
     .locals 1
 
     .prologue
-    .line 254
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mPassword:Ljava/lang/String;
 
     return-object v0
@@ -1368,7 +1198,6 @@
     .locals 1
 
     .prologue
-    .line 242
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mRealm:Ljava/lang/String;
 
     return-object v0
@@ -1378,7 +1207,6 @@
     .locals 1
 
     .prologue
-    .line 250
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mUserName:Ljava/lang/String;
 
     return-object v0
@@ -1388,7 +1216,6 @@
     .locals 1
 
     .prologue
-    .line 258
     iget-boolean v0, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mDisregardPassword:Z
 
     return v0
@@ -1404,7 +1231,6 @@
 
     const/4 v3, 0x0
 
-    .line 322
     iget-wide v4, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mCtime:J
 
     iget-wide v6, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mCtime:J
@@ -1415,7 +1241,6 @@
 
     long-to-int v0, v4
 
-    .line 323
     .local v0, "result":I
     mul-int/lit8 v1, v0, 0x1f
 
@@ -1431,7 +1256,6 @@
 
     add-int v0, v1, v4
 
-    .line 324
     mul-int/lit8 v1, v0, 0x1f
 
     iget-object v4, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mRealm:Ljava/lang/String;
@@ -1442,7 +1266,6 @@
 
     add-int v0, v1, v4
 
-    .line 325
     mul-int/lit8 v4, v0, 0x1f
 
     iget-boolean v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mCheckAAACert:Z
@@ -1454,7 +1277,6 @@
     :goto_0
     add-int v0, v4, v1
 
-    .line 326
     mul-int/lit8 v4, v0, 0x1f
 
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mUserName:Ljava/lang/String;
@@ -1470,7 +1292,6 @@
     :goto_1
     add-int v0, v4, v1
 
-    .line 327
     mul-int/lit8 v4, v0, 0x1f
 
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mPassword:Ljava/lang/String;
@@ -1486,7 +1307,6 @@
     :goto_2
     add-int v0, v4, v1
 
-    .line 328
     mul-int/lit8 v4, v0, 0x1f
 
     iget-boolean v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mMachineManaged:Z
@@ -1498,7 +1318,6 @@
     :goto_3
     add-int v0, v4, v1
 
-    .line 329
     mul-int/lit8 v4, v0, 0x1f
 
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mSTokenApp:Ljava/lang/String;
@@ -1514,7 +1333,6 @@
     :goto_4
     add-int v0, v4, v1
 
-    .line 330
     mul-int/lit8 v1, v0, 0x1f
 
     iget-boolean v4, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mShare:Z
@@ -1524,7 +1342,6 @@
     :goto_5
     add-int v0, v1, v2
 
-    .line 331
     mul-int/lit8 v1, v0, 0x1f
 
     iget-object v2, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mEAPMethod:Lcom/android/server/wifi/anqp/eap/EAPMethod;
@@ -1535,7 +1352,6 @@
 
     add-int v0, v1, v2
 
-    .line 332
     mul-int/lit8 v2, v0, 0x1f
 
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mCertType:Lcom/android/server/wifi/hotspot2/pps/Credential$CertType;
@@ -1551,7 +1367,6 @@
     :goto_6
     add-int v0, v2, v1
 
-    .line 333
     mul-int/lit8 v2, v0, 0x1f
 
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mFingerPrint:[B
@@ -1567,7 +1382,6 @@
     :goto_7
     add-int v0, v2, v1
 
-    .line 334
     mul-int/lit8 v1, v0, 0x1f
 
     iget-object v2, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mImsi:Lcom/android/server/wifi/IMSIParameter;
@@ -1583,55 +1397,46 @@
     :cond_0
     add-int v0, v1, v3
 
-    .line 335
     return v0
 
     :cond_1
     move v1, v3
 
-    .line 325
     goto :goto_0
 
     :cond_2
     move v1, v3
 
-    .line 326
     goto :goto_1
 
     :cond_3
     move v1, v3
 
-    .line 327
     goto :goto_2
 
     :cond_4
     move v1, v3
 
-    .line 328
     goto :goto_3
 
     :cond_5
     move v1, v3
 
-    .line 329
     goto :goto_4
 
     :cond_6
     move v2, v3
 
-    .line 330
     goto :goto_5
 
     :cond_7
     move v1, v3
 
-    .line 332
     goto :goto_6
 
     :cond_8
     move v1, v3
 
-    .line 333
     goto :goto_7
 .end method
 
@@ -1641,61 +1446,50 @@
     .prologue
     const/16 v4, 0x27
 
-    .line 340
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "Credential{mCtime="
+    const-string v1, "Credential{mCtime="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 341
     iget-wide v2, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mCtime:J
 
     invoke-static {v2, v3}, Lcom/android/server/wifi/hotspot2/Utils;->toUTCString(J)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 340
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 342
-    const-string/jumbo v1, ", mExpTime="
+    const-string v1, ", mExpTime="
 
-    .line 340
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 342
     iget-wide v2, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mExpTime:J
 
     invoke-static {v2, v3}, Lcom/android/server/wifi/hotspot2/Utils;->toUTCString(J)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 340
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 343
-    const-string/jumbo v1, ", mRealm=\'"
+    const-string v1, ", mRealm=\'"
 
-    .line 340
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 343
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mRealm:Ljava/lang/String;
 
-    .line 340
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -1704,34 +1498,26 @@
 
     move-result-object v0
 
-    .line 344
-    const-string/jumbo v1, ", mCheckAAACert="
+    const-string v1, ", mCheckAAACert="
 
-    .line 340
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 344
     iget-boolean v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mCheckAAACert:Z
 
-    .line 340
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 345
-    const-string/jumbo v1, ", mUserName=\'"
+    const-string v1, ", mUserName=\'"
 
-    .line 340
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 345
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mUserName:Ljava/lang/String;
 
-    .line 340
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -1740,18 +1526,14 @@
 
     move-result-object v0
 
-    .line 346
-    const-string/jumbo v1, ", mPassword=\'"
+    const-string v1, ", mPassword=\'"
 
-    .line 340
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 346
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mPassword:Ljava/lang/String;
 
-    .line 340
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -1760,50 +1542,38 @@
 
     move-result-object v0
 
-    .line 347
-    const-string/jumbo v1, ", mDisregardPassword="
+    const-string v1, ", mDisregardPassword="
 
-    .line 340
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 347
     iget-boolean v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mDisregardPassword:Z
 
-    .line 340
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 348
-    const-string/jumbo v1, ", mMachineManaged="
+    const-string v1, ", mMachineManaged="
 
-    .line 340
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 348
     iget-boolean v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mMachineManaged:Z
 
-    .line 340
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 349
-    const-string/jumbo v1, ", mSTokenApp=\'"
+    const-string v1, ", mSTokenApp=\'"
 
-    .line 340
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 349
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mSTokenApp:Ljava/lang/String;
 
-    .line 340
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -1812,86 +1582,66 @@
 
     move-result-object v0
 
-    .line 350
-    const-string/jumbo v1, ", mShare="
+    const-string v1, ", mShare="
 
-    .line 340
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 350
     iget-boolean v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mShare:Z
 
-    .line 340
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 351
-    const-string/jumbo v1, ", mEAPMethod="
+    const-string v1, ", mEAPMethod="
 
-    .line 340
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 351
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mEAPMethod:Lcom/android/server/wifi/anqp/eap/EAPMethod;
 
-    .line 340
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 352
-    const-string/jumbo v1, ", mCertType="
+    const-string v1, ", mCertType="
 
-    .line 340
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 352
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mCertType:Lcom/android/server/wifi/hotspot2/pps/Credential$CertType;
 
-    .line 340
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 353
-    const-string/jumbo v1, ", mFingerPrint="
+    const-string v1, ", mFingerPrint="
 
-    .line 340
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 353
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mFingerPrint:[B
 
     invoke-static {v1}, Lcom/android/server/wifi/hotspot2/Utils;->toHexString([B)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 340
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 354
-    const-string/jumbo v1, ", mImsi=\'"
+    const-string v1, ", mImsi=\'"
 
-    .line 340
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 354
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/pps/Credential;->mImsi:Lcom/android/server/wifi/IMSIParameter;
 
-    .line 340
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -1900,10 +1650,8 @@
 
     move-result-object v0
 
-    .line 355
     const/16 v1, 0x7d
 
-    .line 340
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     move-result-object v0

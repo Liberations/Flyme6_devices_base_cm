@@ -28,12 +28,10 @@
     .locals 1
 
     .prologue
-    .line 683
-    const-string/jumbo v0, "android.type.cardinal"
+    const-string v0, "android.type.cardinal"
 
     invoke-direct {p0, v0}, Landroid/text/style/TtsSpan$SemioticClassBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 682
     return-void
 .end method
 
@@ -42,13 +40,10 @@
     .param p1, "number"    # J
 
     .prologue
-    .line 693
     invoke-direct {p0}, Landroid/text/style/TtsSpan$CardinalBuilder;-><init>()V
 
-    .line 694
     invoke-virtual {p0, p1, p2}, Landroid/text/style/TtsSpan$CardinalBuilder;->setNumber(J)Landroid/text/style/TtsSpan$CardinalBuilder;
 
-    .line 692
     return-void
 .end method
 
@@ -57,13 +52,10 @@
     .param p1, "number"    # Ljava/lang/String;
 
     .prologue
-    .line 704
     invoke-direct {p0}, Landroid/text/style/TtsSpan$CardinalBuilder;-><init>()V
 
-    .line 705
     invoke-virtual {p0, p1}, Landroid/text/style/TtsSpan$CardinalBuilder;->setNumber(Ljava/lang/String;)Landroid/text/style/TtsSpan$CardinalBuilder;
 
-    .line 703
     return-void
 .end method
 
@@ -74,7 +66,6 @@
     .param p1, "number"    # J
 
     .prologue
-    .line 715
     invoke-static {p1, p2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v0
@@ -91,8 +82,7 @@
     .param p1, "number"    # Ljava/lang/String;
 
     .prologue
-    .line 725
-    const-string/jumbo v0, "android.arg.number"
+    const-string v0, "android.arg.number"
 
     invoke-virtual {p0, v0, p1}, Landroid/text/style/TtsSpan$CardinalBuilder;->setStringArgument(Ljava/lang/String;Ljava/lang/String;)Landroid/text/style/TtsSpan$Builder;
 

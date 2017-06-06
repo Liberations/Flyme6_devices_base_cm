@@ -308,14 +308,12 @@
     .locals 3
 
     .prologue
-    .line 205
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
-    .line 207
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/4 v1, 0x0
@@ -324,11 +322,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "OK"
+    const-string v2, "OK"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 208
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/4 v1, -0x2
@@ -337,11 +334,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Unsupported purpose"
+    const-string v2, "Unsupported purpose"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 209
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/4 v1, -0x3
@@ -350,11 +346,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Incompatible purpose"
+    const-string v2, "Incompatible purpose"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 210
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/4 v1, -0x4
@@ -363,11 +358,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Unsupported algorithm"
+    const-string v2, "Unsupported algorithm"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 211
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/4 v1, -0x5
@@ -376,11 +370,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Incompatible algorithm"
+    const-string v2, "Incompatible algorithm"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 212
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/4 v1, -0x6
@@ -389,11 +382,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Unsupported key size"
+    const-string v2, "Unsupported key size"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 213
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/4 v1, -0x7
@@ -402,11 +394,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Unsupported block mode"
+    const-string v2, "Unsupported block mode"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 214
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/4 v1, -0x8
@@ -415,11 +406,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Incompatible block mode"
+    const-string v2, "Incompatible block mode"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 215
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x9
@@ -428,13 +418,10 @@
 
     move-result-object v1
 
-    .line 216
-    const-string/jumbo v2, "Unsupported MAC or authentication tag length"
+    const-string v2, "Unsupported MAC or authentication tag length"
 
-    .line 215
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 217
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0xa
@@ -443,11 +430,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Unsupported padding mode"
+    const-string v2, "Unsupported padding mode"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 218
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0xb
@@ -456,11 +442,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Incompatible padding mode"
+    const-string v2, "Incompatible padding mode"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 219
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0xc
@@ -469,11 +454,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Unsupported digest"
+    const-string v2, "Unsupported digest"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 220
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0xd
@@ -482,11 +466,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Incompatible digest"
+    const-string v2, "Incompatible digest"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 221
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0xe
@@ -495,11 +478,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Invalid expiration time"
+    const-string v2, "Invalid expiration time"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 222
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0xf
@@ -508,11 +490,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Invalid user ID"
+    const-string v2, "Invalid user ID"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 223
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x10
@@ -521,13 +502,10 @@
 
     move-result-object v1
 
-    .line 224
-    const-string/jumbo v2, "Invalid user authorization timeout"
+    const-string v2, "Invalid user authorization timeout"
 
-    .line 223
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 225
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x11
@@ -536,11 +514,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Unsupported key format"
+    const-string v2, "Unsupported key format"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 226
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x12
@@ -549,11 +526,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Incompatible key format"
+    const-string v2, "Incompatible key format"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 227
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x15
@@ -562,11 +538,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Invalid input length"
+    const-string v2, "Invalid input length"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 228
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x18
@@ -575,11 +550,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Key not yet valid"
+    const-string v2, "Key not yet valid"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 229
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x19
@@ -588,11 +562,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Key expired"
+    const-string v2, "Key expired"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 230
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x1a
@@ -601,11 +574,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Key user not authenticated"
+    const-string v2, "Key user not authenticated"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 231
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x1c
@@ -614,11 +586,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Invalid operation handle"
+    const-string v2, "Invalid operation handle"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 232
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x1e
@@ -627,11 +598,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Signature/MAC verification failed"
+    const-string v2, "Signature/MAC verification failed"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 233
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x1f
@@ -640,11 +610,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Too many operations"
+    const-string v2, "Too many operations"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 234
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x21
@@ -653,11 +622,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Invalid key blob"
+    const-string v2, "Invalid key blob"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 235
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x26
@@ -666,11 +634,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Invalid argument"
+    const-string v2, "Invalid argument"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 236
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x27
@@ -679,11 +646,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Unsupported tag"
+    const-string v2, "Unsupported tag"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 237
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x28
@@ -692,11 +658,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Invalid tag"
+    const-string v2, "Invalid tag"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 238
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x29
@@ -705,11 +670,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Memory allocation failed"
+    const-string v2, "Memory allocation failed"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 239
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x32
@@ -718,11 +682,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Unsupported EC field"
+    const-string v2, "Unsupported EC field"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 240
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x33
@@ -731,11 +694,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Required IV missing"
+    const-string v2, "Required IV missing"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 241
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x34
@@ -744,11 +706,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Invalid IV"
+    const-string v2, "Invalid IV"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 242
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x37
@@ -757,13 +718,10 @@
 
     move-result-object v1
 
-    .line 243
-    const-string/jumbo v2, "Caller-provided IV not permitted"
+    const-string v2, "Caller-provided IV not permitted"
 
-    .line 242
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 244
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x39
@@ -772,13 +730,10 @@
 
     move-result-object v1
 
-    .line 245
-    const-string/jumbo v2, "Invalid MAC or authentication tag length"
+    const-string v2, "Invalid MAC or authentication tag length"
 
-    .line 244
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 246
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x64
@@ -787,11 +742,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Not implemented"
+    const-string v2, "Not implemented"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 247
     sget-object v0, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     const/16 v1, -0x3e8
@@ -800,11 +754,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Unknown error"
+    const-string v2, "Unknown error"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 28
     return-void
 .end method
 
@@ -812,7 +765,6 @@
     .locals 0
 
     .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -823,7 +775,6 @@
     .param p0, "errorCode"    # I
 
     .prologue
-    .line 255
     sget-object v1, Landroid/security/keymaster/KeymasterDefs;->sErrorCodeToString:Ljava/util/Map;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -836,14 +787,11 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 256
     .local v0, "result":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 257
     return-object v0
 
-    .line 259
     :cond_0
     invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -857,7 +805,6 @@
     .param p0, "tag"    # I
 
     .prologue
-    .line 251
     const/high16 v0, -0x10000000
 
     and-int/2addr v0, p0

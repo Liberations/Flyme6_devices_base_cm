@@ -30,7 +30,6 @@
     .param p2, "val$screenOn"    # Z
 
     .prologue
-    .line 309
     iput-object p1, p0, Lcyanogenmod/externalviews/KeyguardExternalView$6;->this$0:Lcyanogenmod/externalviews/KeyguardExternalView;
 
     iput-boolean p2, p0, Lcyanogenmod/externalviews/KeyguardExternalView$6;->val$screenOn:Z
@@ -46,7 +45,6 @@
     .locals 3
 
     .prologue
-    .line 313
     :try_start_0
     iget-object v1, p0, Lcyanogenmod/externalviews/KeyguardExternalView$6;->this$0:Lcyanogenmod/externalviews/KeyguardExternalView;
 
@@ -60,11 +58,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 311
     :goto_0
     return-void
 
-    .line 314
     :catch_0
     move-exception v0
 

@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/connectivity/PacManager;
 
     .prologue
-    .line 126
     iput-object p1, p0, Lcom/android/server/connectivity/PacManager$PacRefreshIntentReceiver;->this$0:Lcom/android/server/connectivity/PacManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,19 +39,19 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 128
-    invoke-static {}, Lcom/android/server/IoThread;->getHandler()Landroid/os/Handler;
+    iget-object v0, p0, Lcom/android/server/connectivity/PacManager$PacRefreshIntentReceiver;->this$0:Lcom/android/server/connectivity/PacManager;
+
+    invoke-static {v0}, Lcom/android/server/connectivity/PacManager;->-get2(Lcom/android/server/connectivity/PacManager;)Landroid/os/Handler;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/android/server/connectivity/PacManager$PacRefreshIntentReceiver;->this$0:Lcom/android/server/connectivity/PacManager;
 
-    invoke-static {v1}, Lcom/android/server/connectivity/PacManager;->-get2(Lcom/android/server/connectivity/PacManager;)Ljava/lang/Runnable;
+    invoke-static {v1}, Lcom/android/server/connectivity/PacManager;->-get3(Lcom/android/server/connectivity/PacManager;)Ljava/lang/Runnable;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 127
     return-void
 .end method

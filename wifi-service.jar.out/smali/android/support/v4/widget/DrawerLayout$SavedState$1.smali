@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 1885
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 1888
     new-instance v0, Landroid/support/v4/widget/DrawerLayout$SavedState;
 
     invoke-direct {v0, p1}, Landroid/support/v4/widget/DrawerLayout$SavedState;-><init>(Landroid/os/Parcel;)V
@@ -58,7 +56,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 1887
     invoke-virtual {p0, p1}, Landroid/support/v4/widget/DrawerLayout$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Landroid/support/v4/widget/DrawerLayout$SavedState;
 
     move-result-object v0
@@ -71,7 +68,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 1893
     new-array v0, p1, [Landroid/support/v4/widget/DrawerLayout$SavedState;
 
     return-object v0
@@ -82,7 +78,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 1892
     invoke-virtual {p0, p1}, Landroid/support/v4/widget/DrawerLayout$SavedState$1;->newArray(I)[Landroid/support/v4/widget/DrawerLayout$SavedState;
 
     move-result-object v0

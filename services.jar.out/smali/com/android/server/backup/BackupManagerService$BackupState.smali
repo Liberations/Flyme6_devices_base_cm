@@ -44,34 +44,30 @@
 
     const/4 v2, 0x0
 
-    .line 2431
     new-instance v0, Lcom/android/server/backup/BackupManagerService$BackupState;
 
-    const-string/jumbo v1, "INITIAL"
+    const-string v1, "INITIAL"
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/backup/BackupManagerService$BackupState;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/server/backup/BackupManagerService$BackupState;->INITIAL:Lcom/android/server/backup/BackupManagerService$BackupState;
 
-    .line 2432
     new-instance v0, Lcom/android/server/backup/BackupManagerService$BackupState;
 
-    const-string/jumbo v1, "RUNNING_QUEUE"
+    const-string v1, "RUNNING_QUEUE"
 
     invoke-direct {v0, v1, v3}, Lcom/android/server/backup/BackupManagerService$BackupState;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/server/backup/BackupManagerService$BackupState;->RUNNING_QUEUE:Lcom/android/server/backup/BackupManagerService$BackupState;
 
-    .line 2433
     new-instance v0, Lcom/android/server/backup/BackupManagerService$BackupState;
 
-    const-string/jumbo v1, "FINAL"
+    const-string v1, "FINAL"
 
     invoke-direct {v0, v1, v4}, Lcom/android/server/backup/BackupManagerService$BackupState;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/server/backup/BackupManagerService$BackupState;->FINAL:Lcom/android/server/backup/BackupManagerService$BackupState;
 
-    .line 2430
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/android/server/backup/BackupManagerService$BackupState;
@@ -97,7 +93,6 @@
     .locals 0
 
     .prologue
-    .line 2430
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -108,7 +103,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 2430
     const-class v0, Lcom/android/server/backup/BackupManagerService$BackupState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -124,7 +118,6 @@
     .locals 1
 
     .prologue
-    .line 2430
     sget-object v0, Lcom/android/server/backup/BackupManagerService$BackupState;->$VALUES:[Lcom/android/server/backup/BackupManagerService$BackupState;
 
     return-object v0

@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,7 +18,6 @@
     .param p0, "textView"    # Landroid/widget/TextView;
 
     .prologue
-    .line 25
     invoke-virtual {p0}, Landroid/widget/TextView;->getMaxLines()I
 
     move-result v0
@@ -32,7 +30,6 @@
     .param p0, "textView"    # Landroid/widget/TextView;
 
     .prologue
-    .line 29
     invoke-virtual {p0}, Landroid/widget/TextView;->getMinLines()I
 
     move-result v0

@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 246
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,7 +45,6 @@
     .param p2, "sw2"    # Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
     .prologue
-    .line 249
     invoke-virtual {p1}, Lcom/android/internal/util/cm/palette/Palette$Swatch;->getPopulation()I
 
     move-result v0
@@ -68,7 +66,6 @@
     .param p2, "sw2"    # Ljava/lang/Object;
 
     .prologue
-    .line 248
     check-cast p1, Lcom/android/internal/util/cm/palette/Palette$Swatch;
 
     .end local p1    # "sw1":Ljava/lang/Object;

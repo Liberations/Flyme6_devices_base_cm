@@ -32,13 +32,10 @@
     .param p1, "info"    # Ljava/lang/Object;
 
     .prologue
-    .line 395
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 396
     iput-object p1, p0, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat$CollectionInfoCompat;->mInfo:Ljava/lang/Object;
 
-    .line 395
     return-void
 .end method
 
@@ -60,7 +57,6 @@
     .param p3, "selectionMode"    # I
 
     .prologue
-    .line 391
     new-instance v0, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat$CollectionInfoCompat;
 
     invoke-static {}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;->-get0()Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityNodeInfoImpl;
@@ -82,7 +78,6 @@
     .locals 2
 
     .prologue
-    .line 400
     invoke-static {}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;->-get0()Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityNodeInfoImpl;
 
     move-result-object v0
@@ -100,7 +95,6 @@
     .locals 2
 
     .prologue
-    .line 404
     invoke-static {}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;->-get0()Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityNodeInfoImpl;
 
     move-result-object v0
@@ -118,7 +112,6 @@
     .locals 2
 
     .prologue
-    .line 408
     invoke-static {}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;->-get0()Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityNodeInfoImpl;
 
     move-result-object v0

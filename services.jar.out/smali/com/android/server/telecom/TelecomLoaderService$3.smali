@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/telecom/TelecomLoaderService;
 
     .prologue
-    .line 249
     iput-object p1, p0, Lcom/android/server/telecom/TelecomLoaderService$3;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 252
     iget-object v2, p0, Lcom/android/server/telecom/TelecomLoaderService$3;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
     invoke-static {v2}, Lcom/android/server/telecom/TelecomLoaderService;->-get4(Lcom/android/server/telecom/TelecomLoaderService;)Ljava/lang/Object;
@@ -53,7 +51,6 @@
 
     monitor-enter v3
 
-    .line 253
     :try_start_0
     iget-object v2, p0, Lcom/android/server/telecom/TelecomLoaderService$3;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
@@ -63,7 +60,6 @@
 
     if-nez v2, :cond_1
 
-    .line 254
     iget-object v2, p0, Lcom/android/server/telecom/TelecomLoaderService$3;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
     invoke-static {v2}, Lcom/android/server/telecom/TelecomLoaderService;->-get2(Lcom/android/server/telecom/TelecomLoaderService;)Landroid/util/IntArray;
@@ -72,7 +68,6 @@
 
     if-nez v2, :cond_0
 
-    .line 255
     iget-object v2, p0, Lcom/android/server/telecom/TelecomLoaderService$3;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
     new-instance v4, Landroid/util/IntArray;
@@ -81,7 +76,6 @@
 
     invoke-static {v2, v4}, Lcom/android/server/telecom/TelecomLoaderService;->-set1(Lcom/android/server/telecom/TelecomLoaderService;Landroid/util/IntArray;)Landroid/util/IntArray;
 
-    .line 257
     :cond_0
     iget-object v2, p0, Lcom/android/server/telecom/TelecomLoaderService$3;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
@@ -95,20 +89,18 @@
 
     monitor-exit v3
 
-    .line 258
     return-object v5
 
     :cond_1
     monitor-exit v3
 
-    .line 262
     iget-object v2, p0, Lcom/android/server/telecom/TelecomLoaderService$3;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
     invoke-static {v2}, Lcom/android/server/telecom/TelecomLoaderService;->-get0(Lcom/android/server/telecom/TelecomLoaderService;)Landroid/content/Context;
 
     move-result-object v2
 
-    const-string/jumbo v3, "telecom"
+    const-string v3, "telecom"
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -116,17 +108,14 @@
 
     check-cast v1, Landroid/telecom/TelecomManager;
 
-    .line 263
     .local v1, "telecomManager":Landroid/telecom/TelecomManager;
     invoke-virtual {v1, p1}, Landroid/telecom/TelecomManager;->getSimCallManager(I)Landroid/telecom/PhoneAccountHandle;
 
     move-result-object v0
 
-    .line 264
     .local v0, "phoneAccount":Landroid/telecom/PhoneAccountHandle;
     if-eqz v0, :cond_2
 
-    .line 265
     const/4 v2, 0x1
 
     new-array v2, v2, [Ljava/lang/String;
@@ -145,7 +134,6 @@
 
     return-object v2
 
-    .line 252
     .end local v0    # "phoneAccount":Landroid/telecom/PhoneAccountHandle;
     .end local v1    # "telecomManager":Landroid/telecom/TelecomManager;
     :catchall_0
@@ -155,7 +143,6 @@
 
     throw v2
 
-    .line 267
     .restart local v0    # "phoneAccount":Landroid/telecom/PhoneAccountHandle;
     .restart local v1    # "telecomManager":Landroid/telecom/TelecomManager;
     :cond_2

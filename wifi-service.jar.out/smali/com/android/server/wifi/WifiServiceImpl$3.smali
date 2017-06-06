@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/wifi/WifiServiceImpl;
 
     .prologue
-    .line 374
     iput-object p1, p0, Lcom/android/server/wifi/WifiServiceImpl$3;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,16 +39,14 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 377
-    const-string/jumbo v1, "ss"
+    const-string v1, "ss"
 
     invoke-virtual {p2, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 378
     .local v0, "state":Ljava/lang/String;
-    const-string/jumbo v1, "ABSENT"
+    const-string v1, "ABSENT"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -57,35 +54,30 @@
 
     if-eqz v1, :cond_0
 
-    .line 379
-    const-string/jumbo v1, "WifiService"
+    const-string v1, "WifiService"
 
-    const-string/jumbo v2, "resetting networks because SIM was removed"
+    const-string v2, "resetting networks because SIM was removed"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 380
     iget-object v1, p0, Lcom/android/server/wifi/WifiServiceImpl$3;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     iget-object v1, v1, Lcom/android/server/wifi/WifiServiceImpl;->mWifiStateMachine:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-virtual {v1}, Lcom/android/server/wifi/WifiStateMachine;->resetSimAuthNetworks()V
 
-    .line 381
-    const-string/jumbo v1, "WifiService"
+    const-string v1, "WifiService"
 
-    const-string/jumbo v2, "resetting country code because SIM is removed"
+    const-string v2, "resetting country code because SIM is removed"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 382
     iget-object v1, p0, Lcom/android/server/wifi/WifiServiceImpl$3;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     iget-object v1, v1, Lcom/android/server/wifi/WifiServiceImpl;->mWifiStateMachine:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-virtual {v1}, Lcom/android/server/wifi/WifiStateMachine;->resetCountryCode()V
 
-    .line 376
     :cond_0
     return-void
 .end method

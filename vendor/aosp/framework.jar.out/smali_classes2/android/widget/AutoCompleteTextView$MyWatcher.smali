@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/widget/AutoCompleteTextView;
 
     .prologue
-    .line 747
     iput-object p1, p0, Landroid/widget/AutoCompleteTextView$MyWatcher;->this$0:Landroid/widget/AutoCompleteTextView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,12 +51,10 @@
     .param p1, "s"    # Landroid/text/Editable;
 
     .prologue
-    .line 749
     iget-object v0, p0, Landroid/widget/AutoCompleteTextView$MyWatcher;->this$0:Landroid/widget/AutoCompleteTextView;
 
     invoke-virtual {v0}, Landroid/widget/AutoCompleteTextView;->doAfterTextChanged()V
 
-    .line 748
     return-void
 .end method
 
@@ -69,12 +66,10 @@
     .param p4, "after"    # I
 
     .prologue
-    .line 752
     iget-object v0, p0, Landroid/widget/AutoCompleteTextView$MyWatcher;->this$0:Landroid/widget/AutoCompleteTextView;
 
     invoke-virtual {v0}, Landroid/widget/AutoCompleteTextView;->doBeforeTextChanged()V
 
-    .line 751
     return-void
 .end method
 
@@ -86,6 +81,5 @@
     .param p4, "count"    # I
 
     .prologue
-    .line 754
     return-void
 .end method

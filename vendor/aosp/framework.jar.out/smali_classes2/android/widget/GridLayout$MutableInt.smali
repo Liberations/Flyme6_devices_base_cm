@@ -23,13 +23,10 @@
     .locals 0
 
     .prologue
-    .line 2229
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2230
     invoke-virtual {p0}, Landroid/widget/GridLayout$MutableInt;->reset()V
 
-    .line 2229
     return-void
 .end method
 
@@ -38,13 +35,10 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 2233
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2234
     iput p1, p0, Landroid/widget/GridLayout$MutableInt;->value:I
 
-    .line 2233
     return-void
 .end method
 
@@ -54,12 +48,10 @@
     .locals 1
 
     .prologue
-    .line 2238
     const/high16 v0, -0x80000000
 
     iput v0, p0, Landroid/widget/GridLayout$MutableInt;->value:I
 
-    .line 2237
     return-void
 .end method
 
@@ -67,7 +59,6 @@
     .locals 1
 
     .prologue
-    .line 2243
     iget v0, p0, Landroid/widget/GridLayout$MutableInt;->value:I
 
     invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;

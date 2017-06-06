@@ -47,14 +47,12 @@
     .locals 1
 
     .prologue
-    .line 1405
     new-instance v0, Landroid/app/ActivityManager$TaskThumbnail$1;
 
     invoke-direct {v0}, Landroid/app/ActivityManager$TaskThumbnail$1;-><init>()V
 
     sput-object v0, Landroid/app/ActivityManager$TaskThumbnail;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 1363
     return-void
 .end method
 
@@ -62,7 +60,6 @@
     .locals 0
 
     .prologue
-    .line 1367
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -73,13 +70,10 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 1414
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1415
     invoke-virtual {p0, p1}, Landroid/app/ActivityManager$TaskThumbnail;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 1414
     return-void
 .end method
 
@@ -99,12 +93,10 @@
     .locals 1
 
     .prologue
-    .line 1371
     iget-object v0, p0, Landroid/app/ActivityManager$TaskThumbnail;->thumbnailFileDescriptor:Landroid/os/ParcelFileDescriptor;
 
     if-eqz v0, :cond_0
 
-    .line 1372
     iget-object v0, p0, Landroid/app/ActivityManager$TaskThumbnail;->thumbnailFileDescriptor:Landroid/os/ParcelFileDescriptor;
 
     invoke-virtual {v0}, Landroid/os/ParcelFileDescriptor;->describeContents()I
@@ -113,7 +105,6 @@
 
     return v0
 
-    .line 1374
     :cond_0
     const/4 v0, 0x0
 
@@ -127,14 +118,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1393
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1394
     sget-object v0, Landroid/graphics/Bitmap;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -145,7 +134,6 @@
 
     iput-object v0, p0, Landroid/app/ActivityManager$TaskThumbnail;->mainThumbnail:Landroid/graphics/Bitmap;
 
-    .line 1398
     :goto_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -153,7 +141,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1399
     sget-object v0, Landroid/os/ParcelFileDescriptor;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -164,17 +151,14 @@
 
     iput-object v0, p0, Landroid/app/ActivityManager$TaskThumbnail;->thumbnailFileDescriptor:Landroid/os/ParcelFileDescriptor;
 
-    .line 1392
     :goto_1
     return-void
 
-    .line 1396
     :cond_0
     iput-object v1, p0, Landroid/app/ActivityManager$TaskThumbnail;->mainThumbnail:Landroid/graphics/Bitmap;
 
     goto :goto_0
 
-    .line 1401
     :cond_1
     iput-object v1, p0, Landroid/app/ActivityManager$TaskThumbnail;->thumbnailFileDescriptor:Landroid/os/ParcelFileDescriptor;
 
@@ -191,44 +175,35 @@
 
     const/4 v1, 0x0
 
-    .line 1378
     iget-object v0, p0, Landroid/app/ActivityManager$TaskThumbnail;->mainThumbnail:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
-    .line 1379
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1380
     iget-object v0, p0, Landroid/app/ActivityManager$TaskThumbnail;->mainThumbnail:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0, p1, p2}, Landroid/graphics/Bitmap;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 1384
     :goto_0
     iget-object v0, p0, Landroid/app/ActivityManager$TaskThumbnail;->thumbnailFileDescriptor:Landroid/os/ParcelFileDescriptor;
 
     if-eqz v0, :cond_1
 
-    .line 1385
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1386
     iget-object v0, p0, Landroid/app/ActivityManager$TaskThumbnail;->thumbnailFileDescriptor:Landroid/os/ParcelFileDescriptor;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/ParcelFileDescriptor;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 1377
     :goto_1
     return-void
 
-    .line 1382
     :cond_0
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 1388
     :cond_1
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/CommonTimeManagementService;
 
     .prologue
-    .line 139
     iput-object p1, p0, Lcom/android/server/CommonTimeManagementService$5;->this$0:Lcom/android/server/CommonTimeManagementService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 140
     iget-object v0, p0, Lcom/android/server/CommonTimeManagementService$5;->this$0:Lcom/android/server/CommonTimeManagementService;
 
     invoke-static {v0}, Lcom/android/server/CommonTimeManagementService;->-wrap1(Lcom/android/server/CommonTimeManagementService;)V

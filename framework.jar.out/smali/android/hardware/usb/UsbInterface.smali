@@ -48,15 +48,12 @@
     .locals 1
 
     .prologue
-    .line 162
     new-instance v0, Landroid/hardware/usb/UsbInterface$1;
 
     invoke-direct {v0}, Landroid/hardware/usb/UsbInterface$1;-><init>()V
 
-    .line 161
     sput-object v0, Landroid/hardware/usb/UsbInterface;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 35
     return-void
 .end method
 
@@ -70,28 +67,20 @@
     .param p6, "protocol"    # I
 
     .prologue
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 51
     iput p1, p0, Landroid/hardware/usb/UsbInterface;->mId:I
 
-    .line 52
     iput p2, p0, Landroid/hardware/usb/UsbInterface;->mAlternateSetting:I
 
-    .line 53
     iput-object p3, p0, Landroid/hardware/usb/UsbInterface;->mName:Ljava/lang/String;
 
-    .line 54
     iput p4, p0, Landroid/hardware/usb/UsbInterface;->mClass:I
 
-    .line 55
     iput p5, p0, Landroid/hardware/usb/UsbInterface;->mSubclass:I
 
-    .line 56
     iput p6, p0, Landroid/hardware/usb/UsbInterface;->mProtocol:I
 
-    .line 50
     return-void
 .end method
 
@@ -101,7 +90,6 @@
     .locals 1
 
     .prologue
-    .line 182
     const/4 v0, 0x0
 
     return v0
@@ -111,7 +99,6 @@
     .locals 1
 
     .prologue
-    .line 80
     iget v0, p0, Landroid/hardware/usb/UsbInterface;->mAlternateSetting:I
 
     return v0
@@ -122,7 +109,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 135
     iget-object v0, p0, Landroid/hardware/usb/UsbInterface;->mEndpoints:[Landroid/os/Parcelable;
 
     aget-object v0, v0, p1
@@ -136,7 +122,6 @@
     .locals 1
 
     .prologue
-    .line 126
     iget-object v0, p0, Landroid/hardware/usb/UsbInterface;->mEndpoints:[Landroid/os/Parcelable;
 
     array-length v0, v0
@@ -148,7 +133,6 @@
     .locals 1
 
     .prologue
-    .line 67
     iget v0, p0, Landroid/hardware/usb/UsbInterface;->mId:I
 
     return v0
@@ -158,7 +142,6 @@
     .locals 1
 
     .prologue
-    .line 99
     iget v0, p0, Landroid/hardware/usb/UsbInterface;->mClass:I
 
     return v0
@@ -168,7 +151,6 @@
     .locals 1
 
     .prologue
-    .line 117
     iget v0, p0, Landroid/hardware/usb/UsbInterface;->mProtocol:I
 
     return v0
@@ -178,7 +160,6 @@
     .locals 1
 
     .prologue
-    .line 108
     iget v0, p0, Landroid/hardware/usb/UsbInterface;->mSubclass:I
 
     return v0
@@ -188,7 +169,6 @@
     .locals 1
 
     .prologue
-    .line 89
     iget-object v0, p0, Landroid/hardware/usb/UsbInterface;->mName:Ljava/lang/String;
 
     return-object v0
@@ -199,10 +179,8 @@
     .param p1, "endpoints"    # [Landroid/os/Parcelable;
 
     .prologue
-    .line 143
     iput-object p1, p0, Landroid/hardware/usb/UsbInterface;->mEndpoints:[Landroid/os/Parcelable;
 
-    .line 142
     return-void
 .end method
 
@@ -210,14 +188,13 @@
     .locals 4
 
     .prologue
-    .line 148
     new-instance v0, Ljava/lang/StringBuilder;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "UsbInterface[mId="
+    const-string v3, "UsbInterface[mId="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -229,90 +206,68 @@
 
     move-result-object v2
 
-    .line 149
-    const-string/jumbo v3, ",mAlternateSetting="
+    const-string v3, ",mAlternateSetting="
 
-    .line 148
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 149
     iget v3, p0, Landroid/hardware/usb/UsbInterface;->mAlternateSetting:I
 
-    .line 148
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 150
-    const-string/jumbo v3, ",mName="
+    const-string v3, ",mName="
 
-    .line 148
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 150
     iget-object v3, p0, Landroid/hardware/usb/UsbInterface;->mName:Ljava/lang/String;
 
-    .line 148
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 150
-    const-string/jumbo v3, ",mClass="
+    const-string v3, ",mClass="
 
-    .line 148
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 150
     iget v3, p0, Landroid/hardware/usb/UsbInterface;->mClass:I
 
-    .line 148
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 151
-    const-string/jumbo v3, ",mSubclass="
+    const-string v3, ",mSubclass="
 
-    .line 148
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 151
     iget v3, p0, Landroid/hardware/usb/UsbInterface;->mSubclass:I
 
-    .line 148
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 151
-    const-string/jumbo v3, ",mProtocol="
+    const-string v3, ",mProtocol="
 
-    .line 148
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 151
     iget v3, p0, Landroid/hardware/usb/UsbInterface;->mProtocol:I
 
-    .line 148
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 152
-    const-string/jumbo v3, ",mEndpoints=["
+    const-string v3, ",mEndpoints=["
 
-    .line 148
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -323,7 +278,6 @@
 
     invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 153
     .local v0, "builder":Ljava/lang/StringBuilder;
     const/4 v1, 0x0
 
@@ -335,12 +289,10 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 154
-    const-string/jumbo v2, "\n"
+    const-string v2, "\n"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 155
     iget-object v2, p0, Landroid/hardware/usb/UsbInterface;->mEndpoints:[Landroid/os/Parcelable;
 
     aget-object v2, v2, v1
@@ -351,18 +303,15 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 153
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 157
     :cond_0
-    const-string/jumbo v2, "]"
+    const-string v2, "]"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 158
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -376,43 +325,35 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 186
     iget v0, p0, Landroid/hardware/usb/UsbInterface;->mId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 187
     iget v0, p0, Landroid/hardware/usb/UsbInterface;->mAlternateSetting:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 188
     iget-object v0, p0, Landroid/hardware/usb/UsbInterface;->mName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 189
     iget v0, p0, Landroid/hardware/usb/UsbInterface;->mClass:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 190
     iget v0, p0, Landroid/hardware/usb/UsbInterface;->mSubclass:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 191
     iget v0, p0, Landroid/hardware/usb/UsbInterface;->mProtocol:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 192
     iget-object v0, p0, Landroid/hardware/usb/UsbInterface;->mEndpoints:[Landroid/os/Parcelable;
 
     const/4 v1, 0x0
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeParcelableArray([Landroid/os/Parcelable;I)V
 
-    .line 185
     return-void
 .end method

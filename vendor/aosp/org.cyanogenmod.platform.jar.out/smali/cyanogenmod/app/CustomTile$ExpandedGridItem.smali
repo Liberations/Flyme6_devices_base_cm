@@ -19,7 +19,6 @@
     .locals 1
 
     .prologue
-    .line 777
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcyanogenmod/app/CustomTile$ExpandedItem;-><init>(Lcyanogenmod/app/CustomTile$ExpandedItem;)V
@@ -34,10 +33,8 @@
     .param p1, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 813
     invoke-virtual {p0, p1}, Lcyanogenmod/app/CustomTile$ExpandedGridItem;->internalSetItemBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 812
     return-void
 .end method
 
@@ -46,10 +43,8 @@
     .param p1, "resourceId"    # I
 
     .prologue
-    .line 801
     invoke-virtual {p0, p1}, Lcyanogenmod/app/CustomTile$ExpandedGridItem;->internalSetItemDrawable(I)V
 
-    .line 800
     return-void
 .end method
 
@@ -58,10 +53,8 @@
     .param p1, "intent"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 793
     invoke-virtual {p0, p1}, Lcyanogenmod/app/CustomTile$ExpandedGridItem;->internalSetOnClickPendingIntent(Landroid/app/PendingIntent;)V
 
-    .line 792
     return-void
 .end method
 
@@ -70,9 +63,7 @@
     .param p1, "title"    # Ljava/lang/String;
 
     .prologue
-    .line 785
     invoke-virtual {p0, p1}, Lcyanogenmod/app/CustomTile$ExpandedGridItem;->internalSetItemTitle(Ljava/lang/String;)V
 
-    .line 784
     return-void
 .end method

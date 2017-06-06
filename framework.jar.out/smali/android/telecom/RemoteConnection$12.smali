@@ -36,7 +36,6 @@
     .param p4, "val$statusHints"    # Landroid/telecom/StatusHints;
 
     .prologue
-    .line 1243
     iput-object p1, p0, Landroid/telecom/RemoteConnection$12;->this$0:Landroid/telecom/RemoteConnection;
 
     iput-object p2, p0, Landroid/telecom/RemoteConnection$12;->val$callback:Landroid/telecom/RemoteConnection$Callback;
@@ -56,7 +55,6 @@
     .locals 3
 
     .prologue
-    .line 1246
     iget-object v0, p0, Landroid/telecom/RemoteConnection$12;->val$callback:Landroid/telecom/RemoteConnection$Callback;
 
     iget-object v1, p0, Landroid/telecom/RemoteConnection$12;->val$connection:Landroid/telecom/RemoteConnection;
@@ -65,6 +63,5 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/telecom/RemoteConnection$Callback;->onStatusHintsChanged(Landroid/telecom/RemoteConnection;Landroid/telecom/StatusHints;)V
 
-    .line 1245
     return-void
 .end method

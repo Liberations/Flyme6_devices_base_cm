@@ -72,18 +72,14 @@
     .locals 1
 
     .prologue
-    .line 73
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    .line 109
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 108
     iput-object v0, p0, Landroid/service/wallpaper/WallpaperService;->mActiveEngines:Ljava/util/ArrayList;
 
-    .line 73
     return-void
 .end method
 
@@ -96,18 +92,16 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 1279
-    const-string/jumbo v2, "State of wallpaper "
+    const-string v2, "State of wallpaper "
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/Object;)V
 
-    const-string/jumbo v2, ":"
+    const-string v2, ":"
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1280
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -120,7 +114,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 1281
     iget-object v2, p0, Landroid/service/wallpaper/WallpaperService;->mActiveEngines:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -129,29 +122,25 @@
 
     check-cast v0, Landroid/service/wallpaper/WallpaperService$Engine;
 
-    .line 1282
     .local v0, "engine":Landroid/service/wallpaper/WallpaperService$Engine;
-    const-string/jumbo v2, "  Engine "
+    const-string v2, "  Engine "
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/Object;)V
 
-    const-string/jumbo v2, ":"
+    const-string v2, ":"
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1283
-    const-string/jumbo v2, "    "
+    const-string v2, "    "
 
     invoke-virtual {v0, v2, p1, p2, p3}, Landroid/service/wallpaper/WallpaperService$Engine;->dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 1280
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1278
     .end local v0    # "engine":Landroid/service/wallpaper/WallpaperService$Engine;
     :cond_0
     return-void
@@ -162,7 +151,6 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1266
     new-instance v0, Landroid/service/wallpaper/WallpaperService$IWallpaperServiceWrapper;
 
     invoke-direct {v0, p0, p0}, Landroid/service/wallpaper/WallpaperService$IWallpaperServiceWrapper;-><init>(Landroid/service/wallpaper/WallpaperService;Landroid/service/wallpaper/WallpaperService;)V
@@ -174,10 +162,8 @@
     .locals 0
 
     .prologue
-    .line 1248
     invoke-super {p0}, Landroid/app/Service;->onCreate()V
 
-    .line 1247
     return-void
 .end method
 
@@ -188,10 +174,8 @@
     .locals 2
 
     .prologue
-    .line 1253
     invoke-super {p0}, Landroid/app/Service;->onDestroy()V
 
-    .line 1254
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -204,7 +188,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 1255
     iget-object v1, p0, Landroid/service/wallpaper/WallpaperService;->mActiveEngines:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -215,17 +198,14 @@
 
     invoke-virtual {v1}, Landroid/service/wallpaper/WallpaperService$Engine;->detach()V
 
-    .line 1254
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1257
     :cond_0
     iget-object v1, p0, Landroid/service/wallpaper/WallpaperService;->mActiveEngines:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    .line 1252
     return-void
 .end method

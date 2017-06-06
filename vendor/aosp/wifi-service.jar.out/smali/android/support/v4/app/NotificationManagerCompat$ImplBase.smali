@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 123
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,10 +36,8 @@
     .param p3, "id"    # I
 
     .prologue
-    .line 127
     invoke-virtual {p1, p3}, Landroid/app/NotificationManager;->cancel(I)V
 
-    .line 126
     return-void
 .end method
 
@@ -48,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 138
     const/4 v0, 0x1
 
     return v0
@@ -62,9 +58,7 @@
     .param p4, "notification"    # Landroid/app/Notification;
 
     .prologue
-    .line 133
     invoke-virtual {p1, p3, p4}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
 
-    .line 132
     return-void
 .end method

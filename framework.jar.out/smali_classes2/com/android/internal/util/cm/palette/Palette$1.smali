@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 710
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,7 +38,6 @@
     .param p1, "hslColor"    # [F
 
     .prologue
-    .line 723
     const/4 v0, 0x2
 
     aget v0, p1, v0
@@ -70,7 +68,6 @@
 
     const/4 v1, 0x0
 
-    .line 737
     aget v2, p1, v1
 
     const/high16 v3, 0x41200000    # 10.0f
@@ -109,7 +106,6 @@
     .param p1, "hslColor"    # [F
 
     .prologue
-    .line 730
     const/4 v0, 0x2
 
     aget v0, p1, v0
@@ -141,7 +137,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 716
     invoke-direct {p0, p2}, Lcom/android/internal/util/cm/palette/Palette$1;->isWhite([F)Z
 
     move-result v1

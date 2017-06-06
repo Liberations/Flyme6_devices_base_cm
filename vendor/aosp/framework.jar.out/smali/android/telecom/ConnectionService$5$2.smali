@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Landroid/telecom/ConnectionService$5;
 
     .prologue
-    .line 984
     iput-object p1, p0, Landroid/telecom/ConnectionService$5$2;->this$1:Landroid/telecom/ConnectionService$5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 987
     iget-object v0, p0, Landroid/telecom/ConnectionService$5$2;->this$1:Landroid/telecom/ConnectionService$5;
 
     iget-object v0, v0, Landroid/telecom/ConnectionService$5;->this$0:Landroid/telecom/ConnectionService;
@@ -50,6 +48,5 @@
 
     invoke-static {v0, v1}, Landroid/telecom/ConnectionService;->-set0(Landroid/telecom/ConnectionService;Z)Z
 
-    .line 986
     return-void
 .end method

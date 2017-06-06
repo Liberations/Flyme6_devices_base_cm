@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/widget/FastScroller;
 
     .prologue
-    .line 230
     iput-object p1, p0, Landroid/widget/FastScroller$1;->this$0:Landroid/widget/FastScroller;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,13 +40,11 @@
     .locals 2
 
     .prologue
-    .line 233
     iget-object v0, p0, Landroid/widget/FastScroller$1;->this$0:Landroid/widget/FastScroller;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Landroid/widget/FastScroller;->-wrap0(Landroid/widget/FastScroller;I)V
 
-    .line 232
     return-void
 .end method

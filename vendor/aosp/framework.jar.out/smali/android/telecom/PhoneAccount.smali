@@ -98,15 +98,12 @@
     .locals 1
 
     .prologue
-    .line 605
     new-instance v0, Landroid/telecom/PhoneAccount$1;
 
     invoke-direct {v0}, Landroid/telecom/PhoneAccount$1;-><init>()V
 
-    .line 604
     sput-object v0, Landroid/telecom/PhoneAccount;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 52
     return-void
 .end method
 
@@ -121,24 +118,20 @@
 
     const/4 v2, 0x0
 
-    .line 617
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 381
     new-instance v0, Ljava/util/BitSet;
 
     invoke-direct {v0}, Ljava/util/BitSet;-><init>()V
 
     iput-object v0, p0, Landroid/telecom/PhoneAccount;->callsStatus:Ljava/util/BitSet;
 
-    .line 618
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     if-lez v0, :cond_0
 
-    .line 619
     sget-object v0, Landroid/telecom/PhoneAccountHandle;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -149,7 +142,6 @@
 
     iput-object v0, p0, Landroid/telecom/PhoneAccount;->mAccountHandle:Landroid/telecom/PhoneAccountHandle;
 
-    .line 623
     :goto_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -157,7 +149,6 @@
 
     if-lez v0, :cond_1
 
-    .line 624
     sget-object v0, Landroid/net/Uri;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -168,7 +159,6 @@
 
     iput-object v0, p0, Landroid/telecom/PhoneAccount;->mAddress:Landroid/net/Uri;
 
-    .line 628
     :goto_1
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -176,7 +166,6 @@
 
     if-lez v0, :cond_2
 
-    .line 629
     sget-object v0, Landroid/net/Uri;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -187,7 +176,6 @@
 
     iput-object v0, p0, Landroid/telecom/PhoneAccount;->mSubscriptionAddress:Landroid/net/Uri;
 
-    .line 633
     :goto_2
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -195,28 +183,24 @@
 
     iput v0, p0, Landroid/telecom/PhoneAccount;->mCapabilities:I
 
-    .line 634
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/telecom/PhoneAccount;->mHighlightColor:I
 
-    .line 635
     invoke-virtual {p1}, Landroid/os/Parcel;->readCharSequence()Ljava/lang/CharSequence;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/telecom/PhoneAccount;->mLabel:Ljava/lang/CharSequence;
 
-    .line 636
     invoke-virtual {p1}, Landroid/os/Parcel;->readCharSequence()Ljava/lang/CharSequence;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/telecom/PhoneAccount;->mShortDescription:Ljava/lang/CharSequence;
 
-    .line 637
     invoke-virtual {p1}, Landroid/os/Parcel;->createStringArrayList()Ljava/util/ArrayList;
 
     move-result-object v0
@@ -227,14 +211,12 @@
 
     iput-object v0, p0, Landroid/telecom/PhoneAccount;->mSupportedUriSchemes:Ljava/util/List;
 
-    .line 638
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     if-lez v0, :cond_3
 
-    .line 639
     sget-object v0, Landroid/graphics/drawable/Icon;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -245,7 +227,6 @@
 
     iput-object v0, p0, Landroid/telecom/PhoneAccount;->mIcon:Landroid/graphics/drawable/Icon;
 
-    .line 643
     :goto_3
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
@@ -258,28 +239,23 @@
     :goto_4
     iput-boolean v0, p0, Landroid/telecom/PhoneAccount;->mIsEnabled:Z
 
-    .line 617
     return-void
 
-    .line 621
     :cond_0
     iput-object v3, p0, Landroid/telecom/PhoneAccount;->mAccountHandle:Landroid/telecom/PhoneAccountHandle;
 
     goto :goto_0
 
-    .line 626
     :cond_1
     iput-object v3, p0, Landroid/telecom/PhoneAccount;->mAddress:Landroid/net/Uri;
 
     goto :goto_1
 
-    .line 631
     :cond_2
     iput-object v3, p0, Landroid/telecom/PhoneAccount;->mSubscriptionAddress:Landroid/net/Uri;
 
     goto :goto_2
 
-    .line 641
     :cond_3
     iput-object v3, p0, Landroid/telecom/PhoneAccount;->mIcon:Landroid/graphics/drawable/Icon;
 
@@ -288,7 +264,6 @@
     :cond_4
     move v0, v2
 
-    .line 643
     goto :goto_4
 .end method
 
@@ -332,52 +307,39 @@
     .end annotation
 
     .prologue
-    .line 348
     .local p9, "supportedUriSchemes":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 381
     new-instance v0, Ljava/util/BitSet;
 
     invoke-direct {v0}, Ljava/util/BitSet;-><init>()V
 
     iput-object v0, p0, Landroid/telecom/PhoneAccount;->callsStatus:Ljava/util/BitSet;
 
-    .line 359
     iput-object p1, p0, Landroid/telecom/PhoneAccount;->mAccountHandle:Landroid/telecom/PhoneAccountHandle;
 
-    .line 360
     iput-object p2, p0, Landroid/telecom/PhoneAccount;->mAddress:Landroid/net/Uri;
 
-    .line 361
     iput-object p3, p0, Landroid/telecom/PhoneAccount;->mSubscriptionAddress:Landroid/net/Uri;
 
-    .line 362
     iput p4, p0, Landroid/telecom/PhoneAccount;->mCapabilities:I
 
-    .line 363
     iput-object p5, p0, Landroid/telecom/PhoneAccount;->mIcon:Landroid/graphics/drawable/Icon;
 
-    .line 364
     iput p6, p0, Landroid/telecom/PhoneAccount;->mHighlightColor:I
 
-    .line 365
     iput-object p7, p0, Landroid/telecom/PhoneAccount;->mLabel:Ljava/lang/CharSequence;
 
-    .line 366
     iput-object p8, p0, Landroid/telecom/PhoneAccount;->mShortDescription:Ljava/lang/CharSequence;
 
-    .line 367
     invoke-static {p9}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/telecom/PhoneAccount;->mSupportedUriSchemes:Ljava/util/List;
 
-    .line 368
     iput-boolean p10, p0, Landroid/telecom/PhoneAccount;->mIsEnabled:Z
 
-    .line 358
     return-void
 .end method
 
@@ -406,7 +368,6 @@
     .param p1, "label"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 374
     new-instance v0, Landroid/telecom/PhoneAccount$Builder;
 
     invoke-direct {v0, p0, p1}, Landroid/telecom/PhoneAccount$Builder;-><init>(Landroid/telecom/PhoneAccountHandle;Ljava/lang/CharSequence;)V
@@ -420,7 +381,6 @@
     .locals 1
 
     .prologue
-    .line 566
     const/4 v0, 0x0
 
     return v0
@@ -430,7 +390,6 @@
     .locals 1
 
     .prologue
-    .line 427
     iget-object v0, p0, Landroid/telecom/PhoneAccount;->mAccountHandle:Landroid/telecom/PhoneAccountHandle;
 
     return-object v0
@@ -440,7 +399,6 @@
     .locals 1
 
     .prologue
-    .line 439
     iget-object v0, p0, Landroid/telecom/PhoneAccount;->mAddress:Landroid/net/Uri;
 
     return-object v0
@@ -450,7 +408,6 @@
     .locals 1
 
     .prologue
-    .line 462
     iget v0, p0, Landroid/telecom/PhoneAccount;->mCapabilities:I
 
     return v0
@@ -460,7 +417,6 @@
     .locals 1
 
     .prologue
-    .line 549
     iget v0, p0, Landroid/telecom/PhoneAccount;->mHighlightColor:I
 
     return v0
@@ -470,7 +426,6 @@
     .locals 1
 
     .prologue
-    .line 509
     iget-object v0, p0, Landroid/telecom/PhoneAccount;->mIcon:Landroid/graphics/drawable/Icon;
 
     return-object v0
@@ -480,7 +435,6 @@
     .locals 1
 
     .prologue
-    .line 482
     iget-object v0, p0, Landroid/telecom/PhoneAccount;->mLabel:Ljava/lang/CharSequence;
 
     return-object v0
@@ -490,7 +444,6 @@
     .locals 1
 
     .prologue
-    .line 491
     iget-object v0, p0, Landroid/telecom/PhoneAccount;->mShortDescription:Ljava/lang/CharSequence;
 
     return-object v0
@@ -500,7 +453,6 @@
     .locals 1
 
     .prologue
-    .line 453
     iget-object v0, p0, Landroid/telecom/PhoneAccount;->mSubscriptionAddress:Landroid/net/Uri;
 
     return-object v0
@@ -519,7 +471,6 @@
     .end annotation
 
     .prologue
-    .line 500
     iget-object v0, p0, Landroid/telecom/PhoneAccount;->mSupportedUriSchemes:Ljava/util/List;
 
     return-object v0
@@ -530,7 +481,6 @@
     .param p1, "capability"    # I
 
     .prologue
-    .line 473
     iget v0, p0, Landroid/telecom/PhoneAccount;->mCapabilities:I
 
     and-int/2addr v0, p1
@@ -552,7 +502,6 @@
     .locals 1
 
     .prologue
-    .line 519
     iget-boolean v0, p0, Landroid/telecom/PhoneAccount;->mIsEnabled:Z
 
     return v0
@@ -563,7 +512,6 @@
     .param p1, "bit"    # I
 
     .prologue
-    .line 411
     iget-object v0, p0, Landroid/telecom/PhoneAccount;->callsStatus:Ljava/util/BitSet;
 
     invoke-virtual {v0, p1}, Ljava/util/BitSet;->get(I)Z
@@ -578,12 +526,10 @@
     .param p1, "bit"    # I
 
     .prologue
-    .line 397
     iget-object v0, p0, Landroid/telecom/PhoneAccount;->callsStatus:Ljava/util/BitSet;
 
     invoke-virtual {v0, p1}, Ljava/util/BitSet;->set(I)V
 
-    .line 396
     return-void
 .end method
 
@@ -592,10 +538,8 @@
     .param p1, "isEnabled"    # Z
 
     .prologue
-    .line 557
     iput-boolean p1, p0, Landroid/telecom/PhoneAccount;->mIsEnabled:Z
 
-    .line 556
     return-void
 .end method
 
@@ -606,18 +550,15 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 531
     iget-object v2, p0, Landroid/telecom/PhoneAccount;->mSupportedUriSchemes:Ljava/util/List;
 
     if-eqz v2, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 532
     :cond_0
     return v3
 
-    .line 535
     :cond_1
     iget-object v2, p0, Landroid/telecom/PhoneAccount;->mSupportedUriSchemes:Ljava/util/List;
 
@@ -639,7 +580,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 536
     .local v0, "scheme":Ljava/lang/String;
     if-eqz v0, :cond_2
 
@@ -649,12 +589,10 @@
 
     if-eqz v2, :cond_2
 
-    .line 537
     const/4 v2, 0x1
 
     return v2
 
-    .line 540
     .end local v0    # "scheme":Ljava/lang/String;
     :cond_3
     return v3
@@ -664,7 +602,6 @@
     .locals 1
 
     .prologue
-    .line 419
     new-instance v0, Landroid/telecom/PhoneAccount$Builder;
 
     invoke-direct {v0, p0}, Landroid/telecom/PhoneAccount$Builder;-><init>(Landroid/telecom/PhoneAccount;)V
@@ -676,71 +613,57 @@
     .locals 5
 
     .prologue
-    .line 648
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "[["
+    const-string v4, "[["
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v4
 
-    .line 649
     iget-boolean v3, p0, Landroid/telecom/PhoneAccount;->mIsEnabled:Z
 
     if-eqz v3, :cond_0
 
     const/16 v3, 0x58
 
-    .line 648
     :goto_0
     invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 650
-    const-string/jumbo v4, "] PhoneAccount: "
+    const-string v4, "] PhoneAccount: "
 
-    .line 648
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 651
     iget-object v4, p0, Landroid/telecom/PhoneAccount;->mAccountHandle:Landroid/telecom/PhoneAccountHandle;
 
-    .line 648
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 652
-    const-string/jumbo v4, " Capabilities: "
+    const-string v4, " Capabilities: "
 
-    .line 648
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 653
     iget v4, p0, Landroid/telecom/PhoneAccount;->mCapabilities:I
 
-    .line 648
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 654
-    const-string/jumbo v4, " Schemes: "
+    const-string v4, " Schemes: "
 
-    .line 648
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 655
     .local v0, "sb":Ljava/lang/StringBuilder;
     iget-object v3, p0, Landroid/telecom/PhoneAccount;->mSupportedUriSchemes:Ljava/util/List;
 
@@ -762,21 +685,17 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 656
     .local v1, "scheme":Ljava/lang/String;
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 657
-    const-string/jumbo v4, " "
+    const-string v4, " "
 
-    .line 656
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 649
     .end local v0    # "sb":Ljava/lang/StringBuilder;
     .end local v1    # "scheme":Ljava/lang/String;
     .end local v2    # "scheme$iterator":Ljava/util/Iterator;
@@ -785,15 +704,13 @@
 
     goto :goto_0
 
-    .line 659
     .restart local v0    # "sb":Ljava/lang/StringBuilder;
     .restart local v2    # "scheme$iterator":Ljava/util/Iterator;
     :cond_1
-    const-string/jumbo v3, "]"
+    const-string v3, "]"
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 660
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -806,14 +723,12 @@
     .param p1, "bit"    # I
 
     .prologue
-    .line 404
     iget-object v0, p0, Landroid/telecom/PhoneAccount;->callsStatus:Ljava/util/BitSet;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, p1, v1}, Ljava/util/BitSet;->set(IZ)V
 
-    .line 403
     return-void
 .end method
 
@@ -827,67 +742,53 @@
 
     const/4 v1, 0x0
 
-    .line 571
     iget-object v2, p0, Landroid/telecom/PhoneAccount;->mAccountHandle:Landroid/telecom/PhoneAccountHandle;
 
     if-nez v2, :cond_0
 
-    .line 572
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 577
     :goto_0
     iget-object v2, p0, Landroid/telecom/PhoneAccount;->mAddress:Landroid/net/Uri;
 
     if-nez v2, :cond_1
 
-    .line 578
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 583
     :goto_1
     iget-object v2, p0, Landroid/telecom/PhoneAccount;->mSubscriptionAddress:Landroid/net/Uri;
 
     if-nez v2, :cond_2
 
-    .line 584
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 589
     :goto_2
     iget v2, p0, Landroid/telecom/PhoneAccount;->mCapabilities:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 590
     iget v2, p0, Landroid/telecom/PhoneAccount;->mHighlightColor:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 591
     iget-object v2, p0, Landroid/telecom/PhoneAccount;->mLabel:Ljava/lang/CharSequence;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeCharSequence(Ljava/lang/CharSequence;)V
 
-    .line 592
     iget-object v2, p0, Landroid/telecom/PhoneAccount;->mShortDescription:Ljava/lang/CharSequence;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeCharSequence(Ljava/lang/CharSequence;)V
 
-    .line 593
     iget-object v2, p0, Landroid/telecom/PhoneAccount;->mSupportedUriSchemes:Ljava/util/List;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
 
-    .line 595
     iget-object v2, p0, Landroid/telecom/PhoneAccount;->mIcon:Landroid/graphics/drawable/Icon;
 
     if-nez v2, :cond_3
 
-    .line 596
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 601
     :goto_3
     iget-boolean v2, p0, Landroid/telecom/PhoneAccount;->mIsEnabled:Z
 
@@ -898,47 +799,38 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 570
     return-void
 
-    .line 574
     :cond_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 575
     iget-object v2, p0, Landroid/telecom/PhoneAccount;->mAccountHandle:Landroid/telecom/PhoneAccountHandle;
 
     invoke-virtual {v2, p1, p2}, Landroid/telecom/PhoneAccountHandle;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
-    .line 580
     :cond_1
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 581
     iget-object v2, p0, Landroid/telecom/PhoneAccount;->mAddress:Landroid/net/Uri;
 
     invoke-virtual {v2, p1, p2}, Landroid/net/Uri;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_1
 
-    .line 586
     :cond_2
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 587
     iget-object v2, p0, Landroid/telecom/PhoneAccount;->mSubscriptionAddress:Landroid/net/Uri;
 
     invoke-virtual {v2, p1, p2}, Landroid/net/Uri;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_2
 
-    .line 598
     :cond_3
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 599
     iget-object v2, p0, Landroid/telecom/PhoneAccount;->mIcon:Landroid/graphics/drawable/Icon;
 
     invoke-virtual {v2, p1, p2}, Landroid/graphics/drawable/Icon;->writeToParcel(Landroid/os/Parcel;I)V
@@ -948,6 +840,5 @@
     :cond_4
     move v0, v1
 
-    .line 601
     goto :goto_4
 .end method

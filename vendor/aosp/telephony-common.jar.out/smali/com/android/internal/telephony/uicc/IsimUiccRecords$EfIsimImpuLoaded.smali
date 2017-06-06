@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/internal/telephony/uicc/IsimUiccRecords;
 
     .prologue
-    .line 197
     iput-object p1, p0, Lcom/android/internal/telephony/uicc/IsimUiccRecords$EfIsimImpuLoaded;->this$0:Lcom/android/internal/telephony/uicc/IsimUiccRecords;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,8 +50,7 @@
     .locals 1
 
     .prologue
-    .line 199
-    const-string/jumbo v0, "EF_ISIM_IMPU"
+    const-string v0, "EF_ISIM_IMPU"
 
     return-object v0
 .end method
@@ -62,12 +60,10 @@
     .param p1, "ar"    # Landroid/os/AsyncResult;
 
     .prologue
-    .line 202
     iget-object v5, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v5, Ljava/util/ArrayList;
 
-    .line 203
     .local v5, "impuList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<[B>;"
     iget-object v6, p0, Lcom/android/internal/telephony/uicc/IsimUiccRecords$EfIsimImpuLoaded;->this$0:Lcom/android/internal/telephony/uicc/IsimUiccRecords;
 
@@ -75,7 +71,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "EF_IMPU record count: "
+    const-string v8, "EF_IMPU record count: "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -95,7 +91,6 @@
 
     invoke-virtual {v6, v7}, Lcom/android/internal/telephony/uicc/IsimUiccRecords;->log(Ljava/lang/String;)V
 
-    .line 204
     iget-object v6, p0, Lcom/android/internal/telephony/uicc/IsimUiccRecords$EfIsimImpuLoaded;->this$0:Lcom/android/internal/telephony/uicc/IsimUiccRecords;
 
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
@@ -106,10 +101,8 @@
 
     invoke-static {v6, v7}, Lcom/android/internal/telephony/uicc/IsimUiccRecords;->-set2(Lcom/android/internal/telephony/uicc/IsimUiccRecords;[Ljava/lang/String;)[Ljava/lang/String;
 
-    .line 205
     const/4 v0, 0x0
 
-    .line 206
     .local v0, "i":I
     invoke-interface {v5}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -129,13 +122,11 @@
 
     check-cast v2, [B
 
-    .line 207
     .local v2, "identity":[B
     invoke-static {v2}, Lcom/android/internal/telephony/uicc/IsimUiccRecords;->-wrap0([B)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 209
     .local v4, "impu":Ljava/lang/String;
     iget-object v6, p0, Lcom/android/internal/telephony/uicc/IsimUiccRecords$EfIsimImpuLoaded;->this$0:Lcom/android/internal/telephony/uicc/IsimUiccRecords;
 
@@ -155,7 +146,6 @@
     .restart local v0    # "i":I
     goto :goto_0
 
-    .line 201
     .end local v2    # "identity":[B
     .end local v4    # "impu":Ljava/lang/String;
     :cond_0

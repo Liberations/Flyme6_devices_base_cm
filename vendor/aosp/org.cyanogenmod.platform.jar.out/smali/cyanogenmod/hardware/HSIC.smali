@@ -44,15 +44,12 @@
     .locals 1
 
     .prologue
-    .line 116
     new-instance v0, Lcyanogenmod/hardware/HSIC$1;
 
     invoke-direct {v0}, Lcyanogenmod/hardware/HSIC$1;-><init>()V
 
-    .line 115
     sput-object v0, Lcyanogenmod/hardware/HSIC;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 25
     return-void
 .end method
 
@@ -65,25 +62,18 @@
     .param p5, "saturationThreshold"    # F
 
     .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
     iput p1, p0, Lcyanogenmod/hardware/HSIC;->mHue:F
 
-    .line 36
     iput p2, p0, Lcyanogenmod/hardware/HSIC;->mSaturation:F
 
-    .line 37
     iput p3, p0, Lcyanogenmod/hardware/HSIC;->mIntensity:F
 
-    .line 38
     iput p4, p0, Lcyanogenmod/hardware/HSIC;->mContrast:F
 
-    .line 39
     iput p5, p0, Lcyanogenmod/hardware/HSIC;->mSaturationThreshold:F
 
-    .line 34
     return-void
 .end method
 
@@ -102,14 +92,12 @@
 
     const/4 v2, 0x0
 
-    .line 87
     array-length v0, p0
 
     const/4 v1, 0x5
 
     if-ne v0, v1, :cond_0
 
-    .line 88
     new-instance v0, Lcyanogenmod/hardware/HSIC;
 
     aget v1, p0, v2
@@ -126,13 +114,11 @@
 
     return-object v0
 
-    .line 89
     :cond_0
     array-length v0, p0
 
     if-ne v0, v6, :cond_1
 
-    .line 90
     new-instance v0, Lcyanogenmod/hardware/HSIC;
 
     aget v1, p0, v2
@@ -149,7 +135,6 @@
 
     return-object v0
 
-    .line 92
     :cond_1
     const/4 v0, 0x0
 
@@ -170,14 +155,12 @@
 
     const/4 v7, 0x4
 
-    .line 68
-    const-string/jumbo v0, "\\|"
+    const-string v0, "\\|"
 
     invoke-static {p0, v0}, Landroid/text/TextUtils;->split(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v6
 
-    .line 69
     .local v6, "unflat":[Ljava/lang/String;
     array-length v0, v6
 
@@ -187,14 +170,13 @@
 
     if-eq v0, v8, :cond_0
 
-    .line 70
     new-instance v0, Ljava/lang/NumberFormatException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Failed to unflatten HSIC values: "
+    const-string v2, "Failed to unflatten HSIC values: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -212,7 +194,6 @@
 
     throw v0
 
-    .line 72
     :cond_0
     new-instance v0, Lcyanogenmod/hardware/HSIC;
 
@@ -232,7 +213,6 @@
 
     move-result v2
 
-    .line 73
     const/4 v3, 0x2
 
     aget-object v3, v6, v3
@@ -249,7 +229,6 @@
 
     move-result v4
 
-    .line 74
     array-length v5, v6
 
     if-ne v5, v8, :cond_1
@@ -260,13 +239,11 @@
 
     move-result v5
 
-    .line 72
     :goto_0
     invoke-direct/range {v0 .. v5}, Lcyanogenmod/hardware/HSIC;-><init>(FFFFF)V
 
     return-object v0
 
-    .line 74
     :cond_1
     const/4 v5, 0x0
 
@@ -279,7 +256,6 @@
     .locals 1
 
     .prologue
-    .line 104
     const/4 v0, 0x0
 
     return v0
@@ -289,10 +265,9 @@
     .locals 5
 
     .prologue
-    .line 63
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    const-string/jumbo v1, "%f|%f|%f|%f|%f"
+    const-string v1, "%f|%f|%f|%f|%f"
 
     const/4 v2, 0x5
 
@@ -318,7 +293,6 @@
 
     aput-object v3, v2, v4
 
-    .line 64
     iget v3, p0, Lcyanogenmod/hardware/HSIC;->mIntensity:F
 
     invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -349,7 +323,6 @@
 
     aput-object v3, v2, v4
 
-    .line 63
     invoke-static {v0, v1, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -361,7 +334,6 @@
     .locals 1
 
     .prologue
-    .line 55
     iget v0, p0, Lcyanogenmod/hardware/HSIC;->mContrast:F
 
     return v0
@@ -371,7 +343,6 @@
     .locals 1
 
     .prologue
-    .line 43
     iget v0, p0, Lcyanogenmod/hardware/HSIC;->mHue:F
 
     return v0
@@ -381,7 +352,6 @@
     .locals 1
 
     .prologue
-    .line 51
     iget v0, p0, Lcyanogenmod/hardware/HSIC;->mIntensity:F
 
     return v0
@@ -391,7 +361,6 @@
     .locals 1
 
     .prologue
-    .line 47
     iget v0, p0, Lcyanogenmod/hardware/HSIC;->mSaturation:F
 
     return v0
@@ -401,7 +370,6 @@
     .locals 1
 
     .prologue
-    .line 59
     iget v0, p0, Lcyanogenmod/hardware/HSIC;->mSaturationThreshold:F
 
     return v0
@@ -411,7 +379,6 @@
     .locals 3
 
     .prologue
-    .line 83
     const/4 v0, 0x5
 
     new-array v0, v0, [F
@@ -453,7 +420,6 @@
     .locals 4
 
     .prologue
-    .line 78
     invoke-virtual {p0}, Lcyanogenmod/hardware/HSIC;->toFloatArray()[F
 
     move-result-object v1
@@ -462,7 +428,6 @@
 
     move-result v0
 
-    .line 79
     .local v0, "c":I
     const/4 v1, 0x3
 
@@ -499,16 +464,14 @@
     .locals 5
 
     .prologue
-    .line 97
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    const-string/jumbo v1, "HSIC={ hue=%f saturation=%f intensity=%f contrast=%f saturationThreshold=%f }"
+    const-string v1, "HSIC={ hue=%f saturation=%f intensity=%f contrast=%f saturationThreshold=%f }"
 
     const/4 v2, 0x5
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    .line 99
     iget v3, p0, Lcyanogenmod/hardware/HSIC;->mHue:F
 
     invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -559,7 +522,6 @@
 
     aput-object v3, v2, v4
 
-    .line 97
     invoke-static {v0, v1, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -573,13 +535,11 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 109
     invoke-virtual {p0}, Lcyanogenmod/hardware/HSIC;->toFloatArray()[F
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloatArray([F)V
 
-    .line 108
     return-void
 .end method

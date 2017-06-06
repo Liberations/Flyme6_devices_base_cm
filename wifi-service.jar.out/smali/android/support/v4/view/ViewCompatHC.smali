@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,7 +19,6 @@
     .param p1, "newState"    # I
 
     .prologue
-    .line 161
     invoke-static {p0, p1}, Landroid/view/View;->combineMeasuredStates(II)I
 
     move-result v0
@@ -33,7 +31,6 @@
     .param p0, "view"    # Landroid/view/View;
 
     .prologue
-    .line 29
     invoke-virtual {p0}, Landroid/view/View;->getAlpha()F
 
     move-result v0
@@ -45,7 +42,6 @@
     .locals 2
 
     .prologue
-    .line 25
     invoke-static {}, Landroid/animation/ValueAnimator;->getFrameDelay()J
 
     move-result-wide v0
@@ -58,7 +54,6 @@
     .param p0, "view"    # Landroid/view/View;
 
     .prologue
-    .line 37
     invoke-virtual {p0}, Landroid/view/View;->getLayerType()I
 
     move-result v0
@@ -71,7 +66,6 @@
     .param p0, "view"    # Landroid/view/View;
 
     .prologue
-    .line 49
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeightAndState()I
 
     move-result v0
@@ -84,7 +78,6 @@
     .param p0, "view"    # Landroid/view/View;
 
     .prologue
-    .line 53
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredState()I
 
     move-result v0
@@ -97,7 +90,6 @@
     .param p0, "view"    # Landroid/view/View;
 
     .prologue
-    .line 45
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidthAndState()I
 
     move-result v0
@@ -110,7 +102,6 @@
     .param p0, "view"    # Landroid/view/View;
 
     .prologue
-    .line 141
     invoke-virtual {p0}, Landroid/view/View;->getPivotX()F
 
     move-result v0
@@ -123,7 +114,6 @@
     .param p0, "view"    # Landroid/view/View;
 
     .prologue
-    .line 145
     invoke-virtual {p0}, Landroid/view/View;->getPivotY()F
 
     move-result v0
@@ -136,7 +126,6 @@
     .param p0, "view"    # Landroid/view/View;
 
     .prologue
-    .line 73
     invoke-virtual {p0}, Landroid/view/View;->getRotation()F
 
     move-result v0
@@ -149,7 +138,6 @@
     .param p0, "view"    # Landroid/view/View;
 
     .prologue
-    .line 77
     invoke-virtual {p0}, Landroid/view/View;->getRotationX()F
 
     move-result v0
@@ -162,7 +150,6 @@
     .param p0, "view"    # Landroid/view/View;
 
     .prologue
-    .line 81
     invoke-virtual {p0}, Landroid/view/View;->getRotationY()F
 
     move-result v0
@@ -175,7 +162,6 @@
     .param p0, "view"    # Landroid/view/View;
 
     .prologue
-    .line 85
     invoke-virtual {p0}, Landroid/view/View;->getScaleX()F
 
     move-result v0
@@ -188,7 +174,6 @@
     .param p0, "view"    # Landroid/view/View;
 
     .prologue
-    .line 89
     invoke-virtual {p0}, Landroid/view/View;->getScaleY()F
 
     move-result v0
@@ -201,7 +186,6 @@
     .param p0, "view"    # Landroid/view/View;
 
     .prologue
-    .line 57
     invoke-virtual {p0}, Landroid/view/View;->getTranslationX()F
 
     move-result v0
@@ -214,7 +198,6 @@
     .param p0, "view"    # Landroid/view/View;
 
     .prologue
-    .line 61
     invoke-virtual {p0}, Landroid/view/View;->getTranslationY()F
 
     move-result v0
@@ -227,7 +210,6 @@
     .param p0, "view"    # Landroid/view/View;
 
     .prologue
-    .line 65
     invoke-virtual {p0}, Landroid/view/View;->getX()F
 
     move-result v0
@@ -240,7 +222,6 @@
     .param p0, "view"    # Landroid/view/View;
 
     .prologue
-    .line 69
     invoke-virtual {p0}, Landroid/view/View;->getY()F
 
     move-result v0
@@ -253,10 +234,8 @@
     .param p0, "view"    # Landroid/view/View;
 
     .prologue
-    .line 149
     invoke-virtual {p0}, Landroid/view/View;->jumpDrawablesToCurrentState()V
 
-    .line 148
     return-void
 .end method
 
@@ -267,7 +246,6 @@
     .param p2, "childMeasuredState"    # I
 
     .prologue
-    .line 41
     invoke-static {p0, p1, p2}, Landroid/view/View;->resolveSizeAndState(III)I
 
     move-result v0
@@ -281,10 +259,8 @@
     .param p1, "activated"    # Z
 
     .prologue
-    .line 157
     invoke-virtual {p0, p1}, Landroid/view/View;->setActivated(Z)V
 
-    .line 156
     return-void
 .end method
 
@@ -294,10 +270,8 @@
     .param p1, "value"    # F
 
     .prologue
-    .line 101
     invoke-virtual {p0, p1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 100
     return-void
 .end method
 
@@ -308,10 +282,8 @@
     .param p2, "paint"    # Landroid/graphics/Paint;
 
     .prologue
-    .line 33
     invoke-virtual {p0, p1, p2}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
 
-    .line 32
     return-void
 .end method
 
@@ -321,10 +293,8 @@
     .param p1, "value"    # F
 
     .prologue
-    .line 133
     invoke-virtual {p0, p1}, Landroid/view/View;->setPivotX(F)V
 
-    .line 132
     return-void
 .end method
 
@@ -334,10 +304,8 @@
     .param p1, "value"    # F
 
     .prologue
-    .line 137
     invoke-virtual {p0, p1}, Landroid/view/View;->setPivotY(F)V
 
-    .line 136
     return-void
 .end method
 
@@ -347,10 +315,8 @@
     .param p1, "value"    # F
 
     .prologue
-    .line 113
     invoke-virtual {p0, p1}, Landroid/view/View;->setRotation(F)V
 
-    .line 112
     return-void
 .end method
 
@@ -360,10 +326,8 @@
     .param p1, "value"    # F
 
     .prologue
-    .line 117
     invoke-virtual {p0, p1}, Landroid/view/View;->setRotationX(F)V
 
-    .line 116
     return-void
 .end method
 
@@ -373,10 +337,8 @@
     .param p1, "value"    # F
 
     .prologue
-    .line 121
     invoke-virtual {p0, p1}, Landroid/view/View;->setRotationY(F)V
 
-    .line 120
     return-void
 .end method
 
@@ -386,10 +348,8 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 153
     invoke-virtual {p0, p1}, Landroid/view/View;->setSaveFromParentEnabled(Z)V
 
-    .line 152
     return-void
 .end method
 
@@ -399,10 +359,8 @@
     .param p1, "value"    # F
 
     .prologue
-    .line 125
     invoke-virtual {p0, p1}, Landroid/view/View;->setScaleX(F)V
 
-    .line 124
     return-void
 .end method
 
@@ -412,10 +370,8 @@
     .param p1, "value"    # F
 
     .prologue
-    .line 129
     invoke-virtual {p0, p1}, Landroid/view/View;->setScaleY(F)V
 
-    .line 128
     return-void
 .end method
 
@@ -425,10 +381,8 @@
     .param p1, "value"    # F
 
     .prologue
-    .line 93
     invoke-virtual {p0, p1}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 92
     return-void
 .end method
 
@@ -438,10 +392,8 @@
     .param p1, "value"    # F
 
     .prologue
-    .line 97
     invoke-virtual {p0, p1}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 96
     return-void
 .end method
 
@@ -451,10 +403,8 @@
     .param p1, "value"    # F
 
     .prologue
-    .line 105
     invoke-virtual {p0, p1}, Landroid/view/View;->setX(F)V
 
-    .line 104
     return-void
 .end method
 
@@ -464,9 +414,7 @@
     .param p1, "value"    # F
 
     .prologue
-    .line 109
     invoke-virtual {p0, p1}, Landroid/view/View;->setY(F)V
 
-    .line 108
     return-void
 .end method

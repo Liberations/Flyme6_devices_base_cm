@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 296
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 299
     new-instance v0, Landroid/view/inputmethod/SparseRectFArray;
 
     invoke-direct {v0, p1}, Landroid/view/inputmethod/SparseRectFArray;-><init>(Landroid/os/Parcel;)V
@@ -58,7 +56,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 298
     invoke-virtual {p0, p1}, Landroid/view/inputmethod/SparseRectFArray$1;->createFromParcel(Landroid/os/Parcel;)Landroid/view/inputmethod/SparseRectFArray;
 
     move-result-object v0
@@ -71,7 +68,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 303
     new-array v0, p1, [Landroid/view/inputmethod/SparseRectFArray;
 
     return-object v0
@@ -82,7 +78,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 302
     invoke-virtual {p0, p1}, Landroid/view/inputmethod/SparseRectFArray$1;->newArray(I)[Landroid/view/inputmethod/SparseRectFArray;
 
     move-result-object v0

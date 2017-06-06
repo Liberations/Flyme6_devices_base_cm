@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/content/SyncManager;
 
     .prologue
-    .line 430
     iput-object p1, p0, Lcom/android/server/content/SyncManager$8;->this$0:Lcom/android/server/content/SyncManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,12 +45,10 @@
     .prologue
     const-wide/16 v6, 0x0
 
-    .line 433
     iget-boolean v0, p1, Lcom/android/server/content/SyncStorageEngine$EndPoint;->target_provider:Z
 
     if-eqz v0, :cond_1
 
-    .line 434
     iget-object v0, p0, Lcom/android/server/content/SyncManager$8;->this$0:Lcom/android/server/content/SyncManager;
 
     iget-object v1, p1, Lcom/android/server/content/SyncStorageEngine$EndPoint;->account:Landroid/accounts/Account;
@@ -60,7 +57,6 @@
 
     iget-object v4, p1, Lcom/android/server/content/SyncStorageEngine$EndPoint;->provider:Ljava/lang/String;
 
-    .line 437
     const/4 v10, 0x0
 
     move v3, p2
@@ -69,21 +65,17 @@
 
     move-wide v8, v6
 
-    .line 434
     invoke-virtual/range {v0 .. v10}, Lcom/android/server/content/SyncManager;->scheduleSync(Landroid/accounts/Account;IILjava/lang/String;Landroid/os/Bundle;JJZ)V
 
-    .line 432
     :cond_0
     :goto_0
     return-void
 
-    .line 438
     :cond_1
     iget-boolean v0, p1, Lcom/android/server/content/SyncStorageEngine$EndPoint;->target_service:Z
 
     if-eqz v0, :cond_0
 
-    .line 439
     iget-object v1, p0, Lcom/android/server/content/SyncManager$8;->this$0:Lcom/android/server/content/SyncManager;
 
     iget-object v2, p1, Lcom/android/server/content/SyncStorageEngine$EndPoint;->service:Landroid/content/ComponentName;

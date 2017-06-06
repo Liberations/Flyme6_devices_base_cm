@@ -24,7 +24,6 @@
     .param p1, "this$1"    # Landroid/accounts/AccountManager$AmsTask;
 
     .prologue
-    .line 1990
     iput-object p1, p0, Landroid/accounts/AccountManager$AmsTask$Response;->this$1:Landroid/accounts/AccountManager$AmsTask;
 
     invoke-direct {p0}, Landroid/accounts/IAccountManagerResponse$Stub;-><init>()V
@@ -50,7 +49,6 @@
     .param p2, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 2011
     const/4 v0, 0x4
 
     if-eq p1, v0, :cond_0
@@ -59,7 +57,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 2015
     :cond_0
     iget-object v0, p0, Landroid/accounts/AccountManager$AmsTask$Response;->this$1:Landroid/accounts/AccountManager$AmsTask;
 
@@ -67,16 +64,13 @@
 
     invoke-virtual {v0, v1}, Landroid/accounts/AccountManager$AmsTask;->cancel(Z)Z
 
-    .line 2016
     return-void
 
-    .line 2012
     :cond_1
     const/16 v0, 0x65
 
     if-eq p1, v0, :cond_0
 
-    .line 2018
     iget-object v0, p0, Landroid/accounts/AccountManager$AmsTask$Response;->this$1:Landroid/accounts/AccountManager$AmsTask;
 
     iget-object v1, p0, Landroid/accounts/AccountManager$AmsTask$Response;->this$1:Landroid/accounts/AccountManager$AmsTask;
@@ -89,7 +83,6 @@
 
     invoke-static {v0, v1}, Landroid/accounts/AccountManager$AmsTask;->-wrap0(Landroid/accounts/AccountManager$AmsTask;Ljava/lang/Throwable;)V
 
-    .line 2010
     return-void
 .end method
 
@@ -98,8 +91,7 @@
     .param p1, "bundle"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1992
-    const-string/jumbo v2, "intent"
+    const-string v2, "intent"
 
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -107,7 +99,6 @@
 
     check-cast v1, Landroid/content/Intent;
 
-    .line 1993
     .local v1, "intent":Landroid/content/Intent;
     if-eqz v1, :cond_0
 
@@ -117,20 +108,17 @@
 
     if-eqz v2, :cond_0
 
-    .line 1996
     iget-object v2, p0, Landroid/accounts/AccountManager$AmsTask$Response;->this$1:Landroid/accounts/AccountManager$AmsTask;
 
     iget-object v2, v2, Landroid/accounts/AccountManager$AmsTask;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v2, v1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
-    .line 1991
     :goto_0
     return-void
 
-    .line 1998
     :cond_0
-    const-string/jumbo v2, "retry"
+    const-string v2, "retry"
 
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
@@ -138,7 +126,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 2000
     :try_start_0
     iget-object v2, p0, Landroid/accounts/AccountManager$AmsTask$Response;->this$1:Landroid/accounts/AccountManager$AmsTask;
 
@@ -148,14 +135,12 @@
 
     goto :goto_0
 
-    .line 2001
     :catch_0
     move-exception v0
 
     .local v0, "e":Landroid/os/RemoteException;
     goto :goto_0
 
-    .line 2006
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_1
     iget-object v2, p0, Landroid/accounts/AccountManager$AmsTask$Response;->this$1:Landroid/accounts/AccountManager$AmsTask;

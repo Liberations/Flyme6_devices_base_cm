@@ -40,7 +40,6 @@
     .param p2, "val$event"    # Landroid/location/GpsNavigationMessageEvent;
 
     .prologue
-    .line 56
     iput-object p1, p0, Landroid/location/GpsNavigationMessageListenerTransport$ListenerTransport$1;->this$1:Landroid/location/GpsNavigationMessageListenerTransport$ListenerTransport;
 
     iput-object p2, p0, Landroid/location/GpsNavigationMessageListenerTransport$ListenerTransport$1;->val$event:Landroid/location/GpsNavigationMessageEvent;
@@ -62,12 +61,10 @@
     .end annotation
 
     .prologue
-    .line 60
     iget-object v0, p0, Landroid/location/GpsNavigationMessageListenerTransport$ListenerTransport$1;->val$event:Landroid/location/GpsNavigationMessageEvent;
 
     invoke-interface {p1, v0}, Landroid/location/GpsNavigationMessageEvent$Listener;->onGpsNavigationMessageReceived(Landroid/location/GpsNavigationMessageEvent;)V
 
-    .line 59
     return-void
 .end method
 
@@ -81,7 +78,6 @@
     .end annotation
 
     .prologue
-    .line 58
     check-cast p1, Landroid/location/GpsNavigationMessageEvent$Listener;
 
     .end local p1    # "listener":Ljava/lang/Object;

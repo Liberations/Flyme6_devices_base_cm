@@ -16,7 +16,6 @@
     .locals 0
 
     .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 45
     if-eqz p1, :cond_0
 
     new-instance v0, Landroid/support/v4/view/LayoutInflaterCompatBase$FactoryWrapper;
@@ -40,6 +38,5 @@
     :cond_0
     invoke-virtual {p0, v0}, Landroid/view/LayoutInflater;->setFactory(Landroid/view/LayoutInflater$Factory;)V
 
-    .line 44
     return-void
 .end method

@@ -45,15 +45,12 @@
     .locals 1
 
     .prologue
-    .line 817
     new-instance v0, Landroid/support/v4/media/session/MediaSessionCompat$Token$1;
 
     invoke-direct {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token$1;-><init>()V
 
-    .line 816
     sput-object v0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 764
     return-void
 .end method
 
@@ -62,13 +59,10 @@
     .param p1, "inner"    # Ljava/lang/Object;
 
     .prologue
-    .line 767
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 768
     iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mInner:Ljava/lang/Object;
 
-    .line 767
     return-void
 .end method
 
@@ -79,7 +73,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 783
     if-eqz p0, :cond_0
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -88,11 +81,9 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 784
     :cond_0
     return-object v2
 
-    .line 786
     :cond_1
     new-instance v0, Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
@@ -111,7 +102,6 @@
     .locals 1
 
     .prologue
-    .line 791
     const/4 v0, 0x0
 
     return v0
@@ -121,7 +111,6 @@
     .locals 1
 
     .prologue
-    .line 813
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mInner:Ljava/lang/Object;
 
     return-object v0
@@ -133,25 +122,21 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 796
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
 
     if-lt v0, v1, :cond_0
 
-    .line 797
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mInner:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/Parcelable;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 795
     :goto_0
     return-void
 
-    .line 799
     :cond_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mInner:Ljava/lang/Object;
 

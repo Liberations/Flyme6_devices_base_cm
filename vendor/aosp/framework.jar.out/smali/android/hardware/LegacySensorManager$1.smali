@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Landroid/hardware/LegacySensorManager;
 
     .prologue
-    .line 56
     iput-object p1, p0, Landroid/hardware/LegacySensorManager$1;->this$0:Landroid/hardware/LegacySensorManager;
 
     invoke-direct {p0}, Landroid/view/IRotationWatcher$Stub;-><init>()V
@@ -39,9 +38,7 @@
     .param p1, "rotation"    # I
 
     .prologue
-    .line 58
     invoke-static {p1}, Landroid/hardware/LegacySensorManager;->onRotationChanged(I)V
 
-    .line 57
     return-void
 .end method

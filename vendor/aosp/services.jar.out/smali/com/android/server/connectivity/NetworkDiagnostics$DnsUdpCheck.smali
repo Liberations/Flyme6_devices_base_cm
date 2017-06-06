@@ -47,32 +47,26 @@
     .param p3, "measurement"    # Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;
 
     .prologue
-    .line 483
     iput-object p1, p0, Lcom/android/server/connectivity/NetworkDiagnostics$DnsUdpCheck;->this$0:Lcom/android/server/connectivity/NetworkDiagnostics;
 
-    .line 484
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/connectivity/NetworkDiagnostics$SimpleSocketCheck;-><init>(Lcom/android/server/connectivity/NetworkDiagnostics;Ljava/net/InetAddress;Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;)V
 
-    .line 470
     new-instance v0, Ljava/util/Random;
 
     invoke-direct {v0}, Ljava/util/Random;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/connectivity/NetworkDiagnostics$DnsUdpCheck;->mRandom:Ljava/util/Random;
 
-    .line 487
     iget v0, p0, Lcom/android/server/connectivity/NetworkDiagnostics$DnsUdpCheck;->mAddressFamily:I
 
     sget v1, Landroid/system/OsConstants;->AF_INET6:I
 
     if-ne v0, v1, :cond_0
 
-    .line 488
     const/16 v0, 0x1c
 
     iput v0, p0, Lcom/android/server/connectivity/NetworkDiagnostics$DnsUdpCheck;->mQueryType:I
 
-    .line 493
     :goto_0
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkDiagnostics$DnsUdpCheck;->mMeasurement:Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;
 
@@ -80,7 +74,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "DNS UDP dst{"
+    const-string v2, "DNS UDP dst{"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -96,7 +90,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "}"
+    const-string v2, "}"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -108,10 +102,8 @@
 
     iput-object v1, v0, Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;->description:Ljava/lang/String;
 
-    .line 483
     return-void
 
-    .line 490
     :cond_0
     const/4 v0, 0x1
 
@@ -135,20 +127,17 @@
 
     const/4 v4, 0x0
 
-    .line 556
     sget-object v1, Ljava/nio/charset/StandardCharsets;->US_ASCII:Ljava/nio/charset/Charset;
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
     move-result-object v0
 
-    .line 557
     .local v0, "rnd":[B
     const/16 v1, 0x36
 
     new-array v1, v1, [B
 
-    .line 558
     iget-object v2, p0, Lcom/android/server/connectivity/NetworkDiagnostics$DnsUdpCheck;->mRandom:Ljava/util/Random;
 
     invoke-virtual {v2}, Ljava/util/Random;->nextInt()I
@@ -169,14 +158,12 @@
 
     aput-byte v2, v1, v5
 
-    .line 559
     const/4 v2, 0x2
 
     aput-byte v5, v1, v2
 
     aput-byte v4, v1, v6
 
-    .line 560
     const/4 v2, 0x4
 
     aput-byte v4, v1, v2
@@ -185,7 +172,6 @@
 
     aput-byte v5, v1, v2
 
-    .line 561
     const/4 v2, 0x6
 
     aput-byte v4, v1, v2
@@ -194,7 +180,6 @@
 
     aput-byte v4, v1, v2
 
-    .line 562
     const/16 v2, 0x8
 
     aput-byte v4, v1, v2
@@ -203,7 +188,6 @@
 
     aput-byte v4, v1, v2
 
-    .line 563
     const/16 v2, 0xa
 
     aput-byte v4, v1, v2
@@ -212,7 +196,6 @@
 
     aput-byte v4, v1, v2
 
-    .line 564
     const/16 v2, 0x11
 
     const/16 v3, 0xc
@@ -261,7 +244,6 @@
 
     aput-byte v2, v1, v3
 
-    .line 565
     const/16 v2, 0x13
 
     aput-byte v7, v1, v2
@@ -324,7 +306,6 @@
 
     aput-byte v2, v1, v3
 
-    .line 566
     const/4 v2, 0x6
 
     const/16 v3, 0x1e
@@ -365,7 +346,6 @@
 
     aput-byte v8, v1, v2
 
-    .line 567
     const/4 v2, 0x7
 
     const/16 v3, 0x25
@@ -412,7 +392,6 @@
 
     aput-byte v8, v1, v2
 
-    .line 568
     aput-byte v6, v1, v7
 
     const/16 v2, 0x2e
@@ -431,12 +410,10 @@
 
     aput-byte v2, v1, v3
 
-    .line 569
     const/16 v2, 0x31
 
     aput-byte v4, v1, v2
 
-    .line 570
     const/16 v2, 0x32
 
     aput-byte v4, v1, v2
@@ -449,7 +426,6 @@
 
     aput-byte v2, v1, v3
 
-    .line 571
     const/16 v2, 0x34
 
     aput-byte v4, v1, v2
@@ -458,7 +434,6 @@
 
     aput-byte v5, v1, v2
 
-    .line 557
     return-object v1
 .end method
 
@@ -467,7 +442,6 @@
     .param p1, "rcode"    # I
 
     .prologue
-    .line 475
     :try_start_0
     invoke-static {}, Lcom/android/server/connectivity/NetworkDiagnostics$DnsResponseCode;->values()[Lcom/android/server/connectivity/NetworkDiagnostics$DnsResponseCode;
 
@@ -483,11 +457,9 @@
 
     return-object v1
 
-    .line 476
     :catch_0
     move-exception v0
 
-    .line 477
     .local v0, "e":Ljava/lang/IndexOutOfBoundsException;
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -502,7 +474,6 @@
     .locals 14
 
     .prologue
-    .line 499
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkDiagnostics$DnsUdpCheck;->mMeasurement:Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;
 
     iget-wide v2, v1, Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;->finishTime:J
@@ -513,7 +484,6 @@
 
     if-lez v1, :cond_0
 
-    .line 502
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkDiagnostics$DnsUdpCheck;->this$0:Lcom/android/server/connectivity/NetworkDiagnostics;
 
     invoke-static {v1}, Lcom/android/server/connectivity/NetworkDiagnostics;->-get0(Lcom/android/server/connectivity/NetworkDiagnostics;)Ljava/util/concurrent/CountDownLatch;
@@ -522,10 +492,8 @@
 
     invoke-virtual {v1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 503
     return-void
 
-    .line 507
     :cond_0
     :try_start_0
     sget v2, Landroid/system/OsConstants;->SOCK_DGRAM:I
@@ -545,7 +513,6 @@
     .catch Landroid/system/ErrnoException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 512
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkDiagnostics$DnsUdpCheck;->mMeasurement:Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -558,7 +525,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, " src{"
+    const-string v3, " src{"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -572,7 +539,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "}"
+    const-string v3, "}"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -584,7 +551,6 @@
 
     iput-object v2, v1, Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;->description:Ljava/lang/String;
 
-    .line 516
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkDiagnostics$DnsUdpCheck;->mRandom:Ljava/util/Random;
 
     const v2, 0xdbba0
@@ -605,7 +571,6 @@
 
     move-result-object v13
 
-    .line 517
     .local v13, "sixRandomDigits":Ljava/lang/String;
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkDiagnostics$DnsUdpCheck;->mMeasurement:Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;
 
@@ -619,7 +584,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, " qtype{"
+    const-string v3, " qtype{"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -631,16 +596,14 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "}"
+    const-string v3, "}"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 518
-    const-string/jumbo v3, " qname{"
+    const-string v3, " qname{"
 
-    .line 517
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -649,10 +612,8 @@
 
     move-result-object v2
 
-    .line 518
-    const-string/jumbo v3, "-android-ds.metric.gstatic.com}"
+    const-string v3, "-android-ds.metric.gstatic.com}"
 
-    .line 517
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -663,16 +624,13 @@
 
     iput-object v2, v1, Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;->description:Ljava/lang/String;
 
-    .line 521
     invoke-direct {p0, v13}, Lcom/android/server/connectivity/NetworkDiagnostics$DnsUdpCheck;->getDnsQueryPacket(Ljava/lang/String;)[B
 
     move-result-object v9
 
-    .line 523
     .local v9, "dnsPacket":[B
     const/4 v0, 0x0
 
-    .line 524
     .local v0, "count":I
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkDiagnostics$DnsUdpCheck;->mMeasurement:Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;
 
@@ -682,7 +640,6 @@
 
     iput-wide v2, v1, Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;->startTime:J
 
-    .line 525
     :goto_0
     invoke-static {}, Lcom/android/server/connectivity/NetworkDiagnostics;->-wrap0()J
 
@@ -702,10 +659,8 @@
 
     if-gez v1, :cond_1
 
-    .line 526
     add-int/lit8 v0, v0, 0x1
 
-    .line 528
     :try_start_1
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkDiagnostics$DnsUdpCheck;->mFileDescriptor:Ljava/io/FileDescriptor;
 
@@ -718,7 +673,6 @@
     .catch Landroid/system/ErrnoException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/io/InterruptedIOException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 535
     const/16 v1, 0x200
 
     :try_start_2
@@ -726,13 +680,11 @@
 
     move-result-object v12
 
-    .line 536
     .local v12, "reply":Ljava/nio/ByteBuffer;
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkDiagnostics$DnsUdpCheck;->mFileDescriptor:Ljava/io/FileDescriptor;
 
     invoke-static {v1, v12}, Landroid/system/Os;->read(Ljava/io/FileDescriptor;Ljava/nio/ByteBuffer;)I
 
-    .line 539
     invoke-virtual {v12}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v1
@@ -741,12 +693,11 @@
 
     if-le v1, v2, :cond_3
 
-    .line 540
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, " "
+    const-string v2, " "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -772,7 +723,6 @@
 
     move-result-object v11
 
-    .line 542
     .local v11, "rcodeStr":Ljava/lang/String;
     :goto_1
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkDiagnostics$DnsUdpCheck;->mMeasurement:Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;
@@ -781,7 +731,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "1/"
+    const-string v3, "1/"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -804,7 +754,6 @@
     .catch Landroid/system/ErrnoException; {:try_start_2 .. :try_end_2} :catch_2
     .catch Ljava/io/InterruptedIOException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 548
     .end local v11    # "rcodeStr":Ljava/lang/String;
     .end local v12    # "reply":Ljava/nio/ByteBuffer;
     :cond_1
@@ -819,14 +768,13 @@
 
     if-nez v1, :cond_2
 
-    .line 549
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkDiagnostics$DnsUdpCheck;->mMeasurement:Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "0/"
+    const-string v3, "0/"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -842,21 +790,17 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;->recordFailure(Ljava/lang/String;)V
 
-    .line 552
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/connectivity/NetworkDiagnostics$DnsUdpCheck;->close()V
 
-    .line 497
     return-void
 
-    .line 508
     .end local v0    # "count":I
     .end local v9    # "dnsPacket":[B
     .end local v13    # "sixRandomDigits":Ljava/lang/String;
     :catch_0
     move-exception v10
 
-    .line 509
     .local v10, "e":Ljava/lang/Exception;
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkDiagnostics$DnsUdpCheck;->mMeasurement:Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;
 
@@ -866,10 +810,8 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;->recordFailure(Ljava/lang/String;)V
 
-    .line 510
     return-void
 
-    .line 529
     .end local v10    # "e":Ljava/lang/Exception;
     .restart local v0    # "count":I
     .restart local v9    # "dnsPacket":[B
@@ -877,7 +819,6 @@
     :catch_1
     move-exception v10
 
-    .line 530
     .restart local v10    # "e":Ljava/lang/Exception;
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkDiagnostics$DnsUdpCheck;->mMeasurement:Lcom/android/server/connectivity/NetworkDiagnostics$Measurement;
 
@@ -889,12 +830,11 @@
 
     goto :goto_2
 
-    .line 541
     .end local v10    # "e":Ljava/lang/Exception;
     .restart local v12    # "reply":Ljava/nio/ByteBuffer;
     :cond_3
     :try_start_3
-    const-string/jumbo v11, ""
+    const-string v11, ""
     :try_end_3
     .catch Landroid/system/ErrnoException; {:try_start_3 .. :try_end_3} :catch_2
     .catch Ljava/io/InterruptedIOException; {:try_start_3 .. :try_end_3} :catch_2
@@ -902,7 +842,6 @@
     .restart local v11    # "rcodeStr":Ljava/lang/String;
     goto :goto_1
 
-    .line 544
     .end local v11    # "rcodeStr":Ljava/lang/String;
     .end local v12    # "reply":Ljava/nio/ByteBuffer;
     :catch_2

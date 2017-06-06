@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,7 +18,6 @@
     .param p0, "event"    # Landroid/view/accessibility/AccessibilityEvent;
 
     .prologue
-    .line 27
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityEvent;->getContentChangeTypes()I
 
     move-result v0
@@ -33,9 +31,7 @@
     .param p1, "changeTypes"    # I
 
     .prologue
-    .line 23
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityEvent;->setContentChangeTypes(I)V
 
-    .line 22
     return-void
 .end method

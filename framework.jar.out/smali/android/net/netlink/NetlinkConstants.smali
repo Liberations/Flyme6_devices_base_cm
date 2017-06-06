@@ -56,7 +56,6 @@
     .locals 0
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -69,12 +68,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 46
     if-gtz p0, :cond_0
 
     return v0
 
-    .line 47
     :cond_0
     add-int/lit8 v0, p0, 0x4
 
@@ -92,12 +89,10 @@
     .param p0, "length"    # S
 
     .prologue
-    .line 41
     const v1, 0xffff
 
     and-int v0, p0, v1
 
-    .line 42
     .local v0, "intLength":I
     invoke-static {v0}, Landroid/net/netlink/NetlinkConstants;->alignedLengthOf(I)I
 
@@ -111,14 +106,12 @@
     .param p0, "buffer"    # Ljava/nio/ByteBuffer;
 
     .prologue
-    .line 63
     if-nez p0, :cond_0
 
-    const-string/jumbo v0, "(null)"
+    const-string v0, "(null)"
 
     return-object v0
 
-    .line 65
     :cond_0
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->array()[B
 
@@ -132,7 +125,6 @@
 
     move-result v2
 
-    .line 64
     invoke-static {v0, v1, v2}, Lcom/android/internal/util/HexDump;->toHexString([BII)Ljava/lang/String;
 
     move-result-object v0
@@ -145,14 +137,12 @@
     .param p0, "bytes"    # [B
 
     .prologue
-    .line 58
     if-nez p0, :cond_0
 
-    const-string/jumbo v0, "(null)"
+    const-string v0, "(null)"
 
     return-object v0
 
-    .line 59
     :cond_0
     invoke-static {p0}, Lcom/android/internal/util/HexDump;->toHexString([B)Ljava/lang/String;
 
@@ -166,36 +156,32 @@
     .param p0, "family"    # I
 
     .prologue
-    .line 51
     sget v0, Landroid/system/OsConstants;->AF_INET:I
 
     if-ne p0, v0, :cond_0
 
-    const-string/jumbo v0, "AF_INET"
+    const-string v0, "AF_INET"
 
     return-object v0
 
-    .line 52
     :cond_0
     sget v0, Landroid/system/OsConstants;->AF_INET6:I
 
     if-ne p0, v0, :cond_1
 
-    const-string/jumbo v0, "AF_INET6"
+    const-string v0, "AF_INET6"
 
     return-object v0
 
-    .line 53
     :cond_1
     sget v0, Landroid/system/OsConstants;->AF_NETLINK:I
 
     if-ne p0, v0, :cond_2
 
-    const-string/jumbo v0, "AF_NETLINK"
+    const-string v0, "AF_NETLINK"
 
     return-object v0
 
-    .line 54
     :cond_2
     invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -209,15 +195,13 @@
     .param p0, "nlm_type"    # S
 
     .prologue
-    .line 94
     sparse-switch p0, :sswitch_data_0
 
-    .line 117
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "unknown RTM type: "
+    const-string v1, "unknown RTM type: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -237,133 +221,111 @@
 
     return-object v0
 
-    .line 95
     :sswitch_0
-    const-string/jumbo v0, "NLMSG_NOOP"
+    const-string v0, "NLMSG_NOOP"
 
     return-object v0
 
-    .line 96
     :sswitch_1
-    const-string/jumbo v0, "NLMSG_ERROR"
+    const-string v0, "NLMSG_ERROR"
 
     return-object v0
 
-    .line 97
     :sswitch_2
-    const-string/jumbo v0, "NLMSG_DONE"
+    const-string v0, "NLMSG_DONE"
 
     return-object v0
 
-    .line 98
     :sswitch_3
-    const-string/jumbo v0, "NLMSG_OVERRUN"
+    const-string v0, "NLMSG_OVERRUN"
 
     return-object v0
 
-    .line 99
     :sswitch_4
-    const-string/jumbo v0, "RTM_NEWLINK"
+    const-string v0, "RTM_NEWLINK"
 
     return-object v0
 
-    .line 100
     :sswitch_5
-    const-string/jumbo v0, "RTM_DELLINK"
+    const-string v0, "RTM_DELLINK"
 
     return-object v0
 
-    .line 101
     :sswitch_6
-    const-string/jumbo v0, "RTM_GETLINK"
+    const-string v0, "RTM_GETLINK"
 
     return-object v0
 
-    .line 102
     :sswitch_7
-    const-string/jumbo v0, "RTM_SETLINK"
+    const-string v0, "RTM_SETLINK"
 
     return-object v0
 
-    .line 103
     :sswitch_8
-    const-string/jumbo v0, "RTM_NEWADDR"
+    const-string v0, "RTM_NEWADDR"
 
     return-object v0
 
-    .line 104
     :sswitch_9
-    const-string/jumbo v0, "RTM_DELADDR"
+    const-string v0, "RTM_DELADDR"
 
     return-object v0
 
-    .line 105
     :sswitch_a
-    const-string/jumbo v0, "RTM_GETADDR"
+    const-string v0, "RTM_GETADDR"
 
     return-object v0
 
-    .line 106
     :sswitch_b
-    const-string/jumbo v0, "RTM_NEWROUTE"
+    const-string v0, "RTM_NEWROUTE"
 
     return-object v0
 
-    .line 107
     :sswitch_c
-    const-string/jumbo v0, "RTM_DELROUTE"
+    const-string v0, "RTM_DELROUTE"
 
     return-object v0
 
-    .line 108
     :sswitch_d
-    const-string/jumbo v0, "RTM_GETROUTE"
+    const-string v0, "RTM_GETROUTE"
 
     return-object v0
 
-    .line 109
     :sswitch_e
-    const-string/jumbo v0, "RTM_NEWNEIGH"
+    const-string v0, "RTM_NEWNEIGH"
 
     return-object v0
 
-    .line 110
     :sswitch_f
-    const-string/jumbo v0, "RTM_DELNEIGH"
+    const-string v0, "RTM_DELNEIGH"
 
     return-object v0
 
-    .line 111
     :sswitch_10
-    const-string/jumbo v0, "RTM_GETNEIGH"
+    const-string v0, "RTM_GETNEIGH"
 
     return-object v0
 
-    .line 112
     :sswitch_11
-    const-string/jumbo v0, "RTM_NEWRULE"
+    const-string v0, "RTM_NEWRULE"
 
     return-object v0
 
-    .line 113
     :sswitch_12
-    const-string/jumbo v0, "RTM_DELRULE"
+    const-string v0, "RTM_DELRULE"
 
     return-object v0
 
-    .line 114
     :sswitch_13
-    const-string/jumbo v0, "RTM_GETRULE"
+    const-string v0, "RTM_GETRULE"
 
     return-object v0
 
-    .line 115
     :sswitch_14
-    const-string/jumbo v0, "RTM_NEWNDUSEROPT"
+    const-string v0, "RTM_NEWNDUSEROPT"
 
     return-object v0
 
-    .line 94
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_0

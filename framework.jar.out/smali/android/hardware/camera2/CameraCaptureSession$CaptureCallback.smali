@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 738
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +37,6 @@
     .param p3, "result"    # Landroid/hardware/camera2/TotalCaptureResult;
 
     .prologue
-    .line 899
     return-void
 .end method
 
@@ -49,7 +47,6 @@
     .param p3, "failure"    # Landroid/hardware/camera2/CaptureFailure;
 
     .prologue
-    .line 928
     return-void
 .end method
 
@@ -60,7 +57,6 @@
     .param p3, "result"    # Landroid/hardware/camera2/CaptureResult;
 
     .prologue
-    .line 829
     return-void
 .end method
 
@@ -71,7 +67,6 @@
     .param p3, "partialResult"    # Landroid/hardware/camera2/CaptureResult;
 
     .prologue
-    .line 870
     return-void
 .end method
 
@@ -81,7 +76,6 @@
     .param p2, "sequenceId"    # I
 
     .prologue
-    .line 987
     return-void
 .end method
 
@@ -92,7 +86,6 @@
     .param p3, "frameNumber"    # J
 
     .prologue
-    .line 958
     return-void
 .end method
 
@@ -103,7 +96,6 @@
     .param p3, "timestamp"    # J
 
     .prologue
-    .line 799
     return-void
 .end method
 
@@ -115,9 +107,7 @@
     .param p5, "frameNumber"    # J
 
     .prologue
-    .line 791
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureStarted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;J)V
 
-    .line 789
     return-void
 .end method

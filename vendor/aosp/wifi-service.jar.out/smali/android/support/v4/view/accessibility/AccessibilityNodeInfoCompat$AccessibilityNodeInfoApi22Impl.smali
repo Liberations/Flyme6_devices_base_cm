@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 1844
     invoke-direct {p0}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityNodeInfoApi21Impl;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
     .param p1, "info"    # Ljava/lang/Object;
 
     .prologue
-    .line 1862
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompatApi22;->getTraversalAfter(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -45,7 +43,6 @@
     .param p1, "info"    # Ljava/lang/Object;
 
     .prologue
-    .line 1847
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompatApi22;->getTraversalBefore(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -59,10 +56,8 @@
     .param p2, "view"    # Landroid/view/View;
 
     .prologue
-    .line 1867
     invoke-static {p1, p2}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompatApi22;->setTraversalAfter(Ljava/lang/Object;Landroid/view/View;)V
 
-    .line 1866
     return-void
 .end method
 
@@ -73,10 +68,8 @@
     .param p3, "virtualDescendantId"    # I
 
     .prologue
-    .line 1872
     invoke-static {p1, p2, p3}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompatApi22;->setTraversalAfter(Ljava/lang/Object;Landroid/view/View;I)V
 
-    .line 1871
     return-void
 .end method
 
@@ -86,10 +79,8 @@
     .param p2, "view"    # Landroid/view/View;
 
     .prologue
-    .line 1852
     invoke-static {p1, p2}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompatApi22;->setTraversalBefore(Ljava/lang/Object;Landroid/view/View;)V
 
-    .line 1851
     return-void
 .end method
 
@@ -100,9 +91,7 @@
     .param p3, "virtualDescendantId"    # I
 
     .prologue
-    .line 1857
     invoke-static {p1, p2, p3}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompatApi22;->setTraversalBefore(Ljava/lang/Object;Landroid/view/View;I)V
 
-    .line 1856
     return-void
 .end method

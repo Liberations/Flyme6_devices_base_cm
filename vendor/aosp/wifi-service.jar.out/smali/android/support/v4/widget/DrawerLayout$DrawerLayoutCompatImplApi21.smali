@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 321
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,10 +36,8 @@
     .param p3, "drawerGravity"    # I
 
     .prologue
-    .line 331
     invoke-static {p1, p2, p3}, Landroid/support/v4/widget/DrawerLayoutCompatApi21;->applyMarginInsets(Landroid/view/ViewGroup$MarginLayoutParams;Ljava/lang/Object;I)V
 
-    .line 330
     return-void
 .end method
 
@@ -49,10 +46,8 @@
     .param p1, "drawerLayout"    # Landroid/view/View;
 
     .prologue
-    .line 323
     invoke-static {p1}, Landroid/support/v4/widget/DrawerLayoutCompatApi21;->configureApplyInsets(Landroid/view/View;)V
 
-    .line 322
     return-void
 .end method
 
@@ -63,10 +58,8 @@
     .param p3, "drawerGravity"    # I
 
     .prologue
-    .line 327
     invoke-static {p1, p2, p3}, Landroid/support/v4/widget/DrawerLayoutCompatApi21;->dispatchChildInsets(Landroid/view/View;Ljava/lang/Object;I)V
 
-    .line 326
     return-void
 .end method
 
@@ -75,7 +68,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 340
     invoke-static {p1}, Landroid/support/v4/widget/DrawerLayoutCompatApi21;->getDefaultStatusBarBackground(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -88,7 +80,6 @@
     .param p1, "insets"    # Ljava/lang/Object;
 
     .prologue
-    .line 335
     invoke-static {p1}, Landroid/support/v4/widget/DrawerLayoutCompatApi21;->getTopInset(Ljava/lang/Object;)I
 
     move-result v0

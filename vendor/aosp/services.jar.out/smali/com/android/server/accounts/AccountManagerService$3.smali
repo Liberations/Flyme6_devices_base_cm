@@ -41,7 +41,6 @@
     .param p12, "val$toAccounts"    # Lcom/android/server/accounts/AccountManagerService$UserAccounts;
 
     .prologue
-    .line 773
     iput-object p2, p0, Lcom/android/server/accounts/AccountManagerService$3;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     move-object/from16 v0, p10
@@ -76,7 +75,6 @@
 
     invoke-direct/range {v1 .. v9}, Lcom/android/server/accounts/AccountManagerService$Session;-><init>(Lcom/android/server/accounts/AccountManagerService;Lcom/android/server/accounts/AccountManagerService$UserAccounts;Landroid/accounts/IAccountManagerResponse;Ljava/lang/String;ZZLjava/lang/String;Z)V
 
-    .line 775
     return-void
 .end method
 
@@ -87,11 +85,9 @@
     .param p1, "result"    # Landroid/os/Bundle;
 
     .prologue
-    .line 789
     if-eqz p1, :cond_0
 
-    .line 790
-    const-string/jumbo v0, "booleanResult"
+    const-string v0, "booleanResult"
 
     const/4 v1, 0x0
 
@@ -99,10 +95,8 @@
 
     move-result v0
 
-    .line 789
     if-eqz v0, :cond_0
 
-    .line 792
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService$3;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     iget-object v1, p0, Lcom/android/server/accounts/AccountManagerService$3;->val$response:Landroid/accounts/IAccountManagerResponse;
@@ -113,11 +107,9 @@
 
     invoke-static {v0, v1, p1, v2, v3}, Lcom/android/server/accounts/AccountManagerService;->-wrap7(Lcom/android/server/accounts/AccountManagerService;Landroid/accounts/IAccountManagerResponse;Landroid/os/Bundle;Landroid/accounts/Account;Lcom/android/server/accounts/AccountManagerService$UserAccounts;)V
 
-    .line 788
     :goto_0
     return-void
 
-    .line 794
     :cond_0
     invoke-super {p0, p1}, Lcom/android/server/accounts/AccountManagerService$Session;->onResult(Landroid/os/Bundle;)V
 
@@ -133,14 +125,12 @@
     .end annotation
 
     .prologue
-    .line 784
     iget-object v0, p0, Lcom/android/server/accounts/AccountManagerService$3;->mAuthenticator:Landroid/accounts/IAccountAuthenticator;
 
     iget-object v1, p0, Lcom/android/server/accounts/AccountManagerService$3;->val$account:Landroid/accounts/Account;
 
     invoke-interface {v0, p0, v1}, Landroid/accounts/IAccountAuthenticator;->getAccountCredentialsForCloning(Landroid/accounts/IAccountAuthenticatorResponse;Landroid/accounts/Account;)V
 
-    .line 783
     return-void
 .end method
 
@@ -149,7 +139,6 @@
     .param p1, "now"    # J
 
     .prologue
-    .line 778
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -162,26 +151,22 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, ", getAccountCredentialsForClone"
+    const-string v1, ", getAccountCredentialsForClone"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 779
-    const-string/jumbo v1, ", "
+    const-string v1, ", "
 
-    .line 778
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 779
     iget-object v1, p0, Lcom/android/server/accounts/AccountManagerService$3;->val$account:Landroid/accounts/Account;
 
     iget-object v1, v1, Landroid/accounts/Account;->type:Ljava/lang/String;
 
-    .line 778
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0

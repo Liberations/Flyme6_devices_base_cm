@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/widget/Gallery;
 
     .prologue
-    .line 126
     iput-object p1, p0, Landroid/widget/Gallery$1;->this$0:Landroid/widget/Gallery;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,18 +40,15 @@
     .locals 2
 
     .prologue
-    .line 129
     iget-object v0, p0, Landroid/widget/Gallery$1;->this$0:Landroid/widget/Gallery;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Landroid/widget/Gallery;->-set2(Landroid/widget/Gallery;Z)Z
 
-    .line 130
     iget-object v0, p0, Landroid/widget/Gallery$1;->this$0:Landroid/widget/Gallery;
 
     invoke-virtual {v0}, Landroid/widget/Gallery;->selectionChanged()V
 
-    .line 128
     return-void
 .end method

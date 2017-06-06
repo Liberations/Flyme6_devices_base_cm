@@ -30,7 +30,6 @@
     .param p2, "val$reason"    # I
 
     .prologue
-    .line 497
     iput-object p1, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord$8;->this$1:Landroid/media/tv/TvInputManager$SessionCallbackRecord;
 
     iput p2, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord$8;->val$reason:I
@@ -46,7 +45,6 @@
     .locals 3
 
     .prologue
-    .line 500
     iget-object v0, p0, Landroid/media/tv/TvInputManager$SessionCallbackRecord$8;->this$1:Landroid/media/tv/TvInputManager$SessionCallbackRecord;
 
     invoke-static {v0}, Landroid/media/tv/TvInputManager$SessionCallbackRecord;->-get1(Landroid/media/tv/TvInputManager$SessionCallbackRecord;)Landroid/media/tv/TvInputManager$SessionCallback;
@@ -63,6 +61,5 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/media/tv/TvInputManager$SessionCallback;->onVideoUnavailable(Landroid/media/tv/TvInputManager$Session;I)V
 
-    .line 499
     return-void
 .end method

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/internal/app/ToolbarActionBar;
 
     .prologue
-    .line 541
     iput-object p1, p0, Lcom/android/internal/app/ToolbarActionBar$MenuBuilderCallback;->this$0:Lcom/android/internal/app/ToolbarActionBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +52,6 @@
     .param p2, "item"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 545
     const/4 v0, 0x0
 
     return v0
@@ -68,7 +66,6 @@
 
     const/16 v2, 0x8
 
-    .line 550
     iget-object v0, p0, Lcom/android/internal/app/ToolbarActionBar$MenuBuilderCallback;->this$0:Lcom/android/internal/app/ToolbarActionBar;
 
     invoke-static {v0}, Lcom/android/internal/app/ToolbarActionBar;->-get2(Lcom/android/internal/app/ToolbarActionBar;)Landroid/view/Window$Callback;
@@ -77,7 +74,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 551
     iget-object v0, p0, Lcom/android/internal/app/ToolbarActionBar$MenuBuilderCallback;->this$0:Lcom/android/internal/app/ToolbarActionBar;
 
     invoke-static {v0}, Lcom/android/internal/app/ToolbarActionBar;->-get0(Lcom/android/internal/app/ToolbarActionBar;)Lcom/android/internal/widget/DecorToolbar;
@@ -90,7 +86,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 552
     iget-object v0, p0, Lcom/android/internal/app/ToolbarActionBar$MenuBuilderCallback;->this$0:Lcom/android/internal/app/ToolbarActionBar;
 
     invoke-static {v0}, Lcom/android/internal/app/ToolbarActionBar;->-get2(Lcom/android/internal/app/ToolbarActionBar;)Landroid/view/Window$Callback;
@@ -99,12 +94,10 @@
 
     invoke-interface {v0, v2, p1}, Landroid/view/Window$Callback;->onPanelClosed(ILandroid/view/Menu;)V
 
-    .line 549
     :cond_0
     :goto_0
     return-void
 
-    .line 553
     :cond_1
     iget-object v0, p0, Lcom/android/internal/app/ToolbarActionBar$MenuBuilderCallback;->this$0:Lcom/android/internal/app/ToolbarActionBar;
 
@@ -120,7 +113,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 555
     iget-object v0, p0, Lcom/android/internal/app/ToolbarActionBar$MenuBuilderCallback;->this$0:Lcom/android/internal/app/ToolbarActionBar;
 
     invoke-static {v0}, Lcom/android/internal/app/ToolbarActionBar;->-get2(Lcom/android/internal/app/ToolbarActionBar;)Landroid/view/Window$Callback;

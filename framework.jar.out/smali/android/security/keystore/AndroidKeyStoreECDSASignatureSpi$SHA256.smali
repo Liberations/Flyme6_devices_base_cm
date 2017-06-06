@@ -19,11 +19,9 @@
     .locals 1
 
     .prologue
-    .line 125
     const/4 v0, 0x4
 
     invoke-direct {p0, v0}, Landroid/security/keystore/AndroidKeyStoreECDSASignatureSpi;-><init>(I)V
 
-    .line 124
     return-void
 .end method

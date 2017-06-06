@@ -15,7 +15,6 @@
     .locals 0
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,8 +25,7 @@
     .param p1, "fileName"    # Ljava/lang/String;
 
     .prologue
-    .line 97
-    const-string/jumbo v1, ":memory:"
+    const-string v1, ":memory:"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -45,19 +43,17 @@
 
     if-nez v1, :cond_1
 
-    .line 98
     :cond_0
     return-void
 
-    .line 100
     :cond_1
-    const-string/jumbo v1, "DefaultDatabaseErrorHandler"
+    const-string v1, "DefaultDatabaseErrorHandler"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "deleting the database file: "
+    const-string v3, "deleting the database file: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -73,7 +69,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 102
     :try_start_0
     new-instance v1, Ljava/io/File;
 
@@ -83,23 +78,20 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 96
     :goto_0
     return-void
 
-    .line 103
     :catch_0
     move-exception v0
 
-    .line 105
     .local v0, "e":Ljava/lang/Exception;
-    const-string/jumbo v1, "DefaultDatabaseErrorHandler"
+    const-string v1, "DefaultDatabaseErrorHandler"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "delete failed: "
+    const-string v3, "delete failed: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -129,14 +121,13 @@
     .param p1, "dbObj"    # Landroid/database/sqlite/SQLiteDatabase;
 
     .prologue
-    .line 54
-    const-string/jumbo v4, "DefaultDatabaseErrorHandler"
+    const-string v4, "DefaultDatabaseErrorHandler"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "Corruption reported by sqlite on database: "
+    const-string v6, "Corruption reported by sqlite on database: "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -156,28 +147,23 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 57
     invoke-virtual {p1}, Landroid/database/sqlite/SQLiteDatabase;->isOpen()Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 64
     invoke-virtual {p1}, Landroid/database/sqlite/SQLiteDatabase;->getPath()Ljava/lang/String;
 
     move-result-object v4
 
     invoke-direct {p0, v4}, Landroid/database/DefaultDatabaseErrorHandler;->deleteDatabaseFile(Ljava/lang/String;)V
 
-    .line 65
     return-void
 
-    .line 68
     :cond_0
     const/4 v0, 0x0
 
-    .line 73
     .local v0, "attachedDbs":Ljava/util/List;, "Ljava/util/List<Landroid/util/Pair<Ljava/lang/String;Ljava/lang/String;>;>;"
     :try_start_0
     invoke-virtual {p1}, Landroid/database/sqlite/SQLiteDatabase;->getAttachedDbs()Ljava/util/List;
@@ -187,7 +173,6 @@
 
     move-result-object v0
 
-    .line 78
     .end local v0    # "attachedDbs":Ljava/util/List;, "Ljava/util/List<Landroid/util/Pair<Ljava/lang/String;Ljava/lang/String;>;>;"
     :goto_0
     :try_start_1
@@ -196,11 +181,9 @@
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 84
     :goto_1
     if-eqz v0, :cond_1
 
-    .line 85
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -219,7 +202,6 @@
 
     check-cast v2, Landroid/util/Pair;
 
-    .line 86
     .local v2, "p":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v4, v2, Landroid/util/Pair;->second:Ljava/lang/Object;
 
@@ -229,7 +211,6 @@
 
     goto :goto_2
 
-    .line 74
     .end local v2    # "p":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/String;Ljava/lang/String;>;"
     .end local v3    # "p$iterator":Ljava/util/Iterator;
     .restart local v0    # "attachedDbs":Ljava/util/List;, "Ljava/util/List<Landroid/util/Pair<Ljava/lang/String;Ljava/lang/String;>;>;"
@@ -239,7 +220,6 @@
     .local v1, "e":Landroid/database/sqlite/SQLiteException;
     goto :goto_0
 
-    .line 79
     .end local v0    # "attachedDbs":Ljava/util/List;, "Ljava/util/List<Landroid/util/Pair<Ljava/lang/String;Ljava/lang/String;>;>;"
     .end local v1    # "e":Landroid/database/sqlite/SQLiteException;
     :catch_1
@@ -248,7 +228,6 @@
     .restart local v1    # "e":Landroid/database/sqlite/SQLiteException;
     goto :goto_1
 
-    .line 91
     .end local v1    # "e":Landroid/database/sqlite/SQLiteException;
     :cond_1
     invoke-virtual {p1}, Landroid/database/sqlite/SQLiteDatabase;->getPath()Ljava/lang/String;
@@ -257,20 +236,16 @@
 
     invoke-direct {p0, v4}, Landroid/database/DefaultDatabaseErrorHandler;->deleteDatabaseFile(Ljava/lang/String;)V
 
-    .line 53
     :cond_2
     return-void
 
-    .line 82
     :catchall_0
     move-exception v4
 
     move-object v5, v4
 
-    .line 84
     if-eqz v0, :cond_3
 
-    .line 85
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -289,7 +264,6 @@
 
     check-cast v2, Landroid/util/Pair;
 
-    .line 86
     .restart local v2    # "p":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v4, v2, Landroid/util/Pair;->second:Ljava/lang/Object;
 
@@ -299,7 +273,6 @@
 
     goto :goto_3
 
-    .line 91
     .end local v2    # "p":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/String;Ljava/lang/String;>;"
     .end local v3    # "p$iterator":Ljava/util/Iterator;
     :cond_3
@@ -309,7 +282,6 @@
 
     invoke-direct {p0, v4}, Landroid/database/DefaultDatabaseErrorHandler;->deleteDatabaseFile(Ljava/lang/String;)V
 
-    .line 82
     :cond_4
     throw v5
 .end method

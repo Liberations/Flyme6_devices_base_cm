@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,7 +19,6 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 31
     invoke-virtual {p0, p1}, Landroid/content/Context;->getColor(I)I
 
     move-result v0
@@ -34,7 +32,6 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 27
     invoke-virtual {p0, p1}, Landroid/content/Context;->getColorStateList(I)Landroid/content/res/ColorStateList;
 
     move-result-object v0

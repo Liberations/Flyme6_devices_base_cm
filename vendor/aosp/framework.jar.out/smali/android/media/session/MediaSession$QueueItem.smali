@@ -49,14 +49,12 @@
     .locals 1
 
     .prologue
-    .line 1249
     new-instance v0, Landroid/media/session/MediaSession$QueueItem$1;
 
     invoke-direct {v0}, Landroid/media/session/MediaSession$QueueItem$1;-><init>()V
 
     sput-object v0, Landroid/media/session/MediaSession$QueueItem;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 1192
     return-void
 .end method
 
@@ -66,22 +64,18 @@
     .param p2, "id"    # J
 
     .prologue
-    .line 1208
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1209
     if-nez p1, :cond_0
 
-    .line 1210
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "Description cannot be null."
+    const-string v1, "Description cannot be null."
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 1212
     :cond_0
     const-wide/16 v0, -0x1
 
@@ -89,23 +83,19 @@
 
     if-nez v0, :cond_1
 
-    .line 1213
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "Id cannot be QueueItem.UNKNOWN_ID"
+    const-string v1, "Id cannot be QueueItem.UNKNOWN_ID"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 1215
     :cond_1
     iput-object p1, p0, Landroid/media/session/MediaSession$QueueItem;->mDescription:Landroid/media/MediaDescription;
 
-    .line 1216
     iput-wide p2, p0, Landroid/media/session/MediaSession$QueueItem;->mId:J
 
-    .line 1208
     return-void
 .end method
 
@@ -114,10 +104,8 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 1219
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1220
     sget-object v0, Landroid/media/MediaDescription;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -128,14 +116,12 @@
 
     iput-object v0, p0, Landroid/media/session/MediaSession$QueueItem;->mDescription:Landroid/media/MediaDescription;
 
-    .line 1221
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/media/session/MediaSession$QueueItem;->mId:J
 
-    .line 1219
     return-void
 .end method
 
@@ -155,7 +141,6 @@
     .locals 1
 
     .prologue
-    .line 1246
     const/4 v0, 0x0
 
     return v0
@@ -165,7 +150,6 @@
     .locals 1
 
     .prologue
-    .line 1228
     iget-object v0, p0, Landroid/media/session/MediaSession$QueueItem;->mDescription:Landroid/media/MediaDescription;
 
     return-object v0
@@ -175,7 +159,6 @@
     .locals 2
 
     .prologue
-    .line 1235
     iget-wide v0, p0, Landroid/media/session/MediaSession$QueueItem;->mId:J
 
     return-wide v0
@@ -185,45 +168,36 @@
     .locals 4
 
     .prologue
-    .line 1264
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "MediaSession.QueueItem {Description="
+    const-string v1, "MediaSession.QueueItem {Description="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 1265
     iget-object v1, p0, Landroid/media/session/MediaSession$QueueItem;->mDescription:Landroid/media/MediaDescription;
 
-    .line 1264
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 1266
-    const-string/jumbo v1, ", Id="
+    const-string v1, ", Id="
 
-    .line 1264
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 1266
     iget-wide v2, p0, Landroid/media/session/MediaSession$QueueItem;->mId:J
 
-    .line 1264
     invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 1266
-    const-string/jumbo v1, " }"
+    const-string v1, " }"
 
-    .line 1264
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -241,16 +215,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 1240
     iget-object v0, p0, Landroid/media/session/MediaSession$QueueItem;->mDescription:Landroid/media/MediaDescription;
 
     invoke-virtual {v0, p1, p2}, Landroid/media/MediaDescription;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 1241
     iget-wide v0, p0, Landroid/media/session/MediaSession$QueueItem;->mId:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 1239
     return-void
 .end method

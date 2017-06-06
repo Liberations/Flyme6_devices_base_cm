@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 79
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
     .param p0, "customActionObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 81
     check-cast p0, Landroid/media/session/PlaybackState$CustomAction;
 
     .end local p0    # "customActionObj":Ljava/lang/Object;
@@ -46,7 +44,6 @@
     .param p0, "customActionObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 92
     check-cast p0, Landroid/media/session/PlaybackState$CustomAction;
 
     .end local p0    # "customActionObj":Ljava/lang/Object;
@@ -62,7 +59,6 @@
     .param p0, "customActionObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 89
     check-cast p0, Landroid/media/session/PlaybackState$CustomAction;
 
     .end local p0    # "customActionObj":Ljava/lang/Object;
@@ -78,7 +74,6 @@
     .param p0, "customActionObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 85
     check-cast p0, Landroid/media/session/PlaybackState$CustomAction;
 
     .end local p0    # "customActionObj":Ljava/lang/Object;
@@ -97,16 +92,13 @@
     .param p3, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 98
     new-instance v0, Landroid/media/session/PlaybackState$CustomAction$Builder;
 
     invoke-direct {v0, p0, p1, p2}, Landroid/media/session/PlaybackState$CustomAction$Builder;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;I)V
 
-    .line 99
     .local v0, "customActionObj":Landroid/media/session/PlaybackState$CustomAction$Builder;
     invoke-virtual {v0, p3}, Landroid/media/session/PlaybackState$CustomAction$Builder;->setExtras(Landroid/os/Bundle;)Landroid/media/session/PlaybackState$CustomAction$Builder;
 
-    .line 100
     invoke-virtual {v0}, Landroid/media/session/PlaybackState$CustomAction$Builder;->build()Landroid/media/session/PlaybackState$CustomAction;
 
     move-result-object v1

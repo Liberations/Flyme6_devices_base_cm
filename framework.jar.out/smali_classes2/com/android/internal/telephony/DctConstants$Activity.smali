@@ -52,52 +52,46 @@
 
     const/4 v2, 0x0
 
-    .line 51
     new-instance v0, Lcom/android/internal/telephony/DctConstants$Activity;
 
-    const-string/jumbo v1, "NONE"
+    const-string v1, "NONE"
 
     invoke-direct {v0, v1, v2}, Lcom/android/internal/telephony/DctConstants$Activity;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/DctConstants$Activity;->NONE:Lcom/android/internal/telephony/DctConstants$Activity;
 
-    .line 52
     new-instance v0, Lcom/android/internal/telephony/DctConstants$Activity;
 
-    const-string/jumbo v1, "DATAIN"
+    const-string v1, "DATAIN"
 
     invoke-direct {v0, v1, v3}, Lcom/android/internal/telephony/DctConstants$Activity;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/DctConstants$Activity;->DATAIN:Lcom/android/internal/telephony/DctConstants$Activity;
 
-    .line 53
     new-instance v0, Lcom/android/internal/telephony/DctConstants$Activity;
 
-    const-string/jumbo v1, "DATAOUT"
+    const-string v1, "DATAOUT"
 
     invoke-direct {v0, v1, v4}, Lcom/android/internal/telephony/DctConstants$Activity;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/DctConstants$Activity;->DATAOUT:Lcom/android/internal/telephony/DctConstants$Activity;
 
-    .line 54
     new-instance v0, Lcom/android/internal/telephony/DctConstants$Activity;
 
-    const-string/jumbo v1, "DATAINANDOUT"
+    const-string v1, "DATAINANDOUT"
 
     invoke-direct {v0, v1, v5}, Lcom/android/internal/telephony/DctConstants$Activity;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/DctConstants$Activity;->DATAINANDOUT:Lcom/android/internal/telephony/DctConstants$Activity;
 
-    .line 55
     new-instance v0, Lcom/android/internal/telephony/DctConstants$Activity;
 
-    const-string/jumbo v1, "DORMANT"
+    const-string v1, "DORMANT"
 
     invoke-direct {v0, v1, v6}, Lcom/android/internal/telephony/DctConstants$Activity;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/DctConstants$Activity;->DORMANT:Lcom/android/internal/telephony/DctConstants$Activity;
 
-    .line 50
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/android/internal/telephony/DctConstants$Activity;
@@ -131,7 +125,6 @@
     .locals 0
 
     .prologue
-    .line 50
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -142,7 +135,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 50
     const-class v0, Lcom/android/internal/telephony/DctConstants$Activity;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -158,7 +150,6 @@
     .locals 1
 
     .prologue
-    .line 50
     sget-object v0, Lcom/android/internal/telephony/DctConstants$Activity;->$VALUES:[Lcom/android/internal/telephony/DctConstants$Activity;
 
     return-object v0

@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Landroid/media/SubtitleController;
 
     .prologue
-    .line 74
     iput-object p1, p0, Landroid/media/SubtitleController$2;->this$0:Landroid/media/SubtitleController;
 
     invoke-direct {p0}, Landroid/view/accessibility/CaptioningManager$CaptioningChangeListener;-><init>()V
@@ -39,12 +38,10 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 78
     iget-object v0, p0, Landroid/media/SubtitleController$2;->this$0:Landroid/media/SubtitleController;
 
     invoke-virtual {v0}, Landroid/media/SubtitleController;->selectDefaultTrack()V
 
-    .line 77
     return-void
 .end method
 
@@ -53,11 +50,9 @@
     .param p1, "locale"    # Ljava/util/Locale;
 
     .prologue
-    .line 84
     iget-object v0, p0, Landroid/media/SubtitleController$2;->this$0:Landroid/media/SubtitleController;
 
     invoke-virtual {v0}, Landroid/media/SubtitleController;->selectDefaultTrack()V
 
-    .line 83
     return-void
 .end method

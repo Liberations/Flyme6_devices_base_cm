@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/app/ListActivity;
 
     .prologue
-    .line 190
     iput-object p1, p0, Landroid/app/ListActivity$1;->this$0:Landroid/app/ListActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 192
     iget-object v0, p0, Landroid/app/ListActivity$1;->this$0:Landroid/app/ListActivity;
 
     iget-object v0, v0, Landroid/app/ListActivity;->mList:Landroid/widget/ListView;
@@ -52,6 +50,5 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->focusableViewAvailable(Landroid/view/View;)V
 
-    .line 191
     return-void
 .end method

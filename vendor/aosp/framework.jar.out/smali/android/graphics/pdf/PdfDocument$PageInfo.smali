@@ -91,7 +91,6 @@
     .locals 0
 
     .prologue
-    .line 273
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -112,7 +111,6 @@
     .locals 1
 
     .prologue
-    .line 303
     iget-object v0, p0, Landroid/graphics/pdf/PdfDocument$PageInfo;->mContentRect:Landroid/graphics/Rect;
 
     return-object v0
@@ -122,7 +120,6 @@
     .locals 1
 
     .prologue
-    .line 292
     iget v0, p0, Landroid/graphics/pdf/PdfDocument$PageInfo;->mPageHeight:I
 
     return v0
@@ -132,7 +129,6 @@
     .locals 1
 
     .prologue
-    .line 312
     iget v0, p0, Landroid/graphics/pdf/PdfDocument$PageInfo;->mPageNumber:I
 
     return v0
@@ -142,7 +138,6 @@
     .locals 1
 
     .prologue
-    .line 283
     iget v0, p0, Landroid/graphics/pdf/PdfDocument$PageInfo;->mPageWidth:I
 
     return v0

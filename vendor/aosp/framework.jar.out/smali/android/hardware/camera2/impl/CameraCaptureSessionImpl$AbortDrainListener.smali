@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;
 
     .prologue
-    .line 664
     iput-object p1, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl$AbortDrainListener;->this$0:Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,12 +50,10 @@
     .locals 2
 
     .prologue
-    .line 668
     iget-object v1, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl$AbortDrainListener;->this$0:Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;
 
     monitor-enter v1
 
-    .line 680
     :try_start_0
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl$AbortDrainListener;->this$0:Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;
 
@@ -70,10 +67,8 @@
 
     monitor-exit v1
 
-    .line 681
     return-void
 
-    .line 683
     :cond_0
     :try_start_1
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraCaptureSessionImpl$AbortDrainListener;->this$0:Landroid/hardware/camera2/impl/CameraCaptureSessionImpl;
@@ -88,10 +83,8 @@
 
     monitor-exit v1
 
-    .line 666
     return-void
 
-    .line 668
     :catchall_0
     move-exception v0
 

@@ -43,14 +43,11 @@
     .end annotation
 
     .prologue
-    .line 37
     .local p2, "typeReference":Landroid/hardware/camera2/utils/TypeReference;, "Landroid/hardware/camera2/utils/TypeReference<Landroid/util/SizeF;>;"
     iput-object p1, p0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableSizeF$MarshalerSizeF;->this$0:Landroid/hardware/camera2/marshal/impl/MarshalQueryableSizeF;
 
-    .line 38
     invoke-direct {p0, p1, p2, p3}, Landroid/hardware/camera2/marshal/Marshaler;-><init>(Landroid/hardware/camera2/marshal/MarshalQueryable;Landroid/hardware/camera2/utils/TypeReference;I)V
 
-    .line 37
     return-void
 .end method
 
@@ -60,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 57
     const/16 v0, 0x8
 
     return v0
@@ -72,21 +68,18 @@
     .param p2, "buffer"    # Ljava/nio/ByteBuffer;
 
     .prologue
-    .line 43
     invoke-virtual {p1}, Landroid/util/SizeF;->getWidth()F
 
     move-result v0
 
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->putFloat(F)Ljava/nio/ByteBuffer;
 
-    .line 44
     invoke-virtual {p1}, Landroid/util/SizeF;->getHeight()F
 
     move-result v0
 
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->putFloat(F)Ljava/nio/ByteBuffer;
 
-    .line 42
     return-void
 .end method
 
@@ -96,7 +89,6 @@
     .param p2, "buffer"    # Ljava/nio/ByteBuffer;
 
     .prologue
-    .line 42
     check-cast p1, Landroid/util/SizeF;
 
     .end local p1    # "value":Ljava/lang/Object;
@@ -110,18 +102,15 @@
     .param p1, "buffer"    # Ljava/nio/ByteBuffer;
 
     .prologue
-    .line 49
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getFloat()F
 
     move-result v1
 
-    .line 50
     .local v1, "width":F
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getFloat()F
 
     move-result v0
 
-    .line 52
     .local v0, "height":F
     new-instance v2, Landroid/util/SizeF;
 
@@ -135,7 +124,6 @@
     .param p1, "buffer"    # Ljava/nio/ByteBuffer;
 
     .prologue
-    .line 48
     invoke-virtual {p0, p1}, Landroid/hardware/camera2/marshal/impl/MarshalQueryableSizeF$MarshalerSizeF;->unmarshal(Ljava/nio/ByteBuffer;)Landroid/util/SizeF;
 
     move-result-object v0

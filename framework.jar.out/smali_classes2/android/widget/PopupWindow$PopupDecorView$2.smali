@@ -27,7 +27,6 @@
     .param p2, "val$listener"    # Landroid/transition/Transition$TransitionListener;
 
     .prologue
-    .line 2051
     iput-object p1, p0, Landroid/widget/PopupWindow$PopupDecorView$2;->this$1:Landroid/widget/PopupWindow$PopupDecorView;
 
     iput-object p2, p0, Landroid/widget/PopupWindow$PopupDecorView$2;->val$listener:Landroid/transition/Transition$TransitionListener;
@@ -44,18 +43,15 @@
     .param p1, "transition"    # Landroid/transition/Transition;
 
     .prologue
-    .line 2054
     iget-object v0, p0, Landroid/widget/PopupWindow$PopupDecorView$2;->val$listener:Landroid/transition/Transition$TransitionListener;
 
     invoke-interface {v0, p1}, Landroid/transition/Transition$TransitionListener;->onTransitionEnd(Landroid/transition/Transition;)V
 
-    .line 2057
     iget-object v0, p0, Landroid/widget/PopupWindow$PopupDecorView$2;->this$1:Landroid/widget/PopupWindow$PopupDecorView;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Landroid/widget/PopupWindow$PopupDecorView;->-set0(Landroid/widget/PopupWindow$PopupDecorView;Landroid/transition/Transition$TransitionListenerAdapter;)Landroid/transition/Transition$TransitionListenerAdapter;
 
-    .line 2053
     return-void
 .end method

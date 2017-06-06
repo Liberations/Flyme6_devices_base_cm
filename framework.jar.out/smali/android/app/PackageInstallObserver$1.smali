@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Landroid/app/PackageInstallObserver;
 
     .prologue
-    .line 25
     iput-object p1, p0, Landroid/app/PackageInstallObserver$1;->this$0:Landroid/app/PackageInstallObserver;
 
     invoke-direct {p0}, Landroid/content/pm/IPackageInstallObserver2$Stub;-><init>()V
@@ -42,12 +41,10 @@
     .param p4, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 34
     iget-object v0, p0, Landroid/app/PackageInstallObserver$1;->this$0:Landroid/app/PackageInstallObserver;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/app/PackageInstallObserver;->onPackageInstalled(Ljava/lang/String;ILjava/lang/String;Landroid/os/Bundle;)V
 
-    .line 33
     return-void
 .end method
 
@@ -56,11 +53,9 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 28
     iget-object v0, p0, Landroid/app/PackageInstallObserver$1;->this$0:Landroid/app/PackageInstallObserver;
 
     invoke-virtual {v0, p1}, Landroid/app/PackageInstallObserver;->onUserActionRequired(Landroid/content/Intent;)V
 
-    .line 27
     return-void
 .end method

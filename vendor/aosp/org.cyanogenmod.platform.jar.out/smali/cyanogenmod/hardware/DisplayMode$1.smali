@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 98
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 100
     new-instance v0, Lcyanogenmod/hardware/DisplayMode;
 
     const/4 v1, 0x0
@@ -60,7 +58,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 99
     invoke-virtual {p0, p1}, Lcyanogenmod/hardware/DisplayMode$1;->createFromParcel(Landroid/os/Parcel;)Lcyanogenmod/hardware/DisplayMode;
 
     move-result-object v0
@@ -73,7 +70,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 105
     new-array v0, p1, [Lcyanogenmod/hardware/DisplayMode;
 
     return-object v0
@@ -84,7 +80,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 104
     invoke-virtual {p0, p1}, Lcyanogenmod/hardware/DisplayMode$1;->newArray(I)[Lcyanogenmod/hardware/DisplayMode;
 
     move-result-object v0

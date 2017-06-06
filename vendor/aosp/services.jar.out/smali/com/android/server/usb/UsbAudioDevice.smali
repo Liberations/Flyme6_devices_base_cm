@@ -47,35 +47,26 @@
     .param p5, "deviceClass"    # I
 
     .prologue
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
-    const-string/jumbo v0, ""
+    const-string v0, ""
 
     iput-object v0, p0, Lcom/android/server/usb/UsbAudioDevice;->mDeviceName:Ljava/lang/String;
 
-    .line 40
-    const-string/jumbo v0, ""
+    const-string v0, ""
 
     iput-object v0, p0, Lcom/android/server/usb/UsbAudioDevice;->mDeviceDescription:Ljava/lang/String;
 
-    .line 44
     iput p1, p0, Lcom/android/server/usb/UsbAudioDevice;->mCard:I
 
-    .line 45
     iput p2, p0, Lcom/android/server/usb/UsbAudioDevice;->mDevice:I
 
-    .line 46
     iput-boolean p3, p0, Lcom/android/server/usb/UsbAudioDevice;->mHasPlayback:Z
 
-    .line 47
     iput-boolean p4, p0, Lcom/android/server/usb/UsbAudioDevice;->mHasCapture:Z
 
-    .line 48
     iput p5, p0, Lcom/android/server/usb/UsbAudioDevice;->mDeviceClass:I
 
-    .line 43
     return-void
 .end method
 
@@ -85,12 +76,11 @@
     .locals 2
 
     .prologue
-    .line 63
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "[card:"
+    const-string v1, "[card:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -102,7 +92,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, " device:"
+    const-string v1, " device:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -114,7 +104,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, " "
+    const-string v1, " "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -126,7 +116,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "]"
+    const-string v1, "]"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -143,14 +133,12 @@
     .locals 3
 
     .prologue
-    .line 52
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 53
     .local v0, "sb":Ljava/lang/StringBuilder;
-    const-string/jumbo v1, "UsbAudioDevice: [card: "
+    const-string v1, "UsbAudioDevice: [card: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -160,8 +148,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 54
-    const-string/jumbo v1, ", device: "
+    const-string v1, ", device: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -171,8 +158,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 55
-    const-string/jumbo v1, ", name: "
+    const-string v1, ", name: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -182,8 +168,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 56
-    const-string/jumbo v1, ", hasPlayback: "
+    const-string v1, ", hasPlayback: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -193,8 +178,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 57
-    const-string/jumbo v1, ", hasCapture: "
+    const-string v1, ", hasCapture: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -204,8 +188,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 58
-    const-string/jumbo v1, ", class: 0x"
+    const-string v1, ", class: 0x"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -221,11 +204,10 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "]"
+    const-string v2, "]"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 59
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

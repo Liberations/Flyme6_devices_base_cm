@@ -36,7 +36,6 @@
     .param p4, "val$thread"    # Landroid/os/HandlerThread;
 
     .prologue
-    .line 2256
     iput-object p1, p0, Landroid/media/MediaPlayer$3;->this$0:Landroid/media/MediaPlayer;
 
     iput-object p2, p0, Landroid/media/MediaPlayer$3;->val$fIs:Ljava/io/InputStream;
@@ -56,7 +55,6 @@
     .prologue
     const/16 v5, 0x385
 
-    .line 2258
     iget-object v3, p0, Landroid/media/MediaPlayer$3;->val$fIs:Ljava/io/InputStream;
 
     if-eqz v3, :cond_0
@@ -69,11 +67,9 @@
 
     if-nez v3, :cond_1
 
-    .line 2259
     :cond_0
     return v5
 
-    .line 2262
     :cond_1
     iget-object v3, p0, Landroid/media/MediaPlayer$3;->this$0:Landroid/media/MediaPlayer;
 
@@ -87,26 +83,22 @@
 
     move-result-object v2
 
-    .line 2263
     .local v2, "track":Landroid/media/SubtitleTrack;
     if-nez v2, :cond_2
 
-    .line 2264
     return v5
 
-    .line 2268
     :cond_2
     new-instance v1, Ljava/util/Scanner;
 
     iget-object v3, p0, Landroid/media/MediaPlayer$3;->val$fIs:Ljava/io/InputStream;
 
-    const-string/jumbo v4, "UTF-8"
+    const-string v4, "UTF-8"
 
     invoke-direct {v1, v3, v4}, Ljava/util/Scanner;-><init>(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    .line 2269
     .local v1, "scanner":Ljava/util/Scanner;
-    const-string/jumbo v3, "\\A"
+    const-string v3, "\\A"
 
     invoke-virtual {v1, v3}, Ljava/util/Scanner;->useDelimiter(Ljava/lang/String;)Ljava/util/Scanner;
 
@@ -116,7 +108,6 @@
 
     move-result-object v0
 
-    .line 2270
     .local v0, "contents":Ljava/lang/String;
     iget-object v3, p0, Landroid/media/MediaPlayer$3;->this$0:Landroid/media/MediaPlayer;
 
@@ -126,7 +117,6 @@
 
     monitor-enter v4
 
-    .line 2271
     :try_start_0
     iget-object v3, p0, Landroid/media/MediaPlayer$3;->this$0:Landroid/media/MediaPlayer;
 
@@ -142,10 +132,8 @@
 
     monitor-exit v4
 
-    .line 2273
     invoke-virtual {v1}, Ljava/util/Scanner;->close()V
 
-    .line 2274
     iget-object v3, p0, Landroid/media/MediaPlayer$3;->this$0:Landroid/media/MediaPlayer;
 
     invoke-static {v3}, Landroid/media/MediaPlayer;->-get1(Landroid/media/MediaPlayer;)Ljava/util/Vector;
@@ -154,7 +142,6 @@
 
     monitor-enter v4
 
-    .line 2275
     :try_start_1
     iget-object v3, p0, Landroid/media/MediaPlayer$3;->this$0:Landroid/media/MediaPlayer;
 
@@ -174,7 +161,6 @@
 
     monitor-exit v4
 
-    .line 2277
     invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v3
@@ -185,12 +171,10 @@
 
     invoke-virtual {v2, v3, v6, v4, v5}, Landroid/media/SubtitleTrack;->onData([BZJ)V
 
-    .line 2278
     const/16 v3, 0x323
 
     return v3
 
-    .line 2270
     :catchall_0
     move-exception v3
 
@@ -198,7 +182,6 @@
 
     throw v3
 
-    .line 2274
     :catchall_1
     move-exception v3
 
@@ -215,12 +198,10 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 2282
     invoke-direct {p0}, Landroid/media/MediaPlayer$3;->addTrack()I
 
     move-result v1
 
-    .line 2283
     .local v1, "res":I
     iget-object v2, p0, Landroid/media/MediaPlayer$3;->this$0:Landroid/media/MediaPlayer;
 
@@ -230,7 +211,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 2284
     iget-object v2, p0, Landroid/media/MediaPlayer$3;->this$0:Landroid/media/MediaPlayer;
 
     invoke-static {v2}, Landroid/media/MediaPlayer;->-get0(Landroid/media/MediaPlayer;)Landroid/media/MediaPlayer$EventHandler;
@@ -245,7 +225,6 @@
 
     move-result-object v0
 
-    .line 2285
     .local v0, "m":Landroid/os/Message;
     iget-object v2, p0, Landroid/media/MediaPlayer$3;->this$0:Landroid/media/MediaPlayer;
 
@@ -255,7 +234,6 @@
 
     invoke-virtual {v2, v0}, Landroid/media/MediaPlayer$EventHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 2287
     .end local v0    # "m":Landroid/os/Message;
     :cond_0
     iget-object v2, p0, Landroid/media/MediaPlayer$3;->val$thread:Landroid/os/HandlerThread;
@@ -266,6 +244,5 @@
 
     invoke-virtual {v2}, Landroid/os/Looper;->quitSafely()V
 
-    .line 2281
     return-void
 .end method

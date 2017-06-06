@@ -30,7 +30,6 @@
     .param p2, "val$uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 934
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$SpamFilterObserver$2;->this$1:Lcom/android/server/notification/NotificationManagerService$SpamFilterObserver;
 
     iput-object p2, p0, Lcom/android/server/notification/NotificationManagerService$SpamFilterObserver$2;->val$uri:Landroid/net/Uri;
@@ -48,14 +47,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 937
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$SpamFilterObserver$2;->val$uri:Landroid/net/Uri;
 
     invoke-virtual {v0}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 938
     .local v7, "id":Ljava/lang/String;
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$SpamFilterObserver$2;->this$1:Lcom/android/server/notification/NotificationManagerService$SpamFilterObserver;
 
@@ -69,7 +66,6 @@
 
     move-result-object v0
 
-    .line 939
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SpamFilterObserver$2;->val$uri:Landroid/net/Uri;
 
     move-object v3, v2
@@ -78,16 +74,13 @@
 
     move-object v5, v2
 
-    .line 938
     invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v6
 
-    .line 941
     .local v6, "c":Landroid/database/Cursor;
     if-eqz v6, :cond_2
 
-    .line 943
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$SpamFilterObserver$2;->this$1:Lcom/android/server/notification/NotificationManagerService$SpamFilterObserver;
 
     iget-object v0, v0, Lcom/android/server/notification/NotificationManagerService$SpamFilterObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
@@ -98,7 +91,6 @@
 
     monitor-enter v1
 
-    .line 944
     :try_start_0
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$SpamFilterObserver$2;->this$1:Lcom/android/server/notification/NotificationManagerService$SpamFilterObserver;
 
@@ -121,14 +113,12 @@
     .local v8, "index":I
     monitor-exit v1
 
-    .line 946
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    .line 947
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$SpamFilterObserver$2;->this$1:Lcom/android/server/notification/NotificationManagerService$SpamFilterObserver;
 
     iget-object v0, v0, Lcom/android/server/notification/NotificationManagerService$SpamFilterObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
@@ -139,10 +129,8 @@
 
     monitor-enter v1
 
-    .line 949
     if-ltz v8, :cond_0
 
-    .line 950
     :try_start_1
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$SpamFilterObserver$2;->this$1:Lcom/android/server/notification/NotificationManagerService$SpamFilterObserver;
 
@@ -159,17 +147,14 @@
     :cond_0
     monitor-exit v1
 
-    .line 957
     :cond_1
     :goto_0
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 936
     .end local v8    # "index":I
     :cond_2
     return-void
 
-    .line 943
     :catchall_0
     move-exception v0
 
@@ -177,7 +162,6 @@
 
     throw v0
 
-    .line 947
     .restart local v8    # "index":I
     :catchall_1
     move-exception v0
@@ -186,11 +170,9 @@
 
     throw v0
 
-    .line 953
     :cond_3
     if-gez v8, :cond_1
 
-    .line 955
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$SpamFilterObserver$2;->this$1:Lcom/android/server/notification/NotificationManagerService$SpamFilterObserver;
 
     invoke-static {v0, v6}, Lcom/android/server/notification/NotificationManagerService$SpamFilterObserver;->-wrap0(Lcom/android/server/notification/NotificationManagerService$SpamFilterObserver;Landroid/database/Cursor;)V

@@ -86,7 +86,6 @@
     .param p1, "this$0"    # Lcom/android/server/MountService;
 
     .prologue
-    .line 205
     iput-object p1, p0, Lcom/android/server/MountService$VoldResponseCode;->this$0:Lcom/android/server/MountService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

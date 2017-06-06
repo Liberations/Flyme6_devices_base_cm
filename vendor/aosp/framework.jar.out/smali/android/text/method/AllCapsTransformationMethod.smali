@@ -22,10 +22,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -38,7 +36,6 @@
 
     iput-object v0, p0, Landroid/text/method/AllCapsTransformationMethod;->mLocale:Ljava/util/Locale;
 
-    .line 37
     return-void
 .end method
 
@@ -52,39 +49,31 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 43
     iget-boolean v1, p0, Landroid/text/method/AllCapsTransformationMethod;->mEnabled:Z
 
     if-nez v1, :cond_0
 
-    .line 44
-    const-string/jumbo v1, "AllCapsTransformationMethod"
+    const-string v1, "AllCapsTransformationMethod"
 
-    const-string/jumbo v2, "Caller did not enable length changes; not transforming text"
+    const-string v2, "Caller did not enable length changes; not transforming text"
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 45
     return-object p1
 
-    .line 48
     :cond_0
     if-nez p1, :cond_1
 
-    .line 49
     return-object v2
 
-    .line 52
     :cond_1
     const/4 v0, 0x0
 
-    .line 53
     .local v0, "locale":Ljava/util/Locale;
     instance-of v1, p2, Landroid/widget/TextView;
 
     if-eqz v1, :cond_2
 
-    .line 54
     check-cast p2, Landroid/widget/TextView;
 
     .end local p2    # "view":Landroid/view/View;
@@ -92,15 +81,12 @@
 
     move-result-object v0
 
-    .line 56
     .end local v0    # "locale":Ljava/util/Locale;
     :cond_2
     if-nez v0, :cond_3
 
-    .line 57
     iget-object v0, p0, Landroid/text/method/AllCapsTransformationMethod;->mLocale:Ljava/util/Locale;
 
-    .line 59
     :cond_3
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
@@ -122,7 +108,6 @@
     .param p5, "previouslyFocusedRect"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 64
     return-void
 .end method
 
@@ -131,9 +116,7 @@
     .param p1, "allowLengthChanges"    # Z
 
     .prologue
-    .line 69
     iput-boolean p1, p0, Landroid/text/method/AllCapsTransformationMethod;->mEnabled:Z
 
-    .line 68
     return-void
 .end method

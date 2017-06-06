@@ -50,39 +50,30 @@
     .param p5, "deviceToken"    # Landroid/os/IBinder;
 
     .prologue
-    .line 94
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     invoke-static {}, Ldalvik/system/CloseGuard;->get()Ldalvik/system/CloseGuard;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/media/midi/MidiDevice;->mGuard:Ldalvik/system/CloseGuard;
 
-    .line 96
     iput-object p1, p0, Landroid/media/midi/MidiDevice;->mDeviceInfo:Landroid/media/midi/MidiDeviceInfo;
 
-    .line 97
     iput-object p2, p0, Landroid/media/midi/MidiDevice;->mDeviceServer:Landroid/media/midi/IMidiDeviceServer;
 
-    .line 98
     iput-object p3, p0, Landroid/media/midi/MidiDevice;->mMidiManager:Landroid/media/midi/IMidiManager;
 
-    .line 99
     iput-object p4, p0, Landroid/media/midi/MidiDevice;->mClientToken:Landroid/os/IBinder;
 
-    .line 100
     iput-object p5, p0, Landroid/media/midi/MidiDevice;->mDeviceToken:Landroid/os/IBinder;
 
-    .line 101
     iget-object v0, p0, Landroid/media/midi/MidiDevice;->mGuard:Ldalvik/system/CloseGuard;
 
-    const-string/jumbo v1, "close"
+    const-string v1, "close"
 
     invoke-virtual {v0, v1}, Ldalvik/system/CloseGuard;->open(Ljava/lang/String;)V
 
-    .line 95
     return-void
 .end method
 
@@ -97,12 +88,10 @@
     .end annotation
 
     .prologue
-    .line 196
     iget-object v2, p0, Landroid/media/midi/MidiDevice;->mGuard:Ldalvik/system/CloseGuard;
 
     monitor-enter v2
 
-    .line 197
     :try_start_0
     iget-object v1, p0, Landroid/media/midi/MidiDevice;->mGuard:Ldalvik/system/CloseGuard;
 
@@ -110,7 +99,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 199
     :try_start_1
     iget-object v1, p0, Landroid/media/midi/MidiDevice;->mMidiManager:Landroid/media/midi/IMidiManager;
 
@@ -126,19 +114,16 @@
     :goto_0
     monitor-exit v2
 
-    .line 195
     return-void
 
-    .line 200
     :catch_0
     move-exception v0
 
-    .line 201
     .local v0, "e":Landroid/os/RemoteException;
     :try_start_2
-    const-string/jumbo v1, "MidiDevice"
+    const-string v1, "MidiDevice"
 
-    const-string/jumbo v3, "RemoteException in closeDevice"
+    const-string v3, "RemoteException in closeDevice"
 
     invoke-static {v1, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
@@ -146,7 +131,6 @@
 
     goto :goto_0
 
-    .line 196
     .end local v0    # "e":Landroid/os/RemoteException;
     :catchall_0
     move-exception v1
@@ -164,7 +148,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 174
     if-ltz p2, :cond_0
 
     iget-object v3, p0, Landroid/media/midi/MidiDevice;->mDeviceInfo:Landroid/media/midi/MidiDeviceInfo;
@@ -175,46 +158,38 @@
 
     if-lt p2, v3, :cond_1
 
-    .line 175
     :cond_0
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v4, "outputPortNumber out of range"
+    const-string v4, "outputPortNumber out of range"
 
     invoke-direct {v3, v4}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v3
 
-    .line 178
     :cond_1
     invoke-virtual {p1}, Landroid/media/midi/MidiInputPort;->claimFileDescriptor()Landroid/os/ParcelFileDescriptor;
 
     move-result-object v1
 
-    .line 179
     .local v1, "pfd":Landroid/os/ParcelFileDescriptor;
     if-nez v1, :cond_2
 
-    .line 180
     return-object v5
 
-    .line 183
     :cond_2
     :try_start_0
     new-instance v2, Landroid/os/Binder;
 
     invoke-direct {v2}, Landroid/os/Binder;-><init>()V
 
-    .line 184
     .local v2, "token":Landroid/os/IBinder;
     iget-object v3, p0, Landroid/media/midi/MidiDevice;->mDeviceServer:Landroid/media/midi/IMidiDeviceServer;
 
     invoke-interface {v3, v2, v1, p2}, Landroid/media/midi/IMidiDeviceServer;->connectPorts(Landroid/os/IBinder;Landroid/os/ParcelFileDescriptor;I)V
 
-    .line 186
     invoke-static {v1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 187
     new-instance v3, Landroid/media/midi/MidiDevice$MidiConnection;
 
     invoke-direct {v3, p0, v2, p1}, Landroid/media/midi/MidiDevice$MidiConnection;-><init>(Landroid/media/midi/MidiDevice;Landroid/os/IBinder;Landroid/media/midi/MidiInputPort;)V
@@ -223,20 +198,17 @@
 
     return-object v3
 
-    .line 188
     .end local v2    # "token":Landroid/os/IBinder;
     :catch_0
     move-exception v0
 
-    .line 189
     .local v0, "e":Landroid/os/RemoteException;
-    const-string/jumbo v3, "MidiDevice"
+    const-string v3, "MidiDevice"
 
-    const-string/jumbo v4, "RemoteException in connectPorts"
+    const-string v4, "RemoteException in connectPorts"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 190
     return-object v5
 .end method
 
@@ -249,31 +221,24 @@
     .end annotation
 
     .prologue
-    .line 209
     :try_start_0
     iget-object v0, p0, Landroid/media/midi/MidiDevice;->mGuard:Ldalvik/system/CloseGuard;
 
     invoke-virtual {v0}, Ldalvik/system/CloseGuard;->warnIfOpen()V
 
-    .line 210
     invoke-virtual {p0}, Landroid/media/midi/MidiDevice;->close()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 212
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 207
     return-void
 
-    .line 211
     :catchall_0
     move-exception v0
 
-    .line 212
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 211
     throw v0
 .end method
 
@@ -281,7 +246,6 @@
     .locals 1
 
     .prologue
-    .line 110
     iget-object v0, p0, Landroid/media/midi/MidiDevice;->mDeviceInfo:Landroid/media/midi/MidiDeviceInfo;
 
     return-object v0
@@ -294,13 +258,11 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 126
     :try_start_0
     new-instance v2, Landroid/os/Binder;
 
     invoke-direct {v2}, Landroid/os/Binder;-><init>()V
 
-    .line 127
     .local v2, "token":Landroid/os/IBinder;
     iget-object v3, p0, Landroid/media/midi/MidiDevice;->mDeviceServer:Landroid/media/midi/IMidiDeviceServer;
 
@@ -308,14 +270,11 @@
 
     move-result-object v1
 
-    .line 128
     .local v1, "pfd":Landroid/os/ParcelFileDescriptor;
     if-nez v1, :cond_0
 
-    .line 129
     return-object v5
 
-    .line 131
     :cond_0
     new-instance v3, Landroid/media/midi/MidiInputPort;
 
@@ -327,21 +286,18 @@
 
     return-object v3
 
-    .line 132
     .end local v1    # "pfd":Landroid/os/ParcelFileDescriptor;
     .end local v2    # "token":Landroid/os/IBinder;
     :catch_0
     move-exception v0
 
-    .line 133
     .local v0, "e":Landroid/os/RemoteException;
-    const-string/jumbo v3, "MidiDevice"
+    const-string v3, "MidiDevice"
 
-    const-string/jumbo v4, "RemoteException in openInputPort"
+    const-string v4, "RemoteException in openInputPort"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 134
     return-object v5
 .end method
 
@@ -352,13 +308,11 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 149
     :try_start_0
     new-instance v2, Landroid/os/Binder;
 
     invoke-direct {v2}, Landroid/os/Binder;-><init>()V
 
-    .line 150
     .local v2, "token":Landroid/os/IBinder;
     iget-object v3, p0, Landroid/media/midi/MidiDevice;->mDeviceServer:Landroid/media/midi/IMidiDeviceServer;
 
@@ -366,14 +320,11 @@
 
     move-result-object v1
 
-    .line 151
     .local v1, "pfd":Landroid/os/ParcelFileDescriptor;
     if-nez v1, :cond_0
 
-    .line 152
     return-object v5
 
-    .line 154
     :cond_0
     new-instance v3, Landroid/media/midi/MidiOutputPort;
 
@@ -385,21 +336,18 @@
 
     return-object v3
 
-    .line 155
     .end local v1    # "pfd":Landroid/os/ParcelFileDescriptor;
     .end local v2    # "token":Landroid/os/IBinder;
     :catch_0
     move-exception v0
 
-    .line 156
     .local v0, "e":Landroid/os/RemoteException;
-    const-string/jumbo v3, "MidiDevice"
+    const-string v3, "MidiDevice"
 
-    const-string/jumbo v4, "RemoteException in openOutputPort"
+    const-string v4, "RemoteException in openOutputPort"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 157
     return-object v5
 .end method
 
@@ -407,12 +355,11 @@
     .locals 2
 
     .prologue
-    .line 218
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "MidiDevice: "
+    const-string v1, "MidiDevice: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

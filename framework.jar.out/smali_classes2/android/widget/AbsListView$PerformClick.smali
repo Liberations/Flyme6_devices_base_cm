@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Landroid/widget/AbsListView;
 
     .prologue
-    .line 3048
     iput-object p1, p0, Landroid/widget/AbsListView$PerformClick;->this$0:Landroid/widget/AbsListView;
 
     const/4 v0, 0x0
@@ -55,7 +54,6 @@
     .locals 6
 
     .prologue
-    .line 3055
     iget-object v3, p0, Landroid/widget/AbsListView$PerformClick;->this$0:Landroid/widget/AbsListView;
 
     iget-boolean v3, v3, Landroid/widget/AbsListView;->mDataChanged:Z
@@ -64,17 +62,14 @@
 
     return-void
 
-    .line 3057
     :cond_0
     iget-object v3, p0, Landroid/widget/AbsListView$PerformClick;->this$0:Landroid/widget/AbsListView;
 
     iget-object v0, v3, Landroid/widget/AbsListView;->mAdapter:Landroid/widget/ListAdapter;
 
-    .line 3058
     .local v0, "adapter":Landroid/widget/ListAdapter;
     iget v1, p0, Landroid/widget/AbsListView$PerformClick;->mClickMotionPosition:I
 
-    .line 3059
     .local v1, "motionPosition":I
     if-eqz v0, :cond_1
 
@@ -84,12 +79,10 @@
 
     if-lez v3, :cond_1
 
-    .line 3060
     const/4 v3, -0x1
 
     if-eq v1, v3, :cond_1
 
-    .line 3061
     invoke-interface {v0}, Landroid/widget/ListAdapter;->getCount()I
 
     move-result v3
@@ -100,10 +93,8 @@
 
     move-result v3
 
-    .line 3059
     if-eqz v3, :cond_1
 
-    .line 3062
     iget-object v3, p0, Landroid/widget/AbsListView$PerformClick;->this$0:Landroid/widget/AbsListView;
 
     iget-object v4, p0, Landroid/widget/AbsListView$PerformClick;->this$0:Landroid/widget/AbsListView;
@@ -116,11 +107,9 @@
 
     move-result-object v2
 
-    .line 3065
     .local v2, "view":Landroid/view/View;
     if-eqz v2, :cond_1
 
-    .line 3066
     iget-object v3, p0, Landroid/widget/AbsListView$PerformClick;->this$0:Landroid/widget/AbsListView;
 
     invoke-interface {v0, v1}, Landroid/widget/ListAdapter;->getItemId(I)J
@@ -129,7 +118,6 @@
 
     invoke-virtual {v3, v2, v1, v4, v5}, Landroid/widget/AbsListView;->performItemClick(Landroid/view/View;IJ)Z
 
-    .line 3052
     .end local v2    # "view":Landroid/view/View;
     :cond_1
     return-void

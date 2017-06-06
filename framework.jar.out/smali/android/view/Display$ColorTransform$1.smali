@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 1181
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 1184
     new-instance v0, Landroid/view/Display$ColorTransform;
 
     const/4 v1, 0x0
@@ -60,7 +58,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 1183
     invoke-virtual {p0, p1}, Landroid/view/Display$ColorTransform$1;->createFromParcel(Landroid/os/Parcel;)Landroid/view/Display$ColorTransform;
 
     move-result-object v0
@@ -73,7 +70,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 1189
     new-array v0, p1, [Landroid/view/Display$ColorTransform;
 
     return-object v0
@@ -84,7 +80,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 1188
     invoke-virtual {p0, p1}, Landroid/view/Display$ColorTransform$1;->newArray(I)[Landroid/view/Display$ColorTransform;
 
     move-result-object v0

@@ -31,7 +31,6 @@
     .param p4, "val$newFd"    # Ljava/io/File;
 
     .prologue
-    .line 454
     iput-object p1, p0, Lcom/android/server/Watchdog$1;->this$0:Lcom/android/server/Watchdog;
 
     iput-object p3, p0, Lcom/android/server/Watchdog$1;->val$subject:Ljava/lang/String;
@@ -51,17 +50,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 456
     iget-object v0, p0, Lcom/android/server/Watchdog$1;->this$0:Lcom/android/server/Watchdog;
 
     iget-object v0, v0, Lcom/android/server/Watchdog;->mActivity:Lcom/android/server/am/ActivityManagerService;
 
-    .line 457
-    const-string/jumbo v1, "watchdog"
+    const-string v1, "watchdog"
 
-    const-string/jumbo v3, "system_server"
+    const-string v3, "system_server"
 
-    .line 458
     iget-object v6, p0, Lcom/android/server/Watchdog$1;->val$subject:Ljava/lang/String;
 
     iget-object v8, p0, Lcom/android/server/Watchdog$1;->val$newFd:Ljava/io/File;
@@ -74,9 +70,7 @@
 
     move-object v9, v2
 
-    .line 456
     invoke-virtual/range {v0 .. v9}, Lcom/android/server/am/ActivityManagerService;->addErrorToDropBox(Ljava/lang/String;Lcom/android/server/am/ProcessRecord;Ljava/lang/String;Lcom/android/server/am/ActivityRecord;Lcom/android/server/am/ActivityRecord;Ljava/lang/String;Ljava/lang/String;Ljava/io/File;Landroid/app/ApplicationErrorReport$CrashInfo;)V
 
-    .line 455
     return-void
 .end method

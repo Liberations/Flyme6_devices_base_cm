@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
     .param p0, "builderObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 81
     check-cast p0, Landroid/media/MediaMetadata$Builder;
 
     .end local p0    # "builderObj":Ljava/lang/Object;
@@ -45,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 57
     new-instance v0, Landroid/media/MediaMetadata$Builder;
 
     invoke-direct {v0}, Landroid/media/MediaMetadata$Builder;-><init>()V
@@ -60,13 +57,11 @@
     .param p2, "value"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 61
     check-cast p0, Landroid/media/MediaMetadata$Builder;
 
     .end local p0    # "builderObj":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2}, Landroid/media/MediaMetadata$Builder;->putBitmap(Ljava/lang/String;Landroid/graphics/Bitmap;)Landroid/media/MediaMetadata$Builder;
 
-    .line 60
     return-void
 .end method
 
@@ -77,13 +72,11 @@
     .param p2, "value"    # J
 
     .prologue
-    .line 65
     check-cast p0, Landroid/media/MediaMetadata$Builder;
 
     .end local p0    # "builderObj":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2, p3}, Landroid/media/MediaMetadata$Builder;->putLong(Ljava/lang/String;J)Landroid/media/MediaMetadata$Builder;
 
-    .line 64
     return-void
 .end method
 
@@ -94,7 +87,6 @@
     .param p2, "ratingObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 69
     check-cast p0, Landroid/media/MediaMetadata$Builder;
 
     .end local p0    # "builderObj":Ljava/lang/Object;
@@ -103,7 +95,6 @@
     .end local p2    # "ratingObj":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2}, Landroid/media/MediaMetadata$Builder;->putRating(Ljava/lang/String;Landroid/media/Rating;)Landroid/media/MediaMetadata$Builder;
 
-    .line 68
     return-void
 .end method
 
@@ -114,13 +105,11 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 77
     check-cast p0, Landroid/media/MediaMetadata$Builder;
 
     .end local p0    # "builderObj":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2}, Landroid/media/MediaMetadata$Builder;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/media/MediaMetadata$Builder;
 
-    .line 76
     return-void
 .end method
 
@@ -131,12 +120,10 @@
     .param p2, "value"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 73
     check-cast p0, Landroid/media/MediaMetadata$Builder;
 
     .end local p0    # "builderObj":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2}, Landroid/media/MediaMetadata$Builder;->putText(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/media/MediaMetadata$Builder;
 
-    .line 72
     return-void
 .end method

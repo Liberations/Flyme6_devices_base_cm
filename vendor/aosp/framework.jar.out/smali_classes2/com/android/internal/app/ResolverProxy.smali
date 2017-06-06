@@ -20,7 +20,6 @@
     .locals 0
 
     .prologue
-    .line 30
     invoke-direct {p0}, Lcom/android/internal/app/ResolverActivity;-><init>()V
 
     return-void
@@ -32,10 +31,8 @@
     .locals 0
 
     .prologue
-    .line 55
     invoke-super {p0}, Lcom/android/internal/app/ResolverActivity;->bindProfileView()V
 
-    .line 54
     return-void
 .end method
 
@@ -59,7 +56,6 @@
     .end annotation
 
     .prologue
-    .line 92
     .local p1, "payloadIntents":Ljava/util/List;, "Ljava/util/List<Landroid/content/Intent;>;"
     .local p3, "rList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-super {p0, p1, p2, p3, p4}, Lcom/android/internal/app/ResolverActivity;->configureContentView(Ljava/util/List;[Landroid/content/Intent;Ljava/util/List;Z)Z
@@ -93,14 +89,12 @@
     .end annotation
 
     .prologue
-    .line 108
     .local p2, "payloadIntents":Ljava/util/List;, "Ljava/util/List<Landroid/content/Intent;>;"
     .local p4, "rList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-virtual/range {p0 .. p6}, Lcom/android/internal/app/ResolverProxy;->createProxyAdapter(Landroid/content/Context;Ljava/util/List;[Landroid/content/Intent;Ljava/util/List;IZ)Lcom/android/internal/app/ResolverProxy$ProxyListAdapter;
 
     move-result-object v0
 
-    .line 110
     .local v0, "adapter":Lcom/android/internal/app/ResolverProxy$ProxyListAdapter;
     if-eqz v0, :cond_0
 
@@ -108,7 +102,6 @@
     :goto_0
     return-object v0
 
-    .line 112
     .restart local v0    # "adapter":Lcom/android/internal/app/ResolverProxy$ProxyListAdapter;
     :cond_0
     invoke-super/range {p0 .. p6}, Lcom/android/internal/app/ResolverActivity;->createAdapter(Landroid/content/Context;Ljava/util/List;[Landroid/content/Intent;Ljava/util/List;IZ)Lcom/android/internal/app/ResolverActivity$ResolveListAdapter;
@@ -142,7 +135,6 @@
     .end annotation
 
     .prologue
-    .line 121
     .local p2, "payloadIntents":Ljava/util/List;, "Ljava/util/List<Landroid/content/Intent;>;"
     .local p4, "rList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     const/4 v0, 0x0
@@ -154,7 +146,6 @@
     .locals 1
 
     .prologue
-    .line 50
     invoke-super {p0}, Lcom/android/internal/app/ResolverActivity;->getLayoutResource()I
 
     move-result v0
@@ -167,10 +158,8 @@
     .param p1, "cti"    # Lcom/android/internal/app/ResolverActivity$TargetInfo;
 
     .prologue
-    .line 85
     invoke-super {p0, p1}, Lcom/android/internal/app/ResolverActivity;->onActivityStarted(Lcom/android/internal/app/ResolverActivity$TargetInfo;)V
 
-    .line 84
     return-void
 .end method
 
@@ -181,10 +170,8 @@
     .param p3, "alwaysUseOption"    # Z
 
     .prologue
-    .line 99
     invoke-super {p0, p1, p2, p3}, Lcom/android/internal/app/ResolverActivity;->onPrepareAdapterView(Landroid/widget/AbsListView;Lcom/android/internal/app/ResolverActivity$ResolveListAdapter;Z)V
 
-    .line 98
     return-void
 .end method
 
@@ -192,10 +179,8 @@
     .locals 0
 
     .prologue
-    .line 39
     invoke-super {p0}, Lcom/android/internal/app/ResolverActivity;->onSetupVoiceInteraction()V
 
-    .line 38
     return-void
 .end method
 
@@ -205,7 +190,6 @@
     .param p2, "index"    # I
 
     .prologue
-    .line 60
     invoke-super {p0, p1, p2}, Lcom/android/internal/app/ResolverActivity;->optionForChooserTarget(Lcom/android/internal/app/ResolverActivity$TargetInfo;I)Landroid/app/VoiceInteractor$PickOptionRequest$Option;
 
     move-result-object v0
@@ -217,10 +201,8 @@
     .locals 0
 
     .prologue
-    .line 45
     invoke-super {p0}, Lcom/android/internal/app/ResolverActivity;->sendVoiceChoicesIfNeeded()V
 
-    .line 44
     return-void
 .end method
 
@@ -229,10 +211,8 @@
     .param p1, "alwaysUse"    # Z
 
     .prologue
-    .line 125
     iput-boolean p1, p0, Lcom/android/internal/app/ResolverProxy;->mAlwaysUseOption:Z
 
-    .line 124
     return-void
 .end method
 
@@ -241,7 +221,6 @@
     .param p1, "target"    # Lcom/android/internal/app/ResolverActivity$TargetInfo;
 
     .prologue
-    .line 70
     invoke-super {p0, p1}, Lcom/android/internal/app/ResolverActivity;->shouldAutoLaunchSingleChoice(Lcom/android/internal/app/ResolverActivity$TargetInfo;)Z
 
     move-result v0
@@ -253,7 +232,6 @@
     .locals 1
 
     .prologue
-    .line 65
     invoke-super {p0}, Lcom/android/internal/app/ResolverActivity;->shouldGetActivityMetadata()Z
 
     move-result v0
@@ -266,10 +244,8 @@
     .param p1, "ri"    # Landroid/content/pm/ResolveInfo;
 
     .prologue
-    .line 75
     invoke-super {p0, p1}, Lcom/android/internal/app/ResolverActivity;->showAppDetails(Landroid/content/pm/ResolveInfo;)V
 
-    .line 74
     return-void
 .end method
 
@@ -280,9 +256,7 @@
     .param p3, "filtered"    # Z
 
     .prologue
-    .line 80
     invoke-super {p0, p1, p2, p3}, Lcom/android/internal/app/ResolverActivity;->startSelected(IZZ)V
 
-    .line 79
     return-void
 .end method

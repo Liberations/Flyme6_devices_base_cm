@@ -27,7 +27,6 @@
     .param p2, "val$state"    # Lcom/android/internal/widget/LockPatternView$CellState;
 
     .prologue
-    .line 810
     iput-object p1, p0, Lcom/android/internal/widget/LockPatternView$6;->this$0:Lcom/android/internal/widget/LockPatternView;
 
     iput-object p2, p0, Lcom/android/internal/widget/LockPatternView$6;->val$state:Lcom/android/internal/widget/LockPatternView$CellState;
@@ -44,13 +43,11 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 813
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternView$6;->val$state:Lcom/android/internal/widget/LockPatternView$CellState;
 
     const/4 v1, 0x0
 
     iput-object v1, v0, Lcom/android/internal/widget/LockPatternView$CellState;->lineAnimator:Landroid/animation/ValueAnimator;
 
-    .line 812
     return-void
 .end method

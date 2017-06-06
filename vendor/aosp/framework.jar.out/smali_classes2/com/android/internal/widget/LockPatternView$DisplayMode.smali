@@ -44,37 +44,30 @@
 
     const/4 v2, 0x0
 
-    .line 237
     new-instance v0, Lcom/android/internal/widget/LockPatternView$DisplayMode;
 
-    const-string/jumbo v1, "Correct"
+    const-string v1, "Correct"
 
     invoke-direct {v0, v1, v2}, Lcom/android/internal/widget/LockPatternView$DisplayMode;-><init>(Ljava/lang/String;I)V
 
-    .line 240
     sput-object v0, Lcom/android/internal/widget/LockPatternView$DisplayMode;->Correct:Lcom/android/internal/widget/LockPatternView$DisplayMode;
 
-    .line 242
     new-instance v0, Lcom/android/internal/widget/LockPatternView$DisplayMode;
 
-    const-string/jumbo v1, "Animate"
+    const-string v1, "Animate"
 
     invoke-direct {v0, v1, v3}, Lcom/android/internal/widget/LockPatternView$DisplayMode;-><init>(Ljava/lang/String;I)V
 
-    .line 245
     sput-object v0, Lcom/android/internal/widget/LockPatternView$DisplayMode;->Animate:Lcom/android/internal/widget/LockPatternView$DisplayMode;
 
-    .line 247
     new-instance v0, Lcom/android/internal/widget/LockPatternView$DisplayMode;
 
-    const-string/jumbo v1, "Wrong"
+    const-string v1, "Wrong"
 
     invoke-direct {v0, v1, v4}, Lcom/android/internal/widget/LockPatternView$DisplayMode;-><init>(Ljava/lang/String;I)V
 
-    .line 250
     sput-object v0, Lcom/android/internal/widget/LockPatternView$DisplayMode;->Wrong:Lcom/android/internal/widget/LockPatternView$DisplayMode;
 
-    .line 235
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/android/internal/widget/LockPatternView$DisplayMode;
@@ -100,7 +93,6 @@
     .locals 0
 
     .prologue
-    .line 235
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -111,7 +103,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 235
     const-class v0, Lcom/android/internal/widget/LockPatternView$DisplayMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -127,7 +118,6 @@
     .locals 1
 
     .prologue
-    .line 235
     sget-object v0, Lcom/android/internal/widget/LockPatternView$DisplayMode;->$VALUES:[Lcom/android/internal/widget/LockPatternView$DisplayMode;
 
     return-object v0

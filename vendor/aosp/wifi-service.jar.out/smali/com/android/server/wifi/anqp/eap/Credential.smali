@@ -33,22 +33,19 @@
     .end annotation
 
     .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     const/4 v1, 0x1
 
     if-eq p2, v1, :cond_0
 
-    .line 32
     new-instance v1, Ljava/net/ProtocolException;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "Bad length: "
+    const-string v3, "Bad length: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -66,18 +63,15 @@
 
     throw v1
 
-    .line 35
     :cond_0
     iput-object p1, p0, Lcom/android/server/wifi/anqp/eap/Credential;->mAuthInfoID:Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
 
-    .line 36
     invoke-virtual {p3}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v1
 
     and-int/lit16 v0, v1, 0xff
 
-    .line 38
     .local v0, "typeID":I
     invoke-static {}, Lcom/android/server/wifi/anqp/eap/Credential$CredType;->values()[Lcom/android/server/wifi/anqp/eap/Credential$CredType;
 
@@ -87,21 +81,17 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 39
     invoke-static {}, Lcom/android/server/wifi/anqp/eap/Credential$CredType;->values()[Lcom/android/server/wifi/anqp/eap/Credential$CredType;
 
     move-result-object v1
 
     aget-object v1, v1, v0
 
-    .line 38
     :goto_0
     iput-object v1, p0, Lcom/android/server/wifi/anqp/eap/Credential;->mCredType:Lcom/android/server/wifi/anqp/eap/Credential$CredType;
 
-    .line 30
     return-void
 
-    .line 40
     :cond_1
     sget-object v1, Lcom/android/server/wifi/anqp/eap/Credential$CredType;->Reserved:Lcom/android/server/wifi/anqp/eap/Credential$CredType;
 
@@ -119,13 +109,10 @@
 
     const/4 v1, 0x0
 
-    .line 55
     if-ne p1, p0, :cond_0
 
-    .line 56
     return v0
 
-    .line 57
     :cond_0
     if-eqz p1, :cond_1
 
@@ -137,11 +124,9 @@
 
     if-eq v2, v3, :cond_2
 
-    .line 58
     :cond_1
     return v1
 
-    .line 60
     :cond_2
     check-cast p1, Lcom/android/server/wifi/anqp/eap/Credential;
 
@@ -169,7 +154,6 @@
     .locals 1
 
     .prologue
-    .line 45
     iget-object v0, p0, Lcom/android/server/wifi/anqp/eap/Credential;->mAuthInfoID:Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
 
     return-object v0
@@ -179,7 +163,6 @@
     .locals 1
 
     .prologue
-    .line 65
     iget-object v0, p0, Lcom/android/server/wifi/anqp/eap/Credential;->mCredType:Lcom/android/server/wifi/anqp/eap/Credential$CredType;
 
     return-object v0
@@ -189,7 +172,6 @@
     .locals 2
 
     .prologue
-    .line 50
     iget-object v0, p0, Lcom/android/server/wifi/anqp/eap/Credential;->mAuthInfoID:Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
 
     invoke-virtual {v0}, Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;->hashCode()I
@@ -213,12 +195,11 @@
     .locals 2
 
     .prologue
-    .line 70
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "Auth method "
+    const-string v1, "Auth method "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -230,7 +211,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, " = "
+    const-string v1, " = "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -242,7 +223,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "\n"
+    const-string v1, "\n"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

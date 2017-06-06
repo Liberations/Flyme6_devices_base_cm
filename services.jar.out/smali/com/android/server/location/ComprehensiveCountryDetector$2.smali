@@ -39,7 +39,6 @@
     .param p5, "val$startLocationBasedDetection"    # Z
 
     .prologue
-    .line 283
     iput-object p1, p0, Lcom/android/server/location/ComprehensiveCountryDetector$2;->this$0:Lcom/android/server/location/ComprehensiveCountryDetector;
 
     iput-object p2, p0, Lcom/android/server/location/ComprehensiveCountryDetector$2;->val$country:Landroid/location/Country;
@@ -61,10 +60,8 @@
     .locals 5
 
     .prologue
-    .line 286
     iget-object v0, p0, Lcom/android/server/location/ComprehensiveCountryDetector$2;->this$0:Lcom/android/server/location/ComprehensiveCountryDetector;
 
-    .line 287
     iget-object v1, p0, Lcom/android/server/location/ComprehensiveCountryDetector$2;->val$country:Landroid/location/Country;
 
     iget-object v2, p0, Lcom/android/server/location/ComprehensiveCountryDetector$2;->val$detectedCountry:Landroid/location/Country;
@@ -73,9 +70,7 @@
 
     iget-boolean v4, p0, Lcom/android/server/location/ComprehensiveCountryDetector$2;->val$startLocationBasedDetection:Z
 
-    .line 286
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/android/server/location/ComprehensiveCountryDetector;->runAfterDetection(Landroid/location/Country;Landroid/location/Country;ZZ)V
 
-    .line 285
     return-void
 .end method

@@ -32,7 +32,6 @@
     .param p3, "val$standbyAction"    # I
 
     .prologue
-    .line 2013
     .local p2, "val$devices":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/hdmi/HdmiCecLocalDevice;>;"
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$3;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
@@ -52,14 +51,13 @@
     .param p1, "device"    # Lcom/android/server/hdmi/HdmiCecLocalDevice;
 
     .prologue
-    .line 2016
-    const-string/jumbo v0, "HdmiControlService"
+    const-string v0, "HdmiControlService"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "On standby-action cleared:"
+    const-string v2, "On standby-action cleared:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -77,12 +75,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2017
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$3;->val$devices:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 2018
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$3;->val$devices:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
@@ -91,14 +87,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 2019
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$3;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     iget v1, p0, Lcom/android/server/hdmi/HdmiControlService$3;->val$standbyAction:I
 
     invoke-static {v0, v1}, Lcom/android/server/hdmi/HdmiControlService;->-wrap18(Lcom/android/server/hdmi/HdmiControlService;I)V
 
-    .line 2015
     :cond_0
     return-void
 .end method

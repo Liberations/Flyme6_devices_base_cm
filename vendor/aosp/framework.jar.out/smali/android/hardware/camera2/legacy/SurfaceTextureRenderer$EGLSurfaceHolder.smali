@@ -32,7 +32,6 @@
     .param p1, "this$0"    # Landroid/hardware/camera2/legacy/SurfaceTextureRenderer;
 
     .prologue
-    .line 70
     iput-object p1, p0, Landroid/hardware/camera2/legacy/SurfaceTextureRenderer$EGLSurfaceHolder;->this$0:Landroid/hardware/camera2/legacy/SurfaceTextureRenderer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

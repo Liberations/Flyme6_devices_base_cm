@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 298
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,7 +36,6 @@
     .param p3, "drawerGravity"    # I
 
     .prologue
-    .line 307
     return-void
 .end method
 
@@ -46,7 +44,6 @@
     .param p1, "drawerLayout"    # Landroid/view/View;
 
     .prologue
-    .line 299
     return-void
 .end method
 
@@ -57,7 +54,6 @@
     .param p3, "drawerGravity"    # I
 
     .prologue
-    .line 303
     return-void
 .end method
 
@@ -66,7 +62,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 317
     const/4 v0, 0x0
 
     return-object v0
@@ -77,7 +72,6 @@
     .param p1, "insets"    # Ljava/lang/Object;
 
     .prologue
-    .line 312
     const/4 v0, 0x0
 
     return v0

@@ -33,7 +33,6 @@
     .param p3, "val$fqdn"    # Ljava/lang/String;
 
     .prologue
-    .line 2185
     iput-object p1, p0, Lcom/android/server/wifi/WifiConfigStore$3;->this$0:Lcom/android/server/wifi/WifiConfigStore;
 
     iput-object p2, p0, Lcom/android/server/wifi/WifiConfigStore$3;->val$homeSP:Lcom/android/server/wifi/hotspot2/pps/HomeSP;
@@ -57,13 +56,11 @@
     .end annotation
 
     .prologue
-    .line 2189
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore$3;->val$homeSP:Lcom/android/server/wifi/hotspot2/pps/HomeSP;
 
     if-eqz v1, :cond_0
 
-    .line 2190
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore$3;->this$0:Lcom/android/server/wifi/WifiConfigStore;
 
     invoke-static {v1}, Lcom/android/server/wifi/WifiConfigStore;->-get1(Lcom/android/server/wifi/WifiConfigStore;)Lcom/android/server/wifi/hotspot2/omadm/MOManager;
@@ -74,11 +71,9 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/wifi/hotspot2/omadm/MOManager;->addSP(Lcom/android/server/wifi/hotspot2/pps/HomeSP;)V
 
-    .line 2187
     :goto_0
     return-void
 
-    .line 2193
     :cond_0
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore$3;->this$0:Lcom/android/server/wifi/WifiConfigStore;
 
@@ -94,11 +89,9 @@
 
     goto :goto_0
 
-    .line 2195
     :catch_0
     move-exception v0
 
-    .line 2196
     .local v0, "e":Ljava/io/IOException;
     iget-object v1, p0, Lcom/android/server/wifi/WifiConfigStore$3;->this$0:Lcom/android/server/wifi/WifiConfigStore;
 
@@ -106,7 +99,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "Could not write /data/misc/wifi/PerProviderSubscription.conf : "
+    const-string v3, "Could not write /data/misc/wifi/PerProviderSubscription.conf : "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

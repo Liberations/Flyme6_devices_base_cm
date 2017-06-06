@@ -33,7 +33,6 @@
     .locals 0
 
     .prologue
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -54,12 +53,11 @@
     .locals 2
 
     .prologue
-    .line 46
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "{ code="
+    const-string v1, "{ code="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -71,7 +69,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, " looping="
+    const-string v1, " looping="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -83,7 +81,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, " attr="
+    const-string v1, " attr="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -95,26 +93,20 @@
 
     move-result-object v0
 
-    .line 47
-    const-string/jumbo v1, " uri="
+    const-string v1, " uri="
 
-    .line 46
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 47
     iget-object v1, p0, Landroid/media/AsyncPlayer$Command;->uri:Landroid/net/Uri;
 
-    .line 46
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 47
-    const-string/jumbo v1, " }"
+    const-string v1, " }"
 
-    .line 46
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0

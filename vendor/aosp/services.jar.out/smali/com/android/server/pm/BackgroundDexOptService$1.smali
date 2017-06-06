@@ -33,7 +33,6 @@
     .param p5, "val$jobParams"    # Landroid/app/job/JobParameters;
 
     .prologue
-    .line 79
     .local p3, "val$pkgs":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Ljava/lang/String;>;"
     iput-object p1, p0, Lcom/android/server/pm/BackgroundDexOptService$1;->this$0:Lcom/android/server/pm/BackgroundDexOptService;
 
@@ -54,7 +53,6 @@
     .locals 6
 
     .prologue
-    .line 82
     iget-object v2, p0, Lcom/android/server/pm/BackgroundDexOptService$1;->val$pkgs:Landroid/util/ArraySet;
 
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -76,7 +74,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 83
     .local v0, "pkg":Ljava/lang/String;
     iget-object v2, p0, Lcom/android/server/pm/BackgroundDexOptService$1;->this$0:Lcom/android/server/pm/BackgroundDexOptService;
 
@@ -88,17 +85,14 @@
 
     if-nez v2, :cond_1
 
-    .line 85
     iget-object v2, p0, Lcom/android/server/pm/BackgroundDexOptService$1;->this$0:Lcom/android/server/pm/BackgroundDexOptService;
 
     const-wide/16 v4, 0x0
 
     invoke-static {v2, v4, v5}, Lcom/android/server/pm/BackgroundDexOptService;->schedule(Landroid/content/Context;J)V
 
-    .line 86
     return-void
 
-    .line 88
     :cond_1
     sget-object v2, Lcom/android/server/pm/BackgroundDexOptService;->sFailedPackageNames:Landroid/util/ArraySet;
 
@@ -108,7 +102,6 @@
 
     if-nez v2, :cond_0
 
-    .line 92
     iget-object v2, p0, Lcom/android/server/pm/BackgroundDexOptService$1;->val$pm:Lcom/android/server/pm/PackageManagerService;
 
     const/4 v3, 0x0
@@ -121,14 +114,12 @@
 
     if-nez v2, :cond_0
 
-    .line 95
     sget-object v2, Lcom/android/server/pm/BackgroundDexOptService;->sFailedPackageNames:Landroid/util/ArraySet;
 
     invoke-virtual {v2, v0}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 99
     .end local v0    # "pkg":Ljava/lang/String;
     :cond_2
     iget-object v2, p0, Lcom/android/server/pm/BackgroundDexOptService$1;->this$0:Lcom/android/server/pm/BackgroundDexOptService;
@@ -139,6 +130,5 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/server/pm/BackgroundDexOptService;->jobFinished(Landroid/app/job/JobParameters;Z)V
 
-    .line 81
     return-void
 .end method

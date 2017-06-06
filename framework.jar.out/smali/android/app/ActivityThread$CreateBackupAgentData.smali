@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 396
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,12 +38,11 @@
     .locals 2
 
     .prologue
-    .line 401
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "CreateBackupAgentData{appInfo="
+    const-string v1, "CreateBackupAgentData{appInfo="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -56,44 +54,34 @@
 
     move-result-object v0
 
-    .line 402
-    const-string/jumbo v1, " backupAgent="
+    const-string v1, " backupAgent="
 
-    .line 401
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 402
     iget-object v1, p0, Landroid/app/ActivityThread$CreateBackupAgentData;->appInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-object v1, v1, Landroid/content/pm/ApplicationInfo;->backupAgentName:Ljava/lang/String;
 
-    .line 401
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 403
-    const-string/jumbo v1, " mode="
+    const-string v1, " mode="
 
-    .line 401
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 403
     iget v1, p0, Landroid/app/ActivityThread$CreateBackupAgentData;->backupMode:I
 
-    .line 401
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 403
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
-    .line 401
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0

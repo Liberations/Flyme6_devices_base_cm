@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 428
     invoke-direct {p0}, Landroid/graphics/Paint$FontMetricsInt;-><init>()V
 
     return-void
@@ -35,7 +34,6 @@
     .locals 2
 
     .prologue
-    .line 432
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -48,7 +46,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, " width="
+    const-string v1, " width="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

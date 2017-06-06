@@ -28,7 +28,6 @@
     .param p3, "val$callback"    # Landroid/media/AudioDeviceCallback;
 
     .prologue
-    .line 4103
     iput-object p1, p0, Landroid/media/AudioManager$NativeEventHandlerDelegate$1;->this$1:Landroid/media/AudioManager$NativeEventHandlerDelegate;
 
     iput-object p3, p0, Landroid/media/AudioManager$NativeEventHandlerDelegate$1;->val$callback:Landroid/media/AudioDeviceCallback;
@@ -45,12 +44,10 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 4106
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 4121
     invoke-static {}, Landroid/media/AudioManager;->-get0()Ljava/lang/String;
 
     move-result-object v0
@@ -59,7 +56,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Unknown native event type: "
+    const-string v2, "Unknown native event type: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -77,18 +74,15 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4105
     :cond_0
     :goto_0
     return-void
 
-    .line 4109
     :pswitch_0
     iget-object v0, p0, Landroid/media/AudioManager$NativeEventHandlerDelegate$1;->val$callback:Landroid/media/AudioDeviceCallback;
 
     if-eqz v0, :cond_0
 
-    .line 4110
     iget-object v1, p0, Landroid/media/AudioManager$NativeEventHandlerDelegate$1;->val$callback:Landroid/media/AudioDeviceCallback;
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -99,13 +93,11 @@
 
     goto :goto_0
 
-    .line 4115
     :pswitch_1
     iget-object v0, p0, Landroid/media/AudioManager$NativeEventHandlerDelegate$1;->val$callback:Landroid/media/AudioDeviceCallback;
 
     if-eqz v0, :cond_0
 
-    .line 4116
     iget-object v1, p0, Landroid/media/AudioManager$NativeEventHandlerDelegate$1;->val$callback:Landroid/media/AudioDeviceCallback;
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -116,7 +108,6 @@
 
     goto :goto_0
 
-    .line 4106
     nop
 
     :pswitch_data_0

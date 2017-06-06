@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/dreams/DreamManagerService;
 
     .prologue
-    .line 730
     iput-object p1, p0, Lcom/android/server/dreams/DreamManagerService$2;->this$0:Lcom/android/server/dreams/DreamManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 5
 
     .prologue
-    .line 734
     iget-object v0, p0, Lcom/android/server/dreams/DreamManagerService$2;->this$0:Lcom/android/server/dreams/DreamManagerService;
 
     invoke-static {v0}, Lcom/android/server/dreams/DreamManagerService;->-get5(Lcom/android/server/dreams/DreamManagerService;)Ljava/lang/Object;
@@ -50,7 +48,6 @@
 
     monitor-enter v1
 
-    .line 735
     :try_start_0
     iget-object v0, p0, Lcom/android/server/dreams/DreamManagerService$2;->this$0:Lcom/android/server/dreams/DreamManagerService;
 
@@ -68,7 +65,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 736
     iget-object v0, p0, Lcom/android/server/dreams/DreamManagerService$2;->this$0:Lcom/android/server/dreams/DreamManagerService;
 
     invoke-static {v0}, Lcom/android/server/dreams/DreamManagerService;->-get3(Lcom/android/server/dreams/DreamManagerService;)Landroid/content/ComponentName;
@@ -93,10 +89,8 @@
     :goto_0
     monitor-exit v1
 
-    .line 732
     return-void
 
-    .line 738
     :cond_1
     :try_start_1
     iget-object v0, p0, Lcom/android/server/dreams/DreamManagerService$2;->this$0:Lcom/android/server/dreams/DreamManagerService;
@@ -109,17 +103,14 @@
 
     move-result-wide v2
 
-    .line 739
-    const-string/jumbo v4, "android.server.dreams:SYSPROP"
+    const-string v4, "android.server.dreams:SYSPROP"
 
-    .line 738
     invoke-virtual {v0, v2, v3, v4}, Landroid/os/PowerManager;->wakeUp(JLjava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    .line 734
     :catchall_0
     move-exception v0
 

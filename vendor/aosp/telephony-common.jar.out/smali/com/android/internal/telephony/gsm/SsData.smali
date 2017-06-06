@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,7 +46,6 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 131
     :try_start_0
     invoke-static {}, Lcom/android/internal/telephony/gsm/SsData$RequestType;->values()[Lcom/android/internal/telephony/gsm/SsData$RequestType;
 
@@ -59,19 +57,16 @@
 
     return-object v1
 
-    .line 132
     :catch_0
     move-exception v0
 
-    .line 133
     .local v0, "e":Ljava/lang/IndexOutOfBoundsException;
-    const-string/jumbo v1, "GSMPhone"
+    const-string v1, "GSMPhone"
 
-    const-string/jumbo v2, "Invalid Request type"
+    const-string v2, "Invalid Request type"
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 134
     const/4 v1, 0x0
 
     return-object v1
@@ -82,7 +77,6 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 122
     :try_start_0
     invoke-static {}, Lcom/android/internal/telephony/gsm/SsData$ServiceType;->values()[Lcom/android/internal/telephony/gsm/SsData$ServiceType;
 
@@ -94,19 +88,16 @@
 
     return-object v1
 
-    .line 123
     :catch_0
     move-exception v0
 
-    .line 124
     .local v0, "e":Ljava/lang/IndexOutOfBoundsException;
-    const-string/jumbo v1, "GSMPhone"
+    const-string v1, "GSMPhone"
 
-    const-string/jumbo v2, "Invalid Service type"
+    const-string v2, "Invalid Service type"
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 125
     const/4 v1, 0x0
 
     return-object v1
@@ -117,7 +108,6 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 140
     :try_start_0
     invoke-static {}, Lcom/android/internal/telephony/gsm/SsData$TeleserviceType;->values()[Lcom/android/internal/telephony/gsm/SsData$TeleserviceType;
 
@@ -129,19 +119,16 @@
 
     return-object v1
 
-    .line 141
     :catch_0
     move-exception v0
 
-    .line 142
     .local v0, "e":Ljava/lang/IndexOutOfBoundsException;
-    const-string/jumbo v1, "GSMPhone"
+    const-string v1, "GSMPhone"
 
-    const-string/jumbo v2, "Invalid Teleservice type"
+    const-string v2, "Invalid Teleservice type"
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 143
     const/4 v1, 0x0
 
     return-object v1
@@ -151,12 +138,11 @@
     .locals 2
 
     .prologue
-    .line 148
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "[SsData] ServiceType: "
+    const-string v1, "[SsData] ServiceType: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -168,86 +154,66 @@
 
     move-result-object v0
 
-    .line 149
-    const-string/jumbo v1, " RequestType: "
+    const-string v1, " RequestType: "
 
-    .line 148
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 149
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/SsData;->requestType:Lcom/android/internal/telephony/gsm/SsData$RequestType;
 
-    .line 148
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 150
-    const-string/jumbo v1, " TeleserviceType: "
+    const-string v1, " TeleserviceType: "
 
-    .line 148
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 150
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/SsData;->teleserviceType:Lcom/android/internal/telephony/gsm/SsData$TeleserviceType;
 
-    .line 148
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 151
-    const-string/jumbo v1, " ServiceClass: "
+    const-string v1, " ServiceClass: "
 
-    .line 148
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 151
     iget v1, p0, Lcom/android/internal/telephony/gsm/SsData;->serviceClass:I
 
-    .line 148
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 152
-    const-string/jumbo v1, " Result: "
+    const-string v1, " Result: "
 
-    .line 148
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 152
     iget v1, p0, Lcom/android/internal/telephony/gsm/SsData;->result:I
 
-    .line 148
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 153
-    const-string/jumbo v1, " Is Service Type CF: "
+    const-string v1, " Is Service Type CF: "
 
-    .line 148
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 153
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/SsData;->serviceType:Lcom/android/internal/telephony/gsm/SsData$ServiceType;
 
     invoke-virtual {v1}, Lcom/android/internal/telephony/gsm/SsData$ServiceType;->isTypeCF()Z
 
     move-result v1
 
-    .line 148
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v0

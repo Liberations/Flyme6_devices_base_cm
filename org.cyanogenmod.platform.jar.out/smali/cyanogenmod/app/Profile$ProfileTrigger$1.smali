@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 355
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 357
     new-instance v0, Lcyanogenmod/app/Profile$ProfileTrigger;
 
     const/4 v1, 0x0
@@ -60,7 +58,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 356
     invoke-virtual {p0, p1}, Lcyanogenmod/app/Profile$ProfileTrigger$1;->createFromParcel(Landroid/os/Parcel;)Lcyanogenmod/app/Profile$ProfileTrigger;
 
     move-result-object v0
@@ -73,7 +70,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 362
     new-array v0, p1, [Lcyanogenmod/app/Profile$ProfileTrigger;
 
     return-object v0
@@ -84,7 +80,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 361
     invoke-virtual {p0, p1}, Lcyanogenmod/app/Profile$ProfileTrigger$1;->newArray(I)[Lcyanogenmod/app/Profile$ProfileTrigger;
 
     move-result-object v0

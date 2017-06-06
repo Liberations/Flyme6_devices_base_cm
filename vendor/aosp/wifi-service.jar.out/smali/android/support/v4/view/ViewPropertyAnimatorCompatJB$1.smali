@@ -27,7 +27,6 @@
     .param p2, "val$view"    # Landroid/view/View;
 
     .prologue
-    .line 39
     iput-object p1, p0, Landroid/support/v4/view/ViewPropertyAnimatorCompatJB$1;->val$listener:Landroid/support/v4/view/ViewPropertyAnimatorListener;
 
     iput-object p2, p0, Landroid/support/v4/view/ViewPropertyAnimatorCompatJB$1;->val$view:Landroid/view/View;
@@ -44,14 +43,12 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 42
     iget-object v0, p0, Landroid/support/v4/view/ViewPropertyAnimatorCompatJB$1;->val$listener:Landroid/support/v4/view/ViewPropertyAnimatorListener;
 
     iget-object v1, p0, Landroid/support/v4/view/ViewPropertyAnimatorCompatJB$1;->val$view:Landroid/view/View;
 
     invoke-interface {v0, v1}, Landroid/support/v4/view/ViewPropertyAnimatorListener;->onAnimationCancel(Landroid/view/View;)V
 
-    .line 41
     return-void
 .end method
 
@@ -60,14 +57,12 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 47
     iget-object v0, p0, Landroid/support/v4/view/ViewPropertyAnimatorCompatJB$1;->val$listener:Landroid/support/v4/view/ViewPropertyAnimatorListener;
 
     iget-object v1, p0, Landroid/support/v4/view/ViewPropertyAnimatorCompatJB$1;->val$view:Landroid/view/View;
 
     invoke-interface {v0, v1}, Landroid/support/v4/view/ViewPropertyAnimatorListener;->onAnimationEnd(Landroid/view/View;)V
 
-    .line 46
     return-void
 .end method
 
@@ -76,13 +71,11 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 52
     iget-object v0, p0, Landroid/support/v4/view/ViewPropertyAnimatorCompatJB$1;->val$listener:Landroid/support/v4/view/ViewPropertyAnimatorListener;
 
     iget-object v1, p0, Landroid/support/v4/view/ViewPropertyAnimatorCompatJB$1;->val$view:Landroid/view/View;
 
     invoke-interface {v0, v1}, Landroid/support/v4/view/ViewPropertyAnimatorListener;->onAnimationStart(Landroid/view/View;)V
 
-    .line 51
     return-void
 .end method

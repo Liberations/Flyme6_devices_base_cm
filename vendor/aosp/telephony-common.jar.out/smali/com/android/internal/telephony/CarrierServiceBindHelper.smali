@@ -77,7 +77,6 @@
     .locals 1
 
     .prologue
-    .line 48
     const-class v0, Lcom/android/internal/telephony/CarrierServiceBindHelper;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -86,7 +85,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/CarrierServiceBindHelper;->LOG_TAG:Ljava/lang/String;
 
-    .line 47
     return-void
 .end method
 
@@ -97,27 +95,22 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 98
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
     new-instance v0, Lcom/android/internal/telephony/CarrierServiceBindHelper$PackageChangedBroadcastReceiver;
 
     invoke-direct {v0, p0, v4}, Lcom/android/internal/telephony/CarrierServiceBindHelper$PackageChangedBroadcastReceiver;-><init>(Lcom/android/internal/telephony/CarrierServiceBindHelper;Lcom/android/internal/telephony/CarrierServiceBindHelper$PackageChangedBroadcastReceiver;)V
 
     iput-object v0, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 61
     new-instance v0, Lcom/android/internal/telephony/CarrierServiceBindHelper$1;
 
     invoke-direct {v0, p0}, Lcom/android/internal/telephony/CarrierServiceBindHelper$1;-><init>(Lcom/android/internal/telephony/CarrierServiceBindHelper;)V
 
     iput-object v0, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper;->mHandler:Landroid/os/Handler;
 
-    .line 99
     iput-object p1, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper;->mContext:Landroid/content/Context;
 
-    .line 101
     invoke-static {p1}, Landroid/telephony/TelephonyManager;->from(Landroid/content/Context;)Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -126,20 +119,17 @@
 
     move-result v6
 
-    .line 102
     .local v6, "numPhones":I
     new-array v0, v6, [Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;
 
     iput-object v0, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper;->mBindings:[Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;
 
-    .line 104
     const/4 v7, 0x0
 
     .local v7, "phoneId":I
     :goto_0
     if-ge v7, v6, :cond_0
 
-    .line 105
     iget-object v0, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper;->mBindings:[Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;
 
     new-instance v1, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;
@@ -148,39 +138,32 @@
 
     aput-object v1, v0, v7
 
-    .line 104
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
-    .line 110
     :cond_0
     new-instance v3, Landroid/content/IntentFilter;
 
     invoke-direct {v3}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 111
     .local v3, "pkgFilter":Landroid/content/IntentFilter;
-    const-string/jumbo v0, "android.intent.action.PACKAGE_ADDED"
+    const-string v0, "android.intent.action.PACKAGE_ADDED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 112
-    const-string/jumbo v0, "android.intent.action.PACKAGE_REMOVED"
+    const-string v0, "android.intent.action.PACKAGE_REMOVED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 113
-    const-string/jumbo v0, "android.intent.action.PACKAGE_REPLACED"
+    const-string v0, "android.intent.action.PACKAGE_REPLACED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 114
-    const-string/jumbo v0, "package"
+    const-string v0, "package"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 115
     iget-object v1, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper;->mReceiver:Landroid/content/BroadcastReceiver;
 
     sget-object v2, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
@@ -191,7 +174,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 98
     return-void
 .end method
 
@@ -200,12 +182,10 @@
     .param p0, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 297
     sget-object v0, Lcom/android/internal/telephony/CarrierServiceBindHelper;->LOG_TAG:Ljava/lang/String;
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 296
     return-void
 .end method
 
@@ -218,12 +198,10 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 301
-    const-string/jumbo v1, "CarrierServiceBindHelper:"
+    const-string v1, "CarrierServiceBindHelper:"
 
     invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 302
     iget-object v2, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper;->mBindings:[Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;
 
     const/4 v1, 0x0
@@ -235,16 +213,13 @@
 
     aget-object v0, v2, v1
 
-    .line 303
     .local v0, "binding":Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 302
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 300
     .end local v0    # "binding":Lcom/android/internal/telephony/CarrierServiceBindHelper$AppBinding;
     :cond_0
     return-void
@@ -256,12 +231,11 @@
     .param p2, "simState"    # Ljava/lang/String;
 
     .prologue
-    .line 119
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "update binding for phoneId: "
+    const-string v1, "update binding for phoneId: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -271,7 +245,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, " simState: "
+    const-string v1, " simState: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -287,19 +261,16 @@
 
     invoke-static {v0}, Lcom/android/internal/telephony/CarrierServiceBindHelper;->log(Ljava/lang/String;)V
 
-    .line 120
     invoke-static {p1}, Landroid/telephony/SubscriptionManager;->isValidPhoneId(I)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 121
     return-void
 
-    .line 124
     :cond_0
-    const-string/jumbo v0, "ABSENT"
+    const-string v0, "ABSENT"
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -307,7 +278,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 128
     :cond_1
     iget-object v0, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper;->mHandler:Landroid/os/Handler;
 
@@ -325,14 +295,12 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 118
     :cond_2
     :goto_0
     return-void
 
-    .line 124
     :cond_3
-    const-string/jumbo v0, "CARD_IO_ERROR"
+    const-string v0, "CARD_IO_ERROR"
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -340,7 +308,7 @@
 
     if-nez v0, :cond_1
 
-    const-string/jumbo v0, "UNKNOWN"
+    const-string v0, "UNKNOWN"
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -348,7 +316,7 @@
 
     if-nez v0, :cond_1
 
-    const-string/jumbo v0, "LOADED"
+    const-string v0, "LOADED"
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -356,7 +324,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 132
     :goto_1
     iget-object v0, p0, Lcom/android/internal/telephony/CarrierServiceBindHelper;->mHandler:Landroid/os/Handler;
 
@@ -376,9 +343,8 @@
 
     goto :goto_0
 
-    .line 124
     :cond_4
-    const-string/jumbo v0, "LOCKED"
+    const-string v0, "LOCKED"
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

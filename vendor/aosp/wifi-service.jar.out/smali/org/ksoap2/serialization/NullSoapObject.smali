@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,7 +19,6 @@
     .locals 1
 
     .prologue
-    .line 38
     const/4 v0, 0x0
 
     return-object v0

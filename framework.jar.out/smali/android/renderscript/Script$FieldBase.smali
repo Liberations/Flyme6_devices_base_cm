@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 454
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 466
     iget-object v0, p0, Landroid/renderscript/Script$FieldBase;->mAllocation:Landroid/renderscript/Allocation;
 
     return-object v0
@@ -47,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 458
     iget-object v0, p0, Landroid/renderscript/Script$FieldBase;->mElement:Landroid/renderscript/Element;
 
     return-object v0
@@ -57,7 +54,6 @@
     .locals 1
 
     .prologue
-    .line 462
     iget-object v0, p0, Landroid/renderscript/Script$FieldBase;->mAllocation:Landroid/renderscript/Allocation;
 
     invoke-virtual {v0}, Landroid/renderscript/Allocation;->getType()Landroid/renderscript/Type;
@@ -73,20 +69,16 @@
     .param p2, "dimx"    # I
 
     .prologue
-    .line 444
     iget-object v0, p0, Landroid/renderscript/Script$FieldBase;->mElement:Landroid/renderscript/Element;
 
-    .line 445
     const/4 v1, 0x1
 
-    .line 444
     invoke-static {p1, v0, p2, v1}, Landroid/renderscript/Allocation;->createSized(Landroid/renderscript/RenderScript;Landroid/renderscript/Element;II)Landroid/renderscript/Allocation;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/renderscript/Script$FieldBase;->mAllocation:Landroid/renderscript/Allocation;
 
-    .line 443
     return-void
 .end method
 
@@ -97,21 +89,16 @@
     .param p3, "usages"    # I
 
     .prologue
-    .line 450
     iget-object v0, p0, Landroid/renderscript/Script$FieldBase;->mElement:Landroid/renderscript/Element;
 
-    .line 451
     or-int/lit8 v1, p3, 0x1
 
-    .line 450
     invoke-static {p1, v0, p2, v1}, Landroid/renderscript/Allocation;->createSized(Landroid/renderscript/RenderScript;Landroid/renderscript/Element;II)Landroid/renderscript/Allocation;
 
     move-result-object v0
 
-    .line 449
     iput-object v0, p0, Landroid/renderscript/Script$FieldBase;->mAllocation:Landroid/renderscript/Allocation;
 
-    .line 448
     return-void
 .end method
 
@@ -119,6 +106,5 @@
     .locals 0
 
     .prologue
-    .line 470
     return-void
 .end method

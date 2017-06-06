@@ -27,7 +27,6 @@
     .param p2, "val$listener"    # Landroid/hardware/hdmi/HdmiTvClient$HdmiMhlVendorCommandListener;
 
     .prologue
-    .line 405
     iput-object p1, p0, Landroid/hardware/hdmi/HdmiTvClient$4;->this$0:Landroid/hardware/hdmi/HdmiTvClient;
 
     iput-object p2, p0, Landroid/hardware/hdmi/HdmiTvClient$4;->val$listener:Landroid/hardware/hdmi/HdmiTvClient$HdmiMhlVendorCommandListener;
@@ -47,11 +46,9 @@
     .param p4, "data"    # [B
 
     .prologue
-    .line 408
     iget-object v0, p0, Landroid/hardware/hdmi/HdmiTvClient$4;->val$listener:Landroid/hardware/hdmi/HdmiTvClient$HdmiMhlVendorCommandListener;
 
     invoke-interface {v0, p1, p2, p3, p4}, Landroid/hardware/hdmi/HdmiTvClient$HdmiMhlVendorCommandListener;->onReceived(III[B)V
 
-    .line 407
     return-void
 .end method

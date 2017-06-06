@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 382
     .local p0, "this":Lcom/android/internal/util/CallbackRegistry$NotifierCallback;, "Lcom/android/internal/util/CallbackRegistry<TC;TT;TA;>.NotifierCallback<TC;TT;TA;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

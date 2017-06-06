@@ -24,7 +24,6 @@
     .param p1, "this$1"    # Lcom/android/internal/util/StateMachine$SmHandler;
 
     .prologue
-    .line 766
     iput-object p1, p0, Lcom/android/internal/util/StateMachine$SmHandler$QuittingState;->this$1:Lcom/android/internal/util/StateMachine$SmHandler;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -49,7 +48,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 769
     const/4 v0, 0x0
 
     return v0

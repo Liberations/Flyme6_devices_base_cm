@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,9 +25,7 @@
     .end param
 
     .prologue
-    .line 25
     invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextAppearance(I)V
 
-    .line 24
     return-void
 .end method

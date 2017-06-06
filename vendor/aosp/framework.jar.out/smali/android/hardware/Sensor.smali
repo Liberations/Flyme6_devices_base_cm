@@ -180,7 +180,6 @@
     .locals 1
 
     .prologue
-    .line 593
     const/16 v0, 0x1b
 
     new-array v0, v0, [I
@@ -189,10 +188,8 @@
 
     sput-object v0, Landroid/hardware/Sensor;->sSensorReportingModes:[I
 
-    .line 32
     return-void
 
-    .line 593
     :array_0
     .array-data 4
         0x0
@@ -229,7 +226,6 @@
     .locals 0
 
     .prologue
-    .line 676
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -241,28 +237,23 @@
     .param p1, "sdkLevel"    # I
 
     .prologue
-    .line 640
     iget v1, p0, Landroid/hardware/Sensor;->mType:I
 
     const/16 v2, 0xb
 
     if-ne v1, v2, :cond_0
 
-    .line 641
     const/16 v1, 0x11
 
     if-gt p1, v1, :cond_0
 
-    .line 642
     const/4 v1, 0x3
 
     return v1
 
-    .line 644
     :cond_0
     iget v0, p0, Landroid/hardware/Sensor;->mType:I
 
-    .line 645
     .local v0, "offset":I
     sget-object v1, Landroid/hardware/Sensor;->sSensorReportingModes:[I
 
@@ -270,12 +261,10 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 652
     const/16 v1, 0x10
 
     return v1
 
-    .line 654
     :cond_1
     sget-object v1, Landroid/hardware/Sensor;->sSensorReportingModes:[I
 
@@ -291,245 +280,191 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 865
     iput p1, p0, Landroid/hardware/Sensor;->mType:I
 
-    .line 866
     iget v0, p0, Landroid/hardware/Sensor;->mType:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 943
     const/4 v0, 0x0
 
     return v0
 
-    .line 868
     :pswitch_0
-    const-string/jumbo v0, "android.sensor.accelerometer"
+    const-string v0, "android.sensor.accelerometer"
 
     iput-object v0, p0, Landroid/hardware/Sensor;->mStringType:Ljava/lang/String;
 
-    .line 869
     return v1
 
-    .line 871
     :pswitch_1
-    const-string/jumbo v0, "android.sensor.ambient_temperature"
+    const-string v0, "android.sensor.ambient_temperature"
 
     iput-object v0, p0, Landroid/hardware/Sensor;->mStringType:Ljava/lang/String;
 
-    .line 872
     return v1
 
-    .line 874
     :pswitch_2
-    const-string/jumbo v0, "android.sensor.game_rotation_vector"
+    const-string v0, "android.sensor.game_rotation_vector"
 
     iput-object v0, p0, Landroid/hardware/Sensor;->mStringType:Ljava/lang/String;
 
-    .line 875
     return v1
 
-    .line 877
     :pswitch_3
-    const-string/jumbo v0, "android.sensor.geomagnetic_rotation_vector"
+    const-string v0, "android.sensor.geomagnetic_rotation_vector"
 
     iput-object v0, p0, Landroid/hardware/Sensor;->mStringType:Ljava/lang/String;
 
-    .line 878
     return v1
 
-    .line 880
     :pswitch_4
-    const-string/jumbo v0, "android.sensor.glance_gesture"
+    const-string v0, "android.sensor.glance_gesture"
 
     iput-object v0, p0, Landroid/hardware/Sensor;->mStringType:Ljava/lang/String;
 
-    .line 881
     return v1
 
-    .line 883
     :pswitch_5
-    const-string/jumbo v0, "android.sensor.gravity"
+    const-string v0, "android.sensor.gravity"
 
     iput-object v0, p0, Landroid/hardware/Sensor;->mStringType:Ljava/lang/String;
 
-    .line 884
     return v1
 
-    .line 886
     :pswitch_6
-    const-string/jumbo v0, "android.sensor.gyroscope"
+    const-string v0, "android.sensor.gyroscope"
 
     iput-object v0, p0, Landroid/hardware/Sensor;->mStringType:Ljava/lang/String;
 
-    .line 887
     return v1
 
-    .line 889
     :pswitch_7
-    const-string/jumbo v0, "android.sensor.gyroscope_uncalibrated"
+    const-string v0, "android.sensor.gyroscope_uncalibrated"
 
     iput-object v0, p0, Landroid/hardware/Sensor;->mStringType:Ljava/lang/String;
 
-    .line 890
     return v1
 
-    .line 892
     :pswitch_8
-    const-string/jumbo v0, "android.sensor.heart_rate"
+    const-string v0, "android.sensor.heart_rate"
 
     iput-object v0, p0, Landroid/hardware/Sensor;->mStringType:Ljava/lang/String;
 
-    .line 893
     return v1
 
-    .line 895
     :pswitch_9
-    const-string/jumbo v0, "android.sensor.light"
+    const-string v0, "android.sensor.light"
 
     iput-object v0, p0, Landroid/hardware/Sensor;->mStringType:Ljava/lang/String;
 
-    .line 896
     return v1
 
-    .line 898
     :pswitch_a
-    const-string/jumbo v0, "android.sensor.linear_acceleration"
+    const-string v0, "android.sensor.linear_acceleration"
 
     iput-object v0, p0, Landroid/hardware/Sensor;->mStringType:Ljava/lang/String;
 
-    .line 899
     return v1
 
-    .line 901
     :pswitch_b
-    const-string/jumbo v0, "android.sensor.magnetic_field"
+    const-string v0, "android.sensor.magnetic_field"
 
     iput-object v0, p0, Landroid/hardware/Sensor;->mStringType:Ljava/lang/String;
 
-    .line 902
     return v1
 
-    .line 904
     :pswitch_c
-    const-string/jumbo v0, "android.sensor.magnetic_field_uncalibrated"
+    const-string v0, "android.sensor.magnetic_field_uncalibrated"
 
     iput-object v0, p0, Landroid/hardware/Sensor;->mStringType:Ljava/lang/String;
 
-    .line 905
     return v1
 
-    .line 907
     :pswitch_d
-    const-string/jumbo v0, "android.sensor.pick_up_gesture"
+    const-string v0, "android.sensor.pick_up_gesture"
 
     iput-object v0, p0, Landroid/hardware/Sensor;->mStringType:Ljava/lang/String;
 
-    .line 908
     return v1
 
-    .line 910
     :pswitch_e
-    const-string/jumbo v0, "android.sensor.pressure"
+    const-string v0, "android.sensor.pressure"
 
     iput-object v0, p0, Landroid/hardware/Sensor;->mStringType:Ljava/lang/String;
 
-    .line 911
     return v1
 
-    .line 913
     :pswitch_f
-    const-string/jumbo v0, "android.sensor.proximity"
+    const-string v0, "android.sensor.proximity"
 
     iput-object v0, p0, Landroid/hardware/Sensor;->mStringType:Ljava/lang/String;
 
-    .line 914
     return v1
 
-    .line 916
     :pswitch_10
-    const-string/jumbo v0, "android.sensor.relative_humidity"
+    const-string v0, "android.sensor.relative_humidity"
 
     iput-object v0, p0, Landroid/hardware/Sensor;->mStringType:Ljava/lang/String;
 
-    .line 917
     return v1
 
-    .line 919
     :pswitch_11
-    const-string/jumbo v0, "android.sensor.rotation_vector"
+    const-string v0, "android.sensor.rotation_vector"
 
     iput-object v0, p0, Landroid/hardware/Sensor;->mStringType:Ljava/lang/String;
 
-    .line 920
     return v1
 
-    .line 922
     :pswitch_12
-    const-string/jumbo v0, "android.sensor.significant_motion"
+    const-string v0, "android.sensor.significant_motion"
 
     iput-object v0, p0, Landroid/hardware/Sensor;->mStringType:Ljava/lang/String;
 
-    .line 923
     return v1
 
-    .line 925
     :pswitch_13
-    const-string/jumbo v0, "android.sensor.step_counter"
+    const-string v0, "android.sensor.step_counter"
 
     iput-object v0, p0, Landroid/hardware/Sensor;->mStringType:Ljava/lang/String;
 
-    .line 926
     return v1
 
-    .line 928
     :pswitch_14
-    const-string/jumbo v0, "android.sensor.step_detector"
+    const-string v0, "android.sensor.step_detector"
 
     iput-object v0, p0, Landroid/hardware/Sensor;->mStringType:Ljava/lang/String;
 
-    .line 929
     return v1
 
-    .line 931
     :pswitch_15
-    const-string/jumbo v0, "android.sensor.tilt_detector"
+    const-string v0, "android.sensor.tilt_detector"
 
     iput-object v0, p0, Landroid/hardware/Sensor;->mStringType:Ljava/lang/String;
 
-    .line 932
     return v1
 
-    .line 934
     :pswitch_16
-    const-string/jumbo v0, "android.sensor.wake_gesture"
+    const-string v0, "android.sensor.wake_gesture"
 
     iput-object v0, p0, Landroid/hardware/Sensor;->mStringType:Ljava/lang/String;
 
-    .line 935
     return v1
 
-    .line 937
     :pswitch_17
-    const-string/jumbo v0, "android.sensor.orientation"
+    const-string v0, "android.sensor.orientation"
 
     iput-object v0, p0, Landroid/hardware/Sensor;->mStringType:Ljava/lang/String;
 
-    .line 938
     return v1
 
-    .line 940
     :pswitch_18
-    const-string/jumbo v0, "android.sensor.temperature"
+    const-string v0, "android.sensor.temperature"
 
     iput-object v0, p0, Landroid/hardware/Sensor;->mStringType:Ljava/lang/String;
 
-    .line 941
     return v1
 
-    .line 866
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -566,7 +501,6 @@
     .locals 1
 
     .prologue
-    .line 752
     iget v0, p0, Landroid/hardware/Sensor;->mFifoMaxEventCount:I
 
     return v0
@@ -576,7 +510,6 @@
     .locals 1
 
     .prologue
-    .line 742
     iget v0, p0, Landroid/hardware/Sensor;->mFifoReservedEventCount:I
 
     return v0
@@ -586,7 +519,6 @@
     .locals 1
 
     .prologue
-    .line 772
     iget v0, p0, Landroid/hardware/Sensor;->mHandle:I
 
     return v0
@@ -596,7 +528,6 @@
     .locals 1
 
     .prologue
-    .line 785
     iget v0, p0, Landroid/hardware/Sensor;->mMaxDelay:I
 
     return v0
@@ -606,7 +537,6 @@
     .locals 1
 
     .prologue
-    .line 711
     iget v0, p0, Landroid/hardware/Sensor;->mMaxRange:F
 
     return v0
@@ -616,7 +546,6 @@
     .locals 1
 
     .prologue
-    .line 734
     iget v0, p0, Landroid/hardware/Sensor;->mMinDelay:I
 
     return v0
@@ -626,7 +555,6 @@
     .locals 1
 
     .prologue
-    .line 683
     iget-object v0, p0, Landroid/hardware/Sensor;->mName:Ljava/lang/String;
 
     return-object v0
@@ -636,7 +564,6 @@
     .locals 1
 
     .prologue
-    .line 725
     iget v0, p0, Landroid/hardware/Sensor;->mPower:F
 
     return v0
@@ -646,7 +573,6 @@
     .locals 1
 
     .prologue
-    .line 634
     iget v0, p0, Landroid/hardware/Sensor;->mFlags:I
 
     and-int/lit8 v0, v0, 0xe
@@ -660,7 +586,6 @@
     .locals 1
 
     .prologue
-    .line 767
     iget-object v0, p0, Landroid/hardware/Sensor;->mRequiredPermission:Ljava/lang/String;
 
     return-object v0
@@ -670,7 +595,6 @@
     .locals 1
 
     .prologue
-    .line 718
     iget v0, p0, Landroid/hardware/Sensor;->mResolution:F
 
     return v0
@@ -680,7 +604,6 @@
     .locals 1
 
     .prologue
-    .line 759
     iget-object v0, p0, Landroid/hardware/Sensor;->mStringType:Ljava/lang/String;
 
     return-object v0
@@ -690,7 +613,6 @@
     .locals 1
 
     .prologue
-    .line 697
     iget v0, p0, Landroid/hardware/Sensor;->mType:I
 
     return v0
@@ -700,7 +622,6 @@
     .locals 1
 
     .prologue
-    .line 690
     iget-object v0, p0, Landroid/hardware/Sensor;->mVendor:Ljava/lang/String;
 
     return-object v0
@@ -710,7 +631,6 @@
     .locals 1
 
     .prologue
-    .line 704
     iget v0, p0, Landroid/hardware/Sensor;->mVersion:I
 
     return v0
@@ -722,7 +642,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 840
     iget v1, p0, Landroid/hardware/Sensor;->mFlags:I
 
     and-int/lit8 v1, v1, 0x10
@@ -743,7 +662,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 826
     iget v1, p0, Landroid/hardware/Sensor;->mFlags:I
 
     and-int/lit8 v1, v1, 0x1
@@ -762,13 +680,10 @@
     .param p2, "res"    # F
 
     .prologue
-    .line 844
     iput p1, p0, Landroid/hardware/Sensor;->mMaxRange:F
 
-    .line 845
     iput p2, p0, Landroid/hardware/Sensor;->mResolution:F
 
-    .line 843
     return-void
 .end method
 
@@ -776,12 +691,11 @@
     .locals 2
 
     .prologue
-    .line 850
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "{Sensor name=\""
+    const-string v1, "{Sensor name=\""
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -793,7 +707,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "\", vendor=\""
+    const-string v1, "\", vendor=\""
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -805,7 +719,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "\", version="
+    const-string v1, "\", version="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -817,90 +731,68 @@
 
     move-result-object v0
 
-    .line 851
-    const-string/jumbo v1, ", type="
+    const-string v1, ", type="
 
-    .line 850
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 851
     iget v1, p0, Landroid/hardware/Sensor;->mType:I
 
-    .line 850
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 851
-    const-string/jumbo v1, ", maxRange="
+    const-string v1, ", maxRange="
 
-    .line 850
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 851
     iget v1, p0, Landroid/hardware/Sensor;->mMaxRange:F
 
-    .line 850
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 851
-    const-string/jumbo v1, ", resolution="
+    const-string v1, ", resolution="
 
-    .line 850
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 851
     iget v1, p0, Landroid/hardware/Sensor;->mResolution:F
 
-    .line 850
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 852
-    const-string/jumbo v1, ", power="
+    const-string v1, ", power="
 
-    .line 850
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 852
     iget v1, p0, Landroid/hardware/Sensor;->mPower:F
 
-    .line 850
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 852
-    const-string/jumbo v1, ", minDelay="
+    const-string v1, ", minDelay="
 
-    .line 850
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 852
     iget v1, p0, Landroid/hardware/Sensor;->mMinDelay:I
 
-    .line 850
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 852
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
-    .line 850
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0

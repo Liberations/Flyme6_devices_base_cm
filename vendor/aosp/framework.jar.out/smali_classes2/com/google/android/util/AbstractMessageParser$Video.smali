@@ -27,17 +27,14 @@
     .locals 1
 
     .prologue
-    .line 813
-    const-string/jumbo v0, "(?i)http://video\\.google\\.[a-z0-9]+(?:\\.[a-z0-9]+)?/videoplay\\?.*?\\bdocid=(-?\\d+).*"
+    const-string v0, "(?i)http://video\\.google\\.[a-z0-9]+(?:\\.[a-z0-9]+)?/videoplay\\?.*?\\bdocid=(-?\\d+).*"
 
-    .line 812
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/android/util/AbstractMessageParser$Video;->URL_PATTERN:Ljava/util/regex/Pattern;
 
-    .line 810
     return-void
 .end method
 
@@ -47,15 +44,12 @@
     .param p2, "text"    # Ljava/lang/String;
 
     .prologue
-    .line 819
     sget-object v0, Lcom/google/android/util/AbstractMessageParser$Token$Type;->GOOGLE_VIDEO:Lcom/google/android/util/AbstractMessageParser$Token$Type;
 
     invoke-direct {p0, v0, p2}, Lcom/google/android/util/AbstractMessageParser$Token;-><init>(Lcom/google/android/util/AbstractMessageParser$Token$Type;Ljava/lang/String;)V
 
-    .line 820
     iput-object p1, p0, Lcom/google/android/util/AbstractMessageParser$Video;->docid:Ljava/lang/String;
 
-    .line 818
     return-void
 .end method
 
@@ -64,12 +58,11 @@
     .param p0, "docid"    # Ljava/lang/String;
 
     .prologue
-    .line 847
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "http://video.google.com/videofeed?type=docid&output=rss&sourceid=gtalk&docid="
+    const-string v1, "http://video.google.com/videofeed?type=docid&output=rss&sourceid=gtalk&docid="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -91,7 +84,6 @@
     .param p0, "docid"    # Ljava/lang/String;
 
     .prologue
-    .line 853
     const/4 v0, 0x0
 
     invoke-static {p0, v0}, Lcom/google/android/util/AbstractMessageParser$Video;->getURL(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -107,20 +99,17 @@
     .param p1, "extraParams"    # Ljava/lang/String;
 
     .prologue
-    .line 858
     if-nez p1, :cond_1
 
-    .line 859
-    const-string/jumbo p1, ""
+    const-string p1, ""
 
-    .line 863
     :cond_0
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "http://video.google.com/videoplay?"
+    const-string v1, "http://video.google.com/videoplay?"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -130,10 +119,8 @@
 
     move-result-object v0
 
-    .line 864
-    const-string/jumbo v1, "docid="
+    const-string v1, "docid="
 
-    .line 863
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -148,7 +135,6 @@
 
     return-object v0
 
-    .line 860
     :cond_1
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -156,7 +142,6 @@
 
     if-lez v0, :cond_0
 
-    .line 861
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -165,7 +150,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "&"
+    const-string v1, "&"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -184,14 +169,12 @@
     .param p1, "text"    # Ljava/lang/String;
 
     .prologue
-    .line 830
     sget-object v1, Lcom/google/android/util/AbstractMessageParser$Video;->URL_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v1, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
-    .line 831
     .local v0, "m":Ljava/util/regex/Matcher;
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
@@ -199,7 +182,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 832
     new-instance v1, Lcom/google/android/util/AbstractMessageParser$Video;
 
     const/4 v2, 0x1
@@ -212,7 +194,6 @@
 
     return-object v1
 
-    .line 834
     :cond_0
     const/4 v1, 0x0
 
@@ -225,7 +206,6 @@
     .locals 1
 
     .prologue
-    .line 823
     iget-object v0, p0, Lcom/google/android/util/AbstractMessageParser$Video;->docid:Ljava/lang/String;
 
     return-object v0
@@ -244,12 +224,10 @@
     .end annotation
 
     .prologue
-    .line 839
     invoke-super {p0}, Lcom/google/android/util/AbstractMessageParser$Token;->getInfo()Ljava/util/List;
 
     move-result-object v0
 
-    .line 840
     .local v0, "info":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iget-object v1, p0, Lcom/google/android/util/AbstractMessageParser$Video;->docid:Ljava/lang/String;
 
@@ -259,7 +237,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 841
     iget-object v1, p0, Lcom/google/android/util/AbstractMessageParser$Video;->docid:Ljava/lang/String;
 
     invoke-static {v1}, Lcom/google/android/util/AbstractMessageParser$Video;->getURL(Ljava/lang/String;)Ljava/lang/String;
@@ -268,7 +245,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 842
     return-object v0
 .end method
 
@@ -276,7 +252,6 @@
     .locals 1
 
     .prologue
-    .line 825
     const/4 v0, 0x0
 
     return v0
@@ -286,7 +261,6 @@
     .locals 1
 
     .prologue
-    .line 826
     const/4 v0, 0x1
 
     return v0

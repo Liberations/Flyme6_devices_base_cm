@@ -19,16 +19,12 @@
     .param p2, "prefix"    # Ljava/lang/String;
 
     .prologue
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     iput-object p1, p0, Landroid/util/PrefixPrinter;->mPrinter:Landroid/util/Printer;
 
-    .line 44
     iput-object p2, p0, Landroid/util/PrefixPrinter;->mPrefix:Ljava/lang/String;
 
-    .line 42
     return-void
 .end method
 
@@ -38,10 +34,9 @@
     .param p1, "prefix"    # Ljava/lang/String;
 
     .prologue
-    .line 36
     if-eqz p1, :cond_0
 
-    const-string/jumbo v0, ""
+    const-string v0, ""
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -49,11 +44,9 @@
 
     if-eqz v0, :cond_1
 
-    .line 37
     :cond_0
     return-object p0
 
-    .line 39
     :cond_1
     new-instance v0, Landroid/util/PrefixPrinter;
 
@@ -69,7 +62,6 @@
     .param p1, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 48
     iget-object v0, p0, Landroid/util/PrefixPrinter;->mPrinter:Landroid/util/Printer;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -92,6 +84,5 @@
 
     invoke-interface {v0, v1}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
-    .line 47
     return-void
 .end method

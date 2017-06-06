@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +43,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 88
     invoke-virtual {p0, p0}, Ljava/util/Locale;->getDisplayName(Ljava/util/Locale;)Ljava/lang/String;
 
     move-result-object v0
@@ -59,16 +57,13 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 95
     return v1
 
-    .line 91
     :pswitch_0
     const/4 v0, 0x1
 
     return v0
 
-    .line 88
     nop
 
     :pswitch_data_0
@@ -88,7 +83,6 @@
     .end param
 
     .prologue
-    .line 63
     if-eqz p1, :cond_0
 
     sget-object v1, Landroid/support/v4/text/TextUtilsCompat;->ROOT:Ljava/util/Locale;
@@ -99,19 +93,16 @@
 
     if-eqz v1, :cond_1
 
-    .line 72
     :cond_0
     const/4 v1, 0x0
 
     return v1
 
-    .line 64
     :cond_1
     invoke-static {p1}, Landroid/support/v4/text/ICUCompat;->maximizeAndGetScript(Ljava/util/Locale;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 65
     .local v0, "scriptSubtag":Ljava/lang/String;
     if-nez v0, :cond_2
 
@@ -121,7 +112,6 @@
 
     return v1
 
-    .line 67
     :cond_2
     invoke-static {}, Landroid/support/v4/text/TextUtilsCompat;->-get0()Ljava/lang/String;
 
@@ -133,7 +123,6 @@
 
     if-nez v1, :cond_3
 
-    .line 68
     invoke-static {}, Landroid/support/v4/text/TextUtilsCompat;->-get1()Ljava/lang/String;
 
     move-result-object v1
@@ -142,10 +131,8 @@
 
     move-result v1
 
-    .line 67
     if-eqz v1, :cond_0
 
-    .line 69
     :cond_3
     const/4 v1, 0x1
 
@@ -162,12 +149,10 @@
     .end annotation
 
     .prologue
-    .line 30
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 32
     .local v2, "sb":Ljava/lang/StringBuilder;
     const/4 v1, 0x0
 
@@ -179,65 +164,55 @@
 
     if-ge v1, v3, :cond_0
 
-    .line 33
     invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
-    .line 34
     .local v0, "c":C
     sparse-switch v0, :sswitch_data_0
 
-    .line 56
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 32
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 36
     :sswitch_0
-    const-string/jumbo v3, "&lt;"
+    const-string v3, "&lt;"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 39
     :sswitch_1
-    const-string/jumbo v3, "&gt;"
+    const-string v3, "&gt;"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 42
     :sswitch_2
-    const-string/jumbo v3, "&amp;"
+    const-string v3, "&amp;"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 50
     :sswitch_3
-    const-string/jumbo v3, "&#39;"
+    const-string v3, "&#39;"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 53
     :sswitch_4
-    const-string/jumbo v3, "&quot;"
+    const-string v3, "&quot;"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 59
     .end local v0    # "c":C
     :cond_0
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -246,7 +221,6 @@
 
     return-object v3
 
-    .line 34
     nop
 
     :sswitch_data_0

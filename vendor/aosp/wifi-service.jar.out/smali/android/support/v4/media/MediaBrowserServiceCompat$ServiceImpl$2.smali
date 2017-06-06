@@ -30,7 +30,6 @@
     .param p2, "val$callbacks"    # Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;
 
     .prologue
-    .line 314
     iput-object p1, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl$2;->this$1:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;
 
     iput-object p2, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl$2;->val$callbacks:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;
@@ -46,14 +45,12 @@
     .locals 3
 
     .prologue
-    .line 317
     iget-object v2, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl$2;->val$callbacks:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;
 
     invoke-interface {v2}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 320
     .local v0, "b":Landroid/os/IBinder;
     iget-object v2, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl$2;->this$1:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;
 
@@ -69,11 +66,9 @@
 
     check-cast v1, Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;
 
-    .line 321
     .local v1, "old":Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;
     if-eqz v1, :cond_0
 
-    .line 316
     :cond_0
     return-void
 .end method

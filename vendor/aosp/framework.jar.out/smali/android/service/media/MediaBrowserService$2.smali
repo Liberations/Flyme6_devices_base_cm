@@ -30,7 +30,6 @@
     .param p2, "val$parentId"    # Ljava/lang/String;
 
     .prologue
-    .line 420
     iput-object p1, p0, Landroid/service/media/MediaBrowserService$2;->this$0:Landroid/service/media/MediaBrowserService;
 
     iput-object p2, p0, Landroid/service/media/MediaBrowserService$2;->val$parentId:Ljava/lang/String;
@@ -46,7 +45,6 @@
     .locals 5
 
     .prologue
-    .line 423
     iget-object v3, p0, Landroid/service/media/MediaBrowserService$2;->this$0:Landroid/service/media/MediaBrowserService;
 
     invoke-static {v3}, Landroid/service/media/MediaBrowserService;->-get0(Landroid/service/media/MediaBrowserService;)Landroid/util/ArrayMap;
@@ -76,7 +74,6 @@
 
     check-cast v0, Landroid/os/IBinder;
 
-    .line 424
     .local v0, "binder":Landroid/os/IBinder;
     iget-object v3, p0, Landroid/service/media/MediaBrowserService$2;->this$0:Landroid/service/media/MediaBrowserService;
 
@@ -90,7 +87,6 @@
 
     check-cast v2, Landroid/service/media/MediaBrowserService$ConnectionRecord;
 
-    .line 425
     .local v2, "connection":Landroid/service/media/MediaBrowserService$ConnectionRecord;
     iget-object v3, v2, Landroid/service/media/MediaBrowserService$ConnectionRecord;->subscriptions:Ljava/util/HashSet;
 
@@ -102,7 +98,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 426
     iget-object v3, p0, Landroid/service/media/MediaBrowserService$2;->this$0:Landroid/service/media/MediaBrowserService;
 
     iget-object v4, p0, Landroid/service/media/MediaBrowserService$2;->val$parentId:Ljava/lang/String;
@@ -111,7 +106,6 @@
 
     goto :goto_0
 
-    .line 422
     .end local v0    # "binder":Landroid/os/IBinder;
     .end local v2    # "connection":Landroid/service/media/MediaBrowserService$ConnectionRecord;
     :cond_1

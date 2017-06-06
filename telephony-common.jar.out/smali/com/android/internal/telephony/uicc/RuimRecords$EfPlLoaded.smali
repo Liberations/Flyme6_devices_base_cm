@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/internal/telephony/uicc/RuimRecords;
 
     .prologue
-    .line 288
     iput-object p1, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfPlLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,8 +50,7 @@
     .locals 1
 
     .prologue
-    .line 291
-    const-string/jumbo v0, "EF_PL"
+    const-string v0, "EF_PL"
 
     return-object v0
 .end method
@@ -62,7 +60,6 @@
     .param p1, "ar"    # Landroid/os/AsyncResult;
 
     .prologue
-    .line 296
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfPlLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
     iget-object v0, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
@@ -71,14 +68,13 @@
 
     invoke-static {v1, v0}, Lcom/android/internal/telephony/uicc/RuimRecords;->-set1(Lcom/android/internal/telephony/uicc/RuimRecords;[B)[B
 
-    .line 297
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfPlLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "EF_PL="
+    const-string v2, "EF_PL="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -104,6 +100,5 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/uicc/RuimRecords;->log(Ljava/lang/String;)V
 
-    .line 295
     return-void
 .end method

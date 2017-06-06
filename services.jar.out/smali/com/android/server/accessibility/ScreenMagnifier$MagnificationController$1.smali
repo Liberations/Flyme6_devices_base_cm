@@ -39,20 +39,16 @@
     .param p1, "this$1"    # Lcom/android/server/accessibility/ScreenMagnifier$MagnificationController;
 
     .prologue
-    .line 960
     iput-object p1, p0, Lcom/android/server/accessibility/ScreenMagnifier$MagnificationController$1;->this$1:Lcom/android/server/accessibility/ScreenMagnifier$MagnificationController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 962
     invoke-static {}, Landroid/view/MagnificationSpec;->obtain()Landroid/view/MagnificationSpec;
 
     move-result-object v0
 
-    .line 961
     iput-object v0, p0, Lcom/android/server/accessibility/ScreenMagnifier$MagnificationController$1;->mTempTransformationSpec:Landroid/view/MagnificationSpec;
 
-    .line 960
     return-void
 .end method
 
@@ -65,14 +61,11 @@
     .param p3, "toSpec"    # Landroid/view/MagnificationSpec;
 
     .prologue
-    .line 966
     iget-object v0, p0, Lcom/android/server/accessibility/ScreenMagnifier$MagnificationController$1;->mTempTransformationSpec:Landroid/view/MagnificationSpec;
 
-    .line 967
     .local v0, "result":Landroid/view/MagnificationSpec;
     iget v1, p2, Landroid/view/MagnificationSpec;->scale:F
 
-    .line 968
     iget v2, p3, Landroid/view/MagnificationSpec;->scale:F
 
     iget v3, p2, Landroid/view/MagnificationSpec;->scale:F
@@ -81,12 +74,10 @@
 
     mul-float/2addr v2, p1
 
-    .line 967
     add-float/2addr v1, v2
 
     iput v1, v0, Landroid/view/MagnificationSpec;->scale:F
 
-    .line 969
     iget v1, p2, Landroid/view/MagnificationSpec;->offsetX:F
 
     iget v2, p3, Landroid/view/MagnificationSpec;->offsetX:F
@@ -101,7 +92,6 @@
 
     iput v1, v0, Landroid/view/MagnificationSpec;->offsetX:F
 
-    .line 971
     iget v1, p2, Landroid/view/MagnificationSpec;->offsetY:F
 
     iget v2, p3, Landroid/view/MagnificationSpec;->offsetY:F
@@ -116,7 +106,6 @@
 
     iput v1, v0, Landroid/view/MagnificationSpec;->offsetY:F
 
-    .line 973
     return-object v0
 .end method
 
@@ -127,7 +116,6 @@
     .param p3, "toSpec"    # Ljava/lang/Object;
 
     .prologue
-    .line 964
     check-cast p2, Landroid/view/MagnificationSpec;
 
     .end local p2    # "fromSpec":Ljava/lang/Object;

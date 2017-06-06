@@ -30,7 +30,6 @@
     .param p3, "val$finalOverlayView"    # Landroid/view/View;
 
     .prologue
-    .line 429
     iput-object p1, p0, Landroid/transition/Visibility$1;->this$0:Landroid/transition/Visibility;
 
     iput-object p2, p0, Landroid/transition/Visibility$1;->val$finalSceneRoot:Landroid/view/ViewGroup;
@@ -49,7 +48,6 @@
     .param p1, "transition"    # Landroid/transition/Transition;
 
     .prologue
-    .line 432
     iget-object v0, p0, Landroid/transition/Visibility$1;->val$finalSceneRoot:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getOverlay()Landroid/view/ViewGroupOverlay;
@@ -60,6 +58,5 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroupOverlay;->remove(Landroid/view/View;)V
 
-    .line 431
     return-void
 .end method

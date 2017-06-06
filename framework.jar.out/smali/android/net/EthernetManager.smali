@@ -63,38 +63,30 @@
     .param p2, "service"    # Landroid/net/IEthernetManager;
 
     .prologue
-    .line 78
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     new-instance v0, Landroid/net/EthernetManager$1;
 
     invoke-direct {v0, p0}, Landroid/net/EthernetManager$1;-><init>(Landroid/net/EthernetManager;)V
 
     iput-object v0, p0, Landroid/net/EthernetManager;->mHandler:Landroid/os/Handler;
 
-    .line 51
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/net/EthernetManager;->mListeners:Ljava/util/ArrayList;
 
-    .line 53
     new-instance v0, Landroid/net/EthernetManager$2;
 
     invoke-direct {v0, p0}, Landroid/net/EthernetManager$2;-><init>(Landroid/net/EthernetManager;)V
 
-    .line 52
     iput-object v0, p0, Landroid/net/EthernetManager;->mServiceListener:Landroid/net/IEthernetServiceListener$Stub;
 
-    .line 79
     iput-object p1, p0, Landroid/net/EthernetManager;->mContext:Landroid/content/Context;
 
-    .line 80
     iput-object p2, p0, Landroid/net/EthernetManager;->mService:Landroid/net/IEthernetManager;
 
-    .line 78
     return-void
 .end method
 
@@ -105,25 +97,21 @@
     .param p1, "listener"    # Landroid/net/EthernetManager$Listener;
 
     .prologue
-    .line 123
     if-nez p1, :cond_0
 
-    .line 124
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "listener must not be null"
+    const-string v2, "listener must not be null"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 126
     :cond_0
     iget-object v1, p0, Landroid/net/EthernetManager;->mListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 127
     iget-object v1, p0, Landroid/net/EthernetManager;->mListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -134,7 +122,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 129
     :try_start_0
     iget-object v1, p0, Landroid/net/EthernetManager;->mService:Landroid/net/IEthernetManager;
 
@@ -145,12 +132,10 @@
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 122
     :cond_1
     :goto_0
     return-void
 
-    .line 130
     :catch_0
     move-exception v0
 
@@ -162,7 +147,6 @@
     .locals 2
 
     .prologue
-    .line 89
     :try_start_0
     iget-object v1, p0, Landroid/net/EthernetManager;->mService:Landroid/net/IEthernetManager;
 
@@ -175,11 +159,9 @@
 
     return-object v1
 
-    .line 90
     :catch_0
     move-exception v0
 
-    .line 91
     .local v0, "e":Ljava/lang/Exception;
     new-instance v1, Landroid/net/IpConfiguration;
 
@@ -192,7 +174,6 @@
     .locals 2
 
     .prologue
-    .line 111
     :try_start_0
     iget-object v1, p0, Landroid/net/EthernetManager;->mService:Landroid/net/IEthernetManager;
 
@@ -205,11 +186,9 @@
 
     return v1
 
-    .line 112
     :catch_0
     move-exception v0
 
-    .line 113
     .local v0, "e":Ljava/lang/Exception;
     const/4 v1, 0x0
 
@@ -221,25 +200,21 @@
     .param p1, "listener"    # Landroid/net/EthernetManager$Listener;
 
     .prologue
-    .line 141
     if-nez p1, :cond_0
 
-    .line 142
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "listener must not be null"
+    const-string v2, "listener must not be null"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 144
     :cond_0
     iget-object v1, p0, Landroid/net/EthernetManager;->mListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 145
     iget-object v1, p0, Landroid/net/EthernetManager;->mListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
@@ -248,7 +223,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 147
     :try_start_0
     iget-object v1, p0, Landroid/net/EthernetManager;->mService:Landroid/net/IEthernetManager;
 
@@ -259,12 +233,10 @@
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 140
     :cond_1
     :goto_0
     return-void
 
-    .line 148
     :catch_0
     move-exception v0
 
@@ -277,7 +249,6 @@
     .param p1, "config"    # Landroid/net/IpConfiguration;
 
     .prologue
-    .line 100
     :try_start_0
     iget-object v1, p0, Landroid/net/EthernetManager;->mService:Landroid/net/IEthernetManager;
 
@@ -286,11 +257,9 @@
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 98
     :goto_0
     return-void
 
-    .line 101
     :catch_0
     move-exception v0
 

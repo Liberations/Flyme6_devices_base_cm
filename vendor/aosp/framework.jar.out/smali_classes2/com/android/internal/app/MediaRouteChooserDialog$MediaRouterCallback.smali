@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/internal/app/MediaRouteChooserDialog;
 
     .prologue
-    .line 243
     iput-object p1, p0, Lcom/android/internal/app/MediaRouteChooserDialog$MediaRouterCallback;->this$0:Lcom/android/internal/app/MediaRouteChooserDialog;
 
     invoke-direct {p0}, Landroid/media/MediaRouter$SimpleCallback;-><init>()V
@@ -50,12 +49,10 @@
     .param p2, "info"    # Landroid/media/MediaRouter$RouteInfo;
 
     .prologue
-    .line 246
     iget-object v0, p0, Lcom/android/internal/app/MediaRouteChooserDialog$MediaRouterCallback;->this$0:Lcom/android/internal/app/MediaRouteChooserDialog;
 
     invoke-virtual {v0}, Lcom/android/internal/app/MediaRouteChooserDialog;->refreshRoutes()V
 
-    .line 245
     return-void
 .end method
 
@@ -65,12 +62,10 @@
     .param p2, "info"    # Landroid/media/MediaRouter$RouteInfo;
 
     .prologue
-    .line 256
     iget-object v0, p0, Lcom/android/internal/app/MediaRouteChooserDialog$MediaRouterCallback;->this$0:Lcom/android/internal/app/MediaRouteChooserDialog;
 
     invoke-virtual {v0}, Lcom/android/internal/app/MediaRouteChooserDialog;->refreshRoutes()V
 
-    .line 255
     return-void
 .end method
 
@@ -80,12 +75,10 @@
     .param p2, "info"    # Landroid/media/MediaRouter$RouteInfo;
 
     .prologue
-    .line 251
     iget-object v0, p0, Lcom/android/internal/app/MediaRouteChooserDialog$MediaRouterCallback;->this$0:Lcom/android/internal/app/MediaRouteChooserDialog;
 
     invoke-virtual {v0}, Lcom/android/internal/app/MediaRouteChooserDialog;->refreshRoutes()V
 
-    .line 250
     return-void
 .end method
 
@@ -96,11 +89,9 @@
     .param p3, "info"    # Landroid/media/MediaRouter$RouteInfo;
 
     .prologue
-    .line 261
     iget-object v0, p0, Lcom/android/internal/app/MediaRouteChooserDialog$MediaRouterCallback;->this$0:Lcom/android/internal/app/MediaRouteChooserDialog;
 
     invoke-virtual {v0}, Lcom/android/internal/app/MediaRouteChooserDialog;->dismiss()V
 
-    .line 260
     return-void
 .end method

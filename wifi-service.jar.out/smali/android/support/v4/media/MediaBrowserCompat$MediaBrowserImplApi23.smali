@@ -23,10 +23,8 @@
     .param p4, "rootHints"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1235
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplApi21;-><init>(Landroid/content/Context;Landroid/content/ComponentName;Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback;Landroid/os/Bundle;)V
 
-    .line 1234
     return-void
 .end method
 
@@ -44,13 +42,11 @@
     .end param
 
     .prologue
-    .line 1240
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplApi23;->mBrowserObj:Ljava/lang/Object;
 
     iget-object v1, p2, Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;->mItemCallbackObj:Ljava/lang/Object;
 
     invoke-static {v0, p1, v1}, Landroid/support/v4/media/MediaBrowserCompatApi23;->getItem(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1239
     return-void
 .end method

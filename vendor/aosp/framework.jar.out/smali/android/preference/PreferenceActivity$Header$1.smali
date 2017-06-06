@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 524
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 526
     new-instance v0, Landroid/preference/PreferenceActivity$Header;
 
     invoke-direct {v0, p1}, Landroid/preference/PreferenceActivity$Header;-><init>(Landroid/os/Parcel;)V
@@ -58,7 +56,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 525
     invoke-virtual {p0, p1}, Landroid/preference/PreferenceActivity$Header$1;->createFromParcel(Landroid/os/Parcel;)Landroid/preference/PreferenceActivity$Header;
 
     move-result-object v0
@@ -71,7 +68,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 529
     new-array v0, p1, [Landroid/preference/PreferenceActivity$Header;
 
     return-object v0
@@ -82,7 +78,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 528
     invoke-virtual {p0, p1}, Landroid/preference/PreferenceActivity$Header$1;->newArray(I)[Landroid/preference/PreferenceActivity$Header;
 
     move-result-object v0

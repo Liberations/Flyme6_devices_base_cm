@@ -38,10 +38,8 @@
 
     move v6, p4
 
-    .line 94
     invoke-direct/range {v0 .. v6}, Landroid/widget/ResourceCursorTreeAdapter;-><init>(Landroid/content/Context;Landroid/database/Cursor;IIII)V
 
-    .line 93
     return-void
 .end method
 
@@ -68,10 +66,8 @@
 
     move v6, p5
 
-    .line 78
     invoke-direct/range {v0 .. v6}, Landroid/widget/ResourceCursorTreeAdapter;-><init>(Landroid/content/Context;Landroid/database/Cursor;IIII)V
 
-    .line 77
     return-void
 .end method
 
@@ -85,23 +81,17 @@
     .param p6, "lastChildLayout"    # I
 
     .prologue
-    .line 53
     invoke-direct {p0, p2, p1}, Landroid/widget/CursorTreeAdapter;-><init>(Landroid/database/Cursor;Landroid/content/Context;)V
 
-    .line 55
     iput p3, p0, Landroid/widget/ResourceCursorTreeAdapter;->mCollapsedGroupLayout:I
 
-    .line 56
     iput p4, p0, Landroid/widget/ResourceCursorTreeAdapter;->mExpandedGroupLayout:I
 
-    .line 57
     iput p5, p0, Landroid/widget/ResourceCursorTreeAdapter;->mChildLayout:I
 
-    .line 58
     iput p6, p0, Landroid/widget/ResourceCursorTreeAdapter;->mLastChildLayout:I
 
-    .line 60
-    const-string/jumbo v0, "layout_inflater"
+    const-string v0, "layout_inflater"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -111,7 +101,6 @@
 
     iput-object v0, p0, Landroid/widget/ResourceCursorTreeAdapter;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 52
     return-void
 .end method
 
@@ -125,7 +114,6 @@
     .param p4, "parent"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 100
     iget-object v1, p0, Landroid/widget/ResourceCursorTreeAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     if-eqz p3, :cond_0
@@ -155,18 +143,15 @@
     .param p4, "parent"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 105
     iget-object v1, p0, Landroid/widget/ResourceCursorTreeAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     if-eqz p3, :cond_0
 
     iget v0, p0, Landroid/widget/ResourceCursorTreeAdapter;->mExpandedGroupLayout:I
 
-    .line 106
     :goto_0
     const/4 v2, 0x0
 
-    .line 105
     invoke-virtual {v1, v0, p4, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v0

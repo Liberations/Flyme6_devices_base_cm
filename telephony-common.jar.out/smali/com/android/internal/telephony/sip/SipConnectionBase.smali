@@ -237,30 +237,25 @@
     .param p1, "dialString"    # Ljava/lang/String;
 
     .prologue
-    .line 58
     invoke-direct {p0}, Lcom/android/internal/telephony/Connection;-><init>()V
 
-    .line 51
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lcom/android/internal/telephony/sip/SipConnectionBase;->mDuration:J
 
-    .line 55
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/internal/telephony/sip/SipConnectionBase;->mCause:I
 
-    .line 56
     sget-object v0, Lcom/android/internal/telephony/Connection$PostDialState;->NOT_STARTED:Lcom/android/internal/telephony/Connection$PostDialState;
 
     iput-object v0, p0, Lcom/android/internal/telephony/sip/SipConnectionBase;->mPostDialState:Lcom/android/internal/telephony/Connection$PostDialState;
 
-    .line 59
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "SipConnectionBase: ctor dialString="
+    const-string v1, "SipConnectionBase: ctor dialString="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -276,21 +271,18 @@
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/sip/SipConnectionBase;->log(Ljava/lang/String;)V
 
-    .line 60
     invoke-static {p1}, Landroid/telephony/PhoneNumberUtils;->extractPostDialPortion(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/telephony/sip/SipConnectionBase;->mPostDialString:Ljava/lang/String;
 
-    .line 62
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/internal/telephony/sip/SipConnectionBase;->mCreateTime:J
 
-    .line 58
     return-void
 .end method
 
@@ -299,12 +291,10 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 185
-    const-string/jumbo v0, "SipConnBase"
+    const-string v0, "SipConnBase"
 
     invoke-static {v0, p1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 184
     return-void
 .end method
 
@@ -314,12 +304,10 @@
     .locals 1
 
     .prologue
-    .line 166
-    const-string/jumbo v0, "cancelPostDial: ignore"
+    const-string v0, "cancelPostDial: ignore"
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/sip/SipConnectionBase;->log(Ljava/lang/String;)V
 
-    .line 165
     return-void
 .end method
 
@@ -327,7 +315,6 @@
     .locals 2
 
     .prologue
-    .line 96
     iget-wide v0, p0, Lcom/android/internal/telephony/sip/SipConnectionBase;->mConnectTime:J
 
     return-wide v0
@@ -337,7 +324,6 @@
     .locals 2
 
     .prologue
-    .line 214
     iget-wide v0, p0, Lcom/android/internal/telephony/sip/SipConnectionBase;->mConnectTimeReal:J
 
     return-wide v0
@@ -347,7 +333,6 @@
     .locals 2
 
     .prologue
-    .line 90
     iget-wide v0, p0, Lcom/android/internal/telephony/sip/SipConnectionBase;->mCreateTime:J
 
     return-wide v0
@@ -357,7 +342,6 @@
     .locals 1
 
     .prologue
-    .line 135
     iget v0, p0, Lcom/android/internal/telephony/sip/SipConnectionBase;->mCause:I
 
     return v0
@@ -367,7 +351,6 @@
     .locals 2
 
     .prologue
-    .line 102
     iget-wide v0, p0, Lcom/android/internal/telephony/sip/SipConnectionBase;->mDisconnectTime:J
 
     return-wide v0
@@ -379,22 +362,18 @@
     .prologue
     const-wide/16 v4, 0x0
 
-    .line 108
     iget-wide v2, p0, Lcom/android/internal/telephony/sip/SipConnectionBase;->mConnectTimeReal:J
 
     cmp-long v2, v2, v4
 
     if-nez v2, :cond_0
 
-    .line 109
     const-wide/16 v0, 0x0
 
-    .line 116
     .local v0, "dur":J
     :goto_0
     return-wide v0
 
-    .line 110
     .end local v0    # "dur":J
     :cond_0
     iget-wide v2, p0, Lcom/android/internal/telephony/sip/SipConnectionBase;->mDuration:J
@@ -403,7 +382,6 @@
 
     if-gez v2, :cond_1
 
-    .line 111
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
@@ -415,7 +393,6 @@
     .restart local v0    # "dur":J
     goto :goto_0
 
-    .line 113
     .end local v0    # "dur":J
     :cond_1
     iget-wide v0, p0, Lcom/android/internal/telephony/sip/SipConnectionBase;->mDuration:J
@@ -428,7 +405,6 @@
     .locals 6
 
     .prologue
-    .line 122
     invoke-virtual {p0}, Lcom/android/internal/telephony/sip/SipConnectionBase;->getState()Lcom/android/internal/telephony/Call$State;
 
     move-result-object v2
@@ -437,15 +413,12 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 124
     const-wide/16 v0, 0x0
 
-    .line 129
     .local v0, "dur":J
     :goto_0
     return-wide v0
 
-    .line 126
     .end local v0    # "dur":J
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -464,7 +437,6 @@
     .locals 2
 
     .prologue
-    .line 209
     iget-wide v0, p0, Lcom/android/internal/telephony/sip/SipConnectionBase;->mHoldingStartTime:J
 
     return-wide v0
@@ -474,7 +446,6 @@
     .locals 1
 
     .prologue
-    .line 192
     const/4 v0, 0x1
 
     return v0
@@ -484,7 +455,6 @@
     .locals 1
 
     .prologue
-    .line 219
     const/4 v0, 0x0
 
     return-object v0
@@ -497,7 +467,6 @@
     .locals 1
 
     .prologue
-    .line 151
     iget-object v0, p0, Lcom/android/internal/telephony/sip/SipConnectionBase;->mPostDialState:Lcom/android/internal/telephony/Connection$PostDialState;
 
     return-object v0
@@ -507,7 +476,6 @@
     .locals 1
 
     .prologue
-    .line 204
     const/4 v0, 0x0
 
     return v0
@@ -517,38 +485,32 @@
     .locals 2
 
     .prologue
-    .line 173
     iget-object v0, p0, Lcom/android/internal/telephony/sip/SipConnectionBase;->mPostDialState:Lcom/android/internal/telephony/Connection$PostDialState;
 
     sget-object v1, Lcom/android/internal/telephony/Connection$PostDialState;->CANCELLED:Lcom/android/internal/telephony/Connection$PostDialState;
 
     if-eq v0, v1, :cond_0
 
-    .line 174
     iget-object v0, p0, Lcom/android/internal/telephony/sip/SipConnectionBase;->mPostDialState:Lcom/android/internal/telephony/Connection$PostDialState;
 
     sget-object v1, Lcom/android/internal/telephony/Connection$PostDialState;->COMPLETE:Lcom/android/internal/telephony/Connection$PostDialState;
 
     if-ne v0, v1, :cond_1
 
-    .line 177
     :cond_0
-    const-string/jumbo v0, "getRemaingPostDialString: ret empty string"
+    const-string v0, "getRemaingPostDialString: ret empty string"
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/sip/SipConnectionBase;->log(Ljava/lang/String;)V
 
-    .line 178
-    const-string/jumbo v0, ""
+    const-string v0, ""
 
     return-object v0
 
-    .line 175
     :cond_1
     iget-object v0, p0, Lcom/android/internal/telephony/sip/SipConnectionBase;->mPostDialString:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 176
     iget-object v0, p0, Lcom/android/internal/telephony/sip/SipConnectionBase;->mPostDialString:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -559,7 +521,6 @@
 
     if-le v0, v1, :cond_0
 
-    .line 181
     iget-object v0, p0, Lcom/android/internal/telephony/sip/SipConnectionBase;->mPostDialString:Ljava/lang/String;
 
     iget v1, p0, Lcom/android/internal/telephony/sip/SipConnectionBase;->mNextPostDialChar:I
@@ -575,7 +536,6 @@
     .locals 1
 
     .prologue
-    .line 199
     const/4 v0, 0x0
 
     return-object v0
@@ -585,7 +545,6 @@
     .locals 1
 
     .prologue
-    .line 145
     const/4 v0, 0x0
 
     return-object v0
@@ -595,7 +554,6 @@
     .locals 1
 
     .prologue
-    .line 224
     const/4 v0, 0x0
 
     return v0
@@ -605,12 +563,10 @@
     .locals 1
 
     .prologue
-    .line 156
-    const-string/jumbo v0, "proceedAfterWaitChar: ignore"
+    const-string v0, "proceedAfterWaitChar: ignore"
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/sip/SipConnectionBase;->log(Ljava/lang/String;)V
 
-    .line 155
     return-void
 .end method
 
@@ -619,12 +575,10 @@
     .param p1, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 161
-    const-string/jumbo v0, "proceedAfterWildChar: ignore"
+    const-string v0, "proceedAfterWildChar: ignore"
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/sip/SipConnectionBase;->log(Ljava/lang/String;)V
 
-    .line 160
     return-void
 .end method
 
@@ -633,12 +587,11 @@
     .param p1, "cause"    # I
 
     .prologue
-    .line 139
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "setDisconnectCause: prev="
+    const-string v1, "setDisconnectCause: prev="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -650,7 +603,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, " new="
+    const-string v1, " new="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -666,10 +619,8 @@
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/sip/SipConnectionBase;->log(Ljava/lang/String;)V
 
-    .line 140
     iput p1, p0, Lcom/android/internal/telephony/sip/SipConnectionBase;->mCause:I
 
-    .line 138
     return-void
 .end method
 
@@ -678,12 +629,11 @@
     .param p1, "state"    # Lcom/android/internal/telephony/Call$State;
 
     .prologue
-    .line 66
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "setState: state="
+    const-string v1, "setState: state="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -699,7 +649,6 @@
 
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/sip/SipConnectionBase;->log(Ljava/lang/String;)V
 
-    .line 67
     invoke-static {}, Lcom/android/internal/telephony/sip/SipConnectionBase;->-getcom_android_internal_telephony_Call$StateSwitchesValues()[I
 
     move-result-object v0
@@ -712,12 +661,10 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 65
     :cond_0
     :goto_0
     return-void
 
-    .line 69
     :pswitch_0
     iget-wide v0, p0, Lcom/android/internal/telephony/sip/SipConnectionBase;->mConnectTime:J
 
@@ -727,14 +674,12 @@
 
     if-nez v0, :cond_0
 
-    .line 70
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/internal/telephony/sip/SipConnectionBase;->mConnectTimeReal:J
 
-    .line 71
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -743,7 +688,6 @@
 
     goto :goto_0
 
-    .line 75
     :pswitch_1
     invoke-virtual {p0}, Lcom/android/internal/telephony/sip/SipConnectionBase;->getDurationMillis()J
 
@@ -751,7 +695,6 @@
 
     iput-wide v0, p0, Lcom/android/internal/telephony/sip/SipConnectionBase;->mDuration:J
 
-    .line 76
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -760,7 +703,6 @@
 
     goto :goto_0
 
-    .line 79
     :pswitch_2
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -770,7 +712,6 @@
 
     goto :goto_0
 
-    .line 67
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

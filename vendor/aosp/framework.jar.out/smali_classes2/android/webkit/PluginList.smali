@@ -28,17 +28,14 @@
     .end annotation
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/webkit/PluginList;->mPlugins:Ljava/util/ArrayList;
 
-    .line 44
     return-void
 .end method
 
@@ -53,7 +50,6 @@
     .prologue
     monitor-enter p0
 
-    .line 69
     :try_start_0
     iget-object v0, p0, Landroid/webkit/PluginList;->mPlugins:Ljava/util/ArrayList;
 
@@ -63,7 +59,6 @@
 
     if-nez v0, :cond_0
 
-    .line 70
     iget-object v0, p0, Landroid/webkit/PluginList;->mPlugins:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -73,7 +68,6 @@
     :cond_0
     monitor-exit p0
 
-    .line 68
     return-void
 
     :catchall_0
@@ -92,7 +86,6 @@
     .prologue
     monitor-enter p0
 
-    .line 98
     :try_start_0
     iget-object v0, p0, Landroid/webkit/PluginList;->mPlugins:Ljava/util/ArrayList;
 
@@ -102,7 +95,6 @@
 
     monitor-exit p0
 
-    .line 97
     return-void
 
     :catchall_0
@@ -121,7 +113,6 @@
     .prologue
     monitor-enter p0
 
-    .line 57
     :try_start_0
     iget-object v0, p0, Landroid/webkit/PluginList;->mPlugins:Ljava/util/ArrayList;
     :try_end_0
@@ -149,7 +140,6 @@
     .prologue
     monitor-enter p0
 
-    .line 111
     :try_start_0
     iget-object v2, p0, Landroid/webkit/PluginList;->mPlugins:Ljava/util/ArrayList;
 
@@ -159,7 +149,6 @@
 
     check-cast v1, Landroid/webkit/Plugin;
 
-    .line 112
     .local v1, "plugin":Landroid/webkit/Plugin;
     invoke-virtual {v1, p1}, Landroid/webkit/Plugin;->dispatchClickEvent(Landroid/content/Context;)V
     :try_end_0
@@ -170,7 +159,6 @@
     :goto_0
     monitor-exit p0
 
-    .line 109
     return-void
 
     :catchall_0
@@ -180,7 +168,6 @@
 
     throw v2
 
-    .line 113
     :catch_0
     move-exception v0
 
@@ -197,7 +184,6 @@
     .prologue
     monitor-enter p0
 
-    .line 83
     :try_start_0
     iget-object v1, p0, Landroid/webkit/PluginList;->mPlugins:Ljava/util/ArrayList;
 
@@ -205,13 +191,11 @@
 
     move-result v0
 
-    .line 84
     .local v0, "location":I
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 85
     iget-object v1, p0, Landroid/webkit/PluginList;->mPlugins:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
@@ -221,7 +205,6 @@
     :cond_0
     monitor-exit p0
 
-    .line 82
     return-void
 
     .end local v0    # "location":I

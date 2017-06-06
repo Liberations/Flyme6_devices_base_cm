@@ -25,25 +25,20 @@
     .param p1, "buf"    # [B
 
     .prologue
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     iput-object p1, p0, Lcom/android/internal/util/BitwiseInputStream;->mBuf:[B
 
-    .line 54
     array-length v0, p1
 
     shl-int/lit8 v0, v0, 0x3
 
     iput v0, p0, Lcom/android/internal/util/BitwiseInputStream;->mEnd:I
 
-    .line 55
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/internal/util/BitwiseInputStream;->mPos:I
 
-    .line 52
     return-void
 .end method
 
@@ -53,7 +48,6 @@
     .locals 2
 
     .prologue
-    .line 62
     iget v0, p0, Lcom/android/internal/util/BitwiseInputStream;->mEnd:I
 
     iget v1, p0, Lcom/android/internal/util/BitwiseInputStream;->mPos:I
@@ -75,12 +69,10 @@
     .prologue
     const/16 v5, 0x8
 
-    .line 75
     iget v3, p0, Lcom/android/internal/util/BitwiseInputStream;->mPos:I
 
     ushr-int/lit8 v1, v3, 0x3
 
-    .line 76
     .local v1, "index":I
     iget v3, p0, Lcom/android/internal/util/BitwiseInputStream;->mPos:I
 
@@ -90,13 +82,11 @@
 
     sub-int v2, v3, p1
 
-    .line 77
     .local v2, "offset":I
     if-ltz p1, :cond_0
 
     if-le p1, v5, :cond_1
 
-    .line 78
     :cond_0
     new-instance v3, Lcom/android/internal/util/BitwiseInputStream$AccessException;
 
@@ -104,40 +94,32 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "illegal read (pos "
+    const-string v5, "illegal read (pos "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v4
 
-    .line 79
     iget v5, p0, Lcom/android/internal/util/BitwiseInputStream;->mPos:I
 
-    .line 78
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v4
 
-    .line 79
-    const-string/jumbo v5, ", end "
+    const-string v5, ", end "
 
-    .line 78
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v4
 
-    .line 79
     iget v5, p0, Lcom/android/internal/util/BitwiseInputStream;->mEnd:I
 
-    .line 78
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v4
 
-    .line 79
-    const-string/jumbo v5, ", bits "
+    const-string v5, ", bits "
 
-    .line 78
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v4
@@ -146,10 +128,8 @@
 
     move-result-object v4
 
-    .line 79
-    const-string/jumbo v5, ")"
+    const-string v5, ")"
 
-    .line 78
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v4
@@ -162,7 +142,6 @@
 
     throw v3
 
-    .line 77
     :cond_1
     iget v3, p0, Lcom/android/internal/util/BitwiseInputStream;->mPos:I
 
@@ -172,7 +151,6 @@
 
     if-gt v3, v4, :cond_0
 
-    .line 81
     iget-object v3, p0, Lcom/android/internal/util/BitwiseInputStream;->mBuf:[B
 
     aget-byte v3, v3, v1
@@ -181,7 +159,6 @@
 
     shl-int/lit8 v0, v3, 0x8
 
-    .line 82
     .local v0, "data":I
     if-ge v2, v5, :cond_2
 
@@ -195,11 +172,9 @@
 
     or-int/2addr v0, v3
 
-    .line 83
     :cond_2
     ushr-int/2addr v0, v2
 
-    .line 84
     rsub-int/lit8 v3, p1, 0x20
 
     const/4 v4, -0x1
@@ -208,14 +183,12 @@
 
     and-int/2addr v0, v3
 
-    .line 85
     iget v3, p0, Lcom/android/internal/util/BitwiseInputStream;->mPos:I
 
     add-int/2addr v3, p1
 
     iput v3, p0, Lcom/android/internal/util/BitwiseInputStream;->mPos:I
 
-    .line 86
     return v0
 .end method
 
@@ -231,7 +204,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 96
     ushr-int/lit8 v5, p1, 0x3
 
     and-int/lit8 v6, p1, 0x7
@@ -243,11 +215,9 @@
     :cond_0
     add-int v1, v5, v4
 
-    .line 97
     .local v1, "bytes":I
     new-array v0, v1, [B
 
-    .line 98
     .local v0, "arr":[B
     const/4 v2, 0x0
 
@@ -255,7 +225,6 @@
     :goto_0
     if-ge v2, v1, :cond_1
 
-    .line 99
     shl-int/lit8 v4, v2, 0x3
 
     sub-int v4, p1, v4
@@ -266,7 +235,6 @@
 
     move-result v3
 
-    .line 100
     .local v3, "increment":I
     invoke-virtual {p0, v3}, Lcom/android/internal/util/BitwiseInputStream;->read(I)I
 
@@ -280,12 +248,10 @@
 
     aput-byte v4, v0, v2
 
-    .line 98
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 102
     .end local v3    # "increment":I
     :cond_1
     return-object v0
@@ -301,7 +267,6 @@
     .end annotation
 
     .prologue
-    .line 111
     iget v0, p0, Lcom/android/internal/util/BitwiseInputStream;->mPos:I
 
     add-int/2addr v0, p1
@@ -310,47 +275,38 @@
 
     if-le v0, v1, :cond_0
 
-    .line 112
     new-instance v0, Lcom/android/internal/util/BitwiseInputStream$AccessException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "illegal skip (pos "
+    const-string v2, "illegal skip (pos "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 113
     iget v2, p0, Lcom/android/internal/util/BitwiseInputStream;->mPos:I
 
-    .line 112
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 113
-    const-string/jumbo v2, ", end "
+    const-string v2, ", end "
 
-    .line 112
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 113
     iget v2, p0, Lcom/android/internal/util/BitwiseInputStream;->mEnd:I
 
-    .line 112
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 113
-    const-string/jumbo v2, ", bits "
+    const-string v2, ", bits "
 
-    .line 112
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -359,10 +315,8 @@
 
     move-result-object v1
 
-    .line 113
-    const-string/jumbo v2, ")"
+    const-string v2, ")"
 
-    .line 112
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -375,7 +329,6 @@
 
     throw v0
 
-    .line 115
     :cond_0
     iget v0, p0, Lcom/android/internal/util/BitwiseInputStream;->mPos:I
 
@@ -383,6 +336,5 @@
 
     iput v0, p0, Lcom/android/internal/util/BitwiseInputStream;->mPos:I
 
-    .line 110
     return-void
 .end method

@@ -27,7 +27,6 @@
     .param p2, "val$realMoveId"    # I
 
     .prologue
-    .line 17297
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$27;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput p2, p0, Lcom/android/server/pm/PackageManagerService$27;->val$realMoveId:I
@@ -45,7 +44,6 @@
     .param p2, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 17299
     return-void
 .end method
 
@@ -56,7 +54,6 @@
     .param p3, "estMillis"    # J
 
     .prologue
-    .line 17305
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$27;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     invoke-static {v0}, Lcom/android/server/pm/PackageManagerService;->-get5(Lcom/android/server/pm/PackageManagerService;)Lcom/android/server/pm/PackageManagerService$MoveCallbacks;
@@ -67,6 +64,5 @@
 
     invoke-static {v0, v1, p2, p3, p4}, Lcom/android/server/pm/PackageManagerService$MoveCallbacks;->-wrap2(Lcom/android/server/pm/PackageManagerService$MoveCallbacks;IIJ)V
 
-    .line 17304
     return-void
 .end method

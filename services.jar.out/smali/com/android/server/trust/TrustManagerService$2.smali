@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/trust/TrustManagerService;
 
     .prologue
-    .line 780
     iput-object p1, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -43,17 +42,14 @@
 
     const/4 v2, -0x1
 
-    .line 783
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 782
     :goto_0
     :pswitch_0
     return-void
 
-    .line 785
     :pswitch_1
     iget-object v1, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
@@ -65,7 +61,6 @@
 
     goto :goto_0
 
-    .line 788
     :pswitch_2
     iget-object v1, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
@@ -77,7 +72,6 @@
 
     goto :goto_0
 
-    .line 791
     :pswitch_3
     iget-object v1, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
@@ -94,20 +88,17 @@
 
     goto :goto_0
 
-    .line 794
     :pswitch_4
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
     invoke-virtual {v0, v2}, Lcom/android/server/trust/TrustManagerService;->refreshAgentList(I)V
 
-    .line 796
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
     invoke-static {v0, v2}, Lcom/android/server/trust/TrustManagerService;->-wrap6(Lcom/android/server/trust/TrustManagerService;I)V
 
     goto :goto_0
 
-    .line 799
     :pswitch_5
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
@@ -121,7 +112,6 @@
 
     goto :goto_0
 
-    .line 803
     :pswitch_6
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
@@ -131,7 +121,6 @@
 
     goto :goto_0
 
-    .line 806
     :pswitch_7
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
@@ -139,14 +128,12 @@
 
     invoke-static {v0, v1}, Lcom/android/server/trust/TrustManagerService;->-set0(Lcom/android/server/trust/TrustManagerService;I)I
 
-    .line 807
     iget-object v0, p0, Lcom/android/server/trust/TrustManagerService$2;->this$0:Lcom/android/server/trust/TrustManagerService;
 
     invoke-static {v0, v2}, Lcom/android/server/trust/TrustManagerService;->-wrap6(Lcom/android/server/trust/TrustManagerService;I)V
 
     goto :goto_0
 
-    .line 783
     nop
 
     :pswitch_data_0

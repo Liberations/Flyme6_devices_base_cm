@@ -52,15 +52,12 @@
     .locals 1
 
     .prologue
-    .line 17
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 19
-    const-string/jumbo v0, "android.accounts.IAccountAuthenticator"
+    const-string v0, "android.accounts.IAccountAuthenticator"
 
     invoke-virtual {p0, p0, v0}, Landroid/accounts/IAccountAuthenticator$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 17
     return-void
 .end method
 
@@ -71,21 +68,17 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 27
     if-nez p0, :cond_0
 
-    .line 28
     return-object v1
 
-    .line 30
     :cond_0
-    const-string/jumbo v1, "android.accounts.IAccountAuthenticator"
+    const-string v1, "android.accounts.IAccountAuthenticator"
 
     invoke-interface {p0, v1}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v0
 
-    .line 31
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -93,13 +86,11 @@
 
     if-eqz v1, :cond_1
 
-    .line 32
     check-cast v0, Landroid/accounts/IAccountAuthenticator;
 
     .end local v0    # "iin":Landroid/os/IInterface;
     return-object v0
 
-    .line 34
     .restart local v0    # "iin":Landroid/os/IInterface;
     :cond_1
     new-instance v1, Landroid/accounts/IAccountAuthenticator$Stub$Proxy;
@@ -115,7 +106,6 @@
     .locals 0
 
     .prologue
-    .line 38
     return-object p0
 .end method
 
@@ -134,32 +124,26 @@
     .prologue
     const/4 v10, 0x1
 
-    .line 42
     sparse-switch p1, :sswitch_data_0
 
-    .line 230
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v0
 
     return v0
 
-    .line 46
     :sswitch_0
-    const-string/jumbo v0, "android.accounts.IAccountAuthenticator"
+    const-string v0, "android.accounts.IAccountAuthenticator"
 
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 47
     return v10
 
-    .line 51
     :sswitch_1
-    const-string/jumbo v0, "android.accounts.IAccountAuthenticator"
+    const-string v0, "android.accounts.IAccountAuthenticator"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 53
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
@@ -168,25 +152,21 @@
 
     move-result-object v1
 
-    .line 55
     .local v1, "_arg0":Landroid/accounts/IAccountAuthenticatorResponse;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 57
     .local v2, "_arg1":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 59
     .local v3, "_arg2":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->createStringArray()[Ljava/lang/String;
 
     move-result-object v4
 
-    .line 61
     .local v4, "_arg3":[Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -194,7 +174,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 62
     sget-object v0, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -206,31 +185,26 @@
     :goto_0
     move-object v0, p0
 
-    .line 67
     invoke-virtual/range {v0 .. v5}, Landroid/accounts/IAccountAuthenticator$Stub;->addAccount(Landroid/accounts/IAccountAuthenticatorResponse;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 68
     return v10
 
-    .line 65
     :cond_0
     const/4 v5, 0x0
 
     .local v5, "_arg4":Landroid/os/Bundle;
     goto :goto_0
 
-    .line 72
     .end local v1    # "_arg0":Landroid/accounts/IAccountAuthenticatorResponse;
     .end local v2    # "_arg1":Ljava/lang/String;
     .end local v3    # "_arg2":Ljava/lang/String;
     .end local v4    # "_arg3":[Ljava/lang/String;
     .end local v5    # "_arg4":Landroid/os/Bundle;
     :sswitch_2
-    const-string/jumbo v0, "android.accounts.IAccountAuthenticator"
+    const-string v0, "android.accounts.IAccountAuthenticator"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 74
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
@@ -239,7 +213,6 @@
 
     move-result-object v1
 
-    .line 76
     .restart local v1    # "_arg0":Landroid/accounts/IAccountAuthenticatorResponse;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -247,7 +220,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 77
     sget-object v0, Landroid/accounts/Account;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -256,7 +228,6 @@
 
     check-cast v6, Landroid/accounts/Account;
 
-    .line 83
     :goto_1
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -264,7 +235,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 84
     sget-object v0, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -273,21 +243,17 @@
 
     check-cast v7, Landroid/os/Bundle;
 
-    .line 89
     :goto_2
     invoke-virtual {p0, v1, v6, v7}, Landroid/accounts/IAccountAuthenticator$Stub;->confirmCredentials(Landroid/accounts/IAccountAuthenticatorResponse;Landroid/accounts/Account;Landroid/os/Bundle;)V
 
-    .line 90
     return v10
 
-    .line 80
     :cond_1
     const/4 v6, 0x0
 
     .local v6, "_arg1":Landroid/accounts/Account;
     goto :goto_1
 
-    .line 87
     .end local v6    # "_arg1":Landroid/accounts/Account;
     :cond_2
     const/4 v7, 0x0
@@ -295,15 +261,13 @@
     .local v7, "_arg2":Landroid/os/Bundle;
     goto :goto_2
 
-    .line 94
     .end local v1    # "_arg0":Landroid/accounts/IAccountAuthenticatorResponse;
     .end local v7    # "_arg2":Landroid/os/Bundle;
     :sswitch_3
-    const-string/jumbo v0, "android.accounts.IAccountAuthenticator"
+    const-string v0, "android.accounts.IAccountAuthenticator"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 96
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
@@ -312,7 +276,6 @@
 
     move-result-object v1
 
-    .line 98
     .restart local v1    # "_arg0":Landroid/accounts/IAccountAuthenticatorResponse;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -320,7 +283,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 99
     sget-object v0, Landroid/accounts/Account;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -329,13 +291,11 @@
 
     check-cast v6, Landroid/accounts/Account;
 
-    .line 105
     :goto_3
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 107
     .restart local v3    # "_arg2":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -343,7 +303,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 108
     sget-object v0, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -352,14 +311,11 @@
 
     check-cast v9, Landroid/os/Bundle;
 
-    .line 113
     :goto_4
     invoke-virtual {p0, v1, v6, v3, v9}, Landroid/accounts/IAccountAuthenticator$Stub;->getAuthToken(Landroid/accounts/IAccountAuthenticatorResponse;Landroid/accounts/Account;Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 114
     return v10
 
-    .line 102
     .end local v3    # "_arg2":Ljava/lang/String;
     :cond_3
     const/4 v6, 0x0
@@ -367,7 +323,6 @@
     .restart local v6    # "_arg1":Landroid/accounts/Account;
     goto :goto_3
 
-    .line 111
     .end local v6    # "_arg1":Landroid/accounts/Account;
     .restart local v3    # "_arg2":Ljava/lang/String;
     :cond_4
@@ -376,16 +331,14 @@
     .local v9, "_arg3":Landroid/os/Bundle;
     goto :goto_4
 
-    .line 118
     .end local v1    # "_arg0":Landroid/accounts/IAccountAuthenticatorResponse;
     .end local v3    # "_arg2":Ljava/lang/String;
     .end local v9    # "_arg3":Landroid/os/Bundle;
     :sswitch_4
-    const-string/jumbo v0, "android.accounts.IAccountAuthenticator"
+    const-string v0, "android.accounts.IAccountAuthenticator"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 120
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
@@ -394,28 +347,23 @@
 
     move-result-object v1
 
-    .line 122
     .restart local v1    # "_arg0":Landroid/accounts/IAccountAuthenticatorResponse;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 123
     .restart local v2    # "_arg1":Ljava/lang/String;
     invoke-virtual {p0, v1, v2}, Landroid/accounts/IAccountAuthenticator$Stub;->getAuthTokenLabel(Landroid/accounts/IAccountAuthenticatorResponse;Ljava/lang/String;)V
 
-    .line 124
     return v10
 
-    .line 128
     .end local v1    # "_arg0":Landroid/accounts/IAccountAuthenticatorResponse;
     .end local v2    # "_arg1":Ljava/lang/String;
     :sswitch_5
-    const-string/jumbo v0, "android.accounts.IAccountAuthenticator"
+    const-string v0, "android.accounts.IAccountAuthenticator"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 130
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
@@ -424,7 +372,6 @@
 
     move-result-object v1
 
-    .line 132
     .restart local v1    # "_arg0":Landroid/accounts/IAccountAuthenticatorResponse;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -432,7 +379,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 133
     sget-object v0, Landroid/accounts/Account;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -441,13 +387,11 @@
 
     check-cast v6, Landroid/accounts/Account;
 
-    .line 139
     :goto_5
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 141
     .restart local v3    # "_arg2":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -455,7 +399,6 @@
 
     if-eqz v0, :cond_6
 
-    .line 142
     sget-object v0, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -464,14 +407,11 @@
 
     check-cast v9, Landroid/os/Bundle;
 
-    .line 147
     :goto_6
     invoke-virtual {p0, v1, v6, v3, v9}, Landroid/accounts/IAccountAuthenticator$Stub;->updateCredentials(Landroid/accounts/IAccountAuthenticatorResponse;Landroid/accounts/Account;Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 148
     return v10
 
-    .line 136
     .end local v3    # "_arg2":Ljava/lang/String;
     :cond_5
     const/4 v6, 0x0
@@ -479,7 +419,6 @@
     .restart local v6    # "_arg1":Landroid/accounts/Account;
     goto :goto_5
 
-    .line 145
     .end local v6    # "_arg1":Landroid/accounts/Account;
     .restart local v3    # "_arg2":Ljava/lang/String;
     :cond_6
@@ -488,16 +427,14 @@
     .restart local v9    # "_arg3":Landroid/os/Bundle;
     goto :goto_6
 
-    .line 152
     .end local v1    # "_arg0":Landroid/accounts/IAccountAuthenticatorResponse;
     .end local v3    # "_arg2":Ljava/lang/String;
     .end local v9    # "_arg3":Landroid/os/Bundle;
     :sswitch_6
-    const-string/jumbo v0, "android.accounts.IAccountAuthenticator"
+    const-string v0, "android.accounts.IAccountAuthenticator"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 154
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
@@ -506,28 +443,23 @@
 
     move-result-object v1
 
-    .line 156
     .restart local v1    # "_arg0":Landroid/accounts/IAccountAuthenticatorResponse;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 157
     .restart local v2    # "_arg1":Ljava/lang/String;
     invoke-virtual {p0, v1, v2}, Landroid/accounts/IAccountAuthenticator$Stub;->editProperties(Landroid/accounts/IAccountAuthenticatorResponse;Ljava/lang/String;)V
 
-    .line 158
     return v10
 
-    .line 162
     .end local v1    # "_arg0":Landroid/accounts/IAccountAuthenticatorResponse;
     .end local v2    # "_arg1":Ljava/lang/String;
     :sswitch_7
-    const-string/jumbo v0, "android.accounts.IAccountAuthenticator"
+    const-string v0, "android.accounts.IAccountAuthenticator"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 164
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
@@ -536,7 +468,6 @@
 
     move-result-object v1
 
-    .line 166
     .restart local v1    # "_arg0":Landroid/accounts/IAccountAuthenticatorResponse;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -544,7 +475,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 167
     sget-object v0, Landroid/accounts/Account;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -553,20 +483,16 @@
 
     check-cast v6, Landroid/accounts/Account;
 
-    .line 173
     :goto_7
     invoke-virtual {p2}, Landroid/os/Parcel;->createStringArray()[Ljava/lang/String;
 
     move-result-object v8
 
-    .line 174
     .local v8, "_arg2":[Ljava/lang/String;
     invoke-virtual {p0, v1, v6, v8}, Landroid/accounts/IAccountAuthenticator$Stub;->hasFeatures(Landroid/accounts/IAccountAuthenticatorResponse;Landroid/accounts/Account;[Ljava/lang/String;)V
 
-    .line 175
     return v10
 
-    .line 170
     .end local v8    # "_arg2":[Ljava/lang/String;
     :cond_7
     const/4 v6, 0x0
@@ -574,15 +500,13 @@
     .restart local v6    # "_arg1":Landroid/accounts/Account;
     goto :goto_7
 
-    .line 179
     .end local v1    # "_arg0":Landroid/accounts/IAccountAuthenticatorResponse;
     .end local v6    # "_arg1":Landroid/accounts/Account;
     :sswitch_8
-    const-string/jumbo v0, "android.accounts.IAccountAuthenticator"
+    const-string v0, "android.accounts.IAccountAuthenticator"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 181
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
@@ -591,7 +515,6 @@
 
     move-result-object v1
 
-    .line 183
     .restart local v1    # "_arg0":Landroid/accounts/IAccountAuthenticatorResponse;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -599,7 +522,6 @@
 
     if-eqz v0, :cond_8
 
-    .line 184
     sget-object v0, Landroid/accounts/Account;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -608,29 +530,24 @@
 
     check-cast v6, Landroid/accounts/Account;
 
-    .line 189
     :goto_8
     invoke-virtual {p0, v1, v6}, Landroid/accounts/IAccountAuthenticator$Stub;->getAccountRemovalAllowed(Landroid/accounts/IAccountAuthenticatorResponse;Landroid/accounts/Account;)V
 
-    .line 190
     return v10
 
-    .line 187
     :cond_8
     const/4 v6, 0x0
 
     .restart local v6    # "_arg1":Landroid/accounts/Account;
     goto :goto_8
 
-    .line 194
     .end local v1    # "_arg0":Landroid/accounts/IAccountAuthenticatorResponse;
     .end local v6    # "_arg1":Landroid/accounts/Account;
     :sswitch_9
-    const-string/jumbo v0, "android.accounts.IAccountAuthenticator"
+    const-string v0, "android.accounts.IAccountAuthenticator"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 196
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
@@ -639,7 +556,6 @@
 
     move-result-object v1
 
-    .line 198
     .restart local v1    # "_arg0":Landroid/accounts/IAccountAuthenticatorResponse;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -647,7 +563,6 @@
 
     if-eqz v0, :cond_9
 
-    .line 199
     sget-object v0, Landroid/accounts/Account;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -656,29 +571,24 @@
 
     check-cast v6, Landroid/accounts/Account;
 
-    .line 204
     :goto_9
     invoke-virtual {p0, v1, v6}, Landroid/accounts/IAccountAuthenticator$Stub;->getAccountCredentialsForCloning(Landroid/accounts/IAccountAuthenticatorResponse;Landroid/accounts/Account;)V
 
-    .line 205
     return v10
 
-    .line 202
     :cond_9
     const/4 v6, 0x0
 
     .restart local v6    # "_arg1":Landroid/accounts/Account;
     goto :goto_9
 
-    .line 209
     .end local v1    # "_arg0":Landroid/accounts/IAccountAuthenticatorResponse;
     .end local v6    # "_arg1":Landroid/accounts/Account;
     :sswitch_a
-    const-string/jumbo v0, "android.accounts.IAccountAuthenticator"
+    const-string v0, "android.accounts.IAccountAuthenticator"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 211
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
@@ -687,7 +597,6 @@
 
     move-result-object v1
 
-    .line 213
     .restart local v1    # "_arg0":Landroid/accounts/IAccountAuthenticatorResponse;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -695,7 +604,6 @@
 
     if-eqz v0, :cond_a
 
-    .line 214
     sget-object v0, Landroid/accounts/Account;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -704,7 +612,6 @@
 
     check-cast v6, Landroid/accounts/Account;
 
-    .line 220
     :goto_a
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -712,7 +619,6 @@
 
     if-eqz v0, :cond_b
 
-    .line 221
     sget-object v0, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -721,21 +627,17 @@
 
     check-cast v7, Landroid/os/Bundle;
 
-    .line 226
     :goto_b
     invoke-virtual {p0, v1, v6, v7}, Landroid/accounts/IAccountAuthenticator$Stub;->addAccountFromCredentials(Landroid/accounts/IAccountAuthenticatorResponse;Landroid/accounts/Account;Landroid/os/Bundle;)V
 
-    .line 227
     return v10
 
-    .line 217
     :cond_a
     const/4 v6, 0x0
 
     .restart local v6    # "_arg1":Landroid/accounts/Account;
     goto :goto_a
 
-    .line 224
     .end local v6    # "_arg1":Landroid/accounts/Account;
     :cond_b
     const/4 v7, 0x0
@@ -743,7 +645,6 @@
     .restart local v7    # "_arg2":Landroid/os/Bundle;
     goto :goto_b
 
-    .line 42
     nop
 
     :sswitch_data_0

@@ -98,7 +98,6 @@
     .locals 0
 
     .prologue
-    .line 24
     invoke-direct {p0}, Lcom/android/internal/logging/MetricsLogger;-><init>()V
 
     return-void

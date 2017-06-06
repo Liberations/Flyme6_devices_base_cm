@@ -30,17 +30,13 @@
     .param p3, "reason"    # Ljava/lang/String;
 
     .prologue
-    .line 788
     iput-object p1, p0, Lcom/android/server/notification/ZenModeHelper$H$ConfigMessageData;->this$1:Lcom/android/server/notification/ZenModeHelper$H;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 789
     iput-object p2, p0, Lcom/android/server/notification/ZenModeHelper$H$ConfigMessageData;->config:Landroid/service/notification/ZenModeConfig;
 
-    .line 790
     iput-object p3, p0, Lcom/android/server/notification/ZenModeHelper$H$ConfigMessageData;->reason:Ljava/lang/String;
 
-    .line 788
     return-void
 .end method

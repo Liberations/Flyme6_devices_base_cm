@@ -69,10 +69,9 @@
     .locals 2
 
     .prologue
-    .line 37
     sget-object v0, Lcyanogenmod/providers/WeatherContract;->AUTHORITY_URI:Landroid/net/Uri;
 
-    const-string/jumbo v1, "weather"
+    const-string v1, "weather"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -80,43 +79,36 @@
 
     sput-object v0, Lcyanogenmod/providers/WeatherContract$WeatherColumns;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 40
     sget-object v0, Lcyanogenmod/providers/WeatherContract$WeatherColumns;->CONTENT_URI:Landroid/net/Uri;
 
-    const-string/jumbo v1, "current_and_forecast"
+    const-string v1, "current_and_forecast"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 39
     sput-object v0, Lcyanogenmod/providers/WeatherContract$WeatherColumns;->CURRENT_AND_FORECAST_WEATHER_URI:Landroid/net/Uri;
 
-    .line 42
     sget-object v0, Lcyanogenmod/providers/WeatherContract$WeatherColumns;->CONTENT_URI:Landroid/net/Uri;
 
-    const-string/jumbo v1, "current"
+    const-string v1, "current"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 41
     sput-object v0, Lcyanogenmod/providers/WeatherContract$WeatherColumns;->CURRENT_WEATHER_URI:Landroid/net/Uri;
 
-    .line 44
     sget-object v0, Lcyanogenmod/providers/WeatherContract$WeatherColumns;->CONTENT_URI:Landroid/net/Uri;
 
-    const-string/jumbo v1, "forecast"
+    const-string v1, "forecast"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 43
     sput-object v0, Lcyanogenmod/providers/WeatherContract$WeatherColumns;->FORECAST_WEATHER_URI:Landroid/net/Uri;
 
-    .line 36
     return-void
 .end method
 
@@ -124,7 +116,6 @@
     .locals 0
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

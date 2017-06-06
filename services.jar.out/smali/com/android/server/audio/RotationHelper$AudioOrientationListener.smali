@@ -20,10 +20,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 135
     invoke-direct {p0, p1}, Landroid/view/OrientationEventListener;-><init>(Landroid/content/Context;)V
 
-    .line 134
     return-void
 .end method
 
@@ -34,9 +32,7 @@
     .param p1, "orientation"    # I
 
     .prologue
-    .line 140
     invoke-static {}, Lcom/android/server/audio/RotationHelper;->updateOrientation()V
 
-    .line 139
     return-void
 .end method

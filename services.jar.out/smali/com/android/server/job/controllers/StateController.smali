@@ -22,16 +22,12 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     iput-object p1, p0, Lcom/android/server/job/controllers/StateController;->mStateChangedListener:Lcom/android/server/job/StateChangedListener;
 
-    .line 39
     iput-object p2, p0, Lcom/android/server/job/controllers/StateController;->mContext:Landroid/content/Context;
 
-    .line 37
     return-void
 .end method
 
@@ -42,10 +38,8 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 43
     iput-boolean p1, p0, Lcom/android/server/job/controllers/StateController;->mDeviceIdleMode:Z
 
-    .line 42
     return-void
 .end method
 

@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,7 +18,6 @@
     .param p0, "drawable"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 28
     new-instance v0, Landroid/support/v4/graphics/drawable/DrawableWrapperLollipop;
 
     invoke-direct {v0, p0}, Landroid/support/v4/graphics/drawable/DrawableWrapperLollipop;-><init>(Landroid/graphics/drawable/Drawable;)V

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/filterpacks/videosrc/MediaSource;
 
     .prologue
-    .line 548
     iput-object p1, p0, Landroid/filterpacks/videosrc/MediaSource$3;->this$0:Landroid/filterpacks/videosrc/MediaSource;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "mp"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 550
     iget-object v0, p0, Landroid/filterpacks/videosrc/MediaSource$3;->this$0:Landroid/filterpacks/videosrc/MediaSource;
 
     invoke-static {v0}, Landroid/filterpacks/videosrc/MediaSource;->-get1(Landroid/filterpacks/videosrc/MediaSource;)Z
@@ -51,19 +49,17 @@
 
     if-eqz v0, :cond_0
 
-    const-string/jumbo v0, "MediaSource"
+    const-string v0, "MediaSource"
 
-    const-string/jumbo v1, "MediaPlayer has completed playback"
+    const-string v1, "MediaPlayer has completed playback"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 551
     :cond_0
     iget-object v1, p0, Landroid/filterpacks/videosrc/MediaSource$3;->this$0:Landroid/filterpacks/videosrc/MediaSource;
 
     monitor-enter v1
 
-    .line 552
     :try_start_0
     iget-object v0, p0, Landroid/filterpacks/videosrc/MediaSource$3;->this$0:Landroid/filterpacks/videosrc/MediaSource;
 
@@ -75,10 +71,8 @@
 
     monitor-exit v1
 
-    .line 549
     return-void
 
-    .line 551
     :catchall_0
     move-exception v0
 

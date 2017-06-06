@@ -38,7 +38,6 @@
     .param p4, "val$receiver"    # Landroid/os/ResultReceiver;
 
     .prologue
-    .line 505
     iput-object p2, p0, Landroid/service/media/MediaBrowserService$4;->this$0:Landroid/service/media/MediaBrowserService;
 
     iput-object p4, p0, Landroid/service/media/MediaBrowserService$4;->val$receiver:Landroid/os/ResultReceiver;
@@ -55,25 +54,21 @@
     .param p1, "item"    # Landroid/media/browse/MediaBrowser$MediaItem;
 
     .prologue
-    .line 508
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 509
     .local v0, "bundle":Landroid/os/Bundle;
-    const-string/jumbo v1, "media_item"
+    const-string v1, "media_item"
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 510
     iget-object v1, p0, Landroid/service/media/MediaBrowserService$4;->val$receiver:Landroid/os/ResultReceiver;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2, v0}, Landroid/os/ResultReceiver;->send(ILandroid/os/Bundle;)V
 
-    .line 507
     return-void
 .end method
 
@@ -82,7 +77,6 @@
     .param p1, "item"    # Ljava/lang/Object;
 
     .prologue
-    .line 507
     check-cast p1, Landroid/media/browse/MediaBrowser$MediaItem;
 
     .end local p1    # "item":Ljava/lang/Object;

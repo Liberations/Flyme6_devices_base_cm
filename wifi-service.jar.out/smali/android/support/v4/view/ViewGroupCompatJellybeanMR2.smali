@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,7 +18,6 @@
     .param p0, "group"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 24
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getLayoutMode()I
 
     move-result v0
@@ -33,9 +31,7 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 28
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setLayoutMode(I)V
 
-    .line 27
     return-void
 .end method

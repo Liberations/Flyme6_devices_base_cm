@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/accounts/AccountManagerService;
 
     .prologue
-    .line 283
     iput-object p1, p0, Lcom/android/server/accounts/AccountManagerService$1;->this$0:Lcom/android/server/accounts/AccountManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,8 +39,7 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 288
-    const-string/jumbo v1, "android.intent.extra.REPLACING"
+    const-string v1, "android.intent.extra.REPLACING"
 
     const/4 v2, 0x0
 
@@ -51,12 +49,10 @@
 
     if-nez v1, :cond_0
 
-    .line 298
     new-instance v0, Lcom/android/server/accounts/AccountManagerService$1$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/accounts/AccountManagerService$1$1;-><init>(Lcom/android/server/accounts/AccountManagerService$1;)V
 
-    .line 304
     .local v0, "r":Ljava/lang/Runnable;
     new-instance v1, Ljava/lang/Thread;
 
@@ -64,7 +60,6 @@
 
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
-    .line 285
     .end local v0    # "r":Ljava/lang/Runnable;
     :cond_0
     return-void

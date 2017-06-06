@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 72
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,28 +46,23 @@
     .prologue
     const/4 v9, 0x5
 
-    .line 74
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v2
 
-    .line 75
     .local v2, "timestamp":J
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 76
     .local v4, "sleepTimeMs":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 77
     .local v5, "idleTimeMs":I
     new-array v6, v9, [I
 
-    .line 78
     .local v6, "txTimeMs":[I
     const/4 v0, 0x0
 
@@ -76,31 +70,26 @@
     :goto_0
     if-ge v0, v9, :cond_0
 
-    .line 79
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     aput v1, v6, v0
 
-    .line 78
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 81
     :cond_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v7
 
-    .line 82
     .local v7, "rxTimeMs":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v8
 
-    .line 83
     .local v8, "energyUsed":I
     new-instance v1, Landroid/telephony/ModemActivityInfo;
 
@@ -114,7 +103,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 73
     invoke-virtual {p0, p1}, Landroid/telephony/ModemActivityInfo$1;->createFromParcel(Landroid/os/Parcel;)Landroid/telephony/ModemActivityInfo;
 
     move-result-object v0
@@ -127,7 +115,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 88
     new-array v0, p1, [Landroid/telephony/ModemActivityInfo;
 
     return-object v0
@@ -138,7 +125,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 87
     invoke-virtual {p0, p1}, Landroid/telephony/ModemActivityInfo$1;->newArray(I)[Landroid/telephony/ModemActivityInfo;
 
     move-result-object v0

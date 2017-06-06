@@ -30,7 +30,6 @@
     .param p2, "val$providerName"    # Ljava/lang/String;
 
     .prologue
-    .line 307
     iput-object p1, p0, Lcyanogenmod/weather/CMWeatherManager$1$1;->this$1:Lcyanogenmod/weather/CMWeatherManager$1;
 
     iput-object p2, p0, Lcyanogenmod/weather/CMWeatherManager$1$1;->val$providerName:Ljava/lang/String;
@@ -46,7 +45,6 @@
     .locals 6
 
     .prologue
-    .line 310
     iget-object v4, p0, Lcyanogenmod/weather/CMWeatherManager$1$1;->this$1:Lcyanogenmod/weather/CMWeatherManager$1;
 
     iget-object v4, v4, Lcyanogenmod/weather/CMWeatherManager$1;->this$0:Lcyanogenmod/weather/CMWeatherManager;
@@ -57,13 +55,11 @@
 
     monitor-enter v5
 
-    .line 312
     :try_start_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 314
     .local v0, "deadListeners":Ljava/util/List;, "Ljava/util/List<Lcyanogenmod/weather/CMWeatherManager$WeatherServiceProviderChangeListener;>;"
     iget-object v4, p0, Lcyanogenmod/weather/CMWeatherManager$1$1;->this$1:Lcyanogenmod/weather/CMWeatherManager$1;
 
@@ -73,7 +69,6 @@
 
     move-result-object v4
 
-    .line 313
     invoke-interface {v4}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -94,7 +89,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 316
     .local v2, "listener":Lcyanogenmod/weather/CMWeatherManager$WeatherServiceProviderChangeListener;
     :try_start_1
     iget-object v4, p0, Lcyanogenmod/weather/CMWeatherManager$1$1;->val$providerName:Ljava/lang/String;
@@ -106,11 +100,9 @@
 
     goto :goto_0
 
-    .line 317
     :catch_0
     move-exception v1
 
-    .line 318
     .local v1, "e":Ljava/lang/Throwable;
     :try_start_2
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -119,7 +111,6 @@
 
     goto :goto_0
 
-    .line 310
     .end local v0    # "deadListeners":Ljava/util/List;, "Ljava/util/List<Lcyanogenmod/weather/CMWeatherManager$WeatherServiceProviderChangeListener;>;"
     .end local v1    # "e":Ljava/lang/Throwable;
     .end local v2    # "listener":Lcyanogenmod/weather/CMWeatherManager$WeatherServiceProviderChangeListener;
@@ -131,7 +122,6 @@
 
     throw v4
 
-    .line 321
     .restart local v0    # "deadListeners":Ljava/util/List;, "Ljava/util/List<Lcyanogenmod/weather/CMWeatherManager$WeatherServiceProviderChangeListener;>;"
     .restart local v3    # "listener$iterator":Ljava/util/Iterator;
     :cond_0
@@ -142,7 +132,6 @@
 
     if-lez v4, :cond_1
 
-    .line 322
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -160,7 +149,6 @@
 
     check-cast v2, Lcyanogenmod/weather/CMWeatherManager$WeatherServiceProviderChangeListener;
 
-    .line 323
     .restart local v2    # "listener":Lcyanogenmod/weather/CMWeatherManager$WeatherServiceProviderChangeListener;
     iget-object v4, p0, Lcyanogenmod/weather/CMWeatherManager$1$1;->this$1:Lcyanogenmod/weather/CMWeatherManager$1;
 
@@ -180,6 +168,5 @@
     :cond_1
     monitor-exit v5
 
-    .line 309
     return-void
 .end method

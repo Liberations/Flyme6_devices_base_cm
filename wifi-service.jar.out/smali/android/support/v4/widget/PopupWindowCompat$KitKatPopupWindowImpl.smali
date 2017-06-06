@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 88
     invoke-direct {p0}, Landroid/support/v4/widget/PopupWindowCompat$GingerbreadPopupWindowImpl;-><init>()V
 
     return-void
@@ -36,9 +35,7 @@
     .param p5, "gravity"    # I
 
     .prologue
-    .line 92
     invoke-static {p1, p2, p3, p4, p5}, Landroid/support/v4/widget/PopupWindowCompatKitKat;->showAsDropDown(Landroid/widget/PopupWindow;Landroid/view/View;III)V
 
-    .line 91
     return-void
 .end method

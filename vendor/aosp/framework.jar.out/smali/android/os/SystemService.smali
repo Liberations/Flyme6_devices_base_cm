@@ -49,28 +49,24 @@
     .locals 1
 
     .prologue
-    .line 31
     invoke-static {}, Lcom/google/android/collect/Maps;->newHashMap()Ljava/util/HashMap;
 
     move-result-object v0
 
     sput-object v0, Landroid/os/SystemService;->sStates:Ljava/util/HashMap;
 
-    .line 47
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Landroid/os/SystemService;->sPropertyLock:Ljava/lang/Object;
 
-    .line 50
     new-instance v0, Landroid/os/SystemService$1;
 
     invoke-direct {v0}, Landroid/os/SystemService$1;-><init>()V
 
     invoke-static {v0}, Landroid/os/SystemProperties;->addChangeCallback(Ljava/lang/Runnable;)V
 
-    .line 29
     return-void
 .end method
 
@@ -78,7 +74,6 @@
     .locals 0
 
     .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -89,12 +84,11 @@
     .param p0, "service"    # Ljava/lang/String;
 
     .prologue
-    .line 79
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "init.svc."
+    const-string v3, "init.svc."
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -112,7 +106,6 @@
 
     move-result-object v0
 
-    .line 80
     .local v0, "rawState":Ljava/lang/String;
     sget-object v2, Landroid/os/SystemService;->sStates:Ljava/util/HashMap;
 
@@ -122,14 +115,11 @@
 
     check-cast v1, Landroid/os/SystemService$State;
 
-    .line 81
     .local v1, "state":Landroid/os/SystemService$State;
     if-eqz v1, :cond_0
 
-    .line 82
     return-object v1
 
-    .line 84
     :cond_0
     sget-object v2, Landroid/os/SystemService$State;->STOPPED:Landroid/os/SystemService$State;
 
@@ -141,7 +131,6 @@
     .param p0, "service"    # Ljava/lang/String;
 
     .prologue
-    .line 99
     sget-object v0, Landroid/os/SystemService$State;->RUNNING:Landroid/os/SystemService$State;
 
     invoke-static {p0}, Landroid/os/SystemService;->getState(Ljava/lang/String;)Landroid/os/SystemService$State;
@@ -160,7 +149,6 @@
     .param p0, "service"    # Ljava/lang/String;
 
     .prologue
-    .line 92
     sget-object v0, Landroid/os/SystemService$State;->STOPPED:Landroid/os/SystemService$State;
 
     invoke-static {p0}, Landroid/os/SystemService;->getState(Ljava/lang/String;)Landroid/os/SystemService$State;
@@ -179,12 +167,10 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 72
-    const-string/jumbo v0, "ctl.restart"
+    const-string v0, "ctl.restart"
 
     invoke-static {v0, p0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 71
     return-void
 .end method
 
@@ -193,12 +179,10 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 62
-    const-string/jumbo v0, "ctl.start"
+    const-string v0, "ctl.start"
 
     invoke-static {v0, p0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 61
     return-void
 .end method
 
@@ -207,12 +191,10 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 67
-    const-string/jumbo v0, "ctl.stop"
+    const-string v0, "ctl.stop"
 
     invoke-static {v0, p0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 66
     return-void
 .end method
 
@@ -221,13 +203,11 @@
     .param p0, "services"    # [Ljava/lang/String;
 
     .prologue
-    .line 133
     :goto_0
     sget-object v3, Landroid/os/SystemService;->sPropertyLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 134
     const/4 v2, 0x0
 
     :try_start_0
@@ -238,7 +218,6 @@
 
     aget-object v1, p0, v2
 
-    .line 135
     .local v1, "service":Ljava/lang/String;
     sget-object v5, Landroid/os/SystemService$State;->STOPPED:Landroid/os/SystemService$State;
 
@@ -256,16 +235,13 @@
 
     monitor-exit v3
 
-    .line 136
     return-void
 
-    .line 134
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 141
     .end local v1    # "service":Ljava/lang/String;
     :cond_1
     :try_start_1
@@ -281,7 +257,6 @@
 
     goto :goto_0
 
-    .line 133
     :catchall_0
     move-exception v2
 
@@ -289,7 +264,6 @@
 
     throw v2
 
-    .line 142
     :catch_0
     move-exception v0
 
@@ -309,27 +283,23 @@
     .end annotation
 
     .prologue
-    .line 107
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v4
 
     add-long v2, v4, p2
 
-    .line 109
     .local v2, "endMillis":J
     :goto_0
     sget-object v5, Landroid/os/SystemService;->sPropertyLock:Ljava/lang/Object;
 
     monitor-enter v5
 
-    .line 110
     :try_start_0
     invoke-static {p0}, Landroid/os/SystemService;->getState(Ljava/lang/String;)Landroid/os/SystemService$State;
 
     move-result-object v0
 
-    .line 111
     .local v0, "currentState":Landroid/os/SystemService$State;
     invoke-virtual {p1, v0}, Landroid/os/SystemService$State;->equals(Ljava/lang/Object;)Z
     :try_end_0
@@ -341,10 +311,8 @@
 
     monitor-exit v5
 
-    .line 112
     return-void
 
-    .line 115
     :cond_0
     :try_start_1
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -355,14 +323,13 @@
 
     if-ltz v4, :cond_1
 
-    .line 116
     new-instance v4, Ljava/util/concurrent/TimeoutException;
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "Service "
+    const-string v7, "Service "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -372,7 +339,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, " currently "
+    const-string v7, " currently "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -382,10 +349,8 @@
 
     move-result-object v6
 
-    .line 117
-    const-string/jumbo v7, "; waited "
+    const-string v7, "; waited "
 
-    .line 116
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v6
@@ -394,10 +359,8 @@
 
     move-result-object v6
 
-    .line 117
-    const-string/jumbo v7, "ms for "
+    const-string v7, "ms for "
 
-    .line 116
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v6
@@ -416,7 +379,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 109
     .end local v0    # "currentState":Landroid/os/SystemService$State;
     :catchall_0
     move-exception v4
@@ -425,7 +387,6 @@
 
     throw v4
 
-    .line 121
     .restart local v0    # "currentState":Landroid/os/SystemService$State;
     :cond_1
     :try_start_2
@@ -441,7 +402,6 @@
 
     goto :goto_0
 
-    .line 122
     :catch_0
     move-exception v1
 

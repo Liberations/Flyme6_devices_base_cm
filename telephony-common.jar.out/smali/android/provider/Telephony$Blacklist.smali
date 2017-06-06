@@ -44,47 +44,38 @@
     .locals 1
 
     .prologue
-    .line 3105
-    const-string/jumbo v0, "content://blacklist"
+    const-string v0, "content://blacklist"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 3104
     sput-object v0, Landroid/provider/Telephony$Blacklist;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 3113
-    const-string/jumbo v0, "content://blacklist/bynumber"
+    const-string v0, "content://blacklist/bynumber"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 3112
     sput-object v0, Landroid/provider/Telephony$Blacklist;->CONTENT_FILTER_BYNUMBER_URI:Landroid/net/Uri;
 
-    .line 3119
-    const-string/jumbo v0, "content://blacklist/phone"
+    const-string v0, "content://blacklist/phone"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 3118
     sput-object v0, Landroid/provider/Telephony$Blacklist;->CONTENT_PHONE_URI:Landroid/net/Uri;
 
-    .line 3125
-    const-string/jumbo v0, "content://blacklist/message"
+    const-string v0, "content://blacklist/message"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 3124
     sput-object v0, Landroid/provider/Telephony$Blacklist;->CONTENT_MESSAGE_URI:Landroid/net/Uri;
 
-    .line 3100
     return-void
 .end method
 
@@ -92,7 +83,6 @@
     .locals 0
 
     .prologue
-    .line 3100
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

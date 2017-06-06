@@ -27,7 +27,6 @@
     .param p2, "val$nextTransition"    # Landroid/transition/Transition;
 
     .prologue
-    .line 428
     iput-object p1, p0, Landroid/transition/TransitionSet$1;->this$0:Landroid/transition/TransitionSet;
 
     iput-object p2, p0, Landroid/transition/TransitionSet$1;->val$nextTransition:Landroid/transition/Transition;
@@ -44,14 +43,11 @@
     .param p1, "transition"    # Landroid/transition/Transition;
 
     .prologue
-    .line 431
     iget-object v0, p0, Landroid/transition/TransitionSet$1;->val$nextTransition:Landroid/transition/Transition;
 
     invoke-virtual {v0}, Landroid/transition/Transition;->runAnimators()V
 
-    .line 432
     invoke-virtual {p1, p0}, Landroid/transition/Transition;->removeListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
 
-    .line 430
     return-void
 .end method

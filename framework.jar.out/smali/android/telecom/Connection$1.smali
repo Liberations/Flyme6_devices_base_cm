@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Landroid/telecom/Connection;
 
     .prologue
-    .line 1195
     iput-object p1, p0, Landroid/telecom/Connection$1;->this$0:Landroid/telecom/Connection;
 
     invoke-direct {p0}, Landroid/telecom/Connection$Listener;-><init>()V
@@ -39,7 +38,6 @@
     .param p1, "c"    # Landroid/telecom/Connection;
 
     .prologue
-    .line 1198
     iget-object v0, p0, Landroid/telecom/Connection$1;->this$0:Landroid/telecom/Connection;
 
     invoke-static {v0}, Landroid/telecom/Connection;->-get0(Landroid/telecom/Connection;)Ljava/util/List;
@@ -52,12 +50,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 1199
     iget-object v0, p0, Landroid/telecom/Connection$1;->this$0:Landroid/telecom/Connection;
 
     invoke-static {v0}, Landroid/telecom/Connection;->-wrap0(Landroid/telecom/Connection;)V
 
-    .line 1197
     :cond_0
     return-void
 .end method

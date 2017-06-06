@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 40
     new-instance v0, Landroid/support/v4/media/MediaBrowserServiceCompatApi21$MediaBrowserServiceAdaptorApi21;
 
     invoke-direct {v0}, Landroid/support/v4/media/MediaBrowserServiceCompatApi21$MediaBrowserServiceAdaptorApi21;-><init>()V
@@ -43,7 +41,6 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 48
     check-cast p0, Landroid/support/v4/media/MediaBrowserServiceCompatApi21$MediaBrowserServiceAdaptorApi21;
 
     .end local p0    # "serviceObj":Ljava/lang/Object;
@@ -60,12 +57,10 @@
     .param p1, "serviceImpl"    # Landroid/support/v4/media/MediaBrowserServiceCompatApi21$ServiceImplApi21;
 
     .prologue
-    .line 44
     check-cast p0, Landroid/support/v4/media/MediaBrowserServiceCompatApi21$MediaBrowserServiceAdaptorApi21;
 
     .end local p0    # "serviceObj":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Landroid/support/v4/media/MediaBrowserServiceCompatApi21$MediaBrowserServiceAdaptorApi21;->onCreate(Landroid/support/v4/media/MediaBrowserServiceCompatApi21$ServiceImplApi21;)V
 
-    .line 43
     return-void
 .end method

@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/UiModeManagerService;
 
     .prologue
-    .line 110
     iput-object p1, p0, Lcom/android/server/UiModeManagerService$1;->this$0:Lcom/android/server/UiModeManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -42,7 +41,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 113
     invoke-virtual {p0}, Lcom/android/server/UiModeManagerService$1;->getResultCode()I
 
     move-result v2
@@ -51,26 +49,22 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 118
     return-void
 
-    .line 121
     :cond_0
-    const-string/jumbo v2, "enableFlags"
+    const-string v2, "enableFlags"
 
     invoke-virtual {p2, v2, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 122
     .local v1, "enableFlags":I
-    const-string/jumbo v2, "disableFlags"
+    const-string v2, "disableFlags"
 
     invoke-virtual {p2, v2, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 123
     .local v0, "disableFlags":I
     iget-object v2, p0, Lcom/android/server/UiModeManagerService$1;->this$0:Lcom/android/server/UiModeManagerService;
 
@@ -78,7 +72,6 @@
 
     monitor-enter v3
 
-    .line 124
     :try_start_0
     iget-object v2, p0, Lcom/android/server/UiModeManagerService$1;->this$0:Lcom/android/server/UiModeManagerService;
 
@@ -92,10 +85,8 @@
 
     monitor-exit v3
 
-    .line 112
     return-void
 
-    .line 123
     :catchall_0
     move-exception v2
 

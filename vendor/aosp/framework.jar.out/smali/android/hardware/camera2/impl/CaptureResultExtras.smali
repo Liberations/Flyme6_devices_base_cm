@@ -46,15 +46,12 @@
     .locals 1
 
     .prologue
-    .line 33
     new-instance v0, Landroid/hardware/camera2/impl/CaptureResultExtras$1;
 
     invoke-direct {v0}, Landroid/hardware/camera2/impl/CaptureResultExtras$1;-><init>()V
 
-    .line 32
     sput-object v0, Landroid/hardware/camera2/impl/CaptureResultExtras;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 24
     return-void
 .end method
 
@@ -68,28 +65,20 @@
     .param p7, "partialResultCount"    # I
 
     .prologue
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
     iput p1, p0, Landroid/hardware/camera2/impl/CaptureResultExtras;->requestId:I
 
-    .line 53
     iput p2, p0, Landroid/hardware/camera2/impl/CaptureResultExtras;->subsequenceId:I
 
-    .line 54
     iput p3, p0, Landroid/hardware/camera2/impl/CaptureResultExtras;->afTriggerId:I
 
-    .line 55
     iput p4, p0, Landroid/hardware/camera2/impl/CaptureResultExtras;->precaptureTriggerId:I
 
-    .line 56
     iput-wide p5, p0, Landroid/hardware/camera2/impl/CaptureResultExtras;->frameNumber:J
 
-    .line 57
     iput p7, p0, Landroid/hardware/camera2/impl/CaptureResultExtras;->partialResultCount:I
 
-    .line 51
     return-void
 .end method
 
@@ -98,13 +87,10 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     invoke-virtual {p0, p1}, Landroid/hardware/camera2/impl/CaptureResultExtras;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 45
     return-void
 .end method
 
@@ -124,7 +110,6 @@
     .locals 1
 
     .prologue
-    .line 62
     const/4 v0, 0x0
 
     return v0
@@ -134,7 +119,6 @@
     .locals 1
 
     .prologue
-    .line 93
     iget v0, p0, Landroid/hardware/camera2/impl/CaptureResultExtras;->afTriggerId:I
 
     return v0
@@ -144,7 +128,6 @@
     .locals 2
 
     .prologue
-    .line 101
     iget-wide v0, p0, Landroid/hardware/camera2/impl/CaptureResultExtras;->frameNumber:J
 
     return-wide v0
@@ -154,7 +137,6 @@
     .locals 1
 
     .prologue
-    .line 105
     iget v0, p0, Landroid/hardware/camera2/impl/CaptureResultExtras;->partialResultCount:I
 
     return v0
@@ -164,7 +146,6 @@
     .locals 1
 
     .prologue
-    .line 97
     iget v0, p0, Landroid/hardware/camera2/impl/CaptureResultExtras;->precaptureTriggerId:I
 
     return v0
@@ -174,7 +155,6 @@
     .locals 1
 
     .prologue
-    .line 85
     iget v0, p0, Landroid/hardware/camera2/impl/CaptureResultExtras;->requestId:I
 
     return v0
@@ -184,7 +164,6 @@
     .locals 1
 
     .prologue
-    .line 89
     iget v0, p0, Landroid/hardware/camera2/impl/CaptureResultExtras;->subsequenceId:I
 
     return v0
@@ -195,49 +174,42 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 76
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/hardware/camera2/impl/CaptureResultExtras;->requestId:I
 
-    .line 77
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/hardware/camera2/impl/CaptureResultExtras;->subsequenceId:I
 
-    .line 78
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/hardware/camera2/impl/CaptureResultExtras;->afTriggerId:I
 
-    .line 79
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/hardware/camera2/impl/CaptureResultExtras;->precaptureTriggerId:I
 
-    .line 80
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/hardware/camera2/impl/CaptureResultExtras;->frameNumber:J
 
-    .line 81
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/hardware/camera2/impl/CaptureResultExtras;->partialResultCount:I
 
-    .line 75
     return-void
 .end method
 
@@ -247,36 +219,29 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 67
     iget v0, p0, Landroid/hardware/camera2/impl/CaptureResultExtras;->requestId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 68
     iget v0, p0, Landroid/hardware/camera2/impl/CaptureResultExtras;->subsequenceId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 69
     iget v0, p0, Landroid/hardware/camera2/impl/CaptureResultExtras;->afTriggerId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 70
     iget v0, p0, Landroid/hardware/camera2/impl/CaptureResultExtras;->precaptureTriggerId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 71
     iget-wide v0, p0, Landroid/hardware/camera2/impl/CaptureResultExtras;->frameNumber:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 72
     iget v0, p0, Landroid/hardware/camera2/impl/CaptureResultExtras;->partialResultCount:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 66
     return-void
 .end method

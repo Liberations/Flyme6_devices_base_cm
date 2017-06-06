@@ -207,7 +207,6 @@
     .locals 1
 
     .prologue
-    .line 357
     const/4 v0, 0x3
 
     invoke-static {v0}, Landroid/telecom/Log;->isLoggable(I)Z
@@ -216,7 +215,6 @@
 
     sput-boolean v0, Landroid/telecom/Connection;->PII_DEBUG:Z
 
-    .line 54
     return-void
 .end method
 
@@ -226,24 +224,20 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 1246
     invoke-direct {p0}, Landroid/telecom/Conferenceable;-><init>()V
 
-    .line 1195
     new-instance v0, Landroid/telecom/Connection$1;
 
     invoke-direct {v0, p0}, Landroid/telecom/Connection$1;-><init>(Landroid/telecom/Connection;)V
 
     iput-object v0, p0, Landroid/telecom/Connection;->mConnectionDeathListener:Landroid/telecom/Connection$Listener;
 
-    .line 1204
     new-instance v0, Landroid/telecom/Connection$2;
 
     invoke-direct {v0, p0}, Landroid/telecom/Connection$2;-><init>(Landroid/telecom/Connection;)V
 
     iput-object v0, p0, Landroid/telecom/Connection;->mConferenceDeathListener:Landroid/telecom/Conference$Listener;
 
-    .line 1219
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     const/16 v1, 0x8
@@ -252,44 +246,36 @@
 
     invoke-direct {v0, v1, v2, v3}, Ljava/util/concurrent/ConcurrentHashMap;-><init>(IFI)V
 
-    .line 1218
     invoke-static {v0}, Ljava/util/Collections;->newSetFromMap(Ljava/util/Map;)Ljava/util/Set;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/telecom/Connection;->mListeners:Ljava/util/Set;
 
-    .line 1220
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/telecom/Connection;->mConferenceables:Ljava/util/List;
 
-    .line 1222
     iget-object v0, p0, Landroid/telecom/Connection;->mConferenceables:Ljava/util/List;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 1221
     iput-object v0, p0, Landroid/telecom/Connection;->mUnmodifiableConferenceables:Ljava/util/List;
 
-    .line 1224
     iput v3, p0, Landroid/telecom/Connection;->mState:I
 
-    .line 1230
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/telecom/Connection;->mRingbackRequested:Z
 
-    .line 1235
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Landroid/telecom/Connection;->mConnectTimeMillis:J
 
-    .line 1246
     return-void
 .end method
 
@@ -301,7 +287,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 368
     and-int v1, p0, p1
 
     if-eqz v1, :cond_0
@@ -317,18 +302,15 @@
     .param p0, "capabilities"    # I
 
     .prologue
-    .line 403
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 404
     .local v0, "builder":Ljava/lang/StringBuilder;
-    const-string/jumbo v1, "[Capabilities:"
+    const-string v1, "[Capabilities:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 405
     const/4 v1, 0x1
 
     invoke-static {p0, v1}, Landroid/telecom/Connection;->can(II)Z
@@ -337,12 +319,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 406
-    const-string/jumbo v1, " CAPABILITY_HOLD"
+    const-string v1, " CAPABILITY_HOLD"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 408
     :cond_0
     const/4 v1, 0x2
 
@@ -352,12 +332,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 409
-    const-string/jumbo v1, " CAPABILITY_SUPPORT_HOLD"
+    const-string v1, " CAPABILITY_SUPPORT_HOLD"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 411
     :cond_1
     const/4 v1, 0x4
 
@@ -367,12 +345,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 412
-    const-string/jumbo v1, " CAPABILITY_MERGE_CONFERENCE"
+    const-string v1, " CAPABILITY_MERGE_CONFERENCE"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 414
     :cond_2
     const/16 v1, 0x8
 
@@ -382,12 +358,10 @@
 
     if-eqz v1, :cond_3
 
-    .line 415
-    const-string/jumbo v1, " CAPABILITY_SWAP_CONFERENCE"
+    const-string v1, " CAPABILITY_SWAP_CONFERENCE"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 417
     :cond_3
     const/16 v1, 0x20
 
@@ -397,12 +371,10 @@
 
     if-eqz v1, :cond_4
 
-    .line 418
-    const-string/jumbo v1, " CAPABILITY_RESPOND_VIA_TEXT"
+    const-string v1, " CAPABILITY_RESPOND_VIA_TEXT"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 420
     :cond_4
     const/16 v1, 0x40
 
@@ -412,12 +384,10 @@
 
     if-eqz v1, :cond_5
 
-    .line 421
-    const-string/jumbo v1, " CAPABILITY_MUTE"
+    const-string v1, " CAPABILITY_MUTE"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 423
     :cond_5
     const/16 v1, 0x80
 
@@ -427,12 +397,10 @@
 
     if-eqz v1, :cond_6
 
-    .line 424
-    const-string/jumbo v1, " CAPABILITY_MANAGE_CONFERENCE"
+    const-string v1, " CAPABILITY_MANAGE_CONFERENCE"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 426
     :cond_6
     const/16 v1, 0x100
 
@@ -442,12 +410,10 @@
 
     if-eqz v1, :cond_7
 
-    .line 427
-    const-string/jumbo v1, " CAPABILITY_SUPPORTS_VT_LOCAL_RX"
+    const-string v1, " CAPABILITY_SUPPORTS_VT_LOCAL_RX"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 429
     :cond_7
     const/16 v1, 0x200
 
@@ -457,12 +423,10 @@
 
     if-eqz v1, :cond_8
 
-    .line 430
-    const-string/jumbo v1, " CAPABILITY_SUPPORTS_VT_LOCAL_TX"
+    const-string v1, " CAPABILITY_SUPPORTS_VT_LOCAL_TX"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 432
     :cond_8
     const/16 v1, 0x300
 
@@ -472,12 +436,10 @@
 
     if-eqz v1, :cond_9
 
-    .line 433
-    const-string/jumbo v1, " CAPABILITY_SUPPORTS_VT_LOCAL_BIDIRECTIONAL"
+    const-string v1, " CAPABILITY_SUPPORTS_VT_LOCAL_BIDIRECTIONAL"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 435
     :cond_9
     const/16 v1, 0x400
 
@@ -487,12 +449,10 @@
 
     if-eqz v1, :cond_a
 
-    .line 436
-    const-string/jumbo v1, " CAPABILITY_SUPPORTS_VT_REMOTE_RX"
+    const-string v1, " CAPABILITY_SUPPORTS_VT_REMOTE_RX"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 438
     :cond_a
     const/16 v1, 0x800
 
@@ -502,12 +462,10 @@
 
     if-eqz v1, :cond_b
 
-    .line 439
-    const-string/jumbo v1, " CAPABILITY_SUPPORTS_VT_REMOTE_TX"
+    const-string v1, " CAPABILITY_SUPPORTS_VT_REMOTE_TX"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 441
     :cond_b
     const/16 v1, 0xc00
 
@@ -517,12 +475,10 @@
 
     if-eqz v1, :cond_c
 
-    .line 442
-    const-string/jumbo v1, " CAPABILITY_SUPPORTS_VT_REMOTE_BIDIRECTIONAL"
+    const-string v1, " CAPABILITY_SUPPORTS_VT_REMOTE_BIDIRECTIONAL"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 444
     :cond_c
     const/high16 v1, 0x800000
 
@@ -532,12 +488,10 @@
 
     if-eqz v1, :cond_d
 
-    .line 445
-    const-string/jumbo v1, " CAPABILITY_SUPPORTS_DOWNGRADE_TO_VOICE_LOCAL"
+    const-string v1, " CAPABILITY_SUPPORTS_DOWNGRADE_TO_VOICE_LOCAL"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 447
     :cond_d
     const/high16 v1, 0x1000000
 
@@ -547,12 +501,10 @@
 
     if-eqz v1, :cond_e
 
-    .line 448
-    const-string/jumbo v1, " CAPABILITY_SUPPORTS_DOWNGRADE_TO_VOICE_REMOTE"
+    const-string v1, " CAPABILITY_SUPPORTS_DOWNGRADE_TO_VOICE_REMOTE"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 450
     :cond_e
     const v1, 0x8000
 
@@ -562,12 +514,10 @@
 
     if-eqz v1, :cond_f
 
-    .line 451
-    const-string/jumbo v1, " CAPABILITY_HIGH_DEF_AUDIO"
+    const-string v1, " CAPABILITY_HIGH_DEF_AUDIO"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 453
     :cond_f
     const/high16 v1, 0x10000
 
@@ -577,12 +527,10 @@
 
     if-eqz v1, :cond_10
 
-    .line 454
-    const-string/jumbo v1, " CAPABILITY_WIFI"
+    const-string v1, " CAPABILITY_WIFI"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 456
     :cond_10
     const/16 v1, 0x4000
 
@@ -592,12 +540,10 @@
 
     if-eqz v1, :cond_11
 
-    .line 457
-    const-string/jumbo v1, " CAPABILITY_GENERIC_CONFERENCE"
+    const-string v1, " CAPABILITY_GENERIC_CONFERENCE"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 459
     :cond_11
     const/high16 v1, 0x20000
 
@@ -607,12 +553,10 @@
 
     if-eqz v1, :cond_12
 
-    .line 460
-    const-string/jumbo v1, " CAPABILITY_SHOW_CALLBACK_NUMBER"
+    const-string v1, " CAPABILITY_SHOW_CALLBACK_NUMBER"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 462
     :cond_12
     const/high16 v1, 0x40000
 
@@ -622,12 +566,10 @@
 
     if-eqz v1, :cond_13
 
-    .line 463
-    const-string/jumbo v1, " CAPABILITY_SPEED_UP_MT_AUDIO"
+    const-string v1, " CAPABILITY_SPEED_UP_MT_AUDIO"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 465
     :cond_13
     const/high16 v1, 0x80000
 
@@ -637,12 +579,10 @@
 
     if-eqz v1, :cond_14
 
-    .line 466
-    const-string/jumbo v1, " CAPABILITY_CAN_UPGRADE_TO_VIDEO"
+    const-string v1, " CAPABILITY_CAN_UPGRADE_TO_VIDEO"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 468
     :cond_14
     const/high16 v1, 0x100000
 
@@ -652,12 +592,10 @@
 
     if-eqz v1, :cond_15
 
-    .line 469
-    const-string/jumbo v1, " CAPABILITY_CAN_PAUSE_VIDEO"
+    const-string v1, " CAPABILITY_CAN_PAUSE_VIDEO"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 471
     :cond_15
     const/high16 v1, 0x200000
 
@@ -667,12 +605,10 @@
 
     if-eqz v1, :cond_16
 
-    .line 472
-    const-string/jumbo v1, " CAPABILITY_SINGLE_PARTY_CONFERENCE"
+    const-string v1, " CAPABILITY_SINGLE_PARTY_CONFERENCE"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 474
     :cond_16
     const/high16 v1, 0x400000
 
@@ -682,18 +618,15 @@
 
     if-eqz v1, :cond_17
 
-    .line 475
-    const-string/jumbo v1, " CAPABILITY_CAN_SEND_RESPONSE_VIA_CONNECTION"
+    const-string v1, " CAPABILITY_CAN_SEND_RESPONSE_VIA_CONNECTION"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 478
     :cond_17
-    const-string/jumbo v1, "]"
+    const-string v1, "]"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 479
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -705,7 +638,6 @@
     .locals 5
 
     .prologue
-    .line 2096
     iget-object v4, p0, Landroid/telecom/Connection;->mConferenceables:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -727,7 +659,6 @@
 
     check-cast v0, Landroid/telecom/Conferenceable;
 
-    .line 2097
     .local v0, "c":Landroid/telecom/Conferenceable;
     instance-of v4, v0, Landroid/telecom/Connection;
 
@@ -735,10 +666,8 @@
 
     move-object v3, v0
 
-    .line 2098
     check-cast v3, Landroid/telecom/Connection;
 
-    .line 2099
     .local v3, "connection":Landroid/telecom/Connection;
     iget-object v4, p0, Landroid/telecom/Connection;->mConnectionDeathListener:Landroid/telecom/Connection$Listener;
 
@@ -746,7 +675,6 @@
 
     goto :goto_0
 
-    .line 2100
     .end local v3    # "connection":Landroid/telecom/Connection;
     :cond_1
     instance-of v4, v0, Landroid/telecom/Conference;
@@ -755,10 +683,8 @@
 
     move-object v2, v0
 
-    .line 2101
     check-cast v2, Landroid/telecom/Conference;
 
-    .line 2102
     .local v2, "conference":Landroid/telecom/Conference;
     iget-object v4, p0, Landroid/telecom/Connection;->mConferenceDeathListener:Landroid/telecom/Conference$Listener;
 
@@ -766,7 +692,6 @@
 
     goto :goto_0
 
-    .line 2105
     .end local v0    # "c":Landroid/telecom/Conferenceable;
     .end local v2    # "conference":Landroid/telecom/Conference;
     :cond_2
@@ -774,7 +699,6 @@
 
     invoke-interface {v4}, Ljava/util/List;->clear()V
 
-    .line 2095
     return-void
 .end method
 
@@ -782,7 +706,6 @@
     .locals 3
 
     .prologue
-    .line 2080
     new-instance v0, Landroid/telecom/Connection$FailureSignalingConnection;
 
     new-instance v1, Landroid/telecom/DisconnectCause;
@@ -801,7 +724,6 @@
     .param p0, "disconnectCause"    # Landroid/telecom/DisconnectCause;
 
     .prologue
-    .line 2056
     new-instance v0, Landroid/telecom/Connection$FailureSignalingConnection;
 
     invoke-direct {v0, p0}, Landroid/telecom/Connection$FailureSignalingConnection;-><init>(Landroid/telecom/DisconnectCause;)V
@@ -813,7 +735,6 @@
     .locals 3
 
     .prologue
-    .line 2090
     iget-object v2, p0, Landroid/telecom/Connection;->mListeners:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -834,7 +755,6 @@
 
     check-cast v0, Landroid/telecom/Connection$Listener;
 
-    .line 2091
     .local v0, "l":Landroid/telecom/Connection$Listener;
     iget-object v2, p0, Landroid/telecom/Connection;->mConference:Landroid/telecom/Conference;
 
@@ -842,7 +762,6 @@
 
     goto :goto_0
 
-    .line 2089
     .end local v0    # "l":Landroid/telecom/Connection$Listener;
     :cond_0
     return-void
@@ -852,7 +771,6 @@
     .locals 3
 
     .prologue
-    .line 2084
     iget-object v2, p0, Landroid/telecom/Connection;->mListeners:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -873,7 +791,6 @@
 
     check-cast v0, Landroid/telecom/Connection$Listener;
 
-    .line 2085
     .local v0, "l":Landroid/telecom/Connection$Listener;
     invoke-virtual {p0}, Landroid/telecom/Connection;->getConferenceables()Ljava/util/List;
 
@@ -883,7 +800,6 @@
 
     goto :goto_0
 
-    .line 2083
     .end local v0    # "l":Landroid/telecom/Connection$Listener;
     :cond_0
     return-void
@@ -897,7 +813,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 491
     and-int v1, p0, p1
 
     if-eqz v1, :cond_0
@@ -913,18 +828,15 @@
     .param p0, "properties"    # I
 
     .prologue
-    .line 529
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 530
     .local v0, "builder":Ljava/lang/StringBuilder;
-    const-string/jumbo v1, "[Properties:"
+    const-string v1, "[Properties:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 532
     const/4 v1, 0x1
 
     invoke-static {p0, v1}, Landroid/telecom/Connection;->hasProperty(II)Z
@@ -933,12 +845,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 533
-    const-string/jumbo v1, " PROPERTY_WAS_FORWARDED"
+    const-string v1, " PROPERTY_WAS_FORWARDED"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 535
     :cond_0
     const/4 v1, 0x2
 
@@ -948,12 +858,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 536
-    const-string/jumbo v1, " PROPERTY_HELD_REMOTELY"
+    const-string v1, " PROPERTY_HELD_REMOTELY"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 538
     :cond_1
     const/4 v1, 0x4
 
@@ -963,12 +871,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 539
-    const-string/jumbo v1, " PROPERTY_DIALING_IS_WAITING"
+    const-string v1, " PROPERTY_DIALING_IS_WAITING"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 541
     :cond_2
     const/16 v1, 0x8
 
@@ -978,12 +884,10 @@
 
     if-eqz v1, :cond_3
 
-    .line 542
-    const-string/jumbo v1, " PROPERTY_ADDITIONAL_CALL_FORWARDED"
+    const-string v1, " PROPERTY_ADDITIONAL_CALL_FORWARDED"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 544
     :cond_3
     const/16 v1, 0x10
 
@@ -993,18 +897,15 @@
 
     if-eqz v1, :cond_4
 
-    .line 545
-    const-string/jumbo v1, " PROPERTY_REMOTE_INCOMING_CALLS_BARRED"
+    const-string v1, " PROPERTY_REMOTE_INCOMING_CALLS_BARRED"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 547
     :cond_4
-    const-string/jumbo v1, "]"
+    const-string v1, "]"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 548
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -1019,10 +920,8 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 2015
     invoke-virtual {p0}, Landroid/telecom/Connection;->checkImmutable()V
 
-    .line 2016
     iget v2, p0, Landroid/telecom/Connection;->mState:I
 
     const/4 v3, 0x6
@@ -1033,24 +932,20 @@
 
     if-eq v2, p1, :cond_0
 
-    .line 2017
-    const-string/jumbo v2, "Connection already DISCONNECTED; cannot transition out of this state."
+    const-string v2, "Connection already DISCONNECTED; cannot transition out of this state."
 
     new-array v3, v5, [Ljava/lang/Object;
 
     invoke-static {p0, v2, v3}, Landroid/telecom/Log;->d(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 2018
     return-void
 
-    .line 2020
     :cond_0
     iget v2, p0, Landroid/telecom/Connection;->mState:I
 
     if-eq v2, p1, :cond_1
 
-    .line 2021
-    const-string/jumbo v2, "setState: %s"
+    const-string v2, "setState: %s"
 
     const/4 v3, 0x1
 
@@ -1064,13 +959,10 @@
 
     invoke-static {p0, v2, v3}, Landroid/telecom/Log;->d(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 2022
     iput p1, p0, Landroid/telecom/Connection;->mState:I
 
-    .line 2023
     invoke-virtual {p0, p1}, Landroid/telecom/Connection;->onStateChanged(I)V
 
-    .line 2024
     iget-object v2, p0, Landroid/telecom/Connection;->mListeners:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -1091,13 +983,11 @@
 
     check-cast v0, Landroid/telecom/Connection$Listener;
 
-    .line 2025
     .local v0, "l":Landroid/telecom/Connection$Listener;
     invoke-virtual {v0, p0, p1}, Landroid/telecom/Connection$Listener;->onStateChanged(Landroid/telecom/Connection;I)V
 
     goto :goto_0
 
-    .line 2014
     .end local v0    # "l":Landroid/telecom/Connection$Listener;
     .end local v1    # "l$iterator":Ljava/util/Iterator;
     :cond_1
@@ -1109,13 +999,11 @@
     .param p0, "state"    # I
 
     .prologue
-    .line 1428
     packed-switch p0, :pswitch_data_0
 
-    .line 1444
     const-class v0, Landroid/telecom/Connection;
 
-    const-string/jumbo v1, "Unknown state %d"
+    const-string v1, "Unknown state %d"
 
     const/4 v2, 0x1
 
@@ -1131,54 +1019,45 @@
 
     invoke-static {v0, v1, v2}, Landroid/telecom/Log;->wtf(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1445
-    const-string/jumbo v0, "UNKNOWN"
+    const-string v0, "UNKNOWN"
 
     return-object v0
 
-    .line 1430
     :pswitch_0
-    const-string/jumbo v0, "INITIALIZING"
+    const-string v0, "INITIALIZING"
 
     return-object v0
 
-    .line 1432
     :pswitch_1
-    const-string/jumbo v0, "NEW"
+    const-string v0, "NEW"
 
     return-object v0
 
-    .line 1434
     :pswitch_2
-    const-string/jumbo v0, "RINGING"
+    const-string v0, "RINGING"
 
     return-object v0
 
-    .line 1436
     :pswitch_3
-    const-string/jumbo v0, "DIALING"
+    const-string v0, "DIALING"
 
     return-object v0
 
-    .line 1438
     :pswitch_4
-    const-string/jumbo v0, "ACTIVE"
+    const-string v0, "ACTIVE"
 
     return-object v0
 
-    .line 1440
     :pswitch_5
-    const-string/jumbo v0, "HOLDING"
+    const-string v0, "HOLDING"
 
     return-object v0
 
-    .line 1442
     :pswitch_6
-    const-string/jumbo v0, "DISCONNECTED"
+    const-string v0, "DISCONNECTED"
 
     return-object v0
 
-    .line 1428
     nop
 
     :pswitch_data_0
@@ -1198,30 +1077,24 @@
     .param p0, "number"    # Ljava/lang/String;
 
     .prologue
-    .line 1991
     if-nez p0, :cond_0
 
-    .line 1992
-    const-string/jumbo v3, ""
+    const-string v3, ""
 
     return-object v3
 
-    .line 1995
     :cond_0
     sget-boolean v3, Landroid/telecom/Connection;->PII_DEBUG:Z
 
     if-eqz v3, :cond_1
 
-    .line 1997
     return-object p0
 
-    .line 2002
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 2003
     .local v0, "builder":Ljava/lang/StringBuilder;
     const/4 v2, 0x0
 
@@ -1233,12 +1106,10 @@
 
     if-ge v2, v3, :cond_4
 
-    .line 2004
     invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
 
-    .line 2005
     .local v1, "c":C
     const/16 v3, 0x2d
 
@@ -1248,30 +1119,25 @@
 
     if-ne v1, v3, :cond_3
 
-    .line 2006
     :cond_2
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 2003
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 2005
     :cond_3
     const/16 v3, 0x2e
 
     if-eq v1, v3, :cond_2
 
-    .line 2008
     const/16 v3, 0x78
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 2011
     .end local v1    # "c":C
     :cond_4
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -1288,14 +1154,12 @@
     .param p1, "capability"    # I
 
     .prologue
-    .line 399
     iget v0, p0, Landroid/telecom/Connection;->mConnectionCapabilities:I
 
     or-int/2addr v0, p1
 
     iput v0, p0, Landroid/telecom/Connection;->mConnectionCapabilities:I
 
-    .line 398
     return-void
 .end method
 
@@ -1304,12 +1168,10 @@
     .param p1, "l"    # Landroid/telecom/Connection$Listener;
 
     .prologue
-    .line 1383
     iget-object v0, p0, Landroid/telecom/Connection;->mListeners:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 1384
     return-object p0
 .end method
 
@@ -1318,14 +1180,12 @@
     .param p1, "property"    # I
 
     .prologue
-    .line 522
     iget v0, p0, Landroid/telecom/Connection;->mConnectionProperties:I
 
     or-int/2addr v0, p1
 
     iput v0, p0, Landroid/telecom/Connection;->mConnectionProperties:I
 
-    .line 521
     return-void
 .end method
 
@@ -1334,7 +1194,6 @@
     .param p1, "capability"    # I
 
     .prologue
-    .line 379
     iget v0, p0, Landroid/telecom/Connection;->mConnectionCapabilities:I
 
     invoke-static {v0, p1}, Landroid/telecom/Connection;->can(II)Z
@@ -1348,7 +1207,6 @@
     .locals 0
 
     .prologue
-    .line 2066
     return-void
 .end method
 
@@ -1356,7 +1214,6 @@
     .locals 3
 
     .prologue
-    .line 1680
     iget-object v2, p0, Landroid/telecom/Connection;->mListeners:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -1377,13 +1234,11 @@
 
     check-cast v0, Landroid/telecom/Connection$Listener;
 
-    .line 1681
     .local v0, "l":Landroid/telecom/Connection$Listener;
     invoke-virtual {v0, p0}, Landroid/telecom/Connection$Listener;->onDestroyed(Landroid/telecom/Connection;)V
 
     goto :goto_0
 
-    .line 1679
     .end local v0    # "l":Landroid/telecom/Connection$Listener;
     :cond_0
     return-void
@@ -1393,7 +1248,6 @@
     .locals 1
 
     .prologue
-    .line 1252
     iget-object v0, p0, Landroid/telecom/Connection;->mAddress:Landroid/net/Uri;
 
     return-object v0
@@ -1403,7 +1257,6 @@
     .locals 1
 
     .prologue
-    .line 1260
     iget v0, p0, Landroid/telecom/Connection;->mAddressPresentation:I
 
     return v0
@@ -1413,7 +1266,6 @@
     .locals 1
 
     .prologue
-    .line 1344
     iget-boolean v0, p0, Landroid/telecom/Connection;->mAudioModeIsVoip:Z
 
     return v0
@@ -1427,15 +1279,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1309
     iget-object v0, p0, Landroid/telecom/Connection;->mCallAudioState:Landroid/telecom/CallAudioState;
 
     if-nez v0, :cond_0
 
-    .line 1310
     return-object v1
 
-    .line 1312
     :cond_0
     new-instance v0, Landroid/telecom/AudioState;
 
@@ -1450,7 +1299,6 @@
     .locals 1
 
     .prologue
-    .line 1321
     iget-object v0, p0, Landroid/telecom/Connection;->mCallAudioState:Landroid/telecom/CallAudioState;
 
     return-object v0
@@ -1460,7 +1308,6 @@
     .locals 1
 
     .prologue
-    .line 1267
     iget-object v0, p0, Landroid/telecom/Connection;->mCallerDisplayName:Ljava/lang/String;
 
     return-object v0
@@ -1470,7 +1317,6 @@
     .locals 1
 
     .prologue
-    .line 1275
     iget v0, p0, Landroid/telecom/Connection;->mCallerDisplayNamePresentation:I
 
     return v0
@@ -1480,7 +1326,6 @@
     .locals 1
 
     .prologue
-    .line 1329
     iget-object v0, p0, Landroid/telecom/Connection;->mConference:Landroid/telecom/Conference;
 
     return-object v0
@@ -1499,7 +1344,6 @@
     .end annotation
 
     .prologue
-    .line 1781
     iget-object v0, p0, Landroid/telecom/Connection;->mUnmodifiableConferenceables:Ljava/util/List;
 
     return-object v0
@@ -1509,7 +1353,6 @@
     .locals 2
 
     .prologue
-    .line 1357
     iget-wide v0, p0, Landroid/telecom/Connection;->mConnectTimeMillis:J
 
     return-wide v0
@@ -1519,7 +1362,6 @@
     .locals 1
 
     .prologue
-    .line 1453
     iget v0, p0, Landroid/telecom/Connection;->mConnectionCapabilities:I
 
     return v0
@@ -1529,7 +1371,6 @@
     .locals 1
 
     .prologue
-    .line 1461
     iget v0, p0, Landroid/telecom/Connection;->mConnectionProperties:I
 
     return v0
@@ -1539,7 +1380,6 @@
     .locals 1
 
     .prologue
-    .line 1813
     iget-object v0, p0, Landroid/telecom/Connection;->mConnectionService:Landroid/telecom/ConnectionService;
 
     return-object v0
@@ -1549,7 +1389,6 @@
     .locals 1
 
     .prologue
-    .line 1406
     iget-object v0, p0, Landroid/telecom/Connection;->mDisconnectCause:Landroid/telecom/DisconnectCause;
 
     return-object v0
@@ -1559,7 +1398,6 @@
     .locals 1
 
     .prologue
-    .line 1371
     iget-object v0, p0, Landroid/telecom/Connection;->mExtras:Landroid/os/Bundle;
 
     return-object v0
@@ -1569,7 +1407,6 @@
     .locals 1
 
     .prologue
-    .line 1282
     iget v0, p0, Landroid/telecom/Connection;->mState:I
 
     return v0
@@ -1579,7 +1416,6 @@
     .locals 1
 
     .prologue
-    .line 1364
     iget-object v0, p0, Landroid/telecom/Connection;->mStatusHints:Landroid/telecom/StatusHints;
 
     return-object v0
@@ -1589,7 +1425,6 @@
     .locals 1
 
     .prologue
-    .line 1579
     iget-object v0, p0, Landroid/telecom/Connection;->mVideoProvider:Landroid/telecom/Connection$VideoProvider;
 
     return-object v0
@@ -1599,7 +1434,6 @@
     .locals 1
 
     .prologue
-    .line 1296
     iget v0, p0, Landroid/telecom/Connection;->mVideoState:I
 
     return v0
@@ -1610,7 +1444,6 @@
     .param p1, "property"    # I
 
     .prologue
-    .line 502
     iget v0, p0, Landroid/telecom/Connection;->mConnectionProperties:I
 
     invoke-static {v0, p1}, Landroid/telecom/Connection;->hasProperty(II)Z
@@ -1624,7 +1457,6 @@
     .locals 1
 
     .prologue
-    .line 1337
     iget-boolean v0, p0, Landroid/telecom/Connection;->mRingbackRequested:Z
 
     return v0
@@ -1634,7 +1466,6 @@
     .locals 3
 
     .prologue
-    .line 2114
     iget-object v2, p0, Landroid/telecom/Connection;->mListeners:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -1655,13 +1486,11 @@
 
     check-cast v0, Landroid/telecom/Connection$Listener;
 
-    .line 2115
     .local v0, "l":Landroid/telecom/Connection$Listener;
     invoke-virtual {v0, p0}, Landroid/telecom/Connection$Listener;->onConferenceMergeFailed(Landroid/telecom/Connection;)V
 
     goto :goto_0
 
-    .line 2113
     .end local v0    # "l":Landroid/telecom/Connection$Listener;
     :cond_0
     return-void
@@ -1671,7 +1500,6 @@
     .locals 3
 
     .prologue
-    .line 2137
     iget-object v2, p0, Landroid/telecom/Connection;->mListeners:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -1692,13 +1520,11 @@
 
     check-cast v0, Landroid/telecom/Connection$Listener;
 
-    .line 2138
     .local v0, "l":Landroid/telecom/Connection$Listener;
     invoke-virtual {v0}, Landroid/telecom/Connection$Listener;->onConferenceStarted()V
 
     goto :goto_0
 
-    .line 2136
     .end local v0    # "l":Landroid/telecom/Connection$Listener;
     :cond_0
     return-void
@@ -1708,7 +1534,6 @@
     .locals 0
 
     .prologue
-    .line 1930
     return-void
 .end method
 
@@ -1716,12 +1541,10 @@
     .locals 1
 
     .prologue
-    .line 1955
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/telecom/Connection;->onAnswer(I)V
 
-    .line 1954
     return-void
 .end method
 
@@ -1730,7 +1553,6 @@
     .param p1, "videoState"    # I
 
     .prologue
-    .line 1948
     return-void
 .end method
 
@@ -1741,7 +1563,6 @@
     .end annotation
 
     .prologue
-    .line 1873
     return-void
 .end method
 
@@ -1750,7 +1571,6 @@
     .param p1, "state"    # Landroid/telecom/CallAudioState;
 
     .prologue
-    .line 1880
     return-void
 .end method
 
@@ -1758,7 +1578,6 @@
     .locals 0
 
     .prologue
-    .line 1911
     return-void
 .end method
 
@@ -1767,7 +1586,6 @@
     .param p1, "endpoint"    # Landroid/net/Uri;
 
     .prologue
-    .line 1920
     return-void
 .end method
 
@@ -1775,7 +1593,6 @@
     .locals 0
 
     .prologue
-    .line 1935
     return-void
 .end method
 
@@ -1784,7 +1601,6 @@
     .param p1, "c"    # C
 
     .prologue
-    .line 1895
     return-void
 .end method
 
@@ -1793,7 +1609,6 @@
     .param p1, "proceed"    # Z
 
     .prologue
-    .line 1987
     return-void
 .end method
 
@@ -1801,7 +1616,6 @@
     .locals 0
 
     .prologue
-    .line 1962
     return-void
 .end method
 
@@ -1810,7 +1624,6 @@
     .param p1, "replyMessage"    # Ljava/lang/String;
 
     .prologue
-    .line 1975
     return-void
 .end method
 
@@ -1818,7 +1631,6 @@
     .locals 0
 
     .prologue
-    .line 1925
     return-void
 .end method
 
@@ -1826,7 +1638,6 @@
     .locals 0
 
     .prologue
-    .line 1982
     return-void
 .end method
 
@@ -1835,7 +1646,6 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 1888
     return-void
 .end method
 
@@ -1843,7 +1653,6 @@
     .locals 0
 
     .prologue
-    .line 1900
     return-void
 .end method
 
@@ -1851,7 +1660,6 @@
     .locals 0
 
     .prologue
-    .line 1968
     return-void
 .end method
 
@@ -1859,7 +1667,6 @@
     .locals 0
 
     .prologue
-    .line 1940
     return-void
 .end method
 
@@ -1868,7 +1675,6 @@
     .param p1, "capability"    # I
 
     .prologue
-    .line 389
     iget v0, p0, Landroid/telecom/Connection;->mConnectionCapabilities:I
 
     not-int v1, p1
@@ -1877,7 +1683,6 @@
 
     iput v0, p0, Landroid/telecom/Connection;->mConnectionCapabilities:I
 
-    .line 388
     return-void
 .end method
 
@@ -1886,15 +1691,12 @@
     .param p1, "l"    # Landroid/telecom/Connection$Listener;
 
     .prologue
-    .line 1396
     if-eqz p1, :cond_0
 
-    .line 1397
     iget-object v0, p0, Landroid/telecom/Connection;->mListeners:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 1399
     :cond_0
     return-object p0
 .end method
@@ -1904,7 +1706,6 @@
     .param p1, "property"    # I
 
     .prologue
-    .line 512
     iget v0, p0, Landroid/telecom/Connection;->mConnectionProperties:I
 
     not-int v1, p1
@@ -1913,7 +1714,6 @@
 
     iput v0, p0, Landroid/telecom/Connection;->mConnectionProperties:I
 
-    .line 511
     return-void
 .end method
 
@@ -1921,7 +1721,6 @@
     .locals 3
 
     .prologue
-    .line 1772
     iget-object v2, p0, Landroid/telecom/Connection;->mListeners:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -1942,13 +1741,11 @@
 
     check-cast v0, Landroid/telecom/Connection$Listener;
 
-    .line 1773
     .local v0, "l":Landroid/telecom/Connection$Listener;
     invoke-virtual {v0, p0}, Landroid/telecom/Connection$Listener;->onCdmaConnectionTimeReset(Landroid/telecom/Connection;)V
 
     goto :goto_0
 
-    .line 1771
     .end local v0    # "l":Landroid/telecom/Connection$Listener;
     :cond_0
     return-void
@@ -1960,13 +1757,11 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1842
     iget-object v0, p0, Landroid/telecom/Connection;->mConference:Landroid/telecom/Conference;
 
     if-eqz v0, :cond_0
 
-    .line 1843
-    const-string/jumbo v0, "Conference reset"
+    const-string v0, "Conference reset"
 
     const/4 v1, 0x0
 
@@ -1974,13 +1769,10 @@
 
     invoke-static {p0, v0, v1}, Landroid/telecom/Log;->d(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1844
     iput-object v2, p0, Landroid/telecom/Connection;->mConference:Landroid/telecom/Conference;
 
-    .line 1845
     invoke-direct {p0}, Landroid/telecom/Connection;->fireConferenceChanged()V
 
-    .line 1841
     :cond_0
     return-void
 .end method
@@ -1989,20 +1781,16 @@
     .locals 1
 
     .prologue
-    .line 1521
     invoke-virtual {p0}, Landroid/telecom/Connection;->checkImmutable()V
 
-    .line 1522
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/telecom/Connection;->setRingbackRequested(Z)V
 
-    .line 1523
     const/4 v0, 0x4
 
     invoke-direct {p0, v0}, Landroid/telecom/Connection;->setState(I)V
 
-    .line 1520
     return-void
 .end method
 
@@ -2012,11 +1800,9 @@
     .param p2, "presentation"    # I
 
     .prologue
-    .line 1472
     invoke-virtual {p0}, Landroid/telecom/Connection;->checkImmutable()V
 
-    .line 1473
-    const-string/jumbo v2, "setAddress %s"
+    const-string v2, "setAddress %s"
 
     const/4 v3, 0x1
 
@@ -2028,13 +1814,10 @@
 
     invoke-static {p0, v2, v3}, Landroid/telecom/Log;->d(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1474
     iput-object p1, p0, Landroid/telecom/Connection;->mAddress:Landroid/net/Uri;
 
-    .line 1475
     iput p2, p0, Landroid/telecom/Connection;->mAddressPresentation:I
 
-    .line 1476
     iget-object v2, p0, Landroid/telecom/Connection;->mListeners:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -2055,13 +1838,11 @@
 
     check-cast v0, Landroid/telecom/Connection$Listener;
 
-    .line 1477
     .local v0, "l":Landroid/telecom/Connection$Listener;
     invoke-virtual {v0, p0, p1, p2}, Landroid/telecom/Connection$Listener;->onAddressChanged(Landroid/telecom/Connection;Landroid/net/Uri;I)V
 
     goto :goto_0
 
-    .line 1471
     .end local v0    # "l":Landroid/telecom/Connection$Listener;
     :cond_0
     return-void
@@ -2072,13 +1853,10 @@
     .param p1, "isVoip"    # Z
 
     .prologue
-    .line 1691
     invoke-virtual {p0}, Landroid/telecom/Connection;->checkImmutable()V
 
-    .line 1692
     iput-boolean p1, p0, Landroid/telecom/Connection;->mAudioModeIsVoip:Z
 
-    .line 1693
     iget-object v2, p0, Landroid/telecom/Connection;->mListeners:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -2099,13 +1877,11 @@
 
     check-cast v0, Landroid/telecom/Connection$Listener;
 
-    .line 1694
     .local v0, "l":Landroid/telecom/Connection$Listener;
     invoke-virtual {v0, p0, p1}, Landroid/telecom/Connection$Listener;->onAudioModeIsVoipChanged(Landroid/telecom/Connection;Z)V
 
     goto :goto_0
 
-    .line 1690
     .end local v0    # "l":Landroid/telecom/Connection$Listener;
     :cond_0
     return-void
@@ -2116,11 +1892,9 @@
     .param p1, "state"    # Landroid/telecom/CallAudioState;
 
     .prologue
-    .line 1416
     invoke-virtual {p0}, Landroid/telecom/Connection;->checkImmutable()V
 
-    .line 1417
-    const-string/jumbo v0, "setAudioState %s"
+    const-string v0, "setAudioState %s"
 
     const/4 v1, 0x1
 
@@ -2132,20 +1906,16 @@
 
     invoke-static {p0, v0, v1}, Landroid/telecom/Log;->d(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1418
     iput-object p1, p0, Landroid/telecom/Connection;->mCallAudioState:Landroid/telecom/CallAudioState;
 
-    .line 1419
     invoke-virtual {p0}, Landroid/telecom/Connection;->getAudioState()Landroid/telecom/AudioState;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Landroid/telecom/Connection;->onAudioStateChanged(Landroid/telecom/AudioState;)V
 
-    .line 1420
     invoke-virtual {p0, p1}, Landroid/telecom/Connection;->onCallAudioStateChanged(Landroid/telecom/CallAudioState;)V
 
-    .line 1415
     return-void
 .end method
 
@@ -2155,11 +1925,9 @@
     .param p2, "presentation"    # I
 
     .prologue
-    .line 1489
     invoke-virtual {p0}, Landroid/telecom/Connection;->checkImmutable()V
 
-    .line 1490
-    const-string/jumbo v2, "setCallerDisplayName %s"
+    const-string v2, "setCallerDisplayName %s"
 
     const/4 v3, 0x1
 
@@ -2171,13 +1939,10 @@
 
     invoke-static {p0, v2, v3}, Landroid/telecom/Log;->d(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1491
     iput-object p1, p0, Landroid/telecom/Connection;->mCallerDisplayName:Ljava/lang/String;
 
-    .line 1492
     iput p2, p0, Landroid/telecom/Connection;->mCallerDisplayNamePresentation:I
 
-    .line 1493
     iget-object v2, p0, Landroid/telecom/Connection;->mListeners:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -2198,13 +1963,11 @@
 
     check-cast v0, Landroid/telecom/Connection$Listener;
 
-    .line 1494
     .local v0, "l":Landroid/telecom/Connection$Listener;
     invoke-virtual {v0, p0, p1, p2}, Landroid/telecom/Connection$Listener;->onCallerDisplayNameChanged(Landroid/telecom/Connection;Ljava/lang/String;I)V
 
     goto :goto_0
 
-    .line 1488
     .end local v0    # "l":Landroid/telecom/Connection$Listener;
     :cond_0
     return-void
@@ -2215,18 +1978,14 @@
     .param p1, "conference"    # Landroid/telecom/Conference;
 
     .prologue
-    .line 1825
     invoke-virtual {p0}, Landroid/telecom/Connection;->checkImmutable()V
 
-    .line 1827
     iget-object v0, p0, Landroid/telecom/Connection;->mConference:Landroid/telecom/Conference;
 
     if-nez v0, :cond_1
 
-    .line 1828
     iput-object p1, p0, Landroid/telecom/Connection;->mConference:Landroid/telecom/Conference;
 
-    .line 1829
     iget-object v0, p0, Landroid/telecom/Connection;->mConnectionService:Landroid/telecom/ConnectionService;
 
     if-eqz v0, :cond_0
@@ -2239,16 +1998,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 1830
     invoke-direct {p0}, Landroid/telecom/Connection;->fireConferenceChanged()V
 
-    .line 1832
     :cond_0
     const/4 v0, 0x1
 
     return v0
 
-    .line 1834
     :cond_1
     const/4 v0, 0x0
 
@@ -2268,14 +2024,11 @@
     .end annotation
 
     .prologue
-    .line 1729
     .local p1, "conferenceableConnections":Ljava/util/List;, "Ljava/util/List<Landroid/telecom/Connection;>;"
     invoke-virtual {p0}, Landroid/telecom/Connection;->checkImmutable()V
 
-    .line 1730
     invoke-direct {p0}, Landroid/telecom/Connection;->clearConferenceableList()V
 
-    .line 1731
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -2295,7 +2048,6 @@
 
     check-cast v0, Landroid/telecom/Connection;
 
-    .line 1734
     .local v0, "c":Landroid/telecom/Connection;
     iget-object v2, p0, Landroid/telecom/Connection;->mConferenceables:Ljava/util/List;
 
@@ -2305,24 +2057,20 @@
 
     if-nez v2, :cond_0
 
-    .line 1735
     iget-object v2, p0, Landroid/telecom/Connection;->mConnectionDeathListener:Landroid/telecom/Connection$Listener;
 
     invoke-virtual {v0, v2}, Landroid/telecom/Connection;->addConnectionListener(Landroid/telecom/Connection$Listener;)Landroid/telecom/Connection;
 
-    .line 1736
     iget-object v2, p0, Landroid/telecom/Connection;->mConferenceables:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 1739
     .end local v0    # "c":Landroid/telecom/Connection;
     :cond_1
     invoke-direct {p0}, Landroid/telecom/Connection;->fireOnConferenceableConnectionsChanged()V
 
-    .line 1728
     return-void
 .end method
 
@@ -2339,11 +2087,9 @@
     .end annotation
 
     .prologue
-    .line 1749
     .local p1, "conferenceables":Ljava/util/List;, "Ljava/util/List<Landroid/telecom/Conferenceable;>;"
     invoke-direct {p0}, Landroid/telecom/Connection;->clearConferenceableList()V
 
-    .line 1750
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -2363,7 +2109,6 @@
 
     check-cast v0, Landroid/telecom/Conferenceable;
 
-    .line 1753
     .local v0, "c":Landroid/telecom/Conferenceable;
     iget-object v4, p0, Landroid/telecom/Connection;->mConferenceables:Ljava/util/List;
 
@@ -2373,23 +2118,19 @@
 
     if-nez v4, :cond_0
 
-    .line 1754
     instance-of v4, v0, Landroid/telecom/Connection;
 
     if-eqz v4, :cond_2
 
     move-object v3, v0
 
-    .line 1755
     check-cast v3, Landroid/telecom/Connection;
 
-    .line 1756
     .local v3, "connection":Landroid/telecom/Connection;
     iget-object v4, p0, Landroid/telecom/Connection;->mConnectionDeathListener:Landroid/telecom/Connection$Listener;
 
     invoke-virtual {v3, v4}, Landroid/telecom/Connection;->addConnectionListener(Landroid/telecom/Connection$Listener;)Landroid/telecom/Connection;
 
-    .line 1761
     .end local v3    # "connection":Landroid/telecom/Connection;
     :cond_1
     :goto_1
@@ -2399,7 +2140,6 @@
 
     goto :goto_0
 
-    .line 1757
     :cond_2
     instance-of v4, v0, Landroid/telecom/Conference;
 
@@ -2407,10 +2147,8 @@
 
     move-object v2, v0
 
-    .line 1758
     check-cast v2, Landroid/telecom/Conference;
 
-    .line 1759
     .local v2, "conference":Landroid/telecom/Conference;
     iget-object v4, p0, Landroid/telecom/Connection;->mConferenceDeathListener:Landroid/telecom/Conference$Listener;
 
@@ -2418,13 +2156,11 @@
 
     goto :goto_1
 
-    .line 1764
     .end local v0    # "c":Landroid/telecom/Conferenceable;
     .end local v2    # "conference":Landroid/telecom/Conference;
     :cond_3
     invoke-direct {p0}, Landroid/telecom/Connection;->fireOnConferenceableConnectionsChanged()V
 
-    .line 1748
     return-void
 .end method
 
@@ -2433,10 +2169,8 @@
     .param p1, "connectTimeMillis"    # J
 
     .prologue
-    .line 1707
     iput-wide p1, p0, Landroid/telecom/Connection;->mConnectTimeMillis:J
 
-    .line 1706
     return-void
 .end method
 
@@ -2445,18 +2179,14 @@
     .param p1, "connectionCapabilities"    # I
 
     .prologue
-    .line 1651
     invoke-virtual {p0}, Landroid/telecom/Connection;->checkImmutable()V
 
-    .line 1652
     iget v2, p0, Landroid/telecom/Connection;->mConnectionCapabilities:I
 
     if-eq v2, p1, :cond_0
 
-    .line 1653
     iput p1, p0, Landroid/telecom/Connection;->mConnectionCapabilities:I
 
-    .line 1654
     iget-object v2, p0, Landroid/telecom/Connection;->mListeners:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -2477,7 +2207,6 @@
 
     check-cast v0, Landroid/telecom/Connection$Listener;
 
-    .line 1655
     .local v0, "l":Landroid/telecom/Connection$Listener;
     iget v2, p0, Landroid/telecom/Connection;->mConnectionCapabilities:I
 
@@ -2485,7 +2214,6 @@
 
     goto :goto_0
 
-    .line 1650
     .end local v0    # "l":Landroid/telecom/Connection$Listener;
     .end local v1    # "l$iterator":Ljava/util/Iterator;
     :cond_0
@@ -2497,18 +2225,14 @@
     .param p1, "connectionProperties"    # I
 
     .prologue
-    .line 1667
     invoke-virtual {p0}, Landroid/telecom/Connection;->checkImmutable()V
 
-    .line 1668
     iget v2, p0, Landroid/telecom/Connection;->mConnectionProperties:I
 
     if-eq v2, p1, :cond_0
 
-    .line 1669
     iput p1, p0, Landroid/telecom/Connection;->mConnectionProperties:I
 
-    .line 1670
     iget-object v2, p0, Landroid/telecom/Connection;->mListeners:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -2529,7 +2253,6 @@
 
     check-cast v0, Landroid/telecom/Connection$Listener;
 
-    .line 1671
     .local v0, "l":Landroid/telecom/Connection$Listener;
     iget v2, p0, Landroid/telecom/Connection;->mConnectionProperties:I
 
@@ -2537,7 +2260,6 @@
 
     goto :goto_0
 
-    .line 1666
     .end local v0    # "l":Landroid/telecom/Connection$Listener;
     .end local v1    # "l$iterator":Ljava/util/Iterator;
     :cond_0
@@ -2549,20 +2271,17 @@
     .param p1, "connectionService"    # Landroid/telecom/ConnectionService;
 
     .prologue
-    .line 1788
     invoke-virtual {p0}, Landroid/telecom/Connection;->checkImmutable()V
 
-    .line 1789
     iget-object v0, p0, Landroid/telecom/Connection;->mConnectionService:Landroid/telecom/ConnectionService;
 
     if-eqz v0, :cond_0
 
-    .line 1790
     new-instance v0, Ljava/lang/Exception;
 
     invoke-direct {v0}, Ljava/lang/Exception;-><init>()V
 
-    const-string/jumbo v1, "Trying to set ConnectionService on a connection which is already associated with another ConnectionService."
+    const-string v1, "Trying to set ConnectionService on a connection which is already associated with another ConnectionService."
 
     const/4 v2, 0x0
 
@@ -2570,11 +2289,9 @@
 
     invoke-static {p0, v0, v1, v2}, Landroid/telecom/Log;->e(Ljava/lang/Object;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1787
     :goto_0
     return-void
 
-    .line 1793
     :cond_0
     iput-object p1, p0, Landroid/telecom/Connection;->mConnectionService:Landroid/telecom/ConnectionService;
 
@@ -2585,15 +2302,12 @@
     .locals 1
 
     .prologue
-    .line 1554
     invoke-virtual {p0}, Landroid/telecom/Connection;->checkImmutable()V
 
-    .line 1555
     const/4 v0, 0x3
 
     invoke-direct {p0, v0}, Landroid/telecom/Connection;->setState(I)V
 
-    .line 1553
     return-void
 .end method
 
@@ -2602,19 +2316,15 @@
     .param p1, "disconnectCause"    # Landroid/telecom/DisconnectCause;
 
     .prologue
-    .line 1589
     invoke-virtual {p0}, Landroid/telecom/Connection;->checkImmutable()V
 
-    .line 1590
     iput-object p1, p0, Landroid/telecom/Connection;->mDisconnectCause:Landroid/telecom/DisconnectCause;
 
-    .line 1591
     const/4 v2, 0x6
 
     invoke-direct {p0, v2}, Landroid/telecom/Connection;->setState(I)V
 
-    .line 1592
-    const-string/jumbo v2, "Disconnected with cause %s"
+    const-string v2, "Disconnected with cause %s"
 
     const/4 v3, 0x1
 
@@ -2626,7 +2336,6 @@
 
     invoke-static {p0, v2, v3}, Landroid/telecom/Log;->d(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1593
     iget-object v2, p0, Landroid/telecom/Connection;->mListeners:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -2647,13 +2356,11 @@
 
     check-cast v0, Landroid/telecom/Connection$Listener;
 
-    .line 1594
     .local v0, "l":Landroid/telecom/Connection$Listener;
     invoke-virtual {v0, p0, p1}, Landroid/telecom/Connection$Listener;->onDisconnected(Landroid/telecom/Connection;Landroid/telecom/DisconnectCause;)V
 
     goto :goto_0
 
-    .line 1588
     .end local v0    # "l":Landroid/telecom/Connection$Listener;
     :cond_0
     return-void
@@ -2664,13 +2371,10 @@
     .param p1, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1857
     invoke-virtual {p0}, Landroid/telecom/Connection;->checkImmutable()V
 
-    .line 1858
     iput-object p1, p0, Landroid/telecom/Connection;->mExtras:Landroid/os/Bundle;
 
-    .line 1859
     iget-object v2, p0, Landroid/telecom/Connection;->mListeners:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -2691,13 +2395,11 @@
 
     check-cast v0, Landroid/telecom/Connection$Listener;
 
-    .line 1860
     .local v0, "l":Landroid/telecom/Connection$Listener;
     invoke-virtual {v0, p0, p1}, Landroid/telecom/Connection$Listener;->onExtrasChanged(Landroid/telecom/Connection;Landroid/os/Bundle;)V
 
     goto :goto_0
 
-    .line 1856
     .end local v0    # "l":Landroid/telecom/Connection$Listener;
     :cond_0
     return-void
@@ -2707,15 +2409,12 @@
     .locals 1
 
     .prologue
-    .line 1546
     invoke-virtual {p0}, Landroid/telecom/Connection;->checkImmutable()V
 
-    .line 1547
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Landroid/telecom/Connection;->setState(I)V
 
-    .line 1545
     return-void
 .end method
 
@@ -2723,15 +2422,12 @@
     .locals 1
 
     .prologue
-    .line 1538
     invoke-virtual {p0}, Landroid/telecom/Connection;->checkImmutable()V
 
-    .line 1539
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/telecom/Connection;->setState(I)V
 
-    .line 1537
     return-void
 .end method
 
@@ -2740,7 +2436,6 @@
     .param p1, "lchState"    # Z
 
     .prologue
-    .line 1906
     return-void
 .end method
 
@@ -2749,10 +2444,8 @@
     .param p1, "nextChar"    # C
 
     .prologue
-    .line 1623
     invoke-virtual {p0}, Landroid/telecom/Connection;->checkImmutable()V
 
-    .line 1624
     iget-object v2, p0, Landroid/telecom/Connection;->mListeners:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -2773,13 +2466,11 @@
 
     check-cast v0, Landroid/telecom/Connection$Listener;
 
-    .line 1625
     .local v0, "l":Landroid/telecom/Connection$Listener;
     invoke-virtual {v0, p0, p1}, Landroid/telecom/Connection$Listener;->onPostDialChar(Landroid/telecom/Connection;C)V
 
     goto :goto_0
 
-    .line 1622
     .end local v0    # "l":Landroid/telecom/Connection$Listener;
     :cond_0
     return-void
@@ -2789,15 +2480,12 @@
     .locals 1
 
     .prologue
-    .line 1562
     invoke-virtual {p0}, Landroid/telecom/Connection;->checkImmutable()V
 
-    .line 1563
     const/4 v0, 0x5
 
     invoke-direct {p0, v0}, Landroid/telecom/Connection;->setState(I)V
 
-    .line 1561
     return-void
 .end method
 
@@ -2806,10 +2494,8 @@
     .param p1, "remaining"    # Ljava/lang/String;
 
     .prologue
-    .line 1609
     invoke-virtual {p0}, Landroid/telecom/Connection;->checkImmutable()V
 
-    .line 1610
     iget-object v2, p0, Landroid/telecom/Connection;->mListeners:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -2830,13 +2516,11 @@
 
     check-cast v0, Landroid/telecom/Connection$Listener;
 
-    .line 1611
     .local v0, "l":Landroid/telecom/Connection$Listener;
     invoke-virtual {v0, p0, p1}, Landroid/telecom/Connection$Listener;->onPostDialWait(Landroid/telecom/Connection;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 1608
     .end local v0    # "l":Landroid/telecom/Connection$Listener;
     :cond_0
     return-void
@@ -2847,18 +2531,14 @@
     .param p1, "ringback"    # Z
 
     .prologue
-    .line 1636
     invoke-virtual {p0}, Landroid/telecom/Connection;->checkImmutable()V
 
-    .line 1637
     iget-boolean v2, p0, Landroid/telecom/Connection;->mRingbackRequested:Z
 
     if-eq v2, p1, :cond_0
 
-    .line 1638
     iput-boolean p1, p0, Landroid/telecom/Connection;->mRingbackRequested:Z
 
-    .line 1639
     iget-object v2, p0, Landroid/telecom/Connection;->mListeners:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -2879,13 +2559,11 @@
 
     check-cast v0, Landroid/telecom/Connection$Listener;
 
-    .line 1640
     .local v0, "l":Landroid/telecom/Connection$Listener;
     invoke-virtual {v0, p0, p1}, Landroid/telecom/Connection$Listener;->onRingbackRequested(Landroid/telecom/Connection;Z)V
 
     goto :goto_0
 
-    .line 1635
     .end local v0    # "l":Landroid/telecom/Connection$Listener;
     .end local v1    # "l$iterator":Ljava/util/Iterator;
     :cond_0
@@ -2896,15 +2574,12 @@
     .locals 1
 
     .prologue
-    .line 1530
     invoke-virtual {p0}, Landroid/telecom/Connection;->checkImmutable()V
 
-    .line 1531
     const/4 v0, 0x2
 
     invoke-direct {p0, v0}, Landroid/telecom/Connection;->setState(I)V
 
-    .line 1529
     return-void
 .end method
 
@@ -2913,13 +2588,10 @@
     .param p1, "statusHints"    # Landroid/telecom/StatusHints;
 
     .prologue
-    .line 1716
     invoke-virtual {p0}, Landroid/telecom/Connection;->checkImmutable()V
 
-    .line 1717
     iput-object p1, p0, Landroid/telecom/Connection;->mStatusHints:Landroid/telecom/StatusHints;
 
-    .line 1718
     iget-object v2, p0, Landroid/telecom/Connection;->mListeners:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -2940,13 +2612,11 @@
 
     check-cast v0, Landroid/telecom/Connection$Listener;
 
-    .line 1719
     .local v0, "l":Landroid/telecom/Connection$Listener;
     invoke-virtual {v0, p0, p1}, Landroid/telecom/Connection$Listener;->onStatusHintsChanged(Landroid/telecom/Connection;Landroid/telecom/StatusHints;)V
 
     goto :goto_0
 
-    .line 1715
     .end local v0    # "l":Landroid/telecom/Connection$Listener;
     :cond_0
     return-void
@@ -2957,13 +2627,10 @@
     .param p1, "videoProvider"    # Landroid/telecom/Connection$VideoProvider;
 
     .prologue
-    .line 1571
     invoke-virtual {p0}, Landroid/telecom/Connection;->checkImmutable()V
 
-    .line 1572
     iput-object p1, p0, Landroid/telecom/Connection;->mVideoProvider:Landroid/telecom/Connection$VideoProvider;
 
-    .line 1573
     iget-object v2, p0, Landroid/telecom/Connection;->mListeners:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -2984,13 +2651,11 @@
 
     check-cast v0, Landroid/telecom/Connection$Listener;
 
-    .line 1574
     .local v0, "l":Landroid/telecom/Connection$Listener;
     invoke-virtual {v0, p0, p1}, Landroid/telecom/Connection$Listener;->onVideoProviderChanged(Landroid/telecom/Connection;Landroid/telecom/Connection$VideoProvider;)V
 
     goto :goto_0
 
-    .line 1570
     .end local v0    # "l":Landroid/telecom/Connection$Listener;
     :cond_0
     return-void
@@ -3001,11 +2666,9 @@
     .param p1, "videoState"    # I
 
     .prologue
-    .line 1508
     invoke-virtual {p0}, Landroid/telecom/Connection;->checkImmutable()V
 
-    .line 1509
-    const-string/jumbo v2, "setVideoState %d"
+    const-string v2, "setVideoState %d"
 
     const/4 v3, 0x1
 
@@ -3021,10 +2684,8 @@
 
     invoke-static {p0, v2, v3}, Landroid/telecom/Log;->d(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1510
     iput p1, p0, Landroid/telecom/Connection;->mVideoState:I
 
-    .line 1511
     iget-object v2, p0, Landroid/telecom/Connection;->mListeners:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -3045,7 +2706,6 @@
 
     check-cast v0, Landroid/telecom/Connection$Listener;
 
-    .line 1512
     .local v0, "l":Landroid/telecom/Connection$Listener;
     iget v2, p0, Landroid/telecom/Connection;->mVideoState:I
 
@@ -3053,7 +2713,6 @@
 
     goto :goto_0
 
-    .line 1507
     .end local v0    # "l":Landroid/telecom/Connection$Listener;
     :cond_0
     return-void
@@ -3064,17 +2723,15 @@
     .param p1, "connectionService"    # Landroid/telecom/ConnectionService;
 
     .prologue
-    .line 1801
     iget-object v0, p0, Landroid/telecom/Connection;->mConnectionService:Landroid/telecom/ConnectionService;
 
     if-eq v0, p1, :cond_0
 
-    .line 1802
     new-instance v0, Ljava/lang/Exception;
 
     invoke-direct {v0}, Ljava/lang/Exception;-><init>()V
 
-    const-string/jumbo v1, "Trying to remove ConnectionService from a Connection that does not belong to the ConnectionService."
+    const-string v1, "Trying to remove ConnectionService from a Connection that does not belong to the ConnectionService."
 
     const/4 v2, 0x0
 
@@ -3082,11 +2739,9 @@
 
     invoke-static {p0, v0, v1, v2}, Landroid/telecom/Log;->e(Ljava/lang/Object;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1800
     :goto_0
     return-void
 
-    .line 1805
     :cond_0
     const/4 v0, 0x0
 
@@ -3108,7 +2763,6 @@
     .end annotation
 
     .prologue
-    .line 2127
     .local p1, "conferenceParticipants":Ljava/util/List;, "Ljava/util/List<Landroid/telecom/ConferenceParticipant;>;"
     iget-object v2, p0, Landroid/telecom/Connection;->mListeners:Ljava/util/Set;
 
@@ -3130,13 +2784,11 @@
 
     check-cast v0, Landroid/telecom/Connection$Listener;
 
-    .line 2128
     .local v0, "l":Landroid/telecom/Connection$Listener;
     invoke-virtual {v0, p0, p1}, Landroid/telecom/Connection$Listener;->onConferenceParticipantsChanged(Landroid/telecom/Connection;Ljava/util/List;)V
 
     goto :goto_0
 
-    .line 2126
     .end local v0    # "l":Landroid/telecom/Connection$Listener;
     :cond_0
     return-void

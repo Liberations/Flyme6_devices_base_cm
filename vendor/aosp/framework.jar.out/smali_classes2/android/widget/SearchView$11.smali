@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/widget/SearchView;
 
     .prologue
-    .line 365
     iput-object p1, p0, Landroid/widget/SearchView$11;->this$0:Landroid/widget/SearchView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,11 +49,9 @@
     .param p9, "oldBottom"    # I
 
     .prologue
-    .line 369
     iget-object v0, p0, Landroid/widget/SearchView$11;->this$0:Landroid/widget/SearchView;
 
     invoke-static {v0}, Landroid/widget/SearchView;->-wrap3(Landroid/widget/SearchView;)V
 
-    .line 368
     return-void
 .end method

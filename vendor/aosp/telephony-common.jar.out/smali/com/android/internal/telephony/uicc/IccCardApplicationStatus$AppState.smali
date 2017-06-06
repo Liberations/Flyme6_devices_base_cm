@@ -54,55 +54,49 @@
 
     const/4 v3, 0x0
 
-    .line 41
     new-instance v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
-    const-string/jumbo v1, "APPSTATE_UNKNOWN"
+    const-string v1, "APPSTATE_UNKNOWN"
 
     invoke-direct {v0, v1, v3}, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;->APPSTATE_UNKNOWN:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
-    .line 42
     new-instance v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
-    const-string/jumbo v1, "APPSTATE_DETECTED"
+    const-string v1, "APPSTATE_DETECTED"
 
     invoke-direct {v0, v1, v4}, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;->APPSTATE_DETECTED:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
-    .line 43
     new-instance v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
-    const-string/jumbo v1, "APPSTATE_PIN"
+    const-string v1, "APPSTATE_PIN"
 
     invoke-direct {v0, v1, v5}, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;->APPSTATE_PIN:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
-    .line 44
     new-instance v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
-    const-string/jumbo v1, "APPSTATE_PUK"
+    const-string v1, "APPSTATE_PUK"
 
     invoke-direct {v0, v1, v6}, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;->APPSTATE_PUK:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
-    .line 45
     new-instance v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
-    const-string/jumbo v1, "APPSTATE_SUBSCRIPTION_PERSO"
+    const-string v1, "APPSTATE_SUBSCRIPTION_PERSO"
 
     invoke-direct {v0, v1, v7}, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;->APPSTATE_SUBSCRIPTION_PERSO:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
-    .line 46
     new-instance v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
-    const-string/jumbo v1, "APPSTATE_READY"
+    const-string v1, "APPSTATE_READY"
 
     const/4 v2, 0x5
 
@@ -110,7 +104,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;->APPSTATE_READY:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
-    .line 40
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
@@ -150,7 +143,6 @@
     .locals 0
 
     .prologue
-    .line 40
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -161,7 +153,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 40
     const-class v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -177,7 +168,6 @@
     .locals 1
 
     .prologue
-    .line 40
     sget-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;->$VALUES:[Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
     return-object v0
@@ -191,22 +181,18 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 65
     sget-object v1, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;->APPSTATE_UNKNOWN:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
     if-eq p0, v1, :cond_0
 
-    .line 66
     sget-object v1, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;->APPSTATE_DETECTED:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
     if-ne p0, v1, :cond_1
 
-    .line 65
     :cond_0
     :goto_0
     return v0
 
-    .line 66
     :cond_1
     const/4 v0, 0x0
 
@@ -217,7 +203,6 @@
     .locals 1
 
     .prologue
-    .line 61
     sget-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;->APPSTATE_READY:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
     if-ne p0, v0, :cond_0
@@ -237,7 +222,6 @@
     .locals 1
 
     .prologue
-    .line 49
     sget-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;->APPSTATE_PIN:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
     if-ne p0, v0, :cond_0
@@ -257,7 +241,6 @@
     .locals 1
 
     .prologue
-    .line 53
     sget-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;->APPSTATE_PUK:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
     if-ne p0, v0, :cond_0
@@ -277,7 +260,6 @@
     .locals 1
 
     .prologue
-    .line 57
     sget-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;->APPSTATE_SUBSCRIPTION_PERSO:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$AppState;
 
     if-ne p0, v0, :cond_0

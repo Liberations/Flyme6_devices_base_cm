@@ -51,21 +51,16 @@
     .param p4, "cr"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 58
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 59
     iput-object p1, p0, Lcom/android/server/CertBlacklister$BlacklistObserver;->mKey:Ljava/lang/String;
 
-    .line 60
     iput-object p2, p0, Lcom/android/server/CertBlacklister$BlacklistObserver;->mName:Ljava/lang/String;
 
-    .line 61
     iput-object p3, p0, Lcom/android/server/CertBlacklister$BlacklistObserver;->mPath:Ljava/lang/String;
 
-    .line 62
     new-instance v0, Ljava/io/File;
 
     iget-object v1, p0, Lcom/android/server/CertBlacklister$BlacklistObserver;->mPath:Ljava/lang/String;
@@ -78,10 +73,8 @@
 
     iput-object v0, p0, Lcom/android/server/CertBlacklister$BlacklistObserver;->mTmpDir:Ljava/io/File;
 
-    .line 63
     iput-object p4, p0, Lcom/android/server/CertBlacklister$BlacklistObserver;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 57
     return-void
 .end method
 
@@ -89,16 +82,14 @@
     .locals 2
 
     .prologue
-    .line 77
     new-instance v0, Lcom/android/server/CertBlacklister$BlacklistObserver$1;
 
-    const-string/jumbo v1, "BlacklistUpdater"
+    const-string v1, "BlacklistUpdater"
 
     invoke-direct {v0, p0, v1}, Lcom/android/server/CertBlacklister$BlacklistObserver$1;-><init>(Lcom/android/server/CertBlacklister$BlacklistObserver;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcom/android/server/CertBlacklister$BlacklistObserver$1;->start()V
 
-    .line 76
     return-void
 .end method
 
@@ -108,7 +99,6 @@
     .locals 2
 
     .prologue
-    .line 73
     iget-object v0, p0, Lcom/android/server/CertBlacklister$BlacklistObserver;->mContentResolver:Landroid/content/ContentResolver;
 
     iget-object v1, p0, Lcom/android/server/CertBlacklister$BlacklistObserver;->mKey:Ljava/lang/String;
@@ -125,12 +115,9 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 68
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 69
     invoke-direct {p0}, Lcom/android/server/CertBlacklister$BlacklistObserver;->writeBlacklist()V
 
-    .line 67
     return-void
 .end method

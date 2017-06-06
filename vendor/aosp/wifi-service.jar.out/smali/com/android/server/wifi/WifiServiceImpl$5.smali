@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/wifi/WifiServiceImpl;
 
     .prologue
-    .line 1511
     iput-object p1, p0, Lcom/android/server/wifi/WifiServiceImpl$5;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -44,12 +43,11 @@
 
     const/4 v6, -0x1
 
-    .line 1514
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v4
 
-    const-string/jumbo v5, "android.intent.action.PACKAGE_REMOVED"
+    const-string v5, "android.intent.action.PACKAGE_REMOVED"
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -57,8 +55,7 @@
 
     if-eqz v5, :cond_0
 
-    .line 1516
-    const-string/jumbo v4, "android.intent.extra.REPLACING"
+    const-string v4, "android.intent.extra.REPLACING"
 
     invoke-virtual {p2, v4, v7}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
@@ -66,12 +63,10 @@
 
     if-eqz v4, :cond_2
 
-    .line 1517
     return-void
 
-    .line 1514
     :cond_0
-    const-string/jumbo v5, "android.intent.action.USER_REMOVED"
+    const-string v5, "android.intent.action.USER_REMOVED"
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -79,14 +74,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 1529
-    const-string/jumbo v4, "android.intent.extra.user_handle"
+    const-string v4, "android.intent.extra.user_handle"
 
     invoke-virtual {p2, v4, v7}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v3
 
-    .line 1530
     .local v3, "userHandle":I
     iget-object v4, p0, Lcom/android/server/wifi/WifiServiceImpl$5;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
@@ -94,43 +87,36 @@
 
     invoke-virtual {v4, v3}, Lcom/android/server/wifi/WifiStateMachine;->removeUserConfigs(I)V
 
-    .line 1513
     .end local v3    # "userHandle":I
     :cond_1
     :goto_0
     return-void
 
-    .line 1519
     :cond_2
-    const-string/jumbo v4, "android.intent.extra.UID"
+    const-string v4, "android.intent.extra.UID"
 
     invoke-virtual {p2, v4, v6}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 1520
     .local v1, "uid":I
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v2
 
-    .line 1521
     .local v2, "uri":Landroid/net/Uri;
     if-eq v1, v6, :cond_3
 
     if-nez v2, :cond_4
 
-    .line 1522
     :cond_3
     return-void
 
-    .line 1524
     :cond_4
     invoke-virtual {v2}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1525
     .local v0, "pkgName":Ljava/lang/String;
     iget-object v4, p0, Lcom/android/server/wifi/WifiServiceImpl$5;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 

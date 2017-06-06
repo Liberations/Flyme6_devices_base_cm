@@ -58,27 +58,22 @@
     .param p1, "delegate"    # Lcom/android/internal/telecom/IVideoCallback;
 
     .prologue
-    .line 164
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     new-instance v0, Landroid/telecom/VideoCallbackServant$1;
 
     invoke-direct {v0, p0}, Landroid/telecom/VideoCallbackServant$1;-><init>(Landroid/telecom/VideoCallbackServant;)V
 
     iput-object v0, p0, Landroid/telecom/VideoCallbackServant;->mHandler:Landroid/os/Handler;
 
-    .line 112
     new-instance v0, Landroid/telecom/VideoCallbackServant$2;
 
     invoke-direct {v0, p0}, Landroid/telecom/VideoCallbackServant$2;-><init>(Landroid/telecom/VideoCallbackServant;)V
 
     iput-object v0, p0, Landroid/telecom/VideoCallbackServant;->mStub:Lcom/android/internal/telecom/IVideoCallback;
 
-    .line 165
     iput-object p1, p0, Landroid/telecom/VideoCallbackServant;->mDelegate:Lcom/android/internal/telecom/IVideoCallback;
 
-    .line 164
     return-void
 .end method
 
@@ -88,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 169
     iget-object v0, p0, Landroid/telecom/VideoCallbackServant;->mStub:Lcom/android/internal/telecom/IVideoCallback;
 
     return-object v0

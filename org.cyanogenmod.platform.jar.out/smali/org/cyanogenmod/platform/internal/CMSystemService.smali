@@ -9,10 +9,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 24
     invoke-direct {p0, p1}, Lcom/android/server/SystemService;-><init>(Landroid/content/Context;)V
 
-    .line 23
     return-void
 .end method
 
@@ -25,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 35
     const/4 v0, 0x1
 
     return v0

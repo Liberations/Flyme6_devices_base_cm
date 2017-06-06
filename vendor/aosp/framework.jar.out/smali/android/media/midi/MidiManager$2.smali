@@ -33,7 +33,6 @@
     .param p4, "val$handlerF"    # Landroid/os/Handler;
 
     .prologue
-    .line 254
     iput-object p1, p0, Landroid/media/midi/MidiManager$2;->this$0:Landroid/media/midi/MidiManager;
 
     iput-object p2, p0, Landroid/media/midi/MidiManager$2;->val$deviceInfoF:Landroid/media/midi/MidiDeviceInfo;
@@ -55,10 +54,8 @@
     .param p2, "deviceToken"    # Landroid/os/IBinder;
 
     .prologue
-    .line 258
     if-eqz p1, :cond_0
 
-    .line 259
     new-instance v0, Landroid/media/midi/MidiDevice;
 
     iget-object v1, p0, Landroid/media/midi/MidiManager$2;->val$deviceInfoF:Landroid/media/midi/MidiDeviceInfo;
@@ -81,7 +78,6 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/media/midi/MidiDevice;-><init>(Landroid/media/midi/MidiDeviceInfo;Landroid/media/midi/IMidiDeviceServer;Landroid/media/midi/IMidiManager;Landroid/os/IBinder;Landroid/os/IBinder;)V
 
-    .line 263
     :goto_0
     iget-object v1, p0, Landroid/media/midi/MidiManager$2;->this$0:Landroid/media/midi/MidiManager;
 
@@ -91,10 +87,8 @@
 
     invoke-static {v1, v0, v2, v3}, Landroid/media/midi/MidiManager;->-wrap0(Landroid/media/midi/MidiManager;Landroid/media/midi/MidiDevice;Landroid/media/midi/MidiManager$OnDeviceOpenedListener;Landroid/os/Handler;)V
 
-    .line 256
     return-void
 
-    .line 261
     :cond_0
     const/4 v0, 0x0
 

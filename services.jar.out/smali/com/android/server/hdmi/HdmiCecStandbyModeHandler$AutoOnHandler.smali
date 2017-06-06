@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/hdmi/HdmiCecStandbyModeHandler;
 
     .prologue
-    .line 56
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecStandbyModeHandler$AutoOnHandler;->this$0:Lcom/android/server/hdmi/HdmiCecStandbyModeHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
     .param p1, "message"    # Lcom/android/server/hdmi/HdmiCecMessage;
 
     .prologue
-    .line 59
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecStandbyModeHandler$AutoOnHandler;->this$0:Lcom/android/server/hdmi/HdmiCecStandbyModeHandler;
 
     invoke-static {v0}, Lcom/android/server/hdmi/HdmiCecStandbyModeHandler;->-get3(Lcom/android/server/hdmi/HdmiCecStandbyModeHandler;)Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
@@ -65,7 +63,6 @@
 
     if-nez v0, :cond_0
 
-    .line 60
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecStandbyModeHandler$AutoOnHandler;->this$0:Lcom/android/server/hdmi/HdmiCecStandbyModeHandler;
 
     invoke-static {v0}, Lcom/android/server/hdmi/HdmiCecStandbyModeHandler;->-get1(Lcom/android/server/hdmi/HdmiCecStandbyModeHandler;)Lcom/android/server/hdmi/HdmiCecStandbyModeHandler$CecMessageHandler;
@@ -74,12 +71,10 @@
 
     invoke-interface {v0, p1}, Lcom/android/server/hdmi/HdmiCecStandbyModeHandler$CecMessageHandler;->handle(Lcom/android/server/hdmi/HdmiCecMessage;)Z
 
-    .line 61
     const/4 v0, 0x1
 
     return v0
 
-    .line 63
     :cond_0
     const/4 v0, 0x0
 

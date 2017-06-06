@@ -54,15 +54,12 @@
     .locals 1
 
     .prologue
-    .line 137
     new-instance v0, Landroid/hardware/camera2/params/OutputConfiguration$1;
 
     invoke-direct {v0}, Landroid/hardware/camera2/params/OutputConfiguration$1;-><init>()V
 
-    .line 136
     sput-object v0, Landroid/hardware/camera2/params/OutputConfiguration;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 39
     return-void
 .end method
 
@@ -71,15 +68,12 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 105
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 106
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 107
     .local v0, "rotation":I
     sget-object v2, Landroid/view/Surface;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -89,14 +83,12 @@
 
     check-cast v1, Landroid/view/Surface;
 
-    .line 108
     .local v1, "surface":Landroid/view/Surface;
-    const-string/jumbo v2, "Surface must not be null"
+    const-string v2, "Surface must not be null"
 
     invoke-static {v1, v2}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 109
-    const-string/jumbo v2, "Rotation constant"
+    const-string v2, "Rotation constant"
 
     const/4 v3, 0x0
 
@@ -104,13 +96,10 @@
 
     invoke-static {v0, v3, v4, v2}, Lcom/android/internal/util/Preconditions;->checkArgumentInRange(IIILjava/lang/String;)I
 
-    .line 110
     iput-object v1, p0, Landroid/hardware/camera2/params/OutputConfiguration;->mSurface:Landroid/view/Surface;
 
-    .line 111
     iput v0, p0, Landroid/hardware/camera2/params/OutputConfiguration;->mRotation:I
 
-    .line 112
     iget-object v2, p0, Landroid/hardware/camera2/params/OutputConfiguration;->mSurface:Landroid/view/Surface;
 
     invoke-static {v2}, Landroid/hardware/camera2/utils/SurfaceUtils;->getSurfaceSize(Landroid/view/Surface;)Landroid/util/Size;
@@ -119,7 +108,6 @@
 
     iput-object v2, p0, Landroid/hardware/camera2/params/OutputConfiguration;->mConfiguredSize:Landroid/util/Size;
 
-    .line 113
     iget-object v2, p0, Landroid/hardware/camera2/params/OutputConfiguration;->mSurface:Landroid/view/Surface;
 
     invoke-static {v2}, Landroid/hardware/camera2/utils/SurfaceUtils;->getSurfaceFormat(Landroid/view/Surface;)I
@@ -128,7 +116,6 @@
 
     iput v2, p0, Landroid/hardware/camera2/params/OutputConfiguration;->mConfiguredFormat:I
 
-    .line 114
     iget-object v2, p0, Landroid/hardware/camera2/params/OutputConfiguration;->mSurface:Landroid/view/Surface;
 
     invoke-static {v2}, Landroid/hardware/camera2/utils/SurfaceUtils;->getSurfaceDataspace(Landroid/view/Surface;)I
@@ -137,7 +124,6 @@
 
     iput v2, p0, Landroid/hardware/camera2/params/OutputConfiguration;->mConfiguredDataspace:I
 
-    .line 105
     return-void
 .end method
 
@@ -156,12 +142,10 @@
     .param p1, "surface"    # Landroid/view/Surface;
 
     .prologue
-    .line 71
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Landroid/hardware/camera2/params/OutputConfiguration;-><init>(Landroid/view/Surface;I)V
 
-    .line 70
     return-void
 .end method
 
@@ -171,16 +155,13 @@
     .param p2, "rotation"    # I
 
     .prologue
-    .line 92
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 93
-    const-string/jumbo v0, "Surface must not be null"
+    const-string v0, "Surface must not be null"
 
     invoke-static {p1, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 94
-    const-string/jumbo v0, "Rotation constant"
+    const-string v0, "Rotation constant"
 
     const/4 v1, 0x0
 
@@ -188,34 +169,28 @@
 
     invoke-static {p2, v1, v2, v0}, Lcom/android/internal/util/Preconditions;->checkArgumentInRange(IIILjava/lang/String;)I
 
-    .line 95
     iput-object p1, p0, Landroid/hardware/camera2/params/OutputConfiguration;->mSurface:Landroid/view/Surface;
 
-    .line 96
     iput p2, p0, Landroid/hardware/camera2/params/OutputConfiguration;->mRotation:I
 
-    .line 97
     invoke-static {p1}, Landroid/hardware/camera2/utils/SurfaceUtils;->getSurfaceSize(Landroid/view/Surface;)Landroid/util/Size;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/hardware/camera2/params/OutputConfiguration;->mConfiguredSize:Landroid/util/Size;
 
-    .line 98
     invoke-static {p1}, Landroid/hardware/camera2/utils/SurfaceUtils;->getSurfaceFormat(Landroid/view/Surface;)I
 
     move-result v0
 
     iput v0, p0, Landroid/hardware/camera2/params/OutputConfiguration;->mConfiguredFormat:I
 
-    .line 99
     invoke-static {p1}, Landroid/hardware/camera2/utils/SurfaceUtils;->getSurfaceDataspace(Landroid/view/Surface;)I
 
     move-result v0
 
     iput v0, p0, Landroid/hardware/camera2/params/OutputConfiguration;->mConfiguredDataspace:I
 
-    .line 92
     return-void
 .end method
 
@@ -225,7 +200,6 @@
     .locals 1
 
     .prologue
-    .line 157
     const/4 v0, 0x0
 
     return v0
@@ -240,20 +214,15 @@
 
     const/4 v2, 0x0
 
-    .line 180
     if-nez p1, :cond_0
 
-    .line 181
     return v2
 
-    .line 182
     :cond_0
     if-ne p0, p1, :cond_1
 
-    .line 183
     return v1
 
-    .line 184
     :cond_1
     instance-of v3, p1, Landroid/hardware/camera2/params/OutputConfiguration;
 
@@ -261,10 +230,8 @@
 
     move-object v0, p1
 
-    .line 185
     check-cast v0, Landroid/hardware/camera2/params/OutputConfiguration;
 
-    .line 186
     .local v0, "other":Landroid/hardware/camera2/params/OutputConfiguration;
     iget-object v3, p0, Landroid/hardware/camera2/params/OutputConfiguration;->mSurface:Landroid/view/Surface;
 
@@ -272,14 +239,12 @@
 
     if-ne v3, v4, :cond_3
 
-    .line 187
     iget v3, p0, Landroid/hardware/camera2/params/OutputConfiguration;->mRotation:I
 
     iget v4, v0, Landroid/hardware/camera2/params/OutputConfiguration;->mRotation:I
 
     if-ne v3, v4, :cond_3
 
-    .line 188
     iget-object v3, p0, Landroid/hardware/camera2/params/OutputConfiguration;->mConfiguredSize:Landroid/util/Size;
 
     iget-object v4, v0, Landroid/hardware/camera2/params/OutputConfiguration;->mConfiguredSize:Landroid/util/Size;
@@ -288,40 +253,33 @@
 
     move-result v3
 
-    .line 186
     if-eqz v3, :cond_3
 
-    .line 189
     iget v3, p0, Landroid/hardware/camera2/params/OutputConfiguration;->mConfiguredFormat:I
 
     iget v4, v0, Landroid/hardware/camera2/params/OutputConfiguration;->mConfiguredFormat:I
 
     if-ne v3, v4, :cond_3
 
-    .line 190
     iget v3, p0, Landroid/hardware/camera2/params/OutputConfiguration;->mConfiguredDataspace:I
 
     iget v4, v0, Landroid/hardware/camera2/params/OutputConfiguration;->mConfiguredDataspace:I
 
     if-ne v3, v4, :cond_2
 
-    .line 186
     :goto_0
     return v1
 
     :cond_2
     move v1, v2
 
-    .line 190
     goto :goto_0
 
     :cond_3
     move v1, v2
 
-    .line 186
     goto :goto_0
 
-    .line 192
     .end local v0    # "other":Landroid/hardware/camera2/params/OutputConfiguration;
     :cond_4
     return v2
@@ -331,7 +289,6 @@
     .locals 1
 
     .prologue
-    .line 133
     iget v0, p0, Landroid/hardware/camera2/params/OutputConfiguration;->mRotation:I
 
     return v0
@@ -341,7 +298,6 @@
     .locals 1
 
     .prologue
-    .line 123
     iget-object v0, p0, Landroid/hardware/camera2/params/OutputConfiguration;->mSurface:Landroid/view/Surface;
 
     return-object v0
@@ -351,7 +307,6 @@
     .locals 3
 
     .prologue
-    .line 200
     const/4 v0, 0x2
 
     new-array v0, v0, [I
@@ -385,29 +340,24 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 162
     if-nez p1, :cond_0
 
-    .line 163
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "dest must not be null"
+    const-string v1, "dest must not be null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 165
     :cond_0
     iget v0, p0, Landroid/hardware/camera2/params/OutputConfiguration;->mRotation:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 166
     iget-object v0, p0, Landroid/hardware/camera2/params/OutputConfiguration;->mSurface:Landroid/view/Surface;
 
     invoke-virtual {v0, p1, p2}, Landroid/view/Surface;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 161
     return-void
 .end method

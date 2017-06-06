@@ -31,10 +31,8 @@
     .end annotation
 
     .prologue
-    .line 25
     invoke-direct {p0, p1}, Lcom/android/server/wifi/anqp/ANQPElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;)V
 
-    .line 27
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v2
@@ -43,14 +41,13 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 28
     new-instance v2, Ljava/net/ProtocolException;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "Truncated icon file: "
+    const-string v4, "Truncated icon file: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -72,7 +69,6 @@
 
     throw v2
 
-    .line 31
     :cond_0
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->get()B
 
@@ -80,7 +76,6 @@
 
     and-int/lit16 v1, v2, 0xff
 
-    .line 32
     .local v1, "statusID":I
     invoke-static {}, Lcom/android/server/wifi/anqp/HSIconFileElement$StatusCode;->values()[Lcom/android/server/wifi/anqp/HSIconFileElement$StatusCode;
 
@@ -99,7 +94,6 @@
     :goto_0
     iput-object v2, p0, Lcom/android/server/wifi/anqp/HSIconFileElement;->mStatusCode:Lcom/android/server/wifi/anqp/HSIconFileElement$StatusCode;
 
-    .line 33
     sget-object v2, Ljava/nio/charset/StandardCharsets;->US_ASCII:Ljava/nio/charset/Charset;
 
     const/4 v3, 0x1
@@ -110,7 +104,6 @@
 
     iput-object v2, p0, Lcom/android/server/wifi/anqp/HSIconFileElement;->mType:Ljava/lang/String;
 
-    .line 35
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v2
@@ -119,21 +112,17 @@
 
     and-int v0, v2, v3
 
-    .line 36
     .local v0, "dataLength":I
     new-array v2, v0, [B
 
     iput-object v2, p0, Lcom/android/server/wifi/anqp/HSIconFileElement;->mIconData:[B
 
-    .line 37
     iget-object v2, p0, Lcom/android/server/wifi/anqp/HSIconFileElement;->mIconData:[B
 
     invoke-virtual {p2, v2}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
-    .line 24
     return-void
 
-    .line 32
     .end local v0    # "dataLength":I
     :cond_1
     const/4 v2, 0x0
@@ -147,7 +136,6 @@
     .locals 1
 
     .prologue
-    .line 49
     iget-object v0, p0, Lcom/android/server/wifi/anqp/HSIconFileElement;->mIconData:[B
 
     return-object v0
@@ -157,7 +145,6 @@
     .locals 1
 
     .prologue
-    .line 41
     iget-object v0, p0, Lcom/android/server/wifi/anqp/HSIconFileElement;->mStatusCode:Lcom/android/server/wifi/anqp/HSIconFileElement$StatusCode;
 
     return-object v0
@@ -167,7 +154,6 @@
     .locals 1
 
     .prologue
-    .line 45
     iget-object v0, p0, Lcom/android/server/wifi/anqp/HSIconFileElement;->mType:Ljava/lang/String;
 
     return-object v0
@@ -177,71 +163,56 @@
     .locals 2
 
     .prologue
-    .line 54
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "HSIconFile{mStatusCode="
+    const-string v1, "HSIconFile{mStatusCode="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 55
     iget-object v1, p0, Lcom/android/server/wifi/anqp/HSIconFileElement;->mStatusCode:Lcom/android/server/wifi/anqp/HSIconFileElement$StatusCode;
 
-    .line 54
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 56
-    const-string/jumbo v1, ", mType=\'"
+    const-string v1, ", mType=\'"
 
-    .line 54
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 56
     iget-object v1, p0, Lcom/android/server/wifi/anqp/HSIconFileElement;->mType:Ljava/lang/String;
 
-    .line 54
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 56
     const/16 v1, 0x27
 
-    .line 54
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 57
-    const-string/jumbo v1, ", mIconData="
+    const-string v1, ", mIconData="
 
-    .line 54
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 57
     iget-object v1, p0, Lcom/android/server/wifi/anqp/HSIconFileElement;->mIconData:[B
 
     array-length v1, v1
 
-    .line 54
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 57
-    const-string/jumbo v1, " bytes }"
+    const-string v1, " bytes }"
 
-    .line 54
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0

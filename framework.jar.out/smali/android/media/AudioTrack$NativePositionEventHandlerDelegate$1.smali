@@ -31,7 +31,6 @@
     .param p4, "val$listener"    # Landroid/media/AudioTrack$OnPlaybackPositionUpdateListener;
 
     .prologue
-    .line 2396
     iput-object p1, p0, Landroid/media/AudioTrack$NativePositionEventHandlerDelegate$1;->this$1:Landroid/media/AudioTrack$NativePositionEventHandlerDelegate;
 
     iput-object p3, p0, Landroid/media/AudioTrack$NativePositionEventHandlerDelegate$1;->val$track:Landroid/media/AudioTrack;
@@ -50,26 +49,22 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 2399
     iget-object v0, p0, Landroid/media/AudioTrack$NativePositionEventHandlerDelegate$1;->val$track:Landroid/media/AudioTrack;
 
     if-nez v0, :cond_0
 
-    .line 2400
     return-void
 
-    .line 2402
     :cond_0
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 2414
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "Unknown native event type: "
+    const-string v1, "Unknown native event type: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -87,18 +82,15 @@
 
     invoke-static {v0}, Landroid/media/AudioTrack;->-wrap0(Ljava/lang/String;)V
 
-    .line 2398
     :cond_1
     :goto_0
     return-void
 
-    .line 2404
     :pswitch_0
     iget-object v0, p0, Landroid/media/AudioTrack$NativePositionEventHandlerDelegate$1;->val$listener:Landroid/media/AudioTrack$OnPlaybackPositionUpdateListener;
 
     if-eqz v0, :cond_1
 
-    .line 2405
     iget-object v0, p0, Landroid/media/AudioTrack$NativePositionEventHandlerDelegate$1;->val$listener:Landroid/media/AudioTrack$OnPlaybackPositionUpdateListener;
 
     iget-object v1, p0, Landroid/media/AudioTrack$NativePositionEventHandlerDelegate$1;->val$track:Landroid/media/AudioTrack;
@@ -107,13 +99,11 @@
 
     goto :goto_0
 
-    .line 2409
     :pswitch_1
     iget-object v0, p0, Landroid/media/AudioTrack$NativePositionEventHandlerDelegate$1;->val$listener:Landroid/media/AudioTrack$OnPlaybackPositionUpdateListener;
 
     if-eqz v0, :cond_1
 
-    .line 2410
     iget-object v0, p0, Landroid/media/AudioTrack$NativePositionEventHandlerDelegate$1;->val$listener:Landroid/media/AudioTrack$OnPlaybackPositionUpdateListener;
 
     iget-object v1, p0, Landroid/media/AudioTrack$NativePositionEventHandlerDelegate$1;->val$track:Landroid/media/AudioTrack;
@@ -122,7 +112,6 @@
 
     goto :goto_0
 
-    .line 2402
     :pswitch_data_0
     .packed-switch 0x3
         :pswitch_0

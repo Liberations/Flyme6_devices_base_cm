@@ -69,55 +69,49 @@
 
     const/4 v4, 0x0
 
-    .line 26
     new-instance v0, Lcom/android/internal/telephony/cat/TextColor;
 
-    const-string/jumbo v1, "BLACK"
+    const-string v1, "BLACK"
 
     invoke-direct {v0, v1, v4, v4}, Lcom/android/internal/telephony/cat/TextColor;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/android/internal/telephony/cat/TextColor;->BLACK:Lcom/android/internal/telephony/cat/TextColor;
 
-    .line 27
     new-instance v0, Lcom/android/internal/telephony/cat/TextColor;
 
-    const-string/jumbo v1, "DARK_GRAY"
+    const-string v1, "DARK_GRAY"
 
     invoke-direct {v0, v1, v5, v5}, Lcom/android/internal/telephony/cat/TextColor;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/android/internal/telephony/cat/TextColor;->DARK_GRAY:Lcom/android/internal/telephony/cat/TextColor;
 
-    .line 28
     new-instance v0, Lcom/android/internal/telephony/cat/TextColor;
 
-    const-string/jumbo v1, "DARK_RED"
+    const-string v1, "DARK_RED"
 
     invoke-direct {v0, v1, v6, v6}, Lcom/android/internal/telephony/cat/TextColor;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/android/internal/telephony/cat/TextColor;->DARK_RED:Lcom/android/internal/telephony/cat/TextColor;
 
-    .line 29
     new-instance v0, Lcom/android/internal/telephony/cat/TextColor;
 
-    const-string/jumbo v1, "DARK_YELLOW"
+    const-string v1, "DARK_YELLOW"
 
     invoke-direct {v0, v1, v7, v7}, Lcom/android/internal/telephony/cat/TextColor;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/android/internal/telephony/cat/TextColor;->DARK_YELLOW:Lcom/android/internal/telephony/cat/TextColor;
 
-    .line 30
     new-instance v0, Lcom/android/internal/telephony/cat/TextColor;
 
-    const-string/jumbo v1, "DARK_GREEN"
+    const-string v1, "DARK_GREEN"
 
     invoke-direct {v0, v1, v8, v8}, Lcom/android/internal/telephony/cat/TextColor;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/android/internal/telephony/cat/TextColor;->DARK_GREEN:Lcom/android/internal/telephony/cat/TextColor;
 
-    .line 31
     new-instance v0, Lcom/android/internal/telephony/cat/TextColor;
 
-    const-string/jumbo v1, "DARK_CYAN"
+    const-string v1, "DARK_CYAN"
 
     const/4 v2, 0x5
 
@@ -127,10 +121,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/TextColor;->DARK_CYAN:Lcom/android/internal/telephony/cat/TextColor;
 
-    .line 32
     new-instance v0, Lcom/android/internal/telephony/cat/TextColor;
 
-    const-string/jumbo v1, "DARK_BLUE"
+    const-string v1, "DARK_BLUE"
 
     const/4 v2, 0x6
 
@@ -140,10 +133,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/TextColor;->DARK_BLUE:Lcom/android/internal/telephony/cat/TextColor;
 
-    .line 33
     new-instance v0, Lcom/android/internal/telephony/cat/TextColor;
 
-    const-string/jumbo v1, "DARK_MAGENTA"
+    const-string v1, "DARK_MAGENTA"
 
     const/4 v2, 0x7
 
@@ -153,10 +145,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/TextColor;->DARK_MAGENTA:Lcom/android/internal/telephony/cat/TextColor;
 
-    .line 34
     new-instance v0, Lcom/android/internal/telephony/cat/TextColor;
 
-    const-string/jumbo v1, "GRAY"
+    const-string v1, "GRAY"
 
     const/16 v2, 0x8
 
@@ -166,10 +157,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/TextColor;->GRAY:Lcom/android/internal/telephony/cat/TextColor;
 
-    .line 35
     new-instance v0, Lcom/android/internal/telephony/cat/TextColor;
 
-    const-string/jumbo v1, "WHITE"
+    const-string v1, "WHITE"
 
     const/16 v2, 0x9
 
@@ -179,10 +169,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/TextColor;->WHITE:Lcom/android/internal/telephony/cat/TextColor;
 
-    .line 36
     new-instance v0, Lcom/android/internal/telephony/cat/TextColor;
 
-    const-string/jumbo v1, "BRIGHT_RED"
+    const-string v1, "BRIGHT_RED"
 
     const/16 v2, 0xa
 
@@ -192,10 +181,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/TextColor;->BRIGHT_RED:Lcom/android/internal/telephony/cat/TextColor;
 
-    .line 37
     new-instance v0, Lcom/android/internal/telephony/cat/TextColor;
 
-    const-string/jumbo v1, "BRIGHT_YELLOW"
+    const-string v1, "BRIGHT_YELLOW"
 
     const/16 v2, 0xb
 
@@ -205,10 +193,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/TextColor;->BRIGHT_YELLOW:Lcom/android/internal/telephony/cat/TextColor;
 
-    .line 38
     new-instance v0, Lcom/android/internal/telephony/cat/TextColor;
 
-    const-string/jumbo v1, "BRIGHT_GREEN"
+    const-string v1, "BRIGHT_GREEN"
 
     const/16 v2, 0xc
 
@@ -218,10 +205,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/TextColor;->BRIGHT_GREEN:Lcom/android/internal/telephony/cat/TextColor;
 
-    .line 39
     new-instance v0, Lcom/android/internal/telephony/cat/TextColor;
 
-    const-string/jumbo v1, "BRIGHT_CYAN"
+    const-string v1, "BRIGHT_CYAN"
 
     const/16 v2, 0xd
 
@@ -231,10 +217,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/TextColor;->BRIGHT_CYAN:Lcom/android/internal/telephony/cat/TextColor;
 
-    .line 40
     new-instance v0, Lcom/android/internal/telephony/cat/TextColor;
 
-    const-string/jumbo v1, "BRIGHT_BLUE"
+    const-string v1, "BRIGHT_BLUE"
 
     const/16 v2, 0xe
 
@@ -244,10 +229,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/TextColor;->BRIGHT_BLUE:Lcom/android/internal/telephony/cat/TextColor;
 
-    .line 41
     new-instance v0, Lcom/android/internal/telephony/cat/TextColor;
 
-    const-string/jumbo v1, "BRIGHT_MAGENTA"
+    const-string v1, "BRIGHT_MAGENTA"
 
     const/16 v2, 0xf
 
@@ -257,7 +241,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/TextColor;->BRIGHT_MAGENTA:Lcom/android/internal/telephony/cat/TextColor;
 
-    .line 25
     const/16 v0, 0x10
 
     new-array v0, v0, [Lcom/android/internal/telephony/cat/TextColor;
@@ -358,13 +341,10 @@
     .param p3, "value"    # I
 
     .prologue
-    .line 45
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 46
     iput p3, p0, Lcom/android/internal/telephony/cat/TextColor;->mValue:I
 
-    .line 45
     return-void
 .end method
 
@@ -373,7 +353,6 @@
     .param p0, "value"    # I
 
     .prologue
-    .line 56
     invoke-static {}, Lcom/android/internal/telephony/cat/TextColor;->values()[Lcom/android/internal/telephony/cat/TextColor;
 
     move-result-object v2
@@ -387,22 +366,18 @@
 
     aget-object v0, v2, v1
 
-    .line 57
     .local v0, "e":Lcom/android/internal/telephony/cat/TextColor;
     iget v4, v0, Lcom/android/internal/telephony/cat/TextColor;->mValue:I
 
     if-ne v4, p0, :cond_0
 
-    .line 58
     return-object v0
 
-    .line 56
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 61
     .end local v0    # "e":Lcom/android/internal/telephony/cat/TextColor;
     :cond_1
     const/4 v1, 0x0
@@ -415,7 +390,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 25
     const-class v0, Lcom/android/internal/telephony/cat/TextColor;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -431,7 +405,6 @@
     .locals 1
 
     .prologue
-    .line 25
     sget-object v0, Lcom/android/internal/telephony/cat/TextColor;->$VALUES:[Lcom/android/internal/telephony/cat/TextColor;
 
     return-object v0

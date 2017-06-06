@@ -37,7 +37,6 @@
     .param p1, "this$0"    # Lcom/android/server/AlarmManagerService;
 
     .prologue
-    .line 577
     iput-object p1, p0, Lcom/android/server/AlarmManagerService$2;->this$0:Lcom/android/server/AlarmManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -57,7 +56,6 @@
 
     const/4 v4, -0x1
 
-    .line 581
     iget-object v0, p1, Lcom/android/server/AlarmManagerService$Alarm;->priorityClass:Lcom/android/server/AlarmManagerService$PriorityClass;
 
     iget v0, v0, Lcom/android/server/AlarmManagerService$PriorityClass;->priority:I
@@ -68,10 +66,8 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 582
     return v4
 
-    .line 583
     :cond_0
     iget-object v0, p1, Lcom/android/server/AlarmManagerService$Alarm;->priorityClass:Lcom/android/server/AlarmManagerService$PriorityClass;
 
@@ -83,10 +79,8 @@
 
     if-le v0, v1, :cond_1
 
-    .line 584
     return v5
 
-    .line 588
     :cond_1
     iget-wide v0, p1, Lcom/android/server/AlarmManagerService$Alarm;->whenElapsed:J
 
@@ -96,10 +90,8 @@
 
     if-gez v0, :cond_2
 
-    .line 589
     return v4
 
-    .line 590
     :cond_2
     iget-wide v0, p1, Lcom/android/server/AlarmManagerService$Alarm;->whenElapsed:J
 
@@ -109,10 +101,8 @@
 
     if-lez v0, :cond_3
 
-    .line 591
     return v5
 
-    .line 595
     :cond_3
     const/4 v0, 0x0
 
@@ -125,7 +115,6 @@
     .param p2, "rhs"    # Ljava/lang/Object;
 
     .prologue
-    .line 579
     check-cast p1, Lcom/android/server/AlarmManagerService$Alarm;
 
     .end local p1    # "lhs":Ljava/lang/Object;

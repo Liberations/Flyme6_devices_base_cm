@@ -69,8 +69,7 @@
     .locals 1
 
     .prologue
-    .line 2421
-    const-string/jumbo v0, "content://mms-sms/"
+    const-string v0, "content://mms-sms/"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -78,67 +77,54 @@
 
     sput-object v0, Landroid/provider/Telephony$MmsSms;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 2427
-    const-string/jumbo v0, "content://mms-sms/conversations"
+    const-string v0, "content://mms-sms/conversations"
 
-    .line 2426
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
     sput-object v0, Landroid/provider/Telephony$MmsSms;->CONTENT_CONVERSATIONS_URI:Landroid/net/Uri;
 
-    .line 2433
-    const-string/jumbo v0, "content://mms-sms/messages/byphone"
+    const-string v0, "content://mms-sms/messages/byphone"
 
-    .line 2432
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
     sput-object v0, Landroid/provider/Telephony$MmsSms;->CONTENT_FILTER_BYPHONE_URI:Landroid/net/Uri;
 
-    .line 2439
-    const-string/jumbo v0, "content://mms-sms/undelivered"
+    const-string v0, "content://mms-sms/undelivered"
 
-    .line 2438
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
     sput-object v0, Landroid/provider/Telephony$MmsSms;->CONTENT_UNDELIVERED_URI:Landroid/net/Uri;
 
-    .line 2445
-    const-string/jumbo v0, "content://mms-sms/draft"
+    const-string v0, "content://mms-sms/draft"
 
-    .line 2444
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
     sput-object v0, Landroid/provider/Telephony$MmsSms;->CONTENT_DRAFT_URI:Landroid/net/Uri;
 
-    .line 2451
-    const-string/jumbo v0, "content://mms-sms/locked"
+    const-string v0, "content://mms-sms/locked"
 
-    .line 2450
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
     sput-object v0, Landroid/provider/Telephony$MmsSms;->CONTENT_LOCKED_URI:Landroid/net/Uri;
 
-    .line 2458
-    const-string/jumbo v0, "content://mms-sms/search"
+    const-string v0, "content://mms-sms/search"
 
-    .line 2457
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
     sput-object v0, Landroid/provider/Telephony$MmsSms;->SEARCH_URI:Landroid/net/Uri;
 
-    .line 2396
     return-void
 .end method
 
@@ -146,7 +132,6 @@
     .locals 0
 
     .prologue
-    .line 2402
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

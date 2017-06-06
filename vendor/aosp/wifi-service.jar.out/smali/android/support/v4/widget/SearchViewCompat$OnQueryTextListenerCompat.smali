@@ -23,10 +23,8 @@
     .locals 1
 
     .prologue
-    .line 336
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 337
     invoke-static {}, Landroid/support/v4/widget/SearchViewCompat;->-get0()Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;
 
     move-result-object v0
@@ -37,7 +35,6 @@
 
     iput-object v0, p0, Landroid/support/v4/widget/SearchViewCompat$OnQueryTextListenerCompat;->mListener:Ljava/lang/Object;
 
-    .line 336
     return-void
 .end method
 
@@ -48,7 +45,6 @@
     .param p1, "newText"    # Ljava/lang/String;
 
     .prologue
-    .line 365
     const/4 v0, 0x0
 
     return v0
@@ -59,7 +55,6 @@
     .param p1, "query"    # Ljava/lang/String;
 
     .prologue
-    .line 353
     const/4 v0, 0x0
 
     return v0

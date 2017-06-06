@@ -50,17 +50,14 @@
     .end annotation
 
     .prologue
-    .line 43
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
     invoke-static/range {p1 .. p1}, Lcom/android/server/wifi/configparse/MIMEContainer;->parseHeader(Ljava/io/LineNumberReader;)Ljava/util/Map;
 
     move-result-object v10
 
-    .line 46
     .local v10, "headers":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;>;"
-    const-string/jumbo v19, "Content-Type"
+    const-string v19, "Content-Type"
 
     move-object/from16 v0, v19
 
@@ -70,7 +67,6 @@
 
     check-cast v18, Ljava/util/List;
 
-    .line 47
     .local v18, "type":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz v18, :cond_0
 
@@ -80,7 +76,6 @@
 
     if-eqz v19, :cond_1
 
-    .line 48
     :cond_0
     new-instance v19, Ljava/io/IOException;
 
@@ -88,7 +83,7 @@
 
     invoke-direct/range {v20 .. v20}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v21, "Missing Content-Type @ "
+    const-string v21, "Missing Content-Type @ "
 
     invoke-virtual/range {v20 .. v21}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -110,23 +105,18 @@
 
     throw v19
 
-    .line 51
     :cond_1
     const/4 v13, 0x0
 
-    .line 52
     .local v13, "multiPart":Z
     const/4 v12, 0x0
 
-    .line 53
     .local v12, "mixed":Z
     const/4 v15, 0x0
 
-    .line 54
     .local v15, "subBoundary":Ljava/lang/String;
     sget-object v6, Ljava/nio/charset/StandardCharsets;->ISO_8859_1:Ljava/nio/charset/Charset;
 
-    .line 56
     .local v6, "charset":Ljava/nio/charset/Charset;
     const/16 v19, 0x0
 
@@ -142,14 +132,13 @@
 
     iput-object v0, v1, Lcom/android/server/wifi/configparse/MIMEContainer;->mContentType:Ljava/lang/String;
 
-    .line 58
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/configparse/MIMEContainer;->mContentType:Ljava/lang/String;
 
     move-object/from16 v19, v0
 
-    const-string/jumbo v20, "multipart/"
+    const-string v20, "multipart/"
 
     invoke-virtual/range {v19 .. v20}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -157,10 +146,8 @@
 
     if-eqz v19, :cond_6
 
-    .line 59
     const/4 v13, 0x1
 
-    .line 61
     invoke-interface/range {v18 .. v18}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -181,9 +168,8 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 62
     .local v3, "attribute":Ljava/lang/String;
-    const-string/jumbo v19, "boundary="
+    const-string v19, "boundary="
 
     move-object/from16 v0, v19
 
@@ -193,8 +179,7 @@
 
     if-eqz v19, :cond_2
 
-    .line 63
-    const-string/jumbo v19, "boundary="
+    const-string v19, "boundary="
 
     invoke-virtual/range {v19 .. v19}, Ljava/lang/String;->length()I
 
@@ -213,7 +198,6 @@
     .local v15, "subBoundary":Ljava/lang/String;
     goto :goto_0
 
-    .line 67
     .end local v3    # "attribute":Ljava/lang/String;
     .end local v15    # "subBoundary":Ljava/lang/String;
     :cond_3
@@ -223,7 +207,7 @@
 
     move-object/from16 v19, v0
 
-    const-string/jumbo v20, "/mixed"
+    const-string v20, "/mixed"
 
     invoke-virtual/range {v19 .. v20}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
@@ -231,55 +215,46 @@
 
     if-eqz v19, :cond_4
 
-    .line 68
     const/4 v12, 0x1
 
-    .line 79
     .end local v4    # "attribute$iterator":Ljava/util/Iterator;
     :cond_4
     move-object/from16 v0, p0
 
     iput-boolean v12, v0, Lcom/android/server/wifi/configparse/MIMEContainer;->mMixed:Z
 
-    .line 80
     move-object/from16 v0, p0
 
     iput-object v6, v0, Lcom/android/server/wifi/configparse/MIMEContainer;->mCharset:Ljava/nio/charset/Charset;
 
-    .line 82
     if-eqz v13, :cond_c
 
     if-eqz v15, :cond_c
 
-    .line 84
     :cond_5
     invoke-virtual/range {p1 .. p1}, Ljava/io/LineNumberReader;->readLine()Ljava/lang/String;
 
     move-result-object v11
 
-    .line 85
     .local v11, "line":Ljava/lang/String;
     if-nez v11, :cond_8
 
-    .line 86
     new-instance v19, Ljava/io/IOException;
 
     new-instance v20, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v20 .. v20}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v21, "Unexpected EOF before first boundary @ "
+    const-string v21, "Unexpected EOF before first boundary @ "
 
     invoke-virtual/range {v20 .. v21}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v20
 
-    .line 87
     invoke-virtual/range {p1 .. p1}, Ljava/io/LineNumberReader;->getLineNumber()I
 
     move-result v21
 
-    .line 86
     invoke-virtual/range {v20 .. v21}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v20
@@ -292,7 +267,6 @@
 
     throw v19
 
-    .line 71
     .end local v11    # "line":Ljava/lang/String;
     .local v15, "subBoundary":Ljava/lang/String;
     :cond_6
@@ -302,7 +276,7 @@
 
     move-object/from16 v19, v0
 
-    const-string/jumbo v20, "text/"
+    const-string v20, "text/"
 
     invoke-virtual/range {v19 .. v20}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -310,7 +284,6 @@
 
     if-eqz v19, :cond_4
 
-    .line 72
     invoke-interface/range {v18 .. v18}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -330,9 +303,8 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 73
     .restart local v3    # "attribute":Ljava/lang/String;
-    const-string/jumbo v19, "charset="
+    const-string v19, "charset="
 
     move-object/from16 v0, v19
 
@@ -342,8 +314,7 @@
 
     if-eqz v19, :cond_7
 
-    .line 74
-    const-string/jumbo v19, "charset="
+    const-string v19, "charset="
 
     invoke-virtual/range {v19 .. v19}, Ljava/lang/String;->length()I
 
@@ -361,13 +332,12 @@
 
     goto :goto_1
 
-    .line 89
     .end local v3    # "attribute":Ljava/lang/String;
     .end local v4    # "attribute$iterator":Ljava/util/Iterator;
     .end local v15    # "subBoundary":Ljava/lang/String;
     .restart local v11    # "line":Ljava/lang/String;
     :cond_8
-    const-string/jumbo v19, "--"
+    const-string v19, "--"
 
     move-object/from16 v0, v19
 
@@ -393,7 +363,6 @@
 
     if-ne v0, v1, :cond_5
 
-    .line 90
     invoke-virtual {v15}, Ljava/lang/String;->length()I
 
     move-result v19
@@ -412,10 +381,8 @@
 
     move-result v19
 
-    .line 89
     if-eqz v19, :cond_5
 
-    .line 95
     new-instance v19, Ljava/util/ArrayList;
 
     invoke-direct/range {v19 .. v19}, Ljava/util/ArrayList;-><init>()V
@@ -426,7 +393,6 @@
 
     iput-object v0, v1, Lcom/android/server/wifi/configparse/MIMEContainer;->mMimeContainers:Ljava/util/List;
 
-    .line 97
     :cond_9
     new-instance v7, Lcom/android/server/wifi/configparse/MIMEContainer;
 
@@ -434,7 +400,6 @@
 
     invoke-direct {v7, v0, v15}, Lcom/android/server/wifi/configparse/MIMEContainer;-><init>(Ljava/io/LineNumberReader;Ljava/lang/String;)V
 
-    .line 98
     .local v7, "container":Lcom/android/server/wifi/configparse/MIMEContainer;
     move-object/from16 v0, p0
 
@@ -446,18 +411,16 @@
 
     invoke-interface {v0, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 99
     invoke-direct {v7}, Lcom/android/server/wifi/configparse/MIMEContainer;->isLast()Z
 
     move-result v19
 
     if-eqz v19, :cond_9
 
-    .line 108
     .end local v7    # "container":Lcom/android/server/wifi/configparse/MIMEContainer;
     .end local v11    # "line":Ljava/lang/String;
     :goto_2
-    const-string/jumbo v19, "Content-Transfer-Encoding"
+    const-string v19, "Content-Transfer-Encoding"
 
     move-object/from16 v0, v19
 
@@ -467,19 +430,15 @@
 
     check-cast v8, Ljava/util/List;
 
-    .line 109
     .local v8, "encoding":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v14, 0x0
 
-    .line 110
     .local v14, "quoted":Z
     const/4 v5, 0x0
 
-    .line 111
     .local v5, "base64":Z
     if-eqz v8, :cond_b
 
-    .line 112
     invoke-interface {v8}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v17
@@ -498,9 +457,8 @@
 
     check-cast v16, Ljava/lang/String;
 
-    .line 113
     .local v16, "text":Ljava/lang/String;
-    const-string/jumbo v19, "quoted-printable"
+    const-string v19, "quoted-printable"
 
     move-object/from16 v0, v16
 
@@ -512,10 +470,8 @@
 
     if-eqz v19, :cond_d
 
-    .line 114
     const/4 v14, 0x1
 
-    .line 123
     .end local v16    # "text":Ljava/lang/String;
     .end local v17    # "text$iterator":Ljava/util/Iterator;
     :cond_b
@@ -524,7 +480,6 @@
 
     iput-boolean v5, v0, Lcom/android/server/wifi/configparse/MIMEContainer;->mBase64:Z
 
-    .line 125
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wifi/configparse/MIMEContainer;->getClass()Ljava/lang/Class;
 
     move-result-object v19
@@ -533,8 +488,7 @@
 
     move-result-object v20
 
-    .line 126
-    const-string/jumbo v21, "%s MIME container, boundary \'%s\', type \'%s\', encoding %s"
+    const-string v21, "%s MIME container, boundary \'%s\', type \'%s\', encoding %s"
 
     const/16 v19, 0x4
 
@@ -544,10 +498,9 @@
 
     move-object/from16 v22, v0
 
-    .line 127
     if-eqz v13, :cond_e
 
-    const-string/jumbo v19, "multipart"
+    const-string v19, "multipart"
 
     :goto_4
     const/16 v23, 0x0
@@ -572,24 +525,20 @@
 
     aput-object v8, v22, v19
 
-    .line 126
     invoke-static/range {v21 .. v22}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v19
 
-    .line 125
     move-object/from16 v0, v20
 
     move-object/from16 v1, v19
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 129
     new-instance v9, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v9}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
 
-    .line 130
     .local v9, "eof":Ljava/util/concurrent/atomic/AtomicBoolean;
     move-object/from16 v0, p1
 
@@ -611,7 +560,6 @@
 
     iput-object v0, v1, Lcom/android/server/wifi/configparse/MIMEContainer;->mText:Ljava/lang/String;
 
-    .line 131
     invoke-virtual {v9}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
     move-result v19
@@ -622,10 +570,8 @@
 
     iput-boolean v0, v1, Lcom/android/server/wifi/configparse/MIMEContainer;->mLast:Z
 
-    .line 43
     return-void
 
-    .line 105
     .end local v5    # "base64":Z
     .end local v8    # "encoding":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v9    # "eof":Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -641,14 +587,13 @@
 
     goto/16 :goto_2
 
-    .line 117
     .restart local v5    # "base64":Z
     .restart local v8    # "encoding":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .restart local v14    # "quoted":Z
     .restart local v16    # "text":Ljava/lang/String;
     .restart local v17    # "text$iterator":Ljava/util/Iterator;
     :cond_d
-    const-string/jumbo v19, "base64"
+    const-string v19, "base64"
 
     move-object/from16 v0, v16
 
@@ -660,17 +605,14 @@
 
     if-eqz v19, :cond_a
 
-    .line 118
     const/4 v5, 0x1
 
-    .line 119
     goto :goto_3
 
-    .line 127
     .end local v16    # "text":Ljava/lang/String;
     .end local v17    # "text$iterator":Ljava/util/Iterator;
     :cond_e
-    const-string/jumbo v19, "plain"
+    const-string v19, "plain"
 
     goto :goto_4
 .end method
@@ -681,8 +623,7 @@
     .param p1, "boundary"    # Ljava/lang/String;
 
     .prologue
-    .line 298
-    const-string/jumbo v0, "--"
+    const-string v0, "--"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -704,7 +645,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 299
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -717,12 +657,10 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 300
     sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     return-object v0
 
-    .line 302
     :cond_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -736,7 +674,7 @@
 
     if-ne v0, v1, :cond_1
 
-    const-string/jumbo v0, "--"
+    const-string v0, "--"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
@@ -744,12 +682,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 303
     sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     return-object v0
 
-    .line 306
     :cond_1
     const/4 v0, 0x0
 
@@ -761,7 +697,6 @@
     .param p0, "ch"    # C
 
     .prologue
-    .line 335
     const/16 v0, 0x30
 
     if-lt p0, v0, :cond_0
@@ -770,12 +705,10 @@
 
     if-gt p0, v0, :cond_0
 
-    .line 336
     add-int/lit8 v0, p0, -0x30
 
     return v0
 
-    .line 338
     :cond_0
     const/16 v0, 0x41
 
@@ -785,14 +718,12 @@
 
     if-gt p0, v0, :cond_1
 
-    .line 339
     add-int/lit8 v0, p0, -0x41
 
     add-int/lit8 v0, v0, 0xa
 
     return v0
 
-    .line 342
     :cond_1
     const/4 v0, -0x1
 
@@ -812,33 +743,28 @@
     .end annotation
 
     .prologue
-    .line 256
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 258
     .local v2, "text":Ljava/lang/StringBuilder;
     :goto_0
     invoke-virtual {p0}, Ljava/io/LineNumberReader;->readLine()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 259
     .local v1, "line":Ljava/lang/String;
     if-nez v1, :cond_1
 
-    .line 260
     if-eqz p1, :cond_0
 
-    .line 261
     new-instance v3, Ljava/io/IOException;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "Unexpected EOF file in body @ "
+    const-string v5, "Unexpected EOF file in body @ "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -860,7 +786,6 @@
 
     throw v3
 
-    .line 264
     :cond_0
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -868,36 +793,30 @@
 
     return-object v3
 
-    .line 267
     :cond_1
     invoke-static {v1, p1}, Lcom/android/server/wifi/configparse/MIMEContainer;->boundaryCheck(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 
-    .line 268
     .local v0, "end":Ljava/lang/Boolean;
     if-eqz v0, :cond_2
 
-    .line 269
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v3
 
     invoke-virtual {p3, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 271
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
     return-object v3
 
-    .line 274
     :cond_2
     if-eqz p2, :cond_4
 
-    .line 275
-    const-string/jumbo v3, "="
+    const-string v3, "="
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
@@ -905,7 +824,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 276
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -928,7 +846,6 @@
 
     goto :goto_0
 
-    .line 279
     :cond_3
     invoke-virtual {p0}, Ljava/io/LineNumberReader;->getLineNumber()I
 
@@ -942,7 +859,6 @@
 
     goto :goto_0
 
-    .line 283
     :cond_4
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -953,7 +869,6 @@
     .locals 1
 
     .prologue
-    .line 155
     iget-boolean v0, p0, Lcom/android/server/wifi/configparse/MIMEContainer;->mLast:Z
 
     return v0
@@ -988,20 +903,16 @@
 
     const/4 v8, 0x0
 
-    .line 198
     const/4 v5, 0x0
 
-    .line 199
     .local v5, "value":Ljava/lang/StringBuilder;
     const/4 v0, 0x0
 
-    .line 201
     .local v0, "header":Ljava/lang/String;
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    .line 204
     .end local v0    # "header":Ljava/lang/String;
     .end local v5    # "value":Ljava/lang/StringBuilder;
     .local v1, "headers":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;>;"
@@ -1010,18 +921,16 @@
 
     move-result-object v2
 
-    .line 205
     .local v2, "line":Ljava/lang/String;
     if-nez v2, :cond_0
 
-    .line 206
     new-instance v8, Ljava/io/IOException;
 
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "Missing body @ "
+    const-string v10, "Missing body @ "
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1043,7 +952,6 @@
 
     throw v8
 
-    .line 208
     :cond_0
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
@@ -1051,21 +959,18 @@
 
     if-nez v9, :cond_1
 
-    .line 240
     if-eqz v0, :cond_8
 
-    .line 241
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v9
 
-    const-string/jumbo v10, ";"
+    const-string v10, ";"
 
     invoke-virtual {v9, v10}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v7
 
-    .line 242
     .local v7, "values":[Ljava/lang/String;
     new-instance v6, Ljava/util/ArrayList;
 
@@ -1073,7 +978,6 @@
 
     invoke-direct {v6, v9}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 243
     .local v6, "valueList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     array-length v9, v7
 
@@ -1082,7 +986,6 @@
 
     aget-object v4, v7, v8
 
-    .line 244
     .local v4, "segment":Ljava/lang/String;
     invoke-virtual {v4}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -1090,12 +993,10 @@
 
     invoke-interface {v6, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 243
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_1
 
-    .line 212
     .end local v4    # "segment":Ljava/lang/String;
     .end local v6    # "valueList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v7    # "values":[Ljava/lang/String;
@@ -1106,17 +1007,15 @@
 
     if-gt v9, v12, :cond_3
 
-    .line 213
     if-nez v5, :cond_2
 
-    .line 214
     new-instance v8, Ljava/io/IOException;
 
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "Illegal blank prefix in header line \'"
+    const-string v10, "Illegal blank prefix in header line \'"
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1126,7 +1025,7 @@
 
     move-result-object v9
 
-    const-string/jumbo v10, "\' @ "
+    const-string v10, "\' @ "
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1148,7 +1047,6 @@
 
     throw v8
 
-    .line 216
     :cond_2
     invoke-virtual {v5, v12}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
@@ -1162,7 +1060,6 @@
 
     goto/16 :goto_0
 
-    .line 220
     :cond_3
     const/16 v9, 0x3a
 
@@ -1170,18 +1067,16 @@
 
     move-result v3
 
-    .line 221
     .local v3, "nameEnd":I
     if-gez v3, :cond_4
 
-    .line 222
     new-instance v8, Ljava/io/IOException;
 
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "Bad header line: \'"
+    const-string v10, "Bad header line: \'"
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1191,7 +1086,7 @@
 
     move-result-object v9
 
-    const-string/jumbo v10, "\' @ "
+    const-string v10, "\' @ "
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1213,22 +1108,19 @@
 
     throw v8
 
-    .line 225
     :cond_4
     if-eqz v0, :cond_6
 
-    .line 226
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v9
 
-    const-string/jumbo v10, ";"
+    const-string v10, ";"
 
     invoke-virtual {v9, v10}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v7
 
-    .line 227
     .restart local v7    # "values":[Ljava/lang/String;
     new-instance v6, Ljava/util/ArrayList;
 
@@ -1236,7 +1128,6 @@
 
     invoke-direct {v6, v9}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 228
     .restart local v6    # "valueList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     array-length v10, v7
 
@@ -1247,7 +1138,6 @@
 
     aget-object v4, v7, v9
 
-    .line 229
     .restart local v4    # "segment":Ljava/lang/String;
     invoke-virtual {v4}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -1255,17 +1145,14 @@
 
     invoke-interface {v6, v11}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 228
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_2
 
-    .line 231
     .end local v4    # "segment":Ljava/lang/String;
     :cond_5
     invoke-interface {v1, v0, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 235
     .end local v6    # "valueList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v7    # "values":[Ljava/lang/String;
     :cond_6
@@ -1273,13 +1160,11 @@
 
     move-result-object v0
 
-    .line 236
     .local v0, "header":Ljava/lang/String;
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 237
     .local v5, "value":Ljava/lang/StringBuilder;
     add-int/lit8 v9, v3, 0x1
 
@@ -1295,7 +1180,6 @@
 
     goto/16 :goto_0
 
-    .line 246
     .end local v0    # "header":Ljava/lang/String;
     .end local v3    # "nameEnd":I
     .end local v5    # "value":Ljava/lang/StringBuilder;
@@ -1304,7 +1188,6 @@
     :cond_7
     invoke-interface {v1, v0, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 250
     .end local v6    # "valueList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v7    # "values":[Ljava/lang/String;
     :cond_8
@@ -1317,7 +1200,6 @@
     .param p1, "charset"    # Ljava/nio/charset/Charset;
 
     .prologue
-    .line 289
     sget-object v1, Ljava/nio/charset/StandardCharsets;->ISO_8859_1:Ljava/nio/charset/Charset;
 
     invoke-virtual {p1, v1}, Ljava/nio/charset/Charset;->equals(Ljava/lang/Object;)Z
@@ -1334,11 +1216,9 @@
 
     if-eqz v1, :cond_1
 
-    .line 290
     :cond_0
     return-object p0
 
-    .line 293
     :cond_1
     sget-object v1, Ljava/nio/charset/StandardCharsets;->ISO_8859_1:Ljava/nio/charset/Charset;
 
@@ -1346,7 +1226,6 @@
 
     move-result-object v0
 
-    .line 294
     .local v0, "octets":[B
     new-instance v1, Ljava/lang/String;
 
@@ -1363,24 +1242,20 @@
     .prologue
     const/16 v8, 0xa
 
-    .line 159
     mul-int/lit8 v3, p2, 0x4
 
     new-array v0, v3, [C
 
-    .line 160
     .local v0, "indent":[C
     const/16 v3, 0x20
 
     invoke-static {v0, v3}, Ljava/util/Arrays;->fill([CC)V
 
-    .line 161
     iget-boolean v3, p0, Lcom/android/server/wifi/configparse/MIMEContainer;->mBase64:Z
 
     if-eqz v3, :cond_0
 
-    .line 162
-    const-string/jumbo v3, "base64, type "
+    const-string v3, "base64, type "
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1394,13 +1269,11 @@
 
     invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 175
     :goto_0
     iget-object v3, p0, Lcom/android/server/wifi/configparse/MIMEContainer;->mMimeContainers:Ljava/util/List;
 
     if-eqz v3, :cond_3
 
-    .line 176
     iget-object v3, p0, Lcom/android/server/wifi/configparse/MIMEContainer;->mMimeContainers:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -1421,7 +1294,6 @@
 
     check-cast v1, Lcom/android/server/wifi/configparse/MIMEContainer;
 
-    .line 177
     .local v1, "mimeContainer":Lcom/android/server/wifi/configparse/MIMEContainer;
     add-int/lit8 v3, p2, 0x1
 
@@ -1429,7 +1301,6 @@
 
     goto :goto_1
 
-    .line 164
     .end local v1    # "mimeContainer":Lcom/android/server/wifi/configparse/MIMEContainer;
     .end local v2    # "mimeContainer$iterator":Ljava/util/Iterator;
     :cond_0
@@ -1437,12 +1308,11 @@
 
     if-eqz v3, :cond_2
 
-    .line 165
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append([C)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    const-string/jumbo v4, "multipart/"
+    const-string v4, "multipart/"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1452,7 +1322,7 @@
 
     if-eqz v3, :cond_1
 
-    const-string/jumbo v3, "mixed"
+    const-string v3, "mixed"
 
     :goto_2
     invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1464,43 +1334,37 @@
     goto :goto_0
 
     :cond_1
-    const-string/jumbo v3, "other"
+    const-string v3, "other"
 
     goto :goto_2
 
-    .line 168
     :cond_2
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append([C)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 169
-    const-string/jumbo v4, "%s, type %s"
+    const-string v4, "%s, type %s"
 
     const/4 v5, 0x2
 
     new-array v5, v5, [Ljava/lang/Object;
 
-    .line 170
     iget-object v6, p0, Lcom/android/server/wifi/configparse/MIMEContainer;->mCharset:Ljava/nio/charset/Charset;
 
     const/4 v7, 0x0
 
     aput-object v6, v5, v7
 
-    .line 171
     iget-object v6, p0, Lcom/android/server/wifi/configparse/MIMEContainer;->mContentType:Ljava/lang/String;
 
     const/4 v7, 0x1
 
     aput-object v6, v5, v7
 
-    .line 169
     invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 168
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
@@ -1509,17 +1373,15 @@
 
     goto :goto_0
 
-    .line 180
     :cond_3
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append([C)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    const-string/jumbo v4, "Text: "
+    const-string v4, "Text: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 181
     iget-object v3, p0, Lcom/android/server/wifi/configparse/MIMEContainer;->mText:Ljava/lang/String;
 
     invoke-virtual {v3}, Ljava/lang/String;->length()I
@@ -1530,8 +1392,7 @@
 
     if-ge v3, v4, :cond_4
 
-    .line 182
-    const-string/jumbo v3, "\'"
+    const-string v3, "\'"
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1543,15 +1404,13 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "\'\n"
+    const-string v4, "\'\n"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 158
     :goto_3
     return-void
 
-    .line 185
     :cond_4
     iget-object v3, p0, Lcom/android/server/wifi/configparse/MIMEContainer;->mText:Ljava/lang/String;
 
@@ -1563,7 +1422,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, " chars\n"
+    const-string v4, " chars\n"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1581,12 +1440,10 @@
     .end annotation
 
     .prologue
-    .line 310
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 311
     .local v4, "sb":Ljava/lang/StringBuilder;
     const/4 v3, 0x0
 
@@ -1598,25 +1455,22 @@
 
     if-ge v3, v5, :cond_3
 
-    .line 312
     invoke-virtual {p0, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
-    .line 313
     .local v0, "ch":C
     const/16 v5, 0x7f
 
     if-le v0, v5, :cond_0
 
-    .line 314
     new-instance v5, Ljava/io/IOException;
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "Bad codepoint "
+    const-string v7, "Bad codepoint "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1626,7 +1480,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, " in quoted printable @ "
+    const-string v7, " in quoted printable @ "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1644,7 +1498,6 @@
 
     throw v5
 
-    .line 316
     :cond_0
     const/16 v5, 0x3d
 
@@ -1658,7 +1511,6 @@
 
     if-ge v3, v5, :cond_2
 
-    .line 317
     add-int/lit8 v5, v3, 0x1
 
     invoke-virtual {p0, v5}, Ljava/lang/String;->charAt(I)C
@@ -1669,7 +1521,6 @@
 
     move-result v1
 
-    .line 318
     .local v1, "h1":I
     add-int/lit8 v5, v3, 0x2
 
@@ -1681,13 +1532,11 @@
 
     move-result v2
 
-    .line 319
     .local v2, "h2":I
     if-ltz v1, :cond_1
 
     if-ltz v2, :cond_1
 
-    .line 320
     shl-int/lit8 v5, v1, 0x4
 
     or-int/2addr v5, v2
@@ -1696,10 +1545,8 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 321
     add-int/lit8 v3, v3, 0x2
 
-    .line 311
     .end local v1    # "h1":I
     .end local v2    # "h2":I
     :goto_1
@@ -1707,7 +1554,6 @@
 
     goto :goto_0
 
-    .line 324
     .restart local v1    # "h1":I
     .restart local v2    # "h2":I
     :cond_1
@@ -1715,7 +1561,6 @@
 
     goto :goto_1
 
-    .line 328
     .end local v1    # "h1":I
     .end local v2    # "h2":I
     :cond_2
@@ -1723,7 +1568,6 @@
 
     goto :goto_1
 
-    .line 331
     .end local v0    # "ch":C
     :cond_3
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -1739,7 +1583,6 @@
     .locals 1
 
     .prologue
-    .line 151
     iget-object v0, p0, Lcom/android/server/wifi/configparse/MIMEContainer;->mContentType:Ljava/lang/String;
 
     return-object v0
@@ -1758,7 +1601,6 @@
     .end annotation
 
     .prologue
-    .line 135
     iget-object v0, p0, Lcom/android/server/wifi/configparse/MIMEContainer;->mMimeContainers:Ljava/util/List;
 
     return-object v0
@@ -1768,7 +1610,6 @@
     .locals 1
 
     .prologue
-    .line 139
     iget-object v0, p0, Lcom/android/server/wifi/configparse/MIMEContainer;->mText:Ljava/lang/String;
 
     return-object v0
@@ -1778,7 +1619,6 @@
     .locals 1
 
     .prologue
-    .line 147
     iget-boolean v0, p0, Lcom/android/server/wifi/configparse/MIMEContainer;->mBase64:Z
 
     return v0
@@ -1788,7 +1628,6 @@
     .locals 1
 
     .prologue
-    .line 143
     iget-boolean v0, p0, Lcom/android/server/wifi/configparse/MIMEContainer;->mMixed:Z
 
     return v0
@@ -1798,18 +1637,15 @@
     .locals 2
 
     .prologue
-    .line 191
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 192
     .local v0, "sb":Ljava/lang/StringBuilder;
     const/4 v1, 0x0
 
     invoke-direct {p0, v0, v1}, Lcom/android/server/wifi/configparse/MIMEContainer;->toString(Ljava/lang/StringBuilder;I)V
 
-    .line 193
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

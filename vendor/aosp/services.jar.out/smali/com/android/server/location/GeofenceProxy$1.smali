@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/location/GeofenceProxy;
 
     .prologue
-    .line 58
     iput-object p1, p0, Lcom/android/server/location/GeofenceProxy$1;->this$0:Lcom/android/server/location/GeofenceProxy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 61
     iget-object v0, p0, Lcom/android/server/location/GeofenceProxy$1;->this$0:Lcom/android/server/location/GeofenceProxy;
 
     invoke-static {v0}, Lcom/android/server/location/GeofenceProxy;->-get1(Lcom/android/server/location/GeofenceProxy;)Landroid/os/Handler;
@@ -52,6 +50,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 60
     return-void
 .end method

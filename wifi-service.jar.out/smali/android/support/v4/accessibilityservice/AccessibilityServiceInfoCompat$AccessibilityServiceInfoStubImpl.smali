@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,7 +34,6 @@
     .param p1, "info"    # Landroid/accessibilityservice/AccessibilityServiceInfo;
 
     .prologue
-    .line 43
     const/4 v0, 0x0
 
     return v0
@@ -46,7 +44,6 @@
     .param p1, "info"    # Landroid/accessibilityservice/AccessibilityServiceInfo;
 
     .prologue
-    .line 63
     const/4 v0, 0x0
 
     return v0
@@ -57,7 +54,6 @@
     .param p1, "info"    # Landroid/accessibilityservice/AccessibilityServiceInfo;
 
     .prologue
-    .line 47
     const/4 v0, 0x0
 
     return-object v0
@@ -68,7 +64,6 @@
     .param p1, "info"    # Landroid/accessibilityservice/AccessibilityServiceInfo;
 
     .prologue
-    .line 51
     const/4 v0, 0x0
 
     return-object v0
@@ -79,7 +74,6 @@
     .param p1, "info"    # Landroid/accessibilityservice/AccessibilityServiceInfo;
 
     .prologue
-    .line 55
     const/4 v0, 0x0
 
     return-object v0
@@ -90,7 +84,6 @@
     .param p1, "info"    # Landroid/accessibilityservice/AccessibilityServiceInfo;
 
     .prologue
-    .line 59
     const/4 v0, 0x0
 
     return-object v0

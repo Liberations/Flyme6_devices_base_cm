@@ -24,7 +24,6 @@
     .param p1, "val$callback"    # Landroid/hardware/hdmi/HdmiTvClient$SelectCallback;
 
     .prologue
-    .line 92
     iput-object p1, p0, Landroid/hardware/hdmi/HdmiTvClient$1;->val$callback:Landroid/hardware/hdmi/HdmiTvClient$SelectCallback;
 
     invoke-direct {p0}, Landroid/hardware/hdmi/IHdmiControlCallback$Stub;-><init>()V
@@ -39,11 +38,9 @@
     .param p1, "result"    # I
 
     .prologue
-    .line 95
     iget-object v0, p0, Landroid/hardware/hdmi/HdmiTvClient$1;->val$callback:Landroid/hardware/hdmi/HdmiTvClient$SelectCallback;
 
     invoke-interface {v0, p1}, Landroid/hardware/hdmi/HdmiTvClient$SelectCallback;->onComplete(I)V
 
-    .line 94
     return-void
 .end method

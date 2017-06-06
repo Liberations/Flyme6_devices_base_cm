@@ -73,29 +73,24 @@
     .param p2, "m"    # Landroid/os/Messenger;
 
     .prologue
-    .line 3296
     iput-object p1, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$ClientInfo;->this$0:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3297
     iput-object p2, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$ClientInfo;->mMessenger:Landroid/os/Messenger;
 
-    .line 3298
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$ClientInfo;->mReqList:Landroid/util/SparseArray;
 
-    .line 3299
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$ClientInfo;->mServList:Ljava/util/List;
 
-    .line 3296
     return-void
 .end method
 

@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/hdmi/HdmiCecMessageValidator;
 
     .prologue
-    .line 306
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecMessageValidator$SystemAudioModeRequestValidator;->this$0:Lcom/android/server/hdmi/HdmiCecMessageValidator;
 
     const/4 v0, 0x0
@@ -53,15 +52,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 310
     array-length v0, p1
 
     if-nez v0, :cond_0
 
-    .line 311
     return v1
 
-    .line 313
     :cond_0
     invoke-super {p0, p1}, Lcom/android/server/hdmi/HdmiCecMessageValidator$PhysicalAddressValidator;->isValid([B)I
 

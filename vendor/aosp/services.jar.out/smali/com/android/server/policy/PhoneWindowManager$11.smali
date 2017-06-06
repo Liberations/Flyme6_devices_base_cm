@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/policy/PhoneWindowManager;
 
     .prologue
-    .line 6247
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,8 +39,7 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 6250
-    const-string/jumbo v2, "android.intent.action.DOCK_EVENT"
+    const-string v2, "android.intent.action.DOCK_EVENT"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -53,22 +51,18 @@
 
     if-eqz v2, :cond_0
 
-    .line 6251
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
-    const-string/jumbo v3, "android.intent.extra.DOCK_STATE"
+    const-string v3, "android.intent.extra.DOCK_STATE"
 
-    .line 6252
     const/4 v4, 0x0
 
-    .line 6251
     invoke-virtual {p2, v3, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v3
 
     iput v3, v2, Lcom/android/server/policy/PhoneWindowManager;->mDockMode:I
 
-    .line 6261
     :goto_0
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -76,7 +70,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/policy/PhoneWindowManager;->updateRotation(Z)V
 
-    .line 6262
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-static {v2}, Lcom/android/server/policy/PhoneWindowManager;->-get3(Lcom/android/server/policy/PhoneWindowManager;)Ljava/lang/Object;
@@ -85,7 +78,6 @@
 
     monitor-enter v3
 
-    .line 6263
     :try_start_0
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -95,24 +87,20 @@
 
     monitor-exit v3
 
-    .line 6249
     return-void
 
-    .line 6256
     :cond_0
     :try_start_1
-    const-string/jumbo v2, "uimode"
+    const-string v2, "uimode"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v2
 
-    .line 6255
     invoke-static {v2}, Landroid/app/IUiModeManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/app/IUiModeManager;
 
     move-result-object v1
 
-    .line 6257
     .local v1, "uiModeService":Landroid/app/IUiModeManager;
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$11;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -126,7 +114,6 @@
 
     goto :goto_0
 
-    .line 6258
     .end local v1    # "uiModeService":Landroid/app/IUiModeManager;
     :catch_0
     move-exception v0
@@ -134,7 +121,6 @@
     .local v0, "e":Landroid/os/RemoteException;
     goto :goto_0
 
-    .line 6262
     .end local v0    # "e":Landroid/os/RemoteException;
     :catchall_0
     move-exception v2

@@ -26,12 +26,9 @@
     .param p1, "id"    # Ljava/lang/String;
 
     .prologue
-    .line 906
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 907
     iput-object p1, p0, Landroid/media/browse/MediaBrowser$Subscription;->id:Ljava/lang/String;
 
-    .line 906
     return-void
 .end method

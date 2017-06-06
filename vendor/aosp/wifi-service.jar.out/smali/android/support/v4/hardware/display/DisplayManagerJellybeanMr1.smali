@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,7 +19,6 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 28
     check-cast p0, Landroid/hardware/display/DisplayManager;
 
     .end local p0    # "displayManagerObj":Ljava/lang/Object;
@@ -36,8 +34,7 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 24
-    const-string/jumbo v0, "display"
+    const-string v0, "display"
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -51,7 +48,6 @@
     .param p0, "displayManagerObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 32
     check-cast p0, Landroid/hardware/display/DisplayManager;
 
     .end local p0    # "displayManagerObj":Ljava/lang/Object;
@@ -68,7 +64,6 @@
     .param p1, "category"    # Ljava/lang/String;
 
     .prologue
-    .line 36
     check-cast p0, Landroid/hardware/display/DisplayManager;
 
     .end local p0    # "displayManagerObj":Ljava/lang/Object;

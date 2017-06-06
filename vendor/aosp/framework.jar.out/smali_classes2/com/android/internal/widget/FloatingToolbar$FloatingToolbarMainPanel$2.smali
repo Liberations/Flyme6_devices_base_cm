@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarMainPanel;
 
     .prologue
-    .line 1094
     iput-object p1, p0, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarMainPanel$2;->this$1:Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarMainPanel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 1097
     iget-object v0, p0, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarMainPanel$2;->this$1:Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarMainPanel;
 
     invoke-static {v0}, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarMainPanel;->-get2(Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarMainPanel;)Landroid/view/View;
@@ -51,7 +49,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1098
     iget-object v0, p0, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarMainPanel$2;->this$1:Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarMainPanel;
 
     invoke-static {v0}, Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarMainPanel;->-get1(Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarMainPanel;)Ljava/lang/Runnable;
@@ -60,7 +57,6 @@
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 1096
     :cond_0
     return-void
 .end method

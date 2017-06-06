@@ -91,10 +91,9 @@
     .locals 3
 
     .prologue
-    .line 477
     sget-object v0, Lcyanogenmod/providers/ThemesContract;->AUTHORITY_URI:Landroid/net/Uri;
 
-    const-string/jumbo v1, "previews"
+    const-string v1, "previews"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -102,223 +101,188 @@
 
     sput-object v0, Lcyanogenmod/providers/ThemesContract$PreviewColumns;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 484
     sget-object v0, Lcyanogenmod/providers/ThemesContract;->AUTHORITY_URI:Landroid/net/Uri;
 
-    .line 485
-    const-string/jumbo v1, "applied_previews"
+    const-string v1, "applied_previews"
 
-    .line 484
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
     sput-object v0, Lcyanogenmod/providers/ThemesContract$PreviewColumns;->APPLIED_URI:Landroid/net/Uri;
 
-    .line 492
     sget-object v0, Lcyanogenmod/providers/ThemesContract;->AUTHORITY_URI:Landroid/net/Uri;
 
-    .line 493
-    const-string/jumbo v1, "components_previews"
+    const-string v1, "components_previews"
 
-    .line 492
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
     sput-object v0, Lcyanogenmod/providers/ThemesContract$PreviewColumns;->COMPONENTS_URI:Landroid/net/Uri;
 
-    .line 688
     const/16 v0, 0x1a
 
     new-array v0, v0, [Ljava/lang/String;
 
-    .line 689
-    const-string/jumbo v1, "statusbar_background"
+    const-string v1, "statusbar_background"
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    .line 690
-    const-string/jumbo v1, "statusbar_bluetooth_icon"
+    const-string v1, "statusbar_bluetooth_icon"
 
     const/4 v2, 0x1
 
     aput-object v1, v0, v2
 
-    .line 691
-    const-string/jumbo v1, "statusbar_wifi_icon"
+    const-string v1, "statusbar_wifi_icon"
 
     const/4 v2, 0x2
 
     aput-object v1, v0, v2
 
-    .line 692
-    const-string/jumbo v1, "statusbar_signal_icon"
+    const-string v1, "statusbar_signal_icon"
 
     const/4 v2, 0x3
 
     aput-object v1, v0, v2
 
-    .line 693
-    const-string/jumbo v1, "statusbar_battery_portrait"
+    const-string v1, "statusbar_battery_portrait"
 
     const/4 v2, 0x4
 
     aput-object v1, v0, v2
 
-    .line 694
-    const-string/jumbo v1, "statusbar_battery_landscape"
+    const-string v1, "statusbar_battery_landscape"
 
     const/4 v2, 0x5
 
     aput-object v1, v0, v2
 
-    .line 695
-    const-string/jumbo v1, "statusbar_battery_circle"
+    const-string v1, "statusbar_battery_circle"
 
     const/4 v2, 0x6
 
     aput-object v1, v0, v2
 
-    .line 696
-    const-string/jumbo v1, "statusbar_clock_text_color"
+    const-string v1, "statusbar_clock_text_color"
 
     const/4 v2, 0x7
 
     aput-object v1, v0, v2
 
-    .line 697
-    const-string/jumbo v1, "wifi_combo_margin_end"
+    const-string v1, "wifi_combo_margin_end"
 
     const/16 v2, 0x8
 
     aput-object v1, v0, v2
 
-    .line 698
-    const-string/jumbo v1, "navbar_background"
+    const-string v1, "navbar_background"
 
     const/16 v2, 0x9
 
     aput-object v1, v0, v2
 
-    .line 699
-    const-string/jumbo v1, "navbar_back_button"
+    const-string v1, "navbar_back_button"
 
     const/16 v2, 0xa
 
     aput-object v1, v0, v2
 
-    .line 700
-    const-string/jumbo v1, "navbar_home_button"
+    const-string v1, "navbar_home_button"
 
     const/16 v2, 0xb
 
     aput-object v1, v0, v2
 
-    .line 701
-    const-string/jumbo v1, "navbar_recent_button"
+    const-string v1, "navbar_recent_button"
 
     const/16 v2, 0xc
 
     aput-object v1, v0, v2
 
-    .line 702
-    const-string/jumbo v1, "icon_preview_1"
+    const-string v1, "icon_preview_1"
 
     const/16 v2, 0xd
 
     aput-object v1, v0, v2
 
-    .line 703
-    const-string/jumbo v1, "icon_preview_2"
+    const-string v1, "icon_preview_2"
 
     const/16 v2, 0xe
 
     aput-object v1, v0, v2
 
-    .line 704
-    const-string/jumbo v1, "icon_preview_3"
+    const-string v1, "icon_preview_3"
 
     const/16 v2, 0xf
 
     aput-object v1, v0, v2
 
-    .line 705
-    const-string/jumbo v1, "wallpaper_full"
+    const-string v1, "wallpaper_full"
 
     const/16 v2, 0x10
 
     aput-object v1, v0, v2
 
-    .line 706
-    const-string/jumbo v1, "wallpaper_preview"
+    const-string v1, "wallpaper_preview"
 
     const/16 v2, 0x11
 
     aput-object v1, v0, v2
 
-    .line 707
-    const-string/jumbo v1, "wallpaper_thumbnail"
+    const-string v1, "wallpaper_thumbnail"
 
     const/16 v2, 0x12
 
     aput-object v1, v0, v2
 
-    .line 708
-    const-string/jumbo v1, "lock_wallpaper_preview"
+    const-string v1, "lock_wallpaper_preview"
 
     const/16 v2, 0x13
 
     aput-object v1, v0, v2
 
-    .line 709
-    const-string/jumbo v1, "lock_wallpaper_thumbnail"
+    const-string v1, "lock_wallpaper_thumbnail"
 
     const/16 v2, 0x14
 
     aput-object v1, v0, v2
 
-    .line 710
-    const-string/jumbo v1, "style_preview"
+    const-string v1, "style_preview"
 
     const/16 v2, 0x15
 
     aput-object v1, v0, v2
 
-    .line 711
-    const-string/jumbo v1, "style_thumbnail"
+    const-string v1, "style_thumbnail"
 
     const/16 v2, 0x16
 
     aput-object v1, v0, v2
 
-    .line 712
-    const-string/jumbo v1, "bootanimation_thumbnail"
+    const-string v1, "bootanimation_thumbnail"
 
     const/16 v2, 0x17
 
     aput-object v1, v0, v2
 
-    .line 713
-    const-string/jumbo v1, "live_lock_screen_preview"
+    const-string v1, "live_lock_screen_preview"
 
     const/16 v2, 0x18
 
     aput-object v1, v0, v2
 
-    .line 714
-    const-string/jumbo v1, "live_lock_screen_thumbnail"
+    const-string v1, "live_lock_screen_thumbnail"
 
     const/16 v2, 0x19
 
     aput-object v1, v0, v2
 
-    .line 688
     sput-object v0, Lcyanogenmod/providers/ThemesContract$PreviewColumns;->VALID_KEYS:[Ljava/lang/String;
 
-    .line 471
     return-void
 .end method
 
@@ -326,7 +290,6 @@
     .locals 0
 
     .prologue
-    .line 471
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

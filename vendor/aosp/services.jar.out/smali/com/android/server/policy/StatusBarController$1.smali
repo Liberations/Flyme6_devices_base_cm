@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/policy/StatusBarController;
 
     .prologue
-    .line 43
     iput-object p1, p0, Lcom/android/server/policy/StatusBarController$1;->this$0:Lcom/android/server/policy/StatusBarController;
 
     invoke-direct {p0}, Landroid/view/WindowManagerInternal$AppTransitionListener;-><init>()V
@@ -38,7 +37,6 @@
     .locals 2
 
     .prologue
-    .line 90
     iget-object v0, p0, Lcom/android/server/policy/StatusBarController$1;->this$0:Lcom/android/server/policy/StatusBarController;
 
     iget-object v0, v0, Lcom/android/server/policy/StatusBarController;->mHandler:Landroid/os/Handler;
@@ -49,7 +47,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 89
     return-void
 .end method
 
@@ -57,7 +54,6 @@
     .locals 2
 
     .prologue
-    .line 47
     iget-object v0, p0, Lcom/android/server/policy/StatusBarController$1;->this$0:Lcom/android/server/policy/StatusBarController;
 
     iget-object v0, v0, Lcom/android/server/policy/StatusBarController;->mHandler:Landroid/os/Handler;
@@ -68,7 +64,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 46
     return-void
 .end method
 
@@ -80,7 +75,6 @@
     .param p4, "closeAnimation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 67
     iget-object v0, p0, Lcom/android/server/policy/StatusBarController$1;->this$0:Lcom/android/server/policy/StatusBarController;
 
     iget-object v0, v0, Lcom/android/server/policy/StatusBarController;->mHandler:Landroid/os/Handler;
@@ -91,6 +85,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 66
     return-void
 .end method

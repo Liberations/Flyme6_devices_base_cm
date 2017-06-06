@@ -14,7 +14,6 @@
     .locals 0
 
     .prologue
-    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,7 +27,6 @@
 
     monitor-enter v2
 
-    .line 32
     :try_start_0
     sget-object v1, Lorg/cyanogenmod/platform/internal/NativeHelper;->sNativeLibraryLoaded:Ljava/lang/Boolean;
     :try_end_0
@@ -36,13 +34,11 @@
 
     if-nez v1, :cond_0
 
-    .line 34
     :try_start_1
-    const-string/jumbo v1, "cmsdk_platform_jni"
+    const-string v1, "cmsdk_platform_jni"
 
     invoke-static {v1}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 35
     const/4 v1, 0x1
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -54,7 +50,6 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 42
     .local v0, "t":Ljava/lang/Throwable;
     :cond_0
     :goto_0
@@ -71,12 +66,10 @@
 
     return v1
 
-    .line 37
     .end local v0    # "t":Ljava/lang/Throwable;
     :catch_0
     move-exception v0
 
-    .line 38
     .restart local v0    # "t":Ljava/lang/Throwable;
     const/4 v1, 0x0
 
@@ -87,10 +80,9 @@
 
     sput-object v1, Lorg/cyanogenmod/platform/internal/NativeHelper;->sNativeLibraryLoaded:Ljava/lang/Boolean;
 
-    .line 39
-    const-string/jumbo v1, "CMSDK-JNI"
+    const-string v1, "CMSDK-JNI"
 
-    const-string/jumbo v3, "CMSDK native library unavailable"
+    const-string v3, "CMSDK native library unavailable"
 
     invoke-static {v1, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_3

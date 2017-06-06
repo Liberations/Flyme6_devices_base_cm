@@ -44,10 +44,9 @@
 
     const/4 v2, 0x0
 
-    .line 17
     new-instance v0, Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Match;
 
-    const-string/jumbo v1, "None"
+    const-string v1, "None"
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Match;-><init>(Ljava/lang/String;I)V
 
@@ -55,7 +54,7 @@
 
     new-instance v0, Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Match;
 
-    const-string/jumbo v1, "Primary"
+    const-string v1, "Primary"
 
     invoke-direct {v0, v1, v3}, Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Match;-><init>(Ljava/lang/String;I)V
 
@@ -63,7 +62,7 @@
 
     new-instance v0, Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Match;
 
-    const-string/jumbo v1, "Secondary"
+    const-string v1, "Secondary"
 
     invoke-direct {v0, v1, v4}, Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Match;-><init>(Ljava/lang/String;I)V
 
@@ -94,7 +93,6 @@
     .locals 0
 
     .prologue
-    .line 17
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -105,7 +103,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 17
     const-class v0, Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Match;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -121,7 +118,6 @@
     .locals 1
 
     .prologue
-    .line 17
     sget-object v0, Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Match;->$VALUES:[Lcom/android/server/wifi/hotspot2/pps/DomainMatcher$Match;
 
     return-object v0

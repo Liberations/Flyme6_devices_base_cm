@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 141
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -53,22 +52,19 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 149
-    const-string/jumbo v2, "authority"
+    const-string v2, "authority"
 
     invoke-interface {p1, v3, v2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 150
     .local v1, "authority":Ljava/lang/String;
-    const-string/jumbo v2, "accountType"
+    const-string v2, "accountType"
 
     invoke-interface {p1, v3, v2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 151
     .local v0, "accountType":Ljava/lang/String;
     invoke-static {v1, v0}, Landroid/content/SyncAdapterType;->newKey(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SyncAdapterType;
 
@@ -88,7 +84,6 @@
     .end annotation
 
     .prologue
-    .line 147
     invoke-virtual {p0, p1}, Landroid/content/SyncAdaptersCache$MySerializer;->createFromXml(Lorg/xmlpull/v1/XmlPullParser;)Landroid/content/SyncAdapterType;
 
     move-result-object v0
@@ -109,21 +104,18 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 143
-    const-string/jumbo v0, "authority"
+    const-string v0, "authority"
 
     iget-object v1, p1, Landroid/content/SyncAdapterType;->authority:Ljava/lang/String;
 
     invoke-interface {p2, v2, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 144
-    const-string/jumbo v0, "accountType"
+    const-string v0, "accountType"
 
     iget-object v1, p1, Landroid/content/SyncAdapterType;->accountType:Ljava/lang/String;
 
     invoke-interface {p2, v2, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 142
     return-void
 .end method
 
@@ -138,7 +130,6 @@
     .end annotation
 
     .prologue
-    .line 142
     check-cast p1, Landroid/content/SyncAdapterType;
 
     .end local p1    # "item":Ljava/lang/Object;

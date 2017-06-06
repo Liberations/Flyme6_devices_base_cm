@@ -25,7 +25,6 @@
     .param p2, "$anonymous0"    # Landroid/os/Handler;
 
     .prologue
-    .line 99
     iput-object p1, p0, Lcom/android/server/notification/ValidateNotificationPeople$1;->this$0:Lcom/android/server/notification/ValidateNotificationPeople;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -42,10 +41,8 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 102
     invoke-super {p0, p1, p2, p3}, Landroid/database/ContentObserver;->onChange(ZLandroid/net/Uri;I)V
 
-    .line 103
     invoke-static {}, Lcom/android/server/notification/ValidateNotificationPeople;->-get0()Z
 
     move-result v0
@@ -62,7 +59,6 @@
 
     if-nez v0, :cond_1
 
-    .line 104
     :cond_0
     invoke-static {}, Lcom/android/server/notification/ValidateNotificationPeople;->-get1()Z
 
@@ -70,13 +66,13 @@
 
     if-eqz v0, :cond_1
 
-    const-string/jumbo v0, "ValidateNoPeople"
+    const-string v0, "ValidateNoPeople"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "mEvictionCount: "
+    const-string v2, "mEvictionCount: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -98,7 +94,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 106
     :cond_1
     iget-object v0, p0, Lcom/android/server/notification/ValidateNotificationPeople$1;->this$0:Lcom/android/server/notification/ValidateNotificationPeople;
 
@@ -108,7 +103,6 @@
 
     invoke-virtual {v0}, Landroid/util/LruCache;->evictAll()V
 
-    .line 107
     iget-object v0, p0, Lcom/android/server/notification/ValidateNotificationPeople$1;->this$0:Lcom/android/server/notification/ValidateNotificationPeople;
 
     invoke-static {v0}, Lcom/android/server/notification/ValidateNotificationPeople;->-get2(Lcom/android/server/notification/ValidateNotificationPeople;)I
@@ -119,6 +113,5 @@
 
     invoke-static {v0, v1}, Lcom/android/server/notification/ValidateNotificationPeople;->-set0(Lcom/android/server/notification/ValidateNotificationPeople;I)I
 
-    .line 101
     return-void
 .end method

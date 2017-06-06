@@ -17,7 +17,6 @@
     .locals 0
 
     .prologue
-    .line 19
     invoke-direct {p0}, Landroid/support/v4/media/routing/MediaRouterJellybeanMr1;-><init>()V
 
     return-void
@@ -31,18 +30,14 @@
     .param p3, "flags"    # I
 
     .prologue
-    .line 25
     check-cast p0, Landroid/media/MediaRouter;
 
-    .line 26
     .end local p0    # "routerObj":Ljava/lang/Object;
     check-cast p2, Landroid/media/MediaRouter$Callback;
 
-    .line 25
     .end local p2    # "callbackObj":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2, p3}, Landroid/media/MediaRouter;->addCallback(ILandroid/media/MediaRouter$Callback;I)V
 
-    .line 24
     return-void
 .end method
 
@@ -51,7 +46,6 @@
     .param p0, "routerObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 21
     check-cast p0, Landroid/media/MediaRouter;
 
     .end local p0    # "routerObj":Ljava/lang/Object;

@@ -12,12 +12,10 @@
     .locals 1
 
     .prologue
-    .line 35
-    const-string/jumbo v0, "DebugService"
+    const-string v0, "DebugService"
 
     sput-object v0, Lcom/android/internal/telephony/DebugService;->TAG:Ljava/lang/String;
 
-    .line 34
     return-void
 .end method
 
@@ -25,15 +23,12 @@
     .locals 1
 
     .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
-    const-string/jumbo v0, "DebugService:"
+    const-string v0, "DebugService:"
 
     invoke-static {v0}, Lcom/android/internal/telephony/DebugService;->log(Ljava/lang/String;)V
 
-    .line 38
     return-void
 .end method
 
@@ -42,14 +37,13 @@
     .param p0, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     sget-object v0, Lcom/android/internal/telephony/DebugService;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "DebugService "
+    const-string v2, "DebugService "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -65,7 +59,6 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 51
     return-void
 .end method
 
@@ -78,19 +71,15 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 46
-    const-string/jumbo v0, "dump: +"
+    const-string v0, "dump: +"
 
     invoke-static {v0}, Lcom/android/internal/telephony/DebugService;->log(Ljava/lang/String;)V
 
-    .line 47
     invoke-static {p1, p2, p3}, Lcom/android/internal/telephony/PhoneFactory;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 48
-    const-string/jumbo v0, "dump: -"
+    const-string v0, "dump: -"
 
     invoke-static {v0}, Lcom/android/internal/telephony/DebugService;->log(Ljava/lang/String;)V
 
-    .line 45
     return-void
 .end method

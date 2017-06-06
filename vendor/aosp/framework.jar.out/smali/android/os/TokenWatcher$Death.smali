@@ -33,18 +33,14 @@
     .param p3, "tag"    # Ljava/lang/String;
 
     .prologue
-    .line 185
     iput-object p1, p0, Landroid/os/TokenWatcher$Death;->this$0:Landroid/os/TokenWatcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 187
     iput-object p2, p0, Landroid/os/TokenWatcher$Death;->token:Landroid/os/IBinder;
 
-    .line 188
     iput-object p3, p0, Landroid/os/TokenWatcher$Death;->tag:Ljava/lang/String;
 
-    .line 185
     return-void
 .end method
 
@@ -54,7 +50,6 @@
     .locals 3
 
     .prologue
-    .line 193
     iget-object v0, p0, Landroid/os/TokenWatcher$Death;->this$0:Landroid/os/TokenWatcher;
 
     iget-object v1, p0, Landroid/os/TokenWatcher$Death;->token:Landroid/os/IBinder;
@@ -63,7 +58,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/TokenWatcher;->cleanup(Landroid/os/IBinder;Z)V
 
-    .line 191
     return-void
 .end method
 
@@ -76,13 +70,11 @@
     .end annotation
 
     .prologue
-    .line 199
     :try_start_0
     iget-object v0, p0, Landroid/os/TokenWatcher$Death;->token:Landroid/os/IBinder;
 
     if-eqz v0, :cond_0
 
-    .line 200
     iget-object v0, p0, Landroid/os/TokenWatcher$Death;->this$0:Landroid/os/TokenWatcher;
 
     invoke-static {v0}, Landroid/os/TokenWatcher;->-get1(Landroid/os/TokenWatcher;)Ljava/lang/String;
@@ -93,7 +85,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "cleaning up leaked reference: "
+    const-string v2, "cleaning up leaked reference: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -111,7 +103,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 201
     iget-object v0, p0, Landroid/os/TokenWatcher$Death;->this$0:Landroid/os/TokenWatcher;
 
     iget-object v1, p0, Landroid/os/TokenWatcher$Death;->token:Landroid/os/IBinder;
@@ -120,20 +111,15 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 205
     :cond_0
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 196
     return-void
 
-    .line 204
     :catchall_0
     move-exception v0
 
-    .line 205
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 204
     throw v0
 .end method

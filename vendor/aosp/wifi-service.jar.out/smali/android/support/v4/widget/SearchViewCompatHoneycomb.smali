@@ -17,7 +17,6 @@
     .locals 0
 
     .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,7 +27,6 @@
     .param p0, "searchView"    # Landroid/view/View;
 
     .prologue
-    .line 84
     check-cast p0, Landroid/widget/SearchView;
 
     .end local p0    # "searchView":Landroid/view/View;
@@ -44,7 +42,6 @@
     .param p0, "searchView"    # Landroid/view/View;
 
     .prologue
-    .line 100
     check-cast p0, Landroid/widget/SearchView;
 
     .end local p0    # "searchView":Landroid/view/View;
@@ -60,7 +57,6 @@
     .param p0, "searchView"    # Landroid/view/View;
 
     .prologue
-    .line 116
     check-cast p0, Landroid/widget/SearchView;
 
     .end local p0    # "searchView":Landroid/view/View;
@@ -76,7 +72,6 @@
     .param p0, "searchView"    # Landroid/view/View;
 
     .prologue
-    .line 108
     check-cast p0, Landroid/widget/SearchView;
 
     .end local p0    # "searchView":Landroid/view/View;
@@ -92,7 +87,6 @@
     .param p0, "listener"    # Landroid/support/v4/widget/SearchViewCompatHoneycomb$OnCloseListenerCompatBridge;
 
     .prologue
-    .line 71
     new-instance v0, Landroid/support/v4/widget/SearchViewCompatHoneycomb$2;
 
     invoke-direct {v0, p0}, Landroid/support/v4/widget/SearchViewCompatHoneycomb$2;-><init>(Landroid/support/v4/widget/SearchViewCompatHoneycomb$OnCloseListenerCompatBridge;)V
@@ -105,7 +99,6 @@
     .param p0, "listener"    # Landroid/support/v4/widget/SearchViewCompatHoneycomb$OnQueryTextListenerCompatBridge;
 
     .prologue
-    .line 53
     new-instance v0, Landroid/support/v4/widget/SearchViewCompatHoneycomb$1;
 
     invoke-direct {v0, p0}, Landroid/support/v4/widget/SearchViewCompatHoneycomb$1;-><init>(Landroid/support/v4/widget/SearchViewCompatHoneycomb$OnQueryTextListenerCompatBridge;)V
@@ -118,7 +111,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 42
     new-instance v0, Landroid/widget/SearchView;
 
     invoke-direct {v0, p0}, Landroid/widget/SearchView;-><init>(Landroid/content/Context;)V
@@ -132,13 +124,11 @@
     .param p1, "iconify"    # Z
 
     .prologue
-    .line 96
     check-cast p0, Landroid/widget/SearchView;
 
     .end local p0    # "searchView":Landroid/view/View;
     invoke-virtual {p0, p1}, Landroid/widget/SearchView;->setIconified(Z)V
 
-    .line 95
     return-void
 .end method
 
@@ -148,13 +138,11 @@
     .param p1, "maxpixels"    # I
 
     .prologue
-    .line 120
     check-cast p0, Landroid/widget/SearchView;
 
     .end local p0    # "searchView":Landroid/view/View;
     invoke-virtual {p0, p1}, Landroid/widget/SearchView;->setMaxWidth(I)V
 
-    .line 119
     return-void
 .end method
 
@@ -164,7 +152,6 @@
     .param p1, "listener"    # Ljava/lang/Object;
 
     .prologue
-    .line 80
     check-cast p0, Landroid/widget/SearchView;
 
     .end local p0    # "searchView":Ljava/lang/Object;
@@ -173,7 +160,6 @@
     .end local p1    # "listener":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Landroid/widget/SearchView;->setOnCloseListener(Landroid/widget/SearchView$OnCloseListener;)V
 
-    .line 79
     return-void
 .end method
 
@@ -183,7 +169,6 @@
     .param p1, "listener"    # Ljava/lang/Object;
 
     .prologue
-    .line 67
     check-cast p0, Landroid/widget/SearchView;
 
     .end local p0    # "searchView":Ljava/lang/Object;
@@ -192,7 +177,6 @@
     .end local p1    # "listener":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Landroid/widget/SearchView;->setOnQueryTextListener(Landroid/widget/SearchView$OnQueryTextListener;)V
 
-    .line 66
     return-void
 .end method
 
@@ -203,13 +187,11 @@
     .param p2, "submit"    # Z
 
     .prologue
-    .line 88
     check-cast p0, Landroid/widget/SearchView;
 
     .end local p0    # "searchView":Landroid/view/View;
     invoke-virtual {p0, p1, p2}, Landroid/widget/SearchView;->setQuery(Ljava/lang/CharSequence;Z)V
 
-    .line 87
     return-void
 .end method
 
@@ -219,13 +201,11 @@
     .param p1, "hint"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 92
     check-cast p0, Landroid/widget/SearchView;
 
     .end local p0    # "searchView":Landroid/view/View;
     invoke-virtual {p0, p1}, Landroid/widget/SearchView;->setQueryHint(Ljava/lang/CharSequence;)V
 
-    .line 91
     return-void
 .end method
 
@@ -235,13 +215,11 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 112
     check-cast p0, Landroid/widget/SearchView;
 
     .end local p0    # "searchView":Landroid/view/View;
     invoke-virtual {p0, p1}, Landroid/widget/SearchView;->setQueryRefinementEnabled(Z)V
 
-    .line 111
     return-void
 .end method
 
@@ -253,25 +231,21 @@
     .prologue
     move-object v1, p0
 
-    .line 46
     check-cast v1, Landroid/widget/SearchView;
 
-    .line 48
     .local v1, "sv":Landroid/widget/SearchView;
     invoke-virtual {v1}, Landroid/widget/SearchView;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    const-string/jumbo v3, "search"
+    const-string v3, "search"
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 47
     check-cast v0, Landroid/app/SearchManager;
 
-    .line 49
     .local v0, "searchManager":Landroid/app/SearchManager;
     invoke-virtual {v0, p1}, Landroid/app/SearchManager;->getSearchableInfo(Landroid/content/ComponentName;)Landroid/app/SearchableInfo;
 
@@ -279,7 +253,6 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/SearchView;->setSearchableInfo(Landroid/app/SearchableInfo;)V
 
-    .line 45
     return-void
 .end method
 
@@ -289,12 +262,10 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 104
     check-cast p0, Landroid/widget/SearchView;
 
     .end local p0    # "searchView":Landroid/view/View;
     invoke-virtual {p0, p1}, Landroid/widget/SearchView;->setSubmitButtonEnabled(Z)V
 
-    .line 103
     return-void
 .end method

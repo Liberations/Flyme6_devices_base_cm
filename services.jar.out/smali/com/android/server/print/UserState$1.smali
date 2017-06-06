@@ -38,7 +38,6 @@
     .param p2, "val$printJob"    # Landroid/print/PrintJobInfo;
 
     .prologue
-    .line 189
     iput-object p1, p0, Lcom/android/server/print/UserState$1;->this$0:Lcom/android/server/print/UserState;
 
     iput-object p2, p0, Lcom/android/server/print/UserState$1;->val$printJob:Landroid/print/PrintJobInfo;
@@ -55,7 +54,6 @@
     .param p1, "params"    # [Ljava/lang/Object;
 
     .prologue
-    .line 191
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1    # "params":[Ljava/lang/Object;
@@ -71,7 +69,6 @@
     .param p1, "params"    # [Ljava/lang/Void;
 
     .prologue
-    .line 192
     iget-object v0, p0, Lcom/android/server/print/UserState$1;->this$0:Lcom/android/server/print/UserState;
 
     invoke-static {v0}, Lcom/android/server/print/UserState;->-get4(Lcom/android/server/print/UserState;)Lcom/android/server/print/RemotePrintSpooler;
@@ -82,7 +79,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/print/RemotePrintSpooler;->createPrintJob(Landroid/print/PrintJobInfo;)V
 
-    .line 193
     const/4 v0, 0x0
 
     return-object v0

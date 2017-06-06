@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 163
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,10 +29,8 @@
     .param p0, "version"    # Landroid/content/ThemeVersion$ComponentVersion;
 
     .prologue
-    .line 191
     sget-object v2, Lcyanogenmod/app/ThemeComponent;->UNKNOWN:Lcyanogenmod/app/ThemeComponent;
 
-    .line 192
     .local v2, "component":Lcyanogenmod/app/ThemeComponent;
     invoke-static {}, Lcyanogenmod/app/ThemeComponent;->values()[Lcyanogenmod/app/ThemeComponent;
 
@@ -48,7 +45,6 @@
 
     aget-object v6, v7, v0
 
-    .line 193
     .local v6, "aComponent":Lcyanogenmod/app/ThemeComponent;
     iget v9, v6, Lcyanogenmod/app/ThemeComponent;->id:I
 
@@ -56,35 +52,28 @@
 
     if-ne v9, v10, :cond_0
 
-    .line 194
     move-object v2, v6
 
-    .line 192
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 198
     .end local v6    # "aComponent":Lcyanogenmod/app/ThemeComponent;
     :cond_1
     iget v1, p0, Landroid/content/ThemeVersion$ComponentVersion;->id:I
 
-    .line 199
     .local v1, "id":I
     invoke-virtual {p0}, Landroid/content/ThemeVersion$ComponentVersion;->name()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 200
     .local v3, "name":Ljava/lang/String;
     iget v4, p0, Landroid/content/ThemeVersion$ComponentVersion;->minSupportedVersion:I
 
-    .line 201
     .local v4, "minVersion":I
     iget v5, p0, Landroid/content/ThemeVersion$ComponentVersion;->currentVersion:I
 
-    .line 203
     .local v5, "targetVersion":I
     new-instance v0, Lcyanogenmod/app/ThemeVersion$ComponentVersion;
 
@@ -98,12 +87,10 @@
     .param p0, "component"    # Lcyanogenmod/app/ThemeComponent;
 
     .prologue
-    .line 166
     invoke-static {}, Landroid/content/ThemeVersion$ComponentVersion;->values()[Landroid/content/ThemeVersion$ComponentVersion;
 
     move-result-object v3
 
-    .line 165
     const/4 v2, 0x0
 
     array-length v4, v3
@@ -113,13 +100,11 @@
 
     aget-object v1, v3, v2
 
-    .line 167
     .local v1, "version":Landroid/content/ThemeVersion$ComponentVersion;
     invoke-static {v1}, Lcyanogenmod/app/ThemeVersion$ThemeVersionImpl3;->fwCompVersionToSdkVersion(Landroid/content/ThemeVersion$ComponentVersion;)Lcyanogenmod/app/ThemeVersion$ComponentVersion;
 
     move-result-object v0
 
-    .line 168
     .local v0, "sdkVersionInfo":Lcyanogenmod/app/ThemeVersion$ComponentVersion;
     iget-object v5, v0, Lcyanogenmod/app/ThemeVersion$ComponentVersion;->component:Lcyanogenmod/app/ThemeComponent;
 
@@ -129,16 +114,13 @@
 
     if-eqz v5, :cond_0
 
-    .line 169
     return-object v0
 
-    .line 165
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 172
     .end local v0    # "sdkVersionInfo":Lcyanogenmod/app/ThemeVersion$ComponentVersion;
     .end local v1    # "version":Landroid/content/ThemeVersion$ComponentVersion;
     :cond_1
@@ -160,18 +142,15 @@
     .end annotation
 
     .prologue
-    .line 176
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 179
     .local v1, "versions":Ljava/util/List;, "Ljava/util/List<Lcyanogenmod/app/ThemeVersion$ComponentVersion;>;"
     invoke-static {}, Landroid/content/ThemeVersion$ComponentVersion;->values()[Landroid/content/ThemeVersion$ComponentVersion;
 
     move-result-object v3
 
-    .line 178
     const/4 v2, 0x0
 
     array-length v4, v3
@@ -181,7 +160,6 @@
 
     aget-object v0, v3, v2
 
-    .line 180
     .local v0, "version":Landroid/content/ThemeVersion$ComponentVersion;
     invoke-static {v0}, Lcyanogenmod/app/ThemeVersion$ThemeVersionImpl3;->fwCompVersionToSdkVersion(Landroid/content/ThemeVersion$ComponentVersion;)Lcyanogenmod/app/ThemeVersion$ComponentVersion;
 
@@ -189,12 +167,10 @@
 
     invoke-interface {v1, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 178
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 183
     .end local v0    # "version":Landroid/content/ThemeVersion$ComponentVersion;
     :cond_0
     return-object v1

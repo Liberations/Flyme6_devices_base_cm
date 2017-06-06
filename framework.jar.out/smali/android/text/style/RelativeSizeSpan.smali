@@ -16,13 +16,10 @@
     .param p1, "proportion"    # F
 
     .prologue
-    .line 28
     invoke-direct {p0}, Landroid/text/style/MetricAffectingSpan;-><init>()V
 
-    .line 29
     iput p1, p0, Landroid/text/style/RelativeSizeSpan;->mProportion:F
 
-    .line 28
     return-void
 .end method
 
@@ -31,17 +28,14 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 32
     invoke-direct {p0}, Landroid/text/style/MetricAffectingSpan;-><init>()V
 
-    .line 33
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
     iput v0, p0, Landroid/text/style/RelativeSizeSpan;->mProportion:F
 
-    .line 32
     return-void
 .end method
 
@@ -51,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 46
     const/4 v0, 0x0
 
     return v0
@@ -61,7 +54,6 @@
     .locals 1
 
     .prologue
-    .line 59
     iget v0, p0, Landroid/text/style/RelativeSizeSpan;->mProportion:F
 
     return v0
@@ -71,7 +63,6 @@
     .locals 1
 
     .prologue
-    .line 37
     invoke-virtual {p0}, Landroid/text/style/RelativeSizeSpan;->getSpanTypeIdInternal()I
 
     move-result v0
@@ -83,7 +74,6 @@
     .locals 1
 
     .prologue
-    .line 42
     const/4 v0, 0x3
 
     return v0
@@ -94,7 +84,6 @@
     .param p1, "ds"    # Landroid/text/TextPaint;
 
     .prologue
-    .line 64
     invoke-virtual {p1}, Landroid/text/TextPaint;->getTextSize()F
 
     move-result v0
@@ -105,7 +94,6 @@
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 63
     return-void
 .end method
 
@@ -114,7 +102,6 @@
     .param p1, "ds"    # Landroid/text/TextPaint;
 
     .prologue
-    .line 69
     invoke-virtual {p1}, Landroid/text/TextPaint;->getTextSize()F
 
     move-result v0
@@ -125,7 +112,6 @@
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 68
     return-void
 .end method
 
@@ -135,10 +121,8 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 50
     invoke-virtual {p0, p1, p2}, Landroid/text/style/RelativeSizeSpan;->writeToParcelInternal(Landroid/os/Parcel;I)V
 
-    .line 49
     return-void
 .end method
 
@@ -148,11 +132,9 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 55
     iget v0, p0, Landroid/text/style/RelativeSizeSpan;->mProportion:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 54
     return-void
 .end method

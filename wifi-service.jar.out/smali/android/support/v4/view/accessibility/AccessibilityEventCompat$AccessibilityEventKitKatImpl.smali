@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 82
     invoke-direct {p0}, Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventIcsImpl;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
     .param p1, "event"    # Landroid/view/accessibility/AccessibilityEvent;
 
     .prologue
-    .line 91
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityEventCompatKitKat;->getContentChangeTypes(Landroid/view/accessibility/AccessibilityEvent;)I
 
     move-result v0
@@ -46,9 +44,7 @@
     .param p2, "types"    # I
 
     .prologue
-    .line 86
     invoke-static {p1, p2}, Landroid/support/v4/view/accessibility/AccessibilityEventCompatKitKat;->setContentChangeTypes(Landroid/view/accessibility/AccessibilityEvent;I)V
 
-    .line 85
     return-void
 .end method

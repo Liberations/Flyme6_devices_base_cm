@@ -426,93 +426,78 @@
     .prologue
     const/16 v3, 0xa
 
-    .line 73
     new-array v0, v3, [Ljava/lang/String;
 
-    .line 74
-    const-string/jumbo v1, "STREAM_VOICE_CALL"
+    const-string v1, "STREAM_VOICE_CALL"
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    .line 75
-    const-string/jumbo v1, "STREAM_SYSTEM"
+    const-string v1, "STREAM_SYSTEM"
 
     const/4 v2, 0x1
 
     aput-object v1, v0, v2
 
-    .line 76
-    const-string/jumbo v1, "STREAM_RING"
+    const-string v1, "STREAM_RING"
 
     const/4 v2, 0x2
 
     aput-object v1, v0, v2
 
-    .line 77
-    const-string/jumbo v1, "STREAM_MUSIC"
+    const-string v1, "STREAM_MUSIC"
 
     const/4 v2, 0x3
 
     aput-object v1, v0, v2
 
-    .line 78
-    const-string/jumbo v1, "STREAM_ALARM"
+    const-string v1, "STREAM_ALARM"
 
     const/4 v2, 0x4
 
     aput-object v1, v0, v2
 
-    .line 79
-    const-string/jumbo v1, "STREAM_NOTIFICATION"
+    const-string v1, "STREAM_NOTIFICATION"
 
     const/4 v2, 0x5
 
     aput-object v1, v0, v2
 
-    .line 80
-    const-string/jumbo v1, "STREAM_BLUETOOTH_SCO"
+    const-string v1, "STREAM_BLUETOOTH_SCO"
 
     const/4 v2, 0x6
 
     aput-object v1, v0, v2
 
-    .line 81
-    const-string/jumbo v1, "STREAM_SYSTEM_ENFORCED"
+    const-string v1, "STREAM_SYSTEM_ENFORCED"
 
     const/4 v2, 0x7
 
     aput-object v1, v0, v2
 
-    .line 82
-    const-string/jumbo v1, "STREAM_DTMF"
+    const-string v1, "STREAM_DTMF"
 
     const/16 v2, 0x8
 
     aput-object v1, v0, v2
 
-    .line 83
-    const-string/jumbo v1, "STREAM_TTS"
+    const-string v1, "STREAM_TTS"
 
     const/16 v2, 0x9
 
     aput-object v1, v0, v2
 
-    .line 73
     sput-object v0, Landroid/media/AudioSystem;->STREAM_NAMES:[Ljava/lang/String;
 
-    .line 697
     new-array v0, v3, [I
 
     fill-array-data v0, :array_0
 
     sput-object v0, Landroid/media/AudioSystem;->DEFAULT_STREAM_VOLUME:[I
 
-    .line 34
     return-void
 
-    .line 697
     :array_0
     .array-data 4
         0x4
@@ -532,7 +517,6 @@
     .locals 0
 
     .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -551,22 +535,18 @@
     .param p2, "val"    # I
 
     .prologue
-    .line 253
     const/4 v0, 0x0
 
-    .line 254
     .local v0, "cb":Landroid/media/AudioSystem$DynamicPolicyCallback;
     const-class v2, Landroid/media/AudioSystem;
 
     monitor-enter v2
 
-    .line 255
     :try_start_0
     sget-object v1, Landroid/media/AudioSystem;->sDynPolicyCallback:Landroid/media/AudioSystem$DynamicPolicyCallback;
 
     if-eqz v1, :cond_0
 
-    .line 256
     sget-object v0, Landroid/media/AudioSystem;->sDynPolicyCallback:Landroid/media/AudioSystem$DynamicPolicyCallback;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -575,20 +555,17 @@
     :cond_0
     monitor-exit v2
 
-    .line 259
     if-eqz v0, :cond_1
 
-    .line 260
     packed-switch p0, :pswitch_data_0
 
-    .line 265
-    const-string/jumbo v1, "AudioSystem"
+    const-string v1, "AudioSystem"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "dynamicPolicyCallbackFromNative: unknown event "
+    const-string v3, "dynamicPolicyCallbackFromNative: unknown event "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -604,12 +581,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 251
     :cond_1
     :goto_0
     return-void
 
-    .line 254
     .restart local v0    # "cb":Landroid/media/AudioSystem$DynamicPolicyCallback;
     :catchall_0
     move-exception v1
@@ -618,14 +593,12 @@
 
     throw v1
 
-    .line 262
     .end local v0    # "cb":Landroid/media/AudioSystem$DynamicPolicyCallback;
     :pswitch_0
     invoke-interface {v0, p1, p2}, Landroid/media/AudioSystem$DynamicPolicyCallback;->onDynamicPolicyMixStateUpdate(Ljava/lang/String;I)V
 
     goto :goto_0
 
-    .line 260
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -637,22 +610,18 @@
     .param p0, "error"    # I
 
     .prologue
-    .line 218
     const/4 v0, 0x0
 
-    .line 219
     .local v0, "errorCallback":Landroid/media/AudioSystem$ErrorCallback;
     const-class v2, Landroid/media/AudioSystem;
 
     monitor-enter v2
 
-    .line 220
     :try_start_0
     sget-object v1, Landroid/media/AudioSystem;->mErrorCallback:Landroid/media/AudioSystem$ErrorCallback;
 
     if-eqz v1, :cond_0
 
-    .line 221
     sget-object v0, Landroid/media/AudioSystem;->mErrorCallback:Landroid/media/AudioSystem$ErrorCallback;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -661,17 +630,13 @@
     :cond_0
     monitor-exit v2
 
-    .line 224
     if-eqz v0, :cond_1
 
-    .line 225
     invoke-interface {v0, p0}, Landroid/media/AudioSystem$ErrorCallback;->onError(I)V
 
-    .line 216
     :cond_1
     return-void
 
-    .line 219
     .restart local v0    # "errorCallback":Landroid/media/AudioSystem$ErrorCallback;
     :catchall_0
     move-exception v1
@@ -689,7 +654,6 @@
     .param p0, "streamType"    # I
 
     .prologue
-    .line 694
     sget-object v0, Landroid/media/AudioSystem;->DEFAULT_STREAM_VOLUME:[I
 
     aget v0, v0, p0
@@ -711,137 +675,114 @@
     .param p0, "device"    # I
 
     .prologue
-    .line 532
     sparse-switch p0, :sswitch_data_0
 
-    .line 575
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 
-    .line 534
     :sswitch_0
-    const-string/jumbo v0, "communication"
+    const-string v0, "communication"
 
     return-object v0
 
-    .line 536
     :sswitch_1
-    const-string/jumbo v0, "ambient"
+    const-string v0, "ambient"
 
     return-object v0
 
-    .line 538
     :sswitch_2
-    const-string/jumbo v0, "mic"
+    const-string v0, "mic"
 
     return-object v0
 
-    .line 540
     :sswitch_3
-    const-string/jumbo v0, "bt_sco_hs"
+    const-string v0, "bt_sco_hs"
 
     return-object v0
 
-    .line 542
     :sswitch_4
-    const-string/jumbo v0, "headset"
+    const-string v0, "headset"
 
     return-object v0
 
-    .line 544
     :sswitch_5
-    const-string/jumbo v0, "aux_digital"
+    const-string v0, "aux_digital"
 
     return-object v0
 
-    .line 546
     :sswitch_6
-    const-string/jumbo v0, "telephony_rx"
+    const-string v0, "telephony_rx"
 
     return-object v0
 
-    .line 548
     :sswitch_7
-    const-string/jumbo v0, "back_mic"
+    const-string v0, "back_mic"
 
     return-object v0
 
-    .line 550
     :sswitch_8
-    const-string/jumbo v0, "remote_submix"
+    const-string v0, "remote_submix"
 
     return-object v0
 
-    .line 552
     :sswitch_9
-    const-string/jumbo v0, "analog_dock"
+    const-string v0, "analog_dock"
 
     return-object v0
 
-    .line 554
     :sswitch_a
-    const-string/jumbo v0, "digital_dock"
+    const-string v0, "digital_dock"
 
     return-object v0
 
-    .line 556
     :sswitch_b
-    const-string/jumbo v0, "usb_accessory"
+    const-string v0, "usb_accessory"
 
     return-object v0
 
-    .line 558
     :sswitch_c
-    const-string/jumbo v0, "usb_device"
+    const-string v0, "usb_device"
 
     return-object v0
 
-    .line 560
     :sswitch_d
-    const-string/jumbo v0, "fm_tuner"
+    const-string v0, "fm_tuner"
 
     return-object v0
 
-    .line 562
     :sswitch_e
-    const-string/jumbo v0, "tv_tuner"
+    const-string v0, "tv_tuner"
 
     return-object v0
 
-    .line 564
     :sswitch_f
-    const-string/jumbo v0, "line"
+    const-string v0, "line"
 
     return-object v0
 
-    .line 566
     :sswitch_10
-    const-string/jumbo v0, "spdif"
+    const-string v0, "spdif"
 
     return-object v0
 
-    .line 568
     :sswitch_11
-    const-string/jumbo v0, "bt_a2dp"
+    const-string v0, "bt_a2dp"
 
     return-object v0
 
-    .line 570
     :sswitch_12
-    const-string/jumbo v0, "loopback"
+    const-string v0, "loopback"
 
     return-object v0
 
-    .line 572
     :sswitch_13
-    const-string/jumbo v0, "ip"
+    const-string v0, "ip"
 
     return-object v0
 
-    .line 532
     :sswitch_data_0
     .sparse-switch
         -0x7fffffff -> :sswitch_0
@@ -877,7 +818,6 @@
     .locals 1
 
     .prologue
-    .line 71
     const/16 v0, 0xa
 
     return v0
@@ -888,167 +828,139 @@
     .param p0, "device"    # I
 
     .prologue
-    .line 473
     sparse-switch p0, :sswitch_data_0
 
-    .line 526
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 
-    .line 475
     :sswitch_0
-    const-string/jumbo v0, "earpiece"
+    const-string v0, "earpiece"
 
     return-object v0
 
-    .line 477
     :sswitch_1
-    const-string/jumbo v0, "speaker"
+    const-string v0, "speaker"
 
     return-object v0
 
-    .line 479
     :sswitch_2
-    const-string/jumbo v0, "headset"
+    const-string v0, "headset"
 
     return-object v0
 
-    .line 481
     :sswitch_3
-    const-string/jumbo v0, "headphone"
+    const-string v0, "headphone"
 
     return-object v0
 
-    .line 483
     :sswitch_4
-    const-string/jumbo v0, "bt_sco"
+    const-string v0, "bt_sco"
 
     return-object v0
 
-    .line 485
     :sswitch_5
-    const-string/jumbo v0, "bt_sco_hs"
+    const-string v0, "bt_sco_hs"
 
     return-object v0
 
-    .line 487
     :sswitch_6
-    const-string/jumbo v0, "bt_sco_carkit"
+    const-string v0, "bt_sco_carkit"
 
     return-object v0
 
-    .line 489
     :sswitch_7
-    const-string/jumbo v0, "bt_a2dp"
+    const-string v0, "bt_a2dp"
 
     return-object v0
 
-    .line 491
     :sswitch_8
-    const-string/jumbo v0, "bt_a2dp_hp"
+    const-string v0, "bt_a2dp_hp"
 
     return-object v0
 
-    .line 493
     :sswitch_9
-    const-string/jumbo v0, "bt_a2dp_spk"
+    const-string v0, "bt_a2dp_spk"
 
     return-object v0
 
-    .line 495
     :sswitch_a
-    const-string/jumbo v0, "hdmi"
+    const-string v0, "hdmi"
 
     return-object v0
 
-    .line 497
     :sswitch_b
-    const-string/jumbo v0, "analog_dock"
+    const-string v0, "analog_dock"
 
     return-object v0
 
-    .line 499
     :sswitch_c
-    const-string/jumbo v0, "digital_dock"
+    const-string v0, "digital_dock"
 
     return-object v0
 
-    .line 501
     :sswitch_d
-    const-string/jumbo v0, "usb_accessory"
+    const-string v0, "usb_accessory"
 
     return-object v0
 
-    .line 503
     :sswitch_e
-    const-string/jumbo v0, "usb_device"
+    const-string v0, "usb_device"
 
     return-object v0
 
-    .line 505
     :sswitch_f
-    const-string/jumbo v0, "remote_submix"
+    const-string v0, "remote_submix"
 
     return-object v0
 
-    .line 507
     :sswitch_10
-    const-string/jumbo v0, "telephony_tx"
+    const-string v0, "telephony_tx"
 
     return-object v0
 
-    .line 509
     :sswitch_11
-    const-string/jumbo v0, "line"
+    const-string v0, "line"
 
     return-object v0
 
-    .line 511
     :sswitch_12
-    const-string/jumbo v0, "hmdi_arc"
+    const-string v0, "hmdi_arc"
 
     return-object v0
 
-    .line 513
     :sswitch_13
-    const-string/jumbo v0, "spdif"
+    const-string v0, "spdif"
 
     return-object v0
 
-    .line 515
     :sswitch_14
-    const-string/jumbo v0, "fm_transmitter"
+    const-string v0, "fm_transmitter"
 
     return-object v0
 
-    .line 517
     :sswitch_15
-    const-string/jumbo v0, "aux_line"
+    const-string v0, "aux_line"
 
     return-object v0
 
-    .line 519
     :sswitch_16
-    const-string/jumbo v0, "speaker_safe"
+    const-string v0, "speaker_safe"
 
     return-object v0
 
-    .line 521
     :sswitch_17
-    const-string/jumbo v0, "ip"
+    const-string v0, "ip"
 
     return-object v0
 
-    .line 523
     :sswitch_18
-    const-string/jumbo v0, "proxy"
+    const-string v0, "proxy"
 
     return-object v0
 
-    .line 473
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_0
@@ -1090,7 +1002,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 732
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1103,18 +1014,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 733
     const/4 v0, 0x1
 
     return v0
 
-    .line 734
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
-    const-string/jumbo v1, "android.software.leanback"
+    const-string v1, "android.software.leanback"
 
     invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
 
@@ -1122,12 +1031,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 735
     const/4 v0, 0x2
 
     return v0
 
-    .line 737
     :cond_1
     const/4 v0, 0x0
 
@@ -1150,7 +1057,6 @@
     .param p2, "vibrateSetting"    # I
 
     .prologue
-    .line 685
     mul-int/lit8 v0, p1, 0x2
 
     const/4 v1, 0x3
@@ -1161,7 +1067,6 @@
 
     and-int/2addr p0, v0
 
-    .line 688
     and-int/lit8 v0, p2, 0x3
 
     mul-int/lit8 v1, p1, 0x2
@@ -1170,7 +1075,6 @@
 
     or-int/2addr p0, v0
 
-    .line 690
     return p0
 .end method
 
@@ -1248,26 +1152,21 @@
     .param p0, "cb"    # Landroid/media/AudioSystem$DynamicPolicyCallback;
 
     .prologue
-    .line 245
     const-class v1, Landroid/media/AudioSystem;
 
     monitor-enter v1
 
-    .line 246
     :try_start_0
     sput-object p0, Landroid/media/AudioSystem;->sDynPolicyCallback:Landroid/media/AudioSystem$DynamicPolicyCallback;
 
-    .line 247
     invoke-static {}, Landroid/media/AudioSystem;->native_register_dynamic_policy_callback()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     monitor-exit v1
 
-    .line 243
     return-void
 
-    .line 245
     :catchall_0
     move-exception v0
 
@@ -1281,19 +1180,15 @@
     .param p0, "cb"    # Landroid/media/AudioSystem$ErrorCallback;
 
     .prologue
-    .line 208
     const-class v1, Landroid/media/AudioSystem;
 
     monitor-enter v1
 
-    .line 209
     :try_start_0
     sput-object p0, Landroid/media/AudioSystem;->mErrorCallback:Landroid/media/AudioSystem$ErrorCallback;
 
-    .line 210
     if-eqz p0, :cond_0
 
-    .line 211
     invoke-static {}, Landroid/media/AudioSystem;->checkAudioFlinger()I
 
     move-result v0
@@ -1305,10 +1200,8 @@
     :cond_0
     monitor-exit v1
 
-    .line 206
     return-void
 
-    .line 208
     :catchall_0
     move-exception v0
 
@@ -1343,7 +1236,6 @@
     .param p0, "stream"    # I
 
     .prologue
-    .line 711
     if-ltz p0, :cond_0
 
     sget-object v0, Landroid/media/AudioSystem;->STREAM_NAMES:[Ljava/lang/String;
@@ -1358,23 +1250,21 @@
 
     return-object v0
 
-    .line 712
     :cond_0
     const/high16 v0, -0x80000000
 
     if-ne p0, v0, :cond_1
 
-    const-string/jumbo v0, "USE_DEFAULT_STREAM_TYPE"
+    const-string v0, "USE_DEFAULT_STREAM_TYPE"
 
     return-object v0
 
-    .line 713
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "UNKNOWN_STREAM_"
+    const-string v1, "UNKNOWN_STREAM_"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/service/dreams/DreamService;
 
     .prologue
-    .line 1013
     iput-object p1, p0, Landroid/service/dreams/DreamService$1;->this$0:Landroid/service/dreams/DreamService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 1016
     iget-object v0, p0, Landroid/service/dreams/DreamService$1;->this$0:Landroid/service/dreams/DreamService;
 
     invoke-static {v0}, Landroid/service/dreams/DreamService;->-get3(Landroid/service/dreams/DreamService;)Landroid/view/Window;
@@ -58,7 +56,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 1017
     :cond_0
     iget-object v0, p0, Landroid/service/dreams/DreamService$1;->this$0:Landroid/service/dreams/DreamService;
 
@@ -74,11 +71,10 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "Calling onDreamingStarted()"
+    const-string v1, "Calling onDreamingStarted()"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1018
     :cond_1
     iget-object v0, p0, Landroid/service/dreams/DreamService$1;->this$0:Landroid/service/dreams/DreamService;
 
@@ -86,12 +82,10 @@
 
     invoke-static {v0, v1}, Landroid/service/dreams/DreamService;->-set0(Landroid/service/dreams/DreamService;Z)Z
 
-    .line 1019
     iget-object v0, p0, Landroid/service/dreams/DreamService$1;->this$0:Landroid/service/dreams/DreamService;
 
     invoke-virtual {v0}, Landroid/service/dreams/DreamService;->onDreamingStarted()V
 
-    .line 1015
     :cond_2
     return-void
 .end method

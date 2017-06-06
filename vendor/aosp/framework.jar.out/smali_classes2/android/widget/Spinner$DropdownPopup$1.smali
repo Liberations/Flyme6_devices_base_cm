@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Landroid/widget/Spinner$DropdownPopup;
 
     .prologue
-    .line 1153
     iput-object p1, p0, Landroid/widget/Spinner$DropdownPopup$1;->this$1:Landroid/widget/Spinner$DropdownPopup;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,14 +44,12 @@
     .param p4, "id"    # J
 
     .prologue
-    .line 1155
     iget-object v0, p0, Landroid/widget/Spinner$DropdownPopup$1;->this$1:Landroid/widget/Spinner$DropdownPopup;
 
     iget-object v0, v0, Landroid/widget/Spinner$DropdownPopup;->this$0:Landroid/widget/Spinner;
 
     invoke-virtual {v0, p3}, Landroid/widget/Spinner;->setSelection(I)V
 
-    .line 1156
     iget-object v0, p0, Landroid/widget/Spinner$DropdownPopup$1;->this$1:Landroid/widget/Spinner$DropdownPopup;
 
     iget-object v0, v0, Landroid/widget/Spinner$DropdownPopup;->this$0:Landroid/widget/Spinner;
@@ -61,7 +58,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1157
     iget-object v0, p0, Landroid/widget/Spinner$DropdownPopup$1;->this$1:Landroid/widget/Spinner$DropdownPopup;
 
     iget-object v0, v0, Landroid/widget/Spinner$DropdownPopup;->this$0:Landroid/widget/Spinner;
@@ -78,12 +74,10 @@
 
     invoke-virtual {v0, p2, p3, v2, v3}, Landroid/widget/Spinner;->performItemClick(Landroid/view/View;IJ)Z
 
-    .line 1159
     :cond_0
     iget-object v0, p0, Landroid/widget/Spinner$DropdownPopup$1;->this$1:Landroid/widget/Spinner$DropdownPopup;
 
     invoke-virtual {v0}, Landroid/widget/Spinner$DropdownPopup;->dismiss()V
 
-    .line 1154
     return-void
 .end method

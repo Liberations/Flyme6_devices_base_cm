@@ -33,7 +33,6 @@
     .param p3, "val$endColor"    # I
 
     .prologue
-    .line 241
     iput-object p1, p0, Landroid/transition/ChangeText$4;->this$0:Landroid/transition/ChangeText;
 
     iput-object p2, p0, Landroid/transition/ChangeText$4;->val$view:Landroid/widget/TextView;
@@ -52,7 +51,6 @@
     .param p1, "animation"    # Landroid/animation/ValueAnimator;
 
     .prologue
-    .line 244
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -63,7 +61,6 @@
 
     move-result v0
 
-    .line 245
     .local v0, "currAlpha":I
     iget-object v1, p0, Landroid/transition/ChangeText$4;->val$view:Landroid/widget/TextView;
 
@@ -79,7 +76,6 @@
 
     or-int/2addr v2, v3
 
-    .line 246
     iget v3, p0, Landroid/transition/ChangeText$4;->val$endColor:I
 
     invoke-static {v3}, Landroid/graphics/Color;->green(I)I
@@ -88,21 +84,17 @@
 
     shl-int/lit8 v3, v3, 0x8
 
-    .line 245
     or-int/2addr v2, v3
 
-    .line 246
     iget v3, p0, Landroid/transition/ChangeText$4;->val$endColor:I
 
     invoke-static {v3}, Landroid/graphics/Color;->red(I)I
 
     move-result v3
 
-    .line 245
     or-int/2addr v2, v3
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 243
     return-void
 .end method

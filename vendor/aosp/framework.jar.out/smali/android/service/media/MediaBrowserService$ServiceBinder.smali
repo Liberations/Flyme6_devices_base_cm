@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Landroid/service/media/MediaBrowserService;
 
     .prologue
-    .line 162
     iput-object p1, p0, Landroid/service/media/MediaBrowserService$ServiceBinder;->this$0:Landroid/service/media/MediaBrowserService;
 
     invoke-direct {p0}, Landroid/service/media/IMediaBrowserService$Stub;-><init>()V
@@ -50,7 +49,6 @@
     .param p2, "callbacks"    # Landroid/service/media/IMediaBrowserServiceCallbacks;
 
     .prologue
-    .line 234
     iget-object v0, p0, Landroid/service/media/MediaBrowserService$ServiceBinder;->this$0:Landroid/service/media/MediaBrowserService;
 
     invoke-static {v0}, Landroid/service/media/MediaBrowserService;->-get1(Landroid/service/media/MediaBrowserService;)Landroid/os/Handler;
@@ -63,7 +61,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 233
     return-void
 .end method
 
@@ -74,12 +71,10 @@
     .param p3, "callbacks"    # Landroid/service/media/IMediaBrowserServiceCallbacks;
 
     .prologue
-    .line 167
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v5
 
-    .line 168
     .local v5, "uid":I
     iget-object v0, p0, Landroid/service/media/MediaBrowserService$ServiceBinder;->this$0:Landroid/service/media/MediaBrowserService;
 
@@ -89,14 +84,13 @@
 
     if-nez v0, :cond_0
 
-    .line 169
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Package/uid mismatch: uid="
+    const-string v2, "Package/uid mismatch: uid="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -106,10 +100,8 @@
 
     move-result-object v1
 
-    .line 170
-    const-string/jumbo v2, " package="
+    const-string v2, " package="
 
-    .line 169
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -126,7 +118,6 @@
 
     throw v0
 
-    .line 173
     :cond_0
     iget-object v0, p0, Landroid/service/media/MediaBrowserService$ServiceBinder;->this$0:Landroid/service/media/MediaBrowserService;
 
@@ -148,7 +139,6 @@
 
     invoke-virtual {v6, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 165
     return-void
 .end method
 
@@ -157,7 +147,6 @@
     .param p1, "callbacks"    # Landroid/service/media/IMediaBrowserServiceCallbacks;
 
     .prologue
-    .line 217
     iget-object v0, p0, Landroid/service/media/MediaBrowserService$ServiceBinder;->this$0:Landroid/service/media/MediaBrowserService;
 
     invoke-static {v0}, Landroid/service/media/MediaBrowserService;->-get1(Landroid/service/media/MediaBrowserService;)Landroid/os/Handler;
@@ -170,7 +159,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 216
     return-void
 .end method
 
@@ -180,7 +168,6 @@
     .param p2, "receiver"    # Landroid/os/ResultReceiver;
 
     .prologue
-    .line 276
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -189,11 +176,9 @@
 
     if-nez p2, :cond_1
 
-    .line 277
     :cond_0
     return-void
 
-    .line 280
     :cond_1
     iget-object v0, p0, Landroid/service/media/MediaBrowserService$ServiceBinder;->this$0:Landroid/service/media/MediaBrowserService;
 
@@ -207,7 +192,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 275
     return-void
 .end method
 
@@ -217,7 +201,6 @@
     .param p2, "callbacks"    # Landroid/service/media/IMediaBrowserServiceCallbacks;
 
     .prologue
-    .line 255
     iget-object v0, p0, Landroid/service/media/MediaBrowserService$ServiceBinder;->this$0:Landroid/service/media/MediaBrowserService;
 
     invoke-static {v0}, Landroid/service/media/MediaBrowserService;->-get1(Landroid/service/media/MediaBrowserService;)Landroid/os/Handler;
@@ -230,6 +213,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 254
     return-void
 .end method

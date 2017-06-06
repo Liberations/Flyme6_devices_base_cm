@@ -49,45 +49,36 @@
     .param p3, "documentInfo"    # Landroid/print/PrintDocumentInfo;
 
     .prologue
-    .line 66
     invoke-direct {p0}, Landroid/print/PrintDocumentAdapter;-><init>()V
 
-    .line 68
     if-nez p2, :cond_0
 
-    .line 69
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "File cannot be null!"
+    const-string v1, "File cannot be null!"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 71
     :cond_0
     if-nez p3, :cond_1
 
-    .line 72
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "documentInfo cannot be null!"
+    const-string v1, "documentInfo cannot be null!"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 74
     :cond_1
     iput-object p1, p0, Landroid/print/PrintFileDocumentAdapter;->mContext:Landroid/content/Context;
 
-    .line 75
     iput-object p2, p0, Landroid/print/PrintFileDocumentAdapter;->mFile:Ljava/io/File;
 
-    .line 76
     iput-object p3, p0, Landroid/print/PrintFileDocumentAdapter;->mDocumentInfo:Landroid/print/PrintDocumentInfo;
 
-    .line 67
     return-void
 .end method
 
@@ -102,14 +93,12 @@
     .param p5, "metadata"    # Landroid/os/Bundle;
 
     .prologue
-    .line 83
     iget-object v0, p0, Landroid/print/PrintFileDocumentAdapter;->mDocumentInfo:Landroid/print/PrintDocumentInfo;
 
     const/4 v1, 0x0
 
     invoke-virtual {p4, v0, v1}, Landroid/print/PrintDocumentAdapter$LayoutResultCallback;->onLayoutFinished(Landroid/print/PrintDocumentInfo;Z)V
 
-    .line 82
     return-void
 .end method
 
@@ -121,26 +110,21 @@
     .param p4, "callback"    # Landroid/print/PrintDocumentAdapter$WriteResultCallback;
 
     .prologue
-    .line 89
     new-instance v0, Landroid/print/PrintFileDocumentAdapter$WriteFileAsyncTask;
 
     invoke-direct {v0, p0, p2, p3, p4}, Landroid/print/PrintFileDocumentAdapter$WriteFileAsyncTask;-><init>(Landroid/print/PrintFileDocumentAdapter;Landroid/os/ParcelFileDescriptor;Landroid/os/CancellationSignal;Landroid/print/PrintDocumentAdapter$WriteResultCallback;)V
 
     iput-object v0, p0, Landroid/print/PrintFileDocumentAdapter;->mWriteFileAsyncTask:Landroid/print/PrintFileDocumentAdapter$WriteFileAsyncTask;
 
-    .line 90
     iget-object v1, p0, Landroid/print/PrintFileDocumentAdapter;->mWriteFileAsyncTask:Landroid/print/PrintFileDocumentAdapter$WriteFileAsyncTask;
 
     sget-object v2, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
 
-    .line 91
     const/4 v0, 0x0
 
     check-cast v0, [Ljava/lang/Void;
 
-    .line 90
     invoke-virtual {v1, v2, v0}, Landroid/print/PrintFileDocumentAdapter$WriteFileAsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 88
     return-void
 .end method

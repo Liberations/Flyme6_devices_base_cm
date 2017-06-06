@@ -25,7 +25,6 @@
     .param p2, "$anonymous0"    # Landroid/view/View;
 
     .prologue
-    .line 829
     iput-object p1, p0, Landroid/widget/ActionMenuPresenter$OverflowMenuButton$1;->this$1:Landroid/widget/ActionMenuPresenter$OverflowMenuButton;
 
     invoke-direct {p0, p2}, Landroid/widget/ListPopupWindow$ForwardingListener;-><init>(Landroid/view/View;)V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 832
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$OverflowMenuButton$1;->this$1:Landroid/widget/ActionMenuPresenter$OverflowMenuButton;
 
     iget-object v0, v0, Landroid/widget/ActionMenuPresenter$OverflowMenuButton;->this$0:Landroid/widget/ActionMenuPresenter;
@@ -52,10 +50,8 @@
 
     if-nez v0, :cond_0
 
-    .line 833
     return-object v1
 
-    .line 836
     :cond_0
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$OverflowMenuButton$1;->this$1:Landroid/widget/ActionMenuPresenter$OverflowMenuButton;
 
@@ -76,14 +72,12 @@
     .locals 1
 
     .prologue
-    .line 841
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$OverflowMenuButton$1;->this$1:Landroid/widget/ActionMenuPresenter$OverflowMenuButton;
 
     iget-object v0, v0, Landroid/widget/ActionMenuPresenter$OverflowMenuButton;->this$0:Landroid/widget/ActionMenuPresenter;
 
     invoke-virtual {v0}, Landroid/widget/ActionMenuPresenter;->showOverflowMenu()Z
 
-    .line 842
     const/4 v0, 0x1
 
     return v0
@@ -93,7 +87,6 @@
     .locals 1
 
     .prologue
-    .line 850
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$OverflowMenuButton$1;->this$1:Landroid/widget/ActionMenuPresenter$OverflowMenuButton;
 
     iget-object v0, v0, Landroid/widget/ActionMenuPresenter$OverflowMenuButton;->this$0:Landroid/widget/ActionMenuPresenter;
@@ -104,12 +97,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 851
     const/4 v0, 0x0
 
     return v0
 
-    .line 854
     :cond_0
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$OverflowMenuButton$1;->this$1:Landroid/widget/ActionMenuPresenter$OverflowMenuButton;
 
@@ -117,7 +108,6 @@
 
     invoke-virtual {v0}, Landroid/widget/ActionMenuPresenter;->hideOverflowMenu()Z
 
-    .line 855
     const/4 v0, 0x1
 
     return v0

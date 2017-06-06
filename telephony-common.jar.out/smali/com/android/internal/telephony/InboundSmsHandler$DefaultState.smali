@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/internal/telephony/InboundSmsHandler;
 
     .prologue
-    .line 319
     iput-object p1, p0, Lcom/android/internal/telephony/InboundSmsHandler$DefaultState;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -39,18 +38,16 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 322
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 334
     :pswitch_0
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "processMessage: unhandled message type "
+    const-string v3, "processMessage: unhandled message type "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -62,15 +59,12 @@
 
     move-result-object v2
 
-    .line 335
-    const-string/jumbo v3, " currState="
+    const-string v3, " currState="
 
-    .line 334
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 335
     iget-object v3, p0, Lcom/android/internal/telephony/InboundSmsHandler$DefaultState;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
     invoke-static {v3}, Lcom/android/internal/telephony/InboundSmsHandler;->-wrap0(Lcom/android/internal/telephony/InboundSmsHandler;)Lcom/android/internal/util/IState;
@@ -81,7 +75,6 @@
 
     move-result-object v3
 
-    .line 334
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -90,27 +83,24 @@
 
     move-result-object v0
 
-    .line 336
     .local v0, "errorText":Ljava/lang/String;
     sget-boolean v2, Landroid/os/Build;->IS_DEBUGGABLE:Z
 
     if-eqz v2, :cond_1
 
-    .line 337
     iget-object v2, p0, Lcom/android/internal/telephony/InboundSmsHandler$DefaultState;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
-    const-string/jumbo v3, "---- Dumping InboundSmsHandler ----"
+    const-string v3, "---- Dumping InboundSmsHandler ----"
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/InboundSmsHandler;->loge(Ljava/lang/String;)V
 
-    .line 338
     iget-object v2, p0, Lcom/android/internal/telephony/InboundSmsHandler$DefaultState;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "Total records="
+    const-string v4, "Total records="
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -132,7 +122,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/InboundSmsHandler;->loge(Ljava/lang/String;)V
 
-    .line 339
     iget-object v2, p0, Lcom/android/internal/telephony/InboundSmsHandler$DefaultState;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
     invoke-virtual {v2}, Lcom/android/internal/telephony/InboundSmsHandler;->getLogRecSize()I
@@ -157,14 +146,13 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 340
     iget-object v2, p0, Lcom/android/internal/telephony/InboundSmsHandler$DefaultState;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "Rec[%d]: %s\n"
+    const-string v4, "Rec[%d]: %s\n"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -194,12 +182,10 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/InboundSmsHandler;->loge(Ljava/lang/String;)V
 
-    .line 339
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 324
     .end local v0    # "errorText":Ljava/lang/String;
     .end local v1    # "i":I
     :pswitch_1
@@ -211,45 +197,39 @@
 
     invoke-virtual {v3, v2}, Lcom/android/internal/telephony/InboundSmsHandler;->onUpdatePhoneObject(Lcom/android/internal/telephony/PhoneBase;)V
 
-    .line 351
     :goto_1
     const/4 v2, 0x1
 
     return v2
 
-    .line 329
     :pswitch_2
     iget-object v2, p0, Lcom/android/internal/telephony/InboundSmsHandler$DefaultState;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
-    const-string/jumbo v3, "Release wakelock as it timed out"
+    const-string v3, "Release wakelock as it timed out"
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/InboundSmsHandler;->loge(Ljava/lang/String;)V
 
-    .line 330
     iget-object v2, p0, Lcom/android/internal/telephony/InboundSmsHandler$DefaultState;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
     invoke-virtual {v2}, Lcom/android/internal/telephony/InboundSmsHandler;->releaseWakeLock()V
 
     goto :goto_1
 
-    .line 342
     .restart local v0    # "errorText":Ljava/lang/String;
     .restart local v1    # "i":I
     :cond_0
     iget-object v2, p0, Lcom/android/internal/telephony/InboundSmsHandler$DefaultState;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
-    const-string/jumbo v3, "---- Dumped InboundSmsHandler ----"
+    const-string v3, "---- Dumped InboundSmsHandler ----"
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/InboundSmsHandler;->loge(Ljava/lang/String;)V
 
-    .line 344
     new-instance v2, Ljava/lang/RuntimeException;
 
     invoke-direct {v2, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
     throw v2
 
-    .line 346
     .end local v1    # "i":I
     :cond_1
     iget-object v2, p0, Lcom/android/internal/telephony/InboundSmsHandler$DefaultState;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
@@ -258,7 +238,6 @@
 
     goto :goto_1
 
-    .line 322
     nop
 
     :pswitch_data_0

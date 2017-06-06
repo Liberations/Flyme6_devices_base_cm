@@ -60,7 +60,6 @@
     .locals 0
 
     .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -75,19 +74,15 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1142
     if-nez p1, :cond_0
 
-    .line 1143
     return-object v1
 
-    .line 1145
     :cond_0
     new-instance v0, Landroid/hardware/soundtrigger/SoundTriggerModule;
 
     invoke-direct {v0, p0, p1, p2}, Landroid/hardware/soundtrigger/SoundTriggerModule;-><init>(ILandroid/hardware/soundtrigger/SoundTrigger$StatusListener;Landroid/os/Handler;)V
 
-    .line 1146
     .local v0, "module":Landroid/hardware/soundtrigger/SoundTriggerModule;
     return-object v0
 .end method

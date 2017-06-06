@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2399
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +40,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 2405
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I

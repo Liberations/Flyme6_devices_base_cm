@@ -34,25 +34,20 @@
     .param p1, "this$0"    # Lcom/android/server/media/MediaSessionService;
 
     .prologue
-    .line 619
     iput-object p1, p0, Lcom/android/server/media/MediaSessionService$SettingsObserver;->this$0:Lcom/android/server/media/MediaSessionService;
 
-    .line 620
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 617
-    const-string/jumbo v0, "enabled_notification_listeners"
+    const-string v0, "enabled_notification_listeners"
 
-    .line 616
     invoke-static {v0}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/media/MediaSessionService$SettingsObserver;->mSecureSettingsUri:Landroid/net/Uri;
 
-    .line 619
     return-void
 .end method
 
@@ -70,7 +65,6 @@
     .locals 4
 
     .prologue
-    .line 624
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService$SettingsObserver;->this$0:Lcom/android/server/media/MediaSessionService;
 
     invoke-static {v0}, Lcom/android/server/media/MediaSessionService;->-get3(Lcom/android/server/media/MediaSessionService;)Landroid/content/ContentResolver;
@@ -79,15 +73,12 @@
 
     iget-object v1, p0, Lcom/android/server/media/MediaSessionService$SettingsObserver;->mSecureSettingsUri:Landroid/net/Uri;
 
-    .line 625
     const/4 v2, 0x0
 
     const/4 v3, -0x1
 
-    .line 624
     invoke-virtual {v0, v1, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 623
     return-void
 .end method
 
@@ -99,11 +90,9 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 630
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService$SettingsObserver;->this$0:Lcom/android/server/media/MediaSessionService;
 
     invoke-static {v0}, Lcom/android/server/media/MediaSessionService;->-wrap7(Lcom/android/server/media/MediaSessionService;)V
 
-    .line 629
     return-void
 .end method

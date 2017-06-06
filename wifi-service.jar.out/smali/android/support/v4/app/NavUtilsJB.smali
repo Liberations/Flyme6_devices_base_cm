@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,7 +18,6 @@
     .param p0, "activity"    # Landroid/app/Activity;
 
     .prologue
-    .line 25
     invoke-virtual {p0}, Landroid/app/Activity;->getParentActivityIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -32,7 +30,6 @@
     .param p0, "info"    # Landroid/content/pm/ActivityInfo;
 
     .prologue
-    .line 37
     iget-object v0, p0, Landroid/content/pm/ActivityInfo;->parentActivityName:Ljava/lang/String;
 
     return-object v0
@@ -44,10 +41,8 @@
     .param p1, "upIntent"    # Landroid/content/Intent;
 
     .prologue
-    .line 33
     invoke-virtual {p0, p1}, Landroid/app/Activity;->navigateUpTo(Landroid/content/Intent;)Z
 
-    .line 32
     return-void
 .end method
 
@@ -57,7 +52,6 @@
     .param p1, "targetIntent"    # Landroid/content/Intent;
 
     .prologue
-    .line 29
     invoke-virtual {p0, p1}, Landroid/app/Activity;->shouldUpRecreateTask(Landroid/content/Intent;)Z
 
     move-result v0

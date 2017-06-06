@@ -14,13 +14,10 @@
     .param p2, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 30
     invoke-direct {p0, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 31
     iput p1, p0, Landroid/security/KeyStoreException;->mErrorCode:I
 
-    .line 29
     return-void
 .end method
 
@@ -30,7 +27,6 @@
     .locals 1
 
     .prologue
-    .line 35
     iget v0, p0, Landroid/security/KeyStoreException;->mErrorCode:I
 
     return v0

@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,13 +19,11 @@
     .param p1, "outBounds"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 57
     check-cast p0, Landroid/view/accessibility/AccessibilityWindowInfo;
 
     .end local p0    # "info":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityWindowInfo;->getBoundsInScreen(Landroid/graphics/Rect;)V
 
-    .line 56
     return-void
 .end method
 
@@ -36,7 +33,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 77
     check-cast p0, Landroid/view/accessibility/AccessibilityWindowInfo;
 
     .end local p0    # "info":Ljava/lang/Object;
@@ -52,7 +48,6 @@
     .param p0, "info"    # Ljava/lang/Object;
 
     .prologue
-    .line 73
     check-cast p0, Landroid/view/accessibility/AccessibilityWindowInfo;
 
     .end local p0    # "info":Ljava/lang/Object;
@@ -68,7 +63,6 @@
     .param p0, "info"    # Ljava/lang/Object;
 
     .prologue
-    .line 53
     check-cast p0, Landroid/view/accessibility/AccessibilityWindowInfo;
 
     .end local p0    # "info":Ljava/lang/Object;
@@ -84,7 +78,6 @@
     .param p0, "info"    # Ljava/lang/Object;
 
     .prologue
-    .line 41
     check-cast p0, Landroid/view/accessibility/AccessibilityWindowInfo;
 
     .end local p0    # "info":Ljava/lang/Object;
@@ -100,7 +93,6 @@
     .param p0, "info"    # Ljava/lang/Object;
 
     .prologue
-    .line 49
     check-cast p0, Landroid/view/accessibility/AccessibilityWindowInfo;
 
     .end local p0    # "info":Ljava/lang/Object;
@@ -116,7 +108,6 @@
     .param p0, "info"    # Ljava/lang/Object;
 
     .prologue
-    .line 45
     check-cast p0, Landroid/view/accessibility/AccessibilityWindowInfo;
 
     .end local p0    # "info":Ljava/lang/Object;
@@ -132,7 +123,6 @@
     .param p0, "info"    # Ljava/lang/Object;
 
     .prologue
-    .line 37
     check-cast p0, Landroid/view/accessibility/AccessibilityWindowInfo;
 
     .end local p0    # "info":Ljava/lang/Object;
@@ -148,7 +138,6 @@
     .param p0, "info"    # Ljava/lang/Object;
 
     .prologue
-    .line 69
     check-cast p0, Landroid/view/accessibility/AccessibilityWindowInfo;
 
     .end local p0    # "info":Ljava/lang/Object;
@@ -164,7 +153,6 @@
     .param p0, "info"    # Ljava/lang/Object;
 
     .prologue
-    .line 61
     check-cast p0, Landroid/view/accessibility/AccessibilityWindowInfo;
 
     .end local p0    # "info":Ljava/lang/Object;
@@ -180,7 +168,6 @@
     .param p0, "info"    # Ljava/lang/Object;
 
     .prologue
-    .line 65
     check-cast p0, Landroid/view/accessibility/AccessibilityWindowInfo;
 
     .end local p0    # "info":Ljava/lang/Object;
@@ -195,7 +182,6 @@
     .locals 1
 
     .prologue
-    .line 28
     invoke-static {}, Landroid/view/accessibility/AccessibilityWindowInfo;->obtain()Landroid/view/accessibility/AccessibilityWindowInfo;
 
     move-result-object v0
@@ -208,7 +194,6 @@
     .param p0, "info"    # Ljava/lang/Object;
 
     .prologue
-    .line 32
     check-cast p0, Landroid/view/accessibility/AccessibilityWindowInfo;
 
     .end local p0    # "info":Ljava/lang/Object;
@@ -224,12 +209,10 @@
     .param p0, "info"    # Ljava/lang/Object;
 
     .prologue
-    .line 81
     check-cast p0, Landroid/view/accessibility/AccessibilityWindowInfo;
 
     .end local p0    # "info":Ljava/lang/Object;
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityWindowInfo;->recycle()V
 
-    .line 80
     return-void
 .end method

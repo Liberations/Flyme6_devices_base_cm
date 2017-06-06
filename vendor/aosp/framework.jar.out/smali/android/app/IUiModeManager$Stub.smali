@@ -42,15 +42,12 @@
     .locals 1
 
     .prologue
-    .line 17
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 19
-    const-string/jumbo v0, "android.app.IUiModeManager"
+    const-string v0, "android.app.IUiModeManager"
 
     invoke-virtual {p0, p0, v0}, Landroid/app/IUiModeManager$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 17
     return-void
 .end method
 
@@ -61,21 +58,17 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 27
     if-nez p0, :cond_0
 
-    .line 28
     return-object v1
 
-    .line 30
     :cond_0
-    const-string/jumbo v1, "android.app.IUiModeManager"
+    const-string v1, "android.app.IUiModeManager"
 
     invoke-interface {p0, v1}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v0
 
-    .line 31
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -83,13 +76,11 @@
 
     if-eqz v1, :cond_1
 
-    .line 32
     check-cast v0, Landroid/app/IUiModeManager;
 
     .end local v0    # "iin":Landroid/os/IInterface;
     return-object v0
 
-    .line 34
     .restart local v0    # "iin":Landroid/os/IInterface;
     :cond_1
     new-instance v1, Landroid/app/IUiModeManager$Stub$Proxy;
@@ -105,7 +96,6 @@
     .locals 0
 
     .prologue
-    .line 38
     return-object p0
 .end method
 
@@ -124,135 +114,105 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 42
     sparse-switch p1, :sswitch_data_0
 
-    .line 93
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v2
 
     return v2
 
-    .line 46
     :sswitch_0
-    const-string/jumbo v2, "android.app.IUiModeManager"
+    const-string v2, "android.app.IUiModeManager"
 
     invoke-virtual {p3, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 47
     return v3
 
-    .line 51
     :sswitch_1
-    const-string/jumbo v2, "android.app.IUiModeManager"
+    const-string v2, "android.app.IUiModeManager"
 
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 53
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 54
     .local v0, "_arg0":I
     invoke-virtual {p0, v0}, Landroid/app/IUiModeManager$Stub;->enableCarMode(I)V
 
-    .line 55
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 56
     return v3
 
-    .line 60
     .end local v0    # "_arg0":I
     :sswitch_2
-    const-string/jumbo v2, "android.app.IUiModeManager"
+    const-string v2, "android.app.IUiModeManager"
 
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 62
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 63
     .restart local v0    # "_arg0":I
     invoke-virtual {p0, v0}, Landroid/app/IUiModeManager$Stub;->disableCarMode(I)V
 
-    .line 64
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 65
     return v3
 
-    .line 69
     .end local v0    # "_arg0":I
     :sswitch_3
-    const-string/jumbo v2, "android.app.IUiModeManager"
+    const-string v2, "android.app.IUiModeManager"
 
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 70
     invoke-virtual {p0}, Landroid/app/IUiModeManager$Stub;->getCurrentModeType()I
 
     move-result v1
 
-    .line 71
     .local v1, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 72
     invoke-virtual {p3, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 73
     return v3
 
-    .line 77
     .end local v1    # "_result":I
     :sswitch_4
-    const-string/jumbo v2, "android.app.IUiModeManager"
+    const-string v2, "android.app.IUiModeManager"
 
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 79
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 80
     .restart local v0    # "_arg0":I
     invoke-virtual {p0, v0}, Landroid/app/IUiModeManager$Stub;->setNightMode(I)V
 
-    .line 81
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 82
     return v3
 
-    .line 86
     .end local v0    # "_arg0":I
     :sswitch_5
-    const-string/jumbo v2, "android.app.IUiModeManager"
+    const-string v2, "android.app.IUiModeManager"
 
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 87
     invoke-virtual {p0}, Landroid/app/IUiModeManager$Stub;->getNightMode()I
 
     move-result v1
 
-    .line 88
     .restart local v1    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 89
     invoke-virtual {p3, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 90
     return v3
 
-    .line 42
     nop
 
     :sswitch_data_0

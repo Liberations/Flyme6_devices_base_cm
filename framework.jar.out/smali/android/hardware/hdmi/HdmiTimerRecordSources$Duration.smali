@@ -21,10 +21,8 @@
     .param p2, "minute"    # I
 
     .prologue
-    .line 231
     invoke-direct {p0, p1, p2}, Landroid/hardware/hdmi/HdmiTimerRecordSources$TimeUnit;-><init>(II)V
 
-    .line 230
     return-void
 .end method
 

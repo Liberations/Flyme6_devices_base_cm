@@ -22,21 +22,16 @@
     .param p4, "hasDefault"    # Z
 
     .prologue
-    .line 33
     invoke-direct {p0, p1, p2}, Landroid/filterfw/core/InputPort;-><init>(Landroid/filterfw/core/Filter;Ljava/lang/String;)V
 
-    .line 29
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/filterfw/core/FieldPort;->mValueWaiting:Z
 
-    .line 34
     iput-object p3, p0, Landroid/filterfw/core/FieldPort;->mField:Ljava/lang/reflect/Field;
 
-    .line 35
     iput-boolean p4, p0, Landroid/filterfw/core/FieldPort;->mHasFrame:Z
 
-    .line 32
     return-void
 .end method
 
@@ -48,7 +43,6 @@
     .prologue
     monitor-enter p0
 
-    .line 89
     :try_start_0
     iget-boolean v0, p0, Landroid/filterfw/core/FieldPort;->mValueWaiting:Z
     :try_end_0
@@ -80,7 +74,6 @@
     .locals 0
 
     .prologue
-    .line 39
     return-void
 .end method
 
@@ -88,7 +81,6 @@
     .locals 3
 
     .prologue
-    .line 55
     :try_start_0
     iget-object v1, p0, Landroid/filterfw/core/FieldPort;->mField:Ljava/lang/reflect/Field;
 
@@ -102,11 +94,9 @@
 
     return-object v1
 
-    .line 56
     :catch_0
     move-exception v0
 
-    .line 57
     .local v0, "e":Ljava/lang/IllegalAccessException;
     const/4 v1, 0x0
 
@@ -119,7 +109,6 @@
     .prologue
     monitor-enter p0
 
-    .line 84
     :try_start_0
     iget-boolean v0, p0, Landroid/filterfw/core/FieldPort;->mHasFrame:Z
     :try_end_0
@@ -143,7 +132,6 @@
     .prologue
     monitor-enter p0
 
-    .line 79
     :try_start_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -151,7 +139,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Cannot pull frame on "
+    const-string v2, "Cannot pull frame on "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -161,7 +149,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "!"
+    const-string v2, "!"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -190,12 +178,10 @@
     .param p1, "frame"    # Landroid/filterfw/core/Frame;
 
     .prologue
-    .line 44
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Landroid/filterfw/core/FieldPort;->setFieldFrame(Landroid/filterfw/core/Frame;Z)V
 
-    .line 43
     return-void
 .end method
 
@@ -207,19 +193,15 @@
     .prologue
     monitor-enter p0
 
-    .line 98
     :try_start_0
     invoke-virtual {p0}, Landroid/filterfw/core/FieldPort;->assertPortIsOpen()V
 
-    .line 99
     invoke-virtual {p0, p1, p2}, Landroid/filterfw/core/FieldPort;->checkFrameType(Landroid/filterfw/core/Frame;Z)V
 
-    .line 102
     invoke-virtual {p1}, Landroid/filterfw/core/Frame;->getObjectValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 103
     .local v0, "value":Ljava/lang/Object;
     if-nez v0, :cond_1
 
@@ -227,16 +209,13 @@
 
     if-eqz v1, :cond_1
 
-    .line 104
     :cond_0
     iput-object v0, p0, Landroid/filterfw/core/FieldPort;->mValue:Ljava/lang/Object;
 
-    .line 105
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Landroid/filterfw/core/FieldPort;->mValueWaiting:Z
 
-    .line 109
     :goto_0
     const/4 v1, 0x1
 
@@ -246,10 +225,8 @@
 
     monitor-exit p0
 
-    .line 97
     return-void
 
-    .line 103
     :cond_1
     :try_start_1
     iget-object v1, p0, Landroid/filterfw/core/FieldPort;->mValue:Ljava/lang/Object;
@@ -278,12 +255,10 @@
     .param p1, "frame"    # Landroid/filterfw/core/Frame;
 
     .prologue
-    .line 49
     const/4 v0, 0x1
 
     invoke-virtual {p0, p1, v0}, Landroid/filterfw/core/FieldPort;->setFieldFrame(Landroid/filterfw/core/Frame;Z)V
 
-    .line 48
     return-void
 .end method
 
@@ -291,12 +266,11 @@
     .locals 2
 
     .prologue
-    .line 94
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "field "
+    const-string v1, "field "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -324,7 +298,6 @@
     .prologue
     monitor-enter p0
 
-    .line 63
     :try_start_0
     iget-boolean v1, p0, Landroid/filterfw/core/FieldPort;->mValueWaiting:Z
     :try_end_0
@@ -332,7 +305,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 65
     :try_start_1
     iget-object v1, p0, Landroid/filterfw/core/FieldPort;->mField:Ljava/lang/reflect/Field;
 
@@ -345,16 +317,13 @@
     .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 70
     const/4 v1, 0x0
 
     :try_start_2
     iput-boolean v1, p0, Landroid/filterfw/core/FieldPort;->mValueWaiting:Z
 
-    .line 71
     if-eqz p1, :cond_0
 
-    .line 72
     iget-object v1, p0, Landroid/filterfw/core/FieldPort;->mFilter:Landroid/filterfw/core/Filter;
 
     iget-object v2, p0, Landroid/filterfw/core/FieldPort;->mName:Ljava/lang/String;
@@ -366,24 +335,20 @@
     :cond_0
     monitor-exit p0
 
-    .line 62
     return-void
 
-    .line 66
     :catch_0
     move-exception v0
 
-    .line 67
     .local v0, "e":Ljava/lang/IllegalAccessException;
     :try_start_3
     new-instance v1, Ljava/lang/RuntimeException;
 
-    .line 68
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "Access to field \'"
+    const-string v3, "Access to field \'"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -399,7 +364,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "\' was denied!"
+    const-string v3, "\' was denied!"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -409,7 +374,6 @@
 
     move-result-object v2
 
-    .line 67
     invoke-direct {v1, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
     throw v1

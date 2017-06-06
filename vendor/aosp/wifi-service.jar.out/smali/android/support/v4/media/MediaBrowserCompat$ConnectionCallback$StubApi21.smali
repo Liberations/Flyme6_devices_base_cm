@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback;
 
     .prologue
-    .line 359
     iput-object p1, p0, Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback$StubApi21;->this$1:Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,12 +50,10 @@
     .locals 1
 
     .prologue
-    .line 362
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback$StubApi21;->this$1:Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback;
 
     invoke-virtual {v0}, Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback;->onConnected()V
 
-    .line 361
     return-void
 .end method
 
@@ -64,12 +61,10 @@
     .locals 1
 
     .prologue
-    .line 372
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback$StubApi21;->this$1:Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback;
 
     invoke-virtual {v0}, Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback;->onConnectionFailed()V
 
-    .line 371
     return-void
 .end method
 
@@ -77,11 +72,9 @@
     .locals 1
 
     .prologue
-    .line 367
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback$StubApi21;->this$1:Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback;
 
     invoke-virtual {v0}, Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback;->onConnectionSuspended()V
 
-    .line 366
     return-void
 .end method

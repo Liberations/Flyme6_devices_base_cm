@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/hdmi/SystemAudioAction;
 
     .prologue
-    .line 81
     iput-object p1, p0, Lcom/android/server/hdmi/SystemAudioAction$1;->this$0:Lcom/android/server/hdmi/SystemAudioAction;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +40,9 @@
     .locals 1
 
     .prologue
-    .line 84
     iget-object v0, p0, Lcom/android/server/hdmi/SystemAudioAction$1;->this$0:Lcom/android/server/hdmi/SystemAudioAction;
 
     invoke-static {v0}, Lcom/android/server/hdmi/SystemAudioAction;->-wrap0(Lcom/android/server/hdmi/SystemAudioAction;)V
 
-    .line 83
     return-void
 .end method

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/pm/UserContentObserver;
 
     .prologue
-    .line 57
     iput-object p1, p0, Lcom/android/server/pm/UserContentObserver$2;->this$0:Lcom/android/server/pm/UserContentObserver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +40,9 @@
     .locals 1
 
     .prologue
-    .line 60
     iget-object v0, p0, Lcom/android/server/pm/UserContentObserver$2;->this$0:Lcom/android/server/pm/UserContentObserver;
 
     invoke-virtual {v0}, Lcom/android/server/pm/UserContentObserver;->update()V
 
-    .line 59
     return-void
 .end method

@@ -57,27 +57,22 @@
     .param p1, "callbacks"    # Landroid/hardware/camera2/ICameraDeviceCallbacks;
 
     .prologue
-    .line 203
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 204
     iput-object p1, p0, Landroid/hardware/camera2/legacy/CameraDeviceUserShim$CameraCallbackThread;->mCallbacks:Landroid/hardware/camera2/ICameraDeviceCallbacks;
 
-    .line 206
     new-instance v0, Landroid/os/HandlerThread;
 
-    const-string/jumbo v1, "LegacyCameraCallback"
+    const-string v1, "LegacyCameraCallback"
 
     invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
     iput-object v0, p0, Landroid/hardware/camera2/legacy/CameraDeviceUserShim$CameraCallbackThread;->mHandlerThread:Landroid/os/HandlerThread;
 
-    .line 207
     iget-object v0, p0, Landroid/hardware/camera2/legacy/CameraDeviceUserShim$CameraCallbackThread;->mHandlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 203
     return-void
 .end method
 
@@ -85,12 +80,10 @@
     .locals 2
 
     .prologue
-    .line 260
     iget-object v0, p0, Landroid/hardware/camera2/legacy/CameraDeviceUserShim$CameraCallbackThread;->mHandler:Landroid/os/Handler;
 
     if-nez v0, :cond_0
 
-    .line 261
     new-instance v0, Landroid/hardware/camera2/legacy/CameraDeviceUserShim$CameraCallbackThread$CallbackHandler;
 
     iget-object v1, p0, Landroid/hardware/camera2/legacy/CameraDeviceUserShim$CameraCallbackThread;->mHandlerThread:Landroid/os/HandlerThread;
@@ -103,7 +96,6 @@
 
     iput-object v0, p0, Landroid/hardware/camera2/legacy/CameraDeviceUserShim$CameraCallbackThread;->mHandler:Landroid/os/Handler;
 
-    .line 263
     :cond_0
     iget-object v0, p0, Landroid/hardware/camera2/legacy/CameraDeviceUserShim$CameraCallbackThread;->mHandler:Landroid/os/Handler;
 
@@ -116,7 +108,6 @@
     .locals 1
 
     .prologue
-    .line 256
     const/4 v0, 0x0
 
     return-object v0
@@ -126,12 +117,10 @@
     .locals 1
 
     .prologue
-    .line 211
     iget-object v0, p0, Landroid/hardware/camera2/legacy/CameraDeviceUserShim$CameraCallbackThread;->mHandlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->quitSafely()Z
 
-    .line 210
     return-void
 .end method
 
@@ -143,17 +132,14 @@
     .prologue
     const-wide v6, 0xffffffffL
 
-    .line 230
     invoke-direct {p0}, Landroid/hardware/camera2/legacy/CameraDeviceUserShim$CameraCallbackThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v1
 
-    .line 231
     and-long v2, p2, v6
 
     long-to-int v2, v2
 
-    .line 232
     const/16 v3, 0x20
 
     shr-long v4, p2, v3
@@ -162,14 +148,12 @@
 
     long-to-int v3, v4
 
-    .line 230
     const/4 v4, 0x2
 
     invoke-virtual {v1, v4, v2, v3, p1}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 234
     .local v0, "msg":Landroid/os/Message;
     invoke-direct {p0}, Landroid/hardware/camera2/legacy/CameraDeviceUserShim$CameraCallbackThread;->getHandler()Landroid/os/Handler;
 
@@ -177,7 +161,6 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 229
     return-void
 .end method
 
@@ -189,7 +172,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 216
     invoke-direct {p0}, Landroid/hardware/camera2/legacy/CameraDeviceUserShim$CameraCallbackThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v1
@@ -198,7 +180,6 @@
 
     move-result-object v0
 
-    .line 219
     .local v0, "msg":Landroid/os/Message;
     invoke-direct {p0}, Landroid/hardware/camera2/legacy/CameraDeviceUserShim$CameraCallbackThread;->getHandler()Landroid/os/Handler;
 
@@ -206,7 +187,6 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 215
     return-void
 .end method
 
@@ -214,7 +194,6 @@
     .locals 3
 
     .prologue
-    .line 224
     invoke-direct {p0}, Landroid/hardware/camera2/legacy/CameraDeviceUserShim$CameraCallbackThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v1
@@ -225,7 +204,6 @@
 
     move-result-object v0
 
-    .line 225
     .local v0, "msg":Landroid/os/Message;
     invoke-direct {p0}, Landroid/hardware/camera2/legacy/CameraDeviceUserShim$CameraCallbackThread;->getHandler()Landroid/os/Handler;
 
@@ -233,7 +211,6 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 223
     return-void
 .end method
 
@@ -242,22 +219,18 @@
     .param p1, "streamId"    # I
 
     .prologue
-    .line 248
     invoke-direct {p0}, Landroid/hardware/camera2/legacy/CameraDeviceUserShim$CameraCallbackThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v1
 
     const/4 v2, 0x4
 
-    .line 249
     const/4 v3, 0x0
 
-    .line 248
     invoke-virtual {v1, v2, p1, v3}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 250
     .local v0, "msg":Landroid/os/Message;
     invoke-direct {p0}, Landroid/hardware/camera2/legacy/CameraDeviceUserShim$CameraCallbackThread;->getHandler()Landroid/os/Handler;
 
@@ -265,7 +238,6 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 247
     return-void
 .end method
 
@@ -275,7 +247,6 @@
     .param p2, "resultExtras"    # Landroid/hardware/camera2/impl/CaptureResultExtras;
 
     .prologue
-    .line 240
     const/4 v2, 0x2
 
     new-array v1, v2, [Ljava/lang/Object;
@@ -288,7 +259,6 @@
 
     aput-object p2, v1, v2
 
-    .line 241
     .local v1, "resultArray":[Ljava/lang/Object;
     invoke-direct {p0}, Landroid/hardware/camera2/legacy/CameraDeviceUserShim$CameraCallbackThread;->getHandler()Landroid/os/Handler;
 
@@ -300,7 +270,6 @@
 
     move-result-object v0
 
-    .line 243
     .local v0, "msg":Landroid/os/Message;
     invoke-direct {p0}, Landroid/hardware/camera2/legacy/CameraDeviceUserShim$CameraCallbackThread;->getHandler()Landroid/os/Handler;
 
@@ -308,6 +277,5 @@
 
     invoke-virtual {v2, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 239
     return-void
 .end method

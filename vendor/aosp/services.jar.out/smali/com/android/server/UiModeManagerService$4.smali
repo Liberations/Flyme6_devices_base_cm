@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/UiModeManagerService;
 
     .prologue
-    .line 150
     iput-object p1, p0, Lcom/android/server/UiModeManagerService$4;->this$0:Lcom/android/server/UiModeManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +40,9 @@
     .locals 1
 
     .prologue
-    .line 153
     iget-object v0, p0, Lcom/android/server/UiModeManagerService$4;->this$0:Lcom/android/server/UiModeManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/UiModeManagerService;->updateTwilight()V
 
-    .line 152
     return-void
 .end method

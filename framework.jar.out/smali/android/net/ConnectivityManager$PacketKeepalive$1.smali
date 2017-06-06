@@ -25,7 +25,6 @@
     .param p2, "$anonymous0"    # Landroid/os/Looper;
 
     .prologue
-    .line 1298
     iput-object p1, p0, Landroid/net/ConnectivityManager$PacketKeepalive$1;->this$1:Landroid/net/ConnectivityManager$PacketKeepalive;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -40,19 +39,17 @@
     .param p1, "message"    # Landroid/os/Message;
 
     .prologue
-    .line 1301
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 1323
-    const-string/jumbo v2, "PacketKeepalive"
+    const-string v2, "PacketKeepalive"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "Unhandled message "
+    const-string v4, "Unhandled message "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -74,19 +71,15 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1300
     :goto_0
     return-void
 
-    .line 1303
     :pswitch_0
     iget v1, p1, Landroid/os/Message;->arg2:I
 
-    .line 1305
     .local v1, "error":I
     if-nez v1, :cond_1
 
-    .line 1306
     :try_start_0
     iget-object v2, p0, Landroid/net/ConnectivityManager$PacketKeepalive$1;->this$1:Landroid/net/ConnectivityManager$PacketKeepalive;
 
@@ -96,7 +89,6 @@
 
     if-nez v2, :cond_0
 
-    .line 1307
     iget-object v2, p0, Landroid/net/ConnectivityManager$PacketKeepalive$1;->this$1:Landroid/net/ConnectivityManager$PacketKeepalive;
 
     iget v3, p1, Landroid/os/Message;->arg1:I
@@ -107,7 +99,6 @@
 
     invoke-static {v2, v3}, Landroid/net/ConnectivityManager$PacketKeepalive;->-set0(Landroid/net/ConnectivityManager$PacketKeepalive;Ljava/lang/Integer;)Ljava/lang/Integer;
 
-    .line 1308
     iget-object v2, p0, Landroid/net/ConnectivityManager$PacketKeepalive$1;->this$1:Landroid/net/ConnectivityManager$PacketKeepalive;
 
     invoke-static {v2}, Landroid/net/ConnectivityManager$PacketKeepalive;->-get0(Landroid/net/ConnectivityManager$PacketKeepalive;)Landroid/net/ConnectivityManager$PacketKeepaliveCallback;
@@ -120,19 +111,17 @@
 
     goto :goto_0
 
-    .line 1318
     :catch_0
     move-exception v0
 
-    .line 1319
     .local v0, "e":Ljava/lang/Exception;
-    const-string/jumbo v2, "PacketKeepalive"
+    const-string v2, "PacketKeepalive"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "Exception in keepalive callback("
+    const-string v4, "Exception in keepalive callback("
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -142,7 +131,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, ")"
+    const-string v4, ")"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -156,7 +145,6 @@
 
     goto :goto_0
 
-    .line 1310
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     :try_start_1
@@ -166,12 +154,10 @@
 
     invoke-static {v2, v3}, Landroid/net/ConnectivityManager$PacketKeepalive;->-set0(Landroid/net/ConnectivityManager$PacketKeepalive;Ljava/lang/Integer;)Ljava/lang/Integer;
 
-    .line 1311
     iget-object v2, p0, Landroid/net/ConnectivityManager$PacketKeepalive$1;->this$1:Landroid/net/ConnectivityManager$PacketKeepalive;
 
     invoke-virtual {v2}, Landroid/net/ConnectivityManager$PacketKeepalive;->stopLooper()V
 
-    .line 1312
     iget-object v2, p0, Landroid/net/ConnectivityManager$PacketKeepalive$1;->this$1:Landroid/net/ConnectivityManager$PacketKeepalive;
 
     invoke-static {v2}, Landroid/net/ConnectivityManager$PacketKeepalive;->-get0(Landroid/net/ConnectivityManager$PacketKeepalive;)Landroid/net/ConnectivityManager$PacketKeepaliveCallback;
@@ -182,13 +168,11 @@
 
     goto :goto_0
 
-    .line 1315
     :cond_1
     iget-object v2, p0, Landroid/net/ConnectivityManager$PacketKeepalive$1;->this$1:Landroid/net/ConnectivityManager$PacketKeepalive;
 
     invoke-virtual {v2}, Landroid/net/ConnectivityManager$PacketKeepalive;->stopLooper()V
 
-    .line 1316
     iget-object v2, p0, Landroid/net/ConnectivityManager$PacketKeepalive$1;->this$1:Landroid/net/ConnectivityManager$PacketKeepalive;
 
     invoke-static {v2}, Landroid/net/ConnectivityManager$PacketKeepalive;->-get0(Landroid/net/ConnectivityManager$PacketKeepalive;)Landroid/net/ConnectivityManager$PacketKeepaliveCallback;
@@ -201,7 +185,6 @@
 
     goto :goto_0
 
-    .line 1301
     :pswitch_data_0
     .packed-switch 0x8100d
         :pswitch_0

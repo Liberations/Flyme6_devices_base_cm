@@ -28,13 +28,10 @@
     .param p5, "ws"    # Landroid/os/WorkSource;
 
     .prologue
-    .line 1609
     iput-object p1, p0, Lcom/android/server/wifi/WifiServiceImpl$WifiLock;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
-    .line 1610
     invoke-direct/range {p0 .. p5}, Lcom/android/server/wifi/WifiServiceImpl$DeathRecipient;-><init>(Lcom/android/server/wifi/WifiServiceImpl;ILjava/lang/String;Landroid/os/IBinder;Landroid/os/WorkSource;)V
 
-    .line 1609
     return-void
 .end method
 
@@ -44,14 +41,12 @@
     .locals 3
 
     .prologue
-    .line 1614
     iget-object v0, p0, Lcom/android/server/wifi/WifiServiceImpl$WifiLock;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     iget-object v1, v0, Lcom/android/server/wifi/WifiServiceImpl;->mLocks:Lcom/android/server/wifi/WifiServiceImpl$LockList;
 
     monitor-enter v1
 
-    .line 1615
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiServiceImpl$WifiLock;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
@@ -63,10 +58,8 @@
 
     monitor-exit v1
 
-    .line 1613
     return-void
 
-    .line 1614
     :catchall_0
     move-exception v0
 
@@ -79,12 +72,11 @@
     .locals 2
 
     .prologue
-    .line 1620
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "WifiLock{"
+    const-string v1, "WifiLock{"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -96,7 +88,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, " type="
+    const-string v1, " type="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -108,7 +100,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, " binder="
+    const-string v1, " binder="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -120,7 +112,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

@@ -44,18 +44,14 @@
     .param p3, "pi"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 462
     iput-object p1, p0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->this$0:Landroid/media/session/MediaSessionLegacyHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 463
     iput-object p2, p0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->mSession:Landroid/media/session/MediaSession;
 
-    .line 464
     iput-object p3, p0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->mPi:Landroid/app/PendingIntent;
 
-    .line 462
     return-void
 .end method
 
@@ -67,7 +63,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 468
     iget-object v1, p0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->mMediaButtonListener:Landroid/media/session/MediaSessionLegacyHelper$MediaButtonListener;
 
     if-nez v1, :cond_1
@@ -76,20 +71,16 @@
 
     if-nez v1, :cond_1
 
-    .line 469
     iget-object v1, p0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->mSession:Landroid/media/session/MediaSession;
 
     invoke-virtual {v1, v2}, Landroid/media/session/MediaSession;->setCallback(Landroid/media/session/MediaSession$Callback;)V
 
-    .line 470
     iget-object v1, p0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->mSession:Landroid/media/session/MediaSession;
 
     invoke-virtual {v1}, Landroid/media/session/MediaSession;->release()V
 
-    .line 471
     iput-object v2, p0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->mCb:Landroid/media/session/MediaSessionLegacyHelper$SessionHolder$SessionCallback;
 
-    .line 472
     iget-object v1, p0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->this$0:Landroid/media/session/MediaSessionLegacyHelper;
 
     invoke-static {v1}, Landroid/media/session/MediaSessionLegacyHelper;->-get1(Landroid/media/session/MediaSessionLegacyHelper;)Landroid/util/ArrayMap;
@@ -100,25 +91,21 @@
 
     invoke-virtual {v1, v2}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 467
     :cond_0
     :goto_0
     return-void
 
-    .line 473
     :cond_1
     iget-object v1, p0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->mCb:Landroid/media/session/MediaSessionLegacyHelper$SessionHolder$SessionCallback;
 
     if-nez v1, :cond_0
 
-    .line 474
     new-instance v1, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder$SessionCallback;
 
     invoke-direct {v1, p0, v2}, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder$SessionCallback;-><init>(Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;Landroid/media/session/MediaSessionLegacyHelper$SessionHolder$SessionCallback;)V
 
     iput-object v1, p0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->mCb:Landroid/media/session/MediaSessionLegacyHelper$SessionHolder$SessionCallback;
 
-    .line 475
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -127,7 +114,6 @@
 
     invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 476
     .local v0, "handler":Landroid/os/Handler;
     iget-object v1, p0, Landroid/media/session/MediaSessionLegacyHelper$SessionHolder;->mSession:Landroid/media/session/MediaSession;
 

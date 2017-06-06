@@ -25,13 +25,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 379
     iput-object p1, p0, Landroid/preference/SeekBarVolumizer$Observer;->this$0:Landroid/preference/SeekBarVolumizer;
 
-    .line 380
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 379
     return-void
 .end method
 
@@ -42,14 +39,11 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 385
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 386
     iget-object v0, p0, Landroid/preference/SeekBarVolumizer$Observer;->this$0:Landroid/preference/SeekBarVolumizer;
 
     invoke-static {v0}, Landroid/preference/SeekBarVolumizer;->-wrap3(Landroid/preference/SeekBarVolumizer;)V
 
-    .line 384
     return-void
 .end method

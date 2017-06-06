@@ -36,11 +36,9 @@
     .param p3, "callback"    # Lcom/android/server/LockSettingsStorage$Callback;
 
     .prologue
-    .line 483
     iput-object p1, p0, Lcom/android/server/LockSettingsStorage$DatabaseHelper;->this$0:Lcom/android/server/LockSettingsStorage;
 
-    .line 484
-    const-string/jumbo v0, "locksettings.db"
+    const-string v0, "locksettings.db"
 
     const/4 v1, 0x0
 
@@ -48,15 +46,12 @@
 
     invoke-direct {p0, p2, v0, v1, v2}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
 
-    .line 485
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/android/server/LockSettingsStorage$DatabaseHelper;->setWriteAheadLoggingEnabled(Z)V
 
-    .line 486
     iput-object p3, p0, Lcom/android/server/LockSettingsStorage$DatabaseHelper;->mCallback:Lcom/android/server/LockSettingsStorage$Callback;
 
-    .line 483
     return-void
 .end method
 
@@ -65,12 +60,10 @@
     .param p1, "db"    # Landroid/database/sqlite/SQLiteDatabase;
 
     .prologue
-    .line 490
-    const-string/jumbo v0, "CREATE TABLE locksettings (_id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT,user INTEGER,value TEXT);"
+    const-string v0, "CREATE TABLE locksettings (_id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT,user INTEGER,value TEXT);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 489
     return-void
 .end method
 
@@ -81,15 +74,12 @@
     .param p1, "db"    # Landroid/database/sqlite/SQLiteDatabase;
 
     .prologue
-    .line 500
     invoke-direct {p0, p1}, Lcom/android/server/LockSettingsStorage$DatabaseHelper;->createTable(Landroid/database/sqlite/SQLiteDatabase;)V
 
-    .line 501
     iget-object v0, p0, Lcom/android/server/LockSettingsStorage$DatabaseHelper;->mCallback:Lcom/android/server/LockSettingsStorage$Callback;
 
     invoke-interface {v0, p1}, Lcom/android/server/LockSettingsStorage$Callback;->initialize(Landroid/database/sqlite/SQLiteDatabase;)V
 
-    .line 499
     return-void
 .end method
 
@@ -100,32 +90,26 @@
     .param p3, "currentVersion"    # I
 
     .prologue
-    .line 506
     move v0, p2
 
-    .line 507
     .local v0, "upgradeVersion":I
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 509
     const/4 v0, 0x2
 
-    .line 512
     :cond_0
     const/4 v1, 0x2
 
     if-eq v0, v1, :cond_1
 
-    .line 513
-    const-string/jumbo v1, "LockSettingsDB"
+    const-string v1, "LockSettingsDB"
 
-    const-string/jumbo v2, "Failed to upgrade database!"
+    const-string v2, "Failed to upgrade database!"
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 505
     :cond_1
     return-void
 .end method

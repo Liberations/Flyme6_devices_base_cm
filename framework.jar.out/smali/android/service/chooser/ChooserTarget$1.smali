@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 206
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 209
     new-instance v0, Landroid/service/chooser/ChooserTarget;
 
     invoke-direct {v0, p1}, Landroid/service/chooser/ChooserTarget;-><init>(Landroid/os/Parcel;)V
@@ -58,7 +56,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 208
     invoke-virtual {p0, p1}, Landroid/service/chooser/ChooserTarget$1;->createFromParcel(Landroid/os/Parcel;)Landroid/service/chooser/ChooserTarget;
 
     move-result-object v0
@@ -71,7 +68,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 214
     new-array v0, p1, [Landroid/service/chooser/ChooserTarget;
 
     return-object v0
@@ -82,7 +78,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 213
     invoke-virtual {p0, p1}, Landroid/service/chooser/ChooserTarget$1;->newArray(I)[Landroid/service/chooser/ChooserTarget;
 
     move-result-object v0

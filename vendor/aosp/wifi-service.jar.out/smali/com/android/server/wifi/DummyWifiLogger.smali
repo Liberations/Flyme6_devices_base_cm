@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,7 +25,6 @@
 
     monitor-exit p0
 
-    .line 23
     return-void
 .end method
 
@@ -39,7 +37,6 @@
 
     monitor-exit p0
 
-    .line 21
     return-void
 .end method
 
@@ -52,14 +49,12 @@
     .prologue
     monitor-enter p0
 
-    .line 26
     :try_start_0
-    const-string/jumbo v0, "*** firmware logging disabled, no debug data ****"
+    const-string v0, "*** firmware logging disabled, no debug data ****"
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 27
-    const-string/jumbo v0, "set config_wifi_enable_wifi_firmware_debugging to enable"
+    const-string v0, "set config_wifi_enable_wifi_firmware_debugging to enable"
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
     :try_end_0
@@ -67,7 +62,6 @@
 
     monitor-exit p0
 
-    .line 25
     return-void
 
     :catchall_0
@@ -87,7 +81,6 @@
 
     monitor-exit p0
 
-    .line 13
     return-void
 .end method
 
@@ -99,7 +92,6 @@
 
     monitor-exit p0
 
-    .line 15
     return-void
 .end method
 
@@ -111,7 +103,6 @@
 
     monitor-exit p0
 
-    .line 19
     return-void
 .end method
 
@@ -123,6 +114,5 @@
 
     monitor-exit p0
 
-    .line 17
     return-void
 .end method

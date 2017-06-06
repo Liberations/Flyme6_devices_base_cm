@@ -46,15 +46,12 @@
     .locals 1
 
     .prologue
-    .line 314
     new-instance v0, Landroid/net/nsd/DnsSdTxtRecord$1;
 
     invoke-direct {v0}, Landroid/net/nsd/DnsSdTxtRecord$1;-><init>()V
 
-    .line 313
     sput-object v0, Landroid/net/nsd/DnsSdTxtRecord;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 42
     return-void
 .end method
 
@@ -62,17 +59,14 @@
     .locals 1
 
     .prologue
-    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
     const/4 v0, 0x0
 
     new-array v0, v0, [B
 
     iput-object v0, p0, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
-    .line 48
     return-void
 .end method
 
@@ -81,17 +75,14 @@
     .param p1, "src"    # Landroid/net/nsd/DnsSdTxtRecord;
 
     .prologue
-    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
     if-eqz p1, :cond_0
 
     iget-object v0, p1, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
     if-eqz v0, :cond_0
 
-    .line 60
     iget-object v0, p1, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
     invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
@@ -102,7 +93,6 @@
 
     iput-object v0, p0, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
-    .line 58
     :cond_0
     return-void
 .end method
@@ -112,10 +102,8 @@
     .param p1, "data"    # [B
 
     .prologue
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     invoke-virtual {p1}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
@@ -124,7 +112,6 @@
 
     iput-object v0, p0, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
-    .line 53
     return-void
 .end method
 
@@ -133,10 +120,8 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 195
     const/4 v2, 0x0
 
-    .line 197
     .local v2, "avStart":I
     const/4 v3, 0x0
 
@@ -150,7 +135,6 @@
 
     if-ge v2, v4, :cond_0
 
-    .line 198
     iget-object v4, p0, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
     aget-byte v4, v4, v2
@@ -159,12 +143,10 @@
 
     add-int/2addr v2, v4
 
-    .line 197
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 201
     :cond_0
     iget-object v4, p0, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
@@ -172,23 +154,19 @@
 
     if-ge v2, v4, :cond_3
 
-    .line 202
     iget-object v4, p0, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
     aget-byte v1, v4, v2
 
-    .line 203
     .local v1, "avLen":I
     const/4 v0, 0x0
 
-    .line 205
     .local v0, "aLen":I
     const/4 v0, 0x0
 
     :goto_1
     if-ge v0, v1, :cond_1
 
-    .line 206
     iget-object v4, p0, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
     add-int v5, v2, v0
@@ -201,7 +179,6 @@
 
     if-ne v4, v5, :cond_2
 
-    .line 208
     :cond_1
     new-instance v4, Ljava/lang/String;
 
@@ -213,13 +190,11 @@
 
     return-object v4
 
-    .line 205
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 210
     .end local v0    # "aLen":I
     .end local v1    # "avLen":I
     :cond_3
@@ -233,14 +208,11 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 219
     const/4 v2, 0x0
 
-    .line 220
     .local v2, "avStart":I
     const/4 v4, 0x0
 
-    .line 222
     .local v4, "value":[B
     const/4 v3, 0x0
 
@@ -254,7 +226,6 @@
 
     if-ge v2, v5, :cond_0
 
-    .line 223
     iget-object v5, p0, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
     aget-byte v5, v5, v2
@@ -263,12 +234,10 @@
 
     add-int/2addr v2, v5
 
-    .line 222
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 226
     :cond_0
     iget-object v5, p0, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
@@ -276,23 +245,19 @@
 
     if-ge v2, v5, :cond_1
 
-    .line 227
     iget-object v5, p0, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
     aget-byte v1, v5, v2
 
-    .line 228
     .local v1, "avLen":I
     const/4 v0, 0x0
 
-    .line 230
     .local v0, "aLen":I
     const/4 v0, 0x0
 
     :goto_1
     if-ge v0, v1, :cond_1
 
-    .line 231
     iget-object v5, p0, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
     add-int v6, v2, v0
@@ -305,14 +270,12 @@
 
     if-ne v5, v6, :cond_2
 
-    .line 232
     sub-int v5, v1, v0
 
     add-int/lit8 v5, v5, -0x1
 
     new-array v4, v5, [B
 
-    .line 233
     .local v4, "value":[B
     iget-object v5, p0, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
@@ -328,14 +291,12 @@
 
     invoke-static {v5, v6, v4, v8, v7}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 238
     .end local v0    # "aLen":I
     .end local v1    # "avLen":I
     .end local v4    # "value":[B
     :cond_1
     return-object v4
 
-    .line 230
     .restart local v0    # "aLen":I
     .restart local v1    # "avLen":I
     .local v4, "value":[B
@@ -352,10 +313,8 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 247
     const/4 v1, 0x0
 
-    .line 250
     .local v1, "s":Ljava/lang/String;
     const/4 v0, 0x0
 
@@ -369,27 +328,23 @@
     .local v1, "s":Ljava/lang/String;
     if-eqz v1, :cond_1
 
-    .line 251
     invoke-virtual {p1, v1}, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 252
     invoke-direct {p0, v0}, Landroid/net/nsd/DnsSdTxtRecord;->getValue(I)[B
 
     move-result-object v2
 
     return-object v2
 
-    .line 250
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 256
     :cond_1
     return-object v3
 .end method
@@ -401,12 +356,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 242
     invoke-direct {p0, p1}, Landroid/net/nsd/DnsSdTxtRecord;->getValue(I)[B
 
     move-result-object v0
 
-    .line 243
     .local v0, "value":[B
     if-eqz v0, :cond_0
 
@@ -427,21 +380,17 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 169
     iget-object v4, p0, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
-    .line 170
     .local v4, "oldBytes":[B
     if-eqz p2, :cond_0
 
     array-length v6, p2
 
-    .line 171
     .local v6, "valLen":I
     :goto_0
     const/4 v2, 0x0
 
-    .line 174
     .local v2, "insertion":I
     const/4 v1, 0x0
 
@@ -455,7 +404,6 @@
 
     if-ge v2, v7, :cond_1
 
-    .line 175
     iget-object v7, p0, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
     aget-byte v7, v7, v2
@@ -466,12 +414,10 @@
 
     add-int/2addr v2, v7
 
-    .line 174
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 170
     .end local v1    # "i":I
     .end local v2    # "insertion":I
     .end local v6    # "valLen":I
@@ -481,7 +427,6 @@
     .restart local v6    # "valLen":I
     goto :goto_0
 
-    .line 178
     .restart local v1    # "i":I
     .restart local v2    # "insertion":I
     :cond_1
@@ -496,7 +441,6 @@
     :goto_2
     add-int v0, v9, v7
 
-    .line 179
     .local v0, "avLen":I
     array-length v7, v4
 
@@ -504,23 +448,19 @@
 
     add-int/lit8 v3, v7, 0x1
 
-    .line 181
     .local v3, "newLen":I
     new-array v7, v3, [B
 
     iput-object v7, p0, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
-    .line 182
     iget-object v7, p0, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
     invoke-static {v4, v8, v7, v8, v2}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 183
     array-length v7, v4
 
     sub-int v5, v7, v2
 
-    .line 184
     .local v5, "secondHalfLen":I
     iget-object v7, p0, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
@@ -528,14 +468,12 @@
 
     invoke-static {v4, v2, v7, v9, v5}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 185
     iget-object v7, p0, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
     int-to-byte v9, v0
 
     aput-byte v9, v7, v2
 
-    .line 186
     iget-object v7, p0, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
     add-int/lit8 v9, v2, 0x1
@@ -544,10 +482,8 @@
 
     invoke-static {p1, v8, v7, v9, v10}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 187
     if-eqz p2, :cond_2
 
-    .line 188
     iget-object v7, p0, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
     add-int/lit8 v9, v2, 0x1
@@ -560,7 +496,6 @@
 
     aput-byte v10, v7, v9
 
-    .line 189
     iget-object v7, p0, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
     array-length v9, p1
@@ -571,7 +506,6 @@
 
     invoke-static {p2, v8, v7, v9, v6}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 168
     :cond_2
     return-void
 
@@ -581,7 +515,6 @@
     :cond_3
     move v7, v8
 
-    .line 178
     goto :goto_2
 .end method
 
@@ -594,10 +527,8 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 151
     const/4 v1, 0x0
 
-    .line 152
     .local v1, "s":Ljava/lang/String;
     const/4 v0, 0x0
 
@@ -611,7 +542,6 @@
     .local v1, "s":Ljava/lang/String;
     if-eqz v1, :cond_1
 
-    .line 153
     invoke-virtual {p1, v1}, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
 
     move-result v2
@@ -622,13 +552,11 @@
 
     return v2
 
-    .line 152
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 155
     :cond_1
     return v3
 .end method
@@ -637,7 +565,6 @@
     .locals 1
 
     .prologue
-    .line 304
     const/4 v0, 0x0
 
     return v0
@@ -648,21 +575,17 @@
     .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
-    .line 286
     if-ne p1, p0, :cond_0
 
-    .line 287
     const/4 v1, 0x1
 
     return v1
 
-    .line 289
     :cond_0
     instance-of v1, p1, Landroid/net/nsd/DnsSdTxtRecord;
 
     if-nez v1, :cond_1
 
-    .line 290
     const/4 v1, 0x0
 
     return v1
@@ -670,10 +593,8 @@
     :cond_1
     move-object v0, p1
 
-    .line 293
     check-cast v0, Landroid/net/nsd/DnsSdTxtRecord;
 
-    .line 294
     .local v0, "record":Landroid/net/nsd/DnsSdTxtRecord;
     iget-object v1, v0, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
@@ -693,12 +614,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 113
     invoke-direct {p0, p1}, Landroid/net/nsd/DnsSdTxtRecord;->getValue(Ljava/lang/String;)[B
 
     move-result-object v0
 
-    .line 114
     .local v0, "val":[B
     if-eqz v0, :cond_0
 
@@ -714,7 +633,6 @@
     .locals 1
 
     .prologue
-    .line 165
     iget-object v0, p0, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
     invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
@@ -730,7 +648,6 @@
     .locals 1
 
     .prologue
-    .line 299
     iget-object v0, p0, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
     invoke-static {v0}, Ljava/util/Arrays;->hashCode([B)I
@@ -744,10 +661,8 @@
     .locals 3
 
     .prologue
-    .line 142
     const/4 v0, 0x0
 
-    .line 143
     .local v0, "count":I
     const/4 v1, 0x0
 
@@ -759,7 +674,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 144
     iget-object v2, p0, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
     aget-byte v2, v2, v1
@@ -770,12 +684,10 @@
 
     add-int/2addr v1, v2
 
-    .line 143
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 146
     :cond_0
     return v0
 .end method
@@ -787,10 +699,8 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 119
     const/4 v1, 0x0
 
-    .line 121
     .local v1, "avStart":I
     const/4 v2, 0x0
 
@@ -802,12 +712,10 @@
 
     if-ge v1, v5, :cond_2
 
-    .line 122
     iget-object v5, p0, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
     aget-byte v0, v5, v1
 
-    .line 123
     .local v0, "avLen":I
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -815,7 +723,6 @@
 
     if-gt v5, v0, :cond_1
 
-    .line 124
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v5
@@ -838,7 +745,6 @@
 
     if-ne v5, v6, :cond_1
 
-    .line 125
     :cond_0
     new-instance v4, Ljava/lang/String;
 
@@ -852,7 +758,6 @@
 
     invoke-direct {v4, v5, v6, v7}, Ljava/lang/String;-><init>([BII)V
 
-    .line 126
     .local v4, "s":Ljava/lang/String;
     invoke-virtual {p1, v4}, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
 
@@ -860,10 +765,8 @@
 
     if-nez v5, :cond_1
 
-    .line 127
     iget-object v3, p0, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
-    .line 128
     .local v3, "oldBytes":[B
     array-length v5, v3
 
@@ -875,19 +778,16 @@
 
     iput-object v5, p0, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
-    .line 129
     iget-object v5, p0, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
     invoke-static {v3, v8, v5, v8, v1}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 130
     add-int v5, v1, v0
 
     add-int/lit8 v5, v5, 0x1
 
     iget-object v6, p0, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
-    .line 131
     array-length v7, v3
 
     sub-int/2addr v7, v1
@@ -896,13 +796,10 @@
 
     add-int/lit8 v7, v7, -0x1
 
-    .line 130
     invoke-static {v3, v5, v6, v1, v7}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 132
     return v2
 
-    .line 135
     .end local v3    # "oldBytes":[B
     .end local v4    # "s":Ljava/lang/String;
     :cond_1
@@ -912,12 +809,10 @@
 
     add-int/2addr v1, v5
 
-    .line 121
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 137
     .end local v0    # "avLen":I
     :cond_2
     const/4 v5, -0x1
@@ -931,24 +826,20 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 74
     if-eqz p2, :cond_0
 
-    .line 75
     invoke-virtual {p2}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v4
 
-    .line 76
     .local v4, "valBytes":[B
     array-length v5, v4
 
-    .line 83
     .end local v4    # "valBytes":[B
     .local v5, "valLen":I
     :goto_0
     :try_start_0
-    const-string/jumbo v6, "US-ASCII"
+    const-string v6, "US-ASCII"
 
     invoke-virtual {p1, v6}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
     :try_end_0
@@ -956,7 +847,6 @@
 
     move-result-object v3
 
-    .line 89
     .local v3, "keyBytes":[B
     const/4 v2, 0x0
 
@@ -966,52 +856,45 @@
 
     if-ge v2, v6, :cond_2
 
-    .line 90
     aget-byte v6, v3, v2
 
     const/16 v7, 0x3d
 
     if-ne v6, v7, :cond_1
 
-    .line 91
     new-instance v6, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v7, "= is not a valid character in key"
+    const-string v7, "= is not a valid character in key"
 
     invoke-direct {v6, v7}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v6
 
-    .line 78
     .end local v2    # "i":I
     .end local v3    # "keyBytes":[B
     .end local v5    # "valLen":I
     :cond_0
     const/4 v4, 0x0
 
-    .line 79
     .local v4, "valBytes":[B
     const/4 v5, 0x0
 
     .restart local v5    # "valLen":I
     goto :goto_0
 
-    .line 85
     .end local v4    # "valBytes":[B
     :catch_0
     move-exception v1
 
-    .line 86
     .local v1, "e":Ljava/io/UnsupportedEncodingException;
     new-instance v6, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v7, "key should be US-ASCII"
+    const-string v7, "key should be US-ASCII"
 
     invoke-direct {v6, v7}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v6
 
-    .line 89
     .end local v1    # "e":Ljava/io/UnsupportedEncodingException;
     .restart local v2    # "i":I
     .restart local v3    # "keyBytes":[B
@@ -1020,7 +903,6 @@
 
     goto :goto_1
 
-    .line 95
     :cond_2
     array-length v6, v3
 
@@ -1030,37 +912,31 @@
 
     if-lt v6, v7, :cond_3
 
-    .line 96
     new-instance v6, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v7, "Key and Value length cannot exceed 255 bytes"
+    const-string v7, "Key and Value length cannot exceed 255 bytes"
 
     invoke-direct {v6, v7}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v6
 
-    .line 99
     :cond_3
     invoke-virtual {p0, p1}, Landroid/net/nsd/DnsSdTxtRecord;->remove(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 100
     .local v0, "currentLoc":I
     const/4 v6, -0x1
 
     if-ne v0, v6, :cond_4
 
-    .line 101
     invoke-virtual {p0}, Landroid/net/nsd/DnsSdTxtRecord;->keyCount()I
 
     move-result v0
 
-    .line 103
     :cond_4
     invoke-direct {p0, v3, v4, v0}, Landroid/net/nsd/DnsSdTxtRecord;->insert([B[BI)V
 
-    .line 69
     return-void
 .end method
 
@@ -1068,7 +944,6 @@
     .locals 1
 
     .prologue
-    .line 160
     iget-object v0, p0, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
     array-length v0, v0
@@ -1080,10 +955,8 @@
     .locals 7
 
     .prologue
-    .line 267
     const/4 v3, 0x0
 
-    .line 269
     .local v3, "result":Ljava/lang/String;
     const/4 v2, 0x0
 
@@ -1097,12 +970,11 @@
     .local v0, "a":Ljava/lang/String;
     if-eqz v0, :cond_2
 
-    .line 270
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "{"
+    const-string v6, "{"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1116,17 +988,14 @@
 
     move-result-object v1
 
-    .line 271
     .local v1, "av":Ljava/lang/String;
     invoke-direct {p0, v2}, Landroid/net/nsd/DnsSdTxtRecord;->getValueAsString(I)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 272
     .local v4, "val":Ljava/lang/String;
     if-eqz v4, :cond_0
 
-    .line 273
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1135,7 +1004,7 @@
 
     move-result-object v5
 
-    const-string/jumbo v6, "="
+    const-string v6, "="
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1145,7 +1014,7 @@
 
     move-result-object v5
 
-    const-string/jumbo v6, "}"
+    const-string v6, "}"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1155,21 +1024,17 @@
 
     move-result-object v1
 
-    .line 276
     :goto_1
     if-nez v3, :cond_1
 
-    .line 277
     move-object v3, v1
 
-    .line 269
     .local v3, "result":Ljava/lang/String;
     :goto_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 275
     .end local v3    # "result":Ljava/lang/String;
     :cond_0
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1180,7 +1045,7 @@
 
     move-result-object v5
 
-    const-string/jumbo v6, "}"
+    const-string v6, "}"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1192,7 +1057,6 @@
 
     goto :goto_1
 
-    .line 279
     :cond_1
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1202,7 +1066,7 @@
 
     move-result-object v5
 
-    const-string/jumbo v6, ", "
+    const-string v6, ", "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1219,7 +1083,6 @@
     .restart local v3    # "result":Ljava/lang/String;
     goto :goto_2
 
-    .line 281
     .end local v1    # "av":Ljava/lang/String;
     .end local v3    # "result":Ljava/lang/String;
     .end local v4    # "val":Ljava/lang/String;
@@ -1230,7 +1093,7 @@
     return-object v3
 
     :cond_3
-    const-string/jumbo v3, ""
+    const-string v3, ""
 
     goto :goto_3
 .end method
@@ -1241,11 +1104,9 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 309
     iget-object v0, p0, Landroid/net/nsd/DnsSdTxtRecord;->mData:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 308
     return-void
 .end method

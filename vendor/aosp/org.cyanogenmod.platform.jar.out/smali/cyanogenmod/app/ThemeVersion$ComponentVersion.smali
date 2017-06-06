@@ -34,7 +34,6 @@
     .param p3, "targetVersion"    # I
 
     .prologue
-    .line 94
     invoke-virtual {p2}, Lcyanogenmod/app/ThemeComponent;->name()Ljava/lang/String;
 
     move-result-object v3
@@ -51,7 +50,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcyanogenmod/app/ThemeVersion$ComponentVersion;-><init>(ILcyanogenmod/app/ThemeComponent;Ljava/lang/String;II)V
 
-    .line 93
     return-void
 .end method
 
@@ -64,25 +62,18 @@
     .param p5, "targetVersion"    # I
 
     .prologue
-    .line 97
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 102
     iput p1, p0, Lcyanogenmod/app/ThemeVersion$ComponentVersion;->id:I
 
-    .line 103
     iput-object p2, p0, Lcyanogenmod/app/ThemeVersion$ComponentVersion;->component:Lcyanogenmod/app/ThemeComponent;
 
-    .line 104
     iput-object p3, p0, Lcyanogenmod/app/ThemeVersion$ComponentVersion;->name:Ljava/lang/String;
 
-    .line 105
     iput p4, p0, Lcyanogenmod/app/ThemeVersion$ComponentVersion;->minVersion:I
 
-    .line 106
     iput p5, p0, Lcyanogenmod/app/ThemeVersion$ComponentVersion;->currentVersion:I
 
-    .line 101
     return-void
 .end method
 
@@ -91,7 +82,6 @@
     .param p1, "copy"    # Lcyanogenmod/app/ThemeVersion$ComponentVersion;
 
     .prologue
-    .line 110
     iget v1, p1, Lcyanogenmod/app/ThemeVersion$ComponentVersion;->id:I
 
     iget-object v2, p1, Lcyanogenmod/app/ThemeVersion$ComponentVersion;->component:Lcyanogenmod/app/ThemeComponent;
@@ -106,7 +96,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcyanogenmod/app/ThemeVersion$ComponentVersion;-><init>(ILcyanogenmod/app/ThemeComponent;Ljava/lang/String;II)V
 
-    .line 109
     return-void
 .end method
 
@@ -116,7 +105,6 @@
     .locals 1
 
     .prologue
-    .line 122
     iget-object v0, p0, Lcyanogenmod/app/ThemeVersion$ComponentVersion;->component:Lcyanogenmod/app/ThemeComponent;
 
     return-object v0
@@ -126,7 +114,6 @@
     .locals 1
 
     .prologue
-    .line 130
     iget v0, p0, Lcyanogenmod/app/ThemeVersion$ComponentVersion;->currentVersion:I
 
     return v0
@@ -136,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 114
     iget v0, p0, Lcyanogenmod/app/ThemeVersion$ComponentVersion;->id:I
 
     return v0
@@ -146,7 +132,6 @@
     .locals 1
 
     .prologue
-    .line 126
     iget v0, p0, Lcyanogenmod/app/ThemeVersion$ComponentVersion;->minVersion:I
 
     return v0
@@ -156,7 +141,6 @@
     .locals 1
 
     .prologue
-    .line 118
     iget-object v0, p0, Lcyanogenmod/app/ThemeVersion$ComponentVersion;->name:Ljava/lang/String;
 
     return-object v0

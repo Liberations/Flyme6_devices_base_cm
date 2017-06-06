@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/internal/telephony/PhoneProxy;
 
     .prologue
-    .line 89
     iput-object p1, p0, Lcom/android/internal/telephony/PhoneProxy$1;->this$0:Lcom/android/internal/telephony/PhoneProxy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,14 +39,13 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 92
-    const-string/jumbo v0, "PhoneProxy"
+    const-string v0, "PhoneProxy"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "mPhoneProxyReceiver: action "
+    const-string v2, "mPhoneProxyReceiver: action "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -67,12 +65,11 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 93
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string/jumbo v1, "android.telephony.action.CARRIER_CONFIG_CHANGED"
+    const-string v1, "android.telephony.action.CARRIER_CONFIG_CHANGED"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -80,7 +77,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 94
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneProxy$1;->this$0:Lcom/android/internal/telephony/PhoneProxy;
 
     iget-object v1, p0, Lcom/android/internal/telephony/PhoneProxy$1;->this$0:Lcom/android/internal/telephony/PhoneProxy;
@@ -93,7 +89,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/PhoneProxy;->sendMessage(Landroid/os/Message;)Z
 
-    .line 91
     :cond_0
     return-void
 .end method

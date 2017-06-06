@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 1081
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 1084
     new-instance v0, Landroid/service/notification/ZenModeConfig$ZenRule;
 
     invoke-direct {v0, p1}, Landroid/service/notification/ZenModeConfig$ZenRule;-><init>(Landroid/os/Parcel;)V
@@ -58,7 +56,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 1083
     invoke-virtual {p0, p1}, Landroid/service/notification/ZenModeConfig$ZenRule$1;->createFromParcel(Landroid/os/Parcel;)Landroid/service/notification/ZenModeConfig$ZenRule;
 
     move-result-object v0
@@ -71,7 +68,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 1088
     new-array v0, p1, [Landroid/service/notification/ZenModeConfig$ZenRule;
 
     return-object v0
@@ -82,7 +78,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 1087
     invoke-virtual {p0, p1}, Landroid/service/notification/ZenModeConfig$ZenRule$1;->newArray(I)[Landroid/service/notification/ZenModeConfig$ZenRule;
 
     move-result-object v0

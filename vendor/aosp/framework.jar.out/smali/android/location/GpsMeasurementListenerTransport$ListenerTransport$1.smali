@@ -40,7 +40,6 @@
     .param p2, "val$event"    # Landroid/location/GpsMeasurementsEvent;
 
     .prologue
-    .line 54
     iput-object p1, p0, Landroid/location/GpsMeasurementListenerTransport$ListenerTransport$1;->this$1:Landroid/location/GpsMeasurementListenerTransport$ListenerTransport;
 
     iput-object p2, p0, Landroid/location/GpsMeasurementListenerTransport$ListenerTransport$1;->val$event:Landroid/location/GpsMeasurementsEvent;
@@ -62,12 +61,10 @@
     .end annotation
 
     .prologue
-    .line 57
     iget-object v0, p0, Landroid/location/GpsMeasurementListenerTransport$ListenerTransport$1;->val$event:Landroid/location/GpsMeasurementsEvent;
 
     invoke-interface {p1, v0}, Landroid/location/GpsMeasurementsEvent$Listener;->onGpsMeasurementsReceived(Landroid/location/GpsMeasurementsEvent;)V
 
-    .line 56
     return-void
 .end method
 
@@ -81,7 +78,6 @@
     .end annotation
 
     .prologue
-    .line 56
     check-cast p1, Landroid/location/GpsMeasurementsEvent$Listener;
 
     .end local p1    # "listener":Ljava/lang/Object;

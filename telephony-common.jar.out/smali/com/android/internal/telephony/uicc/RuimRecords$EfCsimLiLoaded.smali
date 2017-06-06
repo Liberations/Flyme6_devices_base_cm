@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/internal/telephony/uicc/RuimRecords;
 
     .prologue
-    .line 302
     iput-object p1, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimLiLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,8 +50,7 @@
     .locals 1
 
     .prologue
-    .line 305
-    const-string/jumbo v0, "EF_CSIM_LI"
+    const-string v0, "EF_CSIM_LI"
 
     return-object v0
 .end method
@@ -68,7 +66,6 @@
 
     const/16 v4, 0x65
 
-    .line 310
     iget-object v2, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimLiLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
     iget-object v1, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
@@ -77,7 +74,6 @@
 
     invoke-static {v2, v1}, Lcom/android/internal/telephony/uicc/RuimRecords;->-set0(Lcom/android/internal/telephony/uicc/RuimRecords;[B)[B
 
-    .line 312
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -92,7 +88,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 313
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimLiLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
     invoke-static {v1}, Lcom/android/internal/telephony/uicc/RuimRecords;->-get0(Lcom/android/internal/telephony/uicc/RuimRecords;)[B
@@ -105,7 +100,6 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 321
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimLiLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
     invoke-static {v1}, Lcom/android/internal/telephony/uicc/RuimRecords;->-get0(Lcom/android/internal/telephony/uicc/RuimRecords;)[B
@@ -124,13 +118,11 @@
 
     aput-byte v5, v1, v2
 
-    .line 312
     :goto_1
     add-int/lit8 v0, v0, 0x2
 
     goto :goto_0
 
-    .line 314
     :pswitch_0
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimLiLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
@@ -154,7 +146,6 @@
 
     goto :goto_1
 
-    .line 315
     :pswitch_1
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimLiLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
@@ -180,7 +171,6 @@
 
     goto :goto_1
 
-    .line 316
     :pswitch_2
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimLiLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
@@ -204,7 +194,6 @@
 
     goto :goto_1
 
-    .line 317
     :pswitch_3
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimLiLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
@@ -230,7 +219,6 @@
 
     goto :goto_1
 
-    .line 318
     :pswitch_4
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimLiLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
@@ -256,7 +244,6 @@
 
     goto :goto_1
 
-    .line 319
     :pswitch_5
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimLiLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
@@ -280,7 +267,6 @@
 
     goto/16 :goto_1
 
-    .line 320
     :pswitch_6
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimLiLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
@@ -302,7 +288,6 @@
 
     goto/16 :goto_1
 
-    .line 325
     :cond_0
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/RuimRecords$EfCsimLiLoaded;->this$0:Lcom/android/internal/telephony/uicc/RuimRecords;
 
@@ -310,7 +295,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "EF_LI="
+    const-string v3, "EF_LI="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -336,10 +321,8 @@
 
     invoke-virtual {v1, v2}, Lcom/android/internal/telephony/uicc/RuimRecords;->log(Ljava/lang/String;)V
 
-    .line 309
     return-void
 
-    .line 313
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

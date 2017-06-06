@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/storage/DeviceStorageMonitorService;
 
     .prologue
-    .line 377
     iput-object p1, p0, Lcom/android/server/storage/DeviceStorageMonitorService$2;->this$0:Lcom/android/server/storage/DeviceStorageMonitorService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 4
 
     .prologue
-    .line 381
     iget-object v0, p0, Lcom/android/server/storage/DeviceStorageMonitorService$2;->this$0:Lcom/android/server/storage/DeviceStorageMonitorService;
 
     const-wide/16 v2, 0x0
@@ -50,7 +48,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/storage/DeviceStorageMonitorService;->postCheckMemoryMsg(ZJ)V
 
-    .line 379
     return-void
 .end method
 
@@ -58,7 +55,6 @@
     .locals 2
 
     .prologue
-    .line 391
     iget-object v0, p0, Lcom/android/server/storage/DeviceStorageMonitorService$2;->this$0:Lcom/android/server/storage/DeviceStorageMonitorService;
 
     iget-wide v0, v0, Lcom/android/server/storage/DeviceStorageMonitorService;->mMemLowThreshold:J
@@ -72,7 +68,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 386
     iget-object v1, p0, Lcom/android/server/storage/DeviceStorageMonitorService$2;->this$0:Lcom/android/server/storage/DeviceStorageMonitorService;
 
     iget-boolean v1, v1, Lcom/android/server/storage/DeviceStorageMonitorService;->mLowMemFlag:Z

@@ -44,37 +44,30 @@
 
     const/4 v2, 0x0
 
-    .line 37
     new-instance v0, Lcom/android/internal/annotations/VisibleForTesting$Visibility;
 
-    const-string/jumbo v1, "PROTECTED"
+    const-string v1, "PROTECTED"
 
     invoke-direct {v0, v1, v2}, Lcom/android/internal/annotations/VisibleForTesting$Visibility;-><init>(Ljava/lang/String;I)V
 
-    .line 38
     sput-object v0, Lcom/android/internal/annotations/VisibleForTesting$Visibility;->PROTECTED:Lcom/android/internal/annotations/VisibleForTesting$Visibility;
 
-    .line 39
     new-instance v0, Lcom/android/internal/annotations/VisibleForTesting$Visibility;
 
-    const-string/jumbo v1, "PACKAGE"
+    const-string v1, "PACKAGE"
 
     invoke-direct {v0, v1, v3}, Lcom/android/internal/annotations/VisibleForTesting$Visibility;-><init>(Ljava/lang/String;I)V
 
-    .line 40
     sput-object v0, Lcom/android/internal/annotations/VisibleForTesting$Visibility;->PACKAGE:Lcom/android/internal/annotations/VisibleForTesting$Visibility;
 
-    .line 41
     new-instance v0, Lcom/android/internal/annotations/VisibleForTesting$Visibility;
 
-    const-string/jumbo v1, "PRIVATE"
+    const-string v1, "PRIVATE"
 
     invoke-direct {v0, v1, v4}, Lcom/android/internal/annotations/VisibleForTesting$Visibility;-><init>(Ljava/lang/String;I)V
 
-    .line 42
     sput-object v0, Lcom/android/internal/annotations/VisibleForTesting$Visibility;->PRIVATE:Lcom/android/internal/annotations/VisibleForTesting$Visibility;
 
-    .line 36
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/android/internal/annotations/VisibleForTesting$Visibility;
@@ -100,7 +93,6 @@
     .locals 0
 
     .prologue
-    .line 36
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -111,7 +103,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 36
     const-class v0, Lcom/android/internal/annotations/VisibleForTesting$Visibility;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -127,7 +118,6 @@
     .locals 1
 
     .prologue
-    .line 36
     sget-object v0, Lcom/android/internal/annotations/VisibleForTesting$Visibility;->$VALUES:[Lcom/android/internal/annotations/VisibleForTesting$Visibility;
 
     return-object v0

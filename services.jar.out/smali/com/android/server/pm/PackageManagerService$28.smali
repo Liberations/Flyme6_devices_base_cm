@@ -33,7 +33,6 @@
     .param p3, "val$userHandle"    # I
 
     .prologue
-    .line 17415
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$28;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$28;->val$packageName:Ljava/lang/String;
@@ -51,7 +50,6 @@
     .locals 4
 
     .prologue
-    .line 17417
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$28;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$28;->val$packageName:Ljava/lang/String;
@@ -60,8 +58,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v0, v1, v2, v3}, Lcom/android/server/pm/PackageManagerService;->-wrap13(Lcom/android/server/pm/PackageManagerService;Ljava/lang/String;II)I
+    invoke-static {v0, v1, v2, v3}, Lcom/android/server/pm/PackageManagerService;->-wrap14(Lcom/android/server/pm/PackageManagerService;Ljava/lang/String;II)I
 
-    .line 17416
     return-void
 .end method

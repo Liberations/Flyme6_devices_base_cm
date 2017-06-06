@@ -18,21 +18,15 @@
     .param p6, "ttmlFragment"    # Ljava/lang/String;
 
     .prologue
-    .line 280
     invoke-direct {p0}, Landroid/media/SubtitleTrack$Cue;-><init>()V
 
-    .line 281
     iput-wide p1, p0, Landroid/media/TtmlCue;->mStartTimeMs:J
 
-    .line 282
     iput-wide p3, p0, Landroid/media/TtmlCue;->mEndTimeMs:J
 
-    .line 283
     iput-object p5, p0, Landroid/media/TtmlCue;->mText:Ljava/lang/String;
 
-    .line 284
     iput-object p6, p0, Landroid/media/TtmlCue;->mTtmlFragment:Ljava/lang/String;
 
-    .line 280
     return-void
 .end method

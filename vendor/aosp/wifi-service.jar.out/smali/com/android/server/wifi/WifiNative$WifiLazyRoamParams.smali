@@ -38,7 +38,6 @@
     .param p1, "this$0"    # Lcom/android/server/wifi/WifiNative;
 
     .prologue
-    .line 2414
     iput-object p1, p0, Lcom/android/server/wifi/WifiNative$WifiLazyRoamParams;->this$0:Lcom/android/server/wifi/WifiNative;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,14 +51,12 @@
     .locals 3
 
     .prologue
-    .line 2419
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 2420
     .local v0, "sbuf":Ljava/lang/StringBuilder;
-    const-string/jumbo v1, " A_band_boost_threshold="
+    const-string v1, " A_band_boost_threshold="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -69,8 +66,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 2421
-    const-string/jumbo v1, " A_band_penalty_threshold="
+    const-string v1, " A_band_penalty_threshold="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -80,8 +76,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 2422
-    const-string/jumbo v1, " A_band_boost_factor="
+    const-string v1, " A_band_boost_factor="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -91,8 +86,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 2423
-    const-string/jumbo v1, " A_band_penalty_factor="
+    const-string v1, " A_band_penalty_factor="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -102,8 +96,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 2424
-    const-string/jumbo v1, " A_band_max_boost="
+    const-string v1, " A_band_max_boost="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -113,8 +106,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 2425
-    const-string/jumbo v1, " lazy_roam_hysteresis="
+    const-string v1, " lazy_roam_hysteresis="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -124,8 +116,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 2426
-    const-string/jumbo v1, " alert_roam_rssi_trigger="
+    const-string v1, " alert_roam_rssi_trigger="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -135,7 +126,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 2427
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

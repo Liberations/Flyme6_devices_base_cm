@@ -27,13 +27,10 @@
     .param p1, "remote"    # Landroid/os/IBinder;
 
     .prologue
-    .line 90
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 92
     iput-object p1, p0, Landroid/app/backup/IRestoreObserver$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    .line 90
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 96
     iget-object v0, p0, Landroid/app/backup/IRestoreObserver$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object v0
@@ -53,8 +49,7 @@
     .locals 1
 
     .prologue
-    .line 100
-    const-string/jumbo v0, "android.app.backup.IRestoreObserver"
+    const-string v0, "android.app.backup.IRestoreObserver"
 
     return-object v0
 .end method
@@ -70,25 +65,20 @@
     .end annotation
 
     .prologue
-    .line 153
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 155
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
-    const-string/jumbo v1, "android.app.backup.IRestoreObserver"
+    const-string v1, "android.app.backup.IRestoreObserver"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 156
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 157
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 158
     iget-object v1, p0, Landroid/app/backup/IRestoreObserver$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x3
@@ -101,20 +91,15 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 161
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 151
     return-void
 
-    .line 160
     :catchall_0
     move-exception v1
 
-    .line 161
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 160
     throw v1
 .end method
 
@@ -128,22 +113,18 @@
     .end annotation
 
     .prologue
-    .line 172
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 174
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
-    const-string/jumbo v1, "android.app.backup.IRestoreObserver"
+    const-string v1, "android.app.backup.IRestoreObserver"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 175
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 176
     iget-object v1, p0, Landroid/app/backup/IRestoreObserver$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x4
@@ -156,20 +137,15 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 179
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 170
     return-void
 
-    .line 178
     :catchall_0
     move-exception v1
 
-    .line 179
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 178
     throw v1
 .end method
 
@@ -183,24 +159,20 @@
     .end annotation
 
     .prologue
-    .line 114
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 116
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
-    const-string/jumbo v1, "android.app.backup.IRestoreObserver"
+    const-string v1, "android.app.backup.IRestoreObserver"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 117
     const/4 v1, 0x0
 
     invoke-virtual {v0, p1, v1}, Landroid/os/Parcel;->writeTypedArray([Landroid/os/Parcelable;I)V
 
-    .line 118
     iget-object v1, p0, Landroid/app/backup/IRestoreObserver$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x1
@@ -213,20 +185,15 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 121
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 112
     return-void
 
-    .line 120
     :catchall_0
     move-exception v1
 
-    .line 121
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 120
     throw v1
 .end method
 
@@ -240,22 +207,18 @@
     .end annotation
 
     .prologue
-    .line 132
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 134
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
-    const-string/jumbo v1, "android.app.backup.IRestoreObserver"
+    const-string v1, "android.app.backup.IRestoreObserver"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 135
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 136
     iget-object v1, p0, Landroid/app/backup/IRestoreObserver$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x2
@@ -268,19 +231,14 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 139
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 130
     return-void
 
-    .line 138
     :catchall_0
     move-exception v1
 
-    .line 139
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 138
     throw v1
 .end method

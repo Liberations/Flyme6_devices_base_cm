@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/accounts/ChooseTypeAndAccountActivity;
 
     .prologue
-    .line 563
     iput-object p1, p0, Landroid/accounts/ChooseTypeAndAccountActivity$1;->this$0:Landroid/accounts/ChooseTypeAndAccountActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,13 +52,11 @@
     .end annotation
 
     .prologue
-    .line 566
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     iget-object v0, p0, Landroid/accounts/ChooseTypeAndAccountActivity$1;->this$0:Landroid/accounts/ChooseTypeAndAccountActivity;
 
     invoke-static {v0, p3}, Landroid/accounts/ChooseTypeAndAccountActivity;->-set0(Landroid/accounts/ChooseTypeAndAccountActivity;I)I
 
-    .line 567
     iget-object v0, p0, Landroid/accounts/ChooseTypeAndAccountActivity$1;->this$0:Landroid/accounts/ChooseTypeAndAccountActivity;
 
     invoke-static {v0}, Landroid/accounts/ChooseTypeAndAccountActivity;->-get0(Landroid/accounts/ChooseTypeAndAccountActivity;)Landroid/widget/Button;
@@ -70,6 +67,5 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setEnabled(Z)V
 
-    .line 565
     return-void
 .end method

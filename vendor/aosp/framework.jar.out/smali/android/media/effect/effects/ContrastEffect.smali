@@ -10,12 +10,11 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 29
     const-class v3, Landroid/filterpacks/imageproc/ContrastFilter;
 
-    const-string/jumbo v4, "image"
+    const-string v4, "image"
 
-    const-string/jumbo v5, "image"
+    const-string v5, "image"
 
     const/4 v0, 0x0
 
@@ -29,6 +28,5 @@
 
     invoke-direct/range {v0 .. v6}, Landroid/media/effect/SingleFilterEffect;-><init>(Landroid/media/effect/EffectContext;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 28
     return-void
 .end method

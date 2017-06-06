@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/pm/PackageManagerService;
 
     .prologue
-    .line 13722
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$10;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,8 +42,7 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 13724
-    const-string/jumbo v0, "vmdl"
+    const-string v0, "vmdl"
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -52,7 +50,7 @@
 
     if-eqz v0, :cond_0
 
-    const-string/jumbo v0, ".tmp"
+    const-string v0, ".tmp"
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 

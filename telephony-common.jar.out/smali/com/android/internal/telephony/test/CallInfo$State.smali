@@ -58,28 +58,25 @@
 
     const/4 v4, 0x0
 
-    .line 32
     new-instance v0, Lcom/android/internal/telephony/test/CallInfo$State;
 
-    const-string/jumbo v1, "ACTIVE"
+    const-string v1, "ACTIVE"
 
     invoke-direct {v0, v1, v4, v4}, Lcom/android/internal/telephony/test/CallInfo$State;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/android/internal/telephony/test/CallInfo$State;->ACTIVE:Lcom/android/internal/telephony/test/CallInfo$State;
 
-    .line 33
     new-instance v0, Lcom/android/internal/telephony/test/CallInfo$State;
 
-    const-string/jumbo v1, "HOLDING"
+    const-string v1, "HOLDING"
 
     invoke-direct {v0, v1, v5, v5}, Lcom/android/internal/telephony/test/CallInfo$State;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/android/internal/telephony/test/CallInfo$State;->HOLDING:Lcom/android/internal/telephony/test/CallInfo$State;
 
-    .line 34
     new-instance v0, Lcom/android/internal/telephony/test/CallInfo$State;
 
-    const-string/jumbo v1, "DIALING"
+    const-string v1, "DIALING"
 
     invoke-direct {v0, v1, v6, v6}, Lcom/android/internal/telephony/test/CallInfo$State;-><init>(Ljava/lang/String;II)V
 
@@ -87,38 +84,32 @@
 
     new-instance v0, Lcom/android/internal/telephony/test/CallInfo$State;
 
-    const-string/jumbo v1, "ALERTING"
+    const-string v1, "ALERTING"
 
     invoke-direct {v0, v1, v7, v7}, Lcom/android/internal/telephony/test/CallInfo$State;-><init>(Ljava/lang/String;II)V
 
-    .line 35
     sput-object v0, Lcom/android/internal/telephony/test/CallInfo$State;->ALERTING:Lcom/android/internal/telephony/test/CallInfo$State;
 
     new-instance v0, Lcom/android/internal/telephony/test/CallInfo$State;
 
-    const-string/jumbo v1, "INCOMING"
+    const-string v1, "INCOMING"
 
     invoke-direct {v0, v1, v8, v8}, Lcom/android/internal/telephony/test/CallInfo$State;-><init>(Ljava/lang/String;II)V
 
-    .line 36
     sput-object v0, Lcom/android/internal/telephony/test/CallInfo$State;->INCOMING:Lcom/android/internal/telephony/test/CallInfo$State;
 
     new-instance v0, Lcom/android/internal/telephony/test/CallInfo$State;
 
-    const-string/jumbo v1, "WAITING"
+    const-string v1, "WAITING"
 
     const/4 v2, 0x5
 
-    .line 37
     const/4 v3, 0x5
 
-    .line 36
     invoke-direct {v0, v1, v2, v3}, Lcom/android/internal/telephony/test/CallInfo$State;-><init>(Ljava/lang/String;II)V
 
-    .line 37
     sput-object v0, Lcom/android/internal/telephony/test/CallInfo$State;->WAITING:Lcom/android/internal/telephony/test/CallInfo$State;
 
-    .line 31
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/android/internal/telephony/test/CallInfo$State;
@@ -159,7 +150,6 @@
     .param p3, "value"    # I
 
     .prologue
-    .line 39
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     iput p3, p0, Lcom/android/internal/telephony/test/CallInfo$State;->mValue:I
@@ -172,7 +162,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 31
     const-class v0, Lcom/android/internal/telephony/test/CallInfo$State;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -188,7 +177,6 @@
     .locals 1
 
     .prologue
-    .line 31
     sget-object v0, Lcom/android/internal/telephony/test/CallInfo$State;->$VALUES:[Lcom/android/internal/telephony/test/CallInfo$State;
 
     return-object v0
@@ -200,7 +188,6 @@
     .locals 1
 
     .prologue
-    .line 42
     iget v0, p0, Lcom/android/internal/telephony/test/CallInfo$State;->mValue:I
 
     return v0

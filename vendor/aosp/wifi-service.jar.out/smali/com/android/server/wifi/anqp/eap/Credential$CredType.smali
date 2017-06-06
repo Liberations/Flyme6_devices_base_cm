@@ -64,55 +64,49 @@
 
     const/4 v3, 0x0
 
-    .line 14
     new-instance v0, Lcom/android/server/wifi/anqp/eap/Credential$CredType;
 
-    const-string/jumbo v1, "Reserved"
+    const-string v1, "Reserved"
 
     invoke-direct {v0, v1, v3}, Lcom/android/server/wifi/anqp/eap/Credential$CredType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/Credential$CredType;->Reserved:Lcom/android/server/wifi/anqp/eap/Credential$CredType;
 
-    .line 15
     new-instance v0, Lcom/android/server/wifi/anqp/eap/Credential$CredType;
 
-    const-string/jumbo v1, "SIM"
+    const-string v1, "SIM"
 
     invoke-direct {v0, v1, v4}, Lcom/android/server/wifi/anqp/eap/Credential$CredType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/Credential$CredType;->SIM:Lcom/android/server/wifi/anqp/eap/Credential$CredType;
 
-    .line 16
     new-instance v0, Lcom/android/server/wifi/anqp/eap/Credential$CredType;
 
-    const-string/jumbo v1, "USIM"
+    const-string v1, "USIM"
 
     invoke-direct {v0, v1, v5}, Lcom/android/server/wifi/anqp/eap/Credential$CredType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/Credential$CredType;->USIM:Lcom/android/server/wifi/anqp/eap/Credential$CredType;
 
-    .line 17
     new-instance v0, Lcom/android/server/wifi/anqp/eap/Credential$CredType;
 
-    const-string/jumbo v1, "NFC"
+    const-string v1, "NFC"
 
     invoke-direct {v0, v1, v6}, Lcom/android/server/wifi/anqp/eap/Credential$CredType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/Credential$CredType;->NFC:Lcom/android/server/wifi/anqp/eap/Credential$CredType;
 
-    .line 18
     new-instance v0, Lcom/android/server/wifi/anqp/eap/Credential$CredType;
 
-    const-string/jumbo v1, "HWToken"
+    const-string v1, "HWToken"
 
     invoke-direct {v0, v1, v7}, Lcom/android/server/wifi/anqp/eap/Credential$CredType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/Credential$CredType;->HWToken:Lcom/android/server/wifi/anqp/eap/Credential$CredType;
 
-    .line 19
     new-instance v0, Lcom/android/server/wifi/anqp/eap/Credential$CredType;
 
-    const-string/jumbo v1, "Softoken"
+    const-string v1, "Softoken"
 
     const/4 v2, 0x5
 
@@ -120,10 +114,9 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/Credential$CredType;->Softoken:Lcom/android/server/wifi/anqp/eap/Credential$CredType;
 
-    .line 20
     new-instance v0, Lcom/android/server/wifi/anqp/eap/Credential$CredType;
 
-    const-string/jumbo v1, "Certificate"
+    const-string v1, "Certificate"
 
     const/4 v2, 0x6
 
@@ -131,10 +124,9 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/Credential$CredType;->Certificate:Lcom/android/server/wifi/anqp/eap/Credential$CredType;
 
-    .line 21
     new-instance v0, Lcom/android/server/wifi/anqp/eap/Credential$CredType;
 
-    const-string/jumbo v1, "Username"
+    const-string v1, "Username"
 
     const/4 v2, 0x7
 
@@ -142,10 +134,9 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/Credential$CredType;->Username:Lcom/android/server/wifi/anqp/eap/Credential$CredType;
 
-    .line 22
     new-instance v0, Lcom/android/server/wifi/anqp/eap/Credential$CredType;
 
-    const-string/jumbo v1, "None"
+    const-string v1, "None"
 
     const/16 v2, 0x8
 
@@ -153,10 +144,9 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/Credential$CredType;->None:Lcom/android/server/wifi/anqp/eap/Credential$CredType;
 
-    .line 23
     new-instance v0, Lcom/android/server/wifi/anqp/eap/Credential$CredType;
 
-    const-string/jumbo v1, "Anonymous"
+    const-string v1, "Anonymous"
 
     const/16 v2, 0x9
 
@@ -164,10 +154,9 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/Credential$CredType;->Anonymous:Lcom/android/server/wifi/anqp/eap/Credential$CredType;
 
-    .line 24
     new-instance v0, Lcom/android/server/wifi/anqp/eap/Credential$CredType;
 
-    const-string/jumbo v1, "VendorSpecific"
+    const-string v1, "VendorSpecific"
 
     const/16 v2, 0xa
 
@@ -175,7 +164,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/Credential$CredType;->VendorSpecific:Lcom/android/server/wifi/anqp/eap/Credential$CredType;
 
-    .line 13
     const/16 v0, 0xb
 
     new-array v0, v0, [Lcom/android/server/wifi/anqp/eap/Credential$CredType;
@@ -245,7 +233,6 @@
     .locals 0
 
     .prologue
-    .line 13
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -256,7 +243,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 13
     const-class v0, Lcom/android/server/wifi/anqp/eap/Credential$CredType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -272,7 +258,6 @@
     .locals 1
 
     .prologue
-    .line 13
     sget-object v0, Lcom/android/server/wifi/anqp/eap/Credential$CredType;->$VALUES:[Lcom/android/server/wifi/anqp/eap/Credential$CredType;
 
     return-object v0

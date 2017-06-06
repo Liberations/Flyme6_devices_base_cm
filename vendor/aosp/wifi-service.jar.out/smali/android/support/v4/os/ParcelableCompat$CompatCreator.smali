@@ -51,15 +51,12 @@
     .end annotation
 
     .prologue
-    .line 45
     .local p0, "this":Landroid/support/v4/os/ParcelableCompat$CompatCreator;, "Landroid/support/v4/os/ParcelableCompat$CompatCreator<TT;>;"
     .local p1, "callbacks":Landroid/support/v4/os/ParcelableCompatCreatorCallbacks;, "Landroid/support/v4/os/ParcelableCompatCreatorCallbacks<TT;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     iput-object p1, p0, Landroid/support/v4/os/ParcelableCompat$CompatCreator;->mCallbacks:Landroid/support/v4/os/ParcelableCompatCreatorCallbacks;
 
-    .line 45
     return-void
 .end method
 
@@ -77,7 +74,6 @@
     .end annotation
 
     .prologue
-    .line 51
     .local p0, "this":Landroid/support/v4/os/ParcelableCompat$CompatCreator;, "Landroid/support/v4/os/ParcelableCompat$CompatCreator<TT;>;"
     iget-object v0, p0, Landroid/support/v4/os/ParcelableCompat$CompatCreator;->mCallbacks:Landroid/support/v4/os/ParcelableCompatCreatorCallbacks;
 
@@ -100,7 +96,6 @@
     .end annotation
 
     .prologue
-    .line 56
     .local p0, "this":Landroid/support/v4/os/ParcelableCompat$CompatCreator;, "Landroid/support/v4/os/ParcelableCompat$CompatCreator<TT;>;"
     iget-object v0, p0, Landroid/support/v4/os/ParcelableCompat$CompatCreator;->mCallbacks:Landroid/support/v4/os/ParcelableCompatCreatorCallbacks;
 

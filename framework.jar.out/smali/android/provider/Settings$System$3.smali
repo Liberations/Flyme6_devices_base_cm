@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1598
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,7 +38,6 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 1603
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0

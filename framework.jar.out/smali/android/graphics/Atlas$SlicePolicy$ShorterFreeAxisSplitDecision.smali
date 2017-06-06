@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 327
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,7 +46,6 @@
     .param p4, "rectHeight"    # I
 
     .prologue
-    .line 331
     if-gt p1, p2, :cond_0
 
     const/4 v0, 0x1

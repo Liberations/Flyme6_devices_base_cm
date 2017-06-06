@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/location/GpsLocationProvider;
 
     .prologue
-    .line 1223
     iput-object p1, p0, Lcom/android/server/location/GpsLocationProvider$4;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     invoke-direct {p0}, Landroid/location/IGpsGeofenceHardware$Stub;-><init>()V
@@ -46,7 +45,6 @@
     .param p11, "unknownTimer"    # I
 
     .prologue
-    .line 1231
     invoke-static/range {p1 .. p11}, Lcom/android/server/location/GpsLocationProvider;->-wrap0(IDDDIIII)Z
 
     move-result v0
@@ -58,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 1225
     invoke-static {}, Lcom/android/server/location/GpsLocationProvider;->-wrap2()Z
 
     move-result v0
@@ -71,7 +68,6 @@
     .param p1, "geofenceId"    # I
 
     .prologue
-    .line 1240
     invoke-static {p1}, Lcom/android/server/location/GpsLocationProvider;->-wrap5(I)Z
 
     move-result v0
@@ -84,7 +80,6 @@
     .param p1, "geofenceId"    # I
 
     .prologue
-    .line 1236
     invoke-static {p1}, Lcom/android/server/location/GpsLocationProvider;->-wrap6(I)Z
 
     move-result v0
@@ -98,7 +93,6 @@
     .param p2, "monitorTransition"    # I
 
     .prologue
-    .line 1244
     invoke-static {p1, p2}, Lcom/android/server/location/GpsLocationProvider;->-wrap7(II)Z
 
     move-result v0

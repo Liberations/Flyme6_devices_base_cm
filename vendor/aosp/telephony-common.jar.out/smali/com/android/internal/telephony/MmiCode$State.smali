@@ -48,43 +48,38 @@
 
     const/4 v2, 0x0
 
-    .line 28
     new-instance v0, Lcom/android/internal/telephony/MmiCode$State;
 
-    const-string/jumbo v1, "PENDING"
+    const-string v1, "PENDING"
 
     invoke-direct {v0, v1, v2}, Lcom/android/internal/telephony/MmiCode$State;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/MmiCode$State;->PENDING:Lcom/android/internal/telephony/MmiCode$State;
 
-    .line 29
     new-instance v0, Lcom/android/internal/telephony/MmiCode$State;
 
-    const-string/jumbo v1, "CANCELLED"
+    const-string v1, "CANCELLED"
 
     invoke-direct {v0, v1, v3}, Lcom/android/internal/telephony/MmiCode$State;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/MmiCode$State;->CANCELLED:Lcom/android/internal/telephony/MmiCode$State;
 
-    .line 30
     new-instance v0, Lcom/android/internal/telephony/MmiCode$State;
 
-    const-string/jumbo v1, "COMPLETE"
+    const-string v1, "COMPLETE"
 
     invoke-direct {v0, v1, v4}, Lcom/android/internal/telephony/MmiCode$State;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/MmiCode$State;->COMPLETE:Lcom/android/internal/telephony/MmiCode$State;
 
-    .line 31
     new-instance v0, Lcom/android/internal/telephony/MmiCode$State;
 
-    const-string/jumbo v1, "FAILED"
+    const-string v1, "FAILED"
 
     invoke-direct {v0, v1, v5}, Lcom/android/internal/telephony/MmiCode$State;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/MmiCode$State;->FAILED:Lcom/android/internal/telephony/MmiCode$State;
 
-    .line 27
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/android/internal/telephony/MmiCode$State;
@@ -114,7 +109,6 @@
     .locals 0
 
     .prologue
-    .line 27
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -125,7 +119,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 27
     const-class v0, Lcom/android/internal/telephony/MmiCode$State;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -141,7 +134,6 @@
     .locals 1
 
     .prologue
-    .line 27
     sget-object v0, Lcom/android/internal/telephony/MmiCode$State;->$VALUES:[Lcom/android/internal/telephony/MmiCode$State;
 
     return-object v0

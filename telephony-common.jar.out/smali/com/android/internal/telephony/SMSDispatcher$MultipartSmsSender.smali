@@ -51,19 +51,15 @@
     .end annotation
 
     .prologue
-    .line 519
     .local p2, "parts":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     iput-object p1, p0, Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSender;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
 
     invoke-direct {p0}, Landroid/telephony/CarrierMessagingServiceManager;-><init>()V
 
-    .line 520
     iput-object p2, p0, Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSender;->mParts:Ljava/util/List;
 
-    .line 521
     iput-object p3, p0, Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSender;->mTrackers:[Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;
 
-    .line 519
     return-void
 .end method
 
@@ -74,7 +70,6 @@
     .param p1, "carrierMessagingService"    # Landroid/service/carrier/ICarrierMessagingService;
 
     .prologue
-    .line 541
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSender;->mParts:Ljava/util/List;
 
@@ -92,7 +87,6 @@
 
     iget-object v3, v0, Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;->mDestAddress:Ljava/lang/String;
 
-    .line 542
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSender;->mTrackers:[Lcom/android/internal/telephony/SMSDispatcher$SmsTracker;
 
     const/4 v4, 0x0
@@ -109,28 +103,24 @@
 
     move-object v0, p1
 
-    .line 540
     invoke-interface/range {v0 .. v5}, Landroid/service/carrier/ICarrierMessagingService;->sendMultipartTextSms(Ljava/util/List;ILjava/lang/String;ILandroid/service/carrier/ICarrierMessagingCallback;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 538
     :goto_0
     return-void
 
-    .line 543
     :catch_0
     move-exception v6
 
-    .line 544
     .local v6, "e":Landroid/os/RemoteException;
-    const-string/jumbo v0, "SMSDispatcher"
+    const-string v0, "SMSDispatcher"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Exception sending the SMS: "
+    const-string v2, "Exception sending the SMS: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -146,16 +136,12 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 545
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSender;->mSenderCallback:Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSenderCallback;
 
-    .line 546
     const/4 v1, 0x1
 
-    .line 547
     const/4 v2, 0x0
 
-    .line 545
     invoke-virtual {v0, v1, v2}, Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSenderCallback;->onSendMultipartSmsComplete(I[I)V
 
     goto :goto_0
@@ -167,10 +153,8 @@
     .param p2, "senderCallback"    # Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSenderCallback;
 
     .prologue
-    .line 526
     iput-object p2, p0, Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSender;->mSenderCallback:Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSenderCallback;
 
-    .line 527
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSender;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
 
     iget-object v0, v0, Lcom/android/internal/telephony/SMSDispatcher;->mContext:Landroid/content/Context;
@@ -181,34 +165,27 @@
 
     if-nez v0, :cond_0
 
-    .line 528
-    const-string/jumbo v0, "SMSDispatcher"
+    const-string v0, "SMSDispatcher"
 
-    const-string/jumbo v1, "bindService() for carrier messaging service failed"
+    const-string v1, "bindService() for carrier messaging service failed"
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 529
     iget-object v0, p0, Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSender;->mSenderCallback:Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSenderCallback;
 
-    .line 530
     const/4 v1, 0x1
 
-    .line 531
     const/4 v2, 0x0
 
-    .line 529
     invoke-virtual {v0, v1, v2}, Lcom/android/internal/telephony/SMSDispatcher$MultipartSmsSenderCallback;->onSendMultipartSmsComplete(I[I)V
 
-    .line 525
     :goto_0
     return-void
 
-    .line 533
     :cond_0
-    const-string/jumbo v0, "SMSDispatcher"
+    const-string v0, "SMSDispatcher"
 
-    const-string/jumbo v1, "bindService() for carrier messaging service succeeded"
+    const-string v1, "bindService() for carrier messaging service succeeded"
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 

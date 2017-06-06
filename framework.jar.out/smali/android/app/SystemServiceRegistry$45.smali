@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 505
     invoke-direct {p0}, Landroid/app/SystemServiceRegistry$CachedServiceFetcher;-><init>()V
 
     return-void
@@ -41,20 +40,17 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 508
-    const-string/jumbo v2, "wifiscanner"
+    const-string v2, "wifiscanner"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 509
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Landroid/net/wifi/IWifiScanner$Stub;->asInterface(Landroid/os/IBinder;)Landroid/net/wifi/IWifiScanner;
 
     move-result-object v1
 
-    .line 510
     .local v1, "service":Landroid/net/wifi/IWifiScanner;
     new-instance v2, Landroid/net/wifi/WifiScanner;
 
@@ -72,7 +68,6 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 507
     invoke-virtual {p0, p1}, Landroid/app/SystemServiceRegistry$45;->createService(Landroid/app/ContextImpl;)Landroid/net/wifi/WifiScanner;
 
     move-result-object v0

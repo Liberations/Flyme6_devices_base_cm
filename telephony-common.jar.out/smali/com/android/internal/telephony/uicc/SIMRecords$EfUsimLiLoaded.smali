@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/internal/telephony/uicc/SIMRecords;
 
     .prologue
-    .line 1254
     iput-object p1, p0, Lcom/android/internal/telephony/uicc/SIMRecords$EfUsimLiLoaded;->this$0:Lcom/android/internal/telephony/uicc/SIMRecords;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,8 +50,7 @@
     .locals 1
 
     .prologue
-    .line 1256
-    const-string/jumbo v0, "EF_LI"
+    const-string v0, "EF_LI"
 
     return-object v0
 .end method
@@ -62,7 +60,6 @@
     .param p1, "ar"    # Landroid/os/AsyncResult;
 
     .prologue
-    .line 1260
     iget-object v1, p0, Lcom/android/internal/telephony/uicc/SIMRecords$EfUsimLiLoaded;->this$0:Lcom/android/internal/telephony/uicc/SIMRecords;
 
     iget-object v0, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
@@ -71,14 +68,13 @@
 
     iput-object v0, v1, Lcom/android/internal/telephony/uicc/SIMRecords;->mEfLi:[B
 
-    .line 1261
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/SIMRecords$EfUsimLiLoaded;->this$0:Lcom/android/internal/telephony/uicc/SIMRecords;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "EF_LI="
+    const-string v2, "EF_LI="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -102,6 +98,5 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/uicc/SIMRecords;->log(Ljava/lang/String;)V
 
-    .line 1259
     return-void
 .end method

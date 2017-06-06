@@ -48,14 +48,11 @@
 
     move/from16 v12, p12
 
-    .line 28
     invoke-direct/range {v1 .. v12}, Lcom/android/server/pm/PackageSettingBase;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;Ljava/io/File;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;III)V
 
-    .line 31
     move/from16 v0, p9
 
     iput v0, p0, Lcom/android/server/pm/PendingPackage;->sharedId:I
 
-    .line 27
     return-void
 .end method

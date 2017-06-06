@@ -53,10 +53,9 @@
 
     const/4 v4, 0x0
 
-    .line 24
     new-instance v0, Lcyanogenmod/app/ThemeComponent;
 
-    const-string/jumbo v1, "UNKNOWN"
+    const-string v1, "UNKNOWN"
 
     const/4 v2, -0x1
 
@@ -64,46 +63,41 @@
 
     sput-object v0, Lcyanogenmod/app/ThemeComponent;->UNKNOWN:Lcyanogenmod/app/ThemeComponent;
 
-    .line 25
     new-instance v0, Lcyanogenmod/app/ThemeComponent;
 
-    const-string/jumbo v1, "OVERLAY"
+    const-string v1, "OVERLAY"
 
     invoke-direct {v0, v1, v5, v4}, Lcyanogenmod/app/ThemeComponent;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcyanogenmod/app/ThemeComponent;->OVERLAY:Lcyanogenmod/app/ThemeComponent;
 
-    .line 26
     new-instance v0, Lcyanogenmod/app/ThemeComponent;
 
-    const-string/jumbo v1, "BOOT_ANIM"
+    const-string v1, "BOOT_ANIM"
 
     invoke-direct {v0, v1, v6, v5}, Lcyanogenmod/app/ThemeComponent;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcyanogenmod/app/ThemeComponent;->BOOT_ANIM:Lcyanogenmod/app/ThemeComponent;
 
-    .line 27
     new-instance v0, Lcyanogenmod/app/ThemeComponent;
 
-    const-string/jumbo v1, "WALLPAPER"
+    const-string v1, "WALLPAPER"
 
     invoke-direct {v0, v1, v7, v6}, Lcyanogenmod/app/ThemeComponent;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcyanogenmod/app/ThemeComponent;->WALLPAPER:Lcyanogenmod/app/ThemeComponent;
 
-    .line 28
     new-instance v0, Lcyanogenmod/app/ThemeComponent;
 
-    const-string/jumbo v1, "LOCKSCREEN"
+    const-string v1, "LOCKSCREEN"
 
     invoke-direct {v0, v1, v8, v7}, Lcyanogenmod/app/ThemeComponent;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcyanogenmod/app/ThemeComponent;->LOCKSCREEN:Lcyanogenmod/app/ThemeComponent;
 
-    .line 29
     new-instance v0, Lcyanogenmod/app/ThemeComponent;
 
-    const-string/jumbo v1, "FONT"
+    const-string v1, "FONT"
 
     const/4 v2, 0x5
 
@@ -111,10 +105,9 @@
 
     sput-object v0, Lcyanogenmod/app/ThemeComponent;->FONT:Lcyanogenmod/app/ThemeComponent;
 
-    .line 30
     new-instance v0, Lcyanogenmod/app/ThemeComponent;
 
-    const-string/jumbo v1, "ICON"
+    const-string v1, "ICON"
 
     const/4 v2, 0x6
 
@@ -124,10 +117,9 @@
 
     sput-object v0, Lcyanogenmod/app/ThemeComponent;->ICON:Lcyanogenmod/app/ThemeComponent;
 
-    .line 31
     new-instance v0, Lcyanogenmod/app/ThemeComponent;
 
-    const-string/jumbo v1, "SOUND"
+    const-string v1, "SOUND"
 
     const/4 v2, 0x7
 
@@ -137,7 +129,6 @@
 
     sput-object v0, Lcyanogenmod/app/ThemeComponent;->SOUND:Lcyanogenmod/app/ThemeComponent;
 
-    .line 23
     const/16 v0, 0x8
 
     new-array v0, v0, [Lcyanogenmod/app/ThemeComponent;
@@ -190,13 +181,10 @@
     .param p3, "id"    # I
 
     .prologue
-    .line 34
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 35
     iput p3, p0, Lcyanogenmod/app/ThemeComponent;->id:I
 
-    .line 34
     return-void
 .end method
 
@@ -205,7 +193,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 23
     const-class v0, Lcyanogenmod/app/ThemeComponent;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -221,7 +208,6 @@
     .locals 1
 
     .prologue
-    .line 23
     sget-object v0, Lcyanogenmod/app/ThemeComponent;->$VALUES:[Lcyanogenmod/app/ThemeComponent;
 
     return-object v0

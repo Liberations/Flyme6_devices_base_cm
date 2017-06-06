@@ -24,7 +24,6 @@
     .param p1, "this$1"    # Lcom/android/server/connectivity/PacManager$3;
 
     .prologue
-    .line 320
     iput-object p1, p0, Lcom/android/server/connectivity/PacManager$3$1;->this$1:Lcom/android/server/connectivity/PacManager$3;
 
     invoke-direct {p0}, Lcom/android/net/IProxyPortListener$Stub;-><init>()V
@@ -46,7 +45,6 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 323
     iget-object v0, p0, Lcom/android/server/connectivity/PacManager$3$1;->this$1:Lcom/android/server/connectivity/PacManager$3;
 
     iget-object v0, v0, Lcom/android/server/connectivity/PacManager$3;->this$0:Lcom/android/server/connectivity/PacManager;
@@ -57,7 +55,6 @@
 
     if-eq v0, v2, :cond_0
 
-    .line 325
     iget-object v0, p0, Lcom/android/server/connectivity/PacManager$3$1;->this$1:Lcom/android/server/connectivity/PacManager$3;
 
     iget-object v0, v0, Lcom/android/server/connectivity/PacManager$3;->this$0:Lcom/android/server/connectivity/PacManager;
@@ -66,7 +63,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/connectivity/PacManager;->-set1(Lcom/android/server/connectivity/PacManager;Z)Z
 
-    .line 327
     :cond_0
     iget-object v0, p0, Lcom/android/server/connectivity/PacManager$3$1;->this$1:Lcom/android/server/connectivity/PacManager$3;
 
@@ -74,17 +70,15 @@
 
     invoke-static {v0, p1}, Lcom/android/server/connectivity/PacManager;->-set2(Lcom/android/server/connectivity/PacManager;I)I
 
-    .line 328
     if-eq p1, v2, :cond_1
 
-    .line 329
-    const-string/jumbo v0, "PacManager"
+    const-string v0, "PacManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Local proxy is bound on "
+    const-string v2, "Local proxy is bound on "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -100,22 +94,19 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 330
     iget-object v0, p0, Lcom/android/server/connectivity/PacManager$3$1;->this$1:Lcom/android/server/connectivity/PacManager$3;
 
     iget-object v0, v0, Lcom/android/server/connectivity/PacManager$3;->this$0:Lcom/android/server/connectivity/PacManager;
 
     invoke-static {v0}, Lcom/android/server/connectivity/PacManager;->-wrap4(Lcom/android/server/connectivity/PacManager;)V
 
-    .line 322
     :goto_0
     return-void
 
-    .line 332
     :cond_1
-    const-string/jumbo v0, "PacManager"
+    const-string v0, "PacManager"
 
-    const-string/jumbo v1, "Received invalid port from Local Proxy, PAC will not be operational"
+    const-string v1, "Received invalid port from Local Proxy, PAC will not be operational"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 

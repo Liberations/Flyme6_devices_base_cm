@@ -25,7 +25,6 @@
     .param p2, "$anonymous0"    # Landroid/os/Looper;
 
     .prologue
-    .line 79
     iput-object p1, p0, Landroid/telecom/InCallService$1;->this$0:Landroid/telecom/InCallService;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -44,7 +43,6 @@
 
     const/4 v3, 0x1
 
-    .line 82
     iget-object v5, p0, Landroid/telecom/InCallService$1;->this$0:Landroid/telecom/InCallService;
 
     invoke-static {v5}, Landroid/telecom/InCallService;->-get1(Landroid/telecom/InCallService;)Landroid/telecom/Phone;
@@ -57,20 +55,16 @@
 
     if-eq v5, v3, :cond_0
 
-    .line 83
     return-void
 
-    .line 86
     :cond_0
     iget v5, p1, Landroid/os/Message;->what:I
 
     packed-switch v5, :pswitch_data_0
 
-    .line 81
     :goto_0
     return-void
 
-    .line 88
     :pswitch_0
     iget-object v4, p0, Landroid/telecom/InCallService$1;->this$0:Landroid/telecom/InCallService;
 
@@ -88,7 +82,6 @@
 
     invoke-static {v4, v5}, Landroid/telecom/InCallService;->-set0(Landroid/telecom/InCallService;Landroid/telecom/Phone;)Landroid/telecom/Phone;
 
-    .line 89
     iget-object v3, p0, Landroid/telecom/InCallService$1;->this$0:Landroid/telecom/InCallService;
 
     invoke-static {v3}, Landroid/telecom/InCallService;->-get1(Landroid/telecom/InCallService;)Landroid/telecom/Phone;
@@ -103,7 +96,6 @@
 
     invoke-virtual {v3, v4}, Landroid/telecom/Phone;->addListener(Landroid/telecom/Phone$Listener;)V
 
-    .line 90
     iget-object v3, p0, Landroid/telecom/InCallService$1;->this$0:Landroid/telecom/InCallService;
 
     iget-object v4, p0, Landroid/telecom/InCallService$1;->this$0:Landroid/telecom/InCallService;
@@ -116,7 +108,6 @@
 
     goto :goto_0
 
-    .line 93
     :pswitch_1
     iget-object v3, p0, Landroid/telecom/InCallService$1;->this$0:Landroid/telecom/InCallService;
 
@@ -132,7 +123,6 @@
 
     goto :goto_0
 
-    .line 96
     :pswitch_2
     iget-object v3, p0, Landroid/telecom/InCallService$1;->this$0:Landroid/telecom/InCallService;
 
@@ -148,7 +138,6 @@
 
     goto :goto_0
 
-    .line 99
     :pswitch_3
     iget-object v3, p0, Landroid/telecom/InCallService$1;->this$0:Landroid/telecom/InCallService;
 
@@ -164,26 +153,22 @@
 
     goto :goto_0
 
-    .line 102
     :pswitch_4
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/os/SomeArgs;
 
-    .line 104
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     :try_start_0
     iget-object v1, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/String;
 
-    .line 105
     .local v1, "callId":Ljava/lang/String;
     iget-object v2, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
 
     check-cast v2, Ljava/lang/String;
 
-    .line 106
     .local v2, "remaining":Ljava/lang/String;
     iget-object v3, p0, Landroid/telecom/InCallService$1;->this$0:Landroid/telecom/InCallService;
 
@@ -195,24 +180,19 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 108
     invoke-virtual {v0}, Lcom/android/internal/os/SomeArgs;->recycle()V
 
     goto :goto_0
 
-    .line 107
     .end local v1    # "callId":Ljava/lang/String;
     .end local v2    # "remaining":Ljava/lang/String;
     :catchall_0
     move-exception v3
 
-    .line 108
     invoke-virtual {v0}, Lcom/android/internal/os/SomeArgs;->recycle()V
 
-    .line 107
     throw v3
 
-    .line 113
     .end local v0    # "args":Lcom/android/internal/os/SomeArgs;
     :pswitch_5
     iget-object v3, p0, Landroid/telecom/InCallService$1;->this$0:Landroid/telecom/InCallService;
@@ -229,7 +209,6 @@
 
     goto/16 :goto_0
 
-    .line 116
     :pswitch_6
     iget-object v5, p0, Landroid/telecom/InCallService$1;->this$0:Landroid/telecom/InCallService;
 
@@ -251,7 +230,6 @@
 
     goto :goto_1
 
-    .line 119
     :pswitch_7
     iget-object v5, p0, Landroid/telecom/InCallService$1;->this$0:Landroid/telecom/InCallService;
 
@@ -273,7 +251,6 @@
 
     goto :goto_2
 
-    .line 86
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

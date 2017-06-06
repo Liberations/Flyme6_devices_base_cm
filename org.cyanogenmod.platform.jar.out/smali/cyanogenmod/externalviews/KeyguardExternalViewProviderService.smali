@@ -56,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 63
     const-class v0, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -65,7 +64,6 @@
 
     sput-object v0, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService;->TAG:Ljava/lang/String;
 
-    .line 61
     return-void
 .end method
 
@@ -73,17 +71,14 @@
     .locals 1
 
     .prologue
-    .line 61
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    .line 87
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService;->mHandler:Landroid/os/Handler;
 
-    .line 61
     return-void
 .end method
 
@@ -97,7 +92,6 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 104
     new-instance v0, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$1;
 
     invoke-direct {v0, p0}, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$1;-><init>(Lcyanogenmod/externalviews/KeyguardExternalViewProviderService;)V
@@ -109,11 +103,9 @@
     .locals 1
 
     .prologue
-    .line 91
     invoke-super {p0}, Landroid/app/Service;->onCreate()V
 
-    .line 93
-    const-string/jumbo v0, "window"
+    const-string v0, "window"
 
     invoke-virtual {p0, v0}, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -123,7 +115,6 @@
 
     iput-object v0, p0, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService;->mWindowManager:Landroid/view/WindowManager;
 
-    .line 90
     return-void
 .end method
 
@@ -134,10 +125,8 @@
     .param p3, "startId"    # I
 
     .prologue
-    .line 98
     invoke-super {p0, p1, p2, p3}, Landroid/app/Service;->onStartCommand(Landroid/content/Intent;II)I
 
-    .line 99
     const/4 v0, 0x2
 
     return v0

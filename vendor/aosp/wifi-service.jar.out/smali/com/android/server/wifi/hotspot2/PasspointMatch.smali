@@ -43,52 +43,46 @@
 
     const/4 v2, 0x0
 
-    .line 4
     new-instance v0, Lcom/android/server/wifi/hotspot2/PasspointMatch;
 
-    const-string/jumbo v1, "HomeProvider"
+    const-string v1, "HomeProvider"
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/wifi/hotspot2/PasspointMatch;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/server/wifi/hotspot2/PasspointMatch;->HomeProvider:Lcom/android/server/wifi/hotspot2/PasspointMatch;
 
-    .line 5
     new-instance v0, Lcom/android/server/wifi/hotspot2/PasspointMatch;
 
-    const-string/jumbo v1, "RoamingProvider"
+    const-string v1, "RoamingProvider"
 
     invoke-direct {v0, v1, v3}, Lcom/android/server/wifi/hotspot2/PasspointMatch;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/server/wifi/hotspot2/PasspointMatch;->RoamingProvider:Lcom/android/server/wifi/hotspot2/PasspointMatch;
 
-    .line 6
     new-instance v0, Lcom/android/server/wifi/hotspot2/PasspointMatch;
 
-    const-string/jumbo v1, "Incomplete"
+    const-string v1, "Incomplete"
 
     invoke-direct {v0, v1, v4}, Lcom/android/server/wifi/hotspot2/PasspointMatch;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/server/wifi/hotspot2/PasspointMatch;->Incomplete:Lcom/android/server/wifi/hotspot2/PasspointMatch;
 
-    .line 7
     new-instance v0, Lcom/android/server/wifi/hotspot2/PasspointMatch;
 
-    const-string/jumbo v1, "None"
+    const-string v1, "None"
 
     invoke-direct {v0, v1, v5}, Lcom/android/server/wifi/hotspot2/PasspointMatch;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/server/wifi/hotspot2/PasspointMatch;->None:Lcom/android/server/wifi/hotspot2/PasspointMatch;
 
-    .line 8
     new-instance v0, Lcom/android/server/wifi/hotspot2/PasspointMatch;
 
-    const-string/jumbo v1, "Declined"
+    const-string v1, "Declined"
 
     invoke-direct {v0, v1, v6}, Lcom/android/server/wifi/hotspot2/PasspointMatch;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/server/wifi/hotspot2/PasspointMatch;->Declined:Lcom/android/server/wifi/hotspot2/PasspointMatch;
 
-    .line 3
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/android/server/wifi/hotspot2/PasspointMatch;
@@ -122,7 +116,6 @@
     .locals 0
 
     .prologue
-    .line 3
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -133,7 +126,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 3
     const-class v0, Lcom/android/server/wifi/hotspot2/PasspointMatch;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -149,7 +141,6 @@
     .locals 1
 
     .prologue
-    .line 3
     sget-object v0, Lcom/android/server/wifi/hotspot2/PasspointMatch;->$VALUES:[Lcom/android/server/wifi/hotspot2/PasspointMatch;
 
     return-object v0

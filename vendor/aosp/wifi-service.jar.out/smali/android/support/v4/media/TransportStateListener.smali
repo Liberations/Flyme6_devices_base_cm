@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,7 +20,6 @@
     .param p1, "controller"    # Landroid/support/v4/media/TransportController;
 
     .prologue
-    .line 29
     return-void
 .end method
 
@@ -30,6 +28,5 @@
     .param p1, "controller"    # Landroid/support/v4/media/TransportController;
 
     .prologue
-    .line 37
     return-void
 .end method

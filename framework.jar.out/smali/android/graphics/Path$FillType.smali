@@ -52,47 +52,38 @@
 
     const/4 v2, 0x0
 
-    .line 189
     new-instance v0, Landroid/graphics/Path$FillType;
 
-    const-string/jumbo v1, "WINDING"
+    const-string v1, "WINDING"
 
     invoke-direct {v0, v1, v2, v2}, Landroid/graphics/Path$FillType;-><init>(Ljava/lang/String;II)V
 
-    .line 194
     sput-object v0, Landroid/graphics/Path$FillType;->WINDING:Landroid/graphics/Path$FillType;
 
-    .line 195
     new-instance v0, Landroid/graphics/Path$FillType;
 
-    const-string/jumbo v1, "EVEN_ODD"
+    const-string v1, "EVEN_ODD"
 
     invoke-direct {v0, v1, v3, v3}, Landroid/graphics/Path$FillType;-><init>(Ljava/lang/String;II)V
 
-    .line 199
     sput-object v0, Landroid/graphics/Path$FillType;->EVEN_ODD:Landroid/graphics/Path$FillType;
 
-    .line 200
     new-instance v0, Landroid/graphics/Path$FillType;
 
-    const-string/jumbo v1, "INVERSE_WINDING"
+    const-string v1, "INVERSE_WINDING"
 
     invoke-direct {v0, v1, v4, v4}, Landroid/graphics/Path$FillType;-><init>(Ljava/lang/String;II)V
 
-    .line 203
     sput-object v0, Landroid/graphics/Path$FillType;->INVERSE_WINDING:Landroid/graphics/Path$FillType;
 
-    .line 204
     new-instance v0, Landroid/graphics/Path$FillType;
 
-    const-string/jumbo v1, "INVERSE_EVEN_ODD"
+    const-string v1, "INVERSE_EVEN_ODD"
 
     invoke-direct {v0, v1, v5, v5}, Landroid/graphics/Path$FillType;-><init>(Ljava/lang/String;II)V
 
-    .line 207
     sput-object v0, Landroid/graphics/Path$FillType;->INVERSE_EVEN_ODD:Landroid/graphics/Path$FillType;
 
-    .line 188
     const/4 v0, 0x4
 
     new-array v0, v0, [Landroid/graphics/Path$FillType;
@@ -123,13 +114,10 @@
     .param p3, "ni"    # I
 
     .prologue
-    .line 209
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 210
     iput p3, p0, Landroid/graphics/Path$FillType;->nativeInt:I
 
-    .line 209
     return-void
 .end method
 
@@ -138,7 +126,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 188
     const-class v0, Landroid/graphics/Path$FillType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -154,7 +141,6 @@
     .locals 1
 
     .prologue
-    .line 188
     sget-object v0, Landroid/graphics/Path$FillType;->$VALUES:[Landroid/graphics/Path$FillType;
 
     return-object v0

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/app/LauncherActivity;
 
     .prologue
-    .line 377
     iput-object p1, p0, Landroid/app/LauncherActivity$1;->this$0:Landroid/app/LauncherActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,11 +41,9 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 379
     iget-object v0, p0, Landroid/app/LauncherActivity$1;->this$0:Landroid/app/LauncherActivity;
 
     invoke-virtual {v0}, Landroid/app/LauncherActivity;->finish()V
 
-    .line 378
     return-void
 .end method

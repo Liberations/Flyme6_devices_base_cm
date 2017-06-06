@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,16 +44,13 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 52
     new-instance v0, Landroid/hardware/CameraInfo;
 
     invoke-direct {v0}, Landroid/hardware/CameraInfo;-><init>()V
 
-    .line 53
     .local v0, "info":Landroid/hardware/CameraInfo;
     invoke-virtual {v0, p1}, Landroid/hardware/CameraInfo;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 55
     return-object v0
 .end method
 
@@ -63,7 +59,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 51
     invoke-virtual {p0, p1}, Landroid/hardware/CameraInfo$1;->createFromParcel(Landroid/os/Parcel;)Landroid/hardware/CameraInfo;
 
     move-result-object v0
@@ -76,7 +71,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 60
     new-array v0, p1, [Landroid/hardware/CameraInfo;
 
     return-object v0
@@ -87,7 +81,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 59
     invoke-virtual {p0, p1}, Landroid/hardware/CameraInfo$1;->newArray(I)[Landroid/hardware/CameraInfo;
 
     move-result-object v0

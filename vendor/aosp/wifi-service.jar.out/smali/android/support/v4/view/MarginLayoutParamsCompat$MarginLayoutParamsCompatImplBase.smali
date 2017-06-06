@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,7 +34,6 @@
     .param p1, "lp"    # Landroid/view/ViewGroup$MarginLayoutParams;
 
     .prologue
-    .line 68
     const/4 v0, 0x0
 
     return v0
@@ -46,7 +44,6 @@
     .param p1, "lp"    # Landroid/view/ViewGroup$MarginLayoutParams;
 
     .prologue
-    .line 48
     iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
     return v0
@@ -57,7 +54,6 @@
     .param p1, "lp"    # Landroid/view/ViewGroup$MarginLayoutParams;
 
     .prologue
-    .line 43
     iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
     return v0
@@ -68,7 +64,6 @@
     .param p1, "lp"    # Landroid/view/ViewGroup$MarginLayoutParams;
 
     .prologue
-    .line 63
     const/4 v0, 0x0
 
     return v0
@@ -80,7 +75,6 @@
     .param p2, "layoutDirection"    # I
 
     .prologue
-    .line 77
     return-void
 .end method
 
@@ -90,7 +84,6 @@
     .param p2, "layoutDirection"    # I
 
     .prologue
-    .line 72
     return-void
 .end method
 
@@ -100,10 +93,8 @@
     .param p2, "marginEnd"    # I
 
     .prologue
-    .line 58
     iput p2, p1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
-    .line 57
     return-void
 .end method
 
@@ -113,9 +104,7 @@
     .param p2, "marginStart"    # I
 
     .prologue
-    .line 53
     iput p2, p1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
-    .line 52
     return-void
 .end method

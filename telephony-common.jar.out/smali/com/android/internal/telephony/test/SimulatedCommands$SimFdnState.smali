@@ -48,43 +48,38 @@
 
     const/4 v2, 0x0
 
-    .line 51
     new-instance v0, Lcom/android/internal/telephony/test/SimulatedCommands$SimFdnState;
 
-    const-string/jumbo v1, "NONE"
+    const-string v1, "NONE"
 
     invoke-direct {v0, v1, v2}, Lcom/android/internal/telephony/test/SimulatedCommands$SimFdnState;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/test/SimulatedCommands$SimFdnState;->NONE:Lcom/android/internal/telephony/test/SimulatedCommands$SimFdnState;
 
-    .line 52
     new-instance v0, Lcom/android/internal/telephony/test/SimulatedCommands$SimFdnState;
 
-    const-string/jumbo v1, "REQUIRE_PIN2"
+    const-string v1, "REQUIRE_PIN2"
 
     invoke-direct {v0, v1, v3}, Lcom/android/internal/telephony/test/SimulatedCommands$SimFdnState;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/test/SimulatedCommands$SimFdnState;->REQUIRE_PIN2:Lcom/android/internal/telephony/test/SimulatedCommands$SimFdnState;
 
-    .line 53
     new-instance v0, Lcom/android/internal/telephony/test/SimulatedCommands$SimFdnState;
 
-    const-string/jumbo v1, "REQUIRE_PUK2"
+    const-string v1, "REQUIRE_PUK2"
 
     invoke-direct {v0, v1, v4}, Lcom/android/internal/telephony/test/SimulatedCommands$SimFdnState;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/test/SimulatedCommands$SimFdnState;->REQUIRE_PUK2:Lcom/android/internal/telephony/test/SimulatedCommands$SimFdnState;
 
-    .line 54
     new-instance v0, Lcom/android/internal/telephony/test/SimulatedCommands$SimFdnState;
 
-    const-string/jumbo v1, "SIM_PERM_LOCKED"
+    const-string v1, "SIM_PERM_LOCKED"
 
     invoke-direct {v0, v1, v5}, Lcom/android/internal/telephony/test/SimulatedCommands$SimFdnState;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/test/SimulatedCommands$SimFdnState;->SIM_PERM_LOCKED:Lcom/android/internal/telephony/test/SimulatedCommands$SimFdnState;
 
-    .line 50
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/android/internal/telephony/test/SimulatedCommands$SimFdnState;
@@ -114,7 +109,6 @@
     .locals 0
 
     .prologue
-    .line 50
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -125,7 +119,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 50
     const-class v0, Lcom/android/internal/telephony/test/SimulatedCommands$SimFdnState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -141,7 +134,6 @@
     .locals 1
 
     .prologue
-    .line 50
     sget-object v0, Lcom/android/internal/telephony/test/SimulatedCommands$SimFdnState;->$VALUES:[Lcom/android/internal/telephony/test/SimulatedCommands$SimFdnState;
 
     return-object v0

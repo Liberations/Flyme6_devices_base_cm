@@ -43,15 +43,12 @@
     .locals 1
 
     .prologue
-    .line 60
     new-instance v0, Landroid/bluetooth/BluetoothMasInstance$1;
 
     invoke-direct {v0}, Landroid/bluetooth/BluetoothMasInstance$1;-><init>()V
 
-    .line 59
     sput-object v0, Landroid/bluetooth/BluetoothMasInstance;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 23
     return-void
 .end method
 
@@ -63,22 +60,16 @@
     .param p4, "msgTypes"    # I
 
     .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
     iput p1, p0, Landroid/bluetooth/BluetoothMasInstance;->mId:I
 
-    .line 31
     iput-object p2, p0, Landroid/bluetooth/BluetoothMasInstance;->mName:Ljava/lang/String;
 
-    .line 32
     iput p3, p0, Landroid/bluetooth/BluetoothMasInstance;->mChannel:I
 
-    .line 33
     iput p4, p0, Landroid/bluetooth/BluetoothMasInstance;->mMsgTypes:I
 
-    .line 29
     return-void
 .end method
 
@@ -88,7 +79,6 @@
     .locals 1
 
     .prologue
-    .line 56
     const/4 v0, 0x0
 
     return v0
@@ -101,12 +91,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 38
     instance-of v1, p1, Landroid/bluetooth/BluetoothMasInstance;
 
     if-eqz v1, :cond_1
 
-    .line 39
     iget v1, p0, Landroid/bluetooth/BluetoothMasInstance;->mId:I
 
     check-cast p1, Landroid/bluetooth/BluetoothMasInstance;
@@ -121,7 +109,6 @@
     :cond_0
     return v0
 
-    .line 41
     .restart local p1    # "o":Ljava/lang/Object;
     :cond_1
     return v0
@@ -131,7 +118,6 @@
     .locals 1
 
     .prologue
-    .line 93
     iget v0, p0, Landroid/bluetooth/BluetoothMasInstance;->mChannel:I
 
     return v0
@@ -141,7 +127,6 @@
     .locals 1
 
     .prologue
-    .line 85
     iget v0, p0, Landroid/bluetooth/BluetoothMasInstance;->mId:I
 
     return v0
@@ -151,7 +136,6 @@
     .locals 1
 
     .prologue
-    .line 97
     iget v0, p0, Landroid/bluetooth/BluetoothMasInstance;->mMsgTypes:I
 
     return v0
@@ -161,7 +145,6 @@
     .locals 1
 
     .prologue
-    .line 89
     iget-object v0, p0, Landroid/bluetooth/BluetoothMasInstance;->mName:Ljava/lang/String;
 
     return-object v0
@@ -171,7 +154,6 @@
     .locals 2
 
     .prologue
-    .line 46
     iget v0, p0, Landroid/bluetooth/BluetoothMasInstance;->mId:I
 
     iget v1, p0, Landroid/bluetooth/BluetoothMasInstance;->mChannel:I
@@ -196,7 +178,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 101
     iget v1, p0, Landroid/bluetooth/BluetoothMasInstance;->mMsgTypes:I
 
     and-int/2addr v1, p1
@@ -213,7 +194,6 @@
     .locals 2
 
     .prologue
-    .line 51
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -228,7 +208,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, ":"
+    const-string v1, ":"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -240,7 +220,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, ":"
+    const-string v1, ":"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -252,20 +232,18 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, ":"
+    const-string v1, ":"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 52
     iget v1, p0, Landroid/bluetooth/BluetoothMasInstance;->mMsgTypes:I
 
     invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 51
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -283,26 +261,21 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 71
     iget v0, p0, Landroid/bluetooth/BluetoothMasInstance;->mId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 72
     iget-object v0, p0, Landroid/bluetooth/BluetoothMasInstance;->mName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 73
     iget v0, p0, Landroid/bluetooth/BluetoothMasInstance;->mChannel:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 74
     iget v0, p0, Landroid/bluetooth/BluetoothMasInstance;->mMsgTypes:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 70
     return-void
 .end method

@@ -33,7 +33,6 @@
     .param p3, "val$mask"    # I
 
     .prologue
-    .line 448
     iput-object p1, p0, Lcom/android/server/statusbar/StatusBarManagerService$5;->this$0:Lcom/android/server/statusbar/StatusBarManagerService;
 
     iput p2, p0, Lcom/android/server/statusbar/StatusBarManagerService$5;->val$vis:I
@@ -51,7 +50,6 @@
     .locals 4
 
     .prologue
-    .line 450
     iget-object v1, p0, Lcom/android/server/statusbar/StatusBarManagerService$5;->this$0:Lcom/android/server/statusbar/StatusBarManagerService;
 
     invoke-static {v1}, Lcom/android/server/statusbar/StatusBarManagerService;->-get0(Lcom/android/server/statusbar/StatusBarManagerService;)Lcom/android/internal/statusbar/IStatusBar;
@@ -60,7 +58,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 452
     :try_start_0
     iget-object v1, p0, Lcom/android/server/statusbar/StatusBarManagerService$5;->this$0:Lcom/android/server/statusbar/StatusBarManagerService;
 
@@ -76,12 +73,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 449
     :cond_0
     :goto_0
     return-void
 
-    .line 453
     :catch_0
     move-exception v0
 

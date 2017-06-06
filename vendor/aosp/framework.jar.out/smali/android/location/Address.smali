@@ -278,15 +278,12 @@
     .locals 1
 
     .prologue
-    .line 476
     new-instance v0, Landroid/location/Address$1;
 
     invoke-direct {v0}, Landroid/location/Address$1;-><init>()V
 
-    .line 475
     sput-object v0, Landroid/location/Address;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 34
     return-void
 .end method
 
@@ -297,29 +294,22 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/location/Address;->mMaxAddressLineIndex:I
 
-    .line 53
     iput-boolean v1, p0, Landroid/location/Address;->mHasLatitude:Z
 
-    .line 54
     iput-boolean v1, p0, Landroid/location/Address;->mHasLongitude:Z
 
-    .line 57
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/location/Address;->mExtras:Landroid/os/Bundle;
 
-    .line 64
     iput-object p1, p0, Landroid/location/Address;->mLocale:Ljava/util/Locale;
 
-    .line 63
     return-void
 .end method
 
@@ -329,12 +319,10 @@
     .locals 1
 
     .prologue
-    .line 321
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/location/Address;->mHasLatitude:Z
 
-    .line 320
     return-void
 .end method
 
@@ -342,12 +330,10 @@
     .locals 1
 
     .prologue
-    .line 358
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/location/Address;->mHasLongitude:Z
 
-    .line 357
     return-void
 .end method
 
@@ -355,7 +341,6 @@
     .locals 1
 
     .prologue
-    .line 530
     iget-object v0, p0, Landroid/location/Address;->mExtras:Landroid/os/Bundle;
 
     if-eqz v0, :cond_0
@@ -382,17 +367,15 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 89
     if-gez p1, :cond_0
 
-    .line 90
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "index = "
+    const-string v2, "index = "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -402,7 +385,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, " < 0"
+    const-string v2, " < 0"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -416,7 +399,6 @@
 
     throw v0
 
-    .line 92
     :cond_0
     iget-object v1, p0, Landroid/location/Address;->mAddressLines:Ljava/util/HashMap;
 
@@ -445,7 +427,6 @@
     .locals 1
 
     .prologue
-    .line 141
     iget-object v0, p0, Landroid/location/Address;->mAdminArea:Ljava/lang/String;
 
     return-object v0
@@ -455,7 +436,6 @@
     .locals 1
 
     .prologue
-    .line 260
     iget-object v0, p0, Landroid/location/Address;->mCountryCode:Ljava/lang/String;
 
     return-object v0
@@ -465,7 +445,6 @@
     .locals 1
 
     .prologue
-    .line 276
     iget-object v0, p0, Landroid/location/Address;->mCountryName:Ljava/lang/String;
 
     return-object v0
@@ -475,7 +454,6 @@
     .locals 1
 
     .prologue
-    .line 410
     iget-object v0, p0, Landroid/location/Address;->mExtras:Landroid/os/Bundle;
 
     return-object v0
@@ -485,7 +463,6 @@
     .locals 1
 
     .prologue
-    .line 126
     iget-object v0, p0, Landroid/location/Address;->mFeatureName:Ljava/lang/String;
 
     return-object v0
@@ -495,17 +472,14 @@
     .locals 2
 
     .prologue
-    .line 302
     iget-boolean v0, p0, Landroid/location/Address;->mHasLatitude:Z
 
     if-eqz v0, :cond_0
 
-    .line 303
     iget-wide v0, p0, Landroid/location/Address;->mLatitude:D
 
     return-wide v0
 
-    .line 305
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -518,7 +492,6 @@
     .locals 1
 
     .prologue
-    .line 71
     iget-object v0, p0, Landroid/location/Address;->mLocale:Ljava/util/Locale;
 
     return-object v0
@@ -528,7 +501,6 @@
     .locals 1
 
     .prologue
-    .line 170
     iget-object v0, p0, Landroid/location/Address;->mLocality:Ljava/lang/String;
 
     return-object v0
@@ -538,17 +510,14 @@
     .locals 2
 
     .prologue
-    .line 339
     iget-boolean v0, p0, Landroid/location/Address;->mHasLongitude:Z
 
     if-eqz v0, :cond_0
 
-    .line 340
     iget-wide v0, p0, Landroid/location/Address;->mLongitude:D
 
     return-wide v0
 
-    .line 342
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -561,7 +530,6 @@
     .locals 1
 
     .prologue
-    .line 79
     iget v0, p0, Landroid/location/Address;->mMaxAddressLineIndex:I
 
     return v0
@@ -571,7 +539,6 @@
     .locals 1
 
     .prologue
-    .line 369
     iget-object v0, p0, Landroid/location/Address;->mPhone:Ljava/lang/String;
 
     return-object v0
@@ -581,7 +548,6 @@
     .locals 1
 
     .prologue
-    .line 244
     iget-object v0, p0, Landroid/location/Address;->mPostalCode:Ljava/lang/String;
 
     return-object v0
@@ -591,7 +557,6 @@
     .locals 1
 
     .prologue
-    .line 229
     iget-object v0, p0, Landroid/location/Address;->mPremises:Ljava/lang/String;
 
     return-object v0
@@ -601,7 +566,6 @@
     .locals 1
 
     .prologue
-    .line 156
     iget-object v0, p0, Landroid/location/Address;->mSubAdminArea:Ljava/lang/String;
 
     return-object v0
@@ -611,7 +575,6 @@
     .locals 1
 
     .prologue
-    .line 185
     iget-object v0, p0, Landroid/location/Address;->mSubLocality:Ljava/lang/String;
 
     return-object v0
@@ -621,7 +584,6 @@
     .locals 1
 
     .prologue
-    .line 215
     iget-object v0, p0, Landroid/location/Address;->mSubThoroughfare:Ljava/lang/String;
 
     return-object v0
@@ -631,7 +593,6 @@
     .locals 1
 
     .prologue
-    .line 200
     iget-object v0, p0, Landroid/location/Address;->mThoroughfare:Ljava/lang/String;
 
     return-object v0
@@ -641,7 +602,6 @@
     .locals 1
 
     .prologue
-    .line 384
     iget-object v0, p0, Landroid/location/Address;->mUrl:Ljava/lang/String;
 
     return-object v0
@@ -651,7 +611,6 @@
     .locals 1
 
     .prologue
-    .line 292
     iget-boolean v0, p0, Landroid/location/Address;->mHasLatitude:Z
 
     return v0
@@ -661,7 +620,6 @@
     .locals 1
 
     .prologue
-    .line 329
     iget-boolean v0, p0, Landroid/location/Address;->mHasLongitude:Z
 
     return v0
@@ -673,17 +631,15 @@
     .param p2, "line"    # Ljava/lang/String;
 
     .prologue
-    .line 102
     if-gez p1, :cond_0
 
-    .line 103
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "index = "
+    const-string v4, "index = "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -693,7 +649,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, " < 0"
+    const-string v4, " < 0"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -707,20 +663,17 @@
 
     throw v2
 
-    .line 105
     :cond_0
     iget-object v2, p0, Landroid/location/Address;->mAddressLines:Ljava/util/HashMap;
 
     if-nez v2, :cond_1
 
-    .line 106
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
     iput-object v2, p0, Landroid/location/Address;->mAddressLines:Ljava/util/HashMap;
 
-    .line 108
     :cond_1
     iget-object v2, p0, Landroid/location/Address;->mAddressLines:Ljava/util/HashMap;
 
@@ -730,15 +683,12 @@
 
     invoke-virtual {v2, v3, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 110
     if-nez p2, :cond_2
 
-    .line 112
     const/4 v2, -0x1
 
     iput v2, p0, Landroid/location/Address;->mMaxAddressLineIndex:I
 
-    .line 113
     iget-object v2, p0, Landroid/location/Address;->mAddressLines:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
@@ -763,7 +713,6 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 114
     .local v0, "i":Ljava/lang/Integer;
     iget v2, p0, Landroid/location/Address;->mMaxAddressLineIndex:I
 
@@ -779,7 +728,6 @@
 
     goto :goto_0
 
-    .line 117
     .end local v0    # "i":Ljava/lang/Integer;
     .end local v1    # "i$iterator":Ljava/util/Iterator;
     :cond_2
@@ -791,7 +739,6 @@
 
     iput v2, p0, Landroid/location/Address;->mMaxAddressLineIndex:I
 
-    .line 101
     :cond_3
     return-void
 .end method
@@ -801,10 +748,8 @@
     .param p1, "adminArea"    # Ljava/lang/String;
 
     .prologue
-    .line 148
     iput-object p1, p0, Landroid/location/Address;->mAdminArea:Ljava/lang/String;
 
-    .line 147
     return-void
 .end method
 
@@ -813,10 +758,8 @@
     .param p1, "countryCode"    # Ljava/lang/String;
 
     .prologue
-    .line 268
     iput-object p1, p0, Landroid/location/Address;->mCountryCode:Ljava/lang/String;
 
-    .line 267
     return-void
 .end method
 
@@ -825,10 +768,8 @@
     .param p1, "countryName"    # Ljava/lang/String;
 
     .prologue
-    .line 284
     iput-object p1, p0, Landroid/location/Address;->mCountryName:Ljava/lang/String;
 
-    .line 283
     return-void
 .end method
 
@@ -839,16 +780,13 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 418
     if-nez p1, :cond_0
 
     :goto_0
     iput-object v0, p0, Landroid/location/Address;->mExtras:Landroid/os/Bundle;
 
-    .line 417
     return-void
 
-    .line 418
     :cond_0
     new-instance v0, Landroid/os/Bundle;
 
@@ -862,10 +800,8 @@
     .param p1, "featureName"    # Ljava/lang/String;
 
     .prologue
-    .line 133
     iput-object p1, p0, Landroid/location/Address;->mFeatureName:Ljava/lang/String;
 
-    .line 132
     return-void
 .end method
 
@@ -874,15 +810,12 @@
     .param p1, "latitude"    # D
 
     .prologue
-    .line 313
     iput-wide p1, p0, Landroid/location/Address;->mLatitude:D
 
-    .line 314
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/location/Address;->mHasLatitude:Z
 
-    .line 312
     return-void
 .end method
 
@@ -891,10 +824,8 @@
     .param p1, "locality"    # Ljava/lang/String;
 
     .prologue
-    .line 177
     iput-object p1, p0, Landroid/location/Address;->mLocality:Ljava/lang/String;
 
-    .line 176
     return-void
 .end method
 
@@ -903,15 +834,12 @@
     .param p1, "longitude"    # D
 
     .prologue
-    .line 350
     iput-wide p1, p0, Landroid/location/Address;->mLongitude:D
 
-    .line 351
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/location/Address;->mHasLongitude:Z
 
-    .line 349
     return-void
 .end method
 
@@ -920,10 +848,8 @@
     .param p1, "phone"    # Ljava/lang/String;
 
     .prologue
-    .line 376
     iput-object p1, p0, Landroid/location/Address;->mPhone:Ljava/lang/String;
 
-    .line 375
     return-void
 .end method
 
@@ -932,10 +858,8 @@
     .param p1, "postalCode"    # Ljava/lang/String;
 
     .prologue
-    .line 252
     iput-object p1, p0, Landroid/location/Address;->mPostalCode:Ljava/lang/String;
 
-    .line 251
     return-void
 .end method
 
@@ -944,10 +868,8 @@
     .param p1, "premises"    # Ljava/lang/String;
 
     .prologue
-    .line 236
     iput-object p1, p0, Landroid/location/Address;->mPremises:Ljava/lang/String;
 
-    .line 235
     return-void
 .end method
 
@@ -956,10 +878,8 @@
     .param p1, "subAdminArea"    # Ljava/lang/String;
 
     .prologue
-    .line 163
     iput-object p1, p0, Landroid/location/Address;->mSubAdminArea:Ljava/lang/String;
 
-    .line 162
     return-void
 .end method
 
@@ -968,10 +888,8 @@
     .param p1, "sublocality"    # Ljava/lang/String;
 
     .prologue
-    .line 192
     iput-object p1, p0, Landroid/location/Address;->mSubLocality:Ljava/lang/String;
 
-    .line 191
     return-void
 .end method
 
@@ -980,10 +898,8 @@
     .param p1, "subthoroughfare"    # Ljava/lang/String;
 
     .prologue
-    .line 222
     iput-object p1, p0, Landroid/location/Address;->mSubThoroughfare:Ljava/lang/String;
 
-    .line 221
     return-void
 .end method
 
@@ -992,10 +908,8 @@
     .param p1, "thoroughfare"    # Ljava/lang/String;
 
     .prologue
-    .line 207
     iput-object p1, p0, Landroid/location/Address;->mThoroughfare:Ljava/lang/String;
 
-    .line 206
     return-void
 .end method
 
@@ -1004,10 +918,8 @@
     .param p1, "Url"    # Ljava/lang/String;
 
     .prologue
-    .line 391
     iput-object p1, p0, Landroid/location/Address;->mUrl:Ljava/lang/String;
 
-    .line 390
     return-void
 .end method
 
@@ -1019,18 +931,15 @@
 
     const/16 v5, 0x22
 
-    .line 423
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 424
     .local v2, "sb":Ljava/lang/StringBuilder;
-    const-string/jumbo v3, "Address[addressLines=["
+    const-string v3, "Address[addressLines=["
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 425
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -1039,24 +948,19 @@
 
     if-gt v0, v3, :cond_2
 
-    .line 426
     if-lez v0, :cond_0
 
-    .line 427
     const/16 v3, 0x2c
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 429
     :cond_0
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 430
     const/16 v3, 0x3a
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 431
     iget-object v3, p0, Landroid/location/Address;->mAddressLines:Ljava/util/HashMap;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1069,192 +973,153 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 432
     .local v1, "line":Ljava/lang/String;
     if-nez v1, :cond_1
 
-    .line 433
-    const-string/jumbo v3, "null"
+    const-string v3, "null"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 425
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 435
     :cond_1
     invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 436
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 437
     invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 440
     .end local v1    # "line":Ljava/lang/String;
     :cond_2
     invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 441
-    const-string/jumbo v3, ",feature="
+    const-string v3, ",feature="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 442
     iget-object v3, p0, Landroid/location/Address;->mFeatureName:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 443
-    const-string/jumbo v3, ",admin="
+    const-string v3, ",admin="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 444
     iget-object v3, p0, Landroid/location/Address;->mAdminArea:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 445
-    const-string/jumbo v3, ",sub-admin="
+    const-string v3, ",sub-admin="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 446
     iget-object v3, p0, Landroid/location/Address;->mSubAdminArea:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 447
-    const-string/jumbo v3, ",locality="
+    const-string v3, ",locality="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 448
     iget-object v3, p0, Landroid/location/Address;->mLocality:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 449
-    const-string/jumbo v3, ",thoroughfare="
+    const-string v3, ",thoroughfare="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 450
     iget-object v3, p0, Landroid/location/Address;->mThoroughfare:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 451
-    const-string/jumbo v3, ",postalCode="
+    const-string v3, ",postalCode="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 452
     iget-object v3, p0, Landroid/location/Address;->mPostalCode:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 453
-    const-string/jumbo v3, ",countryCode="
+    const-string v3, ",countryCode="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 454
     iget-object v3, p0, Landroid/location/Address;->mCountryCode:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 455
-    const-string/jumbo v3, ",countryName="
+    const-string v3, ",countryName="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 456
     iget-object v3, p0, Landroid/location/Address;->mCountryName:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 457
-    const-string/jumbo v3, ",hasLatitude="
+    const-string v3, ",hasLatitude="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 458
     iget-boolean v3, p0, Landroid/location/Address;->mHasLatitude:Z
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 459
-    const-string/jumbo v3, ",latitude="
+    const-string v3, ",latitude="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 460
     iget-wide v4, p0, Landroid/location/Address;->mLatitude:D
 
     invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    .line 461
-    const-string/jumbo v3, ",hasLongitude="
+    const-string v3, ",hasLongitude="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 462
     iget-boolean v3, p0, Landroid/location/Address;->mHasLongitude:Z
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 463
-    const-string/jumbo v3, ",longitude="
+    const-string v3, ",longitude="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 464
     iget-wide v4, p0, Landroid/location/Address;->mLongitude:D
 
     invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    .line 465
-    const-string/jumbo v3, ",phone="
+    const-string v3, ",phone="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 466
     iget-object v3, p0, Landroid/location/Address;->mPhone:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 467
-    const-string/jumbo v3, ",url="
+    const-string v3, ",url="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 468
     iget-object v3, p0, Landroid/location/Address;->mUrl:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 469
-    const-string/jumbo v3, ",extras="
+    const-string v3, ",extras="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 470
     iget-object v3, p0, Landroid/location/Address;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 471
     invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 472
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -1272,7 +1137,6 @@
 
     const/4 v5, 0x0
 
-    .line 534
     iget-object v3, p0, Landroid/location/Address;->mLocale:Ljava/util/Locale;
 
     invoke-virtual {v3}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
@@ -1281,7 +1145,6 @@
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 535
     iget-object v3, p0, Landroid/location/Address;->mLocale:Ljava/util/Locale;
 
     invoke-virtual {v3}, Ljava/util/Locale;->getCountry()Ljava/lang/String;
@@ -1290,71 +1153,57 @@
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 536
     iget-object v3, p0, Landroid/location/Address;->mAddressLines:Ljava/util/HashMap;
 
     if-nez v3, :cond_3
 
-    .line 537
     invoke-virtual {p1, v5}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 546
     :cond_0
     iget-object v3, p0, Landroid/location/Address;->mFeatureName:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 547
     iget-object v3, p0, Landroid/location/Address;->mAdminArea:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 548
     iget-object v3, p0, Landroid/location/Address;->mSubAdminArea:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 549
     iget-object v3, p0, Landroid/location/Address;->mLocality:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 550
     iget-object v3, p0, Landroid/location/Address;->mSubLocality:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 551
     iget-object v3, p0, Landroid/location/Address;->mThoroughfare:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 552
     iget-object v3, p0, Landroid/location/Address;->mSubThoroughfare:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 553
     iget-object v3, p0, Landroid/location/Address;->mPremises:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 554
     iget-object v3, p0, Landroid/location/Address;->mPostalCode:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 555
     iget-object v3, p0, Landroid/location/Address;->mCountryCode:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 556
     iget-object v3, p0, Landroid/location/Address;->mCountryName:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 557
     iget-boolean v3, p0, Landroid/location/Address;->mHasLatitude:Z
 
     if-eqz v3, :cond_4
@@ -1364,17 +1213,14 @@
     :goto_0
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 558
     iget-boolean v3, p0, Landroid/location/Address;->mHasLatitude:Z
 
     if-eqz v3, :cond_1
 
-    .line 559
     iget-wide v6, p0, Landroid/location/Address;->mLatitude:D
 
     invoke-virtual {p1, v6, v7}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 561
     :cond_1
     iget-boolean v3, p0, Landroid/location/Address;->mHasLongitude:Z
 
@@ -1383,36 +1229,29 @@
     :goto_1
     invoke-virtual {p1, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 562
     iget-boolean v3, p0, Landroid/location/Address;->mHasLongitude:Z
 
     if-eqz v3, :cond_2
 
-    .line 563
     iget-wide v4, p0, Landroid/location/Address;->mLongitude:D
 
     invoke-virtual {p1, v4, v5}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 565
     :cond_2
     iget-object v3, p0, Landroid/location/Address;->mPhone:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 566
     iget-object v3, p0, Landroid/location/Address;->mUrl:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 567
     iget-object v3, p0, Landroid/location/Address;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
-    .line 533
     return-void
 
-    .line 539
     :cond_3
     iget-object v3, p0, Landroid/location/Address;->mAddressLines:Ljava/util/HashMap;
 
@@ -1420,7 +1259,6 @@
 
     move-result-object v2
 
-    .line 540
     .local v2, "entries":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/lang/String;>;>;"
     invoke-interface {v2}, Ljava/util/Set;->size()I
 
@@ -1428,7 +1266,6 @@
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 541
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -1447,7 +1284,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 542
     .local v0, "e":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/lang/String;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -1461,7 +1297,6 @@
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 543
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
@@ -1478,12 +1313,10 @@
     :cond_4
     move v3, v5
 
-    .line 557
     goto :goto_0
 
     :cond_5
     move v4, v5
 
-    .line 561
     goto :goto_1
 .end method

@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +43,6 @@
     .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
-    .line 41
     const/4 v0, 0x0
 
     return v0
@@ -56,6 +54,5 @@
     .param p2, "enabled"    # Z
 
     .prologue
-    .line 35
     return-void
 .end method

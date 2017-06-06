@@ -13,13 +13,10 @@
     .param p1, "delegate"    # Ljava/security/cert/X509Certificate;
 
     .prologue
-    .line 42
     invoke-direct {p0}, Ljava/security/cert/X509Certificate;-><init>()V
 
-    .line 43
     iput-object p1, p0, Landroid/security/keystore/DelegatingX509Certificate;->mDelegate:Ljava/security/cert/X509Certificate;
 
-    .line 42
     return-void
 .end method
 
@@ -35,12 +32,10 @@
     .end annotation
 
     .prologue
-    .line 69
     iget-object v0, p0, Landroid/security/keystore/DelegatingX509Certificate;->mDelegate:Ljava/security/cert/X509Certificate;
 
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->checkValidity()V
 
-    .line 68
     return-void
 .end method
 
@@ -55,12 +50,10 @@
     .end annotation
 
     .prologue
-    .line 75
     iget-object v0, p0, Landroid/security/keystore/DelegatingX509Certificate;->mDelegate:Ljava/security/cert/X509Certificate;
 
     invoke-virtual {v0, p1}, Ljava/security/cert/X509Certificate;->checkValidity(Ljava/util/Date;)V
 
-    .line 74
     return-void
 .end method
 
@@ -68,7 +61,6 @@
     .locals 1
 
     .prologue
-    .line 80
     iget-object v0, p0, Landroid/security/keystore/DelegatingX509Certificate;->mDelegate:Ljava/security/cert/X509Certificate;
 
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getBasicConstraints()I
@@ -91,7 +83,6 @@
     .end annotation
 
     .prologue
-    .line 48
     iget-object v0, p0, Landroid/security/keystore/DelegatingX509Certificate;->mDelegate:Ljava/security/cert/X509Certificate;
 
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getCriticalExtensionOIDs()Ljava/util/Set;
@@ -110,7 +101,6 @@
     .end annotation
 
     .prologue
-    .line 155
     iget-object v0, p0, Landroid/security/keystore/DelegatingX509Certificate;->mDelegate:Ljava/security/cert/X509Certificate;
 
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getEncoded()[B
@@ -139,7 +129,6 @@
     .end annotation
 
     .prologue
-    .line 190
     iget-object v0, p0, Landroid/security/keystore/DelegatingX509Certificate;->mDelegate:Ljava/security/cert/X509Certificate;
 
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getExtendedKeyUsage()Ljava/util/List;
@@ -154,7 +143,6 @@
     .param p1, "oid"    # Ljava/lang/String;
 
     .prologue
-    .line 53
     iget-object v0, p0, Landroid/security/keystore/DelegatingX509Certificate;->mDelegate:Ljava/security/cert/X509Certificate;
 
     invoke-virtual {v0, p1}, Ljava/security/cert/X509Certificate;->getExtensionValue(Ljava/lang/String;)[B
@@ -183,7 +171,6 @@
     .end annotation
 
     .prologue
-    .line 195
     iget-object v0, p0, Landroid/security/keystore/DelegatingX509Certificate;->mDelegate:Ljava/security/cert/X509Certificate;
 
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getIssuerAlternativeNames()Ljava/util/Collection;
@@ -197,7 +184,6 @@
     .locals 1
 
     .prologue
-    .line 85
     iget-object v0, p0, Landroid/security/keystore/DelegatingX509Certificate;->mDelegate:Ljava/security/cert/X509Certificate;
 
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getIssuerDN()Ljava/security/Principal;
@@ -211,7 +197,6 @@
     .locals 1
 
     .prologue
-    .line 90
     iget-object v0, p0, Landroid/security/keystore/DelegatingX509Certificate;->mDelegate:Ljava/security/cert/X509Certificate;
 
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getIssuerUniqueID()[Z
@@ -225,7 +210,6 @@
     .locals 1
 
     .prologue
-    .line 200
     iget-object v0, p0, Landroid/security/keystore/DelegatingX509Certificate;->mDelegate:Ljava/security/cert/X509Certificate;
 
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getIssuerX500Principal()Ljavax/security/auth/x500/X500Principal;
@@ -239,7 +223,6 @@
     .locals 1
 
     .prologue
-    .line 95
     iget-object v0, p0, Landroid/security/keystore/DelegatingX509Certificate;->mDelegate:Ljava/security/cert/X509Certificate;
 
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getKeyUsage()[Z
@@ -262,7 +245,6 @@
     .end annotation
 
     .prologue
-    .line 58
     iget-object v0, p0, Landroid/security/keystore/DelegatingX509Certificate;->mDelegate:Ljava/security/cert/X509Certificate;
 
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getNonCriticalExtensionOIDs()Ljava/util/Set;
@@ -276,7 +258,6 @@
     .locals 1
 
     .prologue
-    .line 100
     iget-object v0, p0, Landroid/security/keystore/DelegatingX509Certificate;->mDelegate:Ljava/security/cert/X509Certificate;
 
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getNotAfter()Ljava/util/Date;
@@ -290,7 +271,6 @@
     .locals 1
 
     .prologue
-    .line 105
     iget-object v0, p0, Landroid/security/keystore/DelegatingX509Certificate;->mDelegate:Ljava/security/cert/X509Certificate;
 
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getNotBefore()Ljava/util/Date;
@@ -304,7 +284,6 @@
     .locals 1
 
     .prologue
-    .line 160
     iget-object v0, p0, Landroid/security/keystore/DelegatingX509Certificate;->mDelegate:Ljava/security/cert/X509Certificate;
 
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getPublicKey()Ljava/security/PublicKey;
@@ -318,7 +297,6 @@
     .locals 1
 
     .prologue
-    .line 110
     iget-object v0, p0, Landroid/security/keystore/DelegatingX509Certificate;->mDelegate:Ljava/security/cert/X509Certificate;
 
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getSerialNumber()Ljava/math/BigInteger;
@@ -332,7 +310,6 @@
     .locals 1
 
     .prologue
-    .line 115
     iget-object v0, p0, Landroid/security/keystore/DelegatingX509Certificate;->mDelegate:Ljava/security/cert/X509Certificate;
 
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getSigAlgName()Ljava/lang/String;
@@ -346,7 +323,6 @@
     .locals 1
 
     .prologue
-    .line 120
     iget-object v0, p0, Landroid/security/keystore/DelegatingX509Certificate;->mDelegate:Ljava/security/cert/X509Certificate;
 
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getSigAlgOID()Ljava/lang/String;
@@ -360,7 +336,6 @@
     .locals 1
 
     .prologue
-    .line 125
     iget-object v0, p0, Landroid/security/keystore/DelegatingX509Certificate;->mDelegate:Ljava/security/cert/X509Certificate;
 
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getSigAlgParams()[B
@@ -374,7 +349,6 @@
     .locals 1
 
     .prologue
-    .line 130
     iget-object v0, p0, Landroid/security/keystore/DelegatingX509Certificate;->mDelegate:Ljava/security/cert/X509Certificate;
 
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getSignature()[B
@@ -403,7 +377,6 @@
     .end annotation
 
     .prologue
-    .line 205
     iget-object v0, p0, Landroid/security/keystore/DelegatingX509Certificate;->mDelegate:Ljava/security/cert/X509Certificate;
 
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getSubjectAlternativeNames()Ljava/util/Collection;
@@ -417,7 +390,6 @@
     .locals 1
 
     .prologue
-    .line 135
     iget-object v0, p0, Landroid/security/keystore/DelegatingX509Certificate;->mDelegate:Ljava/security/cert/X509Certificate;
 
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getSubjectDN()Ljava/security/Principal;
@@ -431,7 +403,6 @@
     .locals 1
 
     .prologue
-    .line 140
     iget-object v0, p0, Landroid/security/keystore/DelegatingX509Certificate;->mDelegate:Ljava/security/cert/X509Certificate;
 
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getSubjectUniqueID()[Z
@@ -445,7 +416,6 @@
     .locals 1
 
     .prologue
-    .line 210
     iget-object v0, p0, Landroid/security/keystore/DelegatingX509Certificate;->mDelegate:Ljava/security/cert/X509Certificate;
 
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getSubjectX500Principal()Ljavax/security/auth/x500/X500Principal;
@@ -464,7 +434,6 @@
     .end annotation
 
     .prologue
-    .line 145
     iget-object v0, p0, Landroid/security/keystore/DelegatingX509Certificate;->mDelegate:Ljava/security/cert/X509Certificate;
 
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getTBSCertificate()[B
@@ -478,7 +447,6 @@
     .locals 1
 
     .prologue
-    .line 150
     iget-object v0, p0, Landroid/security/keystore/DelegatingX509Certificate;->mDelegate:Ljava/security/cert/X509Certificate;
 
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getVersion()I
@@ -492,7 +460,6 @@
     .locals 1
 
     .prologue
-    .line 63
     iget-object v0, p0, Landroid/security/keystore/DelegatingX509Certificate;->mDelegate:Ljava/security/cert/X509Certificate;
 
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->hasUnsupportedCriticalExtension()Z
@@ -506,7 +473,6 @@
     .locals 1
 
     .prologue
-    .line 165
     iget-object v0, p0, Landroid/security/keystore/DelegatingX509Certificate;->mDelegate:Ljava/security/cert/X509Certificate;
 
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->toString()Ljava/lang/String;
@@ -530,12 +496,10 @@
     .end annotation
 
     .prologue
-    .line 175
     iget-object v0, p0, Landroid/security/keystore/DelegatingX509Certificate;->mDelegate:Ljava/security/cert/X509Certificate;
 
     invoke-virtual {v0, p1}, Ljava/security/cert/X509Certificate;->verify(Ljava/security/PublicKey;)V
 
-    .line 174
     return-void
 .end method
 
@@ -554,11 +518,9 @@
     .end annotation
 
     .prologue
-    .line 185
     iget-object v0, p0, Landroid/security/keystore/DelegatingX509Certificate;->mDelegate:Ljava/security/cert/X509Certificate;
 
     invoke-virtual {v0, p1, p2}, Ljava/security/cert/X509Certificate;->verify(Ljava/security/PublicKey;Ljava/lang/String;)V
 
-    .line 184
     return-void
 .end method

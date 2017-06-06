@@ -33,16 +33,12 @@
     .param p2, "component"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 389
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 390
     iput-object p1, p0, Lcom/android/server/notification/ConditionProviders$ConditionRecord;->id:Landroid/net/Uri;
 
-    .line 391
     iput-object p2, p0, Lcom/android/server/notification/ConditionProviders$ConditionRecord;->component:Landroid/content/ComponentName;
 
-    .line 389
     return-void
 .end method
 
@@ -63,54 +59,42 @@
     .locals 3
 
     .prologue
-    .line 396
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v2, "ConditionRecord[id="
+    const-string v2, "ConditionRecord[id="
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 397
     iget-object v2, p0, Lcom/android/server/notification/ConditionProviders$ConditionRecord;->id:Landroid/net/Uri;
 
-    .line 396
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 397
-    const-string/jumbo v2, ",component="
+    const-string v2, ",component="
 
-    .line 396
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 397
     iget-object v2, p0, Lcom/android/server/notification/ConditionProviders$ConditionRecord;->component:Landroid/content/ComponentName;
 
-    .line 396
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 398
-    const-string/jumbo v2, ",subscribed="
+    const-string v2, ",subscribed="
 
-    .line 396
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 398
     iget-boolean v2, p0, Lcom/android/server/notification/ConditionProviders$ConditionRecord;->subscribed:Z
 
-    .line 396
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 399
     .local v0, "sb":Ljava/lang/StringBuilder;
     const/16 v1, 0x5d
 

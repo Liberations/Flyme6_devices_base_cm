@@ -115,15 +115,12 @@
     .locals 1
 
     .prologue
-    .line 48
     new-instance v0, Landroid/media/tv/TvInputHardwareInfo$1;
 
     invoke-direct {v0}, Landroid/media/tv/TvInputHardwareInfo$1;-><init>()V
 
-    .line 47
     sput-object v0, Landroid/media/tv/TvInputHardwareInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 32
     return-void
 .end method
 
@@ -131,7 +128,6 @@
     .locals 0
 
     .prologue
-    .line 73
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -152,7 +148,6 @@
     .locals 1
 
     .prologue
-    .line 116
     const/4 v0, 0x0
 
     return v0
@@ -162,7 +157,6 @@
     .locals 1
 
     .prologue
-    .line 89
     iget-object v0, p0, Landroid/media/tv/TvInputHardwareInfo;->mAudioAddress:Ljava/lang/String;
 
     return-object v0
@@ -172,7 +166,6 @@
     .locals 1
 
     .prologue
-    .line 85
     iget v0, p0, Landroid/media/tv/TvInputHardwareInfo;->mAudioType:I
 
     return v0
@@ -182,7 +175,6 @@
     .locals 1
 
     .prologue
-    .line 77
     iget v0, p0, Landroid/media/tv/TvInputHardwareInfo;->mDeviceId:I
 
     return v0
@@ -192,21 +184,18 @@
     .locals 2
 
     .prologue
-    .line 93
     iget v0, p0, Landroid/media/tv/TvInputHardwareInfo;->mType:I
 
     const/16 v1, 0x9
 
     if-eq v0, v1, :cond_0
 
-    .line 94
     new-instance v0, Ljava/lang/IllegalStateException;
 
     invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
 
     throw v0
 
-    .line 96
     :cond_0
     iget v0, p0, Landroid/media/tv/TvInputHardwareInfo;->mHdmiPortId:I
 
@@ -217,7 +206,6 @@
     .locals 1
 
     .prologue
-    .line 81
     iget v0, p0, Landroid/media/tv/TvInputHardwareInfo;->mType:I
 
     return v0
@@ -228,49 +216,42 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 131
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/media/tv/TvInputHardwareInfo;->mDeviceId:I
 
-    .line 132
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/media/tv/TvInputHardwareInfo;->mType:I
 
-    .line 133
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/media/tv/TvInputHardwareInfo;->mAudioType:I
 
-    .line 134
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/media/tv/TvInputHardwareInfo;->mAudioAddress:Ljava/lang/String;
 
-    .line 135
     iget v0, p0, Landroid/media/tv/TvInputHardwareInfo;->mType:I
 
     const/16 v1, 0x9
 
     if-ne v0, v1, :cond_0
 
-    .line 136
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/media/tv/TvInputHardwareInfo;->mHdmiPortId:I
 
-    .line 130
     :cond_0
     return-void
 .end method
@@ -279,16 +260,14 @@
     .locals 3
 
     .prologue
-    .line 101
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x80
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 102
     .local v0, "b":Ljava/lang/StringBuilder;
-    const-string/jumbo v1, "TvInputHardwareInfo {id="
+    const-string v1, "TvInputHardwareInfo {id="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -298,8 +277,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 103
-    const-string/jumbo v1, ", type="
+    const-string v1, ", type="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -309,8 +287,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 104
-    const-string/jumbo v1, ", audio_type="
+    const-string v1, ", audio_type="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -320,8 +297,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 105
-    const-string/jumbo v1, ", audio_addr="
+    const-string v1, ", audio_addr="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -331,15 +307,13 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 106
     iget v1, p0, Landroid/media/tv/TvInputHardwareInfo;->mType:I
 
     const/16 v2, 0x9
 
     if-ne v1, v2, :cond_0
 
-    .line 107
-    const-string/jumbo v1, ", hdmi_port="
+    const-string v1, ", hdmi_port="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -349,13 +323,11 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 109
     :cond_0
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 110
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -369,39 +341,32 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 121
     iget v0, p0, Landroid/media/tv/TvInputHardwareInfo;->mDeviceId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 122
     iget v0, p0, Landroid/media/tv/TvInputHardwareInfo;->mType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 123
     iget v0, p0, Landroid/media/tv/TvInputHardwareInfo;->mAudioType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 124
     iget-object v0, p0, Landroid/media/tv/TvInputHardwareInfo;->mAudioAddress:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 125
     iget v0, p0, Landroid/media/tv/TvInputHardwareInfo;->mType:I
 
     const/16 v1, 0x9
 
     if-ne v0, v1, :cond_0
 
-    .line 126
     iget v0, p0, Landroid/media/tv/TvInputHardwareInfo;->mHdmiPortId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 120
     :cond_0
     return-void
 .end method

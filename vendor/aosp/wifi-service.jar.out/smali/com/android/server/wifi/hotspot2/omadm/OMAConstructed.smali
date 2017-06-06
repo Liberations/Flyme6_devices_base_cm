@@ -25,17 +25,14 @@
     .param p3, "context"    # Ljava/lang/String;
 
     .prologue
-    .line 16
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/wifi/hotspot2/omadm/OMANode;-><init>(Lcom/android/server/wifi/hotspot2/omadm/OMANode;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 17
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wifi/hotspot2/omadm/OMAConstructed;->mChildren:Ljava/util/Map;
 
-    .line 15
     return-void
 .end method
 
@@ -56,18 +53,14 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 22
     if-nez p4, :cond_1
 
-    .line 23
     if-eqz p3, :cond_0
 
-    .line 24
     new-instance v0, Lcom/android/server/wifi/hotspot2/omadm/OMAScalar;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/android/server/wifi/hotspot2/omadm/OMAScalar;-><init>(Lcom/android/server/wifi/hotspot2/omadm/OMANode;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 26
     .local v0, "child":Lcom/android/server/wifi/hotspot2/omadm/OMANode;
     :goto_0
     iget-object v3, p0, Lcom/android/server/wifi/hotspot2/omadm/OMAConstructed;->mChildren:Ljava/util/Map;
@@ -78,10 +71,8 @@
 
     invoke-interface {v3, v4, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 27
     return-object v0
 
-    .line 25
     .end local v0    # "child":Lcom/android/server/wifi/hotspot2/omadm/OMANode;
     :cond_0
     new-instance v0, Lcom/android/server/wifi/hotspot2/omadm/OMAConstructed;
@@ -91,12 +82,10 @@
     .restart local v0    # "child":Lcom/android/server/wifi/hotspot2/omadm/OMANode;
     goto :goto_0
 
-    .line 29
     .end local v0    # "child":Lcom/android/server/wifi/hotspot2/omadm/OMANode;
     :cond_1
     move-object v2, p0
 
-    .line 30
     .local v2, "target":Lcom/android/server/wifi/hotspot2/omadm/OMANode;
     :goto_1
     invoke-virtual {v2}, Lcom/android/server/wifi/hotspot2/omadm/OMANode;->getParent()Lcom/android/server/wifi/hotspot2/omadm/OMANode;
@@ -105,16 +94,14 @@
 
     if-eqz v3, :cond_2
 
-    .line 31
     invoke-virtual {v2}, Lcom/android/server/wifi/hotspot2/omadm/OMANode;->getParent()Lcom/android/server/wifi/hotspot2/omadm/OMANode;
 
     move-result-object v2
 
     goto :goto_1
 
-    .line 33
     :cond_2
-    const-string/jumbo v3, "/"
+    const-string v3, "/"
 
     invoke-virtual {p4, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
@@ -129,23 +116,20 @@
 
     aget-object v1, v4, v3
 
-    .line 34
     .local v1, "element":Ljava/lang/String;
     invoke-virtual {v2, v1}, Lcom/android/server/wifi/hotspot2/omadm/OMANode;->getChild(Ljava/lang/String;)Lcom/android/server/wifi/hotspot2/omadm/OMANode;
 
     move-result-object v2
 
-    .line 35
     if-nez v2, :cond_3
 
-    .line 36
     new-instance v3, Ljava/io/IOException;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "No child node \'"
+    const-string v5, "No child node \'"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -155,7 +139,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "\' in "
+    const-string v5, "\' in "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -177,7 +161,6 @@
 
     throw v3
 
-    .line 37
     :cond_3
     invoke-virtual {v2}, Lcom/android/server/wifi/hotspot2/omadm/OMANode;->isLeaf()Z
 
@@ -185,14 +168,13 @@
 
     if-eqz v6, :cond_4
 
-    .line 38
     new-instance v3, Ljava/io/IOException;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "Cannot add child to leaf node: "
+    const-string v5, "Cannot add child to leaf node: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -214,13 +196,11 @@
 
     throw v3
 
-    .line 33
     :cond_4
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_2
 
-    .line 40
     .end local v1    # "element":Ljava/lang/String;
     :cond_5
     invoke-virtual {v2, p1, p2, p3, v7}, Lcom/android/server/wifi/hotspot2/omadm/OMANode;->addChild(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/android/server/wifi/hotspot2/omadm/OMANode;
@@ -235,7 +215,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 82
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/omadm/OMAConstructed;->mChildren:Ljava/util/Map;
 
     invoke-virtual {p1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
@@ -264,7 +243,6 @@
     .end annotation
 
     .prologue
-    .line 78
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/omadm/OMAConstructed;->mChildren:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -301,17 +279,14 @@
     .local p1, "path":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     const/4 v4, 0x0
 
-    .line 59
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 60
     return-object p0
 
-    .line 62
     :cond_0
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -319,7 +294,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 63
     .local v1, "tag":Ljava/lang/String;
     iget-object v2, p0, Lcom/android/server/wifi/hotspot2/omadm/OMAConstructed;->mChildren:Ljava/util/Map;
 
@@ -333,18 +307,15 @@
 
     check-cast v0, Lcom/android/server/wifi/hotspot2/omadm/OMANode;
 
-    .line 64
     .local v0, "child":Lcom/android/server/wifi/hotspot2/omadm/OMANode;
     if-eqz v0, :cond_1
 
-    .line 65
     invoke-virtual {v0, p1}, Lcom/android/server/wifi/hotspot2/omadm/OMANode;->getListValue(Ljava/util/Iterator;)Lcom/android/server/wifi/hotspot2/omadm/OMAConstructed;
 
     move-result-object v2
 
     return-object v2
 
-    .line 67
     :cond_1
     return-object v4
 .end method
@@ -372,21 +343,19 @@
     .local p1, "path":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     const/4 v4, 0x0
 
-    .line 45
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 46
     new-instance v2, Lcom/android/server/wifi/hotspot2/omadm/OMAException;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "Path too short for "
+    const-string v4, "Path too short for "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -408,7 +377,6 @@
 
     throw v2
 
-    .line 48
     :cond_0
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -416,7 +384,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 49
     .local v1, "tag":Ljava/lang/String;
     iget-object v2, p0, Lcom/android/server/wifi/hotspot2/omadm/OMAConstructed;->mChildren:Ljava/util/Map;
 
@@ -430,18 +397,15 @@
 
     check-cast v0, Lcom/android/server/wifi/hotspot2/omadm/OMANode;
 
-    .line 50
     .local v0, "child":Lcom/android/server/wifi/hotspot2/omadm/OMANode;
     if-eqz v0, :cond_1
 
-    .line 51
     invoke-virtual {v0, p1}, Lcom/android/server/wifi/hotspot2/omadm/OMANode;->getScalarValue(Ljava/util/Iterator;)Ljava/lang/String;
 
     move-result-object v2
 
     return-object v2
 
-    .line 53
     :cond_1
     return-object v4
 .end method
@@ -450,7 +414,6 @@
     .locals 1
 
     .prologue
-    .line 87
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -462,7 +425,6 @@
     .locals 1
 
     .prologue
-    .line 73
     const/4 v0, 0x0
 
     return v0
@@ -479,25 +441,21 @@
     .end annotation
 
     .prologue
-    .line 105
     invoke-static {p2, p1}, Lcom/android/server/wifi/hotspot2/omadm/OMAConstants;->indent(ILjava/io/OutputStream;)V
 
-    .line 106
     invoke-virtual {p0}, Lcom/android/server/wifi/hotspot2/omadm/OMAConstructed;->getName()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-static {v2, p1}, Lcom/android/server/wifi/hotspot2/omadm/OMAConstants;->serializeString(Ljava/lang/String;Ljava/io/OutputStream;)V
 
-    .line 107
     invoke-virtual {p0}, Lcom/android/server/wifi/hotspot2/omadm/OMAConstructed;->getContext()Ljava/lang/String;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 108
-    const-string/jumbo v2, "(%s)"
+    const-string v2, "(%s)"
 
     const/4 v3, 0x1
 
@@ -523,7 +481,6 @@
 
     invoke-virtual {p1, v2}, Ljava/io/OutputStream;->write([B)V
 
-    .line 110
     :cond_0
     const/4 v2, 0x2
 
@@ -533,7 +490,6 @@
 
     invoke-virtual {p1, v2}, Ljava/io/OutputStream;->write([B)V
 
-    .line 112
     iget-object v2, p0, Lcom/android/server/wifi/hotspot2/omadm/OMAConstructed;->mChildren:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -558,7 +514,6 @@
 
     check-cast v0, Lcom/android/server/wifi/hotspot2/omadm/OMANode;
 
-    .line 113
     .local v0, "child":Lcom/android/server/wifi/hotspot2/omadm/OMANode;
     add-int/lit8 v2, p2, 0x1
 
@@ -566,13 +521,11 @@
 
     goto :goto_0
 
-    .line 115
     .end local v0    # "child":Lcom/android/server/wifi/hotspot2/omadm/OMANode;
     :cond_1
     invoke-static {p2, p1}, Lcom/android/server/wifi/hotspot2/omadm/OMAConstants;->indent(ILjava/io/OutputStream;)V
 
-    .line 116
-    const-string/jumbo v2, ".\n"
+    const-string v2, ".\n"
 
     sget-object v3, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
@@ -582,10 +535,8 @@
 
     invoke-virtual {p1, v2}, Ljava/io/OutputStream;->write([B)V
 
-    .line 104
     return-void
 
-    .line 110
     nop
 
     :array_0
@@ -601,22 +552,19 @@
     .param p2, "level"    # I
 
     .prologue
-    .line 92
     invoke-virtual {p0}, Lcom/android/server/wifi/hotspot2/omadm/OMAConstructed;->getPathString()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 93
     invoke-virtual {p0}, Lcom/android/server/wifi/hotspot2/omadm/OMAConstructed;->getContext()Ljava/lang/String;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 94
-    const-string/jumbo v2, " ("
+    const-string v2, " ("
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -634,13 +582,11 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 96
     :cond_0
     const/16 v2, 0xa
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 98
     iget-object v2, p0, Lcom/android/server/wifi/hotspot2/omadm/OMAConstructed;->mChildren:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -665,7 +611,6 @@
 
     check-cast v0, Lcom/android/server/wifi/hotspot2/omadm/OMANode;
 
-    .line 99
     .local v0, "node":Lcom/android/server/wifi/hotspot2/omadm/OMANode;
     add-int/lit8 v2, p2, 0x1
 
@@ -673,7 +618,6 @@
 
     goto :goto_0
 
-    .line 91
     .end local v0    # "node":Lcom/android/server/wifi/hotspot2/omadm/OMANode;
     :cond_1
     return-void

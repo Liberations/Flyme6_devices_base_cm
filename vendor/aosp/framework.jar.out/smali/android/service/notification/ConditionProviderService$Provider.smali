@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Landroid/service/notification/ConditionProviderService;
 
     .prologue
-    .line 108
     iput-object p1, p0, Landroid/service/notification/ConditionProviderService$Provider;->this$0:Landroid/service/notification/ConditionProviderService;
 
     invoke-direct {p0}, Landroid/service/notification/IConditionProvider$Stub;-><init>()V
@@ -48,7 +47,6 @@
     .locals 2
 
     .prologue
-    .line 111
     iget-object v0, p0, Landroid/service/notification/ConditionProviderService$Provider;->this$0:Landroid/service/notification/ConditionProviderService;
 
     invoke-static {v0}, Landroid/service/notification/ConditionProviderService;->-get1(Landroid/service/notification/ConditionProviderService;)Landroid/service/notification/ConditionProviderService$H;
@@ -63,7 +61,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 110
     return-void
 .end method
 
@@ -72,7 +69,6 @@
     .param p1, "relevance"    # I
 
     .prologue
-    .line 116
     iget-object v0, p0, Landroid/service/notification/ConditionProviderService$Provider;->this$0:Landroid/service/notification/ConditionProviderService;
 
     invoke-static {v0}, Landroid/service/notification/ConditionProviderService;->-get1(Landroid/service/notification/ConditionProviderService;)Landroid/service/notification/ConditionProviderService$H;
@@ -89,7 +85,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 115
     return-void
 .end method
 
@@ -98,7 +93,6 @@
     .param p1, "conditionId"    # Landroid/net/Uri;
 
     .prologue
-    .line 121
     iget-object v0, p0, Landroid/service/notification/ConditionProviderService$Provider;->this$0:Landroid/service/notification/ConditionProviderService;
 
     invoke-static {v0}, Landroid/service/notification/ConditionProviderService;->-get1(Landroid/service/notification/ConditionProviderService;)Landroid/service/notification/ConditionProviderService$H;
@@ -113,7 +107,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 120
     return-void
 .end method
 
@@ -122,7 +115,6 @@
     .param p1, "conditionId"    # Landroid/net/Uri;
 
     .prologue
-    .line 126
     iget-object v0, p0, Landroid/service/notification/ConditionProviderService$Provider;->this$0:Landroid/service/notification/ConditionProviderService;
 
     invoke-static {v0}, Landroid/service/notification/ConditionProviderService;->-get1(Landroid/service/notification/ConditionProviderService;)Landroid/service/notification/ConditionProviderService$H;
@@ -137,6 +129,5 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 125
     return-void
 .end method

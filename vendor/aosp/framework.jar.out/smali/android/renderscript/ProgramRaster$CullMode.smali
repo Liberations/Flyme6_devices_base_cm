@@ -48,37 +48,30 @@
 
     const/4 v2, 0x0
 
-    .line 32
     new-instance v0, Landroid/renderscript/ProgramRaster$CullMode;
 
-    const-string/jumbo v1, "BACK"
+    const-string v1, "BACK"
 
     invoke-direct {v0, v1, v2, v2}, Landroid/renderscript/ProgramRaster$CullMode;-><init>(Ljava/lang/String;II)V
 
-    .line 35
     sput-object v0, Landroid/renderscript/ProgramRaster$CullMode;->BACK:Landroid/renderscript/ProgramRaster$CullMode;
 
-    .line 36
     new-instance v0, Landroid/renderscript/ProgramRaster$CullMode;
 
-    const-string/jumbo v1, "FRONT"
+    const-string v1, "FRONT"
 
     invoke-direct {v0, v1, v3, v3}, Landroid/renderscript/ProgramRaster$CullMode;-><init>(Ljava/lang/String;II)V
 
-    .line 39
     sput-object v0, Landroid/renderscript/ProgramRaster$CullMode;->FRONT:Landroid/renderscript/ProgramRaster$CullMode;
 
-    .line 40
     new-instance v0, Landroid/renderscript/ProgramRaster$CullMode;
 
-    const-string/jumbo v1, "NONE"
+    const-string v1, "NONE"
 
     invoke-direct {v0, v1, v4, v4}, Landroid/renderscript/ProgramRaster$CullMode;-><init>(Ljava/lang/String;II)V
 
-    .line 43
     sput-object v0, Landroid/renderscript/ProgramRaster$CullMode;->NONE:Landroid/renderscript/ProgramRaster$CullMode;
 
-    .line 31
     const/4 v0, 0x3
 
     new-array v0, v0, [Landroid/renderscript/ProgramRaster$CullMode;
@@ -105,13 +98,10 @@
     .param p3, "id"    # I
 
     .prologue
-    .line 46
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 47
     iput p3, p0, Landroid/renderscript/ProgramRaster$CullMode;->mID:I
 
-    .line 46
     return-void
 .end method
 
@@ -120,7 +110,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 31
     const-class v0, Landroid/renderscript/ProgramRaster$CullMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -136,7 +125,6 @@
     .locals 1
 
     .prologue
-    .line 31
     sget-object v0, Landroid/renderscript/ProgramRaster$CullMode;->$VALUES:[Landroid/renderscript/ProgramRaster$CullMode;
 
     return-object v0

@@ -26,7 +26,6 @@
     .param p1, "this$0"    # Landroid/webkit/WebView;
 
     .prologue
-    .line 314
     iput-object p1, p0, Landroid/webkit/WebView$WebViewTransport;->this$0:Landroid/webkit/WebView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .prologue
     monitor-enter p0
 
-    .line 332
     :try_start_0
     iget-object v0, p0, Landroid/webkit/WebView$WebViewTransport;->mWebview:Landroid/webkit/WebView;
     :try_end_0
@@ -67,7 +65,6 @@
     .prologue
     monitor-enter p0
 
-    .line 323
     :try_start_0
     iput-object p1, p0, Landroid/webkit/WebView$WebViewTransport;->mWebview:Landroid/webkit/WebView;
     :try_end_0
@@ -75,7 +72,6 @@
 
     monitor-exit p0
 
-    .line 322
     return-void
 
     :catchall_0

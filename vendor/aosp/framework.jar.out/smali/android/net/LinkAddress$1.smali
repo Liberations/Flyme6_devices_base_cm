@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 320
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,10 +44,8 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 322
     const/4 v0, 0x0
 
-    .line 324
     .local v0, "address":Ljava/net/InetAddress;
     :try_start_0
     invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
@@ -61,26 +58,22 @@
 
     move-result-object v0
 
-    .line 330
     .end local v0    # "address":Ljava/net/InetAddress;
     :goto_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 331
     .local v3, "prefixLength":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 332
     .local v2, "flags":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 333
     .local v4, "scope":I
     new-instance v5, Landroid/net/LinkAddress;
 
@@ -88,7 +81,6 @@
 
     return-object v5
 
-    .line 325
     .end local v2    # "flags":I
     .end local v3    # "prefixLength":I
     .end local v4    # "scope":I
@@ -105,7 +97,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 321
     invoke-virtual {p0, p1}, Landroid/net/LinkAddress$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/LinkAddress;
 
     move-result-object v0
@@ -118,7 +109,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 337
     new-array v0, p1, [Landroid/net/LinkAddress;
 
     return-object v0
@@ -129,7 +119,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 336
     invoke-virtual {p0, p1}, Landroid/net/LinkAddress$1;->newArray(I)[Landroid/net/LinkAddress;
 
     move-result-object v0

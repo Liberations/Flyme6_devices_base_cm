@@ -44,7 +44,6 @@
     .locals 2
 
     .prologue
-    .line 35
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     new-instance v1, Lcom/android/internal/os/BinderInternal$GcWatcher;
@@ -53,24 +52,20 @@
 
     invoke-direct {v0, v1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    .line 34
     sput-object v0, Lcom/android/internal/os/BinderInternal;->sGcWatcher:Ljava/lang/ref/WeakReference;
 
-    .line 36
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/android/internal/os/BinderInternal;->sGcWatchers:Ljava/util/ArrayList;
 
-    .line 37
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/Runnable;
 
     sput-object v0, Lcom/android/internal/os/BinderInternal;->sTmpWatchers:[Ljava/lang/Runnable;
 
-    .line 33
     return-void
 .end method
 
@@ -78,7 +73,6 @@
     .locals 0
 
     .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -89,12 +83,10 @@
     .param p0, "watcher"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 58
     sget-object v1, Lcom/android/internal/os/BinderInternal;->sGcWatchers:Ljava/util/ArrayList;
 
     monitor-enter v1
 
-    .line 59
     :try_start_0
     sget-object v0, Lcom/android/internal/os/BinderInternal;->sGcWatchers:Ljava/util/ArrayList;
 
@@ -104,10 +96,8 @@
 
     monitor-exit v1
 
-    .line 57
     return-void
 
-    .line 58
     :catchall_0
     move-exception v0
 
@@ -123,12 +113,10 @@
     .locals 1
 
     .prologue
-    .line 105
-    const-string/jumbo v0, "Binder"
+    const-string v0, "Binder"
 
     invoke-static {v0}, Lcom/android/internal/os/BinderInternal;->forceGc(Ljava/lang/String;)V
 
-    .line 104
     return-void
 .end method
 
@@ -137,19 +125,16 @@
     .param p0, "reason"    # Ljava/lang/String;
 
     .prologue
-    .line 100
     const/16 v0, 0xab5
 
     invoke-static {v0, p0}, Landroid/util/EventLog;->writeEvent(ILjava/lang/String;)I
 
-    .line 101
     invoke-static {}, Ldalvik/system/VMRuntime;->getRuntime()Ldalvik/system/VMRuntime;
 
     move-result-object v0
 
     invoke-virtual {v0}, Ldalvik/system/VMRuntime;->requestConcurrentGC()V
 
-    .line 99
     return-void
 .end method
 
@@ -160,7 +145,6 @@
     .locals 2
 
     .prologue
-    .line 80
     sget-wide v0, Lcom/android/internal/os/BinderInternal;->sLastGcTime:J
 
     return-wide v0

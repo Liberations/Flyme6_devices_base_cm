@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 285
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 288
     new-instance v0, Lcyanogenmod/weather/RequestInfo;
 
     const/4 v1, 0x0
@@ -60,7 +58,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 287
     invoke-virtual {p0, p1}, Lcyanogenmod/weather/RequestInfo$1;->createFromParcel(Landroid/os/Parcel;)Lcyanogenmod/weather/RequestInfo;
 
     move-result-object v0
@@ -73,7 +70,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 293
     new-array v0, p1, [Lcyanogenmod/weather/RequestInfo;
 
     return-object v0
@@ -84,7 +80,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 292
     invoke-virtual {p0, p1}, Lcyanogenmod/weather/RequestInfo$1;->newArray(I)[Lcyanogenmod/weather/RequestInfo;
 
     move-result-object v0

@@ -40,15 +40,12 @@
     .locals 1
 
     .prologue
-    .line 70
     new-instance v0, Landroid/content/pm/PackageCleanItem$1;
 
     invoke-direct {v0}, Landroid/content/pm/PackageCleanItem$1;-><init>()V
 
-    .line 69
     sput-object v0, Landroid/content/pm/PackageCleanItem;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 23
     return-void
 .end method
 
@@ -59,19 +56,14 @@
     .param p3, "andCode"    # Z
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     iput p1, p0, Landroid/content/pm/PackageCleanItem;->userId:I
 
-    .line 30
     iput-object p2, p0, Landroid/content/pm/PackageCleanItem;->packageName:Ljava/lang/String;
 
-    .line 31
     iput-boolean p3, p0, Landroid/content/pm/PackageCleanItem;->andCode:Z
 
-    .line 28
     return-void
 .end method
 
@@ -82,24 +74,20 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 80
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 81
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/content/pm/PackageCleanItem;->userId:I
 
-    .line 82
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/content/pm/PackageCleanItem;->packageName:Ljava/lang/String;
 
-    .line 83
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -111,7 +99,6 @@
     :cond_0
     iput-boolean v0, p0, Landroid/content/pm/PackageCleanItem;->andCode:Z
 
-    .line 80
     return-void
 .end method
 
@@ -131,7 +118,6 @@
     .locals 1
 
     .prologue
-    .line 60
     const/4 v0, 0x0
 
     return v0
@@ -146,17 +132,13 @@
 
     const/4 v4, 0x0
 
-    .line 36
     if-ne p0, p1, :cond_0
 
-    .line 37
     return v3
 
-    .line 40
     :cond_0
     if-eqz p1, :cond_3
 
-    .line 41
     :try_start_0
     move-object v0, p1
 
@@ -164,7 +146,6 @@
 
     move-object v2, v0
 
-    .line 42
     .local v2, "other":Landroid/content/pm/PackageCleanItem;
     iget v5, p0, Landroid/content/pm/PackageCleanItem;->userId:I
 
@@ -182,7 +163,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 43
     iget-boolean v5, p0, Landroid/content/pm/PackageCleanItem;->andCode:Z
 
     iget-boolean v6, v2, Landroid/content/pm/PackageCleanItem;->andCode:Z
@@ -191,28 +171,23 @@
 
     if-ne v5, v6, :cond_1
 
-    .line 42
     :goto_0
     return v3
 
     :cond_1
     move v3, v4
 
-    .line 43
     goto :goto_0
 
     :cond_2
     move v3, v4
 
-    .line 42
     goto :goto_0
 
-    .line 45
     .end local v2    # "other":Landroid/content/pm/PackageCleanItem;
     :catch_0
     move-exception v1
 
-    .line 47
     :cond_3
     return v4
 .end method
@@ -221,12 +196,10 @@
     .locals 3
 
     .prologue
-    .line 53
     iget v1, p0, Landroid/content/pm/PackageCleanItem;->userId:I
 
     add-int/lit16 v0, v1, 0x20f
 
-    .line 54
     .local v0, "result":I
     mul-int/lit8 v1, v0, 0x1f
 
@@ -238,7 +211,6 @@
 
     add-int v0, v1, v2
 
-    .line 55
     mul-int/lit8 v2, v0, 0x1f
 
     iget-boolean v1, p0, Landroid/content/pm/PackageCleanItem;->andCode:Z
@@ -250,10 +222,8 @@
     :goto_0
     add-int v0, v2, v1
 
-    .line 56
     return v0
 
-    .line 55
     :cond_0
     const/4 v1, 0x0
 
@@ -266,17 +236,14 @@
     .param p2, "parcelableFlags"    # I
 
     .prologue
-    .line 64
     iget v0, p0, Landroid/content/pm/PackageCleanItem;->userId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 65
     iget-object v0, p0, Landroid/content/pm/PackageCleanItem;->packageName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 66
     iget-boolean v0, p0, Landroid/content/pm/PackageCleanItem;->andCode:Z
 
     if-eqz v0, :cond_0
@@ -286,10 +253,8 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 63
     return-void
 
-    .line 66
     :cond_0
     const/4 v0, 0x0
 

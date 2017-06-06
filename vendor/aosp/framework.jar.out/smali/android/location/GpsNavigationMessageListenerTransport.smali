@@ -33,12 +33,10 @@
     .param p2, "locationManager"    # Landroid/location/ILocationManager;
 
     .prologue
-    .line 36
-    const-string/jumbo v0, "GpsNavigationMessageListenerTransport"
+    const-string v0, "GpsNavigationMessageListenerTransport"
 
     invoke-direct {p0, p1, v0}, Landroid/location/LocalListenerHelper;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 31
     new-instance v0, Landroid/location/GpsNavigationMessageListenerTransport$ListenerTransport;
 
     const/4 v1, 0x0
@@ -47,10 +45,8 @@
 
     iput-object v0, p0, Landroid/location/GpsNavigationMessageListenerTransport;->mListenerTransport:Landroid/location/IGpsNavigationMessageListener;
 
-    .line 37
     iput-object p2, p0, Landroid/location/GpsNavigationMessageListenerTransport;->mLocationManager:Landroid/location/ILocationManager;
 
-    .line 35
     return-void
 .end method
 
@@ -65,13 +61,10 @@
     .end annotation
 
     .prologue
-    .line 42
     iget-object v0, p0, Landroid/location/GpsNavigationMessageListenerTransport;->mLocationManager:Landroid/location/ILocationManager;
 
-    .line 43
     iget-object v1, p0, Landroid/location/GpsNavigationMessageListenerTransport;->mListenerTransport:Landroid/location/IGpsNavigationMessageListener;
 
-    .line 44
     invoke-virtual {p0}, Landroid/location/GpsNavigationMessageListenerTransport;->getContext()Landroid/content/Context;
 
     move-result-object v2
@@ -80,7 +73,6 @@
 
     move-result-object v2
 
-    .line 42
     invoke-interface {v0, v1, v2}, Landroid/location/ILocationManager;->addGpsNavigationMessageListener(Landroid/location/IGpsNavigationMessageListener;Ljava/lang/String;)Z
 
     move-result v0
@@ -97,13 +89,11 @@
     .end annotation
 
     .prologue
-    .line 49
     iget-object v0, p0, Landroid/location/GpsNavigationMessageListenerTransport;->mLocationManager:Landroid/location/ILocationManager;
 
     iget-object v1, p0, Landroid/location/GpsNavigationMessageListenerTransport;->mListenerTransport:Landroid/location/IGpsNavigationMessageListener;
 
     invoke-interface {v0, v1}, Landroid/location/ILocationManager;->removeGpsNavigationMessageListener(Landroid/location/IGpsNavigationMessageListener;)V
 
-    .line 48
     return-void
 .end method

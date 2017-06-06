@@ -16,7 +16,6 @@
     .locals 0
 
     .prologue
-    .line 32
     invoke-direct {p0}, Landroid/view/animation/BaseInterpolator;-><init>()V
 
     return-void
@@ -28,7 +27,6 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 35
     invoke-direct {p0}, Landroid/view/animation/BaseInterpolator;-><init>()V
 
     return-void
@@ -40,7 +38,6 @@
     .locals 2
 
     .prologue
-    .line 45
     invoke-static {}, Lcom/android/internal/view/animation/NativeInterpolatorFactoryHelper;->createLinearInterpolator()J
 
     move-result-wide v0
@@ -53,6 +50,5 @@
     .param p1, "input"    # F
 
     .prologue
-    .line 39
     return p1
 .end method

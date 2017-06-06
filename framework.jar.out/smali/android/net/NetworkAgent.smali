@@ -90,7 +90,6 @@
     .param p7, "score"    # I
 
     .prologue
-    .line 205
     const/4 v8, 0x0
 
     move-object v0, p0
@@ -111,7 +110,6 @@
 
     invoke-direct/range {v0 .. v8}, Landroid/net/NetworkAgent;-><init>(Landroid/os/Looper;Landroid/content/Context;Ljava/lang/String;Landroid/net/NetworkInfo;Landroid/net/NetworkCapabilities;Landroid/net/LinkProperties;ILandroid/net/NetworkMisc;)V
 
-    .line 204
     return-void
 .end method
 
@@ -129,43 +127,34 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 210
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 54
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Landroid/net/NetworkAgent;->mPreConnectedQueue:Ljava/util/ArrayList;
 
-    .line 55
     const-wide/16 v2, 0x0
 
     iput-wide v2, p0, Landroid/net/NetworkAgent;->mLastBwRefreshTime:J
 
-    .line 57
     iput-boolean v4, p0, Landroid/net/NetworkAgent;->mPollLceScheduled:Z
 
-    .line 58
     new-instance v1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v1, v4}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v1, p0, Landroid/net/NetworkAgent;->mPollLcePending:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 211
     iput-object p3, p0, Landroid/net/NetworkAgent;->LOG_TAG:Ljava/lang/String;
 
-    .line 212
     iput-object p2, p0, Landroid/net/NetworkAgent;->mContext:Landroid/content/Context;
 
-    .line 213
     if-eqz p4, :cond_0
 
     if-nez p5, :cond_1
 
-    .line 214
     :cond_0
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -173,24 +162,19 @@
 
     throw v1
 
-    .line 213
     :cond_1
     if-eqz p6, :cond_0
 
-    .line 218
     iget-object v1, p0, Landroid/net/NetworkAgent;->mContext:Landroid/content/Context;
 
-    .line 219
-    const-string/jumbo v2, "connectivity"
+    const-string v2, "connectivity"
 
-    .line 218
     invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 220
     .local v0, "cm":Landroid/net/ConnectivityManager;
     new-instance v1, Landroid/os/Messenger;
 
@@ -200,7 +184,6 @@
 
     invoke-direct {v2, p4}, Landroid/net/NetworkInfo;-><init>(Landroid/net/NetworkInfo;)V
 
-    .line 221
     new-instance v3, Landroid/net/LinkProperties;
 
     invoke-direct {v3, p6}, Landroid/net/LinkProperties;-><init>(Landroid/net/LinkProperties;)V
@@ -213,14 +196,12 @@
 
     move-object v6, p8
 
-    .line 220
     invoke-virtual/range {v0 .. v6}, Landroid/net/ConnectivityManager;->registerNetworkAgent(Landroid/os/Messenger;Landroid/net/NetworkInfo;Landroid/net/LinkProperties;Landroid/net/NetworkCapabilities;ILandroid/net/NetworkMisc;)I
 
     move-result v1
 
     iput v1, p0, Landroid/net/NetworkAgent;->netId:I
 
-    .line 209
     return-void
 .end method
 
@@ -231,12 +212,10 @@
     .param p3, "arg2"    # I
 
     .prologue
-    .line 330
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, p3, v0}, Landroid/net/NetworkAgent;->queueOrSendMessage(IIILjava/lang/Object;)V
 
-    .line 329
     return-void
 .end method
 
@@ -248,28 +227,21 @@
     .param p4, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 334
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 335
     .local v0, "msg":Landroid/os/Message;
     iput p1, v0, Landroid/os/Message;->what:I
 
-    .line 336
     iput p2, v0, Landroid/os/Message;->arg1:I
 
-    .line 337
     iput p3, v0, Landroid/os/Message;->arg2:I
 
-    .line 338
     iput-object p4, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 339
     invoke-direct {p0, v0}, Landroid/net/NetworkAgent;->queueOrSendMessage(Landroid/os/Message;)V
 
-    .line 333
     return-void
 .end method
 
@@ -281,10 +253,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 326
     invoke-direct {p0, p1, v0, v0, p2}, Landroid/net/NetworkAgent;->queueOrSendMessage(IIILjava/lang/Object;)V
 
-    .line 325
     return-void
 .end method
 
@@ -293,18 +263,15 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 343
     iget-object v1, p0, Landroid/net/NetworkAgent;->mPreConnectedQueue:Ljava/util/ArrayList;
 
     monitor-enter v1
 
-    .line 344
     :try_start_0
     iget-object v0, p0, Landroid/net/NetworkAgent;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
 
     if-eqz v0, :cond_0
 
-    .line 345
     iget-object v0, p0, Landroid/net/NetworkAgent;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/util/AsyncChannel;->sendMessage(Landroid/os/Message;)V
@@ -314,10 +281,8 @@
     :goto_0
     monitor-exit v1
 
-    .line 342
     return-void
 
-    .line 347
     :cond_0
     :try_start_1
     iget-object v0, p0, Landroid/net/NetworkAgent;->mPreConnectedQueue:Ljava/util/ArrayList;
@@ -328,7 +293,6 @@
 
     goto :goto_0
 
-    .line 343
     :catchall_0
     move-exception v0
 
@@ -344,12 +308,10 @@
     .param p1, "ranges"    # [Landroid/net/UidRange;
 
     .prologue
-    .line 391
     const v0, 0x81005
 
     invoke-direct {p0, v0, p1}, Landroid/net/NetworkAgent;->queueOrSendMessage(ILjava/lang/Object;)V
 
-    .line 390
     return-void
 .end method
 
@@ -358,7 +320,6 @@
     .param p1, "acceptUnvalidated"    # Z
 
     .prologue
-    .line 414
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -367,7 +328,6 @@
 
     invoke-direct {p0, v1, v0}, Landroid/net/NetworkAgent;->queueOrSendMessage(ILjava/lang/Object;)V
 
-    .line 413
     return-void
 .end method
 
@@ -376,36 +336,30 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 226
     iget v10, p1, Landroid/os/Message;->what:I
 
     sparse-switch v10, :sswitch_data_0
 
-    .line 225
     :cond_0
     :goto_0
     return-void
 
-    .line 228
     :sswitch_0
     iget-object v10, p0, Landroid/net/NetworkAgent;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
 
     if-eqz v10, :cond_1
 
-    .line 229
-    const-string/jumbo v10, "Received new connection while already connected!"
+    const-string v10, "Received new connection while already connected!"
 
     invoke-virtual {p0, v10}, Landroid/net/NetworkAgent;->log(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 232
     :cond_1
     new-instance v0, Lcom/android/internal/util/AsyncChannel;
 
     invoke-direct {v0}, Lcom/android/internal/util/AsyncChannel;-><init>()V
 
-    .line 233
     .local v0, "ac":Lcom/android/internal/util/AsyncChannel;
     iget-object v10, p1, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
 
@@ -413,25 +367,19 @@
 
     invoke-virtual {v0, v11, p0, v10}, Lcom/android/internal/util/AsyncChannel;->connected(Landroid/content/Context;Landroid/os/Handler;Landroid/os/Messenger;)V
 
-    .line 234
     const v10, 0x11002
 
-    .line 235
     const/4 v11, 0x0
 
-    .line 234
     invoke-virtual {v0, p1, v10, v11}, Lcom/android/internal/util/AsyncChannel;->replyToMessage(Landroid/os/Message;II)V
 
-    .line 236
     iget-object v11, p0, Landroid/net/NetworkAgent;->mPreConnectedQueue:Ljava/util/ArrayList;
 
     monitor-enter v11
 
-    .line 237
     :try_start_0
     iput-object v0, p0, Landroid/net/NetworkAgent;->mAsyncChannel:Lcom/android/internal/util/AsyncChannel;
 
-    .line 238
     iget-object v10, p0, Landroid/net/NetworkAgent;->mPreConnectedQueue:Ljava/util/ArrayList;
 
     invoke-interface {v10}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -452,7 +400,6 @@
 
     check-cast v5, Landroid/os/Message;
 
-    .line 239
     .local v5, "m":Landroid/os/Message;
     invoke-virtual {v0, v5}, Lcom/android/internal/util/AsyncChannel;->sendMessage(Landroid/os/Message;)V
     :try_end_0
@@ -460,7 +407,6 @@
 
     goto :goto_1
 
-    .line 236
     .end local v5    # "m":Landroid/os/Message;
     .end local v6    # "m$iterator":Ljava/util/Iterator;
     :catchall_0
@@ -470,7 +416,6 @@
 
     throw v10
 
-    .line 241
     .restart local v6    # "m$iterator":Ljava/util/Iterator;
     :cond_2
     :try_start_1
@@ -484,7 +429,6 @@
 
     goto :goto_0
 
-    .line 248
     .end local v0    # "ac":Lcom/android/internal/util/AsyncChannel;
     .end local v6    # "m$iterator":Ljava/util/Iterator;
     :sswitch_1
@@ -498,21 +442,17 @@
 
     goto :goto_0
 
-    .line 252
     :sswitch_2
-    const-string/jumbo v10, "NetworkAgent channel lost"
+    const-string v10, "NetworkAgent channel lost"
 
     invoke-virtual {p0, v10}, Landroid/net/NetworkAgent;->log(Ljava/lang/String;)V
 
-    .line 254
     invoke-virtual {p0}, Landroid/net/NetworkAgent;->unwanted()V
 
-    .line 255
     iget-object v10, p0, Landroid/net/NetworkAgent;->mPreConnectedQueue:Ljava/util/ArrayList;
 
     monitor-enter v10
 
-    .line 256
     const/4 v11, 0x0
 
     :try_start_2
@@ -524,7 +464,6 @@
 
     goto :goto_0
 
-    .line 255
     :catchall_1
     move-exception v11
 
@@ -532,13 +471,12 @@
 
     throw v11
 
-    .line 261
     :sswitch_3
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "Unhandled Message "
+    const-string v11, "Unhandled Message "
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -556,13 +494,11 @@
 
     goto :goto_0
 
-    .line 265
     :sswitch_4
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 269
     .local v2, "currentTimeMs":J
     iget-wide v10, p0, Landroid/net/NetworkAgent;->mLastBwRefreshTime:J
 
@@ -574,12 +510,10 @@
 
     if-ltz v10, :cond_3
 
-    .line 270
     const/4 v10, 0x0
 
     iput-boolean v10, p0, Landroid/net/NetworkAgent;->mPollLceScheduled:Z
 
-    .line 271
     iget-object v10, p0, Landroid/net/NetworkAgent;->mPollLcePending:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v11, 0x1
@@ -590,18 +524,15 @@
 
     if-nez v10, :cond_0
 
-    .line 272
     invoke-virtual {p0}, Landroid/net/NetworkAgent;->pollLceData()V
 
     goto/16 :goto_0
 
-    .line 276
     :cond_3
     iget-boolean v10, p0, Landroid/net/NetworkAgent;->mPollLceScheduled:Z
 
     if-nez v10, :cond_0
 
-    .line 277
     iget-wide v10, p0, Landroid/net/NetworkAgent;->mLastBwRefreshTime:J
 
     const-wide/16 v12, 0x1f4
@@ -610,17 +541,13 @@
 
     sub-long/2addr v10, v2
 
-    .line 278
     const-wide/16 v12, 0x1
 
-    .line 277
     add-long v8, v10, v12
 
-    .line 280
     .local v8, "waitTime":J
     const v10, 0x8100a
 
-    .line 279
     invoke-virtual {p0, v10, v8, v9}, Landroid/net/NetworkAgent;->sendEmptyMessageDelayed(IJ)Z
 
     move-result v10
@@ -629,7 +556,6 @@
 
     goto/16 :goto_0
 
-    .line 290
     .end local v2    # "currentTimeMs":J
     .end local v8    # "waitTime":J
     :sswitch_5
@@ -639,7 +565,6 @@
 
     goto/16 :goto_0
 
-    .line 294
     :sswitch_6
     iget v10, p1, Landroid/os/Message;->arg1:I
 
@@ -657,31 +582,27 @@
 
     goto :goto_2
 
-    .line 298
     :sswitch_7
     invoke-virtual {p0, p1}, Landroid/net/NetworkAgent;->startPacketKeepalive(Landroid/os/Message;)V
 
     goto/16 :goto_0
 
-    .line 302
     :sswitch_8
     invoke-virtual {p0, p1}, Landroid/net/NetworkAgent;->stopPacketKeepalive(Landroid/os/Message;)V
 
     goto/16 :goto_0
 
-    .line 308
     :sswitch_9
     iget-object v10, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v10, Landroid/os/Bundle;
 
-    const-string/jumbo v11, "thresholds"
+    const-string v11, "thresholds"
 
     invoke-virtual {v10, v11}, Landroid/os/Bundle;->getIntegerArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v7
 
-    .line 311
     .local v7, "thresholds":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     if-eqz v7, :cond_5
 
@@ -692,7 +613,6 @@
     :goto_3
     new-array v4, v10, [I
 
-    .line 312
     .local v4, "intThresholds":[I
     const/4 v1, 0x0
 
@@ -702,7 +622,6 @@
 
     if-ge v1, v10, :cond_6
 
-    .line 313
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v10
@@ -715,12 +634,10 @@
 
     aput v10, v4, v1
 
-    .line 312
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_4
 
-    .line 311
     .end local v1    # "i":I
     .end local v4    # "intThresholds":[I
     :cond_5
@@ -728,7 +645,6 @@
 
     goto :goto_3
 
-    .line 315
     .restart local v1    # "i":I
     .restart local v4    # "intThresholds":[I
     :cond_6
@@ -736,7 +652,6 @@
 
     goto/16 :goto_0
 
-    .line 319
     .end local v1    # "i":I
     .end local v4    # "intThresholds":[I
     .end local v7    # "thresholds":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
@@ -745,7 +660,6 @@
 
     goto/16 :goto_0
 
-    .line 226
     :sswitch_data_0
     .sparse-switch
         0x11001 -> :sswitch_0
@@ -767,14 +681,13 @@
     .param p1, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 498
     iget-object v0, p0, Landroid/net/NetworkAgent;->LOG_TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "NetworkAgent: "
+    const-string v2, "NetworkAgent: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -790,7 +703,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 497
     return-void
 .end method
 
@@ -799,7 +711,6 @@
     .param p1, "status"    # I
 
     .prologue
-    .line 447
     return-void
 .end method
 
@@ -809,12 +720,10 @@
     .param p2, "reason"    # I
 
     .prologue
-    .line 478
     const v0, 0x8100d
 
     invoke-direct {p0, v0, p1, p2}, Landroid/net/NetworkAgent;->queueOrSendMessage(III)V
 
-    .line 477
     return-void
 .end method
 
@@ -822,7 +731,6 @@
     .locals 0
 
     .prologue
-    .line 429
     return-void
 .end method
 
@@ -830,7 +738,6 @@
     .locals 0
 
     .prologue
-    .line 494
     return-void
 .end method
 
@@ -839,12 +746,10 @@
     .param p1, "ranges"    # [Landroid/net/UidRange;
 
     .prologue
-    .line 399
     const v0, 0x81006
 
     invoke-direct {p0, v0, p1}, Landroid/net/NetworkAgent;->queueOrSendMessage(ILjava/lang/Object;)V
 
-    .line 398
     return-void
 .end method
 
@@ -853,7 +758,6 @@
     .param p1, "accept"    # Z
 
     .prologue
-    .line 457
     return-void
 .end method
 
@@ -862,7 +766,6 @@
     .param p1, "linkProperties"    # Landroid/net/LinkProperties;
 
     .prologue
-    .line 356
     new-instance v0, Landroid/net/LinkProperties;
 
     invoke-direct {v0, p1}, Landroid/net/LinkProperties;-><init>(Landroid/net/LinkProperties;)V
@@ -871,7 +774,6 @@
 
     invoke-direct {p0, v1, v0}, Landroid/net/NetworkAgent;->queueOrSendMessage(ILjava/lang/Object;)V
 
-    .line 355
     return-void
 .end method
 
@@ -880,31 +782,26 @@
     .param p1, "networkCapabilities"    # Landroid/net/NetworkCapabilities;
 
     .prologue
-    .line 370
     iget-object v0, p0, Landroid/net/NetworkAgent;->mPollLcePending:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 371
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/net/NetworkAgent;->mLastBwRefreshTime:J
 
-    .line 373
     new-instance v0, Landroid/net/NetworkCapabilities;
 
     invoke-direct {v0, p1}, Landroid/net/NetworkCapabilities;-><init>(Landroid/net/NetworkCapabilities;)V
 
-    .line 372
     const v1, 0x81002
 
     invoke-direct {p0, v1, v0}, Landroid/net/NetworkAgent;->queueOrSendMessage(ILjava/lang/Object;)V
 
-    .line 369
     return-void
 .end method
 
@@ -913,7 +810,6 @@
     .param p1, "networkInfo"    # Landroid/net/NetworkInfo;
 
     .prologue
-    .line 363
     new-instance v0, Landroid/net/NetworkInfo;
 
     invoke-direct {v0, p1}, Landroid/net/NetworkInfo;-><init>(Landroid/net/NetworkInfo;)V
@@ -922,7 +818,6 @@
 
     invoke-direct {p0, v1, v0}, Landroid/net/NetworkAgent;->queueOrSendMessage(ILjava/lang/Object;)V
 
-    .line 362
     return-void
 .end method
 
@@ -931,19 +826,16 @@
     .param p1, "score"    # I
 
     .prologue
-    .line 380
     if-gez p1, :cond_0
 
-    .line 381
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "Score must be >= 0"
+    const-string v1, "Score must be >= 0"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 383
     :cond_0
     new-instance v0, Ljava/lang/Integer;
 
@@ -953,7 +845,6 @@
 
     invoke-direct {p0, v1, v0}, Landroid/net/NetworkAgent;->queueOrSendMessage(ILjava/lang/Object;)V
 
-    .line 379
     return-void
 .end method
 
@@ -962,7 +853,6 @@
     .param p1, "thresholds"    # [I
 
     .prologue
-    .line 485
     return-void
 .end method
 
@@ -971,14 +861,12 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 464
     iget v0, p1, Landroid/os/Message;->arg1:I
 
     const/16 v1, -0x1e
 
     invoke-virtual {p0, v0, v1}, Landroid/net/NetworkAgent;->onPacketKeepaliveEvent(II)V
 
-    .line 463
     return-void
 .end method
 
@@ -987,14 +875,12 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 471
     iget v0, p1, Landroid/os/Message;->arg1:I
 
     const/16 v1, -0x1e
 
     invoke-virtual {p0, v0, v1}, Landroid/net/NetworkAgent;->onPacketKeepaliveEvent(II)V
 
-    .line 470
     return-void
 .end method
 

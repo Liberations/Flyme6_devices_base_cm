@@ -58,55 +58,49 @@
 
     const/4 v3, 0x0
 
-    .line 58
     new-instance v0, Lcom/android/internal/telephony/dataconnection/DataCallResponse$SetupResult;
 
-    const-string/jumbo v1, "SUCCESS"
+    const-string v1, "SUCCESS"
 
     invoke-direct {v0, v1, v3}, Lcom/android/internal/telephony/dataconnection/DataCallResponse$SetupResult;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/dataconnection/DataCallResponse$SetupResult;->SUCCESS:Lcom/android/internal/telephony/dataconnection/DataCallResponse$SetupResult;
 
-    .line 59
     new-instance v0, Lcom/android/internal/telephony/dataconnection/DataCallResponse$SetupResult;
 
-    const-string/jumbo v1, "ERR_BadCommand"
+    const-string v1, "ERR_BadCommand"
 
     invoke-direct {v0, v1, v4}, Lcom/android/internal/telephony/dataconnection/DataCallResponse$SetupResult;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/dataconnection/DataCallResponse$SetupResult;->ERR_BadCommand:Lcom/android/internal/telephony/dataconnection/DataCallResponse$SetupResult;
 
-    .line 60
     new-instance v0, Lcom/android/internal/telephony/dataconnection/DataCallResponse$SetupResult;
 
-    const-string/jumbo v1, "ERR_UnacceptableParameter"
+    const-string v1, "ERR_UnacceptableParameter"
 
     invoke-direct {v0, v1, v5}, Lcom/android/internal/telephony/dataconnection/DataCallResponse$SetupResult;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/dataconnection/DataCallResponse$SetupResult;->ERR_UnacceptableParameter:Lcom/android/internal/telephony/dataconnection/DataCallResponse$SetupResult;
 
-    .line 61
     new-instance v0, Lcom/android/internal/telephony/dataconnection/DataCallResponse$SetupResult;
 
-    const-string/jumbo v1, "ERR_GetLastErrorFromRil"
+    const-string v1, "ERR_GetLastErrorFromRil"
 
     invoke-direct {v0, v1, v6}, Lcom/android/internal/telephony/dataconnection/DataCallResponse$SetupResult;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/dataconnection/DataCallResponse$SetupResult;->ERR_GetLastErrorFromRil:Lcom/android/internal/telephony/dataconnection/DataCallResponse$SetupResult;
 
-    .line 62
     new-instance v0, Lcom/android/internal/telephony/dataconnection/DataCallResponse$SetupResult;
 
-    const-string/jumbo v1, "ERR_Stale"
+    const-string v1, "ERR_Stale"
 
     invoke-direct {v0, v1, v7}, Lcom/android/internal/telephony/dataconnection/DataCallResponse$SetupResult;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/dataconnection/DataCallResponse$SetupResult;->ERR_Stale:Lcom/android/internal/telephony/dataconnection/DataCallResponse$SetupResult;
 
-    .line 63
     new-instance v0, Lcom/android/internal/telephony/dataconnection/DataCallResponse$SetupResult;
 
-    const-string/jumbo v1, "ERR_RilError"
+    const-string v1, "ERR_RilError"
 
     const/4 v2, 0x5
 
@@ -114,7 +108,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/dataconnection/DataCallResponse$SetupResult;->ERR_RilError:Lcom/android/internal/telephony/dataconnection/DataCallResponse$SetupResult;
 
-    .line 57
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/android/internal/telephony/dataconnection/DataCallResponse$SetupResult;
@@ -154,10 +147,8 @@
     .locals 1
 
     .prologue
-    .line 67
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 68
     const/4 v0, 0x0
 
     invoke-static {v0}, Lcom/android/internal/telephony/dataconnection/DcFailCause;->fromInt(I)Lcom/android/internal/telephony/dataconnection/DcFailCause;
@@ -166,7 +157,6 @@
 
     iput-object v0, p0, Lcom/android/internal/telephony/dataconnection/DataCallResponse$SetupResult;->mFailCause:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    .line 67
     return-void
 .end method
 
@@ -175,7 +165,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 57
     const-class v0, Lcom/android/internal/telephony/dataconnection/DataCallResponse$SetupResult;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -191,7 +180,6 @@
     .locals 1
 
     .prologue
-    .line 57
     sget-object v0, Lcom/android/internal/telephony/dataconnection/DataCallResponse$SetupResult;->$VALUES:[Lcom/android/internal/telephony/dataconnection/DataCallResponse$SetupResult;
 
     return-object v0
@@ -203,7 +191,6 @@
     .locals 2
 
     .prologue
-    .line 73
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -216,7 +203,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "  SetupResult.mFailCause="
+    const-string v1, "  SetupResult.mFailCause="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

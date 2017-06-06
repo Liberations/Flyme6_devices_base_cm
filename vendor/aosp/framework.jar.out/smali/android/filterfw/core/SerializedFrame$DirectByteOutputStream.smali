@@ -33,28 +33,22 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 62
     iput-object p1, p0, Landroid/filterfw/core/SerializedFrame$DirectByteOutputStream;->this$0:Landroid/filterfw/core/SerializedFrame;
 
     invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
 
-    .line 58
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/filterfw/core/SerializedFrame$DirectByteOutputStream;->mBuffer:[B
 
-    .line 59
     iput v1, p0, Landroid/filterfw/core/SerializedFrame$DirectByteOutputStream;->mOffset:I
 
-    .line 60
     iput v1, p0, Landroid/filterfw/core/SerializedFrame$DirectByteOutputStream;->mDataOffset:I
 
-    .line 63
     new-array v0, p2, [B
 
     iput-object v0, p0, Landroid/filterfw/core/SerializedFrame$DirectByteOutputStream;->mBuffer:[B
 
-    .line 62
     return-void
 .end method
 
@@ -65,7 +59,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 67
     iget v1, p0, Landroid/filterfw/core/SerializedFrame$DirectByteOutputStream;->mOffset:I
 
     add-int/2addr v1, p1
@@ -76,10 +69,8 @@
 
     if-le v1, v2, :cond_0
 
-    .line 68
     iget-object v0, p0, Landroid/filterfw/core/SerializedFrame$DirectByteOutputStream;->mBuffer:[B
 
-    .line 69
     .local v0, "oldBuffer":[B
     iget v1, p0, Landroid/filterfw/core/SerializedFrame$DirectByteOutputStream;->mOffset:I
 
@@ -99,17 +90,14 @@
 
     iput-object v1, p0, Landroid/filterfw/core/SerializedFrame$DirectByteOutputStream;->mBuffer:[B
 
-    .line 70
     iget-object v1, p0, Landroid/filterfw/core/SerializedFrame$DirectByteOutputStream;->mBuffer:[B
 
     iget v2, p0, Landroid/filterfw/core/SerializedFrame$DirectByteOutputStream;->mOffset:I
 
     invoke-static {v0, v3, v1, v3, v2}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 71
     const/4 v0, 0x0
 
-    .line 66
     .end local v0    # "oldBuffer":[B
     :cond_0
     return-void
@@ -121,7 +109,6 @@
     .locals 1
 
     .prologue
-    .line 84
     iget-object v0, p0, Landroid/filterfw/core/SerializedFrame$DirectByteOutputStream;->mBuffer:[B
 
     return-object v0
@@ -131,7 +118,6 @@
     .locals 4
 
     .prologue
-    .line 110
     new-instance v0, Landroid/filterfw/core/SerializedFrame$DirectByteInputStream;
 
     iget-object v1, p0, Landroid/filterfw/core/SerializedFrame$DirectByteOutputStream;->this$0:Landroid/filterfw/core/SerializedFrame;
@@ -149,7 +135,6 @@
     .locals 1
 
     .prologue
-    .line 80
     iget v0, p0, Landroid/filterfw/core/SerializedFrame$DirectByteOutputStream;->mOffset:I
 
     return v0
@@ -159,12 +144,10 @@
     .locals 1
 
     .prologue
-    .line 76
     iget v0, p0, Landroid/filterfw/core/SerializedFrame$DirectByteOutputStream;->mOffset:I
 
     iput v0, p0, Landroid/filterfw/core/SerializedFrame$DirectByteOutputStream;->mDataOffset:I
 
-    .line 75
     return-void
 .end method
 
@@ -172,12 +155,10 @@
     .locals 1
 
     .prologue
-    .line 106
     iget v0, p0, Landroid/filterfw/core/SerializedFrame$DirectByteOutputStream;->mDataOffset:I
 
     iput v0, p0, Landroid/filterfw/core/SerializedFrame$DirectByteOutputStream;->mOffset:I
 
-    .line 105
     return-void
 .end method
 
@@ -186,12 +167,10 @@
     .param p1, "b"    # I
 
     .prologue
-    .line 101
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Landroid/filterfw/core/SerializedFrame$DirectByteOutputStream;->ensureFit(I)V
 
-    .line 102
     iget-object v0, p0, Landroid/filterfw/core/SerializedFrame$DirectByteOutputStream;->mBuffer:[B
 
     iget v1, p0, Landroid/filterfw/core/SerializedFrame$DirectByteOutputStream;->mOffset:I
@@ -204,7 +183,6 @@
 
     aput-byte v2, v0, v1
 
-    .line 100
     return-void
 .end method
 
@@ -213,14 +191,12 @@
     .param p1, "b"    # [B
 
     .prologue
-    .line 89
     array-length v0, p1
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, p1, v1, v0}, Landroid/filterfw/core/SerializedFrame$DirectByteOutputStream;->write([BII)V
 
-    .line 88
     return-void
 .end method
 
@@ -231,23 +207,19 @@
     .param p3, "len"    # I
 
     .prologue
-    .line 94
     invoke-direct {p0, p3}, Landroid/filterfw/core/SerializedFrame$DirectByteOutputStream;->ensureFit(I)V
 
-    .line 95
     iget-object v0, p0, Landroid/filterfw/core/SerializedFrame$DirectByteOutputStream;->mBuffer:[B
 
     iget v1, p0, Landroid/filterfw/core/SerializedFrame$DirectByteOutputStream;->mOffset:I
 
     invoke-static {p1, p2, v0, v1, p3}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 96
     iget v0, p0, Landroid/filterfw/core/SerializedFrame$DirectByteOutputStream;->mOffset:I
 
     add-int/2addr v0, p3
 
     iput v0, p0, Landroid/filterfw/core/SerializedFrame$DirectByteOutputStream;->mOffset:I
 
-    .line 93
     return-void
 .end method

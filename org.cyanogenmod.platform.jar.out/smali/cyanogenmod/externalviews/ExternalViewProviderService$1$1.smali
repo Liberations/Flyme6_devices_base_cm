@@ -40,7 +40,6 @@
     .param p2, "val$options"    # Landroid/os/Bundle;
 
     .prologue
-    .line 64
     iput-object p1, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$1$1;->this$1:Lcyanogenmod/externalviews/ExternalViewProviderService$1;
 
     iput-object p2, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$1$1;->val$options:Landroid/os/Bundle;
@@ -61,7 +60,6 @@
     .end annotation
 
     .prologue
-    .line 67
     iget-object v0, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$1$1;->this$1:Lcyanogenmod/externalviews/ExternalViewProviderService$1;
 
     iget-object v0, v0, Lcyanogenmod/externalviews/ExternalViewProviderService$1;->this$0:Lcyanogenmod/externalviews/ExternalViewProviderService;
@@ -88,7 +86,6 @@
     .end annotation
 
     .prologue
-    .line 66
     invoke-virtual {p0}, Lcyanogenmod/externalviews/ExternalViewProviderService$1$1;->call()Landroid/os/IBinder;
 
     move-result-object v0

@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,7 +19,6 @@
     .param p1, "value"    # D
 
     .prologue
-    .line 63
     const/4 v0, 0x0
 
     aget-wide v0, p0, v0
@@ -55,12 +53,10 @@
     .prologue
     const-wide/high16 v6, 0x4000000000000000L    # 2.0
 
-    .line 37
     const/4 v1, 0x3
 
     new-array v0, v1, [D
 
-    .line 38
     .local v0, "curve":[D
     mul-double v2, p0, p4
 
@@ -80,7 +76,6 @@
 
     aput-wide v2, v0, v1
 
-    .line 39
     sub-double v2, p2, p0
 
     invoke-static {v2, v3, v6, v7}, Ljava/lang/Math;->pow(DD)D
@@ -99,7 +94,6 @@
 
     aput-wide v2, v0, v1
 
-    .line 40
     sub-double v2, p4, p2
 
     sub-double v4, p2, p0
@@ -116,7 +110,6 @@
 
     aput-wide v2, v0, v1
 
-    .line 41
     return-object v0
 .end method
 
@@ -126,7 +119,6 @@
     .param p1, "value"    # D
 
     .prologue
-    .line 52
     const/4 v0, 0x0
 
     aget-wide v0, p0, v0

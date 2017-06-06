@@ -21,17 +21,14 @@
     .param p1, "e"    # Lcom/android/internal/telephony/CommandException$Error;
 
     .prologue
-    .line 61
     invoke-virtual {p1}, Lcom/android/internal/telephony/CommandException$Error;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    .line 62
     iput-object p1, p0, Lcom/android/internal/telephony/CommandException;->mError:Lcom/android/internal/telephony/CommandException$Error;
 
-    .line 60
     return-void
 .end method
 
@@ -41,13 +38,10 @@
     .param p2, "errString"    # Ljava/lang/String;
 
     .prologue
-    .line 66
     invoke-direct {p0, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    .line 67
     iput-object p1, p0, Lcom/android/internal/telephony/CommandException;->mError:Lcom/android/internal/telephony/CommandException$Error;
 
-    .line 65
     return-void
 .end method
 
@@ -56,18 +50,16 @@
     .param p0, "ril_errno"    # I
 
     .prologue
-    .line 72
     packed-switch p0, :pswitch_data_0
 
-    .line 131
     :pswitch_0
-    const-string/jumbo v0, "GSM"
+    const-string v0, "GSM"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Unrecognized RIL errno "
+    const-string v2, "Unrecognized RIL errno "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -83,7 +75,6 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 132
     new-instance v0, Lcom/android/internal/telephony/CommandException;
 
     sget-object v1, Lcom/android/internal/telephony/CommandException$Error;->INVALID_RESPONSE:Lcom/android/internal/telephony/CommandException$Error;
@@ -92,13 +83,11 @@
 
     return-object v0
 
-    .line 73
     :pswitch_1
     const/4 v0, 0x0
 
     return-object v0
 
-    .line 75
     :pswitch_2
     new-instance v0, Lcom/android/internal/telephony/CommandException;
 
@@ -108,7 +97,6 @@
 
     return-object v0
 
-    .line 77
     :pswitch_3
     new-instance v0, Lcom/android/internal/telephony/CommandException;
 
@@ -118,7 +106,6 @@
 
     return-object v0
 
-    .line 79
     :pswitch_4
     new-instance v0, Lcom/android/internal/telephony/CommandException;
 
@@ -128,7 +115,6 @@
 
     return-object v0
 
-    .line 81
     :pswitch_5
     new-instance v0, Lcom/android/internal/telephony/CommandException;
 
@@ -138,7 +124,6 @@
 
     return-object v0
 
-    .line 83
     :pswitch_6
     new-instance v0, Lcom/android/internal/telephony/CommandException;
 
@@ -148,7 +133,6 @@
 
     return-object v0
 
-    .line 85
     :pswitch_7
     new-instance v0, Lcom/android/internal/telephony/CommandException;
 
@@ -158,7 +142,6 @@
 
     return-object v0
 
-    .line 87
     :pswitch_8
     new-instance v0, Lcom/android/internal/telephony/CommandException;
 
@@ -168,7 +151,6 @@
 
     return-object v0
 
-    .line 89
     :pswitch_9
     new-instance v0, Lcom/android/internal/telephony/CommandException;
 
@@ -178,7 +160,6 @@
 
     return-object v0
 
-    .line 91
     :pswitch_a
     new-instance v0, Lcom/android/internal/telephony/CommandException;
 
@@ -188,7 +169,6 @@
 
     return-object v0
 
-    .line 93
     :pswitch_b
     new-instance v0, Lcom/android/internal/telephony/CommandException;
 
@@ -198,7 +178,6 @@
 
     return-object v0
 
-    .line 95
     :pswitch_c
     new-instance v0, Lcom/android/internal/telephony/CommandException;
 
@@ -208,7 +187,6 @@
 
     return-object v0
 
-    .line 97
     :pswitch_d
     new-instance v0, Lcom/android/internal/telephony/CommandException;
 
@@ -218,7 +196,6 @@
 
     return-object v0
 
-    .line 99
     :pswitch_e
     new-instance v0, Lcom/android/internal/telephony/CommandException;
 
@@ -228,7 +205,6 @@
 
     return-object v0
 
-    .line 101
     :pswitch_f
     new-instance v0, Lcom/android/internal/telephony/CommandException;
 
@@ -238,7 +214,6 @@
 
     return-object v0
 
-    .line 103
     :pswitch_10
     new-instance v0, Lcom/android/internal/telephony/CommandException;
 
@@ -248,7 +223,6 @@
 
     return-object v0
 
-    .line 105
     :pswitch_11
     new-instance v0, Lcom/android/internal/telephony/CommandException;
 
@@ -258,7 +232,6 @@
 
     return-object v0
 
-    .line 107
     :pswitch_12
     new-instance v0, Lcom/android/internal/telephony/CommandException;
 
@@ -268,7 +241,6 @@
 
     return-object v0
 
-    .line 109
     :pswitch_13
     new-instance v0, Lcom/android/internal/telephony/CommandException;
 
@@ -278,7 +250,6 @@
 
     return-object v0
 
-    .line 111
     :pswitch_14
     new-instance v0, Lcom/android/internal/telephony/CommandException;
 
@@ -288,7 +259,6 @@
 
     return-object v0
 
-    .line 113
     :pswitch_15
     new-instance v0, Lcom/android/internal/telephony/CommandException;
 
@@ -298,7 +268,6 @@
 
     return-object v0
 
-    .line 115
     :pswitch_16
     new-instance v0, Lcom/android/internal/telephony/CommandException;
 
@@ -308,7 +277,6 @@
 
     return-object v0
 
-    .line 117
     :pswitch_17
     new-instance v0, Lcom/android/internal/telephony/CommandException;
 
@@ -318,7 +286,6 @@
 
     return-object v0
 
-    .line 119
     :pswitch_18
     new-instance v0, Lcom/android/internal/telephony/CommandException;
 
@@ -328,7 +295,6 @@
 
     return-object v0
 
-    .line 121
     :pswitch_19
     new-instance v0, Lcom/android/internal/telephony/CommandException;
 
@@ -338,7 +304,6 @@
 
     return-object v0
 
-    .line 123
     :pswitch_1a
     new-instance v0, Lcom/android/internal/telephony/CommandException;
 
@@ -348,7 +313,6 @@
 
     return-object v0
 
-    .line 125
     :pswitch_1b
     new-instance v0, Lcom/android/internal/telephony/CommandException;
 
@@ -358,7 +322,6 @@
 
     return-object v0
 
-    .line 127
     :pswitch_1c
     new-instance v0, Lcom/android/internal/telephony/CommandException;
 
@@ -368,7 +331,6 @@
 
     return-object v0
 
-    .line 129
     :pswitch_1d
     new-instance v0, Lcom/android/internal/telephony/CommandException;
 
@@ -378,7 +340,6 @@
 
     return-object v0
 
-    .line 72
     nop
 
     :pswitch_data_0
@@ -431,7 +392,6 @@
     .locals 1
 
     .prologue
-    .line 137
     iget-object v0, p0, Lcom/android/internal/telephony/CommandException;->mError:Lcom/android/internal/telephony/CommandException$Error;
 
     return-object v0

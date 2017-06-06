@@ -30,7 +30,6 @@
     .param p3, "val$endingAlpha"    # I
 
     .prologue
-    .line 467
     iput-object p1, p0, Landroid/support/v4/widget/SwipeRefreshLayout$6;->this$0:Landroid/support/v4/widget/SwipeRefreshLayout;
 
     iput p2, p0, Landroid/support/v4/widget/SwipeRefreshLayout$6;->val$startingAlpha:I
@@ -50,14 +49,12 @@
     .param p2, "t"    # Landroid/view/animation/Transformation;
 
     .prologue
-    .line 470
     iget-object v0, p0, Landroid/support/v4/widget/SwipeRefreshLayout$6;->this$0:Landroid/support/v4/widget/SwipeRefreshLayout;
 
     invoke-static {v0}, Landroid/support/v4/widget/SwipeRefreshLayout;->-get3(Landroid/support/v4/widget/SwipeRefreshLayout;)Landroid/support/v4/widget/MaterialProgressDrawable;
 
     move-result-object v0
 
-    .line 471
     iget v1, p0, Landroid/support/v4/widget/SwipeRefreshLayout$6;->val$startingAlpha:I
 
     int-to-float v1, v1
@@ -76,9 +73,7 @@
 
     float-to-int v1, v1
 
-    .line 470
     invoke-virtual {v0, v1}, Landroid/support/v4/widget/MaterialProgressDrawable;->setAlpha(I)V
 
-    .line 469
     return-void
 .end method

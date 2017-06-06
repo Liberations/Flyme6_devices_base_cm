@@ -43,7 +43,6 @@
     .locals 0
 
     .prologue
-    .line 92
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -57,7 +56,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 114
     iget v1, p0, Landroid/net/wifi/passpoint/WifiPasspointInfo$WanMetrics;->wanInfo:I
 
     and-int/lit8 v1, v1, 0x8
@@ -74,7 +72,6 @@
     .locals 1
 
     .prologue
-    .line 106
     iget v0, p0, Landroid/net/wifi/passpoint/WifiPasspointInfo$WanMetrics;->wanInfo:I
 
     and-int/lit8 v0, v0, 0x3
@@ -88,7 +85,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 110
     iget v1, p0, Landroid/net/wifi/passpoint/WifiPasspointInfo$WanMetrics;->wanInfo:I
 
     and-int/lit8 v1, v1, 0x4
@@ -105,7 +101,6 @@
     .locals 4
 
     .prologue
-    .line 119
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -116,7 +111,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, ","
+    const-string v1, ","
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -128,7 +123,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, ","
+    const-string v1, ","
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -140,48 +135,38 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, ","
+    const-string v1, ","
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 120
     iget v1, p0, Landroid/net/wifi/passpoint/WifiPasspointInfo$WanMetrics;->downlinkLoad:I
 
-    .line 119
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 120
-    const-string/jumbo v1, ","
+    const-string v1, ","
 
-    .line 119
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 120
     iget v1, p0, Landroid/net/wifi/passpoint/WifiPasspointInfo$WanMetrics;->uplinkLoad:I
 
-    .line 119
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 120
-    const-string/jumbo v1, ","
+    const-string v1, ","
 
-    .line 119
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 120
     iget v1, p0, Landroid/net/wifi/passpoint/WifiPasspointInfo$WanMetrics;->lmd:I
 
-    .line 119
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0

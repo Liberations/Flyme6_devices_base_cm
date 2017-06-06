@@ -56,55 +56,49 @@
 
     const/4 v3, 0x0
 
-    .line 139
     new-instance v0, Landroid/app/ComposedIconInfo$SwatchType;
 
-    const-string/jumbo v1, "None"
+    const-string v1, "None"
 
     invoke-direct {v0, v1, v3}, Landroid/app/ComposedIconInfo$SwatchType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Landroid/app/ComposedIconInfo$SwatchType;->None:Landroid/app/ComposedIconInfo$SwatchType;
 
-    .line 140
     new-instance v0, Landroid/app/ComposedIconInfo$SwatchType;
 
-    const-string/jumbo v1, "Vibrant"
+    const-string v1, "Vibrant"
 
     invoke-direct {v0, v1, v4}, Landroid/app/ComposedIconInfo$SwatchType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Landroid/app/ComposedIconInfo$SwatchType;->Vibrant:Landroid/app/ComposedIconInfo$SwatchType;
 
-    .line 141
     new-instance v0, Landroid/app/ComposedIconInfo$SwatchType;
 
-    const-string/jumbo v1, "VibrantLight"
+    const-string v1, "VibrantLight"
 
     invoke-direct {v0, v1, v5}, Landroid/app/ComposedIconInfo$SwatchType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Landroid/app/ComposedIconInfo$SwatchType;->VibrantLight:Landroid/app/ComposedIconInfo$SwatchType;
 
-    .line 142
     new-instance v0, Landroid/app/ComposedIconInfo$SwatchType;
 
-    const-string/jumbo v1, "VibrantDark"
+    const-string v1, "VibrantDark"
 
     invoke-direct {v0, v1, v6}, Landroid/app/ComposedIconInfo$SwatchType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Landroid/app/ComposedIconInfo$SwatchType;->VibrantDark:Landroid/app/ComposedIconInfo$SwatchType;
 
-    .line 143
     new-instance v0, Landroid/app/ComposedIconInfo$SwatchType;
 
-    const-string/jumbo v1, "Muted"
+    const-string v1, "Muted"
 
     invoke-direct {v0, v1, v7}, Landroid/app/ComposedIconInfo$SwatchType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Landroid/app/ComposedIconInfo$SwatchType;->Muted:Landroid/app/ComposedIconInfo$SwatchType;
 
-    .line 144
     new-instance v0, Landroid/app/ComposedIconInfo$SwatchType;
 
-    const-string/jumbo v1, "MutedLight"
+    const-string v1, "MutedLight"
 
     const/4 v2, 0x5
 
@@ -112,10 +106,9 @@
 
     sput-object v0, Landroid/app/ComposedIconInfo$SwatchType;->MutedLight:Landroid/app/ComposedIconInfo$SwatchType;
 
-    .line 145
     new-instance v0, Landroid/app/ComposedIconInfo$SwatchType;
 
-    const-string/jumbo v1, "MutedDark"
+    const-string v1, "MutedDark"
 
     const/4 v2, 0x6
 
@@ -123,7 +116,6 @@
 
     sput-object v0, Landroid/app/ComposedIconInfo$SwatchType;->MutedDark:Landroid/app/ComposedIconInfo$SwatchType;
 
-    .line 138
     const/4 v0, 0x7
 
     new-array v0, v0, [Landroid/app/ComposedIconInfo$SwatchType;
@@ -169,7 +161,6 @@
     .locals 0
 
     .prologue
-    .line 138
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -180,7 +171,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 138
     const-class v0, Landroid/app/ComposedIconInfo$SwatchType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -196,7 +186,6 @@
     .locals 1
 
     .prologue
-    .line 138
     sget-object v0, Landroid/app/ComposedIconInfo$SwatchType;->$VALUES:[Landroid/app/ComposedIconInfo$SwatchType;
 
     return-object v0

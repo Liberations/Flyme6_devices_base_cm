@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/pm/PackageInstallerService;
 
     .prologue
-    .line 554
     iput-object p1, p0, Lcom/android/server/pm/PackageInstallerService$2;->this$0:Lcom/android/server/pm/PackageInstallerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 557
     iget-object v0, p0, Lcom/android/server/pm/PackageInstallerService$2;->this$0:Lcom/android/server/pm/PackageInstallerService;
 
     invoke-static {v0}, Lcom/android/server/pm/PackageInstallerService;->-get3(Lcom/android/server/pm/PackageInstallerService;)Landroid/util/SparseArray;
@@ -50,7 +48,6 @@
 
     monitor-enter v1
 
-    .line 558
     :try_start_0
     iget-object v0, p0, Lcom/android/server/pm/PackageInstallerService$2;->this$0:Lcom/android/server/pm/PackageInstallerService;
 
@@ -60,10 +57,8 @@
 
     monitor-exit v1
 
-    .line 556
     return-void
 
-    .line 557
     :catchall_0
     move-exception v0
 

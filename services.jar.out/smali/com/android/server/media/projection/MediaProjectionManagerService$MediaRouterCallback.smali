@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/media/projection/MediaProjectionManagerService;
 
     .prologue
-    .line 471
     iput-object p1, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaRouterCallback;->this$0:Lcom/android/server/media/projection/MediaProjectionManagerService;
 
     invoke-direct {p0}, Landroid/media/MediaRouter$SimpleCallback;-><init>()V
@@ -51,7 +50,6 @@
     .param p3, "info"    # Landroid/media/MediaRouter$RouteInfo;
 
     .prologue
-    .line 474
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaRouterCallback;->this$0:Lcom/android/server/media/projection/MediaProjectionManagerService;
 
     invoke-static {v0}, Lcom/android/server/media/projection/MediaProjectionManagerService;->-get3(Lcom/android/server/media/projection/MediaProjectionManagerService;)Ljava/lang/Object;
@@ -60,18 +58,15 @@
 
     monitor-enter v1
 
-    .line 475
     and-int/lit8 v0, p2, 0x4
 
     if-eqz v0, :cond_0
 
-    .line 476
     :try_start_0
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaRouterCallback;->this$0:Lcom/android/server/media/projection/MediaProjectionManagerService;
 
     invoke-static {v0, p3}, Lcom/android/server/media/projection/MediaProjectionManagerService;->-set0(Lcom/android/server/media/projection/MediaProjectionManagerService;Landroid/media/MediaRouter$RouteInfo;)Landroid/media/MediaRouter$RouteInfo;
 
-    .line 477
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaRouterCallback;->this$0:Lcom/android/server/media/projection/MediaProjectionManagerService;
 
     invoke-static {v0}, Lcom/android/server/media/projection/MediaProjectionManagerService;->-get5(Lcom/android/server/media/projection/MediaProjectionManagerService;)Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;
@@ -80,7 +75,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 478
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaRouterCallback;->this$0:Lcom/android/server/media/projection/MediaProjectionManagerService;
 
     invoke-static {v0}, Lcom/android/server/media/projection/MediaProjectionManagerService;->-get5(Lcom/android/server/media/projection/MediaProjectionManagerService;)Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;
@@ -94,10 +88,8 @@
     :cond_0
     monitor-exit v1
 
-    .line 473
     return-void
 
-    .line 474
     :catchall_0
     move-exception v0
 
@@ -113,7 +105,6 @@
     .param p3, "info"    # Landroid/media/MediaRouter$RouteInfo;
 
     .prologue
-    .line 486
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaRouterCallback;->this$0:Lcom/android/server/media/projection/MediaProjectionManagerService;
 
     invoke-static {v0}, Lcom/android/server/media/projection/MediaProjectionManagerService;->-get4(Lcom/android/server/media/projection/MediaProjectionManagerService;)Landroid/media/MediaRouter$RouteInfo;
@@ -122,14 +113,12 @@
 
     if-ne v0, p3, :cond_0
 
-    .line 487
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaRouterCallback;->this$0:Lcom/android/server/media/projection/MediaProjectionManagerService;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/android/server/media/projection/MediaProjectionManagerService;->-set0(Lcom/android/server/media/projection/MediaProjectionManagerService;Landroid/media/MediaRouter$RouteInfo;)Landroid/media/MediaRouter$RouteInfo;
 
-    .line 485
     :cond_0
     return-void
 .end method

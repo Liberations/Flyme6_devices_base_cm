@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Landroid/widget/TextClock;
 
     .prologue
-    .line 154
     iput-object p1, p0, Landroid/widget/TextClock$2;->this$0:Landroid/widget/TextClock;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 157
     iget-object v1, p0, Landroid/widget/TextClock$2;->this$0:Landroid/widget/TextClock;
 
     invoke-static {v1}, Landroid/widget/TextClock;->-get1(Landroid/widget/TextClock;)Ljava/lang/String;
@@ -49,7 +47,7 @@
 
     if-nez v1, :cond_0
 
-    const-string/jumbo v1, "android.intent.action.TIMEZONE_CHANGED"
+    const-string v1, "android.intent.action.TIMEZONE_CHANGED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -61,26 +59,22 @@
 
     if-eqz v1, :cond_0
 
-    .line 158
-    const-string/jumbo v1, "time-zone"
+    const-string v1, "time-zone"
 
     invoke-virtual {p2, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 159
     .local v0, "timeZone":Ljava/lang/String;
     iget-object v1, p0, Landroid/widget/TextClock$2;->this$0:Landroid/widget/TextClock;
 
     invoke-static {v1, v0}, Landroid/widget/TextClock;->-wrap1(Landroid/widget/TextClock;Ljava/lang/String;)V
 
-    .line 161
     .end local v0    # "timeZone":Ljava/lang/String;
     :cond_0
     iget-object v1, p0, Landroid/widget/TextClock$2;->this$0:Landroid/widget/TextClock;
 
     invoke-static {v1}, Landroid/widget/TextClock;->-wrap2(Landroid/widget/TextClock;)V
 
-    .line 156
     return-void
 .end method

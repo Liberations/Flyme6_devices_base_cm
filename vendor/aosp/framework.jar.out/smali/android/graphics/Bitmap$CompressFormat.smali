@@ -48,34 +48,30 @@
 
     const/4 v2, 0x0
 
-    .line 985
     new-instance v0, Landroid/graphics/Bitmap$CompressFormat;
 
-    const-string/jumbo v1, "JPEG"
+    const-string v1, "JPEG"
 
     invoke-direct {v0, v1, v2, v2}, Landroid/graphics/Bitmap$CompressFormat;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
-    .line 986
     new-instance v0, Landroid/graphics/Bitmap$CompressFormat;
 
-    const-string/jumbo v1, "PNG"
+    const-string v1, "PNG"
 
     invoke-direct {v0, v1, v3, v3}, Landroid/graphics/Bitmap$CompressFormat;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
 
-    .line 987
     new-instance v0, Landroid/graphics/Bitmap$CompressFormat;
 
-    const-string/jumbo v1, "WEBP"
+    const-string v1, "WEBP"
 
     invoke-direct {v0, v1, v4, v4}, Landroid/graphics/Bitmap$CompressFormat;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Landroid/graphics/Bitmap$CompressFormat;->WEBP:Landroid/graphics/Bitmap$CompressFormat;
 
-    .line 984
     const/4 v0, 0x3
 
     new-array v0, v0, [Landroid/graphics/Bitmap$CompressFormat;
@@ -102,13 +98,10 @@
     .param p3, "nativeInt"    # I
 
     .prologue
-    .line 989
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 990
     iput p3, p0, Landroid/graphics/Bitmap$CompressFormat;->nativeInt:I
 
-    .line 989
     return-void
 .end method
 
@@ -117,7 +110,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 984
     const-class v0, Landroid/graphics/Bitmap$CompressFormat;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -133,7 +125,6 @@
     .locals 1
 
     .prologue
-    .line 984
     sget-object v0, Landroid/graphics/Bitmap$CompressFormat;->$VALUES:[Landroid/graphics/Bitmap$CompressFormat;
 
     return-object v0

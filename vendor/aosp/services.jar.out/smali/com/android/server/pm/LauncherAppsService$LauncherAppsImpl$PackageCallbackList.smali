@@ -34,7 +34,6 @@
     .param p1, "this$1"    # Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;
 
     .prologue
-    .line 467
     .local p0, "this":Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$PackageCallbackList;, "Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$PackageCallbackList<TT;>;"
     iput-object p1, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$PackageCallbackList;->this$1:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;
 
@@ -57,13 +56,11 @@
     .end annotation
 
     .prologue
-    .line 470
     .local p0, "this":Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$PackageCallbackList;, "Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$PackageCallbackList<TT;>;"
     .local p1, "callback":Landroid/os/IInterface;, "TT;"
     iget-object v0, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$PackageCallbackList;->this$1:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;
 
     invoke-virtual {v0}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->checkCallbackCount()V
 
-    .line 469
     return-void
 .end method

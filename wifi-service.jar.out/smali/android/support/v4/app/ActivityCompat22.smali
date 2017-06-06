@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,7 +18,6 @@
     .param p0, "activity"    # Landroid/app/Activity;
 
     .prologue
-    .line 24
     invoke-virtual {p0}, Landroid/app/Activity;->getReferrer()Landroid/net/Uri;
 
     move-result-object v0

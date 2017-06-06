@@ -31,20 +31,16 @@
     .param p1, "delegate"    # Landroid/security/keystore/KeyStoreCryptoOperationStreamer;
 
     .prologue
-    .line 352
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 349
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
     iput-object v0, p0, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi$BufferAllOutputUntilDoFinalStreamer;->mBufferedOutput:Ljava/io/ByteArrayOutputStream;
 
-    .line 353
     iput-object p1, p0, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi$BufferAllOutputUntilDoFinalStreamer;->mDelegate:Landroid/security/keystore/KeyStoreCryptoOperationStreamer;
 
-    .line 352
     return-void
 .end method
 
@@ -74,7 +70,6 @@
     .end annotation
 
     .prologue
-    .line 373
     iget-object v0, p0, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi$BufferAllOutputUntilDoFinalStreamer;->mDelegate:Landroid/security/keystore/KeyStoreCryptoOperationStreamer;
 
     move-object v1, p1
@@ -91,11 +86,9 @@
 
     move-result-object v7
 
-    .line 375
     .local v7, "output":[B
     if-eqz v7, :cond_0
 
-    .line 377
     :try_start_0
     iget-object v0, p0, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi$BufferAllOutputUntilDoFinalStreamer;->mBufferedOutput:Ljava/io/ByteArrayOutputStream;
 
@@ -103,7 +96,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 382
     :cond_0
     iget-object v0, p0, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi$BufferAllOutputUntilDoFinalStreamer;->mBufferedOutput:Ljava/io/ByteArrayOutputStream;
 
@@ -111,13 +103,11 @@
 
     move-result-object v8
 
-    .line 383
     .local v8, "result":[B
     iget-object v0, p0, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi$BufferAllOutputUntilDoFinalStreamer;->mBufferedOutput:Ljava/io/ByteArrayOutputStream;
 
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->reset()V
 
-    .line 384
     iget-wide v0, p0, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi$BufferAllOutputUntilDoFinalStreamer;->mProducedOutputSizeBytes:J
 
     array-length v2, v8
@@ -128,19 +118,16 @@
 
     iput-wide v0, p0, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi$BufferAllOutputUntilDoFinalStreamer;->mProducedOutputSizeBytes:J
 
-    .line 385
     return-object v8
 
-    .line 378
     .end local v8    # "result":[B
     :catch_0
     move-exception v6
 
-    .line 379
     .local v6, "e":Ljava/io/IOException;
     new-instance v0, Ljava/security/ProviderException;
 
-    const-string/jumbo v1, "Failed to buffer output"
+    const-string v1, "Failed to buffer output"
 
     invoke-direct {v0, v1, v6}, Ljava/security/ProviderException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
@@ -151,7 +138,6 @@
     .locals 2
 
     .prologue
-    .line 390
     iget-object v0, p0, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi$BufferAllOutputUntilDoFinalStreamer;->mDelegate:Landroid/security/keystore/KeyStoreCryptoOperationStreamer;
 
     invoke-interface {v0}, Landroid/security/keystore/KeyStoreCryptoOperationStreamer;->getConsumedInputSizeBytes()J
@@ -165,7 +151,6 @@
     .locals 2
 
     .prologue
-    .line 395
     iget-wide v0, p0, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi$BufferAllOutputUntilDoFinalStreamer;->mProducedOutputSizeBytes:J
 
     return-wide v0
@@ -183,18 +168,15 @@
     .end annotation
 
     .prologue
-    .line 359
     iget-object v2, p0, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi$BufferAllOutputUntilDoFinalStreamer;->mDelegate:Landroid/security/keystore/KeyStoreCryptoOperationStreamer;
 
     invoke-interface {v2, p1, p2, p3}, Landroid/security/keystore/KeyStoreCryptoOperationStreamer;->update([BII)[B
 
     move-result-object v1
 
-    .line 360
     .local v1, "output":[B
     if-eqz v1, :cond_0
 
-    .line 362
     :try_start_0
     iget-object v2, p0, Landroid/security/keystore/AndroidKeyStoreAuthenticatedAESCipherSpi$BufferAllOutputUntilDoFinalStreamer;->mBufferedOutput:Ljava/io/ByteArrayOutputStream;
 
@@ -202,21 +184,18 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 367
     :cond_0
     sget-object v2, Llibcore/util/EmptyArray;->BYTE:[B
 
     return-object v2
 
-    .line 363
     :catch_0
     move-exception v0
 
-    .line 364
     .local v0, "e":Ljava/io/IOException;
     new-instance v2, Ljava/security/ProviderException;
 
-    const-string/jumbo v3, "Failed to buffer output"
+    const-string v3, "Failed to buffer output"
 
     invoke-direct {v2, v3, v0}, Ljava/security/ProviderException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 

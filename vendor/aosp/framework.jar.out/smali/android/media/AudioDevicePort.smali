@@ -23,14 +23,12 @@
     .param p9, "address"    # Ljava/lang/String;
 
     .prologue
-    .line 43
     invoke-static/range {p8 .. p8}, Landroid/media/AudioManager;->isInputDevice(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 44
     const/4 v3, 0x1
 
     :goto_0
@@ -50,23 +48,18 @@
 
     move-object/from16 v9, p7
 
-    .line 42
     invoke-direct/range {v1 .. v9}, Landroid/media/AudioPort;-><init>(Landroid/media/AudioHandle;ILjava/lang/String;[I[I[I[I[Landroid/media/AudioGain;)V
 
-    .line 46
     move/from16 v0, p8
 
     iput v0, p0, Landroid/media/AudioDevicePort;->mType:I
 
-    .line 47
     move-object/from16 v0, p9
 
     iput-object v0, p0, Landroid/media/AudioDevicePort;->mAddress:Ljava/lang/String;
 
-    .line 41
     return-void
 
-    .line 44
     :cond_0
     const/4 v3, 0x2
 
@@ -79,7 +72,6 @@
     .locals 1
 
     .prologue
-    .line 69
     iget-object v0, p0, Landroid/media/AudioDevicePort;->mAddress:Ljava/lang/String;
 
     return-object v0
@@ -93,7 +85,6 @@
     .param p4, "gain"    # Landroid/media/AudioGainConfig;
 
     .prologue
-    .line 78
     new-instance v0, Landroid/media/AudioDevicePortConfig;
 
     move-object v1, p0
@@ -119,7 +110,6 @@
     .param p4, "gain"    # Landroid/media/AudioGainConfig;
 
     .prologue
-    .line 76
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/media/AudioDevicePort;->buildConfig(IIILandroid/media/AudioGainConfig;)Landroid/media/AudioDevicePortConfig;
 
     move-result-object v0
@@ -134,7 +124,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 83
     if-eqz p1, :cond_0
 
     instance-of v1, p1, Landroid/media/AudioDevicePort;
@@ -143,10 +132,8 @@
 
     move-object v0, p1
 
-    .line 86
     check-cast v0, Landroid/media/AudioDevicePort;
 
-    .line 87
     .local v0, "other":Landroid/media/AudioDevicePort;
     iget v1, p0, Landroid/media/AudioDevicePort;->mType:I
 
@@ -156,15 +143,12 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 88
     return v3
 
-    .line 84
     .end local v0    # "other":Landroid/media/AudioDevicePort;
     :cond_0
     return v3
 
-    .line 90
     .restart local v0    # "other":Landroid/media/AudioDevicePort;
     :cond_1
     iget-object v1, p0, Landroid/media/AudioDevicePort;->mAddress:Ljava/lang/String;
@@ -177,10 +161,8 @@
 
     if-eqz v1, :cond_2
 
-    .line 91
     return v3
 
-    .line 93
     :cond_2
     iget-object v1, p0, Landroid/media/AudioDevicePort;->mAddress:Ljava/lang/String;
 
@@ -194,10 +176,8 @@
 
     if-nez v1, :cond_3
 
-    .line 94
     return v3
 
-    .line 96
     :cond_3
     invoke-super {p0, p1}, Landroid/media/AudioPort;->equals(Ljava/lang/Object;)Z
 
@@ -210,28 +190,25 @@
     .locals 3
 
     .prologue
-    .line 101
     iget v1, p0, Landroid/media/AudioDevicePort;->mRole:I
 
     const/4 v2, 0x1
 
     if-ne v1, v2, :cond_0
 
-    .line 102
     iget v1, p0, Landroid/media/AudioDevicePort;->mType:I
 
     invoke-static {v1}, Landroid/media/AudioSystem;->getInputDeviceName(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 104
     .local v0, "type":Ljava/lang/String;
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "{"
+    const-string v2, "{"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -245,10 +222,8 @@
 
     move-result-object v1
 
-    .line 105
-    const-string/jumbo v2, ", mType: "
+    const-string v2, ", mType: "
 
-    .line 104
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -257,26 +232,20 @@
 
     move-result-object v1
 
-    .line 106
-    const-string/jumbo v2, ", mAddress: "
+    const-string v2, ", mAddress: "
 
-    .line 104
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 106
     iget-object v2, p0, Landroid/media/AudioDevicePort;->mAddress:Ljava/lang/String;
 
-    .line 104
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 107
-    const-string/jumbo v2, "}"
+    const-string v2, "}"
 
-    .line 104
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -287,7 +256,6 @@
 
     return-object v1
 
-    .line 103
     .end local v0    # "type":Ljava/lang/String;
     :cond_0
     iget v1, p0, Landroid/media/AudioDevicePort;->mType:I
@@ -304,7 +272,6 @@
     .locals 1
 
     .prologue
-    .line 54
     iget v0, p0, Landroid/media/AudioDevicePort;->mType:I
 
     return v0

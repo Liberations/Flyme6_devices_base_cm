@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 54
     new-instance v0, Lcyanogenmod/profiles/AirplaneModeSettings;
 
     invoke-direct {v0, p1}, Lcyanogenmod/profiles/AirplaneModeSettings;-><init>(Landroid/os/Parcel;)V
@@ -58,7 +56,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 53
     invoke-virtual {p0, p1}, Lcyanogenmod/profiles/AirplaneModeSettings$1;->createFromParcel(Landroid/os/Parcel;)Lcyanogenmod/profiles/AirplaneModeSettings;
 
     move-result-object v0
@@ -71,7 +68,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 59
     new-array v0, p1, [Lcyanogenmod/profiles/AirplaneModeSettings;
 
     return-object v0
@@ -82,7 +78,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 58
     invoke-virtual {p0, p1}, Lcyanogenmod/profiles/AirplaneModeSettings$1;->newArray(I)[Lcyanogenmod/profiles/AirplaneModeSettings;
 
     move-result-object v0

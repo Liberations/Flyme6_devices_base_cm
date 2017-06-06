@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/wifi/WifiApConfigStore;
 
     .prologue
-    .line 95
     iput-object p1, p0, Lcom/android/server/wifi/WifiApConfigStore$DefaultState;->this$0:Lcom/android/server/wifi/WifiApConfigStore;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -39,19 +38,17 @@
     .param p1, "message"    # Landroid/os/Message;
 
     .prologue
-    .line 97
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 107
-    const-string/jumbo v0, "WifiApConfigStore"
+    const-string v0, "WifiApConfigStore"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Failed to handle "
+    const-string v2, "Failed to handle "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -67,21 +64,19 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 110
     :goto_0
     const/4 v0, 0x1
 
     return v0
 
-    .line 100
     :pswitch_0
-    const-string/jumbo v0, "WifiApConfigStore"
+    const-string v0, "WifiApConfigStore"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Unexpected message: "
+    const-string v2, "Unexpected message: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -99,7 +94,6 @@
 
     goto :goto_0
 
-    .line 103
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/wifi/WifiApConfigStore$DefaultState;->this$0:Lcom/android/server/wifi/WifiApConfigStore;
 
@@ -107,7 +101,6 @@
 
     move-result-object v0
 
-    .line 104
     iget-object v1, p0, Lcom/android/server/wifi/WifiApConfigStore$DefaultState;->this$0:Lcom/android/server/wifi/WifiApConfigStore;
 
     invoke-static {v1}, Lcom/android/server/wifi/WifiApConfigStore;->-get3(Lcom/android/server/wifi/WifiApConfigStore;)Landroid/net/wifi/WifiConfiguration;
@@ -116,12 +109,10 @@
 
     const v2, 0x2001c
 
-    .line 103
     invoke-virtual {v0, p1, v2, v1}, Lcom/android/internal/util/AsyncChannel;->replyToMessage(Landroid/os/Message;ILjava/lang/Object;)V
 
     goto :goto_0
 
-    .line 97
     nop
 
     :pswitch_data_0

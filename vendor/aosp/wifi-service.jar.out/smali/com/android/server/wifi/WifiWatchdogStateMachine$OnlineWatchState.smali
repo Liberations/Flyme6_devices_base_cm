@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     .prologue
-    .line 708
     iput-object p1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$OnlineWatchState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -36,7 +35,6 @@
     .locals 2
 
     .prologue
-    .line 721
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$OnlineWatchState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     invoke-static {v0}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->-get4(Lcom/android/server/wifi/WifiWatchdogStateMachine;)I
@@ -55,7 +53,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 722
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$OnlineWatchState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     iget-object v1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$OnlineWatchState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -66,7 +63,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->-wrap5(Lcom/android/server/wifi/WifiWatchdogStateMachine;Lcom/android/internal/util/IState;)V
 
-    .line 720
     :cond_0
     return-void
 .end method
@@ -77,7 +73,6 @@
     .locals 2
 
     .prologue
-    .line 712
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$OnlineWatchState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     invoke-static {v0}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->-get10(Lcom/android/server/wifi/WifiWatchdogStateMachine;)Z
@@ -86,14 +81,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 714
     invoke-direct {p0}, Lcom/android/server/wifi/WifiWatchdogStateMachine$OnlineWatchState;->handleRssiChange()V
 
-    .line 710
     :goto_0
     return-void
 
-    .line 716
     :cond_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$OnlineWatchState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
@@ -113,17 +105,14 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 730
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 736
     const/4 v0, 0x0
 
     return v0
 
-    .line 732
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$OnlineWatchState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
@@ -137,15 +126,12 @@
 
     invoke-static {v0, v1}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->-set1(Lcom/android/server/wifi/WifiWatchdogStateMachine;I)I
 
-    .line 733
     invoke-direct {p0}, Lcom/android/server/wifi/WifiWatchdogStateMachine$OnlineWatchState;->handleRssiChange()V
 
-    .line 738
     const/4 v0, 0x1
 
     return v0
 
-    .line 730
     nop
 
     :pswitch_data_0

@@ -16,7 +16,6 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,7 +26,6 @@
     .param p0, "stateObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 44
     check-cast p0, Landroid/media/session/PlaybackState;
 
     .end local p0    # "stateObj":Ljava/lang/Object;
@@ -43,7 +41,6 @@
     .param p0, "stateObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 60
     check-cast p0, Landroid/media/session/PlaybackState;
 
     .end local p0    # "stateObj":Ljava/lang/Object;
@@ -59,7 +56,6 @@
     .param p0, "stateObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 36
     check-cast p0, Landroid/media/session/PlaybackState;
 
     .end local p0    # "stateObj":Ljava/lang/Object;
@@ -86,7 +82,6 @@
     .end annotation
 
     .prologue
-    .line 56
     check-cast p0, Landroid/media/session/PlaybackState;
 
     .end local p0    # "stateObj":Ljava/lang/Object;
@@ -102,7 +97,6 @@
     .param p0, "stateObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 48
     check-cast p0, Landroid/media/session/PlaybackState;
 
     .end local p0    # "stateObj":Ljava/lang/Object;
@@ -118,7 +112,6 @@
     .param p0, "stateObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 52
     check-cast p0, Landroid/media/session/PlaybackState;
 
     .end local p0    # "stateObj":Ljava/lang/Object;
@@ -134,7 +127,6 @@
     .param p0, "stateObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 40
     check-cast p0, Landroid/media/session/PlaybackState;
 
     .end local p0    # "stateObj":Ljava/lang/Object;
@@ -150,7 +142,6 @@
     .param p0, "stateObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 32
     check-cast p0, Landroid/media/session/PlaybackState;
 
     .end local p0    # "stateObj":Ljava/lang/Object;
@@ -166,7 +157,6 @@
     .param p0, "stateObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 28
     check-cast p0, Landroid/media/session/PlaybackState;
 
     .end local p0    # "stateObj":Ljava/lang/Object;
@@ -201,7 +191,6 @@
     .end annotation
 
     .prologue
-    .line 67
     .local p11, "customActions":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Object;>;"
     new-instance v2, Landroid/media/session/PlaybackState$Builder;
 
@@ -216,23 +205,18 @@
 
     move-wide/from16 v7, p9
 
-    .line 68
     invoke-virtual/range {v2 .. v8}, Landroid/media/session/PlaybackState$Builder;->setState(IJFJ)Landroid/media/session/PlaybackState$Builder;
 
-    .line 69
     invoke-virtual {v2, p3, p4}, Landroid/media/session/PlaybackState$Builder;->setBufferedPosition(J)Landroid/media/session/PlaybackState$Builder;
 
-    .line 70
     move-wide/from16 v0, p6
 
     invoke-virtual {v2, v0, v1}, Landroid/media/session/PlaybackState$Builder;->setActions(J)Landroid/media/session/PlaybackState$Builder;
 
-    .line 71
     move-object/from16 v0, p8
 
     invoke-virtual {v2, v0}, Landroid/media/session/PlaybackState$Builder;->setErrorMessage(Ljava/lang/CharSequence;)Landroid/media/session/PlaybackState$Builder;
 
-    .line 72
     invoke-interface/range {p11 .. p11}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v10
@@ -249,7 +233,6 @@
 
     move-result-object v9
 
-    .line 73
     .local v9, "customAction":Ljava/lang/Object;
     check-cast v9, Landroid/media/session/PlaybackState$CustomAction;
 
@@ -258,13 +241,11 @@
 
     goto :goto_0
 
-    .line 75
     :cond_0
     move-wide/from16 v0, p12
 
     invoke-virtual {v2, v0, v1}, Landroid/media/session/PlaybackState$Builder;->setActiveQueueItemId(J)Landroid/media/session/PlaybackState$Builder;
 
-    .line 76
     invoke-virtual {v2}, Landroid/media/session/PlaybackState$Builder;->build()Landroid/media/session/PlaybackState;
 
     move-result-object v3

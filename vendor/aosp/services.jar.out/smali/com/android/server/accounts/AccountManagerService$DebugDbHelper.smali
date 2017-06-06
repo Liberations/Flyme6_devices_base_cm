@@ -157,86 +157,70 @@
     .locals 2
 
     .prologue
-    .line 3287
-    const-string/jumbo v0, "debug_table"
+    const-string v0, "debug_table"
 
     sput-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->TABLE_DEBUG:Ljava/lang/String;
 
-    .line 3290
-    const-string/jumbo v0, "action_type"
+    const-string v0, "action_type"
 
     sput-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->ACTION_TYPE:Ljava/lang/String;
 
-    .line 3291
-    const-string/jumbo v0, "time"
+    const-string v0, "time"
 
     sput-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->TIMESTAMP:Ljava/lang/String;
 
-    .line 3292
-    const-string/jumbo v0, "caller_uid"
+    const-string v0, "caller_uid"
 
     sput-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->CALLER_UID:Ljava/lang/String;
 
-    .line 3293
-    const-string/jumbo v0, "table_name"
+    const-string v0, "table_name"
 
     sput-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->TABLE_NAME:Ljava/lang/String;
 
-    .line 3294
-    const-string/jumbo v0, "primary_key"
+    const-string v0, "primary_key"
 
     sput-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->KEY:Ljava/lang/String;
 
-    .line 3299
-    const-string/jumbo v0, "action_set_password"
+    const-string v0, "action_set_password"
 
     sput-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->ACTION_SET_PASSWORD:Ljava/lang/String;
 
-    .line 3300
-    const-string/jumbo v0, "action_clear_password"
+    const-string v0, "action_clear_password"
 
     sput-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->ACTION_CLEAR_PASSWORD:Ljava/lang/String;
 
-    .line 3301
-    const-string/jumbo v0, "action_account_add"
+    const-string v0, "action_account_add"
 
     sput-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->ACTION_ACCOUNT_ADD:Ljava/lang/String;
 
-    .line 3302
-    const-string/jumbo v0, "action_account_remove"
+    const-string v0, "action_account_remove"
 
     sput-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->ACTION_ACCOUNT_REMOVE:Ljava/lang/String;
 
-    .line 3303
-    const-string/jumbo v0, "action_authenticator_remove"
+    const-string v0, "action_authenticator_remove"
 
     sput-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->ACTION_AUTHENTICATOR_REMOVE:Ljava/lang/String;
 
-    .line 3304
-    const-string/jumbo v0, "action_account_rename"
+    const-string v0, "action_account_rename"
 
     sput-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->ACTION_ACCOUNT_RENAME:Ljava/lang/String;
 
-    .line 3311
-    const-string/jumbo v0, "action_called_account_add"
+    const-string v0, "action_called_account_add"
 
     sput-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->ACTION_CALLED_ACCOUNT_ADD:Ljava/lang/String;
 
-    .line 3312
-    const-string/jumbo v0, "action_called_account_remove"
+    const-string v0, "action_called_account_remove"
 
     sput-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->ACTION_CALLED_ACCOUNT_REMOVE:Ljava/lang/String;
 
-    .line 3314
     new-instance v0, Ljava/text/SimpleDateFormat;
 
-    const-string/jumbo v1, "yyyy-MM-dd HH:mm:ss"
+    const-string v1, "yyyy-MM-dd HH:mm:ss"
 
     invoke-direct {v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
     sput-object v0, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->dateFromat:Ljava/text/SimpleDateFormat;
 
-    .line 3283
     return-void
 .end method
 
@@ -244,7 +228,6 @@
     .locals 0
 
     .prologue
-    .line 3284
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -255,12 +238,11 @@
     .param p0, "db"    # Landroid/database/sqlite/SQLiteDatabase;
 
     .prologue
-    .line 3317
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "CREATE TABLE "
+    const-string v1, "CREATE TABLE "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -272,104 +254,80 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, " ( "
+    const-string v1, " ( "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 3318
-    const-string/jumbo v1, "_id"
+    const-string v1, "_id"
 
-    .line 3317
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 3318
-    const-string/jumbo v1, " INTEGER,"
+    const-string v1, " INTEGER,"
 
-    .line 3317
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 3319
     sget-object v1, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->ACTION_TYPE:Ljava/lang/String;
 
-    .line 3317
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 3319
-    const-string/jumbo v1, " TEXT NOT NULL, "
+    const-string v1, " TEXT NOT NULL, "
 
-    .line 3317
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 3320
     sget-object v1, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->TIMESTAMP:Ljava/lang/String;
 
-    .line 3317
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 3320
-    const-string/jumbo v1, " DATETIME,"
+    const-string v1, " DATETIME,"
 
-    .line 3317
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 3321
     sget-object v1, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->CALLER_UID:Ljava/lang/String;
 
-    .line 3317
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 3321
-    const-string/jumbo v1, " INTEGER NOT NULL,"
+    const-string v1, " INTEGER NOT NULL,"
 
-    .line 3317
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 3322
     sget-object v1, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->TABLE_NAME:Ljava/lang/String;
 
-    .line 3317
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 3322
-    const-string/jumbo v1, " TEXT NOT NULL,"
+    const-string v1, " TEXT NOT NULL,"
 
-    .line 3317
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 3323
     sget-object v1, Lcom/android/server/accounts/AccountManagerService$DebugDbHelper;->KEY:Ljava/lang/String;
 
-    .line 3317
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 3323
-    const-string/jumbo v1, " INTEGER PRIMARY KEY)"
+    const-string v1, " INTEGER PRIMARY KEY)"
 
-    .line 3317
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -380,12 +338,11 @@
 
     invoke-virtual {p0, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 3324
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "CREATE INDEX timestamp_index ON "
+    const-string v1, "CREATE INDEX timestamp_index ON "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -397,7 +354,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, " ("
+    const-string v1, " ("
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -409,7 +366,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, ")"
+    const-string v1, ")"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -421,6 +378,5 @@
 
     invoke-virtual {p0, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 3316
     return-void
 .end method

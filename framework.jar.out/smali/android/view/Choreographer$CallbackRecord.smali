@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 848
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -51,7 +50,6 @@
     .param p1, "frameTimeNanos"    # J
 
     .prologue
-    .line 855
     iget-object v0, p0, Landroid/view/Choreographer$CallbackRecord;->token:Ljava/lang/Object;
 
     invoke-static {}, Landroid/view/Choreographer;->-get0()Ljava/lang/Object;
@@ -60,18 +58,15 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 856
     iget-object v0, p0, Landroid/view/Choreographer$CallbackRecord;->action:Ljava/lang/Object;
 
     check-cast v0, Landroid/view/Choreographer$FrameCallback;
 
     invoke-interface {v0, p1, p2}, Landroid/view/Choreographer$FrameCallback;->doFrame(J)V
 
-    .line 854
     :goto_0
     return-void
 
-    .line 858
     :cond_0
     iget-object v0, p0, Landroid/view/Choreographer$CallbackRecord;->action:Ljava/lang/Object;
 

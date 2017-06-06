@@ -61,55 +61,49 @@
 
     const/4 v3, 0x0
 
-    .line 336
     new-instance v0, Landroid/view/ViewDebug$HierarchyTraceType;
 
-    const-string/jumbo v1, "INVALIDATE"
+    const-string v1, "INVALIDATE"
 
     invoke-direct {v0, v1, v3}, Landroid/view/ViewDebug$HierarchyTraceType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Landroid/view/ViewDebug$HierarchyTraceType;->INVALIDATE:Landroid/view/ViewDebug$HierarchyTraceType;
 
-    .line 337
     new-instance v0, Landroid/view/ViewDebug$HierarchyTraceType;
 
-    const-string/jumbo v1, "INVALIDATE_CHILD"
+    const-string v1, "INVALIDATE_CHILD"
 
     invoke-direct {v0, v1, v4}, Landroid/view/ViewDebug$HierarchyTraceType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Landroid/view/ViewDebug$HierarchyTraceType;->INVALIDATE_CHILD:Landroid/view/ViewDebug$HierarchyTraceType;
 
-    .line 338
     new-instance v0, Landroid/view/ViewDebug$HierarchyTraceType;
 
-    const-string/jumbo v1, "INVALIDATE_CHILD_IN_PARENT"
+    const-string v1, "INVALIDATE_CHILD_IN_PARENT"
 
     invoke-direct {v0, v1, v5}, Landroid/view/ViewDebug$HierarchyTraceType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Landroid/view/ViewDebug$HierarchyTraceType;->INVALIDATE_CHILD_IN_PARENT:Landroid/view/ViewDebug$HierarchyTraceType;
 
-    .line 339
     new-instance v0, Landroid/view/ViewDebug$HierarchyTraceType;
 
-    const-string/jumbo v1, "REQUEST_LAYOUT"
+    const-string v1, "REQUEST_LAYOUT"
 
     invoke-direct {v0, v1, v6}, Landroid/view/ViewDebug$HierarchyTraceType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Landroid/view/ViewDebug$HierarchyTraceType;->REQUEST_LAYOUT:Landroid/view/ViewDebug$HierarchyTraceType;
 
-    .line 340
     new-instance v0, Landroid/view/ViewDebug$HierarchyTraceType;
 
-    const-string/jumbo v1, "ON_LAYOUT"
+    const-string v1, "ON_LAYOUT"
 
     invoke-direct {v0, v1, v7}, Landroid/view/ViewDebug$HierarchyTraceType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Landroid/view/ViewDebug$HierarchyTraceType;->ON_LAYOUT:Landroid/view/ViewDebug$HierarchyTraceType;
 
-    .line 341
     new-instance v0, Landroid/view/ViewDebug$HierarchyTraceType;
 
-    const-string/jumbo v1, "ON_MEASURE"
+    const-string v1, "ON_MEASURE"
 
     const/4 v2, 0x5
 
@@ -117,10 +111,9 @@
 
     sput-object v0, Landroid/view/ViewDebug$HierarchyTraceType;->ON_MEASURE:Landroid/view/ViewDebug$HierarchyTraceType;
 
-    .line 342
     new-instance v0, Landroid/view/ViewDebug$HierarchyTraceType;
 
-    const-string/jumbo v1, "DRAW"
+    const-string v1, "DRAW"
 
     const/4 v2, 0x6
 
@@ -128,10 +121,9 @@
 
     sput-object v0, Landroid/view/ViewDebug$HierarchyTraceType;->DRAW:Landroid/view/ViewDebug$HierarchyTraceType;
 
-    .line 343
     new-instance v0, Landroid/view/ViewDebug$HierarchyTraceType;
 
-    const-string/jumbo v1, "BUILD_CACHE"
+    const-string v1, "BUILD_CACHE"
 
     const/4 v2, 0x7
 
@@ -139,7 +131,6 @@
 
     sput-object v0, Landroid/view/ViewDebug$HierarchyTraceType;->BUILD_CACHE:Landroid/view/ViewDebug$HierarchyTraceType;
 
-    .line 335
     const/16 v0, 0x8
 
     new-array v0, v0, [Landroid/view/ViewDebug$HierarchyTraceType;
@@ -191,7 +182,6 @@
     .locals 0
 
     .prologue
-    .line 335
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -202,7 +192,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 335
     const-class v0, Landroid/view/ViewDebug$HierarchyTraceType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -218,7 +207,6 @@
     .locals 1
 
     .prologue
-    .line 335
     sget-object v0, Landroid/view/ViewDebug$HierarchyTraceType;->$VALUES:[Landroid/view/ViewDebug$HierarchyTraceType;
 
     return-object v0

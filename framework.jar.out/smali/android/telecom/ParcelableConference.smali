@@ -63,15 +63,12 @@
     .locals 1
 
     .prologue
-    .line 131
     new-instance v0, Landroid/telecom/ParcelableConference$1;
 
     invoke-direct {v0}, Landroid/telecom/ParcelableConference$1;-><init>()V
 
-    .line 130
     sput-object v0, Landroid/telecom/ParcelableConference;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 32
     return-void
 .end method
 
@@ -107,46 +104,32 @@
     .local p5, "connectionIds":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-wide/16 v0, 0x0
 
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     iput-wide v0, p0, Landroid/telecom/ParcelableConference;->mConnectTimeMillis:J
 
-    .line 56
     iput-object p1, p0, Landroid/telecom/ParcelableConference;->mPhoneAccount:Landroid/telecom/PhoneAccountHandle;
 
-    .line 57
     iput p2, p0, Landroid/telecom/ParcelableConference;->mState:I
 
-    .line 58
     iput p3, p0, Landroid/telecom/ParcelableConference;->mConnectionCapabilities:I
 
-    .line 59
     iput p4, p0, Landroid/telecom/ParcelableConference;->mConnectionProperties:I
 
-    .line 60
     iput-object p5, p0, Landroid/telecom/ParcelableConference;->mConnectionIds:Ljava/util/List;
 
-    .line 61
     iput-wide v0, p0, Landroid/telecom/ParcelableConference;->mConnectTimeMillis:J
 
-    .line 62
     iput-object p6, p0, Landroid/telecom/ParcelableConference;->mVideoProvider:Lcom/android/internal/telecom/IVideoProvider;
 
-    .line 63
     iput p7, p0, Landroid/telecom/ParcelableConference;->mVideoState:I
 
-    .line 64
     iput-wide p8, p0, Landroid/telecom/ParcelableConference;->mConnectTimeMillis:J
 
-    .line 65
     iput-object p10, p0, Landroid/telecom/ParcelableConference;->mStatusHints:Landroid/telecom/StatusHints;
 
-    .line 66
     iput-object p11, p0, Landroid/telecom/ParcelableConference;->mExtras:Landroid/os/Bundle;
 
-    .line 55
     return-void
 .end method
 
@@ -156,7 +139,6 @@
     .locals 1
 
     .prologue
-    .line 162
     const/4 v0, 0x0
 
     return v0
@@ -166,7 +148,6 @@
     .locals 2
 
     .prologue
-    .line 112
     iget-wide v0, p0, Landroid/telecom/ParcelableConference;->mConnectTimeMillis:J
 
     return-wide v0
@@ -176,7 +157,6 @@
     .locals 1
 
     .prologue
-    .line 100
     iget v0, p0, Landroid/telecom/ParcelableConference;->mConnectionCapabilities:I
 
     return v0
@@ -195,7 +175,6 @@
     .end annotation
 
     .prologue
-    .line 108
     iget-object v0, p0, Landroid/telecom/ParcelableConference;->mConnectionIds:Ljava/util/List;
 
     return-object v0
@@ -205,7 +184,6 @@
     .locals 1
 
     .prologue
-    .line 104
     iget v0, p0, Landroid/telecom/ParcelableConference;->mConnectionProperties:I
 
     return v0
@@ -215,7 +193,6 @@
     .locals 1
 
     .prologue
-    .line 127
     iget-object v0, p0, Landroid/telecom/ParcelableConference;->mExtras:Landroid/os/Bundle;
 
     return-object v0
@@ -225,7 +202,6 @@
     .locals 1
 
     .prologue
-    .line 92
     iget-object v0, p0, Landroid/telecom/ParcelableConference;->mPhoneAccount:Landroid/telecom/PhoneAccountHandle;
 
     return-object v0
@@ -235,7 +211,6 @@
     .locals 1
 
     .prologue
-    .line 96
     iget v0, p0, Landroid/telecom/ParcelableConference;->mState:I
 
     return v0
@@ -245,7 +220,6 @@
     .locals 1
 
     .prologue
-    .line 123
     iget-object v0, p0, Landroid/telecom/ParcelableConference;->mStatusHints:Landroid/telecom/StatusHints;
 
     return-object v0
@@ -255,7 +229,6 @@
     .locals 1
 
     .prologue
-    .line 115
     iget-object v0, p0, Landroid/telecom/ParcelableConference;->mVideoProvider:Lcom/android/internal/telecom/IVideoProvider;
 
     return-object v0
@@ -265,7 +238,6 @@
     .locals 1
 
     .prologue
-    .line 119
     iget v0, p0, Landroid/telecom/ParcelableConference;->mVideoState:I
 
     return v0
@@ -275,147 +247,114 @@
     .locals 4
 
     .prologue
-    .line 71
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 72
-    const-string/jumbo v1, "account: "
+    const-string v1, "account: "
 
-    .line 71
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     move-result-object v0
 
-    .line 73
     iget-object v1, p0, Landroid/telecom/ParcelableConference;->mPhoneAccount:Landroid/telecom/PhoneAccountHandle;
 
-    .line 71
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
 
     move-result-object v0
 
-    .line 74
-    const-string/jumbo v1, ", state: "
+    const-string v1, ", state: "
 
-    .line 71
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     move-result-object v0
 
-    .line 75
     iget v1, p0, Landroid/telecom/ParcelableConference;->mState:I
 
     invoke-static {v1}, Landroid/telecom/Connection;->stateToString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 71
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     move-result-object v0
 
-    .line 76
-    const-string/jumbo v1, ", capabilities: "
+    const-string v1, ", capabilities: "
 
-    .line 71
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     move-result-object v0
 
-    .line 77
     iget v1, p0, Landroid/telecom/ParcelableConference;->mConnectionCapabilities:I
 
     invoke-static {v1}, Landroid/telecom/Connection;->capabilitiesToString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 71
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     move-result-object v0
 
-    .line 78
-    const-string/jumbo v1, ", properties: "
+    const-string v1, ", properties: "
 
-    .line 71
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     move-result-object v0
 
-    .line 79
     iget v1, p0, Landroid/telecom/ParcelableConference;->mConnectionProperties:I
 
     invoke-static {v1}, Landroid/telecom/Connection;->propertiesToString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 71
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     move-result-object v0
 
-    .line 80
-    const-string/jumbo v1, ", connectTime: "
+    const-string v1, ", connectTime: "
 
-    .line 71
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     move-result-object v0
 
-    .line 81
     iget-wide v2, p0, Landroid/telecom/ParcelableConference;->mConnectTimeMillis:J
 
-    .line 71
     invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuffer;->append(J)Ljava/lang/StringBuffer;
 
     move-result-object v0
 
-    .line 82
-    const-string/jumbo v1, ", children: "
+    const-string v1, ", children: "
 
-    .line 71
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     move-result-object v0
 
-    .line 83
     iget-object v1, p0, Landroid/telecom/ParcelableConference;->mConnectionIds:Ljava/util/List;
 
-    .line 71
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
 
     move-result-object v0
 
-    .line 84
-    const-string/jumbo v1, ", VideoState: "
+    const-string v1, ", VideoState: "
 
-    .line 71
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     move-result-object v0
 
-    .line 85
     iget v1, p0, Landroid/telecom/ParcelableConference;->mVideoState:I
 
-    .line 71
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
     move-result-object v0
 
-    .line 86
-    const-string/jumbo v1, ", VideoProvider: "
+    const-string v1, ", VideoProvider: "
 
-    .line 71
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     move-result-object v0
 
-    .line 87
     iget-object v1, p0, Landroid/telecom/ParcelableConference;->mVideoProvider:Lcom/android/internal/telecom/IVideoProvider;
 
-    .line 71
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
 
     move-result-object v0
@@ -437,37 +376,30 @@
 
     const/4 v4, 0x0
 
-    .line 168
     iget-object v1, p0, Landroid/telecom/ParcelableConference;->mPhoneAccount:Landroid/telecom/PhoneAccountHandle;
 
     invoke-virtual {p1, v1, v4}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 169
     iget v1, p0, Landroid/telecom/ParcelableConference;->mState:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 170
     iget v1, p0, Landroid/telecom/ParcelableConference;->mConnectionCapabilities:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 171
     iget v1, p0, Landroid/telecom/ParcelableConference;->mConnectionProperties:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 172
     iget-object v1, p0, Landroid/telecom/ParcelableConference;->mConnectionIds:Ljava/util/List;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeList(Ljava/util/List;)V
 
-    .line 173
     iget-wide v2, p0, Landroid/telecom/ParcelableConference;->mConnectTimeMillis:J
 
     invoke-virtual {p1, v2, v3}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 175
     iget-object v1, p0, Landroid/telecom/ParcelableConference;->mVideoProvider:Lcom/android/internal/telecom/IVideoProvider;
 
     if-eqz v1, :cond_0
@@ -478,25 +410,20 @@
 
     move-result-object v0
 
-    .line 174
     :cond_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 176
     iget v0, p0, Landroid/telecom/ParcelableConference;->mVideoState:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 177
     iget-object v0, p0, Landroid/telecom/ParcelableConference;->mStatusHints:Landroid/telecom/StatusHints;
 
     invoke-virtual {p1, v0, v4}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 178
     iget-object v0, p0, Landroid/telecom/ParcelableConference;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
-    .line 167
     return-void
 .end method

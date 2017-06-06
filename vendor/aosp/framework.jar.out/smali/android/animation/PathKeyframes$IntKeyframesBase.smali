@@ -22,7 +22,6 @@
     .locals 1
 
     .prologue
-    .line 234
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/animation/PathKeyframes$SimpleKeyframes;-><init>(Landroid/animation/PathKeyframes$SimpleKeyframes;)V
@@ -45,7 +44,6 @@
     .locals 1
 
     .prologue
-    .line 237
     const-class v0, Ljava/lang/Integer;
 
     return-object v0
@@ -56,7 +54,6 @@
     .param p1, "fraction"    # F
 
     .prologue
-    .line 242
     invoke-virtual {p0, p1}, Landroid/animation/PathKeyframes$IntKeyframesBase;->getIntValue(F)I
 
     move-result v0

@@ -58,55 +58,49 @@
 
     const/4 v4, 0x0
 
-    .line 37
     new-instance v0, Landroid/graphics/Region$Op;
 
-    const-string/jumbo v1, "DIFFERENCE"
+    const-string v1, "DIFFERENCE"
 
     invoke-direct {v0, v1, v4, v4}, Landroid/graphics/Region$Op;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Landroid/graphics/Region$Op;->DIFFERENCE:Landroid/graphics/Region$Op;
 
-    .line 38
     new-instance v0, Landroid/graphics/Region$Op;
 
-    const-string/jumbo v1, "INTERSECT"
+    const-string v1, "INTERSECT"
 
     invoke-direct {v0, v1, v5, v5}, Landroid/graphics/Region$Op;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Landroid/graphics/Region$Op;->INTERSECT:Landroid/graphics/Region$Op;
 
-    .line 39
     new-instance v0, Landroid/graphics/Region$Op;
 
-    const-string/jumbo v1, "UNION"
+    const-string v1, "UNION"
 
     invoke-direct {v0, v1, v6, v6}, Landroid/graphics/Region$Op;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Landroid/graphics/Region$Op;->UNION:Landroid/graphics/Region$Op;
 
-    .line 40
     new-instance v0, Landroid/graphics/Region$Op;
 
-    const-string/jumbo v1, "XOR"
+    const-string v1, "XOR"
 
     invoke-direct {v0, v1, v7, v7}, Landroid/graphics/Region$Op;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Landroid/graphics/Region$Op;->XOR:Landroid/graphics/Region$Op;
 
-    .line 41
     new-instance v0, Landroid/graphics/Region$Op;
 
-    const-string/jumbo v1, "REVERSE_DIFFERENCE"
+    const-string v1, "REVERSE_DIFFERENCE"
 
     invoke-direct {v0, v1, v8, v8}, Landroid/graphics/Region$Op;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Landroid/graphics/Region$Op;->REVERSE_DIFFERENCE:Landroid/graphics/Region$Op;
 
-    .line 42
     new-instance v0, Landroid/graphics/Region$Op;
 
-    const-string/jumbo v1, "REPLACE"
+    const-string v1, "REPLACE"
 
     const/4 v2, 0x5
 
@@ -116,7 +110,6 @@
 
     sput-object v0, Landroid/graphics/Region$Op;->REPLACE:Landroid/graphics/Region$Op;
 
-    .line 36
     const/4 v0, 0x6
 
     new-array v0, v0, [Landroid/graphics/Region$Op;
@@ -157,13 +150,10 @@
     .param p3, "nativeInt"    # I
 
     .prologue
-    .line 44
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 45
     iput p3, p0, Landroid/graphics/Region$Op;->nativeInt:I
 
-    .line 44
     return-void
 .end method
 
@@ -172,7 +162,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 36
     const-class v0, Landroid/graphics/Region$Op;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -188,7 +177,6 @@
     .locals 1
 
     .prologue
-    .line 36
     sget-object v0, Landroid/graphics/Region$Op;->$VALUES:[Landroid/graphics/Region$Op;
 
     return-object v0

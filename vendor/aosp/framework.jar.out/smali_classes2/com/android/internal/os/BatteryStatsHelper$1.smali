@@ -37,7 +37,6 @@
     .param p1, "this$0"    # Lcom/android/internal/os/BatteryStatsHelper;
 
     .prologue
-    .line 471
     iput-object p1, p0, Lcom/android/internal/os/BatteryStatsHelper$1;->this$0:Lcom/android/internal/os/BatteryStatsHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +52,6 @@
     .param p2, "rhs"    # Lcom/android/internal/os/BatterySipper;
 
     .prologue
-    .line 474
     iget-wide v0, p2, Lcom/android/internal/os/BatterySipper;->mobilemspp:D
 
     iget-wide v2, p1, Lcom/android/internal/os/BatterySipper;->mobilemspp:D
@@ -71,7 +69,6 @@
     .param p2, "rhs"    # Ljava/lang/Object;
 
     .prologue
-    .line 473
     check-cast p1, Lcom/android/internal/os/BatterySipper;
 
     .end local p1    # "lhs":Ljava/lang/Object;

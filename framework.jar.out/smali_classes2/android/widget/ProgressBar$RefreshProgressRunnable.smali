@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/widget/ProgressBar;
 
     .prologue
-    .line 1242
     iput-object p1, p0, Landroid/widget/ProgressBar$RefreshProgressRunnable;->this$0:Landroid/widget/ProgressBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,12 +50,10 @@
     .locals 9
 
     .prologue
-    .line 1244
     iget-object v4, p0, Landroid/widget/ProgressBar$RefreshProgressRunnable;->this$0:Landroid/widget/ProgressBar;
 
     monitor-enter v4
 
-    .line 1245
     :try_start_0
     iget-object v3, p0, Landroid/widget/ProgressBar$RefreshProgressRunnable;->this$0:Landroid/widget/ProgressBar;
 
@@ -68,7 +65,6 @@
 
     move-result v0
 
-    .line 1246
     .local v0, "count":I
     const/4 v1, 0x0
 
@@ -76,7 +72,6 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 1247
     iget-object v3, p0, Landroid/widget/ProgressBar$RefreshProgressRunnable;->this$0:Landroid/widget/ProgressBar;
 
     invoke-static {v3}, Landroid/widget/ProgressBar;->-get0(Landroid/widget/ProgressBar;)Ljava/util/ArrayList;
@@ -89,7 +84,6 @@
 
     check-cast v2, Landroid/widget/ProgressBar$RefreshData;
 
-    .line 1248
     .local v2, "rd":Landroid/widget/ProgressBar$RefreshData;
     iget-object v3, p0, Landroid/widget/ProgressBar$RefreshProgressRunnable;->this$0:Landroid/widget/ProgressBar;
 
@@ -103,15 +97,12 @@
 
     invoke-static {v3, v5, v6, v7, v8}, Landroid/widget/ProgressBar;->-wrap0(Landroid/widget/ProgressBar;IIZZ)V
 
-    .line 1249
     invoke-virtual {v2}, Landroid/widget/ProgressBar$RefreshData;->recycle()V
 
-    .line 1246
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1251
     .end local v2    # "rd":Landroid/widget/ProgressBar$RefreshData;
     :cond_0
     iget-object v3, p0, Landroid/widget/ProgressBar$RefreshProgressRunnable;->this$0:Landroid/widget/ProgressBar;
@@ -122,7 +113,6 @@
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
 
-    .line 1252
     iget-object v3, p0, Landroid/widget/ProgressBar$RefreshProgressRunnable;->this$0:Landroid/widget/ProgressBar;
 
     const/4 v5, 0x0
@@ -133,10 +123,8 @@
 
     monitor-exit v4
 
-    .line 1243
     return-void
 
-    .line 1244
     .end local v0    # "count":I
     .end local v1    # "i":I
     :catchall_0

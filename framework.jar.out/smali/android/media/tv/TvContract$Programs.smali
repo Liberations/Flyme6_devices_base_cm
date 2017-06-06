@@ -84,8 +84,7 @@
     .locals 1
 
     .prologue
-    .line 930
-    const-string/jumbo v0, "content://android.media.tv/program"
+    const-string v0, "content://android.media.tv/program"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -93,7 +92,6 @@
 
     sput-object v0, Landroid/media/tv/TvContract$Programs;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 927
     return-void
 .end method
 
@@ -101,7 +99,6 @@
     .locals 0
 
     .prologue
-    .line 1218
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

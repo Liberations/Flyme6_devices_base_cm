@@ -27,7 +27,6 @@
     .param p2, "val$pcb2"    # Landroid/media/audiopolicy/IAudioPolicyCallback;
 
     .prologue
-    .line 705
     iput-object p1, p0, Lcom/android/server/audio/MediaFocusControl$3;->this$0:Lcom/android/server/audio/MediaFocusControl;
 
     iput-object p2, p0, Lcom/android/server/audio/MediaFocusControl$3;->val$pcb2:Landroid/media/audiopolicy/IAudioPolicyCallback;
@@ -43,14 +42,12 @@
     .locals 5
 
     .prologue
-    .line 708
     invoke-static {}, Lcom/android/server/audio/MediaFocusControl;->-get1()Ljava/lang/Object;
 
     move-result-object v2
 
     monitor-enter v2
 
-    .line 709
     :try_start_0
     iget-object v1, p0, Lcom/android/server/audio/MediaFocusControl$3;->this$0:Lcom/android/server/audio/MediaFocusControl;
 
@@ -68,10 +65,8 @@
 
     monitor-exit v2
 
-    .line 710
     return-void
 
-    .line 713
     :cond_0
     :try_start_1
     iget-object v3, p0, Lcom/android/server/audio/MediaFocusControl$3;->val$pcb2:Landroid/media/audiopolicy/IAudioPolicyCallback;
@@ -92,10 +87,8 @@
 
     move-result-object v1
 
-    .line 715
     const/4 v4, 0x1
 
-    .line 713
     invoke-interface {v3, v1, v4}, Landroid/media/audiopolicy/IAudioPolicyCallback;->notifyAudioFocusGrant(Landroid/media/AudioFocusInfo;I)V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
@@ -104,36 +97,31 @@
     :goto_0
     monitor-exit v2
 
-    .line 707
     return-void
 
-    .line 716
     :catch_0
     move-exception v0
 
-    .line 717
     .local v0, "e":Landroid/os/RemoteException;
     :try_start_2
-    const-string/jumbo v1, "MediaFocusControl"
+    const-string v1, "MediaFocusControl"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "Can\'t call notifyAudioFocusGrant() on IAudioPolicyCallback "
+    const-string v4, "Can\'t call notifyAudioFocusGrant() on IAudioPolicyCallback "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 718
     iget-object v4, p0, Lcom/android/server/audio/MediaFocusControl$3;->val$pcb2:Landroid/media/audiopolicy/IAudioPolicyCallback;
 
     invoke-interface {v4}, Landroid/media/audiopolicy/IAudioPolicyCallback;->asBinder()Landroid/os/IBinder;
 
     move-result-object v4
 
-    .line 717
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v3
@@ -148,7 +136,6 @@
 
     goto :goto_0
 
-    .line 708
     .end local v0    # "e":Landroid/os/RemoteException;
     :catchall_0
     move-exception v1

@@ -30,27 +30,22 @@
     .locals 2
 
     .prologue
-    .line 89
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .line 90
     .local v0, "version":I
     const/16 v1, 0x11
 
     if-lt v0, v1, :cond_0
 
-    .line 91
     new-instance v1, Landroid/support/v4/view/GravityCompat$GravityCompatImplJellybeanMr1;
 
     invoke-direct {v1}, Landroid/support/v4/view/GravityCompat$GravityCompatImplJellybeanMr1;-><init>()V
 
     sput-object v1, Landroid/support/v4/view/GravityCompat;->IMPL:Landroid/support/v4/view/GravityCompat$GravityCompatImpl;
 
-    .line 27
     :goto_0
     return-void
 
-    .line 93
     :cond_0
     new-instance v1, Landroid/support/v4/view/GravityCompat$GravityCompatImplBase;
 
@@ -65,7 +60,6 @@
     .locals 0
 
     .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -83,7 +77,6 @@
     .param p7, "layoutDirection"    # I
 
     .prologue
-    .line 162
     sget-object v0, Landroid/support/v4/view/GravityCompat;->IMPL:Landroid/support/v4/view/GravityCompat$GravityCompatImpl;
 
     move v1, p0
@@ -104,7 +97,6 @@
 
     invoke-interface/range {v0 .. v8}, Landroid/support/v4/view/GravityCompat$GravityCompatImpl;->apply(IIILandroid/graphics/Rect;IILandroid/graphics/Rect;I)V
 
-    .line 161
     return-void
 .end method
 
@@ -118,7 +110,6 @@
     .param p5, "layoutDirection"    # I
 
     .prologue
-    .line 132
     sget-object v0, Landroid/support/v4/view/GravityCompat;->IMPL:Landroid/support/v4/view/GravityCompat$GravityCompatImpl;
 
     move v1, p0
@@ -135,7 +126,6 @@
 
     invoke-interface/range {v0 .. v6}, Landroid/support/v4/view/GravityCompat$GravityCompatImpl;->apply(IIILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
 
-    .line 131
     return-void
 .end method
 
@@ -147,12 +137,10 @@
     .param p3, "layoutDirection"    # I
 
     .prologue
-    .line 186
     sget-object v0, Landroid/support/v4/view/GravityCompat;->IMPL:Landroid/support/v4/view/GravityCompat$GravityCompatImpl;
 
     invoke-interface {v0, p0, p1, p2, p3}, Landroid/support/v4/view/GravityCompat$GravityCompatImpl;->applyDisplay(ILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
 
-    .line 185
     return-void
 .end method
 
@@ -162,7 +150,6 @@
     .param p1, "layoutDirection"    # I
 
     .prologue
-    .line 201
     sget-object v0, Landroid/support/v4/view/GravityCompat;->IMPL:Landroid/support/v4/view/GravityCompat$GravityCompatImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/view/GravityCompat$GravityCompatImpl;->getAbsoluteGravity(II)I

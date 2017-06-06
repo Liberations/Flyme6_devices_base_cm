@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/os/CommonClock;
 
     .prologue
-    .line 305
     iput-object p1, p0, Landroid/os/CommonClock$1;->this$0:Landroid/os/CommonClock;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 307
     iget-object v0, p0, Landroid/os/CommonClock$1;->this$0:Landroid/os/CommonClock;
 
     invoke-static {v0}, Landroid/os/CommonClock;->-get0(Landroid/os/CommonClock;)Ljava/lang/Object;
@@ -50,7 +48,6 @@
 
     monitor-enter v1
 
-    .line 308
     :try_start_0
     iget-object v0, p0, Landroid/os/CommonClock$1;->this$0:Landroid/os/CommonClock;
 
@@ -60,7 +57,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 309
     iget-object v0, p0, Landroid/os/CommonClock$1;->this$0:Landroid/os/CommonClock;
 
     invoke-static {v0}, Landroid/os/CommonClock;->-get1(Landroid/os/CommonClock;)Landroid/os/CommonClock$OnServerDiedListener;
@@ -74,10 +70,8 @@
     :cond_0
     monitor-exit v1
 
-    .line 306
     return-void
 
-    .line 307
     :catchall_0
     move-exception v0
 

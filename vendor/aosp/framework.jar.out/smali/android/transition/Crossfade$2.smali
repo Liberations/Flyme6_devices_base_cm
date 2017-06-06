@@ -36,7 +36,6 @@
     .param p5, "val$endDrawable"    # Landroid/graphics/drawable/BitmapDrawable;
 
     .prologue
-    .line 222
     iput-object p1, p0, Landroid/transition/Crossfade$2;->this$0:Landroid/transition/Crossfade;
 
     iput-boolean p2, p0, Landroid/transition/Crossfade$2;->val$useParentOverlay:Z
@@ -59,12 +58,10 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 225
     iget-boolean v1, p0, Landroid/transition/Crossfade$2;->val$useParentOverlay:Z
 
     if-eqz v1, :cond_1
 
-    .line 226
     iget-object v1, p0, Landroid/transition/Crossfade$2;->val$view:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
@@ -77,14 +74,12 @@
 
     move-result-object v0
 
-    .line 227
     .local v0, "overlay":Landroid/view/ViewOverlay;
     :goto_0
     iget-object v1, p0, Landroid/transition/Crossfade$2;->val$startDrawable:Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewOverlay;->remove(Landroid/graphics/drawable/Drawable;)V
 
-    .line 228
     iget-object v1, p0, Landroid/transition/Crossfade$2;->this$0:Landroid/transition/Crossfade;
 
     invoke-static {v1}, Landroid/transition/Crossfade;->-get0(Landroid/transition/Crossfade;)I
@@ -95,16 +90,13 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 229
     iget-object v1, p0, Landroid/transition/Crossfade$2;->val$endDrawable:Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewOverlay;->remove(Landroid/graphics/drawable/Drawable;)V
 
-    .line 224
     :cond_0
     return-void
 
-    .line 226
     .end local v0    # "overlay":Landroid/view/ViewOverlay;
     :cond_1
     iget-object v1, p0, Landroid/transition/Crossfade$2;->val$view:Landroid/view/View;

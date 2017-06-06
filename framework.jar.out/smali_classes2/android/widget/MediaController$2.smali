@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/widget/MediaController;
 
     .prologue
-    .line 200
     iput-object p1, p0, Landroid/widget/MediaController$2;->this$0:Landroid/widget/MediaController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,14 +44,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 203
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 204
     iget-object v0, p0, Landroid/widget/MediaController$2;->this$0:Landroid/widget/MediaController;
 
     invoke-static {v0}, Landroid/widget/MediaController;->-get6(Landroid/widget/MediaController;)Z
@@ -61,12 +58,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 205
     iget-object v0, p0, Landroid/widget/MediaController$2;->this$0:Landroid/widget/MediaController;
 
     invoke-virtual {v0}, Landroid/widget/MediaController;->hide()V
 
-    .line 208
     :cond_0
     return v1
 .end method

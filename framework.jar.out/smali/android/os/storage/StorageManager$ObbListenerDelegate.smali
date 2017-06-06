@@ -48,26 +48,22 @@
     .param p2, "listener"    # Landroid/os/storage/OnObbStateChangeListener;
 
     .prologue
-    .line 253
     iput-object p1, p0, Landroid/os/storage/StorageManager$ObbListenerDelegate;->this$0:Landroid/os/storage/StorageManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 254
     invoke-static {p1}, Landroid/os/storage/StorageManager;->-wrap0(Landroid/os/storage/StorageManager;)I
 
     move-result v0
 
     iput v0, p0, Landroid/os/storage/StorageManager$ObbListenerDelegate;->nonce:I
 
-    .line 255
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Landroid/os/storage/StorageManager$ObbListenerDelegate;->mObbEventListenerRef:Ljava/lang/ref/WeakReference;
 
-    .line 256
     new-instance v0, Landroid/os/storage/StorageManager$ObbListenerDelegate$1;
 
     invoke-static {p1}, Landroid/os/storage/StorageManager;->-get0(Landroid/os/storage/StorageManager;)Landroid/os/Looper;
@@ -78,7 +74,6 @@
 
     iput-object v0, p0, Landroid/os/storage/StorageManager$ObbListenerDelegate;->mHandler:Landroid/os/Handler;
 
-    .line 253
     return-void
 .end method
 
@@ -90,15 +85,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 270
     iget-object v0, p0, Landroid/os/storage/StorageManager$ObbListenerDelegate;->mObbEventListenerRef:Ljava/lang/ref/WeakReference;
 
     if-nez v0, :cond_0
 
-    .line 271
     return-object v1
 
-    .line 273
     :cond_0
     iget-object v0, p0, Landroid/os/storage/StorageManager$ObbListenerDelegate;->mObbEventListenerRef:Ljava/lang/ref/WeakReference;
 
@@ -119,7 +111,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 277
     iget-object v0, p0, Landroid/os/storage/StorageManager$ObbListenerDelegate;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1, p2, v1, p1}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
@@ -128,6 +119,5 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 276
     return-void
 .end method

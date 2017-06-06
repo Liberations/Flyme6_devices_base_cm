@@ -37,7 +37,6 @@
     .locals 0
 
     .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -50,18 +49,14 @@
     .param p2, "callbackObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 77
     check-cast p0, Landroid/media/MediaRouter;
 
-    .line 78
     .end local p0    # "routerObj":Ljava/lang/Object;
     check-cast p2, Landroid/media/MediaRouter$Callback;
 
-    .line 77
     .end local p2    # "callbackObj":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2}, Landroid/media/MediaRouter;->addCallback(ILandroid/media/MediaRouter$Callback;)V
 
-    .line 76
     return-void
 .end method
 
@@ -71,18 +66,14 @@
     .param p1, "routeObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 97
     check-cast p0, Landroid/media/MediaRouter;
 
-    .line 98
     .end local p0    # "routerObj":Ljava/lang/Object;
     check-cast p1, Landroid/media/MediaRouter$UserRouteInfo;
 
-    .line 97
     .end local p1    # "routeObj":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Landroid/media/MediaRouter;->addUserRoute(Landroid/media/MediaRouter$UserRouteInfo;)V
 
-    .line 96
     return-void
 .end method
 
@@ -91,7 +82,6 @@
     .param p0, "callback"    # Landroid/support/v4/media/routing/MediaRouterJellybean$Callback;
 
     .prologue
-    .line 107
     new-instance v0, Landroid/support/v4/media/routing/MediaRouterJellybean$CallbackProxy;
 
     invoke-direct {v0, p0}, Landroid/support/v4/media/routing/MediaRouterJellybean$CallbackProxy;-><init>(Landroid/support/v4/media/routing/MediaRouterJellybean$Callback;)V
@@ -106,7 +96,6 @@
     .param p2, "isGroupable"    # Z
 
     .prologue
-    .line 88
     check-cast p0, Landroid/media/MediaRouter;
 
     .end local p0    # "routerObj":Ljava/lang/Object;
@@ -123,14 +112,11 @@
     .param p1, "categoryObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 92
     check-cast p0, Landroid/media/MediaRouter;
 
-    .line 93
     .end local p0    # "routerObj":Ljava/lang/Object;
     check-cast p1, Landroid/media/MediaRouter$RouteCategory;
 
-    .line 92
     .end local p1    # "categoryObj":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Landroid/media/MediaRouter;->createUserRoute(Landroid/media/MediaRouter$RouteCategory;)Landroid/media/MediaRouter$UserRouteInfo;
 
@@ -144,7 +130,6 @@
     .param p0, "callback"    # Landroid/support/v4/media/routing/MediaRouterJellybean$VolumeCallback;
 
     .prologue
-    .line 111
     new-instance v0, Landroid/support/v4/media/routing/MediaRouterJellybean$VolumeCallbackProxy;
 
     invoke-direct {v0, p0}, Landroid/support/v4/media/routing/MediaRouterJellybean$VolumeCallbackProxy;-><init>(Landroid/support/v4/media/routing/MediaRouterJellybean$VolumeCallback;)V
@@ -159,22 +144,18 @@
     .prologue
     move-object v3, p0
 
-    .line 58
     check-cast v3, Landroid/media/MediaRouter;
 
-    .line 59
     .local v3, "router":Landroid/media/MediaRouter;
     invoke-virtual {v3}, Landroid/media/MediaRouter;->getCategoryCount()I
 
     move-result v0
 
-    .line 60
     .local v0, "count":I
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 61
     .local v2, "out":Ljava/util/List;
     const/4 v1, 0x0
 
@@ -182,19 +163,16 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 62
     invoke-virtual {v3, v1}, Landroid/media/MediaRouter;->getCategoryAt(I)Landroid/media/MediaRouter$RouteCategory;
 
     move-result-object v4
 
     invoke-interface {v2, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 61
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 64
     :cond_0
     return-object v2
 .end method
@@ -204,8 +182,7 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 42
-    const-string/jumbo v0, "media_router"
+    const-string v0, "media_router"
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -221,22 +198,18 @@
     .prologue
     move-object v3, p0
 
-    .line 47
     check-cast v3, Landroid/media/MediaRouter;
 
-    .line 48
     .local v3, "router":Landroid/media/MediaRouter;
     invoke-virtual {v3}, Landroid/media/MediaRouter;->getRouteCount()I
 
     move-result v0
 
-    .line 49
     .local v0, "count":I
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 50
     .local v2, "out":Ljava/util/List;
     const/4 v1, 0x0
 
@@ -244,19 +217,16 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 51
     invoke-virtual {v3, v1}, Landroid/media/MediaRouter;->getRouteAt(I)Landroid/media/MediaRouter$RouteInfo;
 
     move-result-object v4
 
     invoke-interface {v2, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 50
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 53
     :cond_0
     return-object v2
 .end method
@@ -267,7 +237,6 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 68
     check-cast p0, Landroid/media/MediaRouter;
 
     .end local p0    # "routerObj":Ljava/lang/Object;
@@ -284,18 +253,14 @@
     .param p1, "callbackObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 82
     check-cast p0, Landroid/media/MediaRouter;
 
-    .line 83
     .end local p0    # "routerObj":Ljava/lang/Object;
     check-cast p1, Landroid/media/MediaRouter$Callback;
 
-    .line 82
     .end local p1    # "callbackObj":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Landroid/media/MediaRouter;->removeCallback(Landroid/media/MediaRouter$Callback;)V
 
-    .line 81
     return-void
 .end method
 
@@ -305,18 +270,14 @@
     .param p1, "routeObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 102
     check-cast p0, Landroid/media/MediaRouter;
 
-    .line 103
     .end local p0    # "routerObj":Ljava/lang/Object;
     check-cast p1, Landroid/media/MediaRouter$UserRouteInfo;
 
-    .line 102
     .end local p1    # "routeObj":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Landroid/media/MediaRouter;->removeUserRoute(Landroid/media/MediaRouter$UserRouteInfo;)V
 
-    .line 101
     return-void
 .end method
 
@@ -327,17 +288,13 @@
     .param p2, "routeObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 72
     check-cast p0, Landroid/media/MediaRouter;
 
-    .line 73
     .end local p0    # "routerObj":Ljava/lang/Object;
     check-cast p2, Landroid/media/MediaRouter$RouteInfo;
 
-    .line 72
     .end local p2    # "routeObj":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2}, Landroid/media/MediaRouter;->selectRoute(ILandroid/media/MediaRouter$RouteInfo;)V
 
-    .line 71
     return-void
 .end method

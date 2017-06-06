@@ -58,14 +58,12 @@
     .locals 1
 
     .prologue
-    .line 133
     new-instance v0, Landroid/telephony/cdma/CdmaSmsCbProgramResults$1;
 
     invoke-direct {v0}, Landroid/telephony/cdma/CdmaSmsCbProgramResults$1;-><init>()V
 
     sput-object v0, Landroid/telephony/cdma/CdmaSmsCbProgramResults;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 27
     return-void
 .end method
 
@@ -76,19 +74,14 @@
     .param p3, "categoryResult"    # I
 
     .prologue
-    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 67
     iput p1, p0, Landroid/telephony/cdma/CdmaSmsCbProgramResults;->mCategory:I
 
-    .line 68
     iput p2, p0, Landroid/telephony/cdma/CdmaSmsCbProgramResults;->mLanguage:I
 
-    .line 69
     iput p3, p0, Landroid/telephony/cdma/CdmaSmsCbProgramResults;->mCategoryResult:I
 
-    .line 66
     return-void
 .end method
 
@@ -97,31 +90,26 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 73
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 74
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/telephony/cdma/CdmaSmsCbProgramResults;->mCategory:I
 
-    .line 75
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/telephony/cdma/CdmaSmsCbProgramResults;->mLanguage:I
 
-    .line 76
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/telephony/cdma/CdmaSmsCbProgramResults;->mCategoryResult:I
 
-    .line 73
     return-void
 .end method
 
@@ -131,7 +119,6 @@
     .locals 1
 
     .prologue
-    .line 128
     const/4 v0, 0x0
 
     return v0
@@ -141,7 +128,6 @@
     .locals 1
 
     .prologue
-    .line 97
     iget v0, p0, Landroid/telephony/cdma/CdmaSmsCbProgramResults;->mCategory:I
 
     return v0
@@ -151,7 +137,6 @@
     .locals 1
 
     .prologue
-    .line 113
     iget v0, p0, Landroid/telephony/cdma/CdmaSmsCbProgramResults;->mCategoryResult:I
 
     return v0
@@ -161,7 +146,6 @@
     .locals 1
 
     .prologue
-    .line 105
     iget v0, p0, Landroid/telephony/cdma/CdmaSmsCbProgramResults;->mLanguage:I
 
     return v0
@@ -171,12 +155,11 @@
     .locals 2
 
     .prologue
-    .line 118
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "CdmaSmsCbProgramResults{category="
+    const-string v1, "CdmaSmsCbProgramResults{category="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -188,42 +171,32 @@
 
     move-result-object v0
 
-    .line 119
-    const-string/jumbo v1, ", language="
+    const-string v1, ", language="
 
-    .line 118
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 119
     iget v1, p0, Landroid/telephony/cdma/CdmaSmsCbProgramResults;->mLanguage:I
 
-    .line 118
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 119
-    const-string/jumbo v1, ", result="
+    const-string v1, ", result="
 
-    .line 118
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 119
     iget v1, p0, Landroid/telephony/cdma/CdmaSmsCbProgramResults;->mCategoryResult:I
 
-    .line 118
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 119
     const/16 v1, 0x7d
 
-    .line 118
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -241,21 +214,17 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 87
     iget v0, p0, Landroid/telephony/cdma/CdmaSmsCbProgramResults;->mCategory:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 88
     iget v0, p0, Landroid/telephony/cdma/CdmaSmsCbProgramResults;->mLanguage:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 89
     iget v0, p0, Landroid/telephony/cdma/CdmaSmsCbProgramResults;->mCategoryResult:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 86
     return-void
 .end method

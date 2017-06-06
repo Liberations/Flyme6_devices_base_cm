@@ -115,42 +115,37 @@
 
     const/4 v1, 0x0
 
-    .line 31
     new-instance v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    const-string/jumbo v3, "NONE"
+    const-string v3, "NONE"
 
     invoke-direct {v2, v3, v1, v1}, Lcom/android/internal/telephony/dataconnection/DcFailCause;-><init>(Ljava/lang/String;II)V
 
     sput-object v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;->NONE:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    .line 33
     new-instance v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    const-string/jumbo v3, "OPERATOR_BARRED"
+    const-string v3, "OPERATOR_BARRED"
 
     const/4 v4, 0x1
 
     invoke-direct {v2, v3, v4, v6}, Lcom/android/internal/telephony/dataconnection/DcFailCause;-><init>(Ljava/lang/String;II)V
 
-    .line 35
     sput-object v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;->OPERATOR_BARRED:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     new-instance v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    const-string/jumbo v3, "INSUFFICIENT_RESOURCES"
+    const-string v3, "INSUFFICIENT_RESOURCES"
 
     const/4 v4, 0x2
 
     invoke-direct {v2, v3, v4, v7}, Lcom/android/internal/telephony/dataconnection/DcFailCause;-><init>(Ljava/lang/String;II)V
 
-    .line 36
     sput-object v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;->INSUFFICIENT_RESOURCES:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    .line 37
     new-instance v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    const-string/jumbo v3, "MISSING_UNKNOWN_APN"
+    const-string v3, "MISSING_UNKNOWN_APN"
 
     const/4 v4, 0x3
 
@@ -160,64 +155,53 @@
 
     new-instance v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    const-string/jumbo v3, "UNKNOWN_PDP_ADDRESS_TYPE"
+    const-string v3, "UNKNOWN_PDP_ADDRESS_TYPE"
 
     const/4 v4, 0x4
 
     invoke-direct {v2, v3, v4, v9}, Lcom/android/internal/telephony/dataconnection/DcFailCause;-><init>(Ljava/lang/String;II)V
 
-    .line 38
     sput-object v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;->UNKNOWN_PDP_ADDRESS_TYPE:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     new-instance v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    const-string/jumbo v3, "USER_AUTHENTICATION"
+    const-string v3, "USER_AUTHENTICATION"
 
     const/4 v4, 0x5
 
-    .line 39
     const/16 v5, 0x1d
 
-    .line 38
     invoke-direct {v2, v3, v4, v5}, Lcom/android/internal/telephony/dataconnection/DcFailCause;-><init>(Ljava/lang/String;II)V
 
-    .line 39
     sput-object v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;->USER_AUTHENTICATION:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     new-instance v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    const-string/jumbo v3, "ACTIVATION_REJECT_GGSN"
+    const-string v3, "ACTIVATION_REJECT_GGSN"
 
     const/4 v4, 0x6
 
-    .line 40
     const/16 v5, 0x1e
 
-    .line 39
     invoke-direct {v2, v3, v4, v5}, Lcom/android/internal/telephony/dataconnection/DcFailCause;-><init>(Ljava/lang/String;II)V
 
-    .line 40
     sput-object v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;->ACTIVATION_REJECT_GGSN:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     new-instance v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    const-string/jumbo v3, "ACTIVATION_REJECT_UNSPECIFIED"
+    const-string v3, "ACTIVATION_REJECT_UNSPECIFIED"
 
     const/4 v4, 0x7
 
-    .line 41
     const/16 v5, 0x1f
 
-    .line 40
     invoke-direct {v2, v3, v4, v5}, Lcom/android/internal/telephony/dataconnection/DcFailCause;-><init>(Ljava/lang/String;II)V
 
-    .line 41
     sput-object v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;->ACTIVATION_REJECT_UNSPECIFIED:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    .line 42
     new-instance v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    const-string/jumbo v3, "SERVICE_OPTION_NOT_SUPPORTED"
+    const-string v3, "SERVICE_OPTION_NOT_SUPPORTED"
 
     const/16 v4, 0x20
 
@@ -227,38 +211,31 @@
 
     new-instance v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    const-string/jumbo v3, "SERVICE_OPTION_NOT_SUBSCRIBED"
+    const-string v3, "SERVICE_OPTION_NOT_SUBSCRIBED"
 
     const/16 v4, 0x9
 
-    .line 43
     const/16 v5, 0x21
 
-    .line 42
     invoke-direct {v2, v3, v4, v5}, Lcom/android/internal/telephony/dataconnection/DcFailCause;-><init>(Ljava/lang/String;II)V
 
-    .line 43
     sput-object v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;->SERVICE_OPTION_NOT_SUBSCRIBED:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     new-instance v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    const-string/jumbo v3, "SERVICE_OPTION_OUT_OF_ORDER"
+    const-string v3, "SERVICE_OPTION_OUT_OF_ORDER"
 
     const/16 v4, 0xa
 
-    .line 44
     const/16 v5, 0x22
 
-    .line 43
     invoke-direct {v2, v3, v4, v5}, Lcom/android/internal/telephony/dataconnection/DcFailCause;-><init>(Ljava/lang/String;II)V
 
-    .line 44
     sput-object v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;->SERVICE_OPTION_OUT_OF_ORDER:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    .line 45
     new-instance v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    const-string/jumbo v3, "NSAPI_IN_USE"
+    const-string v3, "NSAPI_IN_USE"
 
     const/16 v4, 0xb
 
@@ -270,68 +247,55 @@
 
     new-instance v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    const-string/jumbo v3, "REGULAR_DEACTIVATION"
+    const-string v3, "REGULAR_DEACTIVATION"
 
     const/16 v4, 0xc
 
-    .line 46
     const/16 v5, 0x24
 
-    .line 45
     invoke-direct {v2, v3, v4, v5}, Lcom/android/internal/telephony/dataconnection/DcFailCause;-><init>(Ljava/lang/String;II)V
 
-    .line 46
     sput-object v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;->REGULAR_DEACTIVATION:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     new-instance v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    const-string/jumbo v3, "ONLY_IPV4_ALLOWED"
+    const-string v3, "ONLY_IPV4_ALLOWED"
 
     const/16 v4, 0xd
 
-    .line 47
     const/16 v5, 0x32
 
-    .line 46
     invoke-direct {v2, v3, v4, v5}, Lcom/android/internal/telephony/dataconnection/DcFailCause;-><init>(Ljava/lang/String;II)V
 
-    .line 47
     sput-object v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;->ONLY_IPV4_ALLOWED:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     new-instance v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    const-string/jumbo v3, "ONLY_IPV6_ALLOWED"
+    const-string v3, "ONLY_IPV6_ALLOWED"
 
     const/16 v4, 0xe
 
-    .line 48
     const/16 v5, 0x33
 
-    .line 47
     invoke-direct {v2, v3, v4, v5}, Lcom/android/internal/telephony/dataconnection/DcFailCause;-><init>(Ljava/lang/String;II)V
 
-    .line 48
     sput-object v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;->ONLY_IPV6_ALLOWED:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     new-instance v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    const-string/jumbo v3, "ONLY_SINGLE_BEARER_ALLOWED"
+    const-string v3, "ONLY_SINGLE_BEARER_ALLOWED"
 
     const/16 v4, 0xf
 
-    .line 49
     const/16 v5, 0x34
 
-    .line 48
     invoke-direct {v2, v3, v4, v5}, Lcom/android/internal/telephony/dataconnection/DcFailCause;-><init>(Ljava/lang/String;II)V
 
-    .line 49
     sput-object v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;->ONLY_SINGLE_BEARER_ALLOWED:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    .line 50
     new-instance v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    const-string/jumbo v3, "PROTOCOL_ERRORS"
+    const-string v3, "PROTOCOL_ERRORS"
 
     const/16 v4, 0x10
 
@@ -343,23 +307,19 @@
 
     new-instance v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    const-string/jumbo v3, "REGISTRATION_FAIL"
+    const-string v3, "REGISTRATION_FAIL"
 
     const/16 v4, 0x11
 
-    .line 54
     const/4 v5, -0x1
 
-    .line 50
     invoke-direct {v2, v3, v4, v5}, Lcom/android/internal/telephony/dataconnection/DcFailCause;-><init>(Ljava/lang/String;II)V
 
-    .line 54
     sput-object v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;->REGISTRATION_FAIL:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    .line 55
     new-instance v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    const-string/jumbo v3, "GPRS_REGISTRATION_FAIL"
+    const-string v3, "GPRS_REGISTRATION_FAIL"
 
     const/16 v4, 0x12
 
@@ -369,10 +329,9 @@
 
     sput-object v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;->GPRS_REGISTRATION_FAIL:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    .line 56
     new-instance v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    const-string/jumbo v3, "SIGNAL_LOST"
+    const-string v3, "SIGNAL_LOST"
 
     const/16 v4, 0x13
 
@@ -382,10 +341,9 @@
 
     sput-object v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;->SIGNAL_LOST:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    .line 57
     new-instance v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    const-string/jumbo v3, "PREF_RADIO_TECH_CHANGED"
+    const-string v3, "PREF_RADIO_TECH_CHANGED"
 
     const/16 v4, 0x14
 
@@ -397,53 +355,43 @@
 
     new-instance v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    const-string/jumbo v3, "RADIO_POWER_OFF"
+    const-string v3, "RADIO_POWER_OFF"
 
     const/16 v4, 0x15
 
-    .line 58
     const/4 v5, -0x5
 
-    .line 57
     invoke-direct {v2, v3, v4, v5}, Lcom/android/internal/telephony/dataconnection/DcFailCause;-><init>(Ljava/lang/String;II)V
 
-    .line 58
     sput-object v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;->RADIO_POWER_OFF:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     new-instance v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    const-string/jumbo v3, "TETHERED_CALL_ACTIVE"
+    const-string v3, "TETHERED_CALL_ACTIVE"
 
     const/16 v4, 0x16
 
-    .line 59
     const/4 v5, -0x6
 
-    .line 58
     invoke-direct {v2, v3, v4, v5}, Lcom/android/internal/telephony/dataconnection/DcFailCause;-><init>(Ljava/lang/String;II)V
 
-    .line 59
     sput-object v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;->TETHERED_CALL_ACTIVE:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     new-instance v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    const-string/jumbo v3, "ERROR_UNSPECIFIED"
+    const-string v3, "ERROR_UNSPECIFIED"
 
     const/16 v4, 0x17
 
-    .line 60
     const v5, 0xffff
 
-    .line 59
     invoke-direct {v2, v3, v4, v5}, Lcom/android/internal/telephony/dataconnection/DcFailCause;-><init>(Ljava/lang/String;II)V
 
-    .line 60
     sput-object v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;->ERROR_UNSPECIFIED:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    .line 61
     new-instance v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    const-string/jumbo v3, "PDP_FAIL_IPV4_CALL_THROTTLED"
+    const-string v3, "PDP_FAIL_IPV4_CALL_THROTTLED"
 
     const/16 v4, 0x18
 
@@ -453,10 +401,9 @@
 
     sput-object v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;->PDP_FAIL_IPV4_CALL_THROTTLED:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    .line 62
     new-instance v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    const-string/jumbo v3, "PDP_FAIL_IPV6_CALL_THROTTLED"
+    const-string v3, "PDP_FAIL_IPV6_CALL_THROTTLED"
 
     const/16 v4, 0x19
 
@@ -466,24 +413,19 @@
 
     sput-object v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;->PDP_FAIL_IPV6_CALL_THROTTLED:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    .line 64
     new-instance v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    const-string/jumbo v3, "UNKNOWN"
+    const-string v3, "UNKNOWN"
 
-    .line 66
     const/high16 v4, 0x10000
 
-    .line 64
     invoke-direct {v2, v3, v7, v4}, Lcom/android/internal/telephony/dataconnection/DcFailCause;-><init>(Ljava/lang/String;II)V
 
-    .line 66
     sput-object v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;->UNKNOWN:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    .line 67
     new-instance v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    const-string/jumbo v3, "RADIO_NOT_AVAILABLE"
+    const-string v3, "RADIO_NOT_AVAILABLE"
 
     const v4, 0x10001
 
@@ -493,36 +435,29 @@
 
     new-instance v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    const-string/jumbo v3, "UNACCEPTABLE_NETWORK_PARAMETER"
+    const-string v3, "UNACCEPTABLE_NETWORK_PARAMETER"
 
-    .line 68
     const v4, 0x10002
 
-    .line 67
     invoke-direct {v2, v3, v9, v4}, Lcom/android/internal/telephony/dataconnection/DcFailCause;-><init>(Ljava/lang/String;II)V
 
-    .line 68
     sput-object v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;->UNACCEPTABLE_NETWORK_PARAMETER:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     new-instance v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    const-string/jumbo v3, "CONNECTION_TO_DATACONNECTIONAC_BROKEN"
+    const-string v3, "CONNECTION_TO_DATACONNECTIONAC_BROKEN"
 
     const/16 v4, 0x1d
 
-    .line 69
     const v5, 0x10003
 
-    .line 68
     invoke-direct {v2, v3, v4, v5}, Lcom/android/internal/telephony/dataconnection/DcFailCause;-><init>(Ljava/lang/String;II)V
 
-    .line 69
     sput-object v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;->CONNECTION_TO_DATACONNECTIONAC_BROKEN:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    .line 70
     new-instance v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    const-string/jumbo v3, "LOST_CONNECTION"
+    const-string v3, "LOST_CONNECTION"
 
     const/16 v4, 0x1e
 
@@ -532,10 +467,9 @@
 
     sput-object v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;->LOST_CONNECTION:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    .line 71
     new-instance v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    const-string/jumbo v3, "RESET_BY_FRAMEWORK"
+    const-string v3, "RESET_BY_FRAMEWORK"
 
     const/16 v4, 0x1f
 
@@ -545,7 +479,6 @@
 
     sput-object v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;->RESET_BY_FRAMEWORK:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    .line 30
     const/16 v2, 0x20
 
     new-array v2, v2, [Lcom/android/internal/telephony/dataconnection/DcFailCause;
@@ -734,14 +667,12 @@
 
     sput-object v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;->$VALUES:[Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    .line 78
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
     sput-object v2, Lcom/android/internal/telephony/dataconnection/DcFailCause;->sErrorCodeToFailCauseMap:Ljava/util/HashMap;
 
-    .line 79
     invoke-static {}, Lcom/android/internal/telephony/dataconnection/DcFailCause;->values()[Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     move-result-object v2
@@ -754,7 +685,6 @@
 
     aget-object v0, v2, v1
 
-    .line 80
     sget-object v4, Lcom/android/internal/telephony/dataconnection/DcFailCause;->sErrorCodeToFailCauseMap:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/dataconnection/DcFailCause;->getErrorCode()I
@@ -767,12 +697,10 @@
 
     invoke-virtual {v4, v5, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 79
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 30
     :cond_0
     return-void
 .end method
@@ -782,28 +710,22 @@
     .param p3, "errorCode"    # I
 
     .prologue
-    .line 84
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 73
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 74
     const v1, 0x11200a5
 
-    .line 73
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/dataconnection/DcFailCause;->mRestartRadioOnRegularDeactivation:Z
 
-    .line 85
     iput p3, p0, Lcom/android/internal/telephony/dataconnection/DcFailCause;->mErrorCode:I
 
-    .line 84
     return-void
 .end method
 
@@ -812,7 +734,6 @@
     .param p0, "errorCode"    # I
 
     .prologue
-    .line 129
     sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->sErrorCodeToFailCauseMap:Ljava/util/HashMap;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -825,14 +746,11 @@
 
     check-cast v0, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    .line 130
     .local v0, "fc":Lcom/android/internal/telephony/dataconnection/DcFailCause;
     if-nez v0, :cond_0
 
-    .line 131
     sget-object v0, Lcom/android/internal/telephony/dataconnection/DcFailCause;->UNKNOWN:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    .line 133
     :cond_0
     return-object v0
 .end method
@@ -842,7 +760,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 30
     const-class v0, Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -858,7 +775,6 @@
     .locals 1
 
     .prologue
-    .line 30
     sget-object v0, Lcom/android/internal/telephony/dataconnection/DcFailCause;->$VALUES:[Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     return-object v0
@@ -870,7 +786,6 @@
     .locals 1
 
     .prologue
-    .line 89
     iget v0, p0, Lcom/android/internal/telephony/dataconnection/DcFailCause;->mErrorCode:I
 
     return v0
@@ -882,7 +797,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 116
     sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->OPERATOR_BARRED:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     if-eq p0, v1, :cond_0
@@ -895,7 +809,6 @@
     :goto_0
     return v0
 
-    .line 117
     :cond_1
     sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->UNKNOWN_PDP_ADDRESS_TYPE:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
@@ -905,7 +818,6 @@
 
     if-eq p0, v1, :cond_0
 
-    .line 118
     sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->ACTIVATION_REJECT_GGSN:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     if-eq p0, v1, :cond_0
@@ -914,17 +826,14 @@
 
     if-eq p0, v1, :cond_0
 
-    .line 119
     sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->SERVICE_OPTION_NOT_SUBSCRIBED:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     if-eq p0, v1, :cond_0
 
-    .line 120
     sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->SERVICE_OPTION_NOT_SUPPORTED:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     if-eq p0, v1, :cond_0
 
-    .line 121
     sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->SERVICE_OPTION_OUT_OF_ORDER:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     if-eq p0, v1, :cond_0
@@ -933,7 +842,6 @@
 
     if-eq p0, v1, :cond_0
 
-    .line 122
     sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->ONLY_IPV4_ALLOWED:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     if-eq p0, v1, :cond_0
@@ -942,7 +850,6 @@
 
     if-eq p0, v1, :cond_0
 
-    .line 123
     sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->PROTOCOL_ERRORS:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     if-eq p0, v1, :cond_0
@@ -951,7 +858,6 @@
 
     if-eq p0, v1, :cond_0
 
-    .line 124
     sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->RADIO_POWER_OFF:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     if-eq p0, v1, :cond_0
@@ -960,7 +866,6 @@
 
     if-eq p0, v1, :cond_0
 
-    .line 125
     sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->UNACCEPTABLE_NETWORK_PARAMETER:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     if-eq p0, v1, :cond_0
@@ -978,48 +883,39 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 98
     sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->ACTIVATION_REJECT_GGSN:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     if-ne p0, v1, :cond_0
 
-    .line 99
     invoke-static {p1, p2}, Landroid/telephony/SubscriptionManager;->getResourcesForSubId(Landroid/content/Context;I)Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 100
     const v1, 0x11200b8
 
-    .line 99
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v0
 
     return v0
 
-    .line 101
     :cond_0
     sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->PROTOCOL_ERRORS:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     if-ne p0, v1, :cond_1
 
-    .line 102
     invoke-static {p1, p2}, Landroid/telephony/SubscriptionManager;->getResourcesForSubId(Landroid/content/Context;I)Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 103
     const v1, 0x11200b9
 
-    .line 102
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v0
 
     return v0
 
-    .line 105
     :cond_1
     sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->OPERATOR_BARRED:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
@@ -1033,7 +929,6 @@
     :goto_0
     return v0
 
-    .line 106
     :cond_3
     sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->UNKNOWN_PDP_ADDRESS_TYPE:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
@@ -1043,12 +938,10 @@
 
     if-eq p0, v1, :cond_2
 
-    .line 107
     sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->SERVICE_OPTION_NOT_SUPPORTED:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     if-eq p0, v1, :cond_2
 
-    .line 108
     sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->SERVICE_OPTION_NOT_SUBSCRIBED:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     if-eq p0, v1, :cond_2
@@ -1057,7 +950,6 @@
 
     if-eq p0, v1, :cond_2
 
-    .line 109
     sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->ONLY_IPV4_ALLOWED:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     if-eq p0, v1, :cond_2
@@ -1066,7 +958,6 @@
 
     if-eq p0, v1, :cond_2
 
-    .line 110
     sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->RADIO_POWER_OFF:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     if-eq p0, v1, :cond_2
@@ -1075,7 +966,6 @@
 
     if-eq p0, v1, :cond_2
 
-    .line 111
     sget-object v1, Lcom/android/internal/telephony/dataconnection/DcFailCause;->RADIO_NOT_AVAILABLE:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     if-eq p0, v1, :cond_2
@@ -1093,7 +983,6 @@
     .locals 1
 
     .prologue
-    .line 94
     sget-object v0, Lcom/android/internal/telephony/dataconnection/DcFailCause;->REGULAR_DEACTIVATION:Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
     if-ne p0, v0, :cond_0

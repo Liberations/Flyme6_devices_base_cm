@@ -27,15 +27,12 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 73
     iput-object p1, p0, Lcom/android/server/NetworkScoreService$ScorerChangedReceiver;->this$0:Lcom/android/server/NetworkScoreService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 74
     iput-object p2, p0, Lcom/android/server/NetworkScoreService$ScorerChangedReceiver;->mRegisteredPackage:Ljava/lang/String;
 
-    .line 73
     return-void
 .end method
 
@@ -49,14 +46,12 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 79
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 80
     .local v0, "action":Ljava/lang/String;
-    const-string/jumbo v1, "android.intent.action.PACKAGE_CHANGED"
+    const-string v1, "android.intent.action.PACKAGE_CHANGED"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -64,27 +59,22 @@
 
     if-nez v1, :cond_0
 
-    .line 81
-    const-string/jumbo v1, "android.intent.action.PACKAGE_REPLACED"
+    const-string v1, "android.intent.action.PACKAGE_REPLACED"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    .line 80
     if-nez v1, :cond_0
 
-    .line 82
-    const-string/jumbo v1, "android.intent.action.PACKAGE_FULLY_REMOVED"
+    const-string v1, "android.intent.action.PACKAGE_FULLY_REMOVED"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    .line 80
     if-eqz v1, :cond_1
 
-    .line 83
     :cond_0
     iget-object v1, p0, Lcom/android/server/NetworkScoreService$ScorerChangedReceiver;->this$0:Lcom/android/server/NetworkScoreService;
 
@@ -98,14 +88,13 @@
 
     if-nez v1, :cond_1
 
-    .line 85
-    const-string/jumbo v1, "NetworkScoreService"
+    const-string v1, "NetworkScoreService"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "Package "
+    const-string v3, "Package "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -117,10 +106,8 @@
 
     move-result-object v2
 
-    .line 86
-    const-string/jumbo v3, " is no longer valid, disabling scoring"
+    const-string v3, " is no longer valid, disabling scoring"
 
-    .line 85
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -131,12 +118,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 87
     iget-object v1, p0, Lcom/android/server/NetworkScoreService$ScorerChangedReceiver;->this$0:Lcom/android/server/NetworkScoreService;
 
     invoke-static {v1, v4}, Lcom/android/server/NetworkScoreService;->-wrap0(Lcom/android/server/NetworkScoreService;Ljava/lang/String;)Z
 
-    .line 78
     :cond_1
     return-void
 .end method

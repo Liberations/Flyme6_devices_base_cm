@@ -28,7 +28,6 @@
     .param p1, "this$0"    # Landroid/app/backup/BackupAgent;
 
     .prologue
-    .line 772
     iput-object p1, p0, Landroid/app/backup/BackupAgent$BackupServiceBinder;->this$0:Landroid/app/backup/BackupAgent;
 
     invoke-direct {p0}, Landroid/app/IBackupAgent$Stub;-><init>()V
@@ -62,12 +61,10 @@
     .end annotation
 
     .prologue
-    .line 781
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 784
     .local v4, "ident":J
     new-instance v3, Landroid/app/backup/BackupDataOutput;
 
@@ -77,7 +74,6 @@
 
     invoke-direct {v3, v6}, Landroid/app/backup/BackupDataOutput;-><init>(Ljava/io/FileDescriptor;)V
 
-    .line 787
     .local v3, "output":Landroid/app/backup/BackupDataOutput;
     :try_start_0
     iget-object v6, p0, Landroid/app/backup/BackupAgent$BackupServiceBinder;->this$0:Landroid/app/backup/BackupAgent;
@@ -88,15 +84,12 @@
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 798
     iget-object v6, p0, Landroid/app/backup/BackupAgent$BackupServiceBinder;->this$0:Landroid/app/backup/BackupAgent;
 
     invoke-static {v6}, Landroid/app/backup/BackupAgent;->-wrap0(Landroid/app/backup/BackupAgent;)V
 
-    .line 800
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 802
     const-wide/16 v6, 0x0
 
     :try_start_1
@@ -104,32 +97,28 @@
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 779
     :goto_0
     return-void
 
-    .line 803
     :catch_0
     move-exception v0
 
     .local v0, "e":Landroid/os/RemoteException;
     goto :goto_0
 
-    .line 791
     .end local v0    # "e":Landroid/os/RemoteException;
     :catch_1
     move-exception v2
 
-    .line 792
     .local v2, "ex":Ljava/lang/RuntimeException;
     :try_start_2
-    const-string/jumbo v6, "BackupServiceBinder"
+    const-string v6, "BackupServiceBinder"
 
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "onBackup ("
+    const-string v8, "onBackup ("
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -149,7 +138,7 @@
 
     move-result-object v7
 
-    const-string/jumbo v8, ") threw"
+    const-string v8, ") threw"
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -161,25 +150,20 @@
 
     invoke-static {v6, v7, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 793
     throw v2
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 794
     .end local v2    # "ex":Ljava/lang/RuntimeException;
     :catchall_0
     move-exception v6
 
-    .line 798
     iget-object v7, p0, Landroid/app/backup/BackupAgent$BackupServiceBinder;->this$0:Landroid/app/backup/BackupAgent;
 
     invoke-static {v7}, Landroid/app/backup/BackupAgent;->-wrap0(Landroid/app/backup/BackupAgent;)V
 
-    .line 800
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 802
     const-wide/16 v8, 0x0
 
     :try_start_3
@@ -187,24 +171,21 @@
     :try_end_3
     .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_3
 
-    .line 794
     :goto_1
     throw v6
 
-    .line 788
     :catch_2
     move-exception v1
 
-    .line 789
     .local v1, "ex":Ljava/io/IOException;
     :try_start_4
-    const-string/jumbo v6, "BackupServiceBinder"
+    const-string v6, "BackupServiceBinder"
 
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "onBackup ("
+    const-string v8, "onBackup ("
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -224,7 +205,7 @@
 
     move-result-object v7
 
-    const-string/jumbo v8, ") threw"
+    const-string v8, ") threw"
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -236,7 +217,6 @@
 
     invoke-static {v6, v7, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 790
     new-instance v6, Ljava/lang/RuntimeException;
 
     invoke-direct {v6, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -245,7 +225,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 803
     .end local v1    # "ex":Ljava/io/IOException;
     :catch_3
     move-exception v0
@@ -261,18 +240,15 @@
     .param p3, "callbackBinder"    # Landroid/app/backup/IBackupManager;
 
     .prologue
-    .line 843
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 849
     .local v6, "ident":J
     iget-object v8, p0, Landroid/app/backup/BackupAgent$BackupServiceBinder;->this$0:Landroid/app/backup/BackupAgent;
 
     invoke-static {v8}, Landroid/app/backup/BackupAgent;->-wrap0(Landroid/app/backup/BackupAgent;)V
 
-    .line 852
     :try_start_0
     iget-object v8, p0, Landroid/app/backup/BackupAgent$BackupServiceBinder;->this$0:Landroid/app/backup/BackupAgent;
 
@@ -286,12 +262,10 @@
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 861
     iget-object v8, p0, Landroid/app/backup/BackupAgent$BackupServiceBinder;->this$0:Landroid/app/backup/BackupAgent;
 
     invoke-static {v8}, Landroid/app/backup/BackupAgent;->-wrap0(Landroid/app/backup/BackupAgent;)V
 
-    .line 866
     :try_start_1
     new-instance v5, Ljava/io/FileOutputStream;
 
@@ -301,25 +275,21 @@
 
     invoke-direct {v5, v8}, Ljava/io/FileOutputStream;-><init>(Ljava/io/FileDescriptor;)V
 
-    .line 867
     .local v5, "out":Ljava/io/FileOutputStream;
     const/4 v8, 0x4
 
     new-array v0, v8, [B
 
-    .line 868
     .local v0, "buf":[B
     invoke-virtual {v5, v0}, Ljava/io/FileOutputStream;->write([B)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 873
     .end local v0    # "buf":[B
     .end local v5    # "out":Ljava/io/FileOutputStream;
     :goto_0
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 875
     const-wide/16 v8, 0x0
 
     :try_start_2
@@ -327,25 +297,21 @@
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 841
     :goto_1
     return-void
 
-    .line 869
     :catch_0
     move-exception v2
 
-    .line 870
     .local v2, "e":Ljava/io/IOException;
-    const-string/jumbo v8, "BackupServiceBinder"
+    const-string v8, "BackupServiceBinder"
 
-    const-string/jumbo v9, "Unable to finalize backup stream!"
+    const-string v9, "Unable to finalize backup stream!"
 
     invoke-static {v8, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 876
     .end local v2    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v1
@@ -353,21 +319,19 @@
     .local v1, "e":Landroid/os/RemoteException;
     goto :goto_1
 
-    .line 856
     .end local v1    # "e":Landroid/os/RemoteException;
     :catch_2
     move-exception v4
 
-    .line 857
     .local v4, "ex":Ljava/lang/RuntimeException;
     :try_start_3
-    const-string/jumbo v8, "BackupServiceBinder"
+    const-string v8, "BackupServiceBinder"
 
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "onFullBackup ("
+    const-string v10, "onFullBackup ("
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -387,7 +351,7 @@
 
     move-result-object v9
 
-    const-string/jumbo v10, ") threw"
+    const-string v10, ") threw"
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -399,22 +363,18 @@
 
     invoke-static {v8, v9, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 858
     throw v4
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 859
     .end local v4    # "ex":Ljava/lang/RuntimeException;
     :catchall_0
     move-exception v8
 
-    .line 861
     iget-object v9, p0, Landroid/app/backup/BackupAgent$BackupServiceBinder;->this$0:Landroid/app/backup/BackupAgent;
 
     invoke-static {v9}, Landroid/app/backup/BackupAgent;->-wrap0(Landroid/app/backup/BackupAgent;)V
 
-    .line 866
     :try_start_4
     new-instance v5, Ljava/io/FileOutputStream;
 
@@ -424,25 +384,21 @@
 
     invoke-direct {v5, v9}, Ljava/io/FileOutputStream;-><init>(Ljava/io/FileDescriptor;)V
 
-    .line 867
     .restart local v5    # "out":Ljava/io/FileOutputStream;
     const/4 v9, 0x4
 
     new-array v0, v9, [B
 
-    .line 868
     .restart local v0    # "buf":[B
     invoke-virtual {v5, v0}, Ljava/io/FileOutputStream;->write([B)V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_4
 
-    .line 873
     .end local v0    # "buf":[B
     .end local v5    # "out":Ljava/io/FileOutputStream;
     :goto_2
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 875
     const-wide/16 v10, 0x0
 
     :try_start_5
@@ -450,24 +406,21 @@
     :try_end_5
     .catch Landroid/os/RemoteException; {:try_start_5 .. :try_end_5} :catch_5
 
-    .line 859
     :goto_3
     throw v8
 
-    .line 853
     :catch_3
     move-exception v3
 
-    .line 854
     .local v3, "ex":Ljava/io/IOException;
     :try_start_6
-    const-string/jumbo v8, "BackupServiceBinder"
+    const-string v8, "BackupServiceBinder"
 
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "onFullBackup ("
+    const-string v10, "onFullBackup ("
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -487,7 +440,7 @@
 
     move-result-object v9
 
-    const-string/jumbo v10, ") threw"
+    const-string v10, ") threw"
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -499,7 +452,6 @@
 
     invoke-static {v8, v9, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 855
     new-instance v8, Ljava/lang/RuntimeException;
 
     invoke-direct {v8, v3}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -508,22 +460,19 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 869
     .end local v3    # "ex":Ljava/io/IOException;
     :catch_4
     move-exception v2
 
-    .line 870
     .restart local v2    # "e":Ljava/io/IOException;
-    const-string/jumbo v9, "BackupServiceBinder"
+    const-string v9, "BackupServiceBinder"
 
-    const-string/jumbo v10, "Unable to finalize backup stream!"
+    const-string v10, "Unable to finalize backup stream!"
 
     invoke-static {v9, v10}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_2
 
-    .line 876
     .end local v2    # "e":Ljava/io/IOException;
     :catch_5
     move-exception v1
@@ -538,24 +487,20 @@
     .param p2, "callbackBinder"    # Landroid/app/backup/IBackupManager;
 
     .prologue
-    .line 884
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 885
     .local v4, "ident":J
     new-instance v3, Landroid/app/backup/FullBackupDataOutput;
 
     invoke-direct {v3}, Landroid/app/backup/FullBackupDataOutput;-><init>()V
 
-    .line 887
     .local v3, "measureOutput":Landroid/app/backup/FullBackupDataOutput;
     iget-object v6, p0, Landroid/app/backup/BackupAgent$BackupServiceBinder;->this$0:Landroid/app/backup/BackupAgent;
 
     invoke-static {v6}, Landroid/app/backup/BackupAgent;->-wrap0(Landroid/app/backup/BackupAgent;)V
 
-    .line 889
     :try_start_0
     iget-object v6, p0, Landroid/app/backup/BackupAgent$BackupServiceBinder;->this$0:Landroid/app/backup/BackupAgent;
 
@@ -565,10 +510,8 @@
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 897
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 899
     :try_start_1
     invoke-virtual {v3}, Landroid/app/backup/FullBackupDataOutput;->getSize()J
 
@@ -578,24 +521,21 @@
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_3
 
-    .line 882
     :goto_0
     return-void
 
-    .line 893
     :catch_0
     move-exception v2
 
-    .line 894
     .local v2, "ex":Ljava/lang/RuntimeException;
     :try_start_2
-    const-string/jumbo v6, "BackupServiceBinder"
+    const-string v6, "BackupServiceBinder"
 
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "onFullBackup[M] ("
+    const-string v8, "onFullBackup[M] ("
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -615,7 +555,7 @@
 
     move-result-object v7
 
-    const-string/jumbo v8, ") threw"
+    const-string v8, ") threw"
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -627,20 +567,16 @@
 
     invoke-static {v6, v7, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 895
     throw v2
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 896
     .end local v2    # "ex":Ljava/lang/RuntimeException;
     :catchall_0
     move-exception v6
 
-    .line 897
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 899
     :try_start_3
     invoke-virtual {v3}, Landroid/app/backup/FullBackupDataOutput;->getSize()J
 
@@ -650,24 +586,21 @@
     :try_end_3
     .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 896
     :goto_1
     throw v6
 
-    .line 890
     :catch_1
     move-exception v1
 
-    .line 891
     .local v1, "ex":Ljava/io/IOException;
     :try_start_4
-    const-string/jumbo v6, "BackupServiceBinder"
+    const-string v6, "BackupServiceBinder"
 
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "onFullBackup[M] ("
+    const-string v8, "onFullBackup[M] ("
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -687,7 +620,7 @@
 
     move-result-object v7
 
-    const-string/jumbo v8, ") threw"
+    const-string v8, ") threw"
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -699,7 +632,6 @@
 
     invoke-static {v6, v7, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 892
     new-instance v6, Ljava/lang/RuntimeException;
 
     invoke-direct {v6, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -708,7 +640,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 900
     .end local v1    # "ex":Ljava/io/IOException;
     :catch_2
     move-exception v0
@@ -738,12 +669,10 @@
     .end annotation
 
     .prologue
-    .line 814
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 817
     .local v4, "ident":J
     new-instance v3, Landroid/app/backup/BackupDataInput;
 
@@ -753,7 +682,6 @@
 
     invoke-direct {v3, v6}, Landroid/app/backup/BackupDataInput;-><init>(Ljava/io/FileDescriptor;)V
 
-    .line 819
     .local v3, "input":Landroid/app/backup/BackupDataInput;
     :try_start_0
     iget-object v6, p0, Landroid/app/backup/BackupAgent$BackupServiceBinder;->this$0:Landroid/app/backup/BackupAgent;
@@ -764,15 +692,12 @@
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 828
     iget-object v6, p0, Landroid/app/backup/BackupAgent$BackupServiceBinder;->this$0:Landroid/app/backup/BackupAgent;
 
     invoke-static {v6}, Landroid/app/backup/BackupAgent;->-wrap0(Landroid/app/backup/BackupAgent;)V
 
-    .line 830
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 832
     const-wide/16 v6, 0x0
 
     :try_start_1
@@ -780,32 +705,28 @@
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 812
     :goto_0
     return-void
 
-    .line 833
     :catch_0
     move-exception v0
 
     .local v0, "e":Landroid/os/RemoteException;
     goto :goto_0
 
-    .line 823
     .end local v0    # "e":Landroid/os/RemoteException;
     :catch_1
     move-exception v2
 
-    .line 824
     .local v2, "ex":Ljava/lang/RuntimeException;
     :try_start_2
-    const-string/jumbo v6, "BackupServiceBinder"
+    const-string v6, "BackupServiceBinder"
 
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "onRestore ("
+    const-string v8, "onRestore ("
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -825,7 +746,7 @@
 
     move-result-object v7
 
-    const-string/jumbo v8, ") threw"
+    const-string v8, ") threw"
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -837,25 +758,20 @@
 
     invoke-static {v6, v7, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 825
     throw v2
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 826
     .end local v2    # "ex":Ljava/lang/RuntimeException;
     :catchall_0
     move-exception v6
 
-    .line 828
     iget-object v7, p0, Landroid/app/backup/BackupAgent$BackupServiceBinder;->this$0:Landroid/app/backup/BackupAgent;
 
     invoke-static {v7}, Landroid/app/backup/BackupAgent;->-wrap0(Landroid/app/backup/BackupAgent;)V
 
-    .line 830
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 832
     const-wide/16 v8, 0x0
 
     :try_start_3
@@ -863,24 +779,21 @@
     :try_end_3
     .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_3
 
-    .line 826
     :goto_1
     throw v6
 
-    .line 820
     :catch_2
     move-exception v1
 
-    .line 821
     .local v1, "ex":Ljava/io/IOException;
     :try_start_4
-    const-string/jumbo v6, "BackupServiceBinder"
+    const-string v6, "BackupServiceBinder"
 
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "onRestore ("
+    const-string v8, "onRestore ("
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -900,7 +813,7 @@
 
     move-result-object v7
 
-    const-string/jumbo v8, ") threw"
+    const-string v8, ") threw"
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -912,7 +825,6 @@
 
     invoke-static {v6, v7, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 822
     new-instance v6, Ljava/lang/RuntimeException;
 
     invoke-direct {v6, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -921,7 +833,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 833
     .end local v1    # "ex":Ljava/io/IOException;
     :catch_3
     move-exception v0
@@ -948,12 +859,10 @@
     .end annotation
 
     .prologue
-    .line 910
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v16
 
-    .line 912
     .local v16, "ident":J
     :try_start_0
     move-object/from16 v0, p0
@@ -979,17 +888,14 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 918
     move-object/from16 v0, p0
 
     iget-object v3, v0, Landroid/app/backup/BackupAgent$BackupServiceBinder;->this$0:Landroid/app/backup/BackupAgent;
 
     invoke-static {v3}, Landroid/app/backup/BackupAgent;->-wrap0(Landroid/app/backup/BackupAgent;)V
 
-    .line 920
     invoke-static/range {v16 .. v17}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 922
     const-wide/16 v4, 0x0
 
     :try_start_1
@@ -1001,32 +907,28 @@
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 909
     :goto_0
     return-void
 
-    .line 923
     :catch_0
     move-exception v2
 
     .local v2, "e":Landroid/os/RemoteException;
     goto :goto_0
 
-    .line 913
     .end local v2    # "e":Landroid/os/RemoteException;
     :catch_1
     move-exception v14
 
-    .line 914
     .local v14, "e":Ljava/io/IOException;
     :try_start_2
-    const-string/jumbo v3, "BackupServiceBinder"
+    const-string v3, "BackupServiceBinder"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "onRestoreFile ("
+    const-string v5, "onRestoreFile ("
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1048,7 +950,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, ") threw"
+    const-string v5, ") threw"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1060,7 +962,6 @@
 
     invoke-static {v3, v4, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 915
     new-instance v3, Ljava/lang/RuntimeException;
 
     invoke-direct {v3, v14}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -1069,22 +970,18 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 916
     .end local v14    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v3
 
-    .line 918
     move-object/from16 v0, p0
 
     iget-object v4, v0, Landroid/app/backup/BackupAgent$BackupServiceBinder;->this$0:Landroid/app/backup/BackupAgent;
 
     invoke-static {v4}, Landroid/app/backup/BackupAgent;->-wrap0(Landroid/app/backup/BackupAgent;)V
 
-    .line 920
     invoke-static/range {v16 .. v17}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 922
     const-wide/16 v4, 0x0
 
     :try_start_3
@@ -1096,11 +993,9 @@
     :try_end_3
     .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 916
     :goto_1
     throw v3
 
-    .line 923
     :catch_2
     move-exception v2
 
@@ -1114,12 +1009,10 @@
     .param p2, "callbackBinder"    # Landroid/app/backup/IBackupManager;
 
     .prologue
-    .line 931
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 933
     .local v2, "ident":J
     :try_start_0
     iget-object v4, p0, Landroid/app/backup/BackupAgent$BackupServiceBinder;->this$0:Landroid/app/backup/BackupAgent;
@@ -1129,15 +1022,12 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 939
     iget-object v4, p0, Landroid/app/backup/BackupAgent$BackupServiceBinder;->this$0:Landroid/app/backup/BackupAgent;
 
     invoke-static {v4}, Landroid/app/backup/BackupAgent;->-wrap0(Landroid/app/backup/BackupAgent;)V
 
-    .line 941
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 943
     const-wide/16 v4, 0x0
 
     :try_start_1
@@ -1145,32 +1035,28 @@
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 930
     :goto_0
     return-void
 
-    .line 944
     :catch_0
     move-exception v0
 
     .local v0, "e":Landroid/os/RemoteException;
     goto :goto_0
 
-    .line 934
     .end local v0    # "e":Landroid/os/RemoteException;
     :catch_1
     move-exception v1
 
-    .line 935
     .local v1, "e":Ljava/lang/Exception;
     :try_start_2
-    const-string/jumbo v4, "BackupServiceBinder"
+    const-string v4, "BackupServiceBinder"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "onRestoreFinished ("
+    const-string v6, "onRestoreFinished ("
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1190,7 +1076,7 @@
 
     move-result-object v5
 
-    const-string/jumbo v6, ") threw"
+    const-string v6, ") threw"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1202,25 +1088,20 @@
 
     invoke-static {v4, v5, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 936
     throw v1
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 937
     .end local v1    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v4
 
-    .line 939
     iget-object v5, p0, Landroid/app/backup/BackupAgent$BackupServiceBinder;->this$0:Landroid/app/backup/BackupAgent;
 
     invoke-static {v5}, Landroid/app/backup/BackupAgent;->-wrap0(Landroid/app/backup/BackupAgent;)V
 
-    .line 941
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 943
     const-wide/16 v6, 0x0
 
     :try_start_3
@@ -1228,11 +1109,9 @@
     :try_end_3
     .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 937
     :goto_1
     throw v4
 
-    .line 944
     :catch_2
     move-exception v0
 
@@ -1245,7 +1124,6 @@
     .param p1, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 952
     iget-object v0, p0, Landroid/app/backup/BackupAgent$BackupServiceBinder;->this$0:Landroid/app/backup/BackupAgent;
 
     invoke-virtual {v0}, Landroid/app/backup/BackupAgent;->getHandler()Landroid/os/Handler;
@@ -1258,6 +1136,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 951
     return-void
 .end method

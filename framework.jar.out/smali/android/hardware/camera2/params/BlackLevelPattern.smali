@@ -19,37 +19,31 @@
     .prologue
     const/4 v1, 0x4
 
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     if-nez p1, :cond_0
 
-    .line 49
     new-instance v0, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v1, "Null offsets array passed to constructor"
+    const-string v1, "Null offsets array passed to constructor"
 
     invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 51
     :cond_0
     array-length v0, p1
 
     if-ge v0, v1, :cond_1
 
-    .line 52
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "Invalid offsets array length"
+    const-string v1, "Invalid offsets array length"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 54
     :cond_1
     invoke-static {p1, v1}, Ljava/util/Arrays;->copyOf([II)[I
 
@@ -57,7 +51,6 @@
 
     iput-object v0, p0, Landroid/hardware/camera2/params/BlackLevelPattern;->mCfaOffsets:[I
 
-    .line 47
     return-void
 .end method
 
@@ -71,24 +64,20 @@
     .prologue
     const/4 v3, 0x4
 
-    .line 87
-    const-string/jumbo v1, "destination must not be null"
+    const-string v1, "destination must not be null"
 
     invoke-static {p1, v1}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 88
     if-gez p2, :cond_0
 
-    .line 89
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "Null offset passed to copyTo"
+    const-string v2, "Null offset passed to copyTo"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 91
     :cond_0
     array-length v1, p1
 
@@ -96,16 +85,14 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 92
     new-instance v1, Ljava/lang/ArrayIndexOutOfBoundsException;
 
-    const-string/jumbo v2, "destination too small to fit elements"
+    const-string v2, "destination too small to fit elements"
 
     invoke-direct {v1, v2}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 94
     :cond_1
     const/4 v0, 0x0
 
@@ -113,7 +100,6 @@
     :goto_0
     if-ge v0, v3, :cond_2
 
-    .line 95
     add-int v1, p2, v0
 
     iget-object v2, p0, Landroid/hardware/camera2/params/BlackLevelPattern;->mCfaOffsets:[I
@@ -122,12 +108,10 @@
 
     aput v2, p1, v1
 
-    .line 94
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 86
     :cond_2
     return-void
 .end method
@@ -139,22 +123,17 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 108
     if-nez p1, :cond_0
 
-    .line 109
     return v2
 
-    .line 110
     :cond_0
     if-ne p0, p1, :cond_1
 
-    .line 111
     const/4 v1, 0x1
 
     return v1
 
-    .line 112
     :cond_1
     instance-of v1, p1, Landroid/hardware/camera2/params/BlackLevelPattern;
 
@@ -162,10 +141,8 @@
 
     move-object v0, p1
 
-    .line 113
     check-cast v0, Landroid/hardware/camera2/params/BlackLevelPattern;
 
-    .line 114
     .local v0, "other":Landroid/hardware/camera2/params/BlackLevelPattern;
     iget-object v1, v0, Landroid/hardware/camera2/params/BlackLevelPattern;->mCfaOffsets:[I
 
@@ -177,7 +154,6 @@
 
     return v1
 
-    .line 116
     .end local v0    # "other":Landroid/hardware/camera2/params/BlackLevelPattern;
     :cond_2
     return v2
@@ -189,22 +165,19 @@
     .param p2, "row"    # I
 
     .prologue
-    .line 67
     if-ltz p2, :cond_0
 
     if-gez p1, :cond_1
 
-    .line 68
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "column, row arguments must be positive"
+    const-string v1, "column, row arguments must be positive"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 70
     :cond_1
     iget-object v0, p0, Landroid/hardware/camera2/params/BlackLevelPattern;->mCfaOffsets:[I
 
@@ -225,7 +198,6 @@
     .locals 1
 
     .prologue
-    .line 124
     iget-object v0, p0, Landroid/hardware/camera2/params/BlackLevelPattern;->mCfaOffsets:[I
 
     invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
@@ -247,8 +219,7 @@
 
     const/4 v3, 0x0
 
-    .line 142
-    const-string/jumbo v0, "BlackLevelPattern([%d, %d], [%d, %d])"
+    const-string v0, "BlackLevelPattern([%d, %d], [%d, %d])"
 
     const/4 v1, 0x4
 
@@ -264,7 +235,6 @@
 
     aput-object v2, v1, v3
 
-    .line 143
     iget-object v2, p0, Landroid/hardware/camera2/params/BlackLevelPattern;->mCfaOffsets:[I
 
     aget v2, v2, v4
@@ -295,7 +265,6 @@
 
     aput-object v2, v1, v6
 
-    .line 142
     invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0

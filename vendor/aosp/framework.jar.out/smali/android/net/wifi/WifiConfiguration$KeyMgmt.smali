@@ -35,46 +35,42 @@
     .locals 3
 
     .prologue
-    .line 95
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/String;
 
-    const-string/jumbo v1, "NONE"
+    const-string v1, "NONE"
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    const-string/jumbo v1, "WPA_PSK"
+    const-string v1, "WPA_PSK"
 
     const/4 v2, 0x1
 
     aput-object v1, v0, v2
 
-    const-string/jumbo v1, "WPA_EAP"
+    const-string v1, "WPA_EAP"
 
     const/4 v2, 0x2
 
     aput-object v1, v0, v2
 
-    const-string/jumbo v1, "IEEE8021X"
+    const-string v1, "IEEE8021X"
 
     const/4 v2, 0x3
 
     aput-object v1, v0, v2
 
-    .line 96
-    const-string/jumbo v1, "WPA2_PSK"
+    const-string v1, "WPA2_PSK"
 
     const/4 v2, 0x4
 
     aput-object v1, v0, v2
 
-    .line 95
     sput-object v0, Landroid/net/wifi/WifiConfiguration$KeyMgmt;->strings:[Ljava/lang/String;
 
-    .line 74
     return-void
 .end method
 
@@ -82,7 +78,6 @@
     .locals 0
 
     .prologue
-    .line 75
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

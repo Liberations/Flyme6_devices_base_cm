@@ -26,7 +26,6 @@
     .param p3, "$anonymous0"    # Landroid/content/Context;
 
     .prologue
-    .line 342
     iput-object p2, p0, Lcom/android/server/print/UserState$2;->this$0:Lcom/android/server/print/UserState;
 
     invoke-direct {p0, p1, p3}, Lcom/android/server/print/UserState$PrinterDiscoverySessionMediator;-><init>(Lcom/android/server/print/UserState;Landroid/content/Context;)V
@@ -40,13 +39,11 @@
     .locals 2
 
     .prologue
-    .line 345
     iget-object v0, p0, Lcom/android/server/print/UserState$2;->this$0:Lcom/android/server/print/UserState;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/android/server/print/UserState;->-set0(Lcom/android/server/print/UserState;Lcom/android/server/print/UserState$PrinterDiscoverySessionMediator;)Lcom/android/server/print/UserState$PrinterDiscoverySessionMediator;
 
-    .line 344
     return-void
 .end method

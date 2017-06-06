@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcyanogenmod/externalviews/KeyguardExternalView;
 
     .prologue
-    .line 268
     iput-object p1, p0, Lcyanogenmod/externalviews/KeyguardExternalView$5;->this$0:Lcyanogenmod/externalviews/KeyguardExternalView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 3
 
     .prologue
-    .line 272
     :try_start_0
     iget-object v1, p0, Lcyanogenmod/externalviews/KeyguardExternalView$5;->this$0:Lcyanogenmod/externalviews/KeyguardExternalView;
 
@@ -55,11 +53,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 270
     :goto_0
     return-void
 
-    .line 273
     :catch_0
     move-exception v0
 

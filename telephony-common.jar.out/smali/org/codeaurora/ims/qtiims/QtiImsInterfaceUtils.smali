@@ -36,12 +36,10 @@
     .locals 1
 
     .prologue
-    .line 41
-    const-string/jumbo v0, "QtiImsInterfaceUtils"
+    const-string v0, "QtiImsInterfaceUtils"
 
     sput-object v0, Lorg/codeaurora/ims/qtiims/QtiImsInterfaceUtils;->LOG_TAG:Ljava/lang/String;
 
-    .line 39
     return-void
 .end method
 
@@ -49,7 +47,6 @@
     .locals 0
 
     .prologue
-    .line 93
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -60,15 +57,12 @@
     .param p0, "contentResolver"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 102
-    const-string/jumbo v1, "ims_call_deflect_number"
+    const-string v1, "ims_call_deflect_number"
 
-    .line 101
     invoke-static {p0, v1}, Landroid/provider/Settings$Global;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 105
     .local v0, "deflectcall":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -78,10 +72,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 106
     const/4 v0, 0x0
 
-    .line 109
     .end local v0    # "deflectcall":Ljava/lang/String;
     :cond_0
     return-object v0
@@ -92,14 +84,12 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 129
     new-instance v0, Lcom/android/internal/telephony/ConfigResourceUtil;
 
     invoke-direct {v0}, Lcom/android/internal/telephony/ConfigResourceUtil;-><init>()V
 
-    .line 130
     .local v0, "mConfigResUtil":Lcom/android/internal/telephony/ConfigResourceUtil;
-    const-string/jumbo v1, "config_enable_calltransfer_over_ims"
+    const-string v1, "config_enable_calltransfer_over_ims"
 
     invoke-static {p0, v1}, Lcom/android/internal/telephony/ConfigResourceUtil;->getBooleanValue(Landroid/content/Context;Ljava/lang/String;)Z
 
@@ -114,10 +104,8 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 114
     move-object v0, p1
 
-    .line 116
     .local v0, "deflectNum":Ljava/lang/String;
     if-eqz p1, :cond_0
 
@@ -127,17 +115,13 @@
 
     if-eqz v1, :cond_1
 
-    .line 117
     :cond_0
-    const-string/jumbo v0, ""
+    const-string v0, ""
 
-    .line 121
     :cond_1
-    const-string/jumbo v1, "ims_call_deflect_number"
+    const-string v1, "ims_call_deflect_number"
 
-    .line 120
     invoke-static {p0, v1, v0}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 113
     return-void
 .end method

@@ -56,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 52
     const/4 v0, 0x7
 
     new-array v0, v0, [I
@@ -65,7 +64,6 @@
 
     sput-object v0, Lcom/android/internal/midi/MidiConstants;->CHANNEL_BYTE_LENGTHS:[I
 
-    .line 55
     const/16 v0, 0x10
 
     new-array v0, v0, [I
@@ -74,10 +72,8 @@
 
     sput-object v0, Lcom/android/internal/midi/MidiConstants;->SYSTEM_BYTE_LENGTHS:[I
 
-    .line 22
     return-void
 
-    .line 52
     :array_0
     .array-data 4
         0x3
@@ -89,7 +85,6 @@
         0x3
     .end array-data
 
-    .line 55
     :array_1
     .array-data 4
         0x1
@@ -115,7 +110,6 @@
     .locals 0
 
     .prologue
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -128,7 +122,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 104
     const/16 v1, -0x80
 
     if-lt p0, v1, :cond_0
@@ -150,7 +143,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 110
     const/16 v1, -0x10
 
     if-lt p0, v1, :cond_0
@@ -170,16 +162,13 @@
     .param p0, "statusByte"    # B
 
     .prologue
-    .line 69
     and-int/lit16 v0, p0, 0xff
 
-    .line 70
     .local v0, "statusInt":I
     const/16 v1, 0xf0
 
     if-lt v0, v1, :cond_0
 
-    .line 72
     sget-object v1, Lcom/android/internal/midi/MidiConstants;->SYSTEM_BYTE_LENGTHS:[I
 
     and-int/lit8 v2, v0, 0xf
@@ -188,13 +177,11 @@
 
     return v1
 
-    .line 73
     :cond_0
     const/16 v1, 0x80
 
     if-lt v0, v1, :cond_1
 
-    .line 75
     sget-object v1, Lcom/android/internal/midi/MidiConstants;->CHANNEL_BYTE_LENGTHS:[I
 
     shr-int/lit8 v2, v0, 0x4
@@ -205,7 +192,6 @@
 
     return v1
 
-    .line 77
     :cond_1
     const/4 v1, 0x0
 
@@ -221,10 +207,8 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 91
     const/4 v1, 0x0
 
-    .line 92
     .local v1, "goodBytes":I
     const/4 v2, 0x0
 
@@ -232,27 +216,22 @@
     :goto_0
     if-ge v2, p2, :cond_1
 
-    .line 93
     add-int v4, p1, v2
 
     aget-byte v0, p0, v4
 
-    .line 94
     .local v0, "b":B
     const/4 v4, -0x2
 
     if-eq v0, v4, :cond_0
 
-    .line 95
     add-int/lit8 v1, v1, 0x1
 
-    .line 92
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 98
     .end local v0    # "b":B
     :cond_1
     if-nez v1, :cond_2

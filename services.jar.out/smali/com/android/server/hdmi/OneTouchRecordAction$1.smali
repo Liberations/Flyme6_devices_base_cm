@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/hdmi/OneTouchRecordAction;
 
     .prologue
-    .line 61
     iput-object p1, p0, Lcom/android/server/hdmi/OneTouchRecordAction$1;->this$0:Lcom/android/server/hdmi/OneTouchRecordAction;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,38 +41,30 @@
     .param p1, "error"    # I
 
     .prologue
-    .line 65
     if-eqz p1, :cond_0
 
-    .line 66
     iget-object v0, p0, Lcom/android/server/hdmi/OneTouchRecordAction$1;->this$0:Lcom/android/server/hdmi/OneTouchRecordAction;
 
     invoke-virtual {v0}, Lcom/android/server/hdmi/OneTouchRecordAction;->tv()Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
 
     move-result-object v0
 
-    .line 67
     iget-object v1, p0, Lcom/android/server/hdmi/OneTouchRecordAction$1;->this$0:Lcom/android/server/hdmi/OneTouchRecordAction;
 
     invoke-static {v1}, Lcom/android/server/hdmi/OneTouchRecordAction;->-get0(Lcom/android/server/hdmi/OneTouchRecordAction;)I
 
     move-result v1
 
-    .line 68
     const/16 v2, 0x31
 
-    .line 66
     invoke-virtual {v0, v1, v2}, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;->announceOneTouchRecordResult(II)V
 
-    .line 69
     iget-object v0, p0, Lcom/android/server/hdmi/OneTouchRecordAction$1;->this$0:Lcom/android/server/hdmi/OneTouchRecordAction;
 
     invoke-virtual {v0}, Lcom/android/server/hdmi/OneTouchRecordAction;->finish()V
 
-    .line 70
     return-void
 
-    .line 63
     :cond_0
     return-void
 .end method

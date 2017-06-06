@@ -45,17 +45,14 @@
     .locals 1
 
     .prologue
-    .line 1209
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1210
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/service/notification/ZenModeConfig$Diff;->lines:Ljava/util/ArrayList;
 
-    .line 1209
     return-void
 .end method
 
@@ -65,7 +62,6 @@
     .param p2, "action"    # Ljava/lang/String;
 
     .prologue
-    .line 1226
     iget-object v0, p0, Landroid/service/notification/ZenModeConfig$Diff;->lines:Ljava/util/ArrayList;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -76,7 +72,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, ":"
+    const-string v2, ":"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -92,7 +88,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1227
     return-object p0
 .end method
 
@@ -105,7 +100,6 @@
     .param p3, "to"    # Ljava/lang/Object;
 
     .prologue
-    .line 1235
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -114,7 +108,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "->"
+    const-string v1, "->"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -143,7 +137,6 @@
     .param p4, "to"    # Ljava/lang/Object;
 
     .prologue
-    .line 1231
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -152,7 +145,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "."
+    const-string v1, "."
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -177,14 +170,12 @@
     .locals 4
 
     .prologue
-    .line 1214
     new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v3, "Diff["
+    const-string v3, "Diff["
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 1215
     .local v2, "sb":Ljava/lang/StringBuilder;
     iget-object v3, p0, Landroid/service/notification/ZenModeConfig$Diff;->lines:Ljava/util/ArrayList;
 
@@ -192,7 +183,6 @@
 
     move-result v0
 
-    .line 1216
     .local v0, "N":I
     const/4 v1, 0x0
 
@@ -200,15 +190,12 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 1217
     if-lez v1, :cond_0
 
-    .line 1218
     const/16 v3, 0x2c
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 1220
     :cond_0
     iget-object v3, p0, Landroid/service/notification/ZenModeConfig$Diff;->lines:Ljava/util/ArrayList;
 
@@ -220,12 +207,10 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1216
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1222
     :cond_1
     const/16 v3, 0x5d
 

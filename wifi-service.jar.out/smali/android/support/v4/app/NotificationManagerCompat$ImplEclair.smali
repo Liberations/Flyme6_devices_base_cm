@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 142
     invoke-direct {p0}, Landroid/support/v4/app/NotificationManagerCompat$ImplBase;-><init>()V
 
     return-void
@@ -34,10 +33,8 @@
     .param p3, "id"    # I
 
     .prologue
-    .line 146
     invoke-static {p1, p2, p3}, Landroid/support/v4/app/NotificationManagerCompatEclair;->cancelNotification(Landroid/app/NotificationManager;Ljava/lang/String;I)V
 
-    .line 145
     return-void
 .end method
 
@@ -49,9 +46,7 @@
     .param p4, "notification"    # Landroid/app/Notification;
 
     .prologue
-    .line 152
     invoke-static {p1, p2, p3, p4}, Landroid/support/v4/app/NotificationManagerCompatEclair;->postNotification(Landroid/app/NotificationManager;Ljava/lang/String;ILandroid/app/Notification;)V
 
-    .line 151
     return-void
 .end method

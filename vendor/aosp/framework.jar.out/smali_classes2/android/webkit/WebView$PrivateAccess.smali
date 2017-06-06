@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Landroid/webkit/WebView;
 
     .prologue
-    .line 2110
     iput-object p1, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,12 +38,10 @@
     .param p1, "duration"    # I
 
     .prologue
-    .line 2167
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     invoke-static {v0, p1}, Landroid/webkit/WebView;->-wrap1(Landroid/webkit/WebView;I)Z
 
-    .line 2166
     return-void
 .end method
 
@@ -54,12 +51,10 @@
     .param p2, "invalidate"    # Z
 
     .prologue
-    .line 2171
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     invoke-static {v0, p1, p2}, Landroid/webkit/WebView;->-wrap0(Landroid/webkit/WebView;IZ)Z
 
-    .line 2170
     return-void
 .end method
 
@@ -67,7 +62,6 @@
     .locals 1
 
     .prologue
-    .line 2179
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     invoke-static {v0}, Landroid/webkit/WebView;->-wrap10(Landroid/webkit/WebView;)F
@@ -81,7 +75,6 @@
     .locals 1
 
     .prologue
-    .line 2191
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     invoke-static {v0}, Landroid/webkit/WebView;->-wrap12(Landroid/webkit/WebView;)I
@@ -95,7 +88,6 @@
     .locals 1
 
     .prologue
-    .line 2175
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     invoke-static {v0}, Landroid/webkit/WebView;->-wrap11(Landroid/webkit/WebView;)F
@@ -113,12 +105,10 @@
     .param p4, "oldt"    # I
 
     .prologue
-    .line 2187
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/webkit/WebView;->onScrollChanged(IIII)V
 
-    .line 2186
     return-void
 .end method
 
@@ -135,7 +125,6 @@
     .param p9, "isTouchEvent"    # Z
 
     .prologue
-    .line 2162
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     move v1, p1
@@ -158,7 +147,6 @@
 
     invoke-static/range {v0 .. v9}, Landroid/webkit/WebView;->-wrap5(Landroid/webkit/WebView;IIIIIIIIZ)Z
 
-    .line 2161
     return-void
 .end method
 
@@ -168,12 +156,10 @@
     .param p2, "measuredHeight"    # I
 
     .prologue
-    .line 2183
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     invoke-static {v0, p1, p2}, Landroid/webkit/WebView;->-wrap18(Landroid/webkit/WebView;II)V
 
-    .line 2182
     return-void
 .end method
 
@@ -182,12 +168,10 @@
     .param p1, "scrollX"    # I
 
     .prologue
-    .line 2202
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     invoke-static {v0, p1}, Landroid/webkit/WebView;->-set0(Landroid/webkit/WebView;I)I
 
-    .line 2201
     return-void
 .end method
 
@@ -196,12 +180,10 @@
     .param p1, "scrollY"    # I
 
     .prologue
-    .line 2207
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     invoke-static {v0, p1}, Landroid/webkit/WebView;->-set1(Landroid/webkit/WebView;I)I
 
-    .line 2206
     return-void
 .end method
 
@@ -209,12 +191,10 @@
     .locals 1
 
     .prologue
-    .line 2121
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     invoke-static {v0}, Landroid/webkit/WebView;->-wrap14(Landroid/webkit/WebView;)V
 
-    .line 2120
     return-void
 .end method
 
@@ -223,7 +203,6 @@
     .param p1, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 2141
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     invoke-static {v0, p1}, Landroid/webkit/WebView;->-wrap2(Landroid/webkit/WebView;Landroid/view/KeyEvent;)Z
@@ -237,7 +216,6 @@
     .locals 1
 
     .prologue
-    .line 2113
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     invoke-static {v0}, Landroid/webkit/WebView;->-wrap13(Landroid/webkit/WebView;)I
@@ -257,7 +235,6 @@
     .param p6, "b"    # I
 
     .prologue
-    .line 2196
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     move-object v1, p1
@@ -274,7 +251,6 @@
 
     invoke-static/range {v0 .. v6}, Landroid/webkit/WebView;->-wrap15(Landroid/webkit/WebView;Landroid/graphics/Canvas;Landroid/graphics/drawable/Drawable;IIII)V
 
-    .line 2195
     return-void
 .end method
 
@@ -283,7 +259,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 2145
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     invoke-static {v0, p1}, Landroid/webkit/WebView;->-wrap3(Landroid/webkit/WebView;Landroid/view/MotionEvent;)Z
@@ -298,7 +273,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 2125
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     invoke-static {v0, p1}, Landroid/webkit/WebView;->-wrap4(Landroid/webkit/WebView;Landroid/view/MotionEvent;)Z
@@ -314,7 +288,6 @@
     .param p2, "arguments"    # Landroid/os/Bundle;
 
     .prologue
-    .line 2129
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     invoke-static {v0, p1, p2}, Landroid/webkit/WebView;->-wrap6(Landroid/webkit/WebView;ILandroid/os/Bundle;)Z
@@ -328,7 +301,6 @@
     .locals 1
 
     .prologue
-    .line 2133
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     invoke-static {v0}, Landroid/webkit/WebView;->-wrap7(Landroid/webkit/WebView;)Z
@@ -344,7 +316,6 @@
     .param p2, "previouslyFocusedRect"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 2149
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     invoke-static {v0, p1, p2}, Landroid/webkit/WebView;->-wrap8(Landroid/webkit/WebView;ILandroid/graphics/Rect;)Z
@@ -360,12 +331,10 @@
     .param p2, "scrollY"    # I
 
     .prologue
-    .line 2117
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     invoke-static {v0, p1, p2}, Landroid/webkit/WebView;->-wrap16(Landroid/webkit/WebView;II)V
 
-    .line 2116
     return-void
 .end method
 
@@ -377,7 +346,6 @@
     .param p4, "bottom"    # I
 
     .prologue
-    .line 2137
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     invoke-static {v0, p1, p2, p3, p4}, Landroid/webkit/WebView;->-wrap9(Landroid/webkit/WebView;IIII)Z
@@ -392,11 +360,9 @@
     .param p1, "params"    # Landroid/view/ViewGroup$LayoutParams;
 
     .prologue
-    .line 2153
     iget-object v0, p0, Landroid/webkit/WebView$PrivateAccess;->this$0:Landroid/webkit/WebView;
 
     invoke-static {v0, p1}, Landroid/webkit/WebView;->-wrap17(Landroid/webkit/WebView;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 2152
     return-void
 .end method

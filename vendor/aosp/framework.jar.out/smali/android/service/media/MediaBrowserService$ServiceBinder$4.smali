@@ -33,7 +33,6 @@
     .param p3, "val$id"    # Ljava/lang/String;
 
     .prologue
-    .line 255
     iput-object p1, p0, Landroid/service/media/MediaBrowserService$ServiceBinder$4;->this$1:Landroid/service/media/MediaBrowserService$ServiceBinder;
 
     iput-object p2, p0, Landroid/service/media/MediaBrowserService$ServiceBinder$4;->val$callbacks:Landroid/service/media/IMediaBrowserServiceCallbacks;
@@ -51,14 +50,12 @@
     .locals 5
 
     .prologue
-    .line 258
     iget-object v2, p0, Landroid/service/media/MediaBrowserService$ServiceBinder$4;->val$callbacks:Landroid/service/media/IMediaBrowserServiceCallbacks;
 
     invoke-interface {v2}, Landroid/service/media/IMediaBrowserServiceCallbacks;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 260
     .local v0, "b":Landroid/os/IBinder;
     iget-object v2, p0, Landroid/service/media/MediaBrowserService$ServiceBinder$4;->this$1:Landroid/service/media/MediaBrowserService$ServiceBinder;
 
@@ -74,27 +71,23 @@
 
     check-cast v1, Landroid/service/media/MediaBrowserService$ConnectionRecord;
 
-    .line 261
     .local v1, "connection":Landroid/service/media/MediaBrowserService$ConnectionRecord;
     if-nez v1, :cond_0
 
-    .line 262
-    const-string/jumbo v2, "MediaBrowserService"
+    const-string v2, "MediaBrowserService"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "removeSubscription for callback that isn\'t registered id="
+    const-string v4, "removeSubscription for callback that isn\'t registered id="
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 263
     iget-object v4, p0, Landroid/service/media/MediaBrowserService$ServiceBinder$4;->val$id:Ljava/lang/String;
 
-    .line 262
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
@@ -105,10 +98,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 264
     return-void
 
-    .line 266
     :cond_0
     iget-object v2, v1, Landroid/service/media/MediaBrowserService$ConnectionRecord;->subscriptions:Ljava/util/HashSet;
 
@@ -120,14 +111,13 @@
 
     if-nez v2, :cond_1
 
-    .line 267
-    const-string/jumbo v2, "MediaBrowserService"
+    const-string v2, "MediaBrowserService"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "removeSubscription called for "
+    const-string v4, "removeSubscription called for "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -139,10 +129,8 @@
 
     move-result-object v3
 
-    .line 268
-    const-string/jumbo v4, " which is not subscribed"
+    const-string v4, " which is not subscribed"
 
-    .line 267
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
@@ -153,7 +141,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 257
     :cond_1
     return-void
 .end method

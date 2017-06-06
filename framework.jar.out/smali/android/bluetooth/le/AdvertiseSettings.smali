@@ -59,15 +59,12 @@
     .locals 1
 
     .prologue
-    .line 143
     new-instance v0, Landroid/bluetooth/le/AdvertiseSettings$1;
 
     invoke-direct {v0}, Landroid/bluetooth/le/AdvertiseSettings$1;-><init>()V
 
-    .line 142
     sput-object v0, Landroid/bluetooth/le/AdvertiseSettings;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 27
     return-void
 .end method
 
@@ -79,22 +76,16 @@
     .param p4, "advertiseTimeout"    # I
 
     .prologue
-    .line 78
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 80
     iput p1, p0, Landroid/bluetooth/le/AdvertiseSettings;->mAdvertiseMode:I
 
-    .line 81
     iput p2, p0, Landroid/bluetooth/le/AdvertiseSettings;->mAdvertiseTxPowerLevel:I
 
-    .line 82
     iput-boolean p3, p0, Landroid/bluetooth/le/AdvertiseSettings;->mAdvertiseConnectable:Z
 
-    .line 83
     iput p4, p0, Landroid/bluetooth/le/AdvertiseSettings;->mAdvertiseTimeoutMillis:I
 
-    .line 79
     return-void
 .end method
 
@@ -118,24 +109,20 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 86
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 87
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/bluetooth/le/AdvertiseSettings;->mAdvertiseMode:I
 
-    .line 88
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/bluetooth/le/AdvertiseSettings;->mAdvertiseTxPowerLevel:I
 
-    .line 89
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -147,14 +134,12 @@
     :cond_0
     iput-boolean v0, p0, Landroid/bluetooth/le/AdvertiseSettings;->mAdvertiseConnectable:Z
 
-    .line 90
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/bluetooth/le/AdvertiseSettings;->mAdvertiseTimeoutMillis:I
 
-    .line 86
     return-void
 .end method
 
@@ -174,7 +159,6 @@
     .locals 1
 
     .prologue
-    .line 131
     const/4 v0, 0x0
 
     return v0
@@ -184,7 +168,6 @@
     .locals 1
 
     .prologue
-    .line 97
     iget v0, p0, Landroid/bluetooth/le/AdvertiseSettings;->mAdvertiseMode:I
 
     return v0
@@ -194,7 +177,6 @@
     .locals 1
 
     .prologue
-    .line 118
     iget v0, p0, Landroid/bluetooth/le/AdvertiseSettings;->mAdvertiseTimeoutMillis:I
 
     return v0
@@ -204,7 +186,6 @@
     .locals 1
 
     .prologue
-    .line 104
     iget v0, p0, Landroid/bluetooth/le/AdvertiseSettings;->mAdvertiseTxPowerLevel:I
 
     return v0
@@ -214,7 +195,6 @@
     .locals 1
 
     .prologue
-    .line 111
     iget-boolean v0, p0, Landroid/bluetooth/le/AdvertiseSettings;->mAdvertiseConnectable:Z
 
     return v0
@@ -224,12 +204,11 @@
     .locals 2
 
     .prologue
-    .line 123
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "Settings [mAdvertiseMode="
+    const-string v1, "Settings [mAdvertiseMode="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -241,58 +220,44 @@
 
     move-result-object v0
 
-    .line 124
-    const-string/jumbo v1, ", mAdvertiseTxPowerLevel="
+    const-string v1, ", mAdvertiseTxPowerLevel="
 
-    .line 123
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 124
     iget v1, p0, Landroid/bluetooth/le/AdvertiseSettings;->mAdvertiseTxPowerLevel:I
 
-    .line 123
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 125
-    const-string/jumbo v1, ", mAdvertiseConnectable="
+    const-string v1, ", mAdvertiseConnectable="
 
-    .line 123
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 125
     iget-boolean v1, p0, Landroid/bluetooth/le/AdvertiseSettings;->mAdvertiseConnectable:Z
 
-    .line 123
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 126
-    const-string/jumbo v1, ", mAdvertiseTimeoutMillis="
+    const-string v1, ", mAdvertiseTimeoutMillis="
 
-    .line 123
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 126
     iget v1, p0, Landroid/bluetooth/le/AdvertiseSettings;->mAdvertiseTimeoutMillis:I
 
-    .line 123
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 126
-    const-string/jumbo v1, "]"
+    const-string v1, "]"
 
-    .line 123
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -310,17 +275,14 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 136
     iget v0, p0, Landroid/bluetooth/le/AdvertiseSettings;->mAdvertiseMode:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 137
     iget v0, p0, Landroid/bluetooth/le/AdvertiseSettings;->mAdvertiseTxPowerLevel:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 138
     iget-boolean v0, p0, Landroid/bluetooth/le/AdvertiseSettings;->mAdvertiseConnectable:Z
 
     if-eqz v0, :cond_0
@@ -330,15 +292,12 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 139
     iget v0, p0, Landroid/bluetooth/le/AdvertiseSettings;->mAdvertiseTimeoutMillis:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 135
     return-void
 
-    .line 138
     :cond_0
     const/4 v0, 0x0
 

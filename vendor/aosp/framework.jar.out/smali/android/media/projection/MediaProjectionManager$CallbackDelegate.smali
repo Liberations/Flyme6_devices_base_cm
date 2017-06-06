@@ -35,27 +35,21 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 177
     invoke-direct {p0}, Landroid/media/projection/IMediaProjectionWatcherCallback$Stub;-><init>()V
 
-    .line 178
     iput-object p1, p0, Landroid/media/projection/MediaProjectionManager$CallbackDelegate;->mCallback:Landroid/media/projection/MediaProjectionManager$Callback;
 
-    .line 179
     if-nez p2, :cond_0
 
-    .line 180
     new-instance p2, Landroid/os/Handler;
 
     .end local p2    # "handler":Landroid/os/Handler;
     invoke-direct {p2}, Landroid/os/Handler;-><init>()V
 
-    .line 182
     .restart local p2    # "handler":Landroid/os/Handler;
     :cond_0
     iput-object p2, p0, Landroid/media/projection/MediaProjectionManager$CallbackDelegate;->mHandler:Landroid/os/Handler;
 
-    .line 177
     return-void
 .end method
 
@@ -66,7 +60,6 @@
     .param p1, "info"    # Landroid/media/projection/MediaProjectionInfo;
 
     .prologue
-    .line 187
     iget-object v0, p0, Landroid/media/projection/MediaProjectionManager$CallbackDelegate;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Landroid/media/projection/MediaProjectionManager$CallbackDelegate$1;
@@ -75,7 +68,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 186
     return-void
 .end method
 
@@ -84,7 +76,6 @@
     .param p1, "info"    # Landroid/media/projection/MediaProjectionInfo;
 
     .prologue
-    .line 197
     iget-object v0, p0, Landroid/media/projection/MediaProjectionManager$CallbackDelegate;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Landroid/media/projection/MediaProjectionManager$CallbackDelegate$2;
@@ -93,6 +84,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 196
     return-void
 .end method

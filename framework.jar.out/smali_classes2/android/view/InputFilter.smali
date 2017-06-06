@@ -63,63 +63,49 @@
 
     const/4 v3, 0x1
 
-    .line 126
     invoke-direct {p0}, Landroid/view/IInputFilter$Stub;-><init>()V
 
-    .line 107
     invoke-static {}, Landroid/view/InputEventConsistencyVerifier;->isInstrumentationEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 108
     new-instance v0, Landroid/view/InputEventConsistencyVerifier;
 
-    .line 110
-    const-string/jumbo v2, "InputFilter#InboundInputEventConsistencyVerifier"
+    const-string v2, "InputFilter#InboundInputEventConsistencyVerifier"
 
-    .line 108
     invoke-direct {v0, p0, v3, v2}, Landroid/view/InputEventConsistencyVerifier;-><init>(Ljava/lang/Object;ILjava/lang/String;)V
 
-    .line 106
     :goto_0
     iput-object v0, p0, Landroid/view/InputFilter;->mInboundInputEventConsistencyVerifier:Landroid/view/InputEventConsistencyVerifier;
 
-    .line 112
     invoke-static {}, Landroid/view/InputEventConsistencyVerifier;->isInstrumentationEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 113
     new-instance v1, Landroid/view/InputEventConsistencyVerifier;
 
-    .line 115
-    const-string/jumbo v0, "InputFilter#OutboundInputEventConsistencyVerifier"
+    const-string v0, "InputFilter#OutboundInputEventConsistencyVerifier"
 
-    .line 113
     invoke-direct {v1, p0, v3, v0}, Landroid/view/InputEventConsistencyVerifier;-><init>(Ljava/lang/Object;ILjava/lang/String;)V
 
-    .line 111
     :cond_0
     iput-object v1, p0, Landroid/view/InputFilter;->mOutboundInputEventConsistencyVerifier:Landroid/view/InputEventConsistencyVerifier;
 
-    .line 127
     new-instance v0, Landroid/view/InputFilter$H;
 
     invoke-direct {v0, p0, p1}, Landroid/view/InputFilter$H;-><init>(Landroid/view/InputFilter;Landroid/os/Looper;)V
 
     iput-object v0, p0, Landroid/view/InputFilter;->mH:Landroid/view/InputFilter$H;
 
-    .line 126
     return-void
 
     :cond_1
     move-object v0, v1
 
-    .line 110
     goto :goto_0
 .end method
 
@@ -131,7 +117,6 @@
     .param p2, "policyFlags"    # I
 
     .prologue
-    .line 156
     iget-object v0, p0, Landroid/view/InputFilter;->mH:Landroid/view/InputFilter$H;
 
     const/4 v1, 0x3
@@ -144,7 +129,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 155
     return-void
 .end method
 
@@ -153,7 +137,6 @@
     .param p1, "host"    # Landroid/view/IInputFilterHost;
 
     .prologue
-    .line 137
     iget-object v0, p0, Landroid/view/InputFilter;->mH:Landroid/view/InputFilter$H;
 
     const/4 v1, 0x1
@@ -164,7 +147,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 136
     return-void
 .end method
 
@@ -174,10 +156,8 @@
     .param p2, "policyFlags"    # I
 
     .prologue
-    .line 196
     invoke-virtual {p0, p1, p2}, Landroid/view/InputFilter;->sendInputEvent(Landroid/view/InputEvent;I)V
 
-    .line 195
     return-void
 .end method
 
@@ -185,7 +165,6 @@
     .locals 0
 
     .prologue
-    .line 206
     return-void
 .end method
 
@@ -193,7 +172,6 @@
     .locals 0
 
     .prologue
-    .line 216
     return-void
 .end method
 
@@ -203,47 +181,40 @@
     .param p2, "policyFlags"    # I
 
     .prologue
-    .line 166
     if-nez p1, :cond_0
 
-    .line 167
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "event must not be null"
+    const-string v2, "event must not be null"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 169
     :cond_0
     iget-object v1, p0, Landroid/view/InputFilter;->mHost:Landroid/view/IInputFilterHost;
 
     if-nez v1, :cond_1
 
-    .line 170
     new-instance v1, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v2, "Cannot send input event because the input filter is not installed."
+    const-string v2, "Cannot send input event because the input filter is not installed."
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 173
     :cond_1
     iget-object v1, p0, Landroid/view/InputFilter;->mOutboundInputEventConsistencyVerifier:Landroid/view/InputEventConsistencyVerifier;
 
     if-eqz v1, :cond_2
 
-    .line 174
     iget-object v1, p0, Landroid/view/InputFilter;->mOutboundInputEventConsistencyVerifier:Landroid/view/InputEventConsistencyVerifier;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, p1, v2}, Landroid/view/InputEventConsistencyVerifier;->onInputEvent(Landroid/view/InputEvent;I)V
 
-    .line 177
     :cond_2
     :try_start_0
     iget-object v1, p0, Landroid/view/InputFilter;->mHost:Landroid/view/IInputFilterHost;
@@ -252,11 +223,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 165
     :goto_0
     return-void
 
-    .line 178
     :catch_0
     move-exception v0
 
@@ -268,7 +237,6 @@
     .locals 2
 
     .prologue
-    .line 145
     iget-object v0, p0, Landroid/view/InputFilter;->mH:Landroid/view/InputFilter$H;
 
     const/4 v1, 0x2
@@ -279,6 +247,5 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 144
     return-void
 .end method

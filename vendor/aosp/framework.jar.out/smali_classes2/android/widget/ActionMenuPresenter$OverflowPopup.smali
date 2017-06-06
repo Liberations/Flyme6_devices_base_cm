@@ -28,10 +28,8 @@
     .param p5, "overflowOnly"    # Z
 
     .prologue
-    .line 912
     iput-object p1, p0, Landroid/widget/ActionMenuPresenter$OverflowPopup;->this$0:Landroid/widget/ActionMenuPresenter;
 
-    .line 915
     const v5, 0x1010444
 
     move-object v0, p0
@@ -44,20 +42,16 @@
 
     move v4, p5
 
-    .line 914
     invoke-direct/range {v0 .. v5}, Lcom/android/internal/view/menu/MenuPopupHelper;-><init>(Landroid/content/Context;Lcom/android/internal/view/menu/MenuBuilder;Landroid/view/View;ZI)V
 
-    .line 916
     const v0, 0x800005
 
     invoke-virtual {p0, v0}, Landroid/widget/ActionMenuPresenter$OverflowPopup;->setGravity(I)V
 
-    .line 917
     iget-object v0, p1, Landroid/widget/ActionMenuPresenter;->mPopupPresenterCallback:Landroid/widget/ActionMenuPresenter$PopupPresenterCallback;
 
     invoke-virtual {p0, v0}, Landroid/widget/ActionMenuPresenter$OverflowPopup;->setCallback(Lcom/android/internal/view/menu/MenuPresenter$Callback;)V
 
-    .line 913
     return-void
 .end method
 
@@ -67,10 +61,8 @@
     .locals 2
 
     .prologue
-    .line 922
     invoke-super {p0}, Lcom/android/internal/view/menu/MenuPopupHelper;->onDismiss()V
 
-    .line 923
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$OverflowPopup;->this$0:Landroid/widget/ActionMenuPresenter;
 
     invoke-static {v0}, Landroid/widget/ActionMenuPresenter;->-get2(Landroid/widget/ActionMenuPresenter;)Lcom/android/internal/view/menu/MenuBuilder;
@@ -79,13 +71,11 @@
 
     invoke-virtual {v0}, Lcom/android/internal/view/menu/MenuBuilder;->close()V
 
-    .line 924
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$OverflowPopup;->this$0:Landroid/widget/ActionMenuPresenter;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Landroid/widget/ActionMenuPresenter;->-set1(Landroid/widget/ActionMenuPresenter;Landroid/widget/ActionMenuPresenter$OverflowPopup;)Landroid/widget/ActionMenuPresenter$OverflowPopup;
 
-    .line 921
     return-void
 .end method

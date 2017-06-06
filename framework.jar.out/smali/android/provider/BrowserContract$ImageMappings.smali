@@ -30,10 +30,9 @@
     .locals 2
 
     .prologue
-    .line 649
     sget-object v0, Landroid/provider/BrowserContract;->AUTHORITY_URI:Landroid/net/Uri;
 
-    const-string/jumbo v1, "image_mappings"
+    const-string v1, "image_mappings"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -41,7 +40,6 @@
 
     sput-object v0, Landroid/provider/BrowserContract$ImageMappings;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 640
     return-void
 .end method
 
@@ -49,7 +47,6 @@
     .locals 0
 
     .prologue
-    .line 644
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

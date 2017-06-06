@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Landroid/net/wifi/RttManager;
 
     .prologue
-    .line 161
     iput-object p1, p0, Landroid/net/wifi/RttManager$Capabilities;->this$0:Landroid/net/wifi/RttManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

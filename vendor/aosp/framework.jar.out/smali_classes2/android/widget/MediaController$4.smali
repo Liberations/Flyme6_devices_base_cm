@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/widget/MediaController;
 
     .prologue
-    .line 537
     iput-object p1, p0, Landroid/widget/MediaController$4;->this$0:Landroid/widget/MediaController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,18 +41,15 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 540
     iget-object v0, p0, Landroid/widget/MediaController$4;->this$0:Landroid/widget/MediaController;
 
     invoke-static {v0}, Landroid/widget/MediaController;->-wrap2(Landroid/widget/MediaController;)V
 
-    .line 541
     iget-object v0, p0, Landroid/widget/MediaController$4;->this$0:Landroid/widget/MediaController;
 
     const/16 v1, 0xbb8
 
     invoke-virtual {v0, v1}, Landroid/widget/MediaController;->show(I)V
 
-    .line 539
     return-void
 .end method

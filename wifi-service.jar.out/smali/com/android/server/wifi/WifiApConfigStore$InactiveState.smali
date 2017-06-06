@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/wifi/WifiApConfigStore;
 
     .prologue
-    .line 114
     iput-object p1, p0, Lcom/android/server/wifi/WifiApConfigStore$InactiveState;->this$0:Lcom/android/server/wifi/WifiApConfigStore;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -39,34 +38,28 @@
     .param p1, "message"    # Landroid/os/Message;
 
     .prologue
-    .line 116
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 127
     const/4 v1, 0x0
 
     return v1
 
-    .line 118
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/net/wifi/WifiConfiguration;
 
-    .line 119
     .local v0, "config":Landroid/net/wifi/WifiConfiguration;
     iget-object v1, v0, Landroid/net/wifi/WifiConfiguration;->SSID:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    .line 120
     iget-object v1, p0, Lcom/android/server/wifi/WifiApConfigStore$InactiveState;->this$0:Lcom/android/server/wifi/WifiApConfigStore;
 
     invoke-static {v1, v0}, Lcom/android/server/wifi/WifiApConfigStore;->-set0(Lcom/android/server/wifi/WifiApConfigStore;Landroid/net/wifi/WifiConfiguration;)Landroid/net/wifi/WifiConfiguration;
 
-    .line 121
     iget-object v1, p0, Lcom/android/server/wifi/WifiApConfigStore$InactiveState;->this$0:Lcom/android/server/wifi/WifiApConfigStore;
 
     iget-object v2, p0, Lcom/android/server/wifi/WifiApConfigStore$InactiveState;->this$0:Lcom/android/server/wifi/WifiApConfigStore;
@@ -77,21 +70,19 @@
 
     invoke-static {v1, v2}, Lcom/android/server/wifi/WifiApConfigStore;->-wrap1(Lcom/android/server/wifi/WifiApConfigStore;Lcom/android/internal/util/IState;)V
 
-    .line 129
     :goto_0
     const/4 v1, 0x1
 
     return v1
 
-    .line 123
     :cond_0
-    const-string/jumbo v1, "WifiApConfigStore"
+    const-string v1, "WifiApConfigStore"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "Try to setup AP config without SSID: "
+    const-string v3, "Try to setup AP config without SSID: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -109,7 +100,6 @@
 
     goto :goto_0
 
-    .line 116
     :pswitch_data_0
     .packed-switch 0x20019
         :pswitch_0

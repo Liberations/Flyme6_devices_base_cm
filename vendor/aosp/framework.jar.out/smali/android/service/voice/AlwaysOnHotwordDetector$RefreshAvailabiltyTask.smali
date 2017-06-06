@@ -35,7 +35,6 @@
     .param p1, "this$0"    # Landroid/service/voice/AlwaysOnHotwordDetector;
 
     .prologue
-    .line 682
     iput-object p1, p0, Landroid/service/voice/AlwaysOnHotwordDetector$RefreshAvailabiltyTask;->this$0:Landroid/service/voice/AlwaysOnHotwordDetector;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -49,7 +48,6 @@
     .prologue
     const/4 v4, -0x3
 
-    .line 715
     iget-object v2, p0, Landroid/service/voice/AlwaysOnHotwordDetector$RefreshAvailabiltyTask;->this$0:Landroid/service/voice/AlwaysOnHotwordDetector;
 
     invoke-static {v2}, Landroid/service/voice/AlwaysOnHotwordDetector;->-get4(Landroid/service/voice/AlwaysOnHotwordDetector;)Ljava/lang/Object;
@@ -58,7 +56,6 @@
 
     monitor-enter v3
 
-    .line 717
     :try_start_0
     iget-object v2, p0, Landroid/service/voice/AlwaysOnHotwordDetector$RefreshAvailabiltyTask;->this$0:Landroid/service/voice/AlwaysOnHotwordDetector;
 
@@ -72,16 +69,13 @@
 
     monitor-exit v3
 
-    .line 718
     return v4
 
     :cond_0
     monitor-exit v3
 
-    .line 722
     const/4 v0, 0x0
 
-    .line 725
     .local v0, "dspModuleProperties":Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;
     :try_start_1
     iget-object v2, p0, Landroid/service/voice/AlwaysOnHotwordDetector$RefreshAvailabiltyTask;->this$0:Landroid/service/voice/AlwaysOnHotwordDetector;
@@ -102,17 +96,14 @@
 
     move-result-object v0
 
-    .line 730
     .end local v0    # "dspModuleProperties":Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;
     :goto_0
     if-nez v0, :cond_1
 
-    .line 731
     const/4 v2, -0x2
 
     return v2
 
-    .line 715
     :catchall_0
     move-exception v2
 
@@ -120,22 +111,19 @@
 
     throw v2
 
-    .line 726
     .restart local v0    # "dspModuleProperties":Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;
     :catch_0
     move-exception v1
 
-    .line 727
     .local v1, "e":Landroid/os/RemoteException;
-    const-string/jumbo v2, "AlwaysOnHotwordDetector"
+    const-string v2, "AlwaysOnHotwordDetector"
 
-    const-string/jumbo v3, "RemoteException in getDspProperties!"
+    const-string v3, "RemoteException in getDspProperties!"
 
     invoke-static {v2, v3, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
-    .line 734
     .end local v0    # "dspModuleProperties":Landroid/hardware/soundtrigger/SoundTrigger$ModuleProperties;
     .end local v1    # "e":Landroid/os/RemoteException;
     :cond_1
@@ -147,12 +135,10 @@
 
     if-nez v2, :cond_2
 
-    .line 735
     const/4 v2, -0x1
 
     return v2
 
-    .line 737
     :cond_2
     const/4 v2, 0x0
 
@@ -165,7 +151,6 @@
     .param p2, "locale"    # Ljava/util/Locale;
 
     .prologue
-    .line 745
     :try_start_0
     iget-object v1, p0, Landroid/service/voice/AlwaysOnHotwordDetector$RefreshAvailabiltyTask;->this$0:Landroid/service/voice/AlwaysOnHotwordDetector;
 
@@ -173,7 +158,6 @@
 
     move-result-object v1
 
-    .line 746
     iget-object v2, p0, Landroid/service/voice/AlwaysOnHotwordDetector$RefreshAvailabiltyTask;->this$0:Landroid/service/voice/AlwaysOnHotwordDetector;
 
     invoke-static {v2}, Landroid/service/voice/AlwaysOnHotwordDetector;->-get6(Landroid/service/voice/AlwaysOnHotwordDetector;)Landroid/service/voice/IVoiceInteractionService;
@@ -184,7 +168,6 @@
 
     move-result-object v3
 
-    .line 745
     invoke-interface {v1, v2, p1, v3}, Lcom/android/internal/app/IVoiceInteractionManagerService;->isEnrolledForKeyphrase(Landroid/service/voice/IVoiceInteractionService;ILjava/lang/String;)Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -193,19 +176,16 @@
 
     return v1
 
-    .line 747
     :catch_0
     move-exception v0
 
-    .line 748
     .local v0, "e":Landroid/os/RemoteException;
-    const-string/jumbo v1, "AlwaysOnHotwordDetector"
+    const-string v1, "AlwaysOnHotwordDetector"
 
-    const-string/jumbo v2, "RemoteException in listRegisteredKeyphraseSoundModels!"
+    const-string v2, "RemoteException in listRegisteredKeyphraseSoundModels!"
 
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 750
     const/4 v1, 0x0
 
     return v1
@@ -218,7 +198,6 @@
     .param p1, "params"    # [Ljava/lang/Object;
 
     .prologue
-    .line 685
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1    # "params":[Ljava/lang/Object;
@@ -234,25 +213,20 @@
     .param p1, "params"    # [Ljava/lang/Void;
 
     .prologue
-    .line 686
     invoke-direct {p0}, Landroid/service/voice/AlwaysOnHotwordDetector$RefreshAvailabiltyTask;->internalGetInitialAvailability()I
 
     move-result v0
 
-    .line 687
     .local v0, "availability":I
     const/4 v1, 0x0
 
-    .line 689
     .local v1, "enrolled":Z
     if-eqz v0, :cond_0
 
-    .line 690
     const/4 v2, 0x1
 
     if-ne v0, v2, :cond_2
 
-    .line 692
     :cond_0
     :goto_0
     iget-object v2, p0, Landroid/service/voice/AlwaysOnHotwordDetector$RefreshAvailabiltyTask;->this$0:Landroid/service/voice/AlwaysOnHotwordDetector;
@@ -273,14 +247,11 @@
 
     move-result v1
 
-    .line 693
     .local v1, "enrolled":Z
     if-nez v1, :cond_3
 
-    .line 694
     const/4 v0, 0x1
 
-    .line 700
     .end local v1    # "enrolled":Z
     :cond_1
     :goto_1
@@ -292,13 +263,11 @@
 
     monitor-enter v3
 
-    .line 705
     :try_start_0
     iget-object v2, p0, Landroid/service/voice/AlwaysOnHotwordDetector$RefreshAvailabiltyTask;->this$0:Landroid/service/voice/AlwaysOnHotwordDetector;
 
     invoke-static {v2, v0}, Landroid/service/voice/AlwaysOnHotwordDetector;->-set0(Landroid/service/voice/AlwaysOnHotwordDetector;I)I
 
-    .line 706
     iget-object v2, p0, Landroid/service/voice/AlwaysOnHotwordDetector$RefreshAvailabiltyTask;->this$0:Landroid/service/voice/AlwaysOnHotwordDetector;
 
     invoke-static {v2}, Landroid/service/voice/AlwaysOnHotwordDetector;->-wrap0(Landroid/service/voice/AlwaysOnHotwordDetector;)V
@@ -307,12 +276,10 @@
 
     monitor-exit v3
 
-    .line 708
     const/4 v2, 0x0
 
     return-object v2
 
-    .line 691
     .local v1, "enrolled":Z
     :cond_2
     const/4 v2, 0x2
@@ -321,14 +288,12 @@
 
     goto :goto_0
 
-    .line 696
     .local v1, "enrolled":Z
     :cond_3
     const/4 v0, 0x2
 
     goto :goto_1
 
-    .line 700
     .end local v1    # "enrolled":Z
     :catchall_0
     move-exception v2

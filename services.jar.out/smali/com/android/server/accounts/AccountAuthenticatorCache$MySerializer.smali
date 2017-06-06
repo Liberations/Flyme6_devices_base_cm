@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 83
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -60,8 +59,7 @@
     .end annotation
 
     .prologue
-    .line 91
-    const-string/jumbo v0, "type"
+    const-string v0, "type"
 
     const/4 v1, 0x0
 
@@ -87,7 +85,6 @@
     .end annotation
 
     .prologue
-    .line 89
     invoke-virtual {p0, p1}, Lcom/android/server/accounts/AccountAuthenticatorCache$MySerializer;->createFromXml(Lorg/xmlpull/v1/XmlPullParser;)Landroid/accounts/AuthenticatorDescription;
 
     move-result-object v0
@@ -106,8 +103,7 @@
     .end annotation
 
     .prologue
-    .line 86
-    const-string/jumbo v0, "type"
+    const-string v0, "type"
 
     iget-object v1, p1, Landroid/accounts/AuthenticatorDescription;->type:Ljava/lang/String;
 
@@ -115,7 +111,6 @@
 
     invoke-interface {p2, v2, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 85
     return-void
 .end method
 
@@ -130,7 +125,6 @@
     .end annotation
 
     .prologue
-    .line 84
     check-cast p1, Landroid/accounts/AuthenticatorDescription;
 
     .end local p1    # "item":Ljava/lang/Object;

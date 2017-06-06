@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/display/WifiDisplayController;
 
     .prologue
-    .line 437
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayController$10;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "reason"    # I
 
     .prologue
-    .line 446
     return-void
 .end method
 
@@ -50,6 +48,5 @@
     .locals 0
 
     .prologue
-    .line 439
     return-void
 .end method

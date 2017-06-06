@@ -27,16 +27,12 @@
     .prologue
     const-wide/16 v0, 0x0
 
-    .line 664
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 665
     iput-wide v0, p0, Lcom/android/internal/app/ProcessStats$PssAggr;->pss:J
 
-    .line 666
     iput-wide v0, p0, Lcom/android/internal/app/ProcessStats$PssAggr;->samples:J
 
-    .line 664
     return-void
 .end method
 
@@ -48,7 +44,6 @@
     .param p3, "newSamples"    # J
 
     .prologue
-    .line 669
     iget-wide v0, p0, Lcom/android/internal/app/ProcessStats$PssAggr;->pss:J
 
     long-to-double v0, v0
@@ -69,23 +64,19 @@
 
     double-to-long v0, v0
 
-    .line 670
     iget-wide v2, p0, Lcom/android/internal/app/ProcessStats$PssAggr;->samples:J
 
     add-long/2addr v2, p3
 
-    .line 669
     div-long/2addr v0, v2
 
     iput-wide v0, p0, Lcom/android/internal/app/ProcessStats$PssAggr;->pss:J
 
-    .line 671
     iget-wide v0, p0, Lcom/android/internal/app/ProcessStats$PssAggr;->samples:J
 
     add-long/2addr v0, p3
 
     iput-wide v0, p0, Lcom/android/internal/app/ProcessStats$PssAggr;->samples:J
 
-    .line 668
     return-void
 .end method

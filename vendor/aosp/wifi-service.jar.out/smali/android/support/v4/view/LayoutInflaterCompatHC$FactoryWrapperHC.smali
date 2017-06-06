@@ -23,10 +23,8 @@
     .param p1, "delegateFactory"    # Landroid/support/v4/view/LayoutInflaterFactory;
 
     .prologue
-    .line 38
     invoke-direct {p0, p1}, Landroid/support/v4/view/LayoutInflaterCompatBase$FactoryWrapper;-><init>(Landroid/support/v4/view/LayoutInflaterFactory;)V
 
-    .line 37
     return-void
 .end method
 
@@ -40,7 +38,6 @@
     .param p4, "attributeSet"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 44
     iget-object v0, p0, Landroid/support/v4/view/LayoutInflaterCompatHC$FactoryWrapperHC;->mDelegateFactory:Landroid/support/v4/view/LayoutInflaterFactory;
 
     invoke-interface {v0, p1, p2, p3, p4}, Landroid/support/v4/view/LayoutInflaterFactory;->onCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;

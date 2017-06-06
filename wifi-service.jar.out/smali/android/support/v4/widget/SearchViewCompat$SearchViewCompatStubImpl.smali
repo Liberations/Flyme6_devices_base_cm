@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,7 +34,6 @@
     .param p1, "searchView"    # Landroid/view/View;
 
     .prologue
-    .line 92
     const/4 v0, 0x0
 
     return-object v0
@@ -46,7 +44,6 @@
     .param p1, "searchView"    # Landroid/view/View;
 
     .prologue
-    .line 109
     const/4 v0, 0x1
 
     return v0
@@ -57,7 +54,6 @@
     .param p1, "searchView"    # Landroid/view/View;
 
     .prologue
-    .line 127
     const/4 v0, 0x0
 
     return v0
@@ -68,7 +64,6 @@
     .param p1, "searchView"    # Landroid/view/View;
 
     .prologue
-    .line 118
     const/4 v0, 0x0
 
     return v0
@@ -79,7 +74,6 @@
     .param p1, "listener"    # Landroid/support/v4/widget/SearchViewCompat$OnCloseListenerCompat;
 
     .prologue
-    .line 83
     const/4 v0, 0x0
 
     return-object v0
@@ -90,7 +84,6 @@
     .param p1, "listener"    # Landroid/support/v4/widget/SearchViewCompat$OnQueryTextListenerCompat;
 
     .prologue
-    .line 74
     const/4 v0, 0x0
 
     return-object v0
@@ -101,7 +94,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 57
     const/4 v0, 0x0
 
     return-object v0
@@ -113,7 +105,6 @@
     .param p2, "iconify"    # Z
 
     .prologue
-    .line 104
     return-void
 .end method
 
@@ -123,7 +114,6 @@
     .param p2, "imeOptions"    # I
 
     .prologue
-    .line 65
     return-void
 .end method
 
@@ -133,7 +123,6 @@
     .param p2, "inputType"    # I
 
     .prologue
-    .line 69
     return-void
 .end method
 
@@ -143,7 +132,6 @@
     .param p2, "maxpixels"    # I
 
     .prologue
-    .line 131
     return-void
 .end method
 
@@ -153,7 +141,6 @@
     .param p2, "listener"    # Ljava/lang/Object;
 
     .prologue
-    .line 87
     return-void
 .end method
 
@@ -163,7 +150,6 @@
     .param p2, "listener"    # Ljava/lang/Object;
 
     .prologue
-    .line 78
     return-void
 .end method
 
@@ -174,7 +160,6 @@
     .param p3, "submit"    # Z
 
     .prologue
-    .line 96
     return-void
 .end method
 
@@ -184,7 +169,6 @@
     .param p2, "hint"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 100
     return-void
 .end method
 
@@ -194,7 +178,6 @@
     .param p2, "enable"    # Z
 
     .prologue
-    .line 122
     return-void
 .end method
 
@@ -204,7 +187,6 @@
     .param p2, "searchableComponent"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 61
     return-void
 .end method
 
@@ -214,6 +196,5 @@
     .param p2, "enabled"    # Z
 
     .prologue
-    .line 113
     return-void
 .end method

@@ -51,7 +51,6 @@
     .param p9, "val$usedInFixMask"    # I
 
     .prologue
-    .line 84
     iput-object p1, p0, Lcom/android/server/location/GpsStatusListenerHelper$4;->this$0:Lcom/android/server/location/GpsStatusListenerHelper;
 
     iput p2, p0, Lcom/android/server/location/GpsStatusListenerHelper$4;->val$svCount:I
@@ -87,36 +86,26 @@
     .end annotation
 
     .prologue
-    .line 88
     iget v1, p0, Lcom/android/server/location/GpsStatusListenerHelper$4;->val$svCount:I
 
-    .line 89
     iget-object v2, p0, Lcom/android/server/location/GpsStatusListenerHelper$4;->val$prns:[I
 
-    .line 90
     iget-object v3, p0, Lcom/android/server/location/GpsStatusListenerHelper$4;->val$snrs:[F
 
-    .line 91
     iget-object v4, p0, Lcom/android/server/location/GpsStatusListenerHelper$4;->val$elevations:[F
 
-    .line 92
     iget-object v5, p0, Lcom/android/server/location/GpsStatusListenerHelper$4;->val$azimuths:[F
 
-    .line 93
     iget v6, p0, Lcom/android/server/location/GpsStatusListenerHelper$4;->val$ephemerisMask:I
 
-    .line 94
     iget v7, p0, Lcom/android/server/location/GpsStatusListenerHelper$4;->val$almanacMask:I
 
-    .line 95
     iget v8, p0, Lcom/android/server/location/GpsStatusListenerHelper$4;->val$usedInFixMask:I
 
     move-object v0, p1
 
-    .line 87
     invoke-interface/range {v0 .. v8}, Landroid/location/IGpsStatusListener;->onSvStatusChanged(I[I[F[F[FIII)V
 
-    .line 86
     return-void
 .end method
 
@@ -130,7 +119,6 @@
     .end annotation
 
     .prologue
-    .line 86
     check-cast p1, Landroid/location/IGpsStatusListener;
 
     .end local p1    # "listener":Landroid/os/IInterface;

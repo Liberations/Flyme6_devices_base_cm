@@ -20,7 +20,6 @@
     .locals 0
 
     .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,43 +30,36 @@
     .param p0, "direction"    # I
 
     .prologue
-    .line 42
     sparse-switch p0, :sswitch_data_0
 
-    .line 54
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "direction must be one of {FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT, FOCUS_FORWARD, FOCUS_BACKWARD}."
+    const-string v1, "direction must be one of {FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT, FOCUS_FORWARD, FOCUS_BACKWARD}."
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 44
     :sswitch_0
     const/4 v0, 0x3
 
     return v0
 
-    .line 47
     :sswitch_1
     const/4 v0, 0x4
 
     return v0
 
-    .line 49
     :sswitch_2
     const/4 v0, 0x1
 
     return v0
 
-    .line 52
     :sswitch_3
     const/4 v0, 0x2
 
     return v0
 
-    .line 42
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_3

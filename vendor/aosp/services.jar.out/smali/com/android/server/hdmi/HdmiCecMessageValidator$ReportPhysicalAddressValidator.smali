@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/hdmi/HdmiCecMessageValidator;
 
     .prologue
-    .line 317
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecMessageValidator$ReportPhysicalAddressValidator;->this$0:Lcom/android/server/hdmi/HdmiCecMessageValidator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -54,19 +53,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 320
     array-length v1, p1
 
     const/4 v2, 0x3
 
     if-ge v1, v2, :cond_0
 
-    .line 321
     const/4 v0, 0x4
 
     return v0
 
-    .line 323
     :cond_0
     iget-object v1, p0, Lcom/android/server/hdmi/HdmiCecMessageValidator$ReportPhysicalAddressValidator;->this$0:Lcom/android/server/hdmi/HdmiCecMessageValidator;
 

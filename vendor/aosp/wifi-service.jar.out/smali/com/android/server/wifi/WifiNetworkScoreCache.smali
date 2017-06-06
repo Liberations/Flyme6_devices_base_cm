@@ -32,17 +32,14 @@
     .locals 1
 
     .prologue
-    .line 40
     const/16 v0, -0x80
 
     sput v0, Lcom/android/server/wifi/WifiNetworkScoreCache;->INVALID_NETWORK_SCORE:I
 
-    .line 42
-    const-string/jumbo v0, "WifiNetworkScoreCache"
+    const-string v0, "WifiNetworkScoreCache"
 
     sput-object v0, Lcom/android/server/wifi/WifiNetworkScoreCache;->TAG:Ljava/lang/String;
 
-    .line 34
     return-void
 .end method
 
@@ -51,25 +48,20 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 50
     invoke-direct {p0}, Landroid/net/INetworkScoreCache$Stub;-><init>()V
 
-    .line 43
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/wifi/WifiNetworkScoreCache;->DBG:Z
 
-    .line 51
     iput-object p1, p0, Lcom/android/server/wifi/WifiNetworkScoreCache;->mContext:Landroid/content/Context;
 
-    .line 52
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wifi/WifiNetworkScoreCache;->mNetworkCache:Ljava/util/Map;
 
-    .line 50
     return-void
 .end method
 
@@ -80,7 +72,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 142
     if-eqz p1, :cond_0
 
     iget-object v1, p1, Landroid/net/ScoredNetwork;->networkKey:Landroid/net/NetworkKey;
@@ -90,7 +81,6 @@
     :cond_0
     return-object v3
 
-    .line 143
     :cond_1
     iget-object v1, p1, Landroid/net/ScoredNetwork;->networkKey:Landroid/net/NetworkKey;
 
@@ -100,7 +90,6 @@
 
     return-object v3
 
-    .line 144
     :cond_2
     iget-object v1, p1, Landroid/net/ScoredNetwork;->networkKey:Landroid/net/NetworkKey;
 
@@ -110,20 +99,17 @@
 
     if-ne v1, v2, :cond_5
 
-    .line 145
     iget-object v1, p1, Landroid/net/ScoredNetwork;->networkKey:Landroid/net/NetworkKey;
 
     iget-object v1, v1, Landroid/net/NetworkKey;->wifiKey:Landroid/net/WifiKey;
 
     iget-object v0, v1, Landroid/net/WifiKey;->ssid:Ljava/lang/String;
 
-    .line 146
     .local v0, "key":Ljava/lang/String;
     if-nez v0, :cond_3
 
     return-object v3
 
-    .line 147
     :cond_3
     iget-object v1, p1, Landroid/net/ScoredNetwork;->networkKey:Landroid/net/NetworkKey;
 
@@ -133,7 +119,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 148
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -156,11 +141,9 @@
 
     move-result-object v0
 
-    .line 150
     :cond_4
     return-object v0
 
-    .line 152
     .end local v0    # "key":Ljava/lang/String;
     :cond_5
     return-object v3
@@ -173,47 +156,39 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 156
     if-eqz p1, :cond_0
 
     iget-object v1, p1, Landroid/net/wifi/ScanResult;->SSID:Ljava/lang/String;
 
     if-nez v1, :cond_1
 
-    .line 157
     :cond_0
     return-object v2
 
-    .line 159
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v1, "\""
+    const-string v1, "\""
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 160
     .local v0, "key":Ljava/lang/StringBuilder;
     iget-object v1, p1, Landroid/net/wifi/ScanResult;->SSID:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 161
-    const-string/jumbo v1, "\""
+    const-string v1, "\""
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 162
     iget-object v1, p1, Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
 
     if-eqz v1, :cond_2
 
-    .line 163
     iget-object v1, p1, Landroid/net/wifi/ScanResult;->BSSID:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 165
     :cond_2
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -229,24 +204,20 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 131
     invoke-direct {p0, p1}, Lcom/android/server/wifi/WifiNetworkScoreCache;->buildNetworkKey(Landroid/net/wifi/ScanResult;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 132
     .local v0, "key":Ljava/lang/String;
     if-nez v0, :cond_0
 
     return-object v2
 
-    .line 135
     :cond_0
     iget-object v3, p0, Lcom/android/server/wifi/WifiNetworkScoreCache;->mNetworkCache:Ljava/util/Map;
 
     monitor-enter v3
 
-    .line 136
     :try_start_0
     iget-object v2, p0, Lcom/android/server/wifi/WifiNetworkScoreCache;->mNetworkCache:Ljava/util/Map;
 
@@ -261,10 +232,8 @@
     .local v1, "network":Landroid/net/ScoredNetwork;
     monitor-exit v3
 
-    .line 137
     return-object v1
 
-    .line 135
     .end local v1    # "network":Landroid/net/ScoredNetwork;
     :catchall_0
     move-exception v2
@@ -280,12 +249,10 @@
     .locals 2
 
     .prologue
-    .line 71
     iget-object v1, p0, Lcom/android/server/wifi/WifiNetworkScoreCache;->mNetworkCache:Ljava/util/Map;
 
     monitor-enter v1
 
-    .line 72
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiNetworkScoreCache;->mNetworkCache:Ljava/util/Map;
 
@@ -295,10 +262,8 @@
 
     monitor-exit v1
 
-    .line 70
     return-void
 
-    .line 71
     :catchall_0
     move-exception v0
 
@@ -314,26 +279,22 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 169
     iget-object v5, p0, Lcom/android/server/wifi/WifiNetworkScoreCache;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v6, "android.permission.DUMP"
+    const-string v6, "android.permission.DUMP"
 
     sget-object v7, Lcom/android/server/wifi/WifiNetworkScoreCache;->TAG:Ljava/lang/String;
 
     invoke-virtual {v5, v6, v7}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 170
-    const-string/jumbo v5, "WifiNetworkScoreCache"
+    const-string v5, "WifiNetworkScoreCache"
 
     invoke-virtual {p2, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 171
-    const-string/jumbo v5, "  All score curves:"
+    const-string v5, "  All score curves:"
 
     invoke-virtual {p2, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 172
     iget-object v5, p0, Lcom/android/server/wifi/WifiNetworkScoreCache;->mNetworkCache:Ljava/util/Map;
 
     invoke-interface {v5}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -358,13 +319,12 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 173
     .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Landroid/net/ScoredNetwork;>;"
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "    "
+    const-string v6, "    "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -380,7 +340,7 @@
 
     move-result-object v5
 
-    const-string/jumbo v6, ": "
+    const-string v6, ": "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -406,17 +366,15 @@
 
     goto :goto_0
 
-    .line 175
     .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Landroid/net/ScoredNetwork;>;"
     :cond_0
-    const-string/jumbo v5, "  Current network scores:"
+    const-string v5, "  Current network scores:"
 
     invoke-virtual {p2, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 176
     iget-object v5, p0, Lcom/android/server/wifi/WifiNetworkScoreCache;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v6, "wifi"
+    const-string v6, "wifi"
 
     invoke-virtual {v5, v6}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -424,7 +382,6 @@
 
     check-cast v4, Landroid/net/wifi/WifiManager;
 
-    .line 177
     .local v4, "wifiManager":Landroid/net/wifi/WifiManager;
     invoke-virtual {v4}, Landroid/net/wifi/WifiManager;->getScanResults()Ljava/util/List;
 
@@ -448,13 +405,12 @@
 
     check-cast v2, Landroid/net/wifi/ScanResult;
 
-    .line 178
     .local v2, "scanResult":Landroid/net/wifi/ScanResult;
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "    "
+    const-string v6, "    "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -468,7 +424,7 @@
 
     move-result-object v5
 
-    const-string/jumbo v6, ": "
+    const-string v6, ": "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -490,7 +446,6 @@
 
     goto :goto_1
 
-    .line 168
     .end local v2    # "scanResult":Landroid/net/wifi/ScanResult;
     :cond_1
     return-void
@@ -501,16 +456,13 @@
     .param p1, "result"    # Landroid/net/wifi/ScanResult;
 
     .prologue
-    .line 99
     sget v1, Lcom/android/server/wifi/WifiNetworkScoreCache;->INVALID_NETWORK_SCORE:I
 
-    .line 101
     .local v1, "score":I
     invoke-direct {p0, p1}, Lcom/android/server/wifi/WifiNetworkScoreCache;->getScoredNetwork(Landroid/net/wifi/ScanResult;)Landroid/net/ScoredNetwork;
 
     move-result-object v0
 
-    .line 102
     .local v0, "network":Landroid/net/ScoredNetwork;
     if-eqz v0, :cond_0
 
@@ -518,7 +470,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 103
     iget-object v2, v0, Landroid/net/ScoredNetwork;->rssiCurve:Landroid/net/RssiCurve;
 
     iget v3, p1, Landroid/net/wifi/ScanResult;->level:I
@@ -527,19 +478,17 @@
 
     move-result v1
 
-    .line 104
     iget-boolean v2, p0, Lcom/android/server/wifi/WifiNetworkScoreCache;->DBG:Z
 
     if-eqz v2, :cond_0
 
-    .line 105
     sget-object v2, Lcom/android/server/wifi/WifiNetworkScoreCache;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "getNetworkScore found scored network "
+    const-string v4, "getNetworkScore found scored network "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -551,36 +500,28 @@
 
     move-result-object v3
 
-    .line 106
-    const-string/jumbo v4, " score "
+    const-string v4, " score "
 
-    .line 105
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 106
     invoke-static {v1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 105
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 107
-    const-string/jumbo v4, " RSSI "
+    const-string v4, " RSSI "
 
-    .line 105
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 107
     iget v4, p1, Landroid/net/wifi/ScanResult;->level:I
 
-    .line 105
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v3
@@ -591,7 +532,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 110
     :cond_0
     return v1
 .end method
@@ -602,16 +542,13 @@
     .param p2, "isActiveNetwork"    # Z
 
     .prologue
-    .line 115
     sget v1, Lcom/android/server/wifi/WifiNetworkScoreCache;->INVALID_NETWORK_SCORE:I
 
-    .line 117
     .local v1, "score":I
     invoke-direct {p0, p1}, Lcom/android/server/wifi/WifiNetworkScoreCache;->getScoredNetwork(Landroid/net/wifi/ScanResult;)Landroid/net/ScoredNetwork;
 
     move-result-object v0
 
-    .line 118
     .local v0, "network":Landroid/net/ScoredNetwork;
     if-eqz v0, :cond_0
 
@@ -619,7 +556,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 119
     iget-object v2, v0, Landroid/net/ScoredNetwork;->rssiCurve:Landroid/net/RssiCurve;
 
     iget v3, p1, Landroid/net/wifi/ScanResult;->level:I
@@ -628,19 +564,17 @@
 
     move-result v1
 
-    .line 120
     iget-boolean v2, p0, Lcom/android/server/wifi/WifiNetworkScoreCache;->DBG:Z
 
     if-eqz v2, :cond_0
 
-    .line 121
     sget-object v2, Lcom/android/server/wifi/WifiNetworkScoreCache;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "getNetworkScore found scored network "
+    const-string v4, "getNetworkScore found scored network "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -652,44 +586,34 @@
 
     move-result-object v3
 
-    .line 122
-    const-string/jumbo v4, " score "
+    const-string v4, " score "
 
-    .line 121
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 122
     invoke-static {v1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 121
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 123
-    const-string/jumbo v4, " RSSI "
+    const-string v4, " RSSI "
 
-    .line 121
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 123
     iget v4, p1, Landroid/net/wifi/ScanResult;->level:I
 
-    .line 121
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 124
-    const-string/jumbo v4, " isActiveNetwork "
+    const-string v4, " isActiveNetwork "
 
-    .line 121
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
@@ -704,7 +628,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 127
     :cond_0
     return v1
 .end method
@@ -716,12 +639,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 93
     invoke-direct {p0, p1}, Lcom/android/server/wifi/WifiNetworkScoreCache;->getScoredNetwork(Landroid/net/wifi/ScanResult;)Landroid/net/ScoredNetwork;
 
     move-result-object v0
 
-    .line 94
     .local v0, "network":Landroid/net/ScoredNetwork;
     if-eqz v0, :cond_0
 
@@ -740,7 +661,6 @@
     .param p1, "result"    # Landroid/net/wifi/ScanResult;
 
     .prologue
-    .line 83
     invoke-direct {p0, p1}, Lcom/android/server/wifi/WifiNetworkScoreCache;->getScoredNetwork(Landroid/net/wifi/ScanResult;)Landroid/net/ScoredNetwork;
 
     move-result-object v0
@@ -771,14 +691,11 @@
     .end annotation
 
     .prologue
-    .line 56
     .local p1, "networks":Ljava/util/List;, "Ljava/util/List<Landroid/net/ScoredNetwork;>;"
     if-nez p1, :cond_0
 
-    .line 57
     return-void
 
-    .line 59
     :cond_0
     sget-object v3, Lcom/android/server/wifi/WifiNetworkScoreCache;->TAG:Ljava/lang/String;
 
@@ -786,7 +703,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "updateScores list size="
+    const-string v5, "updateScores list size="
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -806,12 +723,10 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 61
     iget-object v4, p0, Lcom/android/server/wifi/WifiNetworkScoreCache;->mNetworkCache:Ljava/util/Map;
 
     monitor-enter v4
 
-    .line 62
     :try_start_0
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -832,17 +747,14 @@
 
     check-cast v0, Landroid/net/ScoredNetwork;
 
-    .line 63
     .local v0, "network":Landroid/net/ScoredNetwork;
     invoke-direct {p0, v0}, Lcom/android/server/wifi/WifiNetworkScoreCache;->buildNetworkKey(Landroid/net/ScoredNetwork;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 64
     .local v2, "networkKey":Ljava/lang/String;
     if-eqz v2, :cond_1
 
-    .line 65
     iget-object v3, p0, Lcom/android/server/wifi/WifiNetworkScoreCache;->mNetworkCache:Ljava/util/Map;
 
     invoke-interface {v3, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -851,7 +763,6 @@
 
     goto :goto_0
 
-    .line 61
     .end local v0    # "network":Landroid/net/ScoredNetwork;
     .end local v1    # "network$iterator":Ljava/util/Iterator;
     .end local v2    # "networkKey":Ljava/lang/String;
@@ -866,6 +777,5 @@
     :cond_2
     monitor-exit v4
 
-    .line 55
     return-void
 .end method

@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/cyanogenmod/platform/internal/IconCacheManagerServiceBroker;
 
     .prologue
-    .line 42
     iput-object p1, p0, Lorg/cyanogenmod/platform/internal/IconCacheManagerServiceBroker$1;->this$0:Lorg/cyanogenmod/platform/internal/IconCacheManagerServiceBroker;
 
     invoke-direct {p0}, Lorg/cyanogenmod/internal/themes/IIconCacheManager$Stub;-><init>()V
@@ -45,7 +44,6 @@
     .end annotation
 
     .prologue
-    .line 45
     const/4 v0, 0x0
 
     return v0

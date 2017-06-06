@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +35,6 @@
     .param p2, "record"    # Ljava/lang/Object;
 
     .prologue
-    .line 39
     return-void
 .end method
 
@@ -45,7 +43,6 @@
     .param p1, "event"    # Landroid/view/accessibility/AccessibilityEvent;
 
     .prologue
-    .line 60
     const/4 v0, 0x0
 
     return v0
@@ -57,7 +54,6 @@
     .param p2, "index"    # I
 
     .prologue
-    .line 45
     const/4 v0, 0x0
 
     return-object v0
@@ -68,7 +64,6 @@
     .param p1, "event"    # Landroid/view/accessibility/AccessibilityEvent;
 
     .prologue
-    .line 55
     const/4 v0, 0x0
 
     return v0
@@ -80,6 +75,5 @@
     .param p2, "types"    # I
 
     .prologue
-    .line 49
     return-void
 .end method

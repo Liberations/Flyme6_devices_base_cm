@@ -38,15 +38,12 @@
     .param p2, "listener"    # Landroid/hardware/hdmi/IHdmiRecordListener;
 
     .prologue
-    .line 1169
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiRecordListenerRecord;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1170
     iput-object p2, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiRecordListenerRecord;->mListener:Landroid/hardware/hdmi/IHdmiRecordListener;
 
-    .line 1169
     return-void
 .end method
 
@@ -56,7 +53,6 @@
     .locals 3
 
     .prologue
-    .line 1175
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiRecordListenerRecord;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-static {v0}, Lcom/android/server/hdmi/HdmiControlService;->-get10(Lcom/android/server/hdmi/HdmiControlService;)Ljava/lang/Object;
@@ -65,7 +61,6 @@
 
     monitor-enter v1
 
-    .line 1176
     :try_start_0
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiRecordListenerRecord;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
@@ -77,10 +72,8 @@
 
     monitor-exit v1
 
-    .line 1174
     return-void
 
-    .line 1175
     :catchall_0
     move-exception v0
 

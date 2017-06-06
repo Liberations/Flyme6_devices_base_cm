@@ -18,7 +18,6 @@
     .locals 0
 
     .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
     .locals 1
 
     .prologue
-    .line 41
     iget-object v0, p0, Landroid/mtp/MtpDeviceInfo;->mManufacturer:Ljava/lang/String;
 
     return-object v0
@@ -40,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 50
     iget-object v0, p0, Landroid/mtp/MtpDeviceInfo;->mModel:Ljava/lang/String;
 
     return-object v0
@@ -50,7 +47,6 @@
     .locals 1
 
     .prologue
-    .line 68
     iget-object v0, p0, Landroid/mtp/MtpDeviceInfo;->mSerialNumber:Ljava/lang/String;
 
     return-object v0
@@ -60,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 59
     iget-object v0, p0, Landroid/mtp/MtpDeviceInfo;->mVersion:Ljava/lang/String;
 
     return-object v0

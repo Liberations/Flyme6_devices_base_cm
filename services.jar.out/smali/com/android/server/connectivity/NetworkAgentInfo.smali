@@ -97,55 +97,42 @@
     .param p12, "connService"    # Lcom/android/server/ConnectivityService;
 
     .prologue
-    .line 166
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 154
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkRequests:Landroid/util/SparseArray;
 
-    .line 158
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkLingered:Ljava/util/ArrayList;
 
-    .line 169
     iput-object p1, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->messenger:Landroid/os/Messenger;
 
-    .line 170
     iput-object p2, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->asyncChannel:Lcom/android/internal/util/AsyncChannel;
 
-    .line 171
     iput-object p3, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->network:Landroid/net/Network;
 
-    .line 172
     iput-object p4, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
-    .line 173
     iput-object p5, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->linkProperties:Landroid/net/LinkProperties;
 
-    .line 174
     iput-object p6, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
-    .line 175
     iput p7, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->currentScore:I
 
-    .line 176
     invoke-virtual {p12, p8, p9, p0, p11}, Lcom/android/server/ConnectivityService;->createNetworkMonitor(Landroid/content/Context;Landroid/os/Handler;Lcom/android/server/connectivity/NetworkAgentInfo;Landroid/net/NetworkRequest;)Lcom/android/server/connectivity/NetworkMonitor;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkMonitor:Lcom/android/server/connectivity/NetworkMonitor;
 
-    .line 177
     iput-object p10, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkMisc:Landroid/net/NetworkMisc;
 
-    .line 168
     return-void
 .end method
 
@@ -154,7 +141,6 @@
     .param p1, "pretendValidated"    # Z
 
     .prologue
-    .line 219
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkMisc:Landroid/net/NetworkMisc;
 
     iget-boolean v1, v1, Landroid/net/NetworkMisc;->explicitlySelected:Z
@@ -169,17 +155,14 @@
 
     if-eqz p1, :cond_1
 
-    .line 220
     :cond_0
     const/16 v1, 0x64
 
     return v1
 
-    .line 223
     :cond_1
     iget v0, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->currentScore:I
 
-    .line 227
     .local v0, "score":I
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
@@ -193,18 +176,15 @@
 
     if-eqz p1, :cond_4
 
-    .line 230
     :cond_2
     :goto_0
     if-gez v0, :cond_3
 
     const/4 v0, 0x0
 
-    .line 231
     :cond_3
     return v0
 
-    .line 228
     :cond_4
     add-int/lit8 v0, v0, -0x28
 
@@ -218,7 +198,6 @@
     .param p1, "networkRequest"    # Landroid/net/NetworkRequest;
 
     .prologue
-    .line 187
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkRequests:Landroid/util/SparseArray;
 
     iget v1, p1, Landroid/net/NetworkRequest;->requestId:I
@@ -233,7 +212,6 @@
 
     return v0
 
-    .line 188
     :cond_0
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkRequests:Landroid/util/SparseArray;
 
@@ -241,7 +219,6 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 189
     const/4 v0, 0x1
 
     return v0
@@ -252,7 +229,6 @@
     .param p1, "other"    # Lcom/android/server/connectivity/NetworkAgentInfo;
 
     .prologue
-    .line 273
     invoke-virtual {p1}, Lcom/android/server/connectivity/NetworkAgentInfo;->getCurrentScore()I
 
     move-result v0
@@ -271,7 +247,6 @@
     .param p1, "other"    # Ljava/lang/Object;
 
     .prologue
-    .line 272
     check-cast p1, Lcom/android/server/connectivity/NetworkAgentInfo;
 
     .end local p1    # "other":Ljava/lang/Object;
@@ -286,7 +261,6 @@
     .locals 1
 
     .prologue
-    .line 237
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/android/server/connectivity/NetworkAgentInfo;->getCurrentScore(Z)I
@@ -300,7 +274,6 @@
     .locals 1
 
     .prologue
-    .line 243
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Lcom/android/server/connectivity/NetworkAgentInfo;->getCurrentScore(Z)I
@@ -314,7 +287,6 @@
     .locals 2
 
     .prologue
-    .line 205
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
     const/4 v1, 0x4
@@ -330,12 +302,11 @@
     .locals 2
 
     .prologue
-    .line 265
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "NetworkAgentInfo ["
+    const-string v1, "NetworkAgentInfo ["
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -351,49 +322,41 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, " ("
+    const-string v1, " ("
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 266
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
     invoke-virtual {v1}, Landroid/net/NetworkInfo;->getSubtypeName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 265
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 266
-    const-string/jumbo v1, ") - "
+    const-string v1, ") - "
 
-    .line 265
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 267
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->network:Landroid/net/Network;
 
     if-nez v0, :cond_0
 
-    const-string/jumbo v0, "null"
+    const-string v0, "null"
 
-    .line 265
     :goto_0
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 267
-    const-string/jumbo v1, "]"
+    const-string v1, "]"
 
-    .line 265
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -404,7 +367,6 @@
 
     return-object v0
 
-    .line 267
     :cond_0
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->network:Landroid/net/Network;
 
@@ -420,12 +382,10 @@
     .param p1, "request"    # Landroid/net/NetworkRequest;
 
     .prologue
-    .line 194
     iget-boolean v0, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->created:Z
 
     if-eqz v0, :cond_0
 
-    .line 195
     iget-object v0, p1, Landroid/net/NetworkRequest;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkCapabilities:Landroid/net/NetworkCapabilities;
@@ -434,7 +394,6 @@
 
     move-result v0
 
-    .line 194
     :goto_0
     return v0
 
@@ -449,23 +408,18 @@
     .param p1, "request"    # Landroid/net/NetworkRequest;
 
     .prologue
-    .line 199
     iget-boolean v0, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->created:Z
 
     if-eqz v0, :cond_0
 
-    .line 200
     iget-object v0, p1, Landroid/net/NetworkRequest;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
-    .line 201
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
-    .line 200
     invoke-virtual {v0, v1}, Landroid/net/NetworkCapabilities;->satisfiedByImmutableNetworkCapabilities(Landroid/net/NetworkCapabilities;)Z
 
     move-result v0
 
-    .line 199
     :goto_0
     return v0
 
@@ -480,10 +434,8 @@
     .param p1, "newScore"    # I
 
     .prologue
-    .line 247
     iput p1, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->currentScore:I
 
-    .line 246
     return-void
 .end method
 
@@ -491,12 +443,11 @@
     .locals 2
 
     .prologue
-    .line 251
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "NetworkAgentInfo{ ni{"
+    const-string v1, "NetworkAgentInfo{ ni{"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -508,262 +459,200 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}  network{"
+    const-string v1, "}  network{"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 252
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->network:Landroid/net/Network;
 
-    .line 251
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 252
-    const-string/jumbo v1, "}  lp{"
+    const-string v1, "}  lp{"
 
-    .line 251
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 253
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->linkProperties:Landroid/net/LinkProperties;
 
-    .line 251
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 253
-    const-string/jumbo v1, "}  nc{"
+    const-string v1, "}  nc{"
 
-    .line 251
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 254
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
-    .line 251
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 254
-    const-string/jumbo v1, "}  Score{"
+    const-string v1, "}  Score{"
 
-    .line 251
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 254
     invoke-virtual {p0}, Lcom/android/server/connectivity/NetworkAgentInfo;->getCurrentScore()I
 
     move-result v1
 
-    .line 251
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 254
-    const-string/jumbo v1, "}  "
+    const-string v1, "}  "
 
-    .line 251
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 255
-    const-string/jumbo v1, "everValidated{"
+    const-string v1, "everValidated{"
 
-    .line 251
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 255
     iget-boolean v1, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->everValidated:Z
 
-    .line 251
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 255
-    const-string/jumbo v1, "}  lastValidated{"
+    const-string v1, "}  lastValidated{"
 
-    .line 251
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 255
     iget-boolean v1, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->lastValidated:Z
 
-    .line 251
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 255
-    const-string/jumbo v1, "}  "
+    const-string v1, "}  "
 
-    .line 251
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 256
-    const-string/jumbo v1, "created{"
+    const-string v1, "created{"
 
-    .line 251
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 256
     iget-boolean v1, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->created:Z
 
-    .line 251
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 256
-    const-string/jumbo v1, "} lingering{"
+    const-string v1, "} lingering{"
 
-    .line 251
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 256
     iget-boolean v1, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->lingering:Z
 
-    .line 251
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 256
-    const-string/jumbo v1, "} "
+    const-string v1, "} "
 
-    .line 251
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 257
-    const-string/jumbo v1, "explicitlySelected{"
+    const-string v1, "explicitlySelected{"
 
-    .line 251
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 257
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkMisc:Landroid/net/NetworkMisc;
 
     iget-boolean v1, v1, Landroid/net/NetworkMisc;->explicitlySelected:Z
 
-    .line 251
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 257
-    const-string/jumbo v1, "} "
+    const-string v1, "} "
 
-    .line 251
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 258
-    const-string/jumbo v1, "acceptUnvalidated{"
+    const-string v1, "acceptUnvalidated{"
 
-    .line 251
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 258
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkMisc:Landroid/net/NetworkMisc;
 
     iget-boolean v1, v1, Landroid/net/NetworkMisc;->acceptUnvalidated:Z
 
-    .line 251
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 258
-    const-string/jumbo v1, "} "
+    const-string v1, "} "
 
-    .line 251
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 259
-    const-string/jumbo v1, "everCaptivePortalDetected{"
+    const-string v1, "everCaptivePortalDetected{"
 
-    .line 251
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 259
     iget-boolean v1, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->everCaptivePortalDetected:Z
 
-    .line 251
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 259
-    const-string/jumbo v1, "} "
+    const-string v1, "} "
 
-    .line 251
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 260
-    const-string/jumbo v1, "lastCaptivePortalDetected{"
+    const-string v1, "lastCaptivePortalDetected{"
 
-    .line 251
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 260
     iget-boolean v1, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->lastCaptivePortalDetected:Z
 
-    .line 251
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 260
-    const-string/jumbo v1, "} "
+    const-string v1, "} "
 
-    .line 251
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 261
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
-    .line 251
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0

@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     .prologue
-    .line 180
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 183
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     iget-object v1, v1, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mPhone:Lcom/android/internal/telephony/gsm/GSMPhone;
@@ -49,14 +47,13 @@
 
     if-nez v1, :cond_0
 
-    .line 184
-    const-string/jumbo v1, "GsmSST"
+    const-string v1, "GsmSST"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "Received Intent "
+    const-string v3, "Received Intent "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -66,10 +63,8 @@
 
     move-result-object v2
 
-    .line 185
-    const-string/jumbo v3, " while being destroyed. Ignoring."
+    const-string v3, " while being destroyed. Ignoring."
 
-    .line 184
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -80,16 +75,14 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 186
     return-void
 
-    .line 189
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
 
-    const-string/jumbo v2, "android.intent.action.LOCALE_CHANGED"
+    const-string v2, "android.intent.action.LOCALE_CHANGED"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -97,23 +90,20 @@
 
     if-eqz v1, :cond_2
 
-    .line 191
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     invoke-virtual {v1}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->updateSpnDisplay()V
 
-    .line 182
     :cond_1
     :goto_0
     return-void
 
-    .line 192
     :cond_2
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
 
-    const-string/jumbo v2, "android.intent.action.ACTION_RADIO_OFF"
+    const-string v2, "android.intent.action.ACTION_RADIO_OFF"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -121,21 +111,18 @@
 
     if-eqz v1, :cond_1
 
-    .line 193
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     const/4 v2, 0x0
 
     invoke-static {v1, v2}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->-set0(Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;Z)Z
 
-    .line 194
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     iget-object v1, v1, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mPhone:Lcom/android/internal/telephony/gsm/GSMPhone;
 
     iget-object v0, v1, Lcom/android/internal/telephony/gsm/GSMPhone;->mDcTracker:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
-    .line 195
     .local v0, "dcTracker":Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$1;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 

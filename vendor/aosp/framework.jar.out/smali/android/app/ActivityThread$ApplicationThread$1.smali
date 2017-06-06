@@ -33,7 +33,6 @@
     .param p3, "val$args"    # [Ljava/lang/String;
 
     .prologue
-    .line 1138
     iput-object p1, p0, Landroid/app/ActivityThread$ApplicationThread$1;->this$1:Landroid/app/ActivityThread$ApplicationThread;
 
     iput-object p2, p0, Landroid/app/ActivityThread$ApplicationThread$1;->val$fd:Ljava/io/FileDescriptor;
@@ -51,7 +50,6 @@
     .locals 3
 
     .prologue
-    .line 1141
     iget-object v0, p0, Landroid/app/ActivityThread$ApplicationThread$1;->this$1:Landroid/app/ActivityThread$ApplicationThread;
 
     iget-object v1, p0, Landroid/app/ActivityThread$ApplicationThread$1;->val$fd:Ljava/io/FileDescriptor;
@@ -60,6 +58,5 @@
 
     invoke-static {v0, v1, v2}, Landroid/app/ActivityThread$ApplicationThread;->-wrap0(Landroid/app/ActivityThread$ApplicationThread;Ljava/io/FileDescriptor;[Ljava/lang/String;)V
 
-    .line 1140
     return-void
 .end method

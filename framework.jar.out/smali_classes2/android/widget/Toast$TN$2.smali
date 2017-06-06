@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Landroid/widget/Toast$TN;
 
     .prologue
-    .line 338
     iput-object p1, p0, Landroid/widget/Toast$TN$2;->this$1:Landroid/widget/Toast$TN;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,18 +40,15 @@
     .locals 2
 
     .prologue
-    .line 341
     iget-object v0, p0, Landroid/widget/Toast$TN$2;->this$1:Landroid/widget/Toast$TN;
 
     invoke-virtual {v0}, Landroid/widget/Toast$TN;->handleHide()V
 
-    .line 343
     iget-object v0, p0, Landroid/widget/Toast$TN$2;->this$1:Landroid/widget/Toast$TN;
 
     const/4 v1, 0x0
 
     iput-object v1, v0, Landroid/widget/Toast$TN;->mNextView:Landroid/view/View;
 
-    .line 340
     return-void
 .end method

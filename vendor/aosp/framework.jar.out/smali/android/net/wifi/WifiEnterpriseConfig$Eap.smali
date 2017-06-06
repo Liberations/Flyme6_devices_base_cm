@@ -39,48 +39,47 @@
     .locals 3
 
     .prologue
-    .line 254
     const/4 v0, 0x7
 
     new-array v0, v0, [Ljava/lang/String;
 
-    const-string/jumbo v1, "PEAP"
+    const-string v1, "PEAP"
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    const-string/jumbo v1, "TLS"
+    const-string v1, "TLS"
 
     const/4 v2, 0x1
 
     aput-object v1, v0, v2
 
-    const-string/jumbo v1, "TTLS"
+    const-string v1, "TTLS"
 
     const/4 v2, 0x2
 
     aput-object v1, v0, v2
 
-    const-string/jumbo v1, "PWD"
+    const-string v1, "PWD"
 
     const/4 v2, 0x3
 
     aput-object v1, v0, v2
 
-    const-string/jumbo v1, "SIM"
+    const-string v1, "SIM"
 
     const/4 v2, 0x4
 
     aput-object v1, v0, v2
 
-    const-string/jumbo v1, "AKA"
+    const-string v1, "AKA"
 
     const/4 v2, 0x5
 
     aput-object v1, v0, v2
 
-    const-string/jumbo v1, "AKA\'"
+    const-string v1, "AKA\'"
 
     const/4 v2, 0x6
 
@@ -88,7 +87,6 @@
 
     sput-object v0, Landroid/net/wifi/WifiEnterpriseConfig$Eap;->strings:[Ljava/lang/String;
 
-    .line 236
     return-void
 .end method
 
@@ -96,7 +94,6 @@
     .locals 0
 
     .prologue
-    .line 257
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcyanogenmod/externalviews/ExternalView;
 
     .prologue
-    .line 220
     iput-object p1, p0, Lcyanogenmod/externalviews/ExternalView$8;->this$0:Lcyanogenmod/externalviews/ExternalView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 3
 
     .prologue
-    .line 224
     :try_start_0
     iget-object v1, p0, Lcyanogenmod/externalviews/ExternalView$8;->this$0:Lcyanogenmod/externalviews/ExternalView;
 
@@ -53,11 +51,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 222
     :goto_0
     return-void
 
-    .line 225
     :catch_0
     move-exception v0
 

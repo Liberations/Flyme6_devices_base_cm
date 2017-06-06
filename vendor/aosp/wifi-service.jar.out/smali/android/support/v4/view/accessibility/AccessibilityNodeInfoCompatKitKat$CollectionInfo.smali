@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 115
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
     .param p0, "info"    # Ljava/lang/Object;
 
     .prologue
-    .line 117
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;
 
     .end local p0    # "info":Ljava/lang/Object;
@@ -46,7 +44,6 @@
     .param p0, "info"    # Ljava/lang/Object;
 
     .prologue
-    .line 121
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;
 
     .end local p0    # "info":Ljava/lang/Object;
@@ -62,7 +59,6 @@
     .param p0, "info"    # Ljava/lang/Object;
 
     .prologue
-    .line 125
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;
 
     .end local p0    # "info":Ljava/lang/Object;

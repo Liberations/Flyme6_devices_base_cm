@@ -51,22 +51,18 @@
     .locals 1
 
     .prologue
-    .line 42
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 41
     sput-object v0, Landroid/widget/RemoteViewsService;->sRemoteViewFactories:Ljava/util/HashMap;
 
-    .line 43
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Landroid/widget/RemoteViewsService;->sLock:Ljava/lang/Object;
 
-    .line 32
     return-void
 .end method
 
@@ -74,7 +70,6 @@
     .locals 0
 
     .prologue
-    .line 32
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
     return-void
@@ -87,26 +82,21 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 236
     sget-object v4, Landroid/widget/RemoteViewsService;->sLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 237
     :try_start_0
     new-instance v1, Landroid/content/Intent$FilterComparison;
 
     invoke-direct {v1, p1}, Landroid/content/Intent$FilterComparison;-><init>(Landroid/content/Intent;)V
 
-    .line 238
     .local v1, "fc":Landroid/content/Intent$FilterComparison;
     const/4 v0, 0x0
 
-    .line 239
     .local v0, "factory":Landroid/widget/RemoteViewsService$RemoteViewsFactory;
     const/4 v2, 0x0
 
-    .line 240
     .local v2, "isCreated":Z
     sget-object v3, Landroid/widget/RemoteViewsService;->sRemoteViewFactories:Ljava/util/HashMap;
 
@@ -116,24 +106,19 @@
 
     if-nez v3, :cond_0
 
-    .line 241
     invoke-virtual {p0, p1}, Landroid/widget/RemoteViewsService;->onGetViewFactory(Landroid/content/Intent;)Landroid/widget/RemoteViewsService$RemoteViewsFactory;
 
     move-result-object v0
 
-    .line 242
     .local v0, "factory":Landroid/widget/RemoteViewsService$RemoteViewsFactory;
     sget-object v3, Landroid/widget/RemoteViewsService;->sRemoteViewFactories:Ljava/util/HashMap;
 
     invoke-virtual {v3, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 243
     invoke-interface {v0}, Landroid/widget/RemoteViewsService$RemoteViewsFactory;->onCreate()V
 
-    .line 244
     const/4 v2, 0x0
 
-    .line 249
     :goto_0
     new-instance v3, Landroid/widget/RemoteViewsService$RemoteViewsFactoryAdapter;
 
@@ -145,7 +130,6 @@
 
     return-object v3
 
-    .line 246
     .local v0, "factory":Landroid/widget/RemoteViewsService$RemoteViewsFactory;
     :cond_0
     :try_start_1
@@ -160,13 +144,11 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 247
     .local v0, "factory":Landroid/widget/RemoteViewsService$RemoteViewsFactory;
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 236
     .end local v0    # "factory":Landroid/widget/RemoteViewsService$RemoteViewsFactory;
     .end local v1    # "fc":Landroid/content/Intent$FilterComparison;
     .end local v2    # "isCreated":Z

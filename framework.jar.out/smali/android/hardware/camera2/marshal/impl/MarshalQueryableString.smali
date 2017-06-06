@@ -47,7 +47,6 @@
     .locals 1
 
     .prologue
-    .line 33
     const-class v0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableString;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -56,8 +55,7 @@
 
     sput-object v0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableString;->TAG:Ljava/lang/String;
 
-    .line 36
-    const-string/jumbo v0, "UTF-8"
+    const-string v0, "UTF-8"
 
     invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
@@ -65,7 +63,6 @@
 
     sput-object v0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableString;->UTF8_CHARSET:Ljava/nio/charset/Charset;
 
-    .line 31
     return-void
 .end method
 
@@ -73,7 +70,6 @@
     .locals 0
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -99,7 +95,6 @@
     .end annotation
 
     .prologue
-    .line 103
     .local p1, "managedType":Landroid/hardware/camera2/utils/TypeReference;, "Landroid/hardware/camera2/utils/TypeReference<Ljava/lang/String;>;"
     new-instance v0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableString$MarshalerString;
 
@@ -125,7 +120,6 @@
     .local p1, "managedType":Landroid/hardware/camera2/utils/TypeReference;, "Landroid/hardware/camera2/utils/TypeReference<Ljava/lang/String;>;"
     const/4 v0, 0x0
 
-    .line 108
     if-nez p2, :cond_0
 
     const-class v0, Ljava/lang/String;

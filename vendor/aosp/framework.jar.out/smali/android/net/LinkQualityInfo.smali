@@ -68,15 +68,12 @@
     .locals 1
 
     .prologue
-    .line 114
     new-instance v0, Landroid/net/LinkQualityInfo$1;
 
     invoke-direct {v0}, Landroid/net/LinkQualityInfo$1;-><init>()V
 
-    .line 113
     sput-object v0, Landroid/net/LinkQualityInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 31
     return-void
 .end method
 
@@ -88,39 +85,28 @@
 
     const v1, 0x7fffffff
 
-    .line 67
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 51
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/net/LinkQualityInfo;->mNetworkType:I
 
-    .line 53
     iput v1, p0, Landroid/net/LinkQualityInfo;->mNormalizedSignalStrength:I
 
-    .line 55
     iput-wide v2, p0, Landroid/net/LinkQualityInfo;->mPacketCount:J
 
-    .line 56
     iput-wide v2, p0, Landroid/net/LinkQualityInfo;->mPacketErrorCount:J
 
-    .line 57
     iput v1, p0, Landroid/net/LinkQualityInfo;->mTheoreticalTxBandwidth:I
 
-    .line 58
     iput v1, p0, Landroid/net/LinkQualityInfo;->mTheoreticalRxBandwidth:I
 
-    .line 59
     iput v1, p0, Landroid/net/LinkQualityInfo;->mTheoreticalLatency:I
 
-    .line 62
     iput-wide v2, p0, Landroid/net/LinkQualityInfo;->mLastDataSampleTime:J
 
-    .line 65
     iput v1, p0, Landroid/net/LinkQualityInfo;->mDataSampleDuration:I
 
-    .line 67
     return-void
 .end method
 
@@ -130,7 +116,6 @@
     .locals 1
 
     .prologue
-    .line 76
     const/4 v0, 0x0
 
     return v0
@@ -140,7 +125,6 @@
     .locals 1
 
     .prologue
-    .line 277
     iget v0, p0, Landroid/net/LinkQualityInfo;->mDataSampleDuration:I
 
     return v0
@@ -150,7 +134,6 @@
     .locals 2
 
     .prologue
-    .line 262
     iget-wide v0, p0, Landroid/net/LinkQualityInfo;->mLastDataSampleTime:J
 
     return-wide v0
@@ -160,7 +143,6 @@
     .locals 1
 
     .prologue
-    .line 156
     iget v0, p0, Landroid/net/LinkQualityInfo;->mNetworkType:I
 
     return v0
@@ -170,7 +152,6 @@
     .locals 1
 
     .prologue
-    .line 171
     iget v0, p0, Landroid/net/LinkQualityInfo;->mNormalizedSignalStrength:I
 
     return v0
@@ -180,7 +161,6 @@
     .locals 2
 
     .prologue
-    .line 186
     iget-wide v0, p0, Landroid/net/LinkQualityInfo;->mPacketCount:J
 
     return-wide v0
@@ -190,7 +170,6 @@
     .locals 2
 
     .prologue
-    .line 201
     iget-wide v0, p0, Landroid/net/LinkQualityInfo;->mPacketErrorCount:J
 
     return-wide v0
@@ -200,7 +179,6 @@
     .locals 1
 
     .prologue
-    .line 246
     iget v0, p0, Landroid/net/LinkQualityInfo;->mTheoreticalLatency:I
 
     return v0
@@ -210,7 +188,6 @@
     .locals 1
 
     .prologue
-    .line 231
     iget v0, p0, Landroid/net/LinkQualityInfo;->mTheoreticalRxBandwidth:I
 
     return v0
@@ -220,7 +197,6 @@
     .locals 1
 
     .prologue
-    .line 216
     iget v0, p0, Landroid/net/LinkQualityInfo;->mTheoreticalTxBandwidth:I
 
     return v0
@@ -231,70 +207,60 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 139
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/net/LinkQualityInfo;->mNetworkType:I
 
-    .line 140
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/net/LinkQualityInfo;->mNormalizedSignalStrength:I
 
-    .line 141
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/net/LinkQualityInfo;->mPacketCount:J
 
-    .line 142
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/net/LinkQualityInfo;->mPacketErrorCount:J
 
-    .line 143
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/net/LinkQualityInfo;->mTheoreticalTxBandwidth:I
 
-    .line 144
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/net/LinkQualityInfo;->mTheoreticalRxBandwidth:I
 
-    .line 145
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/net/LinkQualityInfo;->mTheoreticalLatency:I
 
-    .line 146
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/net/LinkQualityInfo;->mLastDataSampleTime:J
 
-    .line 147
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/net/LinkQualityInfo;->mDataSampleDuration:I
 
-    .line 138
     return-void
 .end method
 
@@ -303,10 +269,8 @@
     .param p1, "dataSampleDuration"    # I
 
     .prologue
-    .line 284
     iput p1, p0, Landroid/net/LinkQualityInfo;->mDataSampleDuration:I
 
-    .line 283
     return-void
 .end method
 
@@ -315,10 +279,8 @@
     .param p1, "lastDataSampleTime"    # J
 
     .prologue
-    .line 269
     iput-wide p1, p0, Landroid/net/LinkQualityInfo;->mLastDataSampleTime:J
 
-    .line 268
     return-void
 .end method
 
@@ -327,10 +289,8 @@
     .param p1, "networkType"    # I
 
     .prologue
-    .line 163
     iput p1, p0, Landroid/net/LinkQualityInfo;->mNetworkType:I
 
-    .line 162
     return-void
 .end method
 
@@ -339,10 +299,8 @@
     .param p1, "normalizedSignalStrength"    # I
 
     .prologue
-    .line 178
     iput p1, p0, Landroid/net/LinkQualityInfo;->mNormalizedSignalStrength:I
 
-    .line 177
     return-void
 .end method
 
@@ -351,10 +309,8 @@
     .param p1, "packetCount"    # J
 
     .prologue
-    .line 193
     iput-wide p1, p0, Landroid/net/LinkQualityInfo;->mPacketCount:J
 
-    .line 192
     return-void
 .end method
 
@@ -363,10 +319,8 @@
     .param p1, "packetErrorCount"    # J
 
     .prologue
-    .line 208
     iput-wide p1, p0, Landroid/net/LinkQualityInfo;->mPacketErrorCount:J
 
-    .line 207
     return-void
 .end method
 
@@ -375,10 +329,8 @@
     .param p1, "theoreticalLatency"    # I
 
     .prologue
-    .line 253
     iput p1, p0, Landroid/net/LinkQualityInfo;->mTheoreticalLatency:I
 
-    .line 252
     return-void
 .end method
 
@@ -387,10 +339,8 @@
     .param p1, "theoreticalRxBandwidth"    # I
 
     .prologue
-    .line 238
     iput p1, p0, Landroid/net/LinkQualityInfo;->mTheoreticalRxBandwidth:I
 
-    .line 237
     return-void
 .end method
 
@@ -399,10 +349,8 @@
     .param p1, "theoreticalTxBandwidth"    # I
 
     .prologue
-    .line 223
     iput p1, p0, Landroid/net/LinkQualityInfo;->mTheoreticalTxBandwidth:I
 
-    .line 222
     return-void
 .end method
 
@@ -412,12 +360,10 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 91
     const/4 v0, 0x1
 
     invoke-virtual {p0, p1, p2, v0}, Landroid/net/LinkQualityInfo;->writeToParcel(Landroid/os/Parcel;II)V
 
-    .line 90
     return-void
 .end method
 
@@ -428,54 +374,43 @@
     .param p3, "objectType"    # I
 
     .prologue
-    .line 98
     invoke-virtual {p1, p3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 99
     iget v0, p0, Landroid/net/LinkQualityInfo;->mNetworkType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 100
     iget v0, p0, Landroid/net/LinkQualityInfo;->mNormalizedSignalStrength:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 101
     iget-wide v0, p0, Landroid/net/LinkQualityInfo;->mPacketCount:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 102
     iget-wide v0, p0, Landroid/net/LinkQualityInfo;->mPacketErrorCount:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 103
     iget v0, p0, Landroid/net/LinkQualityInfo;->mTheoreticalTxBandwidth:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 104
     iget v0, p0, Landroid/net/LinkQualityInfo;->mTheoreticalRxBandwidth:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 105
     iget v0, p0, Landroid/net/LinkQualityInfo;->mTheoreticalLatency:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 106
     iget-wide v0, p0, Landroid/net/LinkQualityInfo;->mLastDataSampleTime:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 107
     iget v0, p0, Landroid/net/LinkQualityInfo;->mDataSampleDuration:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 97
     return-void
 .end method

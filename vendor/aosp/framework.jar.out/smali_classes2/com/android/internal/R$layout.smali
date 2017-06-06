@@ -303,61 +303,63 @@
 
 .field public static final simple_spinner_item:I = 0x1090008
 
-.field public static final sms_short_code_confirmation_dialog:I = 0x10900e0
+.field public static final sm_dlg:I = 0x10900e0
 
-.field public static final ssl_certificate:I = 0x10900e1
+.field public static final sms_short_code_confirmation_dialog:I = 0x10900e1
 
-.field public static final status_bar_latest_event_content:I = 0x10900e2
+.field public static final ssl_certificate:I = 0x10900e2
 
-.field public static final tab_content:I = 0x10900e4
+.field public static final status_bar_latest_event_content:I = 0x10900e3
 
-.field public static final tab_indicator_holo:I = 0x10900e6
+.field public static final tab_content:I = 0x10900e5
+
+.field public static final tab_indicator_holo:I = 0x10900e7
 
 .field public static final test_list_item:I = 0x109000c
 
-.field public static final text_drag_thumbnail:I = 0x10900e8
+.field public static final text_drag_thumbnail:I = 0x10900e9
 
-.field public static final text_edit_action_popup_text:I = 0x10900e9
+.field public static final text_edit_action_popup_text:I = 0x10900ea
 
-.field public static final textview_hint:I = 0x10900f0
+.field public static final textview_hint:I = 0x10900f1
 
-.field public static final time_picker_dialog:I = 0x10900f1
+.field public static final time_picker_dialog:I = 0x10900f2
 
-.field public static final time_picker_header_material:I = 0x10900f2
+.field public static final time_picker_header_material:I = 0x10900f3
 
-.field public static final time_picker_legacy:I = 0x10900f3
+.field public static final time_picker_legacy:I = 0x10900f4
 
-.field public static final time_picker_material:I = 0x10900f5
+.field public static final time_picker_material:I = 0x10900f6
 
-.field public static final transient_notification:I = 0x10900f6
+.field public static final transient_notification:I = 0x10900f7
 
 .field public static final two_line_list_item:I = 0x109000d
 
-.field public static final typing_filter:I = 0x10900f8
+.field public static final typing_filter:I = 0x10900f9
 
-.field public static final usb_storage_activity:I = 0x10900f9
+.field public static final usb_storage_activity:I = 0x10900fa
 
-.field public static final user_switching_dialog:I = 0x10900fa
+.field public static final user_switching_dialog:I = 0x10900fb
 
-.field public static final voice_interaction_session:I = 0x10900fb
+.field public static final voice_interaction_session:I = 0x10900fc
 
-.field public static final web_text_view_dropdown:I = 0x10900fd
+.field public static final web_text_view_dropdown:I = 0x10900fe
 
-.field public static final webview_find:I = 0x10900fe
+.field public static final webview_find:I = 0x10900ff
 
-.field public static final webview_select_singlechoice:I = 0x10900ff
+.field public static final webview_select_singlechoice:I = 0x1090100
 
-.field public static final wifi_p2p_dialog:I = 0x1090100
+.field public static final wifi_p2p_dialog:I = 0x1090101
 
-.field public static final wifi_p2p_dialog_row:I = 0x1090101
+.field public static final wifi_p2p_dialog_row:I = 0x1090102
 
-.field public static final year_label_text_view:I = 0x1090102
+.field public static final year_label_text_view:I = 0x1090103
 
-.field public static final zoom_container:I = 0x1090104
+.field public static final zoom_container:I = 0x1090105
 
-.field public static final zoom_controls:I = 0x1090105
+.field public static final zoom_controls:I = 0x1090106
 
-.field public static final zoom_magnify:I = 0x1090106
+.field public static final zoom_magnify:I = 0x1090107
 
 
 # direct methods
@@ -365,7 +367,6 @@
     .locals 0
 
     .prologue
-    .line 17718
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 123
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
     .param p1, "device"    # Landroid/media/midi/MidiDeviceInfo;
 
     .prologue
-    .line 129
     return-void
 .end method
 
@@ -41,7 +39,6 @@
     .param p1, "device"    # Landroid/media/midi/MidiDeviceInfo;
 
     .prologue
-    .line 137
     return-void
 .end method
 
@@ -50,6 +47,5 @@
     .param p1, "status"    # Landroid/media/midi/MidiDeviceStatus;
 
     .prologue
-    .line 145
     return-void
 .end method

@@ -38,11 +38,9 @@
     .locals 0
 
     .prologue
-    .line 54
     .local p0, "this":Landroid/support/v4/util/ArrayMap;, "Landroid/support/v4/util/ArrayMap<TK;TV;>;"
     invoke-direct {p0}, Landroid/support/v4/util/SimpleArrayMap;-><init>()V
 
-    .line 53
     return-void
 .end method
 
@@ -51,11 +49,9 @@
     .param p1, "capacity"    # I
 
     .prologue
-    .line 61
     .local p0, "this":Landroid/support/v4/util/ArrayMap;, "Landroid/support/v4/util/ArrayMap<TK;TV;>;"
     invoke-direct {p0, p1}, Landroid/support/v4/util/SimpleArrayMap;-><init>(I)V
 
-    .line 60
     return-void
 .end method
 
@@ -64,11 +60,9 @@
     .param p1, "map"    # Landroid/support/v4/util/SimpleArrayMap;
 
     .prologue
-    .line 68
     .local p0, "this":Landroid/support/v4/util/ArrayMap;, "Landroid/support/v4/util/ArrayMap<TK;TV;>;"
     invoke-direct {p0, p1}, Landroid/support/v4/util/SimpleArrayMap;-><init>(Landroid/support/v4/util/SimpleArrayMap;)V
 
-    .line 67
     return-void
 .end method
 
@@ -83,20 +77,17 @@
     .end annotation
 
     .prologue
-    .line 72
     .local p0, "this":Landroid/support/v4/util/ArrayMap;, "Landroid/support/v4/util/ArrayMap<TK;TV;>;"
     iget-object v0, p0, Landroid/support/v4/util/ArrayMap;->mCollections:Landroid/support/v4/util/MapCollections;
 
     if-nez v0, :cond_0
 
-    .line 73
     new-instance v0, Landroid/support/v4/util/ArrayMap$1;
 
     invoke-direct {v0, p0}, Landroid/support/v4/util/ArrayMap$1;-><init>(Landroid/support/v4/util/ArrayMap;)V
 
     iput-object v0, p0, Landroid/support/v4/util/ArrayMap;->mCollections:Landroid/support/v4/util/MapCollections;
 
-    .line 120
     :cond_0
     iget-object v0, p0, Landroid/support/v4/util/ArrayMap;->mCollections:Landroid/support/v4/util/MapCollections;
 
@@ -116,7 +107,6 @@
     .end annotation
 
     .prologue
-    .line 130
     .local p0, "this":Landroid/support/v4/util/ArrayMap;, "Landroid/support/v4/util/ArrayMap<TK;TV;>;"
     .local p1, "collection":Ljava/util/Collection;, "Ljava/util/Collection<*>;"
     invoke-static {p0, p1}, Landroid/support/v4/util/MapCollections;->containsAllHelper(Ljava/util/Map;Ljava/util/Collection;)Z
@@ -139,7 +129,6 @@
     .end annotation
 
     .prologue
-    .line 179
     .local p0, "this":Landroid/support/v4/util/ArrayMap;, "Landroid/support/v4/util/ArrayMap<TK;TV;>;"
     invoke-direct {p0}, Landroid/support/v4/util/ArrayMap;->getCollection()Landroid/support/v4/util/MapCollections;
 
@@ -163,7 +152,6 @@
     .end annotation
 
     .prologue
-    .line 191
     .local p0, "this":Landroid/support/v4/util/ArrayMap;, "Landroid/support/v4/util/ArrayMap<TK;TV;>;"
     invoke-direct {p0}, Landroid/support/v4/util/ArrayMap;->getCollection()Landroid/support/v4/util/MapCollections;
 
@@ -187,7 +175,6 @@
     .end annotation
 
     .prologue
-    .line 139
     .local p0, "this":Landroid/support/v4/util/ArrayMap;, "Landroid/support/v4/util/ArrayMap<TK;TV;>;"
     .local p1, "map":Ljava/util/Map;, "Ljava/util/Map<+TK;+TV;>;"
     iget v2, p0, Landroid/support/v4/util/ArrayMap;->mSize:I
@@ -200,7 +187,6 @@
 
     invoke-virtual {p0, v2}, Landroid/support/v4/util/ArrayMap;->ensureCapacity(I)V
 
-    .line 140
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v2
@@ -223,7 +209,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 141
     .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<+TK;+TV;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -237,7 +222,6 @@
 
     goto :goto_0
 
-    .line 138
     .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<+TK;+TV;>;"
     :cond_0
     return-void
@@ -254,7 +238,6 @@
     .end annotation
 
     .prologue
-    .line 151
     .local p0, "this":Landroid/support/v4/util/ArrayMap;, "Landroid/support/v4/util/ArrayMap<TK;TV;>;"
     .local p1, "collection":Ljava/util/Collection;, "Ljava/util/Collection<*>;"
     invoke-static {p0, p1}, Landroid/support/v4/util/MapCollections;->removeAllHelper(Ljava/util/Map;Ljava/util/Collection;)Z
@@ -275,7 +258,6 @@
     .end annotation
 
     .prologue
-    .line 161
     .local p0, "this":Landroid/support/v4/util/ArrayMap;, "Landroid/support/v4/util/ArrayMap<TK;TV;>;"
     .local p1, "collection":Ljava/util/Collection;, "Ljava/util/Collection<*>;"
     invoke-static {p0, p1}, Landroid/support/v4/util/MapCollections;->retainAllHelper(Ljava/util/Map;Ljava/util/Collection;)Z
@@ -296,7 +278,6 @@
     .end annotation
 
     .prologue
-    .line 203
     .local p0, "this":Landroid/support/v4/util/ArrayMap;, "Landroid/support/v4/util/ArrayMap<TK;TV;>;"
     invoke-direct {p0}, Landroid/support/v4/util/ArrayMap;->getCollection()Landroid/support/v4/util/MapCollections;
 

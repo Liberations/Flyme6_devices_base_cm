@@ -43,15 +43,12 @@
     .end annotation
 
     .prologue
-    .line 131
     .local p3, "payloadIntents":Ljava/util/List;, "Ljava/util/List<Landroid/content/Intent;>;"
     .local p5, "rList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     iput-object p1, p0, Lcom/android/internal/app/ResolverProxy$ProxyListAdapter;->this$0:Lcom/android/internal/app/ResolverProxy;
 
-    .line 134
     invoke-direct/range {p0 .. p7}, Lcom/android/internal/app/ResolverActivity$ResolveListAdapter;-><init>(Lcom/android/internal/app/ResolverActivity;Landroid/content/Context;Ljava/util/List;[Landroid/content/Intent;Ljava/util/List;IZ)V
 
-    .line 133
     return-void
 .end method
 
@@ -266,7 +263,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 139
     if-ltz p1, :cond_0
 
     iget-object v0, p0, Lcom/android/internal/app/ResolverProxy$ProxyListAdapter;->mDisplayList:Ljava/util/List;
@@ -277,7 +273,6 @@
 
     if-ge p1, v0, :cond_0
 
-    .line 140
     iget-object v0, p0, Lcom/android/internal/app/ResolverProxy$ProxyListAdapter;->mDisplayList:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
@@ -288,7 +283,6 @@
 
     return-object v0
 
-    .line 142
     :cond_0
     const/4 v0, 0x0
 

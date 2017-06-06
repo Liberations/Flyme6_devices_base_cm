@@ -25,7 +25,6 @@
     .param p2, "$anonymous0"    # Landroid/os/Handler;
 
     .prologue
-    .line 1328
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$7;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -42,7 +41,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 1331
     iget-object v1, p0, Lcom/android/server/wifi/WifiStateMachine$7;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-static {v1}, Lcom/android/server/wifi/WifiStateMachine;->-get102(Lcom/android/server/wifi/WifiStateMachine;)Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -59,10 +57,8 @@
 
     move-result-object v2
 
-    .line 1332
-    const-string/jumbo v3, "wifi_suspend_optimizations_enabled"
+    const-string v3, "wifi_suspend_optimizations_enabled"
 
-    .line 1331
     invoke-static {v2, v3, v0}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v2
@@ -72,10 +68,8 @@
     :goto_0
     invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 1330
     return-void
 
-    .line 1331
     :cond_0
     const/4 v0, 0x0
 

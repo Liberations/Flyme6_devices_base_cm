@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,15 +37,12 @@
     .param p1, "editor"    # Landroid/media/RemoteControlClient$MetadataEditor;
 
     .prologue
-    .line 68
     if-nez p0, :cond_0
 
-    .line 69
     return-void
 
-    .line 71
     :cond_0
-    const-string/jumbo v0, "android.media.metadata.YEAR"
+    const-string v0, "android.media.metadata.YEAR"
 
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
@@ -54,21 +50,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 73
-    const-string/jumbo v0, "android.media.metadata.YEAR"
+    const-string v0, "android.media.metadata.YEAR"
 
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
 
     move-result-wide v0
 
-    .line 72
     const/16 v2, 0x8
 
     invoke-virtual {p1, v2, v0, v1}, Landroid/media/RemoteControlClient$MetadataEditor;->putLong(IJ)Landroid/media/RemoteControlClient$MetadataEditor;
 
-    .line 75
     :cond_1
-    const-string/jumbo v0, "android.media.metadata.RATING"
+    const-string v0, "android.media.metadata.RATING"
 
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
@@ -76,21 +69,18 @@
 
     if-eqz v0, :cond_2
 
-    .line 77
-    const-string/jumbo v0, "android.media.metadata.RATING"
+    const-string v0, "android.media.metadata.RATING"
 
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v0
 
-    .line 76
     const/16 v1, 0x65
 
     invoke-virtual {p1, v1, v0}, Landroid/media/RemoteControlClient$MetadataEditor;->putObject(ILjava/lang/Object;)Landroid/media/MediaMetadataEditor;
 
-    .line 79
     :cond_2
-    const-string/jumbo v0, "android.media.metadata.USER_RATING"
+    const-string v0, "android.media.metadata.USER_RATING"
 
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
@@ -98,19 +88,16 @@
 
     if-eqz v0, :cond_3
 
-    .line 81
-    const-string/jumbo v0, "android.media.metadata.USER_RATING"
+    const-string v0, "android.media.metadata.USER_RATING"
 
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v0
 
-    .line 80
     const v1, 0x10000001
 
     invoke-virtual {p1, v1, v0}, Landroid/media/RemoteControlClient$MetadataEditor;->putObject(ILjava/lang/Object;)Landroid/media/MediaMetadataEditor;
 
-    .line 67
     :cond_3
     return-void
 .end method
@@ -120,7 +107,6 @@
     .param p0, "callback"    # Landroid/support/v4/media/session/MediaSessionCompatApi14$Callback;
 
     .prologue
-    .line 39
     new-instance v0, Landroid/support/v4/media/session/MediaSessionCompatApi19$OnMetadataUpdateListener;
 
     invoke-direct {v0, p0}, Landroid/support/v4/media/session/MediaSessionCompatApi19$OnMetadataUpdateListener;-><init>(Landroid/support/v4/media/session/MediaSessionCompatApi14$Callback;)V
@@ -133,12 +119,10 @@
     .param p0, "actions"    # J
 
     .prologue
-    .line 60
     invoke-static {p0, p1}, Landroid/support/v4/media/session/MediaSessionCompatApi18;->getRccTransportControlFlagsFromActions(J)I
 
     move-result v0
 
-    .line 61
     .local v0, "transportControlFlags":I
     const-wide/16 v2, 0x80
 
@@ -150,10 +134,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 62
     or-int/lit16 v0, v0, 0x200
 
-    .line 64
     :cond_0
     return v0
 .end method
@@ -165,26 +147,20 @@
     .param p2, "actions"    # J
 
     .prologue
-    .line 43
     check-cast p0, Landroid/media/RemoteControlClient;
 
-    .line 44
     .end local p0    # "rccObj":Ljava/lang/Object;
     const/4 v1, 0x1
 
-    .line 43
     invoke-virtual {p0, v1}, Landroid/media/RemoteControlClient;->editMetadata(Z)Landroid/media/RemoteControlClient$MetadataEditor;
 
     move-result-object v0
 
-    .line 45
     .local v0, "editor":Landroid/media/RemoteControlClient$MetadataEditor;
     invoke-static {p1, v0}, Landroid/support/v4/media/session/MediaSessionCompatApi14;->buildOldMetadata(Landroid/os/Bundle;Landroid/media/RemoteControlClient$MetadataEditor;)V
 
-    .line 46
     invoke-static {p1, v0}, Landroid/support/v4/media/session/MediaSessionCompatApi19;->addNewMetadata(Landroid/os/Bundle;Landroid/media/RemoteControlClient$MetadataEditor;)V
 
-    .line 47
     const-wide/16 v2, 0x80
 
     and-long/2addr v2, p2
@@ -195,16 +171,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 48
     const v1, 0x10000001
 
     invoke-virtual {v0, v1}, Landroid/media/RemoteControlClient$MetadataEditor;->addEditableKey(I)V
 
-    .line 50
     :cond_0
     invoke-virtual {v0}, Landroid/media/RemoteControlClient$MetadataEditor;->apply()V
 
-    .line 42
     return-void
 .end method
 
@@ -214,18 +187,14 @@
     .param p1, "onMetadataUpdateObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 54
     check-cast p0, Landroid/media/RemoteControlClient;
 
-    .line 55
     .end local p0    # "rccObj":Ljava/lang/Object;
     check-cast p1, Landroid/media/RemoteControlClient$OnMetadataUpdateListener;
 
-    .line 54
     .end local p1    # "onMetadataUpdateObj":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Landroid/media/RemoteControlClient;->setMetadataUpdateListener(Landroid/media/RemoteControlClient$OnMetadataUpdateListener;)V
 
-    .line 53
     return-void
 .end method
 
@@ -235,18 +204,14 @@
     .param p1, "actions"    # J
 
     .prologue
-    .line 34
     check-cast p0, Landroid/media/RemoteControlClient;
 
-    .line 35
     .end local p0    # "rccObj":Ljava/lang/Object;
     invoke-static {p1, p2}, Landroid/support/v4/media/session/MediaSessionCompatApi19;->getRccTransportControlFlagsFromActions(J)I
 
     move-result v0
 
-    .line 34
     invoke-virtual {p0, v0}, Landroid/media/RemoteControlClient;->setTransportControlFlags(I)V
 
-    .line 33
     return-void
 .end method

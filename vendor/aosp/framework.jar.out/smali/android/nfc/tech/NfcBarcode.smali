@@ -28,20 +28,16 @@
     .prologue
     const/16 v1, 0xa
 
-    .line 64
     invoke-direct {p0, p1, v1}, Landroid/nfc/tech/BasicTagTechnology;-><init>(Landroid/nfc/Tag;I)V
 
-    .line 65
     invoke-virtual {p1, v1}, Landroid/nfc/Tag;->getTechExtras(I)Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 66
     .local v0, "extras":Landroid/os/Bundle;
     if-eqz v0, :cond_0
 
-    .line 67
-    const-string/jumbo v1, "barcodetype"
+    const-string v1, "barcodetype"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -49,14 +45,12 @@
 
     iput v1, p0, Landroid/nfc/tech/NfcBarcode;->mType:I
 
-    .line 63
     return-void
 
-    .line 69
     :cond_0
     new-instance v1, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v2, "NfcBarcode tech extras are null."
+    const-string v2, "NfcBarcode tech extras are null."
 
     invoke-direct {v1, v2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
@@ -70,7 +64,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 51
     const/16 v1, 0xa
 
     invoke-virtual {p0, v1}, Landroid/nfc/Tag;->hasTech(I)Z
@@ -81,7 +74,6 @@
 
     return-object v2
 
-    .line 53
     :cond_0
     :try_start_0
     new-instance v1, Landroid/nfc/tech/NfcBarcode;
@@ -92,11 +84,9 @@
 
     return-object v1
 
-    .line 54
     :catch_0
     move-exception v0
 
-    .line 55
     .local v0, "e":Landroid/os/RemoteException;
     return-object v2
 .end method
@@ -125,17 +115,14 @@
     .locals 1
 
     .prologue
-    .line 122
     iget v0, p0, Landroid/nfc/tech/NfcBarcode;->mType:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 127
     const/4 v0, 0x0
 
     return-object v0
 
-    .line 125
     :pswitch_0
     iget-object v0, p0, Landroid/nfc/tech/NfcBarcode;->mTag:Landroid/nfc/Tag;
 
@@ -145,7 +132,6 @@
 
     return-object v0
 
-    .line 122
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -167,7 +153,6 @@
     .locals 1
 
     .prologue
-    .line 83
     iget v0, p0, Landroid/nfc/tech/NfcBarcode;->mType:I
 
     return v0

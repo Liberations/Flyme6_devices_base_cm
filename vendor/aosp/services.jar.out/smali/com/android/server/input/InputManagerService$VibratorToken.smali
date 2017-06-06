@@ -38,21 +38,16 @@
     .param p4, "tokenValue"    # I
 
     .prologue
-    .line 2050
     iput-object p1, p0, Lcom/android/server/input/InputManagerService$VibratorToken;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2051
     iput p2, p0, Lcom/android/server/input/InputManagerService$VibratorToken;->mDeviceId:I
 
-    .line 2052
     iput-object p3, p0, Lcom/android/server/input/InputManagerService$VibratorToken;->mToken:Landroid/os/IBinder;
 
-    .line 2053
     iput p4, p0, Lcom/android/server/input/InputManagerService$VibratorToken;->mTokenValue:I
 
-    .line 2050
     return-void
 .end method
 
@@ -62,11 +57,9 @@
     .locals 1
 
     .prologue
-    .line 2061
     iget-object v0, p0, Lcom/android/server/input/InputManagerService$VibratorToken;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-virtual {v0, p0}, Lcom/android/server/input/InputManagerService;->onVibratorTokenDied(Lcom/android/server/input/InputManagerService$VibratorToken;)V
 
-    .line 2057
     return-void
 .end method

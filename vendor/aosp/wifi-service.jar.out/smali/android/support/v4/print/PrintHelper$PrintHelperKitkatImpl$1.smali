@@ -30,7 +30,6 @@
     .param p2, "val$callback"    # Landroid/support/v4/print/PrintHelper$OnPrintFinishCallback;
 
     .prologue
-    .line 198
     iput-object p1, p0, Landroid/support/v4/print/PrintHelper$PrintHelperKitkatImpl$1;->this$1:Landroid/support/v4/print/PrintHelper$PrintHelperKitkatImpl;
 
     iput-object p2, p0, Landroid/support/v4/print/PrintHelper$PrintHelperKitkatImpl$1;->val$callback:Landroid/support/v4/print/PrintHelper$OnPrintFinishCallback;
@@ -46,11 +45,9 @@
     .locals 1
 
     .prologue
-    .line 201
     iget-object v0, p0, Landroid/support/v4/print/PrintHelper$PrintHelperKitkatImpl$1;->val$callback:Landroid/support/v4/print/PrintHelper$OnPrintFinishCallback;
 
     invoke-interface {v0}, Landroid/support/v4/print/PrintHelper$OnPrintFinishCallback;->onFinish()V
 
-    .line 200
     return-void
 .end method

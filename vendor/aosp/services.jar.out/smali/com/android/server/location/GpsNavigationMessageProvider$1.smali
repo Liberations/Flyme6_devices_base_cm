@@ -40,7 +40,6 @@
     .param p2, "val$event"    # Landroid/location/GpsNavigationMessageEvent;
 
     .prologue
-    .line 42
     iput-object p1, p0, Lcom/android/server/location/GpsNavigationMessageProvider$1;->this$0:Lcom/android/server/location/GpsNavigationMessageProvider;
 
     iput-object p2, p0, Lcom/android/server/location/GpsNavigationMessageProvider$1;->val$event:Landroid/location/GpsNavigationMessageEvent;
@@ -62,12 +61,10 @@
     .end annotation
 
     .prologue
-    .line 46
     iget-object v0, p0, Lcom/android/server/location/GpsNavigationMessageProvider$1;->val$event:Landroid/location/GpsNavigationMessageEvent;
 
     invoke-interface {p1, v0}, Landroid/location/IGpsNavigationMessageListener;->onGpsNavigationMessageReceived(Landroid/location/GpsNavigationMessageEvent;)V
 
-    .line 45
     return-void
 .end method
 
@@ -81,7 +78,6 @@
     .end annotation
 
     .prologue
-    .line 44
     check-cast p1, Landroid/location/IGpsNavigationMessageListener;
 
     .end local p1    # "listener":Landroid/os/IInterface;

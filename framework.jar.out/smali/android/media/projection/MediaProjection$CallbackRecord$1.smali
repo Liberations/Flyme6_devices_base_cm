@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Landroid/media/projection/MediaProjection$CallbackRecord;
 
     .prologue
-    .line 203
     iput-object p1, p0, Landroid/media/projection/MediaProjection$CallbackRecord$1;->this$1:Landroid/media/projection/MediaProjection$CallbackRecord;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 206
     iget-object v0, p0, Landroid/media/projection/MediaProjection$CallbackRecord$1;->this$1:Landroid/media/projection/MediaProjection$CallbackRecord;
 
     invoke-static {v0}, Landroid/media/projection/MediaProjection$CallbackRecord;->-get0(Landroid/media/projection/MediaProjection$CallbackRecord;)Landroid/media/projection/MediaProjection$Callback;
@@ -50,6 +48,5 @@
 
     invoke-virtual {v0}, Landroid/media/projection/MediaProjection$Callback;->onStop()V
 
-    .line 205
     return-void
 .end method

@@ -216,7 +216,6 @@
     .locals 0
 
     .prologue
-    .line 270
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -227,15 +226,13 @@
     .param p0, "cause"    # I
 
     .prologue
-    .line 276
     sparse-switch p0, :sswitch_data_0
 
-    .line 476
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "INVALID: "
+    const-string v1, "INVALID: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -251,601 +248,501 @@
 
     return-object v0
 
-    .line 278
     :sswitch_0
-    const-string/jumbo v0, "NOT_DISCONNECTED"
+    const-string v0, "NOT_DISCONNECTED"
 
     return-object v0
 
-    .line 280
     :sswitch_1
-    const-string/jumbo v0, "INCOMING_MISSED"
+    const-string v0, "INCOMING_MISSED"
 
     return-object v0
 
-    .line 282
     :sswitch_2
-    const-string/jumbo v0, "NORMAL"
+    const-string v0, "NORMAL"
 
     return-object v0
 
-    .line 284
     :sswitch_3
-    const-string/jumbo v0, "LOCAL"
+    const-string v0, "LOCAL"
 
     return-object v0
 
-    .line 286
     :sswitch_4
-    const-string/jumbo v0, "BUSY"
+    const-string v0, "BUSY"
 
     return-object v0
 
-    .line 288
     :sswitch_5
-    const-string/jumbo v0, "CONGESTION"
+    const-string v0, "CONGESTION"
 
     return-object v0
 
-    .line 290
     :sswitch_6
-    const-string/jumbo v0, "INVALID_NUMBER"
+    const-string v0, "INVALID_NUMBER"
 
     return-object v0
 
-    .line 292
     :sswitch_7
-    const-string/jumbo v0, "NUMBER_UNREACHABLE"
+    const-string v0, "NUMBER_UNREACHABLE"
 
     return-object v0
 
-    .line 294
     :sswitch_8
-    const-string/jumbo v0, "SERVER_UNREACHABLE"
+    const-string v0, "SERVER_UNREACHABLE"
 
     return-object v0
 
-    .line 296
     :sswitch_9
-    const-string/jumbo v0, "INVALID_CREDENTIALS"
+    const-string v0, "INVALID_CREDENTIALS"
 
     return-object v0
 
-    .line 298
     :sswitch_a
-    const-string/jumbo v0, "OUT_OF_NETWORK"
+    const-string v0, "OUT_OF_NETWORK"
 
     return-object v0
 
-    .line 300
     :sswitch_b
-    const-string/jumbo v0, "SERVER_ERROR"
+    const-string v0, "SERVER_ERROR"
 
     return-object v0
 
-    .line 302
     :sswitch_c
-    const-string/jumbo v0, "TIMED_OUT"
+    const-string v0, "TIMED_OUT"
 
     return-object v0
 
-    .line 304
     :sswitch_d
-    const-string/jumbo v0, "LOST_SIGNAL"
+    const-string v0, "LOST_SIGNAL"
 
     return-object v0
 
-    .line 306
     :sswitch_e
-    const-string/jumbo v0, "LIMIT_EXCEEDED"
+    const-string v0, "LIMIT_EXCEEDED"
 
     return-object v0
 
-    .line 308
     :sswitch_f
-    const-string/jumbo v0, "INCOMING_REJECTED"
+    const-string v0, "INCOMING_REJECTED"
 
     return-object v0
 
-    .line 310
     :sswitch_10
-    const-string/jumbo v0, "POWER_OFF"
+    const-string v0, "POWER_OFF"
 
     return-object v0
 
-    .line 312
     :sswitch_11
-    const-string/jumbo v0, "OUT_OF_SERVICE"
+    const-string v0, "OUT_OF_SERVICE"
 
     return-object v0
 
-    .line 314
     :sswitch_12
-    const-string/jumbo v0, "ICC_ERROR"
+    const-string v0, "ICC_ERROR"
 
     return-object v0
 
-    .line 316
     :sswitch_13
-    const-string/jumbo v0, "CALL_BARRED"
+    const-string v0, "CALL_BARRED"
 
     return-object v0
 
-    .line 318
     :sswitch_14
-    const-string/jumbo v0, "FDN_BLOCKED"
+    const-string v0, "FDN_BLOCKED"
 
     return-object v0
 
-    .line 320
     :sswitch_15
-    const-string/jumbo v0, "CS_RESTRICTED"
+    const-string v0, "CS_RESTRICTED"
 
     return-object v0
 
-    .line 322
     :sswitch_16
-    const-string/jumbo v0, "CS_RESTRICTED_NORMAL"
+    const-string v0, "CS_RESTRICTED_NORMAL"
 
     return-object v0
 
-    .line 324
     :sswitch_17
-    const-string/jumbo v0, "CS_RESTRICTED_EMERGENCY"
+    const-string v0, "CS_RESTRICTED_EMERGENCY"
 
     return-object v0
 
-    .line 326
     :sswitch_18
-    const-string/jumbo v0, "UNOBTAINABLE_NUMBER"
+    const-string v0, "UNOBTAINABLE_NUMBER"
 
     return-object v0
 
-    .line 328
     :sswitch_19
-    const-string/jumbo v0, "CDMA_LOCKED_UNTIL_POWER_CYCLE"
+    const-string v0, "CDMA_LOCKED_UNTIL_POWER_CYCLE"
 
     return-object v0
 
-    .line 330
     :sswitch_1a
-    const-string/jumbo v0, "CDMA_DROP"
+    const-string v0, "CDMA_DROP"
 
     return-object v0
 
-    .line 332
     :sswitch_1b
-    const-string/jumbo v0, "CDMA_INTERCEPT"
+    const-string v0, "CDMA_INTERCEPT"
 
     return-object v0
 
-    .line 334
     :sswitch_1c
-    const-string/jumbo v0, "CDMA_REORDER"
+    const-string v0, "CDMA_REORDER"
 
     return-object v0
 
-    .line 336
     :sswitch_1d
-    const-string/jumbo v0, "CDMA_SO_REJECT"
+    const-string v0, "CDMA_SO_REJECT"
 
     return-object v0
 
-    .line 338
     :sswitch_1e
-    const-string/jumbo v0, "CDMA_RETRY_ORDER"
+    const-string v0, "CDMA_RETRY_ORDER"
 
     return-object v0
 
-    .line 340
     :sswitch_1f
-    const-string/jumbo v0, "CDMA_ACCESS_FAILURE"
+    const-string v0, "CDMA_ACCESS_FAILURE"
 
     return-object v0
 
-    .line 342
     :sswitch_20
-    const-string/jumbo v0, "CDMA_PREEMPTED"
+    const-string v0, "CDMA_PREEMPTED"
 
     return-object v0
 
-    .line 344
     :sswitch_21
-    const-string/jumbo v0, "CDMA_NOT_EMERGENCY"
+    const-string v0, "CDMA_NOT_EMERGENCY"
 
     return-object v0
 
-    .line 346
     :sswitch_22
-    const-string/jumbo v0, "CDMA_ACCESS_BLOCKED"
+    const-string v0, "CDMA_ACCESS_BLOCKED"
 
     return-object v0
 
-    .line 348
     :sswitch_23
-    const-string/jumbo v0, "EMERGENCY_ONLY"
+    const-string v0, "EMERGENCY_ONLY"
 
     return-object v0
 
-    .line 350
     :sswitch_24
-    const-string/jumbo v0, "NO_PHONE_NUMBER_SUPPLIED"
+    const-string v0, "NO_PHONE_NUMBER_SUPPLIED"
 
     return-object v0
 
-    .line 352
     :sswitch_25
-    const-string/jumbo v0, "DIALED_MMI"
+    const-string v0, "DIALED_MMI"
 
     return-object v0
 
-    .line 354
     :sswitch_26
-    const-string/jumbo v0, "VOICEMAIL_NUMBER_MISSING"
+    const-string v0, "VOICEMAIL_NUMBER_MISSING"
 
     return-object v0
 
-    .line 356
     :sswitch_27
-    const-string/jumbo v0, "CDMA_CALL_LOST"
+    const-string v0, "CDMA_CALL_LOST"
 
     return-object v0
 
-    .line 358
     :sswitch_28
-    const-string/jumbo v0, "EXITED_ECM"
+    const-string v0, "EXITED_ECM"
 
     return-object v0
 
-    .line 360
     :sswitch_29
-    const-string/jumbo v0, "DIAL_MODIFIED_TO_USSD"
+    const-string v0, "DIAL_MODIFIED_TO_USSD"
 
     return-object v0
 
-    .line 362
     :sswitch_2a
-    const-string/jumbo v0, "DIAL_MODIFIED_TO_SS"
+    const-string v0, "DIAL_MODIFIED_TO_SS"
 
     return-object v0
 
-    .line 364
     :sswitch_2b
-    const-string/jumbo v0, "DIAL_MODIFIED_TO_DIAL"
+    const-string v0, "DIAL_MODIFIED_TO_DIAL"
 
     return-object v0
 
-    .line 366
     :sswitch_2c
-    const-string/jumbo v0, "ERROR_UNSPECIFIED"
+    const-string v0, "ERROR_UNSPECIFIED"
 
     return-object v0
 
-    .line 368
     :sswitch_2d
-    const-string/jumbo v0, "OUTGOING_FAILURE"
+    const-string v0, "OUTGOING_FAILURE"
 
     return-object v0
 
-    .line 370
     :sswitch_2e
-    const-string/jumbo v0, "OUTGOING_CANCELED"
+    const-string v0, "OUTGOING_CANCELED"
 
     return-object v0
 
-    .line 372
     :sswitch_2f
-    const-string/jumbo v0, "IMS_MERGED_SUCCESSFULLY"
+    const-string v0, "IMS_MERGED_SUCCESSFULLY"
 
     return-object v0
 
-    .line 374
     :sswitch_30
-    const-string/jumbo v0, "CDMA_ALREADY_ACTIVATED"
+    const-string v0, "CDMA_ALREADY_ACTIVATED"
 
     return-object v0
 
-    .line 376
     :sswitch_31
-    const-string/jumbo v0, "NON_SELECTED_USER_CLEARING"
+    const-string v0, "NON_SELECTED_USER_CLEARING"
 
     return-object v0
 
-    .line 378
     :sswitch_32
-    const-string/jumbo v0, "HO_NOT_FEASIBLE"
+    const-string v0, "HO_NOT_FEASIBLE"
 
     return-object v0
 
-    .line 380
     :sswitch_33
-    const-string/jumbo v0, "NO_CIRCUIT_AVAIL"
+    const-string v0, "NO_CIRCUIT_AVAIL"
 
     return-object v0
 
-    .line 382
     :sswitch_34
-    const-string/jumbo v0, "NO_ROUTE_TO_DESTINAON"
+    const-string v0, "NO_ROUTE_TO_DESTINAON"
 
     return-object v0
 
-    .line 384
     :sswitch_35
-    const-string/jumbo v0, "OPERATOR_DETERMINED_BARRING"
+    const-string v0, "OPERATOR_DETERMINED_BARRING"
 
     return-object v0
 
-    .line 386
     :sswitch_36
-    const-string/jumbo v0, "CALL_FAIL_NO_USER_RESPONDING"
+    const-string v0, "CALL_FAIL_NO_USER_RESPONDING"
 
     return-object v0
 
-    .line 388
     :sswitch_37
-    const-string/jumbo v0, "CALL_FAIL_NO_ANSWER_FROM_USER"
+    const-string v0, "CALL_FAIL_NO_ANSWER_FROM_USER"
 
     return-object v0
 
-    .line 390
     :sswitch_38
-    const-string/jumbo v0, "CALL_FAIL_DESTINATION_OUT_OF_ORDER"
+    const-string v0, "CALL_FAIL_DESTINATION_OUT_OF_ORDER"
 
     return-object v0
 
-    .line 392
     :sswitch_39
-    const-string/jumbo v0, "BEARER_CAPABILITY_NOT_AUTHORIZED"
+    const-string v0, "BEARER_CAPABILITY_NOT_AUTHORIZED"
 
     return-object v0
 
-    .line 394
     :sswitch_3a
-    const-string/jumbo v0, "CHANNEL_UNACCEPTABLE"
+    const-string v0, "CHANNEL_UNACCEPTABLE"
 
     return-object v0
 
-    .line 396
     :sswitch_3b
-    const-string/jumbo v0, "CALL_REJECTED"
+    const-string v0, "CALL_REJECTED"
 
     return-object v0
 
-    .line 398
     :sswitch_3c
-    const-string/jumbo v0, "NUMBER_CHANGED"
+    const-string v0, "NUMBER_CHANGED"
 
     return-object v0
 
-    .line 400
     :sswitch_3d
-    const-string/jumbo v0, "PREEMPTION"
+    const-string v0, "PREEMPTION"
 
     return-object v0
 
-    .line 402
     :sswitch_3e
-    const-string/jumbo v0, "FACILITY_REJECTED"
+    const-string v0, "FACILITY_REJECTED"
 
     return-object v0
 
-    .line 404
     :sswitch_3f
-    const-string/jumbo v0, "RESP_TO_STATUS_ENQUIRY"
+    const-string v0, "RESP_TO_STATUS_ENQUIRY"
 
     return-object v0
 
-    .line 406
     :sswitch_40
-    const-string/jumbo v0, "NORMAL_UNSPECIFIED"
+    const-string v0, "NORMAL_UNSPECIFIED"
 
     return-object v0
 
-    .line 408
     :sswitch_41
-    const-string/jumbo v0, "NETWORK_OUT_OF_ORDER"
+    const-string v0, "NETWORK_OUT_OF_ORDER"
 
     return-object v0
 
-    .line 410
     :sswitch_42
-    const-string/jumbo v0, "TEMPORARY_FAILURE"
+    const-string v0, "TEMPORARY_FAILURE"
 
     return-object v0
 
-    .line 412
     :sswitch_43
-    const-string/jumbo v0, "SWITCHING_EQUIPMENT_CONGESTION"
+    const-string v0, "SWITCHING_EQUIPMENT_CONGESTION"
 
     return-object v0
 
-    .line 414
     :sswitch_44
-    const-string/jumbo v0, "ACCESS_INFORMATION_DISCARDED"
+    const-string v0, "ACCESS_INFORMATION_DISCARDED"
 
     return-object v0
 
-    .line 416
     :sswitch_45
-    const-string/jumbo v0, "REQUESTED_CIRCUIT_OR_CHANNEL_NOT_AVAILABLE"
+    const-string v0, "REQUESTED_CIRCUIT_OR_CHANNEL_NOT_AVAILABLE"
 
     return-object v0
 
-    .line 418
     :sswitch_46
-    const-string/jumbo v0, "RESOURCES_UNAVAILABLE_OR_UNSPECIFIED"
+    const-string v0, "RESOURCES_UNAVAILABLE_OR_UNSPECIFIED"
 
     return-object v0
 
-    .line 420
     :sswitch_47
-    const-string/jumbo v0, "QOS_UNAVAILABLE"
+    const-string v0, "QOS_UNAVAILABLE"
 
     return-object v0
 
-    .line 422
     :sswitch_48
-    const-string/jumbo v0, "REQUESTED_FACILITY_NOT_SUBSCRIBED"
+    const-string v0, "REQUESTED_FACILITY_NOT_SUBSCRIBED"
 
     return-object v0
 
-    .line 424
     :sswitch_49
-    const-string/jumbo v0, "INCOMING_CALLS_BARRED_WITHIN_CUG"
+    const-string v0, "INCOMING_CALLS_BARRED_WITHIN_CUG"
 
     return-object v0
 
-    .line 426
     :sswitch_4a
-    const-string/jumbo v0, "BEARER_CAPABILITY_UNAVAILABLE"
+    const-string v0, "BEARER_CAPABILITY_UNAVAILABLE"
 
     return-object v0
 
-    .line 428
     :sswitch_4b
-    const-string/jumbo v0, "SERVICE_OPTION_NOT_AVAILABLE"
+    const-string v0, "SERVICE_OPTION_NOT_AVAILABLE"
 
     return-object v0
 
-    .line 430
     :sswitch_4c
-    const-string/jumbo v0, "BEARER_SERVICE_NOT_IMPLEMENTED"
+    const-string v0, "BEARER_SERVICE_NOT_IMPLEMENTED"
 
     return-object v0
 
-    .line 432
     :sswitch_4d
-    const-string/jumbo v0, "REQUESTED_FACILITY_NOT_IMPLEMENTED"
+    const-string v0, "REQUESTED_FACILITY_NOT_IMPLEMENTED"
 
     return-object v0
 
-    .line 434
     :sswitch_4e
-    const-string/jumbo v0, "ONLY_DIGITAL_INFORMATION_BEARER_AVAILABLE"
+    const-string v0, "ONLY_DIGITAL_INFORMATION_BEARER_AVAILABLE"
 
     return-object v0
 
-    .line 436
     :sswitch_4f
-    const-string/jumbo v0, "SERVICE_OR_OPTION_NOT_IMPLEMENTED"
+    const-string v0, "SERVICE_OR_OPTION_NOT_IMPLEMENTED"
 
     return-object v0
 
-    .line 438
     :sswitch_50
-    const-string/jumbo v0, "INVALID_TRANSACTION_IDENTIFIER"
+    const-string v0, "INVALID_TRANSACTION_IDENTIFIER"
 
     return-object v0
 
-    .line 440
     :sswitch_51
-    const-string/jumbo v0, "USER_NOT_MEMBER_OF_CUG"
+    const-string v0, "USER_NOT_MEMBER_OF_CUG"
 
     return-object v0
 
-    .line 442
     :sswitch_52
-    const-string/jumbo v0, "INCOMPATIBLE_DESTINATION"
+    const-string v0, "INCOMPATIBLE_DESTINATION"
 
     return-object v0
 
-    .line 444
     :sswitch_53
-    const-string/jumbo v0, "INVALID_TRANSIT_NW_SELECTION"
+    const-string v0, "INVALID_TRANSIT_NW_SELECTION"
 
     return-object v0
 
-    .line 446
     :sswitch_54
-    const-string/jumbo v0, "SEMANTICALLY_INCORRECT_MESSAGE"
+    const-string v0, "SEMANTICALLY_INCORRECT_MESSAGE"
 
     return-object v0
 
-    .line 448
     :sswitch_55
-    const-string/jumbo v0, "INVALID_MANDATORY_INFORMATION"
+    const-string v0, "INVALID_MANDATORY_INFORMATION"
 
     return-object v0
 
-    .line 450
     :sswitch_56
-    const-string/jumbo v0, "MESSAGE_TYPE_NON_IMPLEMENTED"
+    const-string v0, "MESSAGE_TYPE_NON_IMPLEMENTED"
 
     return-object v0
 
-    .line 452
     :sswitch_57
-    const-string/jumbo v0, "MESSAGE_TYPE_NOT_COMPATIBLE_WITH_PROTOCOL_STATE"
+    const-string v0, "MESSAGE_TYPE_NOT_COMPATIBLE_WITH_PROTOCOL_STATE"
 
     return-object v0
 
-    .line 454
     :sswitch_58
-    const-string/jumbo v0, "INFORMATION_ELEMENT_NON_EXISTENT"
+    const-string v0, "INFORMATION_ELEMENT_NON_EXISTENT"
 
     return-object v0
 
-    .line 456
     :sswitch_59
-    const-string/jumbo v0, "CONDITIONAL_IE_ERROR"
+    const-string v0, "CONDITIONAL_IE_ERROR"
 
     return-object v0
 
-    .line 458
     :sswitch_5a
-    const-string/jumbo v0, "MESSAGE_NOT_COMPATIBLE_WITH_PROTOCOL_STATE"
+    const-string v0, "MESSAGE_NOT_COMPATIBLE_WITH_PROTOCOL_STATE"
 
     return-object v0
 
-    .line 460
     :sswitch_5b
-    const-string/jumbo v0, "RECOVERY_ON_TIMER_EXPIRED"
+    const-string v0, "RECOVERY_ON_TIMER_EXPIRED"
 
     return-object v0
 
-    .line 462
     :sswitch_5c
-    const-string/jumbo v0, "PROTOCOL_ERROR_UNSPECIFIED"
+    const-string v0, "PROTOCOL_ERROR_UNSPECIFIED"
 
     return-object v0
 
-    .line 464
     :sswitch_5d
-    const-string/jumbo v0, "INTERWORKING_UNSPECIFIED"
+    const-string v0, "INTERWORKING_UNSPECIFIED"
 
     return-object v0
 
-    .line 466
     :sswitch_5e
-    const-string/jumbo v0, "LOCAL_LOW_BATTERY"
+    const-string v0, "LOCAL_LOW_BATTERY"
 
     return-object v0
 
-    .line 468
     :sswitch_5f
-    const-string/jumbo v0, "LOW_BATTERY"
+    const-string v0, "LOW_BATTERY"
 
     return-object v0
 
-    .line 470
     :sswitch_60
-    const-string/jumbo v0, "EMERGENCY_TEMP_FAILURE"
+    const-string v0, "EMERGENCY_TEMP_FAILURE"
 
     return-object v0
 
-    .line 472
     :sswitch_61
-    const-string/jumbo v0, "EMERGENCY_PERM_FAILURE"
+    const-string v0, "EMERGENCY_PERM_FAILURE"
 
     return-object v0
 
-    .line 474
     :sswitch_62
-    const-string/jumbo v0, "CALL_BLACKLISTED"
+    const-string v0, "CALL_BLACKLISTED"
 
     return-object v0
 
-    .line 276
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0

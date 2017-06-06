@@ -30,22 +30,18 @@
     .locals 2
 
     .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mKeySetAliases:Landroid/util/ArrayMap;
 
-    .line 35
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lcom/android/server/pm/PackageKeySetData;->mProperSigningKeySet:J
 
-    .line 34
     return-void
 .end method
 
@@ -54,22 +50,18 @@
     .param p1, "original"    # Lcom/android/server/pm/PackageKeySetData;
 
     .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mKeySetAliases:Landroid/util/ArrayMap;
 
-    .line 39
     iget-wide v0, p1, Lcom/android/server/pm/PackageKeySetData;->mProperSigningKeySet:J
 
     iput-wide v0, p0, Lcom/android/server/pm/PackageKeySetData;->mProperSigningKeySet:J
 
-    .line 40
     iget-object v0, p1, Lcom/android/server/pm/PackageKeySetData;->mUpgradeKeySets:[J
 
     invoke-static {v0}, Lcom/android/internal/util/ArrayUtils;->cloneOrNull([J)[J
@@ -78,14 +70,12 @@
 
     iput-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mUpgradeKeySets:[J
 
-    .line 41
     iget-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mKeySetAliases:Landroid/util/ArrayMap;
 
     iget-object v1, p1, Lcom/android/server/pm/PackageKeySetData;->mKeySetAliases:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, v1}, Landroid/util/ArrayMap;->putAll(Landroid/util/ArrayMap;)V
 
-    .line 38
     return-void
 .end method
 
@@ -97,7 +87,6 @@
     .param p3, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 106
     iget-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mKeySetAliases:Landroid/util/ArrayMap;
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -106,7 +95,6 @@
 
     invoke-virtual {v0, p3, v1}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 105
     return-void
 .end method
 
@@ -115,13 +103,10 @@
     .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 54
     if-nez p1, :cond_0
 
-    .line 55
     return-void
 
-    .line 59
     :cond_0
     iget-object v1, p0, Lcom/android/server/pm/PackageKeySetData;->mKeySetAliases:Landroid/util/ArrayMap;
 
@@ -131,11 +116,9 @@
 
     check-cast v0, Ljava/lang/Long;
 
-    .line 60
     .local v0, "ks":Ljava/lang/Long;
     if-eqz v0, :cond_1
 
-    .line 61
     iget-object v1, p0, Lcom/android/server/pm/PackageKeySetData;->mUpgradeKeySets:[J
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
@@ -148,10 +131,8 @@
 
     iput-object v1, p0, Lcom/android/server/pm/PackageKeySetData;->mUpgradeKeySets:[J
 
-    .line 53
     return-void
 
-    .line 63
     :cond_1
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -159,7 +140,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "Upgrade keyset alias "
+    const-string v3, "Upgrade keyset alias "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -169,10 +150,8 @@
 
     move-result-object v2
 
-    .line 64
-    const-string/jumbo v3, "does not refer to a defined keyset alias!"
+    const-string v3, "does not refer to a defined keyset alias!"
 
-    .line 63
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -191,7 +170,6 @@
     .param p1, "ks"    # J
 
     .prologue
-    .line 74
     iget-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mUpgradeKeySets:[J
 
     invoke-static {v0, p1, p2}, Lcom/android/internal/util/ArrayUtils;->appendLong([JJ)[J
@@ -200,7 +178,6 @@
 
     iput-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mUpgradeKeySets:[J
 
-    .line 73
     return-void
 .end method
 
@@ -218,7 +195,6 @@
     .end annotation
 
     .prologue
-    .line 87
     iget-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mKeySetAliases:Landroid/util/ArrayMap;
 
     return-object v0
@@ -228,7 +204,6 @@
     .locals 2
 
     .prologue
-    .line 50
     iget-wide v0, p0, Lcom/android/server/pm/PackageKeySetData;->mProperSigningKeySet:J
 
     return-wide v0
@@ -238,7 +213,6 @@
     .locals 1
 
     .prologue
-    .line 83
     iget-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mUpgradeKeySets:[J
 
     return-object v0
@@ -250,7 +224,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 119
     iget-object v1, p0, Lcom/android/server/pm/PackageKeySetData;->mKeySetAliases:Landroid/util/ArrayMap;
 
     invoke-virtual {v1}, Landroid/util/ArrayMap;->size()I
@@ -271,7 +244,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 125
     iget-object v1, p0, Lcom/android/server/pm/PackageKeySetData;->mUpgradeKeySets:[J
 
     if-eqz v1, :cond_0
@@ -292,14 +264,12 @@
     .locals 3
 
     .prologue
-    .line 110
     iget-object v2, p0, Lcom/android/server/pm/PackageKeySetData;->mKeySetAliases:Landroid/util/ArrayMap;
 
     invoke-virtual {v2}, Landroid/util/ArrayMap;->size()I
 
     move-result v0
 
-    .line 111
     .local v0, "aliasSize":I
     const/4 v1, 0x0
 
@@ -307,17 +277,14 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 112
     iget-object v2, p0, Lcom/android/server/pm/PackageKeySetData;->mKeySetAliases:Landroid/util/ArrayMap;
 
     invoke-virtual {v2, v1}, Landroid/util/ArrayMap;->removeAt(I)Ljava/lang/Object;
 
-    .line 111
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 109
     :cond_0
     return-void
 .end method
@@ -326,12 +293,10 @@
     .locals 1
 
     .prologue
-    .line 78
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/pm/PackageKeySetData;->mUpgradeKeySets:[J
 
-    .line 79
     return-void
 .end method
 
@@ -349,16 +314,13 @@
     .end annotation
 
     .prologue
-    .line 96
     .local p1, "newAliases":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Ljava/lang/Long;>;"
     invoke-virtual {p0}, Lcom/android/server/pm/PackageKeySetData;->removeAllDefinedKeySets()V
 
-    .line 99
     invoke-virtual {p1}, Landroid/util/ArrayMap;->size()I
 
     move-result v1
 
-    .line 100
     .local v1, "newAliasSize":I
     const/4 v0, 0x0
 
@@ -366,7 +328,6 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 101
     iget-object v4, p0, Lcom/android/server/pm/PackageKeySetData;->mKeySetAliases:Landroid/util/ArrayMap;
 
     invoke-virtual {p1, v0}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
@@ -383,12 +344,10 @@
 
     invoke-virtual {v4, v2, v3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 100
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 93
     :cond_0
     return-void
 .end method
@@ -398,9 +357,7 @@
     .param p1, "ks"    # J
 
     .prologue
-    .line 45
     iput-wide p1, p0, Lcom/android/server/pm/PackageKeySetData;->mProperSigningKeySet:J
 
-    .line 46
     return-void
 .end method

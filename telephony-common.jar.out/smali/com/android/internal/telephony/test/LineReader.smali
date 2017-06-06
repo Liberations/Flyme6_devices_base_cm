@@ -19,20 +19,16 @@
     .param p1, "s"    # Ljava/io/InputStream;
 
     .prologue
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
     const/16 v0, 0x1000
 
     new-array v0, v0, [B
 
     iput-object v0, p0, Lcom/android/internal/telephony/test/LineReader;->mBuffer:[B
 
-    .line 55
     iput-object p1, p0, Lcom/android/internal/telephony/test/LineReader;->mInStream:Ljava/io/InputStream;
 
-    .line 53
     return-void
 .end method
 
@@ -42,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 61
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/test/LineReader;->getNextLine(Z)Ljava/lang/String;
@@ -59,13 +54,11 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 80
     const/4 v3, 0x0
 
     .local v3, "i":I
     move v4, v3
 
-    .line 86
     .end local v3    # "i":I
     .local v4, "i":I
     :goto_0
@@ -79,14 +72,11 @@
 
     move-result v5
 
-    .line 88
     .local v5, "result":I
     if-gez v5, :cond_0
 
-    .line 89
     return-object v10
 
-    .line 92
     :cond_0
     if-eqz p1, :cond_2
 
@@ -97,7 +87,6 @@
     :cond_1
     move v3, v4
 
-    .line 112
     .end local v4    # "i":I
     .end local v5    # "result":I
     .restart local v3    # "i":I
@@ -107,7 +96,7 @@
 
     iget-object v7, p0, Lcom/android/internal/telephony/test/LineReader;->mBuffer:[B
 
-    const-string/jumbo v8, "US-ASCII"
+    const-string v8, "US-ASCII"
 
     const/4 v9, 0x0
 
@@ -117,7 +106,6 @@
 
     return-object v6
 
-    .line 94
     .end local v3    # "i":I
     .restart local v4    # "i":I
     .restart local v5    # "result":I
@@ -130,7 +118,6 @@
 
     if-ne v5, v6, :cond_4
 
-    .line 95
     :cond_3
     if-nez v4, :cond_1
 
@@ -145,7 +132,6 @@
     .restart local v4    # "i":I
     goto :goto_0
 
-    .line 103
     :cond_4
     :try_start_2
     iget-object v6, p0, Lcom/android/internal/telephony/test/LineReader;->mBuffer:[B
@@ -167,17 +153,14 @@
 
     goto :goto_2
 
-    .line 105
     :catch_0
     move-exception v0
 
-    .line 106
     .end local v5    # "result":I
     .local v0, "ex":Ljava/io/IOException;
     :goto_3
     return-object v10
 
-    .line 107
     .end local v0    # "ex":Ljava/io/IOException;
     .end local v3    # "i":I
     .restart local v4    # "i":I
@@ -187,35 +170,30 @@
     .local v2, "ex":Ljava/lang/IndexOutOfBoundsException;
     move v3, v4
 
-    .line 108
     .end local v4    # "i":I
     .restart local v3    # "i":I
     :goto_4
     sget-object v6, Ljava/lang/System;->err:Ljava/io/PrintStream;
 
-    const-string/jumbo v7, "ATChannel: buffer overflow"
+    const-string v7, "ATChannel: buffer overflow"
 
     invoke-virtual {v6, v7}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 113
     .end local v2    # "ex":Ljava/lang/IndexOutOfBoundsException;
     :catch_2
     move-exception v1
 
-    .line 114
     .local v1, "ex":Ljava/io/UnsupportedEncodingException;
     sget-object v6, Ljava/lang/System;->err:Ljava/io/PrintStream;
 
-    const-string/jumbo v7, "ATChannel: implausable UnsupportedEncodingException"
+    const-string v7, "ATChannel: implausable UnsupportedEncodingException"
 
     invoke-virtual {v6, v7}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 115
     return-object v10
 
-    .line 105
     .end local v1    # "ex":Ljava/io/UnsupportedEncodingException;
     .end local v3    # "i":I
     .restart local v4    # "i":I
@@ -229,7 +207,6 @@
     .restart local v3    # "i":I
     goto :goto_3
 
-    .line 107
     .end local v0    # "ex":Ljava/io/IOException;
     .restart local v5    # "result":I
     :catch_4
@@ -243,7 +220,6 @@
     .locals 1
 
     .prologue
-    .line 67
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/test/LineReader;->getNextLine(Z)Ljava/lang/String;

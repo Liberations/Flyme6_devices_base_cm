@@ -29,16 +29,14 @@
     .locals 2
 
     .prologue
-    .line 45
     new-instance v0, Lcom/android/server/firewall/SenderPermissionFilter$1;
 
-    const-string/jumbo v1, "sender-permission"
+    const-string v1, "sender-permission"
 
     invoke-direct {v0, v1}, Lcom/android/server/firewall/SenderPermissionFilter$1;-><init>(Ljava/lang/String;)V
 
     sput-object v0, Lcom/android/server/firewall/SenderPermissionFilter;->FACTORY:Lcom/android/server/firewall/FilterFactory;
 
-    .line 26
     return-void
 .end method
 
@@ -47,13 +45,10 @@
     .param p1, "permission"    # Ljava/lang/String;
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     iput-object p1, p0, Lcom/android/server/firewall/SenderPermissionFilter;->mPermission:Ljava/lang/String;
 
-    .line 31
     return-void
 .end method
 
@@ -80,10 +75,8 @@
     .param p7, "receivingUid"    # I
 
     .prologue
-    .line 41
     iget-object v1, p0, Lcom/android/server/firewall/SenderPermissionFilter;->mPermission:Ljava/lang/String;
 
-    .line 42
     const/4 v5, 0x1
 
     move-object v0, p1
@@ -94,7 +87,6 @@
 
     move v4, p7
 
-    .line 41
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/firewall/IntentFirewall;->checkComponentPermission(Ljava/lang/String;IIIZ)Z
 
     move-result v0

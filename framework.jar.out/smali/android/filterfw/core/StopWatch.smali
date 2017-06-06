@@ -23,38 +23,30 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
     const/16 v0, 0xc8
 
     iput v0, p0, Landroid/filterfw/core/StopWatch;->STOP_WATCH_LOGGING_PERIOD:I
 
-    .line 29
-    const-string/jumbo v0, "MFF"
+    const-string v0, "MFF"
 
     iput-object v0, p0, Landroid/filterfw/core/StopWatch;->TAG:Ljava/lang/String;
 
-    .line 37
     iput-object p1, p0, Landroid/filterfw/core/StopWatch;->mName:Ljava/lang/String;
 
-    .line 38
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Landroid/filterfw/core/StopWatch;->mStartTime:J
 
-    .line 39
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Landroid/filterfw/core/StopWatch;->mTotalTime:J
 
-    .line 40
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/filterfw/core/StopWatch;->mNumCalls:I
 
-    .line 36
     return-void
 .end method
 
@@ -64,7 +56,6 @@
     .locals 4
 
     .prologue
-    .line 44
     iget-wide v0, p0, Landroid/filterfw/core/StopWatch;->mStartTime:J
 
     const-wide/16 v2, -0x1
@@ -73,18 +64,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 45
     new-instance v0, Ljava/lang/RuntimeException;
 
-    .line 46
-    const-string/jumbo v1, "Calling start with StopWatch already running"
+    const-string v1, "Calling start with StopWatch already running"
 
-    .line 45
     invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 48
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -92,7 +79,6 @@
 
     iput-wide v0, p0, Landroid/filterfw/core/StopWatch;->mStartTime:J
 
-    .line 43
     return-void
 .end method
 
@@ -104,31 +90,25 @@
 
     const/4 v8, 0x0
 
-    .line 52
     iget-wide v2, p0, Landroid/filterfw/core/StopWatch;->mStartTime:J
 
     cmp-long v2, v2, v6
 
     if-nez v2, :cond_0
 
-    .line 53
     new-instance v2, Ljava/lang/RuntimeException;
 
-    .line 54
-    const-string/jumbo v3, "Calling stop with StopWatch already stopped"
+    const-string v3, "Calling stop with StopWatch already stopped"
 
-    .line 53
     invoke-direct {v2, v3}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
     throw v2
 
-    .line 56
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 57
     .local v0, "stopTime":J
     iget-wide v2, p0, Landroid/filterfw/core/StopWatch;->mTotalTime:J
 
@@ -140,17 +120,14 @@
 
     iput-wide v2, p0, Landroid/filterfw/core/StopWatch;->mTotalTime:J
 
-    .line 58
     iget v2, p0, Landroid/filterfw/core/StopWatch;->mNumCalls:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, p0, Landroid/filterfw/core/StopWatch;->mNumCalls:I
 
-    .line 59
     iput-wide v6, p0, Landroid/filterfw/core/StopWatch;->mStartTime:J
 
-    .line 60
     iget v2, p0, Landroid/filterfw/core/StopWatch;->mNumCalls:I
 
     iget v3, p0, Landroid/filterfw/core/StopWatch;->STOP_WATCH_LOGGING_PERIOD:I
@@ -159,14 +136,13 @@
 
     if-nez v2, :cond_1
 
-    .line 61
     iget-object v2, p0, Landroid/filterfw/core/StopWatch;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "AVG ms/call "
+    const-string v4, "AVG ms/call "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -178,14 +154,13 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, ": "
+    const-string v4, ": "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 62
-    const-string/jumbo v4, "%.1f"
+    const-string v4, "%.1f"
 
     const/4 v5, 0x1
 
@@ -215,7 +190,6 @@
 
     move-result-object v4
 
-    .line 61
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
@@ -226,15 +200,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 63
     const-wide/16 v2, 0x0
 
     iput-wide v2, p0, Landroid/filterfw/core/StopWatch;->mTotalTime:J
 
-    .line 64
     iput v8, p0, Landroid/filterfw/core/StopWatch;->mNumCalls:I
 
-    .line 51
     :cond_1
     return-void
 .end method

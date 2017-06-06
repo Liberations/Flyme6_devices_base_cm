@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 3449
     iput-object p1, p0, Landroid/view/ViewGroup$3;->this$0:Landroid/view/ViewGroup;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +40,9 @@
     .locals 1
 
     .prologue
-    .line 3451
     iget-object v0, p0, Landroid/view/ViewGroup$3;->this$0:Landroid/view/ViewGroup;
 
     invoke-static {v0}, Landroid/view/ViewGroup;->-wrap1(Landroid/view/ViewGroup;)V
 
-    .line 3450
     return-void
 .end method

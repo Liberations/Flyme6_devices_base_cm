@@ -13,7 +13,6 @@
     .locals 0
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +23,6 @@
     .param p0, "value"    # F
 
     .prologue
-    .line 59
     float-to-double v0, p0
 
     invoke-static {v0, v1}, Ljava/lang/Math;->ceil(D)D
@@ -41,7 +39,6 @@
     .param p0, "angle"    # F
 
     .prologue
-    .line 81
     float-to-double v0, p0
 
     invoke-static {v0, v1}, Ljava/lang/Math;->cos(D)D
@@ -58,7 +55,6 @@
     .param p0, "value"    # F
 
     .prologue
-    .line 105
     float-to-double v0, p0
 
     invoke-static {v0, v1}, Ljava/lang/Math;->exp(D)D
@@ -75,7 +71,6 @@
     .param p0, "value"    # F
 
     .prologue
-    .line 47
     float-to-double v0, p0
 
     invoke-static {v0, v1}, Ljava/lang/Math;->floor(D)D
@@ -93,7 +88,6 @@
     .param p1, "y"    # F
 
     .prologue
-    .line 131
     float-to-double v0, p0
 
     float-to-double v2, p1
@@ -113,7 +107,6 @@
     .param p1, "y"    # F
 
     .prologue
-    .line 118
     float-to-double v0, p0
 
     float-to-double v2, p1
@@ -132,7 +125,6 @@
     .param p0, "angle"    # F
 
     .prologue
-    .line 70
     float-to-double v0, p0
 
     invoke-static {v0, v1}, Ljava/lang/Math;->sin(D)D
@@ -149,7 +141,6 @@
     .param p0, "value"    # F
 
     .prologue
-    .line 93
     float-to-double v0, p0
 
     invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D

@@ -14,24 +14,21 @@
     .param p2, "value"    # I
 
     .prologue
-    .line 28
     invoke-direct {p0, p1}, Landroid/security/keymaster/KeymasterArgument;-><init>(I)V
 
-    .line 29
     invoke-static {p1}, Landroid/security/keymaster/KeymasterDefs;->getTagType(I)I
 
     move-result v0
 
     sparse-switch v0, :sswitch_data_0
 
-    .line 36
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Bad int tag "
+    const-string v2, "Bad int tag "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -49,14 +46,11 @@
 
     throw v0
 
-    .line 38
     :sswitch_0
     iput p2, p0, Landroid/security/keymaster/KeymasterIntArgument;->value:I
 
-    .line 27
     return-void
 
-    .line 29
     nop
 
     :sswitch_data_0
@@ -74,17 +68,14 @@
     .param p2, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 42
     invoke-direct {p0, p1}, Landroid/security/keymaster/KeymasterArgument;-><init>(I)V
 
-    .line 43
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/security/keymaster/KeymasterIntArgument;->value:I
 
-    .line 41
     return-void
 .end method
 
@@ -95,11 +86,9 @@
     .param p1, "out"    # Landroid/os/Parcel;
 
     .prologue
-    .line 48
     iget v0, p0, Landroid/security/keymaster/KeymasterIntArgument;->value:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 47
     return-void
 .end method

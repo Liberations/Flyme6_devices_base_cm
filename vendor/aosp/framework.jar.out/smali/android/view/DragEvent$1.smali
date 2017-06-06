@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 486
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,12 +46,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 488
     invoke-static {}, Landroid/view/DragEvent;->obtain()Landroid/view/DragEvent;
 
     move-result-object v0
 
-    .line 489
     .local v0, "event":Landroid/view/DragEvent;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -60,21 +57,18 @@
 
     iput v2, v0, Landroid/view/DragEvent;->mAction:I
 
-    .line 490
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v2
 
     iput v2, v0, Landroid/view/DragEvent;->mX:F
 
-    .line 491
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v2
 
     iput v2, v0, Landroid/view/DragEvent;->mY:F
 
-    .line 492
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
@@ -86,14 +80,12 @@
     :cond_0
     iput-boolean v1, v0, Landroid/view/DragEvent;->mDragResult:Z
 
-    .line 493
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 494
     sget-object v1, Landroid/content/ClipData;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v1, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -104,7 +96,6 @@
 
     iput-object v1, v0, Landroid/view/DragEvent;->mClipData:Landroid/content/ClipData;
 
-    .line 496
     :cond_1
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -112,7 +103,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 497
     sget-object v1, Landroid/content/ClipDescription;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v1, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -123,7 +113,6 @@
 
     iput-object v1, v0, Landroid/view/DragEvent;->mClipDescription:Landroid/content/ClipDescription;
 
-    .line 499
     :cond_2
     return-object v0
 .end method
@@ -133,7 +122,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 487
     invoke-virtual {p0, p1}, Landroid/view/DragEvent$1;->createFromParcel(Landroid/os/Parcel;)Landroid/view/DragEvent;
 
     move-result-object v0
@@ -146,7 +134,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 503
     new-array v0, p1, [Landroid/view/DragEvent;
 
     return-object v0
@@ -157,7 +144,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 502
     invoke-virtual {p0, p1}, Landroid/view/DragEvent$1;->newArray(I)[Landroid/view/DragEvent;
 
     move-result-object v0

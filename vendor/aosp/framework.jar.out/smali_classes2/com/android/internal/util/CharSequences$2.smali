@@ -33,7 +33,6 @@
     .param p3, "val$end"    # I
 
     .prologue
-    .line 64
     iput-object p1, p0, Lcom/android/internal/util/CharSequences$2;->val$bytes:[B
 
     iput p2, p0, Lcom/android/internal/util/CharSequences$2;->val$start:I
@@ -52,7 +51,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 66
     iget-object v0, p0, Lcom/android/internal/util/CharSequences$2;->val$bytes:[B
 
     iget v1, p0, Lcom/android/internal/util/CharSequences$2;->val$start:I
@@ -70,7 +68,6 @@
     .locals 2
 
     .prologue
-    .line 70
     iget v0, p0, Lcom/android/internal/util/CharSequences$2;->val$end:I
 
     iget v1, p0, Lcom/android/internal/util/CharSequences$2;->val$start:I
@@ -86,24 +83,20 @@
     .param p2, "newEnd"    # I
 
     .prologue
-    .line 74
     iget v0, p0, Lcom/android/internal/util/CharSequences$2;->val$start:I
 
     sub-int/2addr p1, v0
 
-    .line 75
     iget v0, p0, Lcom/android/internal/util/CharSequences$2;->val$start:I
 
     sub-int/2addr p2, v0
 
-    .line 76
     invoke-virtual {p0}, Lcom/android/internal/util/CharSequences$2;->length()I
 
     move-result v0
 
     invoke-static {p1, p2, v0}, Lcom/android/internal/util/CharSequences;->validate(III)V
 
-    .line 77
     iget-object v0, p0, Lcom/android/internal/util/CharSequences$2;->val$bytes:[B
 
     invoke-static {v0, p1, p2}, Lcom/android/internal/util/CharSequences;->forAsciiBytes([BII)Ljava/lang/CharSequence;
@@ -117,7 +110,6 @@
     .locals 4
 
     .prologue
-    .line 81
     new-instance v0, Ljava/lang/String;
 
     iget-object v1, p0, Lcom/android/internal/util/CharSequences$2;->val$bytes:[B

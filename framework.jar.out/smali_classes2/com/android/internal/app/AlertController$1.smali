@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/internal/app/AlertController;
 
     .prologue
-    .line 122
     iput-object p1, p0, Lcom/android/internal/app/AlertController$1;->this$0:Lcom/android/internal/app/AlertController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 126
     iget-object v1, p0, Lcom/android/internal/app/AlertController$1;->this$0:Lcom/android/internal/app/AlertController;
 
     invoke-static {v1}, Lcom/android/internal/app/AlertController;->-get4(Lcom/android/internal/app/AlertController;)Landroid/widget/Button;
@@ -59,7 +57,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 127
     iget-object v1, p0, Lcom/android/internal/app/AlertController$1;->this$0:Lcom/android/internal/app/AlertController;
 
     invoke-static {v1}, Lcom/android/internal/app/AlertController;->-get5(Lcom/android/internal/app/AlertController;)Landroid/os/Message;
@@ -70,14 +67,11 @@
 
     move-result-object v0
 
-    .line 136
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 137
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 141
     :cond_0
     iget-object v1, p0, Lcom/android/internal/app/AlertController$1;->this$0:Lcom/android/internal/app/AlertController;
 
@@ -99,10 +93,8 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 124
     return-void
 
-    .line 128
     :cond_1
     iget-object v1, p0, Lcom/android/internal/app/AlertController$1;->this$0:Lcom/android/internal/app/AlertController;
 
@@ -120,7 +112,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 129
     iget-object v1, p0, Lcom/android/internal/app/AlertController$1;->this$0:Lcom/android/internal/app/AlertController;
 
     invoke-static {v1}, Lcom/android/internal/app/AlertController;->-get1(Lcom/android/internal/app/AlertController;)Landroid/os/Message;
@@ -134,7 +125,6 @@
     .local v0, "m":Landroid/os/Message;
     goto :goto_0
 
-    .line 130
     .end local v0    # "m":Landroid/os/Message;
     :cond_2
     iget-object v1, p0, Lcom/android/internal/app/AlertController$1;->this$0:Lcom/android/internal/app/AlertController;
@@ -153,7 +143,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 131
     iget-object v1, p0, Lcom/android/internal/app/AlertController$1;->this$0:Lcom/android/internal/app/AlertController;
 
     invoke-static {v1}, Lcom/android/internal/app/AlertController;->-get3(Lcom/android/internal/app/AlertController;)Landroid/os/Message;
@@ -167,7 +156,6 @@
     .restart local v0    # "m":Landroid/os/Message;
     goto :goto_0
 
-    .line 133
     .end local v0    # "m":Landroid/os/Message;
     :cond_3
     const/4 v0, 0x0

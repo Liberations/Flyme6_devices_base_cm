@@ -24,46 +24,42 @@
     .locals 3
 
     .prologue
-    .line 38
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/String;
 
-    .line 39
-    const-string/jumbo v1, "none"
+    const-string v1, "none"
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    const-string/jumbo v1, "poor"
+    const-string v1, "poor"
 
     const/4 v2, 0x1
 
     aput-object v1, v0, v2
 
-    const-string/jumbo v1, "moderate"
+    const-string v1, "moderate"
 
     const/4 v2, 0x2
 
     aput-object v1, v0, v2
 
-    const-string/jumbo v1, "good"
+    const-string v1, "good"
 
     const/4 v2, 0x3
 
     aput-object v1, v0, v2
 
-    const-string/jumbo v1, "great"
+    const-string v1, "great"
 
     const/4 v2, 0x4
 
     aput-object v1, v0, v2
 
-    .line 38
     sput-object v0, Landroid/telephony/CellSignalStrength;->SIGNAL_STRENGTH_NAMES:[Ljava/lang/String;
 
-    .line 22
     return-void
 .end method
 
@@ -71,7 +67,6 @@
     .locals 0
 
     .prologue
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

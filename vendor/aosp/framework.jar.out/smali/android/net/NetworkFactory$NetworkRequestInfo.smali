@@ -32,23 +32,18 @@
     .param p3, "score"    # I
 
     .prologue
-    .line 160
     iput-object p1, p0, Landroid/net/NetworkFactory$NetworkRequestInfo;->this$0:Landroid/net/NetworkFactory;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 161
     iput-object p2, p0, Landroid/net/NetworkFactory$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
 
-    .line 162
     iput p3, p0, Landroid/net/NetworkFactory$NetworkRequestInfo;->score:I
 
-    .line 163
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/net/NetworkFactory$NetworkRequestInfo;->requested:Z
 
-    .line 160
     return-void
 .end method
 
@@ -58,12 +53,11 @@
     .locals 2
 
     .prologue
-    .line 168
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "{"
+    const-string v1, "{"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -75,7 +69,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, ", score="
+    const-string v1, ", score="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -87,7 +81,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, ", requested="
+    const-string v1, ", requested="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -99,7 +93,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 44
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
     return-void
@@ -39,7 +38,6 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 110
     invoke-virtual {p0}, Landroid/support/v4/app/NotificationCompatSideChannelService;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
@@ -57,7 +55,6 @@
 
     aget-object v0, v2, v1
 
-    .line 111
     .local v0, "validPackage":Ljava/lang/String;
     invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -65,16 +62,13 @@
 
     if-eqz v4, :cond_0
 
-    .line 112
     return-void
 
-    .line 110
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 115
     .end local v0    # "validPackage":Ljava/lang/String;
     :cond_1
     new-instance v1, Ljava/lang/SecurityException;
@@ -83,7 +77,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "NotificationSideChannelService: Uid "
+    const-string v3, "NotificationSideChannelService: Uid "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -93,10 +87,8 @@
 
     move-result-object v2
 
-    .line 116
-    const-string/jumbo v3, " is not authorized for package "
+    const-string v3, " is not authorized for package "
 
-    .line 115
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -132,12 +124,11 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 47
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string/jumbo v1, "android.support.BIND_NOTIFICATION_SIDE_CHANNEL"
+    const-string v1, "android.support.BIND_NOTIFICATION_SIDE_CHANNEL"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -145,17 +136,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 50
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x13
 
     if-le v0, v1, :cond_0
 
-    .line 51
     return-object v2
 
-    .line 53
     :cond_0
     new-instance v0, Landroid/support/v4/app/NotificationCompatSideChannelService$NotificationSideChannelStub;
 
@@ -163,7 +151,6 @@
 
     return-object v0
 
-    .line 55
     :cond_1
     return-object v2
 .end method

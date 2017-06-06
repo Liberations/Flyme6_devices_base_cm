@@ -27,7 +27,6 @@
     .param p2, "val$callback"    # Landroid/hardware/hdmi/HdmiPlaybackClient$OneTouchPlayCallback;
 
     .prologue
-    .line 121
     iput-object p1, p0, Landroid/hardware/hdmi/HdmiPlaybackClient$1;->this$0:Landroid/hardware/hdmi/HdmiPlaybackClient;
 
     iput-object p2, p0, Landroid/hardware/hdmi/HdmiPlaybackClient$1;->val$callback:Landroid/hardware/hdmi/HdmiPlaybackClient$OneTouchPlayCallback;
@@ -44,11 +43,9 @@
     .param p1, "result"    # I
 
     .prologue
-    .line 124
     iget-object v0, p0, Landroid/hardware/hdmi/HdmiPlaybackClient$1;->val$callback:Landroid/hardware/hdmi/HdmiPlaybackClient$OneTouchPlayCallback;
 
     invoke-interface {v0, p1}, Landroid/hardware/hdmi/HdmiPlaybackClient$OneTouchPlayCallback;->onComplete(I)V
 
-    .line 123
     return-void
 .end method

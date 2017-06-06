@@ -37,7 +37,6 @@
     .param p1, "this$0"    # Lcom/android/server/content/SyncManager;
 
     .prologue
-    .line 451
     iput-object p1, p0, Lcom/android/server/content/SyncManager$9;->this$0:Lcom/android/server/content/SyncManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -58,32 +57,24 @@
 
     const/4 v1, 0x0
 
-    .line 454
     if-nez p3, :cond_0
 
-    .line 455
     iget-object v0, p0, Lcom/android/server/content/SyncManager$9;->this$0:Lcom/android/server/content/SyncManager;
 
-    .line 457
     iget-object v4, p1, Landroid/content/SyncAdapterType;->authority:Ljava/lang/String;
 
-    .line 455
     const/4 v2, -0x1
 
-    .line 456
     const/4 v3, -0x3
 
-    .line 458
     const/4 v10, 0x0
 
     move-object v5, v1
 
     move-wide v8, v6
 
-    .line 455
     invoke-virtual/range {v0 .. v10}, Lcom/android/server/content/SyncManager;->scheduleSync(Landroid/accounts/Account;IILjava/lang/String;Landroid/os/Bundle;JJZ)V
 
-    .line 453
     :cond_0
     return-void
 .end method
@@ -95,7 +86,6 @@
     .param p3, "removed"    # Z
 
     .prologue
-    .line 453
     check-cast p1, Landroid/content/SyncAdapterType;
 
     .end local p1    # "type":Ljava/lang/Object;

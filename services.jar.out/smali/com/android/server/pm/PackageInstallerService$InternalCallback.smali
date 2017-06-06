@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/pm/PackageInstallerService;
 
     .prologue
-    .line 1220
     iput-object p1, p0, Lcom/android/server/pm/PackageInstallerService$InternalCallback;->this$0:Lcom/android/server/pm/PackageInstallerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "active"    # Z
 
     .prologue
-    .line 1227
     iget-object v0, p0, Lcom/android/server/pm/PackageInstallerService$InternalCallback;->this$0:Lcom/android/server/pm/PackageInstallerService;
 
     invoke-static {v0}, Lcom/android/server/pm/PackageInstallerService;->-get0(Lcom/android/server/pm/PackageInstallerService;)Lcom/android/server/pm/PackageInstallerService$Callbacks;
@@ -53,7 +51,6 @@
 
     invoke-static {v0, v1, v2, p2}, Lcom/android/server/pm/PackageInstallerService$Callbacks;->-wrap0(Lcom/android/server/pm/PackageInstallerService$Callbacks;IIZ)V
 
-    .line 1226
     return-void
 .end method
 
@@ -62,7 +59,6 @@
     .param p1, "session"    # Lcom/android/server/pm/PackageInstallerSession;
 
     .prologue
-    .line 1222
     iget-object v0, p0, Lcom/android/server/pm/PackageInstallerService$InternalCallback;->this$0:Lcom/android/server/pm/PackageInstallerService;
 
     invoke-static {v0}, Lcom/android/server/pm/PackageInstallerService;->-get0(Lcom/android/server/pm/PackageInstallerService;)Lcom/android/server/pm/PackageInstallerService$Callbacks;
@@ -75,12 +71,10 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/server/pm/PackageInstallerService$Callbacks;->-wrap1(Lcom/android/server/pm/PackageInstallerService$Callbacks;II)V
 
-    .line 1223
     iget-object v0, p0, Lcom/android/server/pm/PackageInstallerService$InternalCallback;->this$0:Lcom/android/server/pm/PackageInstallerService;
 
     invoke-static {v0}, Lcom/android/server/pm/PackageInstallerService;->-wrap2(Lcom/android/server/pm/PackageInstallerService;)V
 
-    .line 1221
     return-void
 .end method
 
@@ -90,7 +84,6 @@
     .param p2, "success"    # Z
 
     .prologue
-    .line 1235
     iget-object v0, p0, Lcom/android/server/pm/PackageInstallerService$InternalCallback;->this$0:Lcom/android/server/pm/PackageInstallerService;
 
     invoke-static {v0}, Lcom/android/server/pm/PackageInstallerService;->-get0(Lcom/android/server/pm/PackageInstallerService;)Lcom/android/server/pm/PackageInstallerService$Callbacks;
@@ -103,7 +96,6 @@
 
     invoke-virtual {v0, v1, v2, p2}, Lcom/android/server/pm/PackageInstallerService$Callbacks;->notifySessionFinished(IIZ)V
 
-    .line 1237
     iget-object v0, p0, Lcom/android/server/pm/PackageInstallerService$InternalCallback;->this$0:Lcom/android/server/pm/PackageInstallerService;
 
     invoke-static {v0}, Lcom/android/server/pm/PackageInstallerService;->-get2(Lcom/android/server/pm/PackageInstallerService;)Landroid/os/Handler;
@@ -116,7 +108,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1234
     return-void
 .end method
 
@@ -125,12 +116,10 @@
     .param p1, "session"    # Lcom/android/server/pm/PackageInstallerSession;
 
     .prologue
-    .line 1258
     iget-object v0, p0, Lcom/android/server/pm/PackageInstallerService$InternalCallback;->this$0:Lcom/android/server/pm/PackageInstallerService;
 
     invoke-static {v0}, Lcom/android/server/pm/PackageInstallerService;->-wrap2(Lcom/android/server/pm/PackageInstallerService;)V
 
-    .line 1255
     return-void
 .end method
 
@@ -140,7 +129,6 @@
     .param p2, "progress"    # F
 
     .prologue
-    .line 1231
     iget-object v0, p0, Lcom/android/server/pm/PackageInstallerService$InternalCallback;->this$0:Lcom/android/server/pm/PackageInstallerService;
 
     invoke-static {v0}, Lcom/android/server/pm/PackageInstallerService;->-get0(Lcom/android/server/pm/PackageInstallerService;)Lcom/android/server/pm/PackageInstallerService$Callbacks;
@@ -153,7 +141,6 @@
 
     invoke-static {v0, v1, v2, p2}, Lcom/android/server/pm/PackageInstallerService$Callbacks;->-wrap3(Lcom/android/server/pm/PackageInstallerService$Callbacks;IIF)V
 
-    .line 1230
     return-void
 .end method
 
@@ -162,7 +149,6 @@
     .param p1, "session"    # Lcom/android/server/pm/PackageInstallerSession;
 
     .prologue
-    .line 1265
     iget-object v0, p0, Lcom/android/server/pm/PackageInstallerService$InternalCallback;->this$0:Lcom/android/server/pm/PackageInstallerService;
 
     invoke-static {v0}, Lcom/android/server/pm/PackageInstallerService;->-get3(Lcom/android/server/pm/PackageInstallerService;)Landroid/util/SparseArray;
@@ -171,7 +157,6 @@
 
     monitor-enter v1
 
-    .line 1266
     :try_start_0
     iget-object v0, p0, Lcom/android/server/pm/PackageInstallerService$InternalCallback;->this$0:Lcom/android/server/pm/PackageInstallerService;
 
@@ -181,10 +166,8 @@
 
     monitor-exit v1
 
-    .line 1261
     return-void
 
-    .line 1265
     :catchall_0
     move-exception v0
 

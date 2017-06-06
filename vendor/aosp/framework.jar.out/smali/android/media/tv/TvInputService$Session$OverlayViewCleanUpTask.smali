@@ -35,7 +35,6 @@
     .param p1, "this$1"    # Landroid/media/tv/TvInputService$Session;
 
     .prologue
-    .line 1429
     iput-object p1, p0, Landroid/media/tv/TvInputService$Session$OverlayViewCleanUpTask;->this$1:Landroid/media/tv/TvInputService$Session;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -60,7 +59,6 @@
     .param p1, "views"    # [Ljava/lang/Object;
 
     .prologue
-    .line 1431
     check-cast p1, [Landroid/view/View;
 
     .end local p1    # "views":[Ljava/lang/Object;
@@ -78,12 +76,10 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1432
     const/4 v2, 0x0
 
     aget-object v1, p1, v2
 
-    .line 1434
     .local v1, "overlayViewParent":Landroid/view/View;
     const-wide/16 v2, 0x1388
 
@@ -92,25 +88,20 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1438
     invoke-virtual {p0}, Landroid/media/tv/TvInputService$Session$OverlayViewCleanUpTask;->isCancelled()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 1439
     return-object v5
 
-    .line 1435
     :catch_0
     move-exception v0
 
-    .line 1436
     .local v0, "e":Ljava/lang/InterruptedException;
     return-object v5
 
-    .line 1441
     .end local v0    # "e":Ljava/lang/InterruptedException;
     :cond_0
     invoke-virtual {v1}, Landroid/view/View;->isAttachedToWindow()Z
@@ -119,20 +110,18 @@
 
     if-eqz v2, :cond_1
 
-    .line 1442
-    const-string/jumbo v2, "TvInputService"
+    const-string v2, "TvInputService"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "Time out on releasing overlay view. Killing "
+    const-string v4, "Time out on releasing overlay view. Killing "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 1443
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v4
@@ -141,7 +130,6 @@
 
     move-result-object v4
 
-    .line 1442
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
@@ -152,14 +140,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1444
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v2
 
     invoke-static {v2}, Landroid/os/Process;->killProcess(I)V
 
-    .line 1446
     :cond_1
     return-object v5
 .end method

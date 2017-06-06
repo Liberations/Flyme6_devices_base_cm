@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 141
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "parcel"    # Landroid/os/Parcel;
 
     .prologue
-    .line 145
     new-instance v0, Lcyanogenmod/app/StatusBarPanelCustomTile;
 
     invoke-direct {v0, p1}, Lcyanogenmod/app/StatusBarPanelCustomTile;-><init>(Landroid/os/Parcel;)V
@@ -58,7 +56,6 @@
     .param p1, "parcel"    # Landroid/os/Parcel;
 
     .prologue
-    .line 143
     invoke-virtual {p0, p1}, Lcyanogenmod/app/StatusBarPanelCustomTile$1;->createFromParcel(Landroid/os/Parcel;)Lcyanogenmod/app/StatusBarPanelCustomTile;
 
     move-result-object v0
@@ -71,7 +68,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 150
     new-array v0, p1, [Lcyanogenmod/app/StatusBarPanelCustomTile;
 
     return-object v0
@@ -82,7 +78,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 148
     invoke-virtual {p0, p1}, Lcyanogenmod/app/StatusBarPanelCustomTile$1;->newArray(I)[Lcyanogenmod/app/StatusBarPanelCustomTile;
 
     move-result-object v0

@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;
 
     .prologue
-    .line 45
     iput-object p1, p0, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;
 
     invoke-direct {p0}, Lcyanogenmod/app/ICMTelephonyManager$Stub;-><init>()V
@@ -47,12 +46,10 @@
     .end annotation
 
     .prologue
-    .line 55
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;->-wrap5(Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;)V
 
-    .line 56
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;->-wrap3(Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;)Ljava/util/List;
@@ -66,12 +63,10 @@
     .locals 1
 
     .prologue
-    .line 119
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;->-wrap5(Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;)V
 
-    .line 120
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;->-wrap0(Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;)Z
@@ -86,12 +81,10 @@
     .param p1, "subId"    # I
 
     .prologue
-    .line 105
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;->-wrap5(Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;)V
 
-    .line 106
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;
 
     invoke-static {v0, p1}, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;->-wrap1(Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;I)Z
@@ -106,12 +99,10 @@
     .param p1, "subId"    # I
 
     .prologue
-    .line 71
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;->-wrap5(Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;)V
 
-    .line 72
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;
 
     invoke-static {v0, p1}, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;->-wrap2(Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;I)Z
@@ -126,17 +117,14 @@
     .param p1, "subId"    # I
 
     .prologue
-    .line 144
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;->-wrap4(Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;)V
 
-    .line 145
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;
 
     invoke-static {v0, p1}, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;->-wrap6(Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;I)V
 
-    .line 143
     return-void
 .end method
 
@@ -145,17 +133,14 @@
     .param p1, "state"    # Z
 
     .prologue
-    .line 130
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;->-wrap4(Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;)V
 
-    .line 131
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;
 
     invoke-static {v0, p1}, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;->-wrap7(Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;Z)V
 
-    .line 129
     return-void
 .end method
 
@@ -164,17 +149,14 @@
     .param p1, "subId"    # I
 
     .prologue
-    .line 159
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;->-wrap4(Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;)V
 
-    .line 160
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;
 
     invoke-static {v0, p1}, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;->-wrap8(Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;I)V
 
-    .line 158
     return-void
 .end method
 
@@ -183,17 +165,14 @@
     .param p1, "subId"    # I
 
     .prologue
-    .line 174
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;->-wrap4(Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;)V
 
-    .line 175
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;
 
     invoke-static {v0, p1}, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;->-wrap9(Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;I)V
 
-    .line 173
     return-void
 .end method
 
@@ -203,16 +182,13 @@
     .param p2, "state"    # Z
 
     .prologue
-    .line 87
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;->-wrap4(Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;)V
 
-    .line 88
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService$1;->this$0:Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;
 
     invoke-static {v0, p1, p2}, Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;->-wrap10(Lorg/cyanogenmod/platform/internal/CMTelephonyManagerService;IZ)V
 
-    .line 86
     return-void
 .end method

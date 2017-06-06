@@ -98,31 +98,22 @@
     .param p7, "resolution"    # F
 
     .prologue
-    .line 803
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 805
     iput p1, p0, Landroid/view/InputDevice$MotionRange;->mAxis:I
 
-    .line 806
     iput p2, p0, Landroid/view/InputDevice$MotionRange;->mSource:I
 
-    .line 807
     iput p3, p0, Landroid/view/InputDevice$MotionRange;->mMin:F
 
-    .line 808
     iput p4, p0, Landroid/view/InputDevice$MotionRange;->mMax:F
 
-    .line 809
     iput p5, p0, Landroid/view/InputDevice$MotionRange;->mFlat:F
 
-    .line 810
     iput p6, p0, Landroid/view/InputDevice$MotionRange;->mFuzz:F
 
-    .line 811
     iput p7, p0, Landroid/view/InputDevice$MotionRange;->mResolution:F
 
-    .line 804
     return-void
 .end method
 
@@ -148,7 +139,6 @@
     .locals 1
 
     .prologue
-    .line 819
     iget v0, p0, Landroid/view/InputDevice$MotionRange;->mAxis:I
 
     return v0
@@ -158,7 +148,6 @@
     .locals 1
 
     .prologue
-    .line 876
     iget v0, p0, Landroid/view/InputDevice$MotionRange;->mFlat:F
 
     return v0
@@ -168,7 +157,6 @@
     .locals 1
 
     .prologue
-    .line 888
     iget v0, p0, Landroid/view/InputDevice$MotionRange;->mFuzz:F
 
     return v0
@@ -178,7 +166,6 @@
     .locals 1
 
     .prologue
-    .line 856
     iget v0, p0, Landroid/view/InputDevice$MotionRange;->mMax:F
 
     return v0
@@ -188,7 +175,6 @@
     .locals 1
 
     .prologue
-    .line 848
     iget v0, p0, Landroid/view/InputDevice$MotionRange;->mMin:F
 
     return v0
@@ -198,7 +184,6 @@
     .locals 2
 
     .prologue
-    .line 864
     iget v0, p0, Landroid/view/InputDevice$MotionRange;->mMax:F
 
     iget v1, p0, Landroid/view/InputDevice$MotionRange;->mMin:F
@@ -212,7 +197,6 @@
     .locals 1
 
     .prologue
-    .line 896
     iget v0, p0, Landroid/view/InputDevice$MotionRange;->mResolution:F
 
     return v0
@@ -222,7 +206,6 @@
     .locals 1
 
     .prologue
-    .line 827
     iget v0, p0, Landroid/view/InputDevice$MotionRange;->mSource:I
 
     return v0
@@ -233,7 +216,6 @@
     .param p1, "source"    # I
 
     .prologue
-    .line 840
     invoke-virtual {p0}, Landroid/view/InputDevice$MotionRange;->getSource()I
 
     move-result v0

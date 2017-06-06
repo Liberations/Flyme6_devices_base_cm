@@ -209,37 +209,30 @@
     .locals 1
 
     .prologue
-    .line 90
-    const-string/jumbo v0, "content://downloads/my_downloads"
+    const-string v0, "content://downloads/my_downloads"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 89
     sput-object v0, Landroid/provider/Downloads$Impl;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 97
-    const-string/jumbo v0, "content://downloads/all_downloads"
+    const-string v0, "content://downloads/all_downloads"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 96
     sput-object v0, Landroid/provider/Downloads$Impl;->ALL_DOWNLOADS_CONTENT_URI:Landroid/net/Uri;
 
-    .line 107
-    const-string/jumbo v0, "content://downloads/public_downloads"
+    const-string v0, "content://downloads/public_downloads"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 106
     sput-object v0, Landroid/provider/Downloads$Impl;->PUBLICLY_ACCESSIBLE_DOWNLOADS_URI:Landroid/net/Uri;
 
-    .line 41
     return-void
 .end method
 
@@ -247,7 +240,6 @@
     .locals 0
 
     .prologue
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -260,20 +252,16 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 552
     if-eq p0, v0, :cond_0
 
-    .line 553
     const/4 v1, 0x3
 
     if-ne p0, v1, :cond_1
 
-    .line 552
     :cond_0
     :goto_0
     return v0
 
-    .line 553
     :cond_1
     const/4 v0, 0x0
 
@@ -287,7 +275,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 535
     const/16 v1, 0x190
 
     if-lt p0, v1, :cond_0
@@ -311,7 +298,6 @@
 
     const/4 v1, 0x0
 
-    .line 561
     const/16 v2, 0xc8
 
     if-lt p0, v2, :cond_1
@@ -346,7 +332,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 528
     const/16 v1, 0x190
 
     if-lt p0, v1, :cond_0
@@ -368,7 +353,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 514
     const/16 v1, 0x64
 
     if-lt p0, v1, :cond_0
@@ -390,7 +374,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 542
     const/16 v1, 0x1f4
 
     if-lt p0, v1, :cond_0
@@ -412,7 +395,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 521
     const/16 v1, 0xc8
 
     if-lt p0, v1, :cond_0
@@ -432,161 +414,134 @@
     .param p0, "status"    # I
 
     .prologue
-    .line 730
     sparse-switch p0, :sswitch_data_0
 
-    .line 755
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 
-    .line 731
     :sswitch_0
-    const-string/jumbo v0, "PENDING"
+    const-string v0, "PENDING"
 
     return-object v0
 
-    .line 732
     :sswitch_1
-    const-string/jumbo v0, "RUNNING"
+    const-string v0, "RUNNING"
 
     return-object v0
 
-    .line 733
     :sswitch_2
-    const-string/jumbo v0, "PAUSED_BY_APP"
+    const-string v0, "PAUSED_BY_APP"
 
     return-object v0
 
-    .line 734
     :sswitch_3
-    const-string/jumbo v0, "WAITING_TO_RETRY"
+    const-string v0, "WAITING_TO_RETRY"
 
     return-object v0
 
-    .line 735
     :sswitch_4
-    const-string/jumbo v0, "WAITING_FOR_NETWORK"
+    const-string v0, "WAITING_FOR_NETWORK"
 
     return-object v0
 
-    .line 736
     :sswitch_5
-    const-string/jumbo v0, "QUEUED_FOR_WIFI"
+    const-string v0, "QUEUED_FOR_WIFI"
 
     return-object v0
 
-    .line 737
     :sswitch_6
-    const-string/jumbo v0, "INSUFFICIENT_SPACE_ERROR"
+    const-string v0, "INSUFFICIENT_SPACE_ERROR"
 
     return-object v0
 
-    .line 738
     :sswitch_7
-    const-string/jumbo v0, "DEVICE_NOT_FOUND_ERROR"
+    const-string v0, "DEVICE_NOT_FOUND_ERROR"
 
     return-object v0
 
-    .line 739
     :sswitch_8
-    const-string/jumbo v0, "SUCCESS"
+    const-string v0, "SUCCESS"
 
     return-object v0
 
-    .line 740
     :sswitch_9
-    const-string/jumbo v0, "BAD_REQUEST"
+    const-string v0, "BAD_REQUEST"
 
     return-object v0
 
-    .line 741
     :sswitch_a
-    const-string/jumbo v0, "NOT_ACCEPTABLE"
+    const-string v0, "NOT_ACCEPTABLE"
 
     return-object v0
 
-    .line 742
     :sswitch_b
-    const-string/jumbo v0, "LENGTH_REQUIRED"
+    const-string v0, "LENGTH_REQUIRED"
 
     return-object v0
 
-    .line 743
     :sswitch_c
-    const-string/jumbo v0, "PRECONDITION_FAILED"
+    const-string v0, "PRECONDITION_FAILED"
 
     return-object v0
 
-    .line 744
     :sswitch_d
-    const-string/jumbo v0, "FILE_ALREADY_EXISTS_ERROR"
+    const-string v0, "FILE_ALREADY_EXISTS_ERROR"
 
     return-object v0
 
-    .line 745
     :sswitch_e
-    const-string/jumbo v0, "CANNOT_RESUME"
+    const-string v0, "CANNOT_RESUME"
 
     return-object v0
 
-    .line 746
     :sswitch_f
-    const-string/jumbo v0, "CANCELED"
+    const-string v0, "CANCELED"
 
     return-object v0
 
-    .line 747
     :sswitch_10
-    const-string/jumbo v0, "UNKNOWN_ERROR"
+    const-string v0, "UNKNOWN_ERROR"
 
     return-object v0
 
-    .line 748
     :sswitch_11
-    const-string/jumbo v0, "FILE_ERROR"
+    const-string v0, "FILE_ERROR"
 
     return-object v0
 
-    .line 749
     :sswitch_12
-    const-string/jumbo v0, "UNHANDLED_REDIRECT"
+    const-string v0, "UNHANDLED_REDIRECT"
 
     return-object v0
 
-    .line 750
     :sswitch_13
-    const-string/jumbo v0, "UNHANDLED_HTTP_CODE"
+    const-string v0, "UNHANDLED_HTTP_CODE"
 
     return-object v0
 
-    .line 751
     :sswitch_14
-    const-string/jumbo v0, "HTTP_DATA_ERROR"
+    const-string v0, "HTTP_DATA_ERROR"
 
     return-object v0
 
-    .line 752
     :sswitch_15
-    const-string/jumbo v0, "HTTP_EXCEPTION"
+    const-string v0, "HTTP_EXCEPTION"
 
     return-object v0
 
-    .line 753
     :sswitch_16
-    const-string/jumbo v0, "TOO_MANY_REDIRECTS"
+    const-string v0, "TOO_MANY_REDIRECTS"
 
     return-object v0
 
-    .line 754
     :sswitch_17
-    const-string/jumbo v0, "BLOCKED"
+    const-string v0, "BLOCKED"
 
     return-object v0
 
-    .line 730
     :sswitch_data_0
     .sparse-switch
         0xbe -> :sswitch_0

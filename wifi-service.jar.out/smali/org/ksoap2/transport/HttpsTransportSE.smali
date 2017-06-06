@@ -28,12 +28,11 @@
     .param p4, "timeout"    # I
 
     .prologue
-    .line 25
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "https://"
+    const-string v1, "https://"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -43,7 +42,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, ":"
+    const-string v1, ":"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -63,19 +62,17 @@
 
     invoke-direct {p0, v0}, Lorg/ksoap2/transport/HttpTransportSE;-><init>(Ljava/lang/String;)V
 
-    .line 18
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/ksoap2/transport/HttpsTransportSE;->serviceConnection:Lorg/ksoap2/transport/ServiceConnection;
 
-    .line 26
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Establistion connection to: https://"
+    const-string v2, "Establistion connection to: https://"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -85,10 +82,8 @@
 
     move-result-object v1
 
-    .line 27
-    const-string/jumbo v2, ":"
+    const-string v2, ":"
 
-    .line 26
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -107,19 +102,14 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 28
     iput-object p1, p0, Lorg/ksoap2/transport/HttpsTransportSE;->host:Ljava/lang/String;
 
-    .line 29
     iput p2, p0, Lorg/ksoap2/transport/HttpsTransportSE;->port:I
 
-    .line 30
     iput-object p3, p0, Lorg/ksoap2/transport/HttpsTransportSE;->file:Ljava/lang/String;
 
-    .line 31
     iput p4, p0, Lorg/ksoap2/transport/HttpsTransportSE;->timeout:I
 
-    .line 24
     return-void
 .end method
 
@@ -129,10 +119,8 @@
     .locals 4
 
     .prologue
-    .line 48
     const/4 v1, 0x0
 
-    .line 51
     .local v1, "retVal":Ljava/lang/String;
     :try_start_0
     new-instance v2, Ljava/net/URL;
@@ -147,17 +135,14 @@
 
     move-result-object v1
 
-    .line 56
     .end local v1    # "retVal":Ljava/lang/String;
     :goto_0
     return-object v1
 
-    .line 52
     .restart local v1    # "retVal":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 53
     .local v0, "e":Ljava/net/MalformedURLException;
     invoke-virtual {v0}, Ljava/net/MalformedURLException;->printStackTrace()V
 
@@ -168,10 +153,8 @@
     .locals 4
 
     .prologue
-    .line 74
     const/4 v1, 0x0
 
-    .line 77
     .local v1, "retVal":Ljava/lang/String;
     :try_start_0
     new-instance v2, Ljava/net/URL;
@@ -186,17 +169,14 @@
 
     move-result-object v1
 
-    .line 82
     .end local v1    # "retVal":Ljava/lang/String;
     :goto_0
     return-object v1
 
-    .line 78
     .restart local v1    # "retVal":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 79
     .local v0, "e":Ljava/net/MalformedURLException;
     invoke-virtual {v0}, Ljava/net/MalformedURLException;->printStackTrace()V
 
@@ -207,10 +187,8 @@
     .locals 4
 
     .prologue
-    .line 61
     const/4 v1, -0x1
 
-    .line 64
     .local v1, "retVal":I
     :try_start_0
     new-instance v2, Ljava/net/URL;
@@ -225,15 +203,12 @@
 
     move-result v1
 
-    .line 69
     :goto_0
     return v1
 
-    .line 65
     :catch_0
     move-exception v0
 
-    .line 66
     .local v0, "e":Ljava/net/MalformedURLException;
     invoke-virtual {v0}, Ljava/net/MalformedURLException;->printStackTrace()V
 
@@ -249,12 +224,10 @@
     .end annotation
 
     .prologue
-    .line 40
     iget-object v0, p0, Lorg/ksoap2/transport/HttpsTransportSE;->serviceConnection:Lorg/ksoap2/transport/ServiceConnection;
 
     if-nez v0, :cond_0
 
-    .line 41
     new-instance v0, Lorg/ksoap2/transport/HttpsServiceConnectionSE;
 
     iget-object v1, p0, Lorg/ksoap2/transport/HttpsTransportSE;->host:Ljava/lang/String;
@@ -269,7 +242,6 @@
 
     iput-object v0, p0, Lorg/ksoap2/transport/HttpsTransportSE;->serviceConnection:Lorg/ksoap2/transport/ServiceConnection;
 
-    .line 43
     :cond_0
     iget-object v0, p0, Lorg/ksoap2/transport/HttpsTransportSE;->serviceConnection:Lorg/ksoap2/transport/ServiceConnection;
 

@@ -15,13 +15,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 57
     invoke-direct {p0}, Landroid/media/SubtitleController$Renderer;-><init>()V
 
-    .line 58
     iput-object p1, p0, Landroid/media/ClosedCaptionRenderer;->mContext:Landroid/content/Context;
 
-    .line 57
     return-void
 .end method
 
@@ -32,12 +29,10 @@
     .param p1, "format"    # Landroid/media/MediaFormat;
 
     .prologue
-    .line 72
     iget-object v0, p0, Landroid/media/ClosedCaptionRenderer;->mRenderingWidget:Landroid/media/ClosedCaptionWidget;
 
     if-nez v0, :cond_0
 
-    .line 73
     new-instance v0, Landroid/media/ClosedCaptionWidget;
 
     iget-object v1, p0, Landroid/media/ClosedCaptionRenderer;->mContext:Landroid/content/Context;
@@ -46,7 +41,6 @@
 
     iput-object v0, p0, Landroid/media/ClosedCaptionRenderer;->mRenderingWidget:Landroid/media/ClosedCaptionWidget;
 
-    .line 75
     :cond_0
     new-instance v0, Landroid/media/ClosedCaptionTrack;
 
@@ -62,8 +56,7 @@
     .param p1, "format"    # Landroid/media/MediaFormat;
 
     .prologue
-    .line 63
-    const-string/jumbo v0, "mime"
+    const-string v0, "mime"
 
     invoke-virtual {p1, v0}, Landroid/media/MediaFormat;->containsKey(Ljava/lang/String;)Z
 
@@ -71,24 +64,20 @@
 
     if-eqz v0, :cond_0
 
-    .line 64
-    const-string/jumbo v0, "mime"
+    const-string v0, "mime"
 
     invoke-virtual {p1, v0}, Landroid/media/MediaFormat;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 65
-    const-string/jumbo v1, "text/cea-608"
+    const-string v1, "text/cea-608"
 
-    .line 64
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     return v0
 
-    .line 67
     :cond_0
     const/4 v0, 0x0
 

@@ -15,18 +15,14 @@
     .param p1, "id"    # J
 
     .prologue
-    .line 25
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 26
     iput-wide p1, p0, Lcom/android/server/pm/KeySetHandle;->mId:J
 
-    .line 27
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/server/pm/KeySetHandle;->mRefCount:I
 
-    .line 25
     return-void
 .end method
 
@@ -36,16 +32,12 @@
     .param p3, "refCount"    # I
 
     .prologue
-    .line 33
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 34
     iput-wide p1, p0, Lcom/android/server/pm/KeySetHandle;->mId:J
 
-    .line 35
     iput p3, p0, Lcom/android/server/pm/KeySetHandle;->mRefCount:I
 
-    .line 33
     return-void
 .end method
 
@@ -55,14 +47,12 @@
     .locals 1
 
     .prologue
-    .line 60
     iget v0, p0, Lcom/android/server/pm/KeySetHandle;->mRefCount:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Lcom/android/server/pm/KeySetHandle;->mRefCount:I
 
-    .line 61
     iget v0, p0, Lcom/android/server/pm/KeySetHandle;->mRefCount:I
 
     return v0
@@ -72,7 +62,6 @@
     .locals 2
 
     .prologue
-    .line 39
     iget-wide v0, p0, Lcom/android/server/pm/KeySetHandle;->mId:J
 
     return-wide v0
@@ -82,7 +71,6 @@
     .locals 1
 
     .prologue
-    .line 43
     iget v0, p0, Lcom/android/server/pm/KeySetHandle;->mRefCount:I
 
     return v0
@@ -92,14 +80,12 @@
     .locals 1
 
     .prologue
-    .line 55
     iget v0, p0, Lcom/android/server/pm/KeySetHandle;->mRefCount:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/android/server/pm/KeySetHandle;->mRefCount:I
 
-    .line 56
     return-void
 .end method
 
@@ -108,9 +94,7 @@
     .param p1, "newCount"    # I
 
     .prologue
-    .line 50
     iput p1, p0, Lcom/android/server/pm/KeySetHandle;->mRefCount:I
 
-    .line 51
     return-void
 .end method

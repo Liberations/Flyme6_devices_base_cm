@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +37,6 @@
     .end param
 
     .prologue
-    .line 30
     invoke-virtual {p0}, Landroid/widget/TextView;->getLayoutDirection()I
 
     move-result v1
@@ -49,7 +47,6 @@
 
     const/4 v0, 0x1
 
-    .line 31
     .local v0, "rtl":Z
     :goto_0
     if-eqz v0, :cond_1
@@ -63,10 +60,8 @@
     :goto_2
     invoke-virtual {p0, v1, p2, p1, p4}, Landroid/widget/TextView;->setCompoundDrawables(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 29
     return-void
 
-    .line 30
     .end local v0    # "rtl":Z
     .restart local p1    # "start":Landroid/graphics/drawable/Drawable;
     :cond_0
@@ -78,7 +73,6 @@
     :cond_1
     move-object v1, p1
 
-    .line 31
     goto :goto_1
 
     :cond_2
@@ -99,7 +93,6 @@
     .param p4, "bottom"    # I
 
     .prologue
-    .line 44
     invoke-virtual {p0}, Landroid/widget/TextView;->getLayoutDirection()I
 
     move-result v1
@@ -110,7 +103,6 @@
 
     const/4 v0, 0x1
 
-    .line 45
     .local v0, "rtl":Z
     :goto_0
     if-eqz v0, :cond_1
@@ -124,10 +116,8 @@
     :goto_2
     invoke-virtual {p0, v1, p2, p1, p4}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(IIII)V
 
-    .line 43
     return-void
 
-    .line 44
     .end local v0    # "rtl":Z
     .restart local p1    # "start":I
     :cond_0
@@ -139,7 +129,6 @@
     :cond_1
     move v1, p1
 
-    .line 45
     goto :goto_1
 
     :cond_2
@@ -172,7 +161,6 @@
     .end param
 
     .prologue
-    .line 37
     invoke-virtual {p0}, Landroid/widget/TextView;->getLayoutDirection()I
 
     move-result v1
@@ -183,7 +171,6 @@
 
     const/4 v0, 0x1
 
-    .line 38
     .local v0, "rtl":Z
     :goto_0
     if-eqz v0, :cond_1
@@ -197,10 +184,8 @@
     :goto_2
     invoke-virtual {p0, v1, p2, p1, p4}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 36
     return-void
 
-    .line 37
     .end local v0    # "rtl":Z
     .restart local p1    # "start":Landroid/graphics/drawable/Drawable;
     :cond_0
@@ -212,7 +197,6 @@
     :cond_1
     move-object v1, p1
 
-    .line 38
     goto :goto_1
 
     :cond_2

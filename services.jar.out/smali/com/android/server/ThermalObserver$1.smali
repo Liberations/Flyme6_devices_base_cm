@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/ThermalObserver;
 
     .prologue
-    .line 53
     iput-object p1, p0, Lcom/android/server/ThermalObserver$1;->this$0:Lcom/android/server/ThermalObserver;
 
     invoke-direct {p0}, Landroid/os/UEventObserver;-><init>()V
@@ -39,10 +38,9 @@
     .param p1, "event"    # Landroid/os/UEventObserver$UEvent;
 
     .prologue
-    .line 56
     iget-object v0, p0, Lcom/android/server/ThermalObserver$1;->this$0:Lcom/android/server/ThermalObserver;
 
-    const-string/jumbo v1, "SWITCH_STATE"
+    const-string v1, "SWITCH_STATE"
 
     invoke-virtual {p1, v1}, Landroid/os/UEventObserver$UEvent;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -54,6 +52,5 @@
 
     invoke-static {v0, v1}, Lcom/android/server/ThermalObserver;->-wrap1(Lcom/android/server/ThermalObserver;I)V
 
-    .line 55
     return-void
 .end method

@@ -20,7 +20,6 @@
     .param p1, "$anonymous0"    # Ljava/lang/String;
 
     .prologue
-    .line 327
     invoke-direct {p0, p1}, Lcom/android/server/firewall/StringFilter$ValueProvider;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -37,23 +36,19 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 331
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 332
     .local v0, "data":Landroid/net/Uri;
     if-eqz v0, :cond_0
 
-    .line 333
     invoke-virtual {v0}, Landroid/net/Uri;->getPath()Ljava/lang/String;
 
     move-result-object v1
 
     return-object v1
 
-    .line 335
     :cond_0
     return-object v1
 .end method

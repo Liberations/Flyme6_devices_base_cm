@@ -51,21 +51,16 @@
     .end annotation
 
     .prologue
-    .line 301
     .local p0, "this":Landroid/content/pm/RegisteredServicesCache$ServiceInfo;, "Landroid/content/pm/RegisteredServicesCache<TV;>.ServiceInfo<TV;>;"
     .local p1, "type":Ljava/lang/Object;, "TV;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 302
     iput-object p1, p0, Landroid/content/pm/RegisteredServicesCache$ServiceInfo;->type:Ljava/lang/Object;
 
-    .line 303
     iput-object p2, p0, Landroid/content/pm/RegisteredServicesCache$ServiceInfo;->componentName:Landroid/content/ComponentName;
 
-    .line 304
     iput p3, p0, Landroid/content/pm/RegisteredServicesCache$ServiceInfo;->uid:I
 
-    .line 301
     return-void
 .end method
 
@@ -75,13 +70,12 @@
     .locals 2
 
     .prologue
-    .line 309
     .local p0, "this":Landroid/content/pm/RegisteredServicesCache$ServiceInfo;, "Landroid/content/pm/RegisteredServicesCache<TV;>.ServiceInfo<TV;>;"
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "ServiceInfo: "
+    const-string v1, "ServiceInfo: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -93,7 +87,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, ", "
+    const-string v1, ", "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -105,7 +99,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, ", uid "
+    const-string v1, ", uid "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

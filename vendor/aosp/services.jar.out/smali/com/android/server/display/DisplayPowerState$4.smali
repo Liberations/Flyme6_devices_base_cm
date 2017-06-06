@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/display/DisplayPowerState;
 
     .prologue
-    .line 324
     iput-object p1, p0, Lcom/android/server/display/DisplayPowerState$4;->this$0:Lcom/android/server/display/DisplayPowerState;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,14 +40,12 @@
     .locals 2
 
     .prologue
-    .line 327
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerState$4;->this$0:Lcom/android/server/display/DisplayPowerState;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/android/server/display/DisplayPowerState;->-set0(Lcom/android/server/display/DisplayPowerState;Z)Z
 
-    .line 329
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerState$4;->this$0:Lcom/android/server/display/DisplayPowerState;
 
     invoke-static {v0}, Lcom/android/server/display/DisplayPowerState;->-get4(Lcom/android/server/display/DisplayPowerState;)Z
@@ -57,7 +54,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 330
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerState$4;->this$0:Lcom/android/server/display/DisplayPowerState;
 
     invoke-static {v0}, Lcom/android/server/display/DisplayPowerState;->-get2(Lcom/android/server/display/DisplayPowerState;)Lcom/android/server/display/ColorFade;
@@ -72,7 +68,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/display/ColorFade;->draw(F)Z
 
-    .line 333
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerState$4;->this$0:Lcom/android/server/display/DisplayPowerState;
 
@@ -80,11 +75,9 @@
 
     invoke-static {v0, v1}, Lcom/android/server/display/DisplayPowerState;->-set1(Lcom/android/server/display/DisplayPowerState;Z)Z
 
-    .line 334
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerState$4;->this$0:Lcom/android/server/display/DisplayPowerState;
 
     invoke-static {v0}, Lcom/android/server/display/DisplayPowerState;->-wrap0(Lcom/android/server/display/DisplayPowerState;)V
 
-    .line 326
     return-void
 .end method

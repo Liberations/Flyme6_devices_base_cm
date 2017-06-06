@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
 
     return-void
@@ -19,9 +18,7 @@
     .param p1, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 28
     invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 27
     return-void
 .end method

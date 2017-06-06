@@ -40,15 +40,12 @@
     .locals 1
 
     .prologue
-    .line 33
     new-instance v0, Landroid/media/tv/DvbDeviceInfo$1;
 
     invoke-direct {v0}, Landroid/media/tv/DvbDeviceInfo$1;-><init>()V
 
-    .line 32
     sput-object v0, Landroid/media/tv/DvbDeviceInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 29
     return-void
 .end method
 
@@ -58,16 +55,12 @@
     .param p2, "deviceId"    # I
 
     .prologue
-    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 62
     iput p1, p0, Landroid/media/tv/DvbDeviceInfo;->mAdapterId:I
 
-    .line 63
     iput p2, p0, Landroid/media/tv/DvbDeviceInfo;->mDeviceId:I
 
-    .line 61
     return-void
 .end method
 
@@ -76,24 +69,20 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/media/tv/DvbDeviceInfo;->mAdapterId:I
 
-    .line 55
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/media/tv/DvbDeviceInfo;->mDeviceId:I
 
-    .line 53
     return-void
 .end method
 
@@ -113,7 +102,6 @@
     .locals 1
 
     .prologue
-    .line 85
     const/4 v0, 0x0
 
     return v0
@@ -123,7 +111,6 @@
     .locals 1
 
     .prologue
-    .line 71
     iget v0, p0, Landroid/media/tv/DvbDeviceInfo;->mAdapterId:I
 
     return v0
@@ -133,7 +120,6 @@
     .locals 1
 
     .prologue
-    .line 79
     iget v0, p0, Landroid/media/tv/DvbDeviceInfo;->mDeviceId:I
 
     return v0
@@ -145,16 +131,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 90
     iget v0, p0, Landroid/media/tv/DvbDeviceInfo;->mAdapterId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 91
     iget v0, p0, Landroid/media/tv/DvbDeviceInfo;->mDeviceId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 89
     return-void
 .end method

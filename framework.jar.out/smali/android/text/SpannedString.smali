@@ -14,7 +14,6 @@
     .param p1, "source"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 30
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
@@ -23,7 +22,6 @@
 
     invoke-direct {p0, p1, v1, v0}, Landroid/text/SpannableStringInternal;-><init>(Ljava/lang/CharSequence;II)V
 
-    .line 29
     return-void
 .end method
 
@@ -34,10 +32,8 @@
     .param p3, "end"    # I
 
     .prologue
-    .line 34
     invoke-direct {p0, p1, p2, p3}, Landroid/text/SpannableStringInternal;-><init>(Ljava/lang/CharSequence;II)V
 
-    .line 33
     return-void
 .end method
 
@@ -46,18 +42,15 @@
     .param p0, "source"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 42
     instance-of v0, p0, Landroid/text/SpannedString;
 
     if-eqz v0, :cond_0
 
-    .line 43
     check-cast p0, Landroid/text/SpannedString;
 
     .end local p0    # "source":Ljava/lang/CharSequence;
     return-object p0
 
-    .line 45
     .restart local p0    # "source":Ljava/lang/CharSequence;
     :cond_0
     new-instance v0, Landroid/text/SpannedString;
@@ -162,7 +155,6 @@
     .param p2, "end"    # I
 
     .prologue
-    .line 38
     new-instance v0, Landroid/text/SpannedString;
 
     invoke-direct {v0, p0, p1, p2}, Landroid/text/SpannedString;-><init>(Ljava/lang/CharSequence;II)V

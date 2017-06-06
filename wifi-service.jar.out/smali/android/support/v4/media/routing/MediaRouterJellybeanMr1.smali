@@ -24,7 +24,6 @@
     .locals 0
 
     .prologue
-    .line 30
     invoke-direct {p0}, Landroid/support/v4/media/routing/MediaRouterJellybean;-><init>()V
 
     return-void
@@ -35,7 +34,6 @@
     .param p0, "callback"    # Landroid/support/v4/media/routing/MediaRouterJellybeanMr1$Callback;
 
     .prologue
-    .line 34
     new-instance v0, Landroid/support/v4/media/routing/MediaRouterJellybeanMr1$CallbackProxy;
 
     invoke-direct {v0, p0}, Landroid/support/v4/media/routing/MediaRouterJellybeanMr1$CallbackProxy;-><init>(Landroid/support/v4/media/routing/MediaRouterJellybeanMr1$Callback;)V

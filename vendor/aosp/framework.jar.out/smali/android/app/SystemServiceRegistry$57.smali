@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 606
     invoke-direct {p0}, Landroid/app/SystemServiceRegistry$StaticServiceFetcher;-><init>()V
 
     return-void
@@ -40,14 +39,12 @@
     .locals 2
 
     .prologue
-    .line 609
-    const-string/jumbo v1, "trust"
+    const-string v1, "trust"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 610
     .local v0, "b":Landroid/os/IBinder;
     new-instance v1, Landroid/app/trust/TrustManager;
 
@@ -60,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 608
     invoke-virtual {p0}, Landroid/app/SystemServiceRegistry$57;->createService()Landroid/app/trust/TrustManager;
 
     move-result-object v0

@@ -27,17 +27,14 @@
     .locals 1
 
     .prologue
-    .line 243
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 244
     const/16 v0, 0x100
 
     new-array v0, v0, [B
 
     iput-object v0, p0, Lcom/android/server/GraphicsStatsService$HistoricalData;->mBuffer:[B
 
-    .line 243
     return-void
 .end method
 
@@ -59,13 +56,10 @@
     .param p3, "file"    # Landroid/os/MemoryFile;
 
     .prologue
-    .line 249
     iput p2, p0, Lcom/android/server/GraphicsStatsService$HistoricalData;->mUid:I
 
-    .line 250
     iput-object p1, p0, Lcom/android/server/GraphicsStatsService$HistoricalData;->mPackageName:Ljava/lang/String;
 
-    .line 252
     :try_start_0
     iget-object v1, p0, Lcom/android/server/GraphicsStatsService$HistoricalData;->mBuffer:[B
 
@@ -79,11 +73,9 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 248
     :goto_0
     return-void
 
-    .line 253
     :catch_0
     move-exception v0
 

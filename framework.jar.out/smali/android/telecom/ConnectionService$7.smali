@@ -25,7 +25,6 @@
     .param p2, "$anonymous0"    # Landroid/telecom/PhoneAccountHandle;
 
     .prologue
-    .line 1396
     iput-object p1, p0, Landroid/telecom/ConnectionService$7;->this$0:Landroid/telecom/ConnectionService;
 
     invoke-direct {p0, p2}, Landroid/telecom/Conference;-><init>(Landroid/telecom/PhoneAccountHandle;)V

@@ -33,7 +33,6 @@
     .param p3, "val$activity"    # Landroid/app/Activity;
 
     .prologue
-    .line 282
     iput-object p1, p0, Landroid/app/ActivityTransitionState$1;->this$0:Landroid/app/ActivityTransitionState;
 
     iput-object p2, p0, Landroid/app/ActivityTransitionState$1;->val$finalDecor:Landroid/view/ViewGroup;
@@ -51,7 +50,6 @@
     .locals 3
 
     .prologue
-    .line 285
     iget-object v0, p0, Landroid/app/ActivityTransitionState$1;->val$finalDecor:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
@@ -60,7 +58,6 @@
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 286
     iget-object v0, p0, Landroid/app/ActivityTransitionState$1;->this$0:Landroid/app/ActivityTransitionState;
 
     invoke-static {v0}, Landroid/app/ActivityTransitionState;->-get0(Landroid/app/ActivityTransitionState;)Landroid/app/ExitTransitionCoordinator;
@@ -69,7 +66,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 287
     iget-object v0, p0, Landroid/app/ActivityTransitionState$1;->this$0:Landroid/app/ActivityTransitionState;
 
     invoke-static {v0}, Landroid/app/ActivityTransitionState;->-get0(Landroid/app/ActivityTransitionState;)Landroid/app/ExitTransitionCoordinator;
@@ -80,15 +76,12 @@
 
     iget v1, v1, Landroid/app/Activity;->mResultCode:I
 
-    .line 288
     iget-object v2, p0, Landroid/app/ActivityTransitionState$1;->val$activity:Landroid/app/Activity;
 
     iget-object v2, v2, Landroid/app/Activity;->mResultData:Landroid/content/Intent;
 
-    .line 287
     invoke-virtual {v0, v1, v2}, Landroid/app/ExitTransitionCoordinator;->startExit(ILandroid/content/Intent;)V
 
-    .line 290
     :cond_0
     const/4 v0, 0x1
 

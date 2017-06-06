@@ -30,7 +30,6 @@
     .param p2, "val$mode"    # Lcom/android/internal/view/FloatingActionMode;
 
     .prologue
-    .line 3761
     iput-object p1, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$4;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
 
     iput-object p2, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$4;->val$mode:Lcom/android/internal/view/FloatingActionMode;
@@ -46,12 +45,10 @@
     .locals 1
 
     .prologue
-    .line 3764
     iget-object v0, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$4;->val$mode:Lcom/android/internal/view/FloatingActionMode;
 
     invoke-virtual {v0}, Lcom/android/internal/view/FloatingActionMode;->updateViewLocationInWindow()V
 
-    .line 3765
     const/4 v0, 0x1
 
     return v0

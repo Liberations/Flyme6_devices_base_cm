@@ -34,7 +34,6 @@
     .param p5, "val$portF"    # I
 
     .prologue
-    .line 250
     iput-object p1, p0, Lcom/android/server/usb/UsbMidiDevice$3;->this$0:Lcom/android/server/usb/UsbMidiDevice;
 
     iput-object p3, p0, Lcom/android/server/usb/UsbMidiDevice$3;->val$eventSchedulerF:Lcom/android/internal/midi/MidiEventScheduler;
@@ -54,7 +53,6 @@
     .locals 7
 
     .prologue
-    .line 256
     :goto_0
     :try_start_0
     iget-object v3, p0, Lcom/android/server/usb/UsbMidiDevice$3;->val$eventSchedulerF:Lcom/android/internal/midi/MidiEventScheduler;
@@ -67,21 +65,17 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 261
     .local v2, "event":Lcom/android/internal/midi/MidiEventScheduler$MidiEvent;
     if-nez v2, :cond_0
 
-    .line 271
-    const-string/jumbo v3, "UsbMidiDevice"
+    const-string v3, "UsbMidiDevice"
 
-    const-string/jumbo v4, "output thread exit"
+    const-string v4, "output thread exit"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 252
     return-void
 
-    .line 265
     :cond_0
     :try_start_1
     iget-object v3, p0, Lcom/android/server/usb/UsbMidiDevice$3;->val$outputStreamF:Ljava/io/FileOutputStream;
@@ -96,7 +90,6 @@
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 269
     :goto_1
     iget-object v3, p0, Lcom/android/server/usb/UsbMidiDevice$3;->val$eventSchedulerF:Lcom/android/internal/midi/MidiEventScheduler;
 
@@ -104,19 +97,17 @@
 
     goto :goto_0
 
-    .line 266
     :catch_0
     move-exception v0
 
-    .line 267
     .local v0, "e":Ljava/io/IOException;
-    const-string/jumbo v3, "UsbMidiDevice"
+    const-string v3, "UsbMidiDevice"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "write failed for port "
+    const-string v5, "write failed for port "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -136,7 +127,6 @@
 
     goto :goto_1
 
-    .line 257
     .end local v0    # "e":Ljava/io/IOException;
     .end local v2    # "event":Lcom/android/internal/midi/MidiEventScheduler$MidiEvent;
     :catch_1

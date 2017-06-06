@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;
 
     .prologue
-    .line 130
     iput-object p1, p0, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;
 
     invoke-direct {p0}, Lcyanogenmod/themes/IThemeService$Stub;-><init>()V
@@ -53,12 +52,10 @@
     .end annotation
 
     .prologue
-    .line 156
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;->-wrap0(Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;)V
 
-    .line 157
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;
 
     invoke-virtual {v0}, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;->getBrokeredService()Landroid/os/IInterface;
@@ -69,7 +66,6 @@
 
     invoke-interface {v0}, Lcyanogenmod/themes/IThemeService;->applyDefaultTheme()V
 
-    .line 155
     return-void
 .end method
 
@@ -82,12 +78,10 @@
     .end annotation
 
     .prologue
-    .line 214
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;->-wrap0(Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;)V
 
-    .line 215
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;
 
     invoke-virtual {v0}, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;->getBrokeredService()Landroid/os/IInterface;
@@ -112,12 +106,10 @@
     .end annotation
 
     .prologue
-    .line 208
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;->-wrap0(Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;)V
 
-    .line 209
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;
 
     invoke-virtual {v0}, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;->getBrokeredService()Landroid/os/IInterface;
@@ -142,12 +134,10 @@
     .end annotation
 
     .prologue
-    .line 168
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;->-wrap0(Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;)V
 
-    .line 169
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;
 
     invoke-virtual {v0}, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;->getBrokeredService()Landroid/os/IInterface;
@@ -172,12 +162,10 @@
     .end annotation
 
     .prologue
-    .line 162
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;->-wrap0(Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;)V
 
-    .line 163
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;
 
     invoke-virtual {v0}, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;->getBrokeredService()Landroid/os/IInterface;
@@ -203,12 +191,10 @@
     .end annotation
 
     .prologue
-    .line 180
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;->-wrap0(Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;)V
 
-    .line 181
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;
 
     invoke-virtual {v0}, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;->getBrokeredService()Landroid/os/IInterface;
@@ -234,12 +220,10 @@
     .end annotation
 
     .prologue
-    .line 174
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;->-wrap0(Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;)V
 
-    .line 175
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;
 
     invoke-virtual {v0}, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;->getBrokeredService()Landroid/os/IInterface;
@@ -264,12 +248,10 @@
     .end annotation
 
     .prologue
-    .line 202
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;->-wrap0(Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;)V
 
-    .line 203
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;
 
     invoke-virtual {v0}, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;->getBrokeredService()Landroid/os/IInterface;
@@ -280,7 +262,6 @@
 
     invoke-interface {v0}, Lcyanogenmod/themes/IThemeService;->rebuildResourceCache()V
 
-    .line 201
     return-void
 .end method
 
@@ -294,12 +275,10 @@
     .end annotation
 
     .prologue
-    .line 187
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;->-wrap0(Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;)V
 
-    .line 188
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;
 
     invoke-virtual {v0}, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;->getBrokeredService()Landroid/os/IInterface;
@@ -310,7 +289,6 @@
 
     invoke-interface {v0, p1}, Lcyanogenmod/themes/IThemeService;->registerThemeProcessingListener(Lcyanogenmod/themes/IThemeProcessingListener;)V
 
-    .line 189
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;->-get1(Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;)Landroid/os/RemoteCallbackList;
@@ -319,7 +297,6 @@
 
     invoke-virtual {v0, p1}, Landroid/os/RemoteCallbackList;->register(Landroid/os/IInterface;)Z
 
-    .line 186
     return-void
 .end method
 
@@ -333,12 +310,10 @@
     .end annotation
 
     .prologue
-    .line 142
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;->-wrap0(Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;)V
 
-    .line 143
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;
 
     invoke-virtual {v0}, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;->getBrokeredService()Landroid/os/IInterface;
@@ -349,7 +324,6 @@
 
     invoke-interface {v0, p1}, Lcyanogenmod/themes/IThemeService;->removeUpdates(Lcyanogenmod/themes/IThemeChangeListener;)V
 
-    .line 144
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;->-get0(Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;)Landroid/os/RemoteCallbackList;
@@ -358,7 +332,6 @@
 
     invoke-virtual {v0, p1}, Landroid/os/RemoteCallbackList;->unregister(Landroid/os/IInterface;)Z
 
-    .line 141
     return-void
 .end method
 
@@ -373,12 +346,10 @@
     .end annotation
 
     .prologue
-    .line 150
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;->-wrap0(Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;)V
 
-    .line 151
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;
 
     invoke-virtual {v0}, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;->getBrokeredService()Landroid/os/IInterface;
@@ -389,7 +360,6 @@
 
     invoke-interface {v0, p1, p2}, Lcyanogenmod/themes/IThemeService;->requestThemeChange(Lcyanogenmod/themes/ThemeChangeRequest;Z)V
 
-    .line 149
     return-void
 .end method
 
@@ -403,12 +373,10 @@
     .end annotation
 
     .prologue
-    .line 135
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;->-wrap0(Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;)V
 
-    .line 136
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;
 
     invoke-virtual {v0}, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;->getBrokeredService()Landroid/os/IInterface;
@@ -419,7 +387,6 @@
 
     invoke-interface {v0, p1}, Lcyanogenmod/themes/IThemeService;->requestThemeChangeUpdates(Lcyanogenmod/themes/IThemeChangeListener;)V
 
-    .line 137
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;->-get0(Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;)Landroid/os/RemoteCallbackList;
@@ -428,7 +395,6 @@
 
     invoke-virtual {v0, p1}, Landroid/os/RemoteCallbackList;->register(Landroid/os/IInterface;)Z
 
-    .line 134
     return-void
 .end method
 
@@ -442,12 +408,10 @@
     .end annotation
 
     .prologue
-    .line 195
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;->-wrap0(Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;)V
 
-    .line 196
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;
 
     invoke-virtual {v0}, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;->getBrokeredService()Landroid/os/IInterface;
@@ -458,7 +422,6 @@
 
     invoke-interface {v0, p1}, Lcyanogenmod/themes/IThemeService;->unregisterThemeProcessingListener(Lcyanogenmod/themes/IThemeProcessingListener;)V
 
-    .line 197
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker$BinderService;->this$0:Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;->-get1(Lorg/cyanogenmod/platform/internal/ThemeManagerServiceBroker;)Landroid/os/RemoteCallbackList;
@@ -467,6 +430,5 @@
 
     invoke-virtual {v0, p1}, Landroid/os/RemoteCallbackList;->unregister(Landroid/os/IInterface;)Z
 
-    .line 194
     return-void
 .end method

@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 144
     invoke-direct {p0}, Landroid/support/v4/view/KeyEventCompat$EclairKeyEventVersionImpl;-><init>()V
 
     return-void
@@ -33,7 +32,6 @@
     .param p2, "modifiers"    # I
 
     .prologue
-    .line 152
     invoke-static {p1, p2}, Landroid/support/v4/view/KeyEventCompatHoneycomb;->metaStateHasModifiers(II)Z
 
     move-result v0
@@ -46,7 +44,6 @@
     .param p1, "metaState"    # I
 
     .prologue
-    .line 157
     invoke-static {p1}, Landroid/support/v4/view/KeyEventCompatHoneycomb;->metaStateHasNoModifiers(I)Z
 
     move-result v0
@@ -59,7 +56,6 @@
     .param p1, "metaState"    # I
 
     .prologue
-    .line 147
     invoke-static {p1}, Landroid/support/v4/view/KeyEventCompatHoneycomb;->normalizeMetaState(I)I
 
     move-result v0

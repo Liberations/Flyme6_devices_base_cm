@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/job/JobSchedulerService;
 
     .prologue
-    .line 145
     iput-object p1, p0, Lcom/android/server/job/JobSchedulerService$1;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -42,14 +41,13 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 148
-    const-string/jumbo v3, "JobSchedulerService"
+    const-string v3, "JobSchedulerService"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "Receieved: "
+    const-string v5, "Receieved: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -69,8 +67,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 149
-    const-string/jumbo v3, "android.intent.action.PACKAGE_REMOVED"
+    const-string v3, "android.intent.action.PACKAGE_REMOVED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -82,8 +79,7 @@
 
     if-eqz v3, :cond_1
 
-    .line 152
-    const-string/jumbo v3, "android.intent.extra.REPLACING"
+    const-string v3, "android.intent.extra.REPLACING"
 
     invoke-virtual {p2, v3, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
@@ -91,8 +87,7 @@
 
     if-nez v2, :cond_0
 
-    .line 153
-    const-string/jumbo v2, "android.intent.extra.UID"
+    const-string v2, "android.intent.extra.UID"
 
     const/4 v3, -0x1
 
@@ -100,21 +95,18 @@
 
     move-result v0
 
-    .line 157
     .local v0, "uidRemoved":I
     iget-object v2, p0, Lcom/android/server/job/JobSchedulerService$1;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     invoke-virtual {v2, v0}, Lcom/android/server/job/JobSchedulerService;->cancelJobsForUid(I)V
 
-    .line 147
     .end local v0    # "uidRemoved":I
     :cond_0
     :goto_0
     return-void
 
-    .line 159
     :cond_1
-    const-string/jumbo v3, "android.intent.action.USER_REMOVED"
+    const-string v3, "android.intent.action.USER_REMOVED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -126,14 +118,12 @@
 
     if-eqz v3, :cond_2
 
-    .line 160
-    const-string/jumbo v3, "android.intent.extra.user_handle"
+    const-string v3, "android.intent.extra.user_handle"
 
     invoke-virtual {p2, v3, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 164
     .local v1, "userId":I
     iget-object v2, p0, Lcom/android/server/job/JobSchedulerService$1;->this$0:Lcom/android/server/job/JobSchedulerService;
 
@@ -141,10 +131,9 @@
 
     goto :goto_0
 
-    .line 165
     .end local v1    # "userId":I
     :cond_2
-    const-string/jumbo v3, "android.os.action.DEVICE_IDLE_MODE_CHANGED"
+    const-string v3, "android.os.action.DEVICE_IDLE_MODE_CHANGED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -156,7 +145,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 166
     iget-object v3, p0, Lcom/android/server/job/JobSchedulerService$1;->this$0:Lcom/android/server/job/JobSchedulerService;
 
     iget-object v4, p0, Lcom/android/server/job/JobSchedulerService$1;->this$0:Lcom/android/server/job/JobSchedulerService;

@@ -310,6 +310,8 @@
     <item type="id" name="search_go_btn">false</item>
     <item type="id" name="search_voice_btn">false</item>
     <item type="id" name="select_dialog_listview">false</item>
+    <item type="id" name="sm_color_layout">false</item>
+    <item type="id" name="sm_dlg_title">false</item>
     <item type="id" name="sms_short_code_confirm_message">false</item>
     <item type="id" name="sms_short_code_detail_layout">false</item>
     <item type="id" name="sms_short_code_coins_icon">false</item>

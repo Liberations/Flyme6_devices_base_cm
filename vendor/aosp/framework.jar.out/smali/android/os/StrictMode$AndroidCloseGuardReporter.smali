@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 1550
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,9 +44,7 @@
     .param p2, "allocationSite"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 1552
     invoke-static {p1, p2}, Landroid/os/StrictMode;->onVmPolicyViolation(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 1551
     return-void
 .end method

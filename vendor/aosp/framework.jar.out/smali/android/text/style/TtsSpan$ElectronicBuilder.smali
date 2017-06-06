@@ -28,12 +28,10 @@
     .locals 1
 
     .prologue
-    .line 1340
-    const-string/jumbo v0, "android.type.electronic"
+    const-string v0, "android.type.electronic"
 
     invoke-direct {p0, v0}, Landroid/text/style/TtsSpan$SemioticClassBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 1339
     return-void
 .end method
 
@@ -44,8 +42,7 @@
     .param p1, "domain"    # Ljava/lang/String;
 
     .prologue
-    .line 1387
-    const-string/jumbo v0, "android.arg.domain"
+    const-string v0, "android.arg.domain"
 
     invoke-virtual {p0, v0, p1}, Landroid/text/style/TtsSpan$ElectronicBuilder;->setStringArgument(Ljava/lang/String;Ljava/lang/String;)Landroid/text/style/TtsSpan$Builder;
 
@@ -62,7 +59,6 @@
     .param p2, "domain"    # Ljava/lang/String;
 
     .prologue
-    .line 1352
     invoke-virtual {p0, p2}, Landroid/text/style/TtsSpan$ElectronicBuilder;->setDomain(Ljava/lang/String;)Landroid/text/style/TtsSpan$ElectronicBuilder;
 
     move-result-object v0
@@ -79,8 +75,7 @@
     .param p1, "fragmentId"    # Ljava/lang/String;
 
     .prologue
-    .line 1421
-    const-string/jumbo v0, "android.arg.fragment_id"
+    const-string v0, "android.arg.fragment_id"
 
     invoke-virtual {p0, v0, p1}, Landroid/text/style/TtsSpan$ElectronicBuilder;->setStringArgument(Ljava/lang/String;Ljava/lang/String;)Landroid/text/style/TtsSpan$Builder;
 
@@ -96,8 +91,7 @@
     .param p1, "password"    # Ljava/lang/String;
 
     .prologue
-    .line 1378
-    const-string/jumbo v0, "android.arg.password"
+    const-string v0, "android.arg.password"
 
     invoke-virtual {p0, v0, p1}, Landroid/text/style/TtsSpan$ElectronicBuilder;->setStringArgument(Ljava/lang/String;Ljava/lang/String;)Landroid/text/style/TtsSpan$Builder;
 
@@ -113,8 +107,7 @@
     .param p1, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 1404
-    const-string/jumbo v0, "android.arg.path"
+    const-string v0, "android.arg.path"
 
     invoke-virtual {p0, v0, p1}, Landroid/text/style/TtsSpan$ElectronicBuilder;->setStringArgument(Ljava/lang/String;Ljava/lang/String;)Landroid/text/style/TtsSpan$Builder;
 
@@ -130,8 +123,7 @@
     .param p1, "port"    # I
 
     .prologue
-    .line 1395
-    const-string/jumbo v0, "android.arg.port"
+    const-string v0, "android.arg.port"
 
     invoke-virtual {p0, v0, p1}, Landroid/text/style/TtsSpan$ElectronicBuilder;->setIntArgument(Ljava/lang/String;I)Landroid/text/style/TtsSpan$Builder;
 
@@ -147,8 +139,7 @@
     .param p1, "protocol"    # Ljava/lang/String;
 
     .prologue
-    .line 1362
-    const-string/jumbo v0, "android.arg.protocol"
+    const-string v0, "android.arg.protocol"
 
     invoke-virtual {p0, v0, p1}, Landroid/text/style/TtsSpan$ElectronicBuilder;->setStringArgument(Ljava/lang/String;Ljava/lang/String;)Landroid/text/style/TtsSpan$Builder;
 
@@ -164,8 +155,7 @@
     .param p1, "queryString"    # Ljava/lang/String;
 
     .prologue
-    .line 1413
-    const-string/jumbo v0, "android.arg.query_string"
+    const-string v0, "android.arg.query_string"
 
     invoke-virtual {p0, v0, p1}, Landroid/text/style/TtsSpan$ElectronicBuilder;->setStringArgument(Ljava/lang/String;Ljava/lang/String;)Landroid/text/style/TtsSpan$Builder;
 
@@ -181,8 +171,7 @@
     .param p1, "username"    # Ljava/lang/String;
 
     .prologue
-    .line 1370
-    const-string/jumbo v0, "android.arg.username"
+    const-string v0, "android.arg.username"
 
     invoke-virtual {p0, v0, p1}, Landroid/text/style/TtsSpan$ElectronicBuilder;->setStringArgument(Ljava/lang/String;Ljava/lang/String;)Landroid/text/style/TtsSpan$Builder;
 

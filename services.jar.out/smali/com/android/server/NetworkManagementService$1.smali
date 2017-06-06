@@ -1,11 +1,11 @@
 .class Lcom/android/server/NetworkManagementService$1;
-.super Landroid/telephony/PhoneStateListener;
+.super Landroid/content/BroadcastReceiver;
 .source "NetworkManagementService.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/NetworkManagementService;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/android/server/NetworkManagementService;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,85 +19,161 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/server/NetworkManagementService;ILandroid/os/Looper;)V
+.method constructor <init>(Lcom/android/server/NetworkManagementService;)V
     .locals 0
     .param p1, "this$0"    # Lcom/android/server/NetworkManagementService;
-    .param p2, "$anonymous0"    # I
-    .param p3, "$anonymous1"    # Landroid/os/Looper;
 
     .prologue
-    .line 296
     iput-object p1, p0, Lcom/android/server/NetworkManagementService$1;->this$0:Lcom/android/server/NetworkManagementService;
 
-    invoke-direct {p0, p2, p3}, Landroid/telephony/PhoneStateListener;-><init>(ILandroid/os/Looper;)V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 297
     return-void
 .end method
 
 
 # virtual methods
-.method public onDataConnectionRealTimeInfoChanged(Landroid/telephony/DataConnectionRealTimeInfo;)V
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 7
-    .param p1, "dcRtInfo"    # Landroid/telephony/DataConnectionRealTimeInfo;
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 301
-    invoke-static {}, Lcom/android/server/NetworkManagementService;->-get0()Z
+    const/4 v4, 0x0
 
-    move-result v0
+    const/4 v1, 0x0
 
-    if-eqz v0, :cond_0
+    .local v1, "isBlockAllData":Z
+    if-eqz p2, :cond_0
 
-    const-string/jumbo v0, "NetworkManagement"
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    move-result-object v2
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v3, "org.codeaurora.restrictData"
 
-    const-string/jumbo v2, "onDataConnectionRealTimeInfoChanged: "
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v2
 
-    move-result-object v1
+    if-eqz v2, :cond_0
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v2, "Restrict"
 
-    move-result-object v1
+    invoke-virtual {p2, v2, v4}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result v1
 
-    move-result-object v1
+    .local v1, "isBlockAllData":Z
+    const-string v2, "ZeroBalance"
 
-    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    .line 302
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Intent value to block unblock data"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
+
+    .end local v1    # "isBlockAllData":Z
     :cond_0
-    iget-object v1, p0, Lcom/android/server/NetworkManagementService$1;->this$0:Lcom/android/server/NetworkManagementService;
+    iget-object v2, p0, Lcom/android/server/NetworkManagementService$1;->this$0:Lcom/android/server/NetworkManagementService;
 
-    .line 303
-    invoke-virtual {p1}, Landroid/telephony/DataConnectionRealTimeInfo;->getDcPowerState()I
+    invoke-static {v2}, Lcom/android/server/NetworkManagementService;->-get4(Lcom/android/server/NetworkManagementService;)Landroid/content/Context;
 
-    move-result v3
+    move-result-object v2
 
-    invoke-virtual {p1}, Landroid/telephony/DataConnectionRealTimeInfo;->getTime()J
+    const-string v3, "android.permission.CONNECTIVITY_INTERNAL"
 
-    move-result-wide v4
+    const-string v4, "NetworkManagement"
 
-    .line 302
-    const/4 v2, 0x0
+    invoke-virtual {v2, v3, v4}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 303
-    const/4 v6, 0x1
+    iget-object v2, p0, Lcom/android/server/NetworkManagementService$1;->this$0:Lcom/android/server/NetworkManagementService;
 
-    .line 302
-    invoke-static/range {v1 .. v6}, Lcom/android/server/NetworkManagementService;->-wrap3(Lcom/android/server/NetworkManagementService;IIJZ)V
+    invoke-static {v2}, Lcom/android/server/NetworkManagementService;->-get1(Lcom/android/server/NetworkManagementService;)Z
 
-    .line 304
-    iget-object v0, p0, Lcom/android/server/NetworkManagementService$1;->this$0:Lcom/android/server/NetworkManagementService;
+    move-result v2
 
-    invoke-static {v0}, Lcom/android/server/NetworkManagementService;->-wrap12(Lcom/android/server/NetworkManagementService;)V
+    if-nez v2, :cond_1
 
-    .line 300
     return-void
+
+    :cond_1
+    :try_start_0
+    const-string v2, "ZeroBalance"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "before calling connector Intentvalue to block unblock data"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v2, p0, Lcom/android/server/NetworkManagementService$1;->this$0:Lcom/android/server/NetworkManagementService;
+
+    invoke-static {v2}, Lcom/android/server/NetworkManagementService;->-get3(Lcom/android/server/NetworkManagementService;)Lcom/android/server/NativeDaemonConnector;
+
+    move-result-object v3
+
+    const-string v4, "bandwidth"
+
+    const/4 v2, 0x1
+
+    new-array v5, v2, [Ljava/lang/Object;
+
+    if-eqz v1, :cond_2
+
+    const-string v2, "blockAllData"
+
+    :goto_0
+    const/4 v6, 0x0
+
+    aput-object v2, v5, v6
+
+    invoke-virtual {v3, v4, v5}, Lcom/android/server/NativeDaemonConnector;->execute(Ljava/lang/String;[Ljava/lang/Object;)Lcom/android/server/NativeDaemonEvent;
+
+    return-void
+
+    :cond_2
+    const-string v2, "unblockAllData"
+    :try_end_0
+    .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    .local v0, "e":Lcom/android/server/NativeDaemonConnectorException;
+    invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
+
+    move-result-object v2
+
+    throw v2
 .end method

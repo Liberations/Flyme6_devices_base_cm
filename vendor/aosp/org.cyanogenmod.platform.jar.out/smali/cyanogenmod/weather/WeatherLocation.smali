@@ -105,14 +105,12 @@
     .locals 1
 
     .prologue
-    .line 209
     new-instance v0, Lcyanogenmod/weather/WeatherLocation$1;
 
     invoke-direct {v0}, Lcyanogenmod/weather/WeatherLocation$1;-><init>()V
 
     sput-object v0, Lcyanogenmod/weather/WeatherLocation;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 35
     return-void
 .end method
 
@@ -120,7 +118,6 @@
     .locals 0
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -131,80 +128,67 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 190
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 192
     invoke-static {p1}, Lcyanogenmod/os/Concierge;->receiveParcel(Landroid/os/Parcel;)Lcyanogenmod/os/Concierge$ParcelInfo;
 
     move-result-object v0
 
-    .line 193
     .local v0, "parcelInfo":Lcyanogenmod/os/Concierge$ParcelInfo;
     invoke-virtual {v0}, Lcyanogenmod/os/Concierge$ParcelInfo;->getParcelVersion()I
 
     move-result v1
 
-    .line 195
     .local v1, "parcelableVersion":I
     const/4 v2, 0x5
 
     if-lt v1, v2, :cond_0
 
-    .line 196
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, p0, Lcyanogenmod/weather/WeatherLocation;->mKey:Ljava/lang/String;
 
-    .line 197
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, p0, Lcyanogenmod/weather/WeatherLocation;->mCityId:Ljava/lang/String;
 
-    .line 198
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, p0, Lcyanogenmod/weather/WeatherLocation;->mCity:Ljava/lang/String;
 
-    .line 199
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, p0, Lcyanogenmod/weather/WeatherLocation;->mState:Ljava/lang/String;
 
-    .line 200
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, p0, Lcyanogenmod/weather/WeatherLocation;->mPostal:Ljava/lang/String;
 
-    .line 201
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, p0, Lcyanogenmod/weather/WeatherLocation;->mCountryId:Ljava/lang/String;
 
-    .line 202
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, p0, Lcyanogenmod/weather/WeatherLocation;->mCountry:Ljava/lang/String;
 
-    .line 206
     :cond_0
     invoke-virtual {v0}, Lcyanogenmod/os/Concierge$ParcelInfo;->complete()V
 
-    .line 190
     return-void
 .end method
 
@@ -233,7 +217,6 @@
     .locals 1
 
     .prologue
-    .line 223
     const/4 v0, 0x0
 
     return v0
@@ -246,12 +229,10 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 266
     if-nez p1, :cond_0
 
     return v3
 
-    .line 268
     :cond_0
     invoke-virtual {p0}, Lcyanogenmod/weather/WeatherLocation;->getClass()Ljava/lang/Class;
 
@@ -265,10 +246,8 @@
 
     move-object v0, p1
 
-    .line 269
     check-cast v0, Lcyanogenmod/weather/WeatherLocation;
 
-    .line 270
     .local v0, "location":Lcyanogenmod/weather/WeatherLocation;
     iget-object v1, p0, Lcyanogenmod/weather/WeatherLocation;->mKey:Ljava/lang/String;
 
@@ -280,7 +259,6 @@
 
     return v1
 
-    .line 272
     .end local v0    # "location":Lcyanogenmod/weather/WeatherLocation;
     :cond_1
     return v3
@@ -290,7 +268,6 @@
     .locals 1
 
     .prologue
-    .line 157
     iget-object v0, p0, Lcyanogenmod/weather/WeatherLocation;->mCity:Ljava/lang/String;
 
     return-object v0
@@ -300,7 +277,6 @@
     .locals 1
 
     .prologue
-    .line 150
     iget-object v0, p0, Lcyanogenmod/weather/WeatherLocation;->mCityId:Ljava/lang/String;
 
     return-object v0
@@ -310,7 +286,6 @@
     .locals 1
 
     .prologue
-    .line 187
     iget-object v0, p0, Lcyanogenmod/weather/WeatherLocation;->mCountry:Ljava/lang/String;
 
     return-object v0
@@ -320,7 +295,6 @@
     .locals 1
 
     .prologue
-    .line 179
     iget-object v0, p0, Lcyanogenmod/weather/WeatherLocation;->mCountryId:Ljava/lang/String;
 
     return-object v0
@@ -330,7 +304,6 @@
     .locals 1
 
     .prologue
-    .line 172
     iget-object v0, p0, Lcyanogenmod/weather/WeatherLocation;->mPostal:Ljava/lang/String;
 
     return-object v0
@@ -340,7 +313,6 @@
     .locals 1
 
     .prologue
-    .line 164
     iget-object v0, p0, Lcyanogenmod/weather/WeatherLocation;->mState:Ljava/lang/String;
 
     return-object v0
@@ -350,10 +322,8 @@
     .locals 3
 
     .prologue
-    .line 258
     const/16 v0, 0x1f
 
-    .line 260
     .local v0, "prime":I
     iget-object v2, p0, Lcyanogenmod/weather/WeatherLocation;->mKey:Ljava/lang/String;
 
@@ -368,11 +338,9 @@
     :goto_0
     add-int/lit8 v1, v2, 0x1f
 
-    .line 261
     .local v1, "result":I
     return v1
 
-    .line 260
     .end local v1    # "result":I
     :cond_0
     const/4 v2, 0x0
@@ -384,111 +352,84 @@
     .locals 2
 
     .prologue
-    .line 246
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 247
-    const-string/jumbo v1, "{ City ID: "
+    const-string v1, "{ City ID: "
 
-    .line 246
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 247
     iget-object v1, p0, Lcyanogenmod/weather/WeatherLocation;->mCityId:Ljava/lang/String;
 
-    .line 246
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 248
-    const-string/jumbo v1, " City: "
+    const-string v1, " City: "
 
-    .line 246
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 248
     iget-object v1, p0, Lcyanogenmod/weather/WeatherLocation;->mCity:Ljava/lang/String;
 
-    .line 246
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 249
-    const-string/jumbo v1, " State: "
+    const-string v1, " State: "
 
-    .line 246
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 249
     iget-object v1, p0, Lcyanogenmod/weather/WeatherLocation;->mState:Ljava/lang/String;
 
-    .line 246
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 250
-    const-string/jumbo v1, " Postal/ZIP Code: "
+    const-string v1, " Postal/ZIP Code: "
 
-    .line 246
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 250
     iget-object v1, p0, Lcyanogenmod/weather/WeatherLocation;->mPostal:Ljava/lang/String;
 
-    .line 246
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 251
-    const-string/jumbo v1, " Country Id: "
+    const-string v1, " Country Id: "
 
-    .line 246
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 251
     iget-object v1, p0, Lcyanogenmod/weather/WeatherLocation;->mCountryId:Ljava/lang/String;
 
-    .line 246
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 252
-    const-string/jumbo v1, " Country: "
+    const-string v1, " Country: "
 
-    .line 246
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 252
     iget-object v1, p0, Lcyanogenmod/weather/WeatherLocation;->mCountry:Ljava/lang/String;
 
-    .line 246
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 252
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
-    .line 246
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -506,50 +447,40 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 229
     invoke-static {p1}, Lcyanogenmod/os/Concierge;->prepareParcel(Landroid/os/Parcel;)Lcyanogenmod/os/Concierge$ParcelInfo;
 
     move-result-object v0
 
-    .line 232
     .local v0, "parcelInfo":Lcyanogenmod/os/Concierge$ParcelInfo;
     iget-object v1, p0, Lcyanogenmod/weather/WeatherLocation;->mKey:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 233
     iget-object v1, p0, Lcyanogenmod/weather/WeatherLocation;->mCityId:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 234
     iget-object v1, p0, Lcyanogenmod/weather/WeatherLocation;->mCity:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 235
     iget-object v1, p0, Lcyanogenmod/weather/WeatherLocation;->mState:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 236
     iget-object v1, p0, Lcyanogenmod/weather/WeatherLocation;->mPostal:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 237
     iget-object v1, p0, Lcyanogenmod/weather/WeatherLocation;->mCountryId:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 238
     iget-object v1, p0, Lcyanogenmod/weather/WeatherLocation;->mCountry:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 241
     invoke-virtual {v0}, Lcyanogenmod/os/Concierge$ParcelInfo;->complete()V
 
-    .line 227
     return-void
 .end method

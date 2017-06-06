@@ -19,12 +19,10 @@
     .locals 1
 
     .prologue
-    .line 67
     const/4 v0, 0x0
 
     sput-boolean v0, Landroid/webkit/CookieSyncManager;->sGetInstanceAllowed:Z
 
-    .line 64
     return-void
 .end method
 
@@ -34,10 +32,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 70
     invoke-direct {p0, v0, v0}, Landroid/webkit/WebSyncManager;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 69
     return-void
 .end method
 
@@ -45,23 +41,18 @@
     .locals 2
 
     .prologue
-    .line 154
     sget-boolean v0, Landroid/webkit/CookieSyncManager;->sGetInstanceAllowed:Z
 
     if-nez v0, :cond_0
 
-    .line 155
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    .line 156
-    const-string/jumbo v1, "CookieSyncManager::createInstance() needs to be called before CookieSyncManager::getInstance()"
+    const-string v1, "CookieSyncManager::createInstance() needs to be called before CookieSyncManager::getInstance()"
 
-    .line 155
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 150
     :cond_0
     return-void
 .end method
@@ -75,14 +66,12 @@
 
     monitor-enter v1
 
-    .line 94
     if-nez p0, :cond_0
 
-    .line 95
     :try_start_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "Invalid context argument"
+    const-string v2, "Invalid context argument"
 
     invoke-direct {v0, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
@@ -97,12 +86,10 @@
 
     throw v0
 
-    .line 97
     :cond_0
     :try_start_1
     invoke-static {}, Landroid/webkit/CookieSyncManager;->setGetInstanceIsAllowed()V
 
-    .line 98
     invoke-static {}, Landroid/webkit/CookieSyncManager;->getInstance()Landroid/webkit/CookieSyncManager;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -122,23 +109,19 @@
 
     monitor-enter v1
 
-    .line 81
     :try_start_0
     invoke-static {}, Landroid/webkit/CookieSyncManager;->checkInstanceIsAllowed()V
 
-    .line 82
     sget-object v0, Landroid/webkit/CookieSyncManager;->sRef:Landroid/webkit/CookieSyncManager;
 
     if-nez v0, :cond_0
 
-    .line 83
     new-instance v0, Landroid/webkit/CookieSyncManager;
 
     invoke-direct {v0}, Landroid/webkit/CookieSyncManager;-><init>()V
 
     sput-object v0, Landroid/webkit/CookieSyncManager;->sRef:Landroid/webkit/CookieSyncManager;
 
-    .line 85
     :cond_0
     sget-object v0, Landroid/webkit/CookieSyncManager;->sRef:Landroid/webkit/CookieSyncManager;
     :try_end_0
@@ -160,12 +143,10 @@
     .locals 1
 
     .prologue
-    .line 147
     const/4 v0, 0x1
 
     sput-boolean v0, Landroid/webkit/CookieSyncManager;->sGetInstanceAllowed:Z
 
-    .line 146
     return-void
 .end method
 
@@ -177,7 +158,6 @@
     .end annotation
 
     .prologue
-    .line 124
     return-void
 .end method
 
@@ -196,7 +176,6 @@
     .end annotation
 
     .prologue
-    .line 133
     return-void
 .end method
 
@@ -206,7 +185,6 @@
     .end annotation
 
     .prologue
-    .line 143
     return-void
 .end method
 
@@ -216,14 +194,12 @@
     .end annotation
 
     .prologue
-    .line 107
     invoke-static {}, Landroid/webkit/CookieManager;->getInstance()Landroid/webkit/CookieManager;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/webkit/CookieManager;->flush()V
 
-    .line 106
     return-void
 .end method
 
@@ -233,13 +209,11 @@
     .end annotation
 
     .prologue
-    .line 115
     invoke-static {}, Landroid/webkit/CookieManager;->getInstance()Landroid/webkit/CookieManager;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/webkit/CookieManager;->flush()V
 
-    .line 114
     return-void
 .end method

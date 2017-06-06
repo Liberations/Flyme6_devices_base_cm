@@ -33,30 +33,29 @@
     .locals 3
 
     .prologue
-    .line 174
     const/4 v0, 0x4
 
     new-array v0, v0, [Ljava/lang/String;
 
-    const-string/jumbo v1, "WEP40"
+    const-string v1, "WEP40"
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    const-string/jumbo v1, "WEP104"
+    const-string v1, "WEP104"
 
     const/4 v2, 0x1
 
     aput-object v1, v0, v2
 
-    const-string/jumbo v1, "TKIP"
+    const-string v1, "TKIP"
 
     const/4 v2, 0x2
 
     aput-object v1, v0, v2
 
-    const-string/jumbo v1, "CCMP"
+    const-string v1, "CCMP"
 
     const/4 v2, 0x3
 
@@ -64,7 +63,6 @@
 
     sput-object v0, Landroid/net/wifi/WifiConfiguration$GroupCipher;->strings:[Ljava/lang/String;
 
-    .line 160
     return-void
 .end method
 
@@ -72,7 +70,6 @@
     .locals 0
 
     .prologue
-    .line 161
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

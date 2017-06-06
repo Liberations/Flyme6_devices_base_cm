@@ -19,19 +19,14 @@
     .param p3, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 41
     invoke-direct {p0}, Lorg/ksoap2/serialization/AttributeContainer;-><init>()V
 
-    .line 42
     iput-object p1, p0, Lorg/ksoap2/serialization/SoapPrimitive;->namespace:Ljava/lang/String;
 
-    .line 43
     iput-object p2, p0, Lorg/ksoap2/serialization/SoapPrimitive;->name:Ljava/lang/String;
 
-    .line 44
     iput-object p3, p0, Lorg/ksoap2/serialization/SoapPrimitive;->value:Ljava/lang/String;
 
-    .line 41
     return-void
 .end method
 
@@ -44,21 +39,17 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 48
     instance-of v3, p1, Lorg/ksoap2/serialization/SoapPrimitive;
 
     if-nez v3, :cond_0
 
-    .line 49
     return v2
 
     :cond_0
     move-object v0, p1
 
-    .line 51
     check-cast v0, Lorg/ksoap2/serialization/SoapPrimitive;
 
-    .line 52
     .local v0, "p":Lorg/ksoap2/serialization/SoapPrimitive;
     iget-object v3, p0, Lorg/ksoap2/serialization/SoapPrimitive;->name:Ljava/lang/String;
 
@@ -70,7 +61,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 53
     iget-object v3, p0, Lorg/ksoap2/serialization/SoapPrimitive;->namespace:Ljava/lang/String;
 
     if-nez v3, :cond_3
@@ -79,7 +69,6 @@
 
     if-nez v3, :cond_4
 
-    .line 54
     :cond_1
     iget-object v3, p0, Lorg/ksoap2/serialization/SoapPrimitive;->value:Ljava/lang/String;
 
@@ -91,7 +80,6 @@
 
     const/4 v1, 0x1
 
-    .line 55
     :goto_0
     if-eqz v1, :cond_2
 
@@ -102,7 +90,6 @@
     :cond_2
     return v2
 
-    .line 53
     :cond_3
     iget-object v3, p0, Lorg/ksoap2/serialization/SoapPrimitive;->namespace:Ljava/lang/String;
 
@@ -112,7 +99,6 @@
 
     move-result v3
 
-    .line 52
     if-nez v3, :cond_1
 
     :cond_4
@@ -121,7 +107,6 @@
     .local v1, "varsEqual":Z
     goto :goto_0
 
-    .line 54
     .end local v1    # "varsEqual":Z
     :cond_5
     const/4 v1, 0x0
@@ -147,7 +132,6 @@
     .locals 1
 
     .prologue
-    .line 71
     iget-object v0, p0, Lorg/ksoap2/serialization/SoapPrimitive;->name:Ljava/lang/String;
 
     return-object v0
@@ -157,7 +141,6 @@
     .locals 1
 
     .prologue
-    .line 67
     iget-object v0, p0, Lorg/ksoap2/serialization/SoapPrimitive;->namespace:Ljava/lang/String;
 
     return-object v0
@@ -167,7 +150,6 @@
     .locals 2
 
     .prologue
-    .line 59
     iget-object v0, p0, Lorg/ksoap2/serialization/SoapPrimitive;->name:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -199,7 +181,6 @@
     .locals 1
 
     .prologue
-    .line 63
     iget-object v0, p0, Lorg/ksoap2/serialization/SoapPrimitive;->value:Ljava/lang/String;
 
     return-object v0

@@ -19,11 +19,9 @@
     .locals 1
 
     .prologue
-    .line 96
     const/4 v0, 0x3
 
     invoke-direct {p0, v0}, Landroid/security/keystore/AndroidKeyStoreKeyPairGeneratorSpi;-><init>(I)V
 
-    .line 95
     return-void
 .end method

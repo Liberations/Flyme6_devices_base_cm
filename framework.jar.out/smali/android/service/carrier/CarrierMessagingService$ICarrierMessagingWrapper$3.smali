@@ -40,7 +40,6 @@
     .param p2, "val$callback"    # Landroid/service/carrier/ICarrierMessagingCallback;
 
     .prologue
-    .line 435
     iput-object p1, p0, Landroid/service/carrier/CarrierMessagingService$ICarrierMessagingWrapper$3;->this$1:Landroid/service/carrier/CarrierMessagingService$ICarrierMessagingWrapper;
 
     iput-object p2, p0, Landroid/service/carrier/CarrierMessagingService$ICarrierMessagingWrapper$3;->val$callback:Landroid/service/carrier/ICarrierMessagingCallback;
@@ -62,7 +61,6 @@
     .end annotation
 
     .prologue
-    .line 438
     iget-object v0, p0, Landroid/service/carrier/CarrierMessagingService$ICarrierMessagingWrapper$3;->val$callback:Landroid/service/carrier/ICarrierMessagingCallback;
 
     invoke-virtual {p1}, Landroid/service/carrier/CarrierMessagingService$SendSmsResult;->getSendStatus()I
@@ -75,7 +73,6 @@
 
     invoke-interface {v0, v1, v2}, Landroid/service/carrier/ICarrierMessagingCallback;->onSendSmsComplete(II)V
 
-    .line 437
     return-void
 .end method
 
@@ -89,7 +86,6 @@
     .end annotation
 
     .prologue
-    .line 437
     check-cast p1, Landroid/service/carrier/CarrierMessagingService$SendSmsResult;
 
     .end local p1    # "result":Ljava/lang/Object;

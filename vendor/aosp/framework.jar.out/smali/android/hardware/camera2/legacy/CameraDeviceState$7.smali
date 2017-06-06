@@ -30,7 +30,6 @@
     .param p2, "val$error"    # I
 
     .prologue
-    .line 299
     iput-object p1, p0, Landroid/hardware/camera2/legacy/CameraDeviceState$7;->this$0:Landroid/hardware/camera2/legacy/CameraDeviceState;
 
     iput p2, p0, Landroid/hardware/camera2/legacy/CameraDeviceState$7;->val$error:I
@@ -46,7 +45,6 @@
     .locals 3
 
     .prologue
-    .line 302
     iget-object v0, p0, Landroid/hardware/camera2/legacy/CameraDeviceState$7;->this$0:Landroid/hardware/camera2/legacy/CameraDeviceState;
 
     invoke-static {v0}, Landroid/hardware/camera2/legacy/CameraDeviceState;->-get1(Landroid/hardware/camera2/legacy/CameraDeviceState;)Landroid/hardware/camera2/legacy/CameraDeviceState$CameraDeviceStateListener;
@@ -63,6 +61,5 @@
 
     invoke-interface {v0, v1, v2}, Landroid/hardware/camera2/legacy/CameraDeviceState$CameraDeviceStateListener;->onError(ILandroid/hardware/camera2/legacy/RequestHolder;)V
 
-    .line 301
     return-void
 .end method

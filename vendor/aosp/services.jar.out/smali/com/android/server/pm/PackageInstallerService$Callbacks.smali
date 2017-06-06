@@ -91,17 +91,14 @@
     .param p1, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 1117
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 1114
     new-instance v0, Landroid/os/RemoteCallbackList;
 
     invoke-direct {v0}, Landroid/os/RemoteCallbackList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/PackageInstallerService$Callbacks;->mCallbacks:Landroid/os/RemoteCallbackList;
 
-    .line 1116
     return-void
 .end method
 
@@ -116,32 +113,26 @@
     .end annotation
 
     .prologue
-    .line 1148
     iget v0, p2, Landroid/os/Message;->arg1:I
 
-    .line 1149
     .local v0, "sessionId":I
     iget v1, p2, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 1147
     :goto_0
     return-void
 
-    .line 1151
     :pswitch_0
     invoke-interface {p1, v0}, Landroid/content/pm/IPackageInstallerCallback;->onSessionCreated(I)V
 
     goto :goto_0
 
-    .line 1154
     :pswitch_1
     invoke-interface {p1, v0}, Landroid/content/pm/IPackageInstallerCallback;->onSessionBadgingChanged(I)V
 
     goto :goto_0
 
-    .line 1157
     :pswitch_2
     iget-object v1, p2, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -155,7 +146,6 @@
 
     goto :goto_0
 
-    .line 1160
     :pswitch_3
     iget-object v1, p2, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -169,7 +159,6 @@
 
     goto :goto_0
 
-    .line 1163
     :pswitch_4
     iget-object v1, p2, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -183,7 +172,6 @@
 
     goto :goto_0
 
-    .line 1149
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -201,7 +189,6 @@
     .param p3, "active"    # Z
 
     .prologue
-    .line 1177
     invoke-static {p3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -214,7 +201,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1176
     return-void
 .end method
 
@@ -224,7 +210,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 1173
     const/4 v0, 0x2
 
     invoke-virtual {p0, v0, p1, p2}, Lcom/android/server/pm/PackageInstallerService$Callbacks;->obtainMessage(III)Landroid/os/Message;
@@ -233,7 +218,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1172
     return-void
 .end method
 
@@ -243,7 +227,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 1169
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0, p1, p2}, Lcom/android/server/pm/PackageInstallerService$Callbacks;->obtainMessage(III)Landroid/os/Message;
@@ -252,7 +235,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1168
     return-void
 .end method
 
@@ -263,7 +245,6 @@
     .param p3, "progress"    # F
 
     .prologue
-    .line 1181
     invoke-static {p3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v0
@@ -276,7 +257,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1180
     return-void
 .end method
 
@@ -287,10 +267,8 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 1130
     iget v5, p1, Landroid/os/Message;->arg2:I
 
-    .line 1131
     .local v5, "userId":I
     iget-object v6, p0, Lcom/android/server/pm/PackageInstallerService$Callbacks;->mCallbacks:Landroid/os/RemoteCallbackList;
 
@@ -298,7 +276,6 @@
 
     move-result v3
 
-    .line 1132
     .local v3, "n":I
     const/4 v1, 0x0
 
@@ -306,7 +283,6 @@
     :goto_0
     if-ge v1, v3, :cond_1
 
-    .line 1133
     iget-object v6, p0, Lcom/android/server/pm/PackageInstallerService$Callbacks;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v6, v1}, Landroid/os/RemoteCallbackList;->getBroadcastItem(I)Landroid/os/IInterface;
@@ -315,7 +291,6 @@
 
     check-cast v0, Landroid/content/pm/IPackageInstallerCallback;
 
-    .line 1134
     .local v0, "callback":Landroid/content/pm/IPackageInstallerCallback;
     iget-object v6, p0, Lcom/android/server/pm/PackageInstallerService$Callbacks;->mCallbacks:Landroid/os/RemoteCallbackList;
 
@@ -325,7 +300,6 @@
 
     check-cast v4, Landroid/os/UserHandle;
 
-    .line 1136
     .local v4, "user":Landroid/os/UserHandle;
     invoke-virtual {v4}, Landroid/os/UserHandle;->getIdentifier()I
 
@@ -333,27 +307,23 @@
 
     if-ne v5, v6, :cond_0
 
-    .line 1138
     :try_start_0
     invoke-direct {p0, v0, p1}, Lcom/android/server/pm/PackageInstallerService$Callbacks;->invokeCallback(Landroid/content/pm/IPackageInstallerCallback;Landroid/os/Message;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1132
     :cond_0
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1139
     :catch_0
     move-exception v2
 
     .local v2, "ignored":Landroid/os/RemoteException;
     goto :goto_1
 
-    .line 1143
     .end local v0    # "callback":Landroid/content/pm/IPackageInstallerCallback;
     .end local v2    # "ignored":Landroid/os/RemoteException;
     .end local v4    # "user":Landroid/os/UserHandle;
@@ -362,7 +332,6 @@
 
     invoke-virtual {v6}, Landroid/os/RemoteCallbackList;->finishBroadcast()V
 
-    .line 1129
     return-void
 .end method
 
@@ -373,7 +342,6 @@
     .param p3, "success"    # Z
 
     .prologue
-    .line 1185
     invoke-static {p3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -386,7 +354,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1184
     return-void
 .end method
 
@@ -396,7 +363,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 1121
     iget-object v0, p0, Lcom/android/server/pm/PackageInstallerService$Callbacks;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     new-instance v1, Landroid/os/UserHandle;
@@ -405,7 +371,6 @@
 
     invoke-virtual {v0, p1, v1}, Landroid/os/RemoteCallbackList;->register(Landroid/os/IInterface;Ljava/lang/Object;)Z
 
-    .line 1120
     return-void
 .end method
 
@@ -414,11 +379,9 @@
     .param p1, "callback"    # Landroid/content/pm/IPackageInstallerCallback;
 
     .prologue
-    .line 1125
     iget-object v0, p0, Lcom/android/server/pm/PackageInstallerService$Callbacks;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v0, p1}, Landroid/os/RemoteCallbackList;->unregister(Landroid/os/IInterface;)Z
 
-    .line 1124
     return-void
 .end method

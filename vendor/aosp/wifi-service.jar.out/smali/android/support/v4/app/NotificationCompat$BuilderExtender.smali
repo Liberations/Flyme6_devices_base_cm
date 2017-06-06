@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 469
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,7 +32,6 @@
     .param p2, "builder"    # Landroid/support/v4/app/NotificationBuilderWithBuilderAccessor;
 
     .prologue
-    .line 471
     invoke-interface {p2}, Landroid/support/v4/app/NotificationBuilderWithBuilderAccessor;->build()Landroid/app/Notification;
 
     move-result-object v0

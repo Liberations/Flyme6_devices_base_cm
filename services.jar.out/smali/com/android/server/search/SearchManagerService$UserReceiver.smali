@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/search/SearchManagerService;
 
     .prologue
-    .line 133
     iput-object p1, p0, Lcom/android/server/search/SearchManagerService$UserReceiver;->this$0:Lcom/android/server/search/SearchManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -50,10 +49,9 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 136
     iget-object v0, p0, Lcom/android/server/search/SearchManagerService$UserReceiver;->this$0:Lcom/android/server/search/SearchManagerService;
 
-    const-string/jumbo v1, "android.intent.extra.user_handle"
+    const-string v1, "android.intent.extra.user_handle"
 
     const/4 v2, 0x0
 
@@ -63,6 +61,5 @@
 
     invoke-static {v0, v1}, Lcom/android/server/search/SearchManagerService;->-wrap1(Lcom/android/server/search/SearchManagerService;I)V
 
-    .line 135
     return-void
 .end method

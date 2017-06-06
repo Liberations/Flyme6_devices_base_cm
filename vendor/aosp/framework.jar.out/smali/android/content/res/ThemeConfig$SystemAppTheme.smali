@@ -19,16 +19,14 @@
     .locals 3
 
     .prologue
-    .line 571
-    const-string/jumbo v0, "system"
+    const-string v0, "system"
 
-    const-string/jumbo v1, "system"
+    const-string v1, "system"
 
-    const-string/jumbo v2, "system"
+    const-string v2, "system"
 
     invoke-direct {p0, v0, v1, v2}, Landroid/content/res/ThemeConfig$AppTheme;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 570
     return-void
 .end method
 
@@ -38,8 +36,7 @@
     .locals 1
 
     .prologue
-    .line 576
-    const-string/jumbo v0, "No Theme Applied (System)"
+    const-string v0, "No Theme Applied (System)"
 
     return-object v0
 .end method

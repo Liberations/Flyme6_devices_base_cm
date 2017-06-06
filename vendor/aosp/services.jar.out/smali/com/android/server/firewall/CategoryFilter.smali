@@ -29,16 +29,14 @@
     .locals 2
 
     .prologue
-    .line 46
     new-instance v0, Lcom/android/server/firewall/CategoryFilter$1;
 
-    const-string/jumbo v1, "category"
+    const-string v1, "category"
 
     invoke-direct {v0, v1}, Lcom/android/server/firewall/CategoryFilter$1;-><init>(Ljava/lang/String;)V
 
     sput-object v0, Lcom/android/server/firewall/CategoryFilter;->FACTORY:Lcom/android/server/firewall/FilterFactory;
 
-    .line 27
     return-void
 .end method
 
@@ -47,13 +45,10 @@
     .param p1, "categoryName"    # Ljava/lang/String;
 
     .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
     iput-object p1, p0, Lcom/android/server/firewall/CategoryFilter;->mCategoryName:Ljava/lang/String;
 
-    .line 32
     return-void
 .end method
 
@@ -80,21 +75,17 @@
     .param p7, "receivingUid"    # I
 
     .prologue
-    .line 39
     invoke-virtual {p3}, Landroid/content/Intent;->getCategories()Ljava/util/Set;
 
     move-result-object v0
 
-    .line 40
     .local v0, "categories":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     if-nez v0, :cond_0
 
-    .line 41
     const/4 v1, 0x0
 
     return v1
 
-    .line 43
     :cond_0
     iget-object v1, p0, Lcom/android/server/firewall/CategoryFilter;->mCategoryName:Ljava/lang/String;
 

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/policy/FlymeConfirmPasswordView;
 
     .prologue
-    .line 94
     iput-object p1, p0, Lcom/android/server/policy/FlymeConfirmPasswordView$2;->this$0:Lcom/android/server/policy/FlymeConfirmPasswordView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 97
     iget-object v0, p0, Lcom/android/server/policy/FlymeConfirmPasswordView$2;->this$0:Lcom/android/server/policy/FlymeConfirmPasswordView;
 
     invoke-static {v0}, Lcom/android/server/policy/FlymeConfirmPasswordView;->-get0(Lcom/android/server/policy/FlymeConfirmPasswordView;)Ljava/lang/Runnable;
@@ -51,6 +49,5 @@
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 96
     return-void
 .end method

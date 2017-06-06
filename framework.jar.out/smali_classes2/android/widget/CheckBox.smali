@@ -13,12 +13,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 58
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Landroid/widget/CheckBox;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 57
     return-void
 .end method
 
@@ -42,12 +40,10 @@
     .param p3, "defStyleAttr"    # I
 
     .prologue
-    .line 66
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, p3, v0}, Landroid/widget/CheckBox;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 65
     return-void
 .end method
 
@@ -59,10 +55,8 @@
     .param p4, "defStyleRes"    # I
 
     .prologue
-    .line 70
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/CompoundButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 69
     return-void
 .end method
 
@@ -72,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 75
     const-class v0, Landroid/widget/CheckBox;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;

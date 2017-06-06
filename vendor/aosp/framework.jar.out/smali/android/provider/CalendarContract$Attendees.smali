@@ -30,8 +30,7 @@
     .locals 1
 
     .prologue
-    .line 856
-    const-string/jumbo v0, "content://com.android.calendar/attendees"
+    const-string v0, "content://com.android.calendar/attendees"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -39,7 +38,6 @@
 
     sput-object v0, Landroid/provider/CalendarContract$Attendees;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 850
     return-void
 .end method
 
@@ -47,7 +45,6 @@
     .locals 0
 
     .prologue
-    .line 862
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -60,12 +57,10 @@
     .param p3, "projection"    # [Ljava/lang/String;
 
     .prologue
-    .line 874
     const/16 v0, 0x36
 
     invoke-static {v0}, Landroid/util/SeempLog;->record(I)I
 
-    .line 875
     const/4 v0, 0x1
 
     new-array v4, v0, [Ljava/lang/String;
@@ -78,20 +73,17 @@
 
     aput-object v0, v4, v1
 
-    .line 876
     .local v4, "attArgs":[Ljava/lang/String;
     sget-object v1, Landroid/provider/CalendarContract$Attendees;->CONTENT_URI:Landroid/net/Uri;
 
-    const-string/jumbo v3, "event_id=?"
+    const-string v3, "event_id=?"
 
-    .line 877
     const/4 v5, 0x0
 
     move-object v0, p0
 
     move-object v2, p3
 
-    .line 876
     invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0

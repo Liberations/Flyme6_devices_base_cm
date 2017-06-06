@@ -30,7 +30,6 @@
     .param p1, "this$0"    # Landroid/support/v4/view/PagerTitleStrip;
 
     .prologue
-    .line 476
     iput-object p1, p0, Landroid/support/v4/view/PagerTitleStrip$PageListener;->this$0:Landroid/support/v4/view/PagerTitleStrip;
 
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
@@ -56,12 +55,10 @@
     .param p2, "newAdapter"    # Landroid/support/v4/view/PagerAdapter;
 
     .prologue
-    .line 507
     iget-object v0, p0, Landroid/support/v4/view/PagerTitleStrip$PageListener;->this$0:Landroid/support/v4/view/PagerTitleStrip;
 
     invoke-virtual {v0, p1, p2}, Landroid/support/v4/view/PagerTitleStrip;->updateAdapter(Landroid/support/v4/view/PagerAdapter;Landroid/support/v4/view/PagerAdapter;)V
 
-    .line 506
     return-void
 .end method
 
@@ -69,7 +66,6 @@
     .locals 4
 
     .prologue
-    .line 512
     iget-object v1, p0, Landroid/support/v4/view/PagerTitleStrip$PageListener;->this$0:Landroid/support/v4/view/PagerTitleStrip;
 
     iget-object v2, p0, Landroid/support/v4/view/PagerTitleStrip$PageListener;->this$0:Landroid/support/v4/view/PagerTitleStrip;
@@ -90,7 +86,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/support/v4/view/PagerTitleStrip;->updateText(ILandroid/support/v4/view/PagerAdapter;)V
 
-    .line 514
     iget-object v1, p0, Landroid/support/v4/view/PagerTitleStrip$PageListener;->this$0:Landroid/support/v4/view/PagerTitleStrip;
 
     invoke-static {v1}, Landroid/support/v4/view/PagerTitleStrip;->-get0(Landroid/support/v4/view/PagerTitleStrip;)F
@@ -109,7 +104,6 @@
 
     move-result v0
 
-    .line 515
     .local v0, "offset":F
     :goto_0
     iget-object v1, p0, Landroid/support/v4/view/PagerTitleStrip$PageListener;->this$0:Landroid/support/v4/view/PagerTitleStrip;
@@ -126,10 +120,8 @@
 
     invoke-virtual {v1, v2, v0, v3}, Landroid/support/v4/view/PagerTitleStrip;->updateTextPositions(IFZ)V
 
-    .line 511
     return-void
 
-    .line 514
     .end local v0    # "offset":F
     :cond_0
     const/4 v0, 0x0
@@ -143,10 +135,8 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 502
     iput p1, p0, Landroid/support/v4/view/PagerTitleStrip$PageListener;->mScrollState:I
 
-    .line 501
     return-void
 .end method
 
@@ -157,17 +147,14 @@
     .param p3, "positionOffsetPixels"    # I
 
     .prologue
-    .line 482
     const/high16 v0, 0x3f000000    # 0.5f
 
     cmpl-float v0, p2, v0
 
     if-lez v0, :cond_0
 
-    .line 484
     add-int/lit8 p1, p1, 0x1
 
-    .line 486
     :cond_0
     iget-object v0, p0, Landroid/support/v4/view/PagerTitleStrip$PageListener;->this$0:Landroid/support/v4/view/PagerTitleStrip;
 
@@ -175,7 +162,6 @@
 
     invoke-virtual {v0, p1, p2, v1}, Landroid/support/v4/view/PagerTitleStrip;->updateTextPositions(IFZ)V
 
-    .line 481
     return-void
 .end method
 
@@ -184,12 +170,10 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 491
     iget v1, p0, Landroid/support/v4/view/PagerTitleStrip$PageListener;->mScrollState:I
 
     if-nez v1, :cond_0
 
-    .line 493
     iget-object v1, p0, Landroid/support/v4/view/PagerTitleStrip$PageListener;->this$0:Landroid/support/v4/view/PagerTitleStrip;
 
     iget-object v2, p0, Landroid/support/v4/view/PagerTitleStrip$PageListener;->this$0:Landroid/support/v4/view/PagerTitleStrip;
@@ -210,7 +194,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/support/v4/view/PagerTitleStrip;->updateText(ILandroid/support/v4/view/PagerAdapter;)V
 
-    .line 495
     iget-object v1, p0, Landroid/support/v4/view/PagerTitleStrip$PageListener;->this$0:Landroid/support/v4/view/PagerTitleStrip;
 
     invoke-static {v1}, Landroid/support/v4/view/PagerTitleStrip;->-get0(Landroid/support/v4/view/PagerTitleStrip;)F
@@ -229,7 +212,6 @@
 
     move-result v0
 
-    .line 496
     .local v0, "offset":F
     :goto_0
     iget-object v1, p0, Landroid/support/v4/view/PagerTitleStrip$PageListener;->this$0:Landroid/support/v4/view/PagerTitleStrip;
@@ -246,12 +228,10 @@
 
     invoke-virtual {v1, v2, v0, v3}, Landroid/support/v4/view/PagerTitleStrip;->updateTextPositions(IFZ)V
 
-    .line 490
     .end local v0    # "offset":F
     :cond_0
     return-void
 
-    .line 495
     :cond_1
     const/4 v0, 0x0
 

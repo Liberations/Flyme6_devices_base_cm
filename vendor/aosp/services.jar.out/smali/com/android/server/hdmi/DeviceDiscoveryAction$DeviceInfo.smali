@@ -110,34 +110,26 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 78
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 72
     const v0, 0xffff
 
     iput v0, p0, Lcom/android/server/hdmi/DeviceDiscoveryAction$DeviceInfo;->mPhysicalAddress:I
 
-    .line 73
     iput v1, p0, Lcom/android/server/hdmi/DeviceDiscoveryAction$DeviceInfo;->mPortId:I
 
-    .line 74
     const v0, 0xffffff
 
     iput v0, p0, Lcom/android/server/hdmi/DeviceDiscoveryAction$DeviceInfo;->mVendorId:I
 
-    .line 75
-    const-string/jumbo v0, ""
+    const-string v0, ""
 
     iput-object v0, p0, Lcom/android/server/hdmi/DeviceDiscoveryAction$DeviceInfo;->mDisplayName:Ljava/lang/String;
 
-    .line 76
     iput v1, p0, Lcom/android/server/hdmi/DeviceDiscoveryAction$DeviceInfo;->mDeviceType:I
 
-    .line 79
     iput p1, p0, Lcom/android/server/hdmi/DeviceDiscoveryAction$DeviceInfo;->mLogicalAddress:I
 
-    .line 78
     return-void
 .end method
 
@@ -155,7 +147,6 @@
     .locals 7
 
     .prologue
-    .line 83
     new-instance v0, Landroid/hardware/hdmi/HdmiDeviceInfo;
 
     iget v1, p0, Lcom/android/server/hdmi/DeviceDiscoveryAction$DeviceInfo;->mLogicalAddress:I
@@ -166,12 +157,10 @@
 
     iget v4, p0, Lcom/android/server/hdmi/DeviceDiscoveryAction$DeviceInfo;->mDeviceType:I
 
-    .line 84
     iget v5, p0, Lcom/android/server/hdmi/DeviceDiscoveryAction$DeviceInfo;->mVendorId:I
 
     iget-object v6, p0, Lcom/android/server/hdmi/DeviceDiscoveryAction$DeviceInfo;->mDisplayName:Ljava/lang/String;
 
-    .line 83
     invoke-direct/range {v0 .. v6}, Landroid/hardware/hdmi/HdmiDeviceInfo;-><init>(IIIIILjava/lang/String;)V
 
     return-object v0

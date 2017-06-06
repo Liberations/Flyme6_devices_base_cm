@@ -31,8 +31,7 @@
     .locals 1
 
     .prologue
-    .line 288
-    const-string/jumbo v0, "content://com.android.deskclock/cities"
+    const-string v0, "content://com.android.deskclock/cities"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -40,6 +39,5 @@
 
     sput-object v0, Lcyanogenmod/alarmclock/ClockContract$CitiesColumns;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 284
     return-void
 .end method

@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/usage/UsageStatsService;
 
     .prologue
-    .line 1201
     iput-object p1, p0, Lcom/android/server/usage/UsageStatsService$BinderService;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     invoke-direct {p0}, Landroid/app/usage/IUsageStatsManager$Stub;-><init>()V
@@ -51,21 +50,17 @@
 
     const/4 v3, 0x0
 
-    .line 1204
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 1205
     .local v0, "callingUid":I
     const/16 v4, 0x3e8
 
     if-ne v0, v4, :cond_0
 
-    .line 1206
     return v2
 
-    .line 1208
     :cond_0
     iget-object v4, p0, Lcom/android/server/usage/UsageStatsService$BinderService;->this$0:Lcom/android/server/usage/UsageStatsService;
 
@@ -77,20 +72,18 @@
 
     move-result v1
 
-    .line 1210
     .local v1, "mode":I
     const/4 v4, 0x3
 
     if-ne v1, v4, :cond_2
 
-    .line 1213
     iget-object v4, p0, Lcom/android/server/usage/UsageStatsService$BinderService;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     invoke-virtual {v4}, Lcom/android/server/usage/UsageStatsService;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
-    const-string/jumbo v5, "android.permission.PACKAGE_USAGE_STATS"
+    const-string v5, "android.permission.PACKAGE_USAGE_STATS"
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->checkCallingPermission(Ljava/lang/String;)I
 
@@ -106,7 +99,6 @@
 
     goto :goto_0
 
-    .line 1216
     :cond_2
     if-nez v1, :cond_3
 
@@ -128,14 +120,13 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 1329
     iget-object v0, p0, Lcom/android/server/usage/UsageStatsService$BinderService;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     invoke-virtual {v0}, Lcom/android/server/usage/UsageStatsService;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const-string/jumbo v1, "android.permission.DUMP"
+    const-string v1, "android.permission.DUMP"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
 
@@ -143,57 +134,46 @@
 
     if-eqz v0, :cond_0
 
-    .line 1331
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "Permission Denial: can\'t dump UsageStats from pid="
+    const-string v1, "Permission Denial: can\'t dump UsageStats from pid="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 1332
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v1
 
-    .line 1331
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 1332
-    const-string/jumbo v1, ", uid="
+    const-string v1, ", uid="
 
-    .line 1331
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 1332
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 1331
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 1333
-    const-string/jumbo v1, " without permission "
+    const-string v1, " without permission "
 
-    .line 1331
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 1333
-    const-string/jumbo v1, "android.permission.DUMP"
+    const-string v1, "android.permission.DUMP"
 
-    .line 1331
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -204,16 +184,13 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1334
     return-void
 
-    .line 1336
     :cond_0
     iget-object v0, p0, Lcom/android/server/usage/UsageStatsService$BinderService;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     invoke-virtual {v0, p3, p2}, Lcom/android/server/usage/UsageStatsService;->dump([Ljava/lang/String;Ljava/io/PrintWriter;)V
 
-    .line 1328
     return-void
 .end method
 
@@ -225,7 +202,6 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 1280
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -235,12 +211,11 @@
 
     move-result v1
 
-    .line 1281
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v2
 
-    const-string/jumbo v6, "isAppInactive"
+    const-string v6, "isAppInactive"
 
     const/4 v4, 0x0
 
@@ -250,19 +225,16 @@
 
     move v3, p2
 
-    .line 1280
     invoke-interface/range {v0 .. v7}, Landroid/app/IActivityManager;->handleIncomingUser(IIIZZLjava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result p2
 
-    .line 1285
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 1287
     .local v10, "token":J
     :try_start_1
     iget-object v0, p0, Lcom/android/server/usage/UsageStatsService$BinderService;->this$0:Lcom/android/server/usage/UsageStatsService;
@@ -275,31 +247,24 @@
 
     move-result v0
 
-    .line 1289
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1287
     return v0
 
-    .line 1282
     .end local v10    # "token":J
     :catch_0
     move-exception v8
 
-    .line 1283
     .local v8, "re":Landroid/os/RemoteException;
     return v9
 
-    .line 1288
     .end local v8    # "re":Landroid/os/RemoteException;
     .restart local v10    # "token":J
     :catchall_0
     move-exception v0
 
-    .line 1289
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1288
     throw v0
 .end method
 
@@ -328,7 +293,6 @@
     .end annotation
 
     .prologue
-    .line 1243
     move-object/from16 v0, p6
 
     invoke-direct {p0, v0}, Lcom/android/server/usage/UsageStatsService$BinderService;->hasPermission(Ljava/lang/String;)Z
@@ -337,24 +301,20 @@
 
     if-nez v3, :cond_0
 
-    .line 1244
     const/4 v3, 0x0
 
     return-object v3
 
-    .line 1247
     :cond_0
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v4
 
-    .line 1248
     .local v4, "userId":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 1251
     .local v10, "token":J
     :try_start_0
     iget-object v3, p0, Lcom/android/server/usage/UsageStatsService$BinderService;->this$0:Lcom/android/server/usage/UsageStatsService;
@@ -369,41 +329,32 @@
 
     move-result-object v2
 
-    .line 1253
     .local v2, "results":Ljava/util/List;, "Ljava/util/List<Landroid/app/usage/ConfigurationStats;>;"
     if-eqz v2, :cond_1
 
-    .line 1254
     new-instance v3, Landroid/content/pm/ParceledListSlice;
 
     invoke-direct {v3, v2}, Landroid/content/pm/ParceledListSlice;-><init>(Ljava/util/List;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1257
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1254
     return-object v3
 
-    .line 1257
     :cond_1
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1259
     const/4 v3, 0x0
 
     return-object v3
 
-    .line 1256
     .end local v2    # "results":Ljava/util/List;, "Ljava/util/List<Landroid/app/usage/ConfigurationStats;>;"
     :catchall_0
     move-exception v3
 
-    .line 1257
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1256
     throw v3
 .end method
 
@@ -414,31 +365,26 @@
     .param p5, "callingPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 1264
     invoke-direct {p0, p5}, Lcom/android/server/usage/UsageStatsService$BinderService;->hasPermission(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 1265
     const/4 v0, 0x0
 
     return-object v0
 
-    .line 1268
     :cond_0
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v1
 
-    .line 1269
     .local v1, "userId":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 1271
     .local v6, "token":J
     :try_start_0
     iget-object v0, p0, Lcom/android/server/usage/UsageStatsService$BinderService;->this$0:Lcom/android/server/usage/UsageStatsService;
@@ -453,20 +399,15 @@
 
     move-result-object v0
 
-    .line 1273
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1271
     return-object v0
 
-    .line 1272
     :catchall_0
     move-exception v0
 
-    .line 1273
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1272
     throw v0
 .end method
 
@@ -489,7 +430,6 @@
     .end annotation
 
     .prologue
-    .line 1222
     move-object/from16 v0, p6
 
     invoke-direct {p0, v0}, Lcom/android/server/usage/UsageStatsService$BinderService;->hasPermission(Ljava/lang/String;)Z
@@ -498,24 +438,20 @@
 
     if-nez v3, :cond_0
 
-    .line 1223
     const/4 v3, 0x0
 
     return-object v3
 
-    .line 1226
     :cond_0
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v4
 
-    .line 1227
     .local v4, "userId":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 1229
     .local v10, "token":J
     :try_start_0
     iget-object v3, p0, Lcom/android/server/usage/UsageStatsService$BinderService;->this$0:Lcom/android/server/usage/UsageStatsService;
@@ -530,41 +466,32 @@
 
     move-result-object v2
 
-    .line 1231
     .local v2, "results":Ljava/util/List;, "Ljava/util/List<Landroid/app/usage/UsageStats;>;"
     if-eqz v2, :cond_1
 
-    .line 1232
     new-instance v3, Landroid/content/pm/ParceledListSlice;
 
     invoke-direct {v3, v2}, Landroid/content/pm/ParceledListSlice;-><init>(Ljava/util/List;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1235
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1232
     return-object v3
 
-    .line 1235
     :cond_1
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1237
     const/4 v3, 0x0
 
     return-object v3
 
-    .line 1234
     .end local v2    # "results":Ljava/util/List;, "Ljava/util/List<Landroid/app/usage/UsageStats;>;"
     :catchall_0
     move-exception v3
 
-    .line 1235
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1234
     throw v3
 .end method
 
@@ -575,74 +502,60 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 1295
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v2
 
-    .line 1297
     .local v2, "callingUid":I
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
     move-result-object v0
 
-    .line 1298
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v1
 
-    .line 1299
-    const-string/jumbo v6, "setAppIdle"
+    const-string v6, "setAppIdle"
 
-    .line 1298
     const/4 v4, 0x0
 
     const/4 v5, 0x1
 
-    .line 1299
     const/4 v7, 0x0
 
     move v3, p3
 
-    .line 1297
     invoke-interface/range {v0 .. v7}, Landroid/app/IActivityManager;->handleIncomingUser(IIIZZLjava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result p3
 
-    .line 1303
     iget-object v0, p0, Lcom/android/server/usage/UsageStatsService$BinderService;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     invoke-virtual {v0}, Lcom/android/server/usage/UsageStatsService;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const-string/jumbo v1, "android.permission.CHANGE_APP_IDLE_STATE"
+    const-string v1, "android.permission.CHANGE_APP_IDLE_STATE"
 
-    .line 1304
-    const-string/jumbo v3, "No permission to change app idle state"
+    const-string v3, "No permission to change app idle state"
 
-    .line 1303
     invoke-virtual {v0, v1, v3}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1305
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 1307
     .local v10, "token":J
     :try_start_1
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v0
 
-    .line 1308
     const/4 v1, 0x0
 
-    .line 1307
     invoke-interface {v0, p1, v1, p3}, Landroid/content/pm/IPackageManager;->getPackageInfo(Ljava/lang/String;II)Landroid/content/pm/PackageInfo;
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
@@ -650,27 +563,21 @@
 
     move-result-object v8
 
-    .line 1309
     .local v8, "pi":Landroid/content/pm/PackageInfo;
     if-nez v8, :cond_0
 
-    .line 1313
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1309
     return-void
 
-    .line 1300
     .end local v8    # "pi":Landroid/content/pm/PackageInfo;
     .end local v10    # "token":J
     :catch_0
     move-exception v9
 
-    .line 1301
     .local v9, "re":Landroid/os/RemoteException;
     return-void
 
-    .line 1310
     .end local v9    # "re":Landroid/os/RemoteException;
     .restart local v8    # "pi":Landroid/content/pm/PackageInfo;
     .restart local v10    # "token":J
@@ -683,33 +590,26 @@
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1313
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1294
     .end local v8    # "pi":Landroid/content/pm/PackageInfo;
     :goto_0
     return-void
 
-    .line 1311
     :catch_1
     move-exception v9
 
-    .line 1313
     .restart local v9    # "re":Landroid/os/RemoteException;
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 1312
     .end local v9    # "re":Landroid/os/RemoteException;
     :catchall_0
     move-exception v0
 
-    .line 1313
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1312
     throw v0
 .end method
 
@@ -725,32 +625,27 @@
     .end annotation
 
     .prologue
-    .line 1320
     new-instance v6, Ljava/lang/StringBuilder;
 
     const/16 v0, 0x20
 
     invoke-direct {v6, v0}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 1321
     .local v6, "reason":Ljava/lang/StringBuilder;
-    const-string/jumbo v0, "from:"
+    const-string v0, "from:"
 
     invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1322
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
     invoke-static {v6, v0}, Landroid/os/UserHandle;->formatUid(Ljava/lang/StringBuilder;I)V
 
-    .line 1323
     iget-object v0, p0, Lcom/android/server/usage/UsageStatsService$BinderService;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     iget-object v0, v0, Lcom/android/server/usage/UsageStatsService;->mDeviceIdleController:Landroid/os/IDeviceIdleController;
 
-    .line 1324
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v5
@@ -761,9 +656,7 @@
 
     move v4, p4
 
-    .line 1323
     invoke-interface/range {v0 .. v5}, Landroid/os/IDeviceIdleController;->addPowerSaveTempWhitelistApp(Ljava/lang/String;JILjava/lang/String;)V
 
-    .line 1319
     return-void
 .end method

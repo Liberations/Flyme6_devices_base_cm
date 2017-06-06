@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,7 +18,6 @@
     .param p0, "e"    # Ljava/lang/Exception;
 
     .prologue
-    .line 34
     instance-of v0, p0, Landroid/os/OperationCanceledException;
 
     return v0
@@ -38,7 +36,6 @@
     .prologue
     move-object v6, p6
 
-    .line 30
     check-cast v6, Landroid/os/CancellationSignal;
 
     move-object v0, p0
@@ -53,7 +50,6 @@
 
     move-object v5, p5
 
-    .line 29
     invoke-virtual/range {v0 .. v6}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
 
     move-result-object v0

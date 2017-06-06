@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/print/RemotePrintSpooler;
 
     .prologue
-    .line 443
     iput-object p1, p0, Lcom/android/server/print/RemotePrintSpooler$MyServiceConnection;->this$0:Lcom/android/server/print/RemotePrintSpooler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +52,6 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 446
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler$MyServiceConnection;->this$0:Lcom/android/server/print/RemotePrintSpooler;
 
     invoke-static {v0}, Lcom/android/server/print/RemotePrintSpooler;->-get1(Lcom/android/server/print/RemotePrintSpooler;)Ljava/lang/Object;
@@ -62,7 +60,6 @@
 
     monitor-enter v1
 
-    .line 447
     :try_start_0
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler$MyServiceConnection;->this$0:Lcom/android/server/print/RemotePrintSpooler;
 
@@ -72,12 +69,10 @@
 
     invoke-static {v0, v2}, Lcom/android/server/print/RemotePrintSpooler;->-set0(Lcom/android/server/print/RemotePrintSpooler;Landroid/print/IPrintSpooler;)Landroid/print/IPrintSpooler;
 
-    .line 448
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler$MyServiceConnection;->this$0:Lcom/android/server/print/RemotePrintSpooler;
 
     invoke-static {v0}, Lcom/android/server/print/RemotePrintSpooler;->-wrap3(Lcom/android/server/print/RemotePrintSpooler;)V
 
-    .line 449
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler$MyServiceConnection;->this$0:Lcom/android/server/print/RemotePrintSpooler;
 
     invoke-static {v0}, Lcom/android/server/print/RemotePrintSpooler;->-get1(Lcom/android/server/print/RemotePrintSpooler;)Ljava/lang/Object;
@@ -90,10 +85,8 @@
 
     monitor-exit v1
 
-    .line 445
     return-void
 
-    .line 446
     :catchall_0
     move-exception v0
 
@@ -107,7 +100,6 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 455
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler$MyServiceConnection;->this$0:Lcom/android/server/print/RemotePrintSpooler;
 
     invoke-static {v0}, Lcom/android/server/print/RemotePrintSpooler;->-get1(Lcom/android/server/print/RemotePrintSpooler;)Ljava/lang/Object;
@@ -116,13 +108,11 @@
 
     monitor-enter v1
 
-    .line 456
     :try_start_0
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler$MyServiceConnection;->this$0:Lcom/android/server/print/RemotePrintSpooler;
 
     invoke-static {v0}, Lcom/android/server/print/RemotePrintSpooler;->-wrap0(Lcom/android/server/print/RemotePrintSpooler;)V
 
-    .line 457
     iget-object v0, p0, Lcom/android/server/print/RemotePrintSpooler$MyServiceConnection;->this$0:Lcom/android/server/print/RemotePrintSpooler;
 
     const/4 v2, 0x0
@@ -133,10 +123,8 @@
 
     monitor-exit v1
 
-    .line 454
     return-void
 
-    .line 455
     :catchall_0
     move-exception v0
 

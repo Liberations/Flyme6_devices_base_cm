@@ -31,22 +31,18 @@
     .locals 1
 
     .prologue
-    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 63
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/PermissionDialogReqQueue;->mDialog:Lcom/android/server/PermissionDialog;
 
-    .line 64
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/PermissionDialogReqQueue;->resultList:Ljava/util/List;
 
-    .line 62
     return-void
 .end method
 
@@ -56,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 27
     iget-object v0, p0, Lcom/android/server/PermissionDialogReqQueue;->mDialog:Lcom/android/server/PermissionDialog;
 
     return-object v0
@@ -66,17 +61,14 @@
     .locals 1
 
     .prologue
-    .line 84
     iget-object v0, p0, Lcom/android/server/PermissionDialogReqQueue;->mDialog:Lcom/android/server/PermissionDialog;
 
     if-eqz v0, :cond_0
 
-    .line 85
     iget-object v0, p0, Lcom/android/server/PermissionDialogReqQueue;->mDialog:Lcom/android/server/PermissionDialog;
 
     invoke-virtual {v0}, Lcom/android/server/PermissionDialog;->ignore()V
 
-    .line 83
     :cond_0
     return-void
 .end method
@@ -86,10 +78,8 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 74
     monitor-enter p0
 
-    .line 75
     :goto_0
     :try_start_0
     iget-object v1, p0, Lcom/android/server/PermissionDialogReqQueue;->resultList:Ljava/util/List;
@@ -100,7 +90,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 76
     iget-object v1, p0, Lcom/android/server/PermissionDialogReqQueue;->resultList:Ljava/util/List;
 
     const/4 v2, 0x0
@@ -111,11 +100,9 @@
 
     check-cast v0, Lcom/android/server/PermissionDialogReqQueue$PermissionDialogReq;
 
-    .line 77
     .local v0, "res":Lcom/android/server/PermissionDialogReqQueue$PermissionDialogReq;
     invoke-virtual {v0, p1}, Lcom/android/server/PermissionDialogReqQueue$PermissionDialogReq;->set(I)V
 
-    .line 78
     iget-object v1, p0, Lcom/android/server/PermissionDialogReqQueue;->resultList:Ljava/util/List;
 
     const/4 v2, 0x0
@@ -126,7 +113,6 @@
 
     goto :goto_0
 
-    .line 74
     .end local v0    # "res":Lcom/android/server/PermissionDialogReqQueue$PermissionDialogReq;
     :catchall_0
     move-exception v1
@@ -138,7 +124,6 @@
     :cond_0
     monitor-exit p0
 
-    .line 73
     return-void
 .end method
 
@@ -147,10 +132,8 @@
     .param p1, "res"    # Lcom/android/server/PermissionDialogReqQueue$PermissionDialogReq;
 
     .prologue
-    .line 68
     monitor-enter p0
 
-    .line 69
     :try_start_0
     iget-object v0, p0, Lcom/android/server/PermissionDialogReqQueue;->resultList:Ljava/util/List;
 
@@ -160,10 +143,8 @@
 
     monitor-exit p0
 
-    .line 67
     return-void
 
-    .line 68
     :catchall_0
     move-exception v0
 
@@ -177,9 +158,7 @@
     .param p1, "mDialog"    # Lcom/android/server/PermissionDialog;
 
     .prologue
-    .line 31
     iput-object p1, p0, Lcom/android/server/PermissionDialogReqQueue;->mDialog:Lcom/android/server/PermissionDialog;
 
-    .line 30
     return-void
 .end method

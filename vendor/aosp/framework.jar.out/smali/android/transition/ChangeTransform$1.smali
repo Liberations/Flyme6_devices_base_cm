@@ -29,7 +29,6 @@
     .param p2, "$anonymous1"    # Ljava/lang/String;
 
     .prologue
-    .line 66
     .local p1, "$anonymous0":Ljava/lang/Class;, "Ljava/lang/Class<[F>;"
     invoke-direct {p0, p1, p2}, Landroid/util/Property;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
@@ -43,7 +42,6 @@
     .param p1, "object"    # Ljava/lang/Object;
 
     .prologue
-    .line 68
     check-cast p1, Landroid/transition/ChangeTransform$PathAnimatorMatrix;
 
     .end local p1    # "object":Ljava/lang/Object;
@@ -59,7 +57,6 @@
     .param p1, "object"    # Landroid/transition/ChangeTransform$PathAnimatorMatrix;
 
     .prologue
-    .line 69
     const/4 v0, 0x0
 
     return-object v0
@@ -71,10 +68,8 @@
     .param p2, "value"    # [F
 
     .prologue
-    .line 74
     invoke-virtual {p1, p2}, Landroid/transition/ChangeTransform$PathAnimatorMatrix;->setValues([F)V
 
-    .line 73
     return-void
 .end method
 
@@ -84,7 +79,6 @@
     .param p2, "value"    # Ljava/lang/Object;
 
     .prologue
-    .line 73
     check-cast p1, Landroid/transition/ChangeTransform$PathAnimatorMatrix;
 
     .end local p1    # "object":Ljava/lang/Object;

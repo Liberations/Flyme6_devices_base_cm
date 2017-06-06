@@ -49,7 +49,6 @@
     .locals 1
 
     .prologue
-    .line 64
     const-class v0, Landroid/graphics/drawable/AnimatedStateListDrawable;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -58,7 +57,6 @@
 
     sput-object v0, Landroid/graphics/drawable/AnimatedStateListDrawable;->LOGTAG:Ljava/lang/String;
 
-    .line 63
     return-void
 .end method
 
@@ -68,10 +66,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 83
     invoke-direct {p0, v0, v0}, Landroid/graphics/drawable/AnimatedStateListDrawable;-><init>(Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;Landroid/content/res/Resources;)V
 
-    .line 82
     return-void
 .end method
 
@@ -83,37 +79,29 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 664
     const/4 v1, 0x0
 
     invoke-direct {p0, v1}, Landroid/graphics/drawable/StateListDrawable;-><init>(Landroid/graphics/drawable/StateListDrawable$StateListState;)V
 
-    .line 75
     iput v2, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mTransitionToIndex:I
 
-    .line 78
     iput v2, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mTransitionFromIndex:I
 
-    .line 667
     new-instance v0, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;
 
     invoke-direct {v0, p1, p0, p2}, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;-><init>(Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;Landroid/graphics/drawable/AnimatedStateListDrawable;Landroid/content/res/Resources;)V
 
-    .line 668
     .local v0, "newState":Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;
     invoke-virtual {p0, v0}, Landroid/graphics/drawable/AnimatedStateListDrawable;->setConstantState(Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;)V
 
-    .line 669
     invoke-virtual {p0}, Landroid/graphics/drawable/AnimatedStateListDrawable;->getState()[I
 
     move-result-object v1
 
     invoke-virtual {p0, v1}, Landroid/graphics/drawable/AnimatedStateListDrawable;->onStateChange([I)Z
 
-    .line 670
     invoke-virtual {p0}, Landroid/graphics/drawable/AnimatedStateListDrawable;->jumpToCurrentState()V
 
-    .line 663
     return-void
 .end method
 
@@ -142,14 +130,12 @@
     .end annotation
 
     .prologue
-    .line 438
     invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v3
 
     add-int/lit8 v1, v3, 0x1
 
-    .line 440
     .local v1, "innerDepth":I
     :cond_0
     :goto_0
@@ -162,7 +148,6 @@
 
     if-eq v2, v3, :cond_3
 
-    .line 441
     invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v0
@@ -170,26 +155,22 @@
     .local v0, "depth":I
     if-ge v0, v1, :cond_1
 
-    .line 442
     const/4 v3, 0x3
 
     if-eq v2, v3, :cond_3
 
-    .line 443
     :cond_1
     const/4 v3, 0x2
 
     if-ne v2, v3, :cond_0
 
-    .line 447
     if-gt v0, v1, :cond_0
 
-    .line 451
     invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    const-string/jumbo v4, "item"
+    const-string v4, "item"
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -197,18 +178,16 @@
 
     if-eqz v3, :cond_2
 
-    .line 452
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/graphics/drawable/AnimatedStateListDrawable;->parseItem(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)I
 
     goto :goto_0
 
-    .line 453
     :cond_2
     invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    const-string/jumbo v4, "transition"
+    const-string v4, "transition"
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -216,12 +195,10 @@
 
     if-eqz v3, :cond_0
 
-    .line 454
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/graphics/drawable/AnimatedStateListDrawable;->parseTransition(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)I
 
     goto :goto_0
 
-    .line 435
     .end local v0    # "depth":I
     :cond_3
     return-void
@@ -231,14 +208,12 @@
     .locals 1
 
     .prologue
-    .line 431
     invoke-virtual {p0}, Landroid/graphics/drawable/AnimatedStateListDrawable;->getState()[I
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Landroid/graphics/drawable/AnimatedStateListDrawable;->onStateChange([I)Z
 
-    .line 430
     return-void
 .end method
 
@@ -258,21 +233,17 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 501
     sget-object v5, Lcom/android/internal/R$styleable;->AnimatedStateListDrawableItem:[I
 
-    .line 500
     invoke-static {p1, p4, p3, v5}, Landroid/graphics/drawable/AnimatedStateListDrawable;->obtainAttributes(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 502
     .local v0, "a":Landroid/content/res/TypedArray;
     invoke-virtual {v0, v6, v6}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v2
 
-    .line 503
     .local v2, "keyframeId":I
     const/4 v5, 0x1
 
@@ -280,20 +251,16 @@
 
     move-result-object v1
 
-    .line 504
     .local v1, "dr":Landroid/graphics/drawable/Drawable;
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 506
     invoke-virtual {p0, p3}, Landroid/graphics/drawable/AnimatedStateListDrawable;->extractStateSet(Landroid/util/AttributeSet;)[I
 
     move-result-object v3
 
-    .line 511
     .local v3, "states":[I
     if-nez v1, :cond_2
 
-    .line 513
     :cond_0
     invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
@@ -304,15 +271,12 @@
 
     if-eq v4, v5, :cond_0
 
-    .line 515
     const/4 v5, 0x2
 
     if-eq v4, v5, :cond_1
 
-    .line 516
     new-instance v5, Lorg/xmlpull/v1/XmlPullParserException;
 
-    .line 517
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -325,18 +289,14 @@
 
     move-result-object v6
 
-    .line 518
-    const-string/jumbo v7, ": <item> tag requires a \'drawable\' attribute or "
+    const-string v7, ": <item> tag requires a \'drawable\' attribute or "
 
-    .line 517
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v6
 
-    .line 519
-    const-string/jumbo v7, "child tag defining a drawable"
+    const-string v7, "child tag defining a drawable"
 
-    .line 517
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v6
@@ -345,18 +305,15 @@
 
     move-result-object v6
 
-    .line 516
     invoke-direct {v5, v6}, Lorg/xmlpull/v1/XmlPullParserException;-><init>(Ljava/lang/String;)V
 
     throw v5
 
-    .line 521
     :cond_1
     invoke-static {p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->createFromXmlInner(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    .line 524
     .end local v4    # "type":I
     :cond_2
     iget-object v5, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mState:Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;
@@ -386,52 +343,41 @@
 
     const/4 v7, 0x0
 
-    .line 465
     sget-object v6, Lcom/android/internal/R$styleable;->AnimatedStateListDrawableTransition:[I
 
-    .line 464
     invoke-static {p1, p4, p3, v6}, Landroid/graphics/drawable/AnimatedStateListDrawable;->obtainAttributes(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 466
     .local v0, "a":Landroid/content/res/TypedArray;
     invoke-virtual {v0, v8, v7}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v2
 
-    .line 469
     .local v2, "fromId":I
     const/4 v6, 0x1
 
-    .line 468
     invoke-virtual {v0, v6, v7}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v4
 
-    .line 471
     .local v4, "toId":I
     const/4 v6, 0x3
 
-    .line 470
     invoke-virtual {v0, v6, v7}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v3
 
-    .line 472
     .local v3, "reversible":Z
     invoke-virtual {v0, v7}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    .line 474
     .local v1, "dr":Landroid/graphics/drawable/Drawable;
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 479
     if-nez v1, :cond_2
 
-    .line 481
     :cond_0
     invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
@@ -442,13 +388,10 @@
 
     if-eq v5, v6, :cond_0
 
-    .line 483
     if-eq v5, v8, :cond_1
 
-    .line 484
     new-instance v6, Lorg/xmlpull/v1/XmlPullParserException;
 
-    .line 485
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -461,18 +404,14 @@
 
     move-result-object v7
 
-    .line 486
-    const-string/jumbo v8, ": <transition> tag requires a \'drawable\' attribute or "
+    const-string v8, ": <transition> tag requires a \'drawable\' attribute or "
 
-    .line 485
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v7
 
-    .line 487
-    const-string/jumbo v8, "child tag defining a drawable"
+    const-string v8, "child tag defining a drawable"
 
-    .line 485
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v7
@@ -481,18 +420,15 @@
 
     move-result-object v7
 
-    .line 484
     invoke-direct {v6, v7}, Lorg/xmlpull/v1/XmlPullParserException;-><init>(Ljava/lang/String;)V
 
     throw v6
 
-    .line 489
     :cond_1
     invoke-static {p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->createFromXmlInner(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    .line 492
     .end local v5    # "type":I
     :cond_2
     iget-object v6, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mState:Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;
@@ -509,24 +445,19 @@
     .param p1, "toIndex"    # I
 
     .prologue
-    .line 161
     iget-object v0, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mTransition:Landroid/graphics/drawable/AnimatedStateListDrawable$Transition;
 
-    .line 162
     .local v0, "currentTransition":Landroid/graphics/drawable/AnimatedStateListDrawable$Transition;
     if-eqz v0, :cond_3
 
-    .line 163
     iget v10, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mTransitionToIndex:I
 
     if-ne p1, v10, :cond_0
 
-    .line 165
     const/4 v10, 0x1
 
     return v10
 
-    .line 166
     :cond_0
     iget v10, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mTransitionFromIndex:I
 
@@ -538,74 +469,59 @@
 
     if-eqz v10, :cond_1
 
-    .line 168
     invoke-virtual {v0}, Landroid/graphics/drawable/AnimatedStateListDrawable$Transition;->reverse()V
 
-    .line 169
     iget v10, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mTransitionFromIndex:I
 
     iput v10, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mTransitionToIndex:I
 
-    .line 170
     iput p1, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mTransitionFromIndex:I
 
-    .line 171
     const/4 v10, 0x1
 
     return v10
 
-    .line 175
     :cond_1
     iget v3, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mTransitionToIndex:I
 
-    .line 178
     .local v3, "fromIndex":I
     invoke-virtual {v0}, Landroid/graphics/drawable/AnimatedStateListDrawable$Transition;->stop()V
 
-    .line 184
     :goto_0
     const/4 v10, 0x0
 
     iput-object v10, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mTransition:Landroid/graphics/drawable/AnimatedStateListDrawable$Transition;
 
-    .line 185
     const/4 v10, -0x1
 
     iput v10, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mTransitionFromIndex:I
 
-    .line 186
     const/4 v10, -0x1
 
     iput v10, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mTransitionToIndex:I
 
-    .line 188
     iget-object v6, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mState:Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;
 
-    .line 189
     .local v6, "state":Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;
     invoke-virtual {v6, v3}, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;->getKeyframeIdAt(I)I
 
     move-result v2
 
-    .line 190
     .local v2, "fromId":I
     invoke-virtual {v6, p1}, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;->getKeyframeIdAt(I)I
 
     move-result v7
 
-    .line 191
     .local v7, "toId":I
     if-eqz v7, :cond_2
 
     if-nez v2, :cond_4
 
-    .line 193
     :cond_2
     const/4 v10, 0x0
 
     return v10
 
-    .line 180
     .end local v2    # "fromId":I
     .end local v3    # "fromIndex":I
     .end local v6    # "state":Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;
@@ -618,7 +534,6 @@
     .restart local v3    # "fromIndex":I
     goto :goto_0
 
-    .line 196
     .restart local v2    # "fromId":I
     .restart local v6    # "state":Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;
     .restart local v7    # "toId":I
@@ -627,42 +542,34 @@
 
     move-result v9
 
-    .line 197
     .local v9, "transitionIndex":I
     if-gez v9, :cond_5
 
-    .line 199
     const/4 v10, 0x0
 
     return v10
 
-    .line 202
     :cond_5
     invoke-virtual {v6, v2, v7}, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;->transitionHasReversibleFlag(II)Z
 
     move-result v4
 
-    .line 205
     .local v4, "hasReversibleFlag":Z
     invoke-virtual {p0, v9}, Landroid/graphics/drawable/AnimatedStateListDrawable;->selectDrawable(I)Z
 
-    .line 208
     invoke-virtual {p0}, Landroid/graphics/drawable/AnimatedStateListDrawable;->getCurrent()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    .line 209
     .local v1, "d":Landroid/graphics/drawable/Drawable;
     instance-of v10, v1, Landroid/graphics/drawable/AnimationDrawable;
 
     if-eqz v10, :cond_6
 
-    .line 210
     invoke-virtual {v6, v2, v7}, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;->isTransitionReversed(II)Z
 
     move-result v5
 
-    .line 212
     .local v5, "reversed":Z
     new-instance v8, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimationDrawableTransition;
 
@@ -671,27 +578,21 @@
     .end local v1    # "d":Landroid/graphics/drawable/Drawable;
     invoke-direct {v8, v1, v5, v4}, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimationDrawableTransition;-><init>(Landroid/graphics/drawable/AnimationDrawable;ZZ)V
 
-    .line 226
     .end local v5    # "reversed":Z
     .local v8, "transition":Landroid/graphics/drawable/AnimatedStateListDrawable$Transition;
     :goto_1
     invoke-virtual {v8}, Landroid/graphics/drawable/AnimatedStateListDrawable$Transition;->start()V
 
-    .line 228
     iput-object v8, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mTransition:Landroid/graphics/drawable/AnimatedStateListDrawable$Transition;
 
-    .line 229
     iput v3, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mTransitionFromIndex:I
 
-    .line 230
     iput p1, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mTransitionToIndex:I
 
-    .line 231
     const/4 v10, 0x1
 
     return v10
 
-    .line 214
     .end local v8    # "transition":Landroid/graphics/drawable/AnimatedStateListDrawable$Transition;
     .restart local v1    # "d":Landroid/graphics/drawable/Drawable;
     :cond_6
@@ -699,12 +600,10 @@
 
     if-eqz v10, :cond_7
 
-    .line 215
     invoke-virtual {v6, v2, v7}, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;->isTransitionReversed(II)Z
 
     move-result v5
 
-    .line 217
     .restart local v5    # "reversed":Z
     new-instance v8, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedVectorDrawableTransition;
 
@@ -716,7 +615,6 @@
     .restart local v8    # "transition":Landroid/graphics/drawable/AnimatedStateListDrawable$Transition;
     goto :goto_1
 
-    .line 219
     .end local v5    # "reversed":Z
     .end local v8    # "transition":Landroid/graphics/drawable/AnimatedStateListDrawable$Transition;
     .restart local v1    # "d":Landroid/graphics/drawable/Drawable;
@@ -725,7 +623,6 @@
 
     if-eqz v10, :cond_8
 
-    .line 220
     new-instance v8, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatableTransition;
 
     check-cast v1, Landroid/graphics/drawable/Animatable;
@@ -736,7 +633,6 @@
     .restart local v8    # "transition":Landroid/graphics/drawable/AnimatedStateListDrawable$Transition;
     goto :goto_1
 
-    .line 223
     .end local v8    # "transition":Landroid/graphics/drawable/AnimatedStateListDrawable$Transition;
     .restart local v1    # "d":Landroid/graphics/drawable/Drawable;
     :cond_8
@@ -750,10 +646,8 @@
     .param p1, "a"    # Landroid/content/res/TypedArray;
 
     .prologue
-    .line 407
     iget-object v0, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mState:Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;
 
-    .line 410
     .local v0, "state":Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;
     iget v1, v0, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;->mChangingConfigurations:I
 
@@ -765,86 +659,72 @@
 
     iput v1, v0, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;->mChangingConfigurations:I
 
-    .line 413
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->extractThemeAttrs()[I
 
     move-result-object v1
 
     iput-object v1, v0, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;->mAnimThemeAttrs:[I
 
-    .line 416
     iget-boolean v1, v0, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;->mVariablePadding:Z
 
     const/4 v2, 0x2
 
-    .line 415
     invoke-virtual {p1, v2, v1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;->setVariablePadding(Z)V
 
-    .line 418
     iget-boolean v1, v0, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;->mConstantSize:Z
 
     const/4 v2, 0x3
 
-    .line 417
     invoke-virtual {p1, v2, v1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;->setConstantSize(Z)V
 
-    .line 420
     iget v1, v0, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;->mEnterFadeDuration:I
 
     const/4 v2, 0x4
 
-    .line 419
     invoke-virtual {p1, v2, v1}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;->setEnterFadeDuration(I)V
 
-    .line 422
     iget v1, v0, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;->mExitFadeDuration:I
 
     const/4 v2, 0x5
 
-    .line 421
     invoke-virtual {p1, v2, v1}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;->setExitFadeDuration(I)V
 
-    .line 425
     iget-boolean v1, v0, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;->mDither:Z
 
     const/4 v2, 0x0
 
-    .line 424
     invoke-virtual {p1, v2, v1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v1
 
     invoke-virtual {p0, v1}, Landroid/graphics/drawable/AnimatedStateListDrawable;->setDither(Z)V
 
-    .line 427
     iget-boolean v1, v0, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;->mAutoMirrored:Z
 
     const/4 v2, 0x6
 
-    .line 426
     invoke-virtual {p1, v2, v1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v1
 
     invoke-virtual {p0, v1}, Landroid/graphics/drawable/AnimatedStateListDrawable;->setAutoMirrored(Z)V
 
-    .line 406
     return-void
 .end method
 
@@ -857,32 +737,27 @@
     .param p3, "id"    # I
 
     .prologue
-    .line 110
     if-nez p2, :cond_0
 
-    .line 111
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "Drawable must not be null"
+    const-string v1, "Drawable must not be null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 114
     :cond_0
     iget-object v0, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mState:Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;->addStateSet([ILandroid/graphics/drawable/Drawable;I)I
 
-    .line 115
     invoke-virtual {p0}, Landroid/graphics/drawable/AnimatedStateListDrawable;->getState()[I
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Landroid/graphics/drawable/AnimatedStateListDrawable;->onStateChange([I)Z
 
-    .line 109
     return-void
 .end method
 
@@ -902,26 +777,22 @@
     .end annotation
 
     .prologue
-    .line 128
     .local p3, "transition":Landroid/graphics/drawable/Drawable;, "TT;"
     if-nez p3, :cond_0
 
-    .line 129
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "Transition drawable must not be null"
+    const-string v1, "Transition drawable must not be null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 132
     :cond_0
     iget-object v0, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mState:Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;->addTransition(IILandroid/graphics/drawable/Drawable;Z)I
 
-    .line 127
     return-void
 .end method
 
@@ -930,13 +801,10 @@
     .param p1, "theme"    # Landroid/content/res/Resources$Theme;
 
     .prologue
-    .line 391
     invoke-super {p0, p1}, Landroid/graphics/drawable/StateListDrawable;->applyTheme(Landroid/content/res/Resources$Theme;)V
 
-    .line 393
     iget-object v1, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mState:Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;
 
-    .line 394
     .local v1, "state":Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;
     if-eqz v1, :cond_0
 
@@ -944,32 +812,25 @@
 
     if-nez v2, :cond_1
 
-    .line 395
     :cond_0
     return-void
 
-    .line 399
     :cond_1
     iget-object v2, v1, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;->mAnimThemeAttrs:[I
 
     sget-object v3, Lcom/android/internal/R$styleable;->AnimatedRotateDrawable:[I
 
-    .line 398
     invoke-virtual {p1, v2, v3}, Landroid/content/res/Resources$Theme;->resolveAttributes([I[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 400
     .local v0, "a":Landroid/content/res/TypedArray;
     invoke-direct {p0, v0}, Landroid/graphics/drawable/AnimatedStateListDrawable;->updateStateFromTypedArray(Landroid/content/res/TypedArray;)V
 
-    .line 401
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 403
     invoke-direct {p0}, Landroid/graphics/drawable/AnimatedStateListDrawable;->init()V
 
-    .line 390
     return-void
 .end method
 
@@ -977,15 +838,12 @@
     .locals 1
 
     .prologue
-    .line 546
     invoke-super {p0}, Landroid/graphics/drawable/StateListDrawable;->clearMutated()V
 
-    .line 547
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mMutated:Z
 
-    .line 545
     return-void
 .end method
 
@@ -993,7 +851,6 @@
     .locals 3
 
     .prologue
-    .line 539
     new-instance v0, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;
 
     iget-object v1, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mState:Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;
@@ -1009,7 +866,6 @@
     .locals 1
 
     .prologue
-    .line 538
     invoke-virtual {p0}, Landroid/graphics/drawable/AnimatedStateListDrawable;->cloneConstantState()Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;
 
     move-result-object v0
@@ -1031,33 +887,25 @@
     .end annotation
 
     .prologue
-    .line 379
     sget-object v1, Lcom/android/internal/R$styleable;->AnimatedStateListDrawable:[I
 
-    .line 378
     invoke-static {p1, p4, p3, v1}, Landroid/graphics/drawable/AnimatedStateListDrawable;->obtainAttributes(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 380
     .local v0, "a":Landroid/content/res/TypedArray;
     const/4 v1, 0x1
 
     invoke-super {p0, p1, p2, v0, v1}, Landroid/graphics/drawable/StateListDrawable;->inflateWithAttributes(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/content/res/TypedArray;I)V
 
-    .line 381
     invoke-direct {p0, v0}, Landroid/graphics/drawable/AnimatedStateListDrawable;->updateStateFromTypedArray(Landroid/content/res/TypedArray;)V
 
-    .line 382
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 384
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/graphics/drawable/AnimatedStateListDrawable;->inflateChildElements(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)V
 
-    .line 386
     invoke-direct {p0}, Landroid/graphics/drawable/AnimatedStateListDrawable;->init()V
 
-    .line 377
     return-void
 .end method
 
@@ -1065,7 +913,6 @@
     .locals 1
 
     .prologue
-    .line 137
     const/4 v0, 0x1
 
     return v0
@@ -1079,34 +926,26 @@
 
     const/4 v1, -0x1
 
-    .line 362
     invoke-super {p0}, Landroid/graphics/drawable/StateListDrawable;->jumpToCurrentState()V
 
-    .line 364
     iget-object v0, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mTransition:Landroid/graphics/drawable/AnimatedStateListDrawable$Transition;
 
     if-eqz v0, :cond_0
 
-    .line 365
     iget-object v0, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mTransition:Landroid/graphics/drawable/AnimatedStateListDrawable$Transition;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/AnimatedStateListDrawable$Transition;->stop()V
 
-    .line 366
     iput-object v2, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mTransition:Landroid/graphics/drawable/AnimatedStateListDrawable$Transition;
 
-    .line 368
     iget v0, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mTransitionToIndex:I
 
     invoke-virtual {p0, v0}, Landroid/graphics/drawable/AnimatedStateListDrawable;->selectDrawable(I)Z
 
-    .line 369
     iput v1, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mTransitionToIndex:I
 
-    .line 370
     iput v1, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mTransitionFromIndex:I
 
-    .line 361
     :cond_0
     return-void
 .end method
@@ -1115,7 +954,6 @@
     .locals 1
 
     .prologue
-    .line 529
     iget-boolean v0, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mMutated:Z
 
     if-nez v0, :cond_0
@@ -1126,17 +964,14 @@
 
     if-ne v0, p0, :cond_0
 
-    .line 530
     iget-object v0, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mState:Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;->mutate()V
 
-    .line 531
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mMutated:Z
 
-    .line 534
     :cond_0
     return-object p0
 .end method
@@ -1146,14 +981,12 @@
     .param p1, "stateSet"    # [I
 
     .prologue
-    .line 144
     iget-object v3, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mState:Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;
 
     invoke-virtual {v3, p1}, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;->indexOfKeyframe([I)I
 
     move-result v2
 
-    .line 145
     .local v2, "targetIndex":I
     invoke-virtual {p0}, Landroid/graphics/drawable/AnimatedStateListDrawable;->getCurrentIndex()I
 
@@ -1161,7 +994,6 @@
 
     if-eq v2, v3, :cond_2
 
-    .line 146
     invoke-direct {p0, v2}, Landroid/graphics/drawable/AnimatedStateListDrawable;->selectTransition(I)Z
 
     move-result v3
@@ -1172,28 +1004,23 @@
 
     move-result v0
 
-    .line 151
     :goto_0
     invoke-virtual {p0}, Landroid/graphics/drawable/AnimatedStateListDrawable;->getCurrent()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    .line 152
     .local v1, "current":Landroid/graphics/drawable/Drawable;
     if-eqz v1, :cond_0
 
-    .line 153
     invoke-virtual {v1, p1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
     move-result v3
 
     or-int/2addr v0, v3
 
-    .line 156
     :cond_0
     return v0
 
-    .line 146
     .end local v1    # "current":Landroid/graphics/drawable/Drawable;
     :cond_1
     const/4 v0, 0x1
@@ -1201,7 +1028,6 @@
     .local v0, "changed":Z
     goto :goto_0
 
-    .line 145
     .end local v0    # "changed":Z
     :cond_2
     const/4 v0, 0x0
@@ -1215,21 +1041,17 @@
     .param p1, "state"    # Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;
 
     .prologue
-    .line 656
     invoke-super {p0, p1}, Landroid/graphics/drawable/StateListDrawable;->setConstantState(Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;)V
 
-    .line 658
     instance-of v0, p1, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;
 
     if-eqz v0, :cond_0
 
-    .line 659
     check-cast p1, Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;
 
     .end local p1    # "state":Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;
     iput-object p1, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mState:Landroid/graphics/drawable/AnimatedStateListDrawable$AnimatedStateListState;
 
-    .line 655
     :cond_0
     return-void
 .end method
@@ -1240,12 +1062,10 @@
     .param p2, "restart"    # Z
 
     .prologue
-    .line 88
     invoke-super {p0, p1, p2}, Landroid/graphics/drawable/StateListDrawable;->setVisible(ZZ)Z
 
     move-result v0
 
-    .line 90
     .local v0, "changed":Z
     iget-object v1, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mTransition:Landroid/graphics/drawable/AnimatedStateListDrawable$Transition;
 
@@ -1255,21 +1075,17 @@
 
     if-eqz p2, :cond_1
 
-    .line 91
     :cond_0
     if-eqz p1, :cond_2
 
-    .line 92
     iget-object v1, p0, Landroid/graphics/drawable/AnimatedStateListDrawable;->mTransition:Landroid/graphics/drawable/AnimatedStateListDrawable$Transition;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/AnimatedStateListDrawable$Transition;->start()V
 
-    .line 99
     :cond_1
     :goto_0
     return v0
 
-    .line 95
     :cond_2
     invoke-virtual {p0}, Landroid/graphics/drawable/AnimatedStateListDrawable;->jumpToCurrentState()V
 

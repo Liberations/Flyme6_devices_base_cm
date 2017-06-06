@@ -50,14 +50,12 @@
     .locals 1
 
     .prologue
-    .line 136
     new-instance v0, Landroid/location/Country$1;
 
     invoke-direct {v0}, Landroid/location/Country$1;-><init>()V
 
     sput-object v0, Landroid/location/Country;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 30
     return-void
 .end method
 
@@ -66,25 +64,20 @@
     .param p1, "country"    # Landroid/location/Country;
 
     .prologue
-    .line 101
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 102
     iget-object v0, p1, Landroid/location/Country;->mCountryIso:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/location/Country;->mCountryIso:Ljava/lang/String;
 
-    .line 103
     iget v0, p1, Landroid/location/Country;->mSource:I
 
     iput v0, p0, Landroid/location/Country;->mSource:I
 
-    .line 104
     iget-wide v0, p1, Landroid/location/Country;->mTimestamp:J
 
     iput-wide v0, p0, Landroid/location/Country;->mTimestamp:J
 
-    .line 101
     return-void
 .end method
 
@@ -94,15 +87,12 @@
     .param p2, "source"    # I
 
     .prologue
-    .line 81
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 82
     if-eqz p1, :cond_0
 
     if-gez p2, :cond_1
 
-    .line 84
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -110,13 +100,11 @@
 
     throw v0
 
-    .line 83
     :cond_1
     const/4 v0, 0x3
 
     if-gt p2, v0, :cond_0
 
-    .line 86
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
@@ -125,17 +113,14 @@
 
     iput-object v0, p0, Landroid/location/Country;->mCountryIso:Ljava/lang/String;
 
-    .line 87
     iput p2, p0, Landroid/location/Country;->mSource:I
 
-    .line 88
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/location/Country;->mTimestamp:J
 
-    .line 81
     return-void
 .end method
 
@@ -146,15 +131,12 @@
     .param p3, "timestamp"    # J
 
     .prologue
-    .line 91
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 92
     if-eqz p1, :cond_0
 
     if-gez p2, :cond_1
 
-    .line 94
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -162,13 +144,11 @@
 
     throw v0
 
-    .line 93
     :cond_1
     const/4 v0, 0x3
 
     if-gt p2, v0, :cond_0
 
-    .line 96
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
@@ -177,13 +157,10 @@
 
     iput-object v0, p0, Landroid/location/Country;->mCountryIso:Ljava/lang/String;
 
-    .line 97
     iput p2, p0, Landroid/location/Country;->mSource:I
 
-    .line 98
     iput-wide p3, p0, Landroid/location/Country;->mTimestamp:J
 
-    .line 91
     return-void
 .end method
 
@@ -205,7 +182,6 @@
     .locals 1
 
     .prologue
-    .line 147
     const/4 v0, 0x0
 
     return v0
@@ -220,13 +196,10 @@
 
     const/4 v2, 0x0
 
-    .line 163
     if-ne p1, p0, :cond_0
 
-    .line 164
     return v1
 
-    .line 166
     :cond_0
     instance-of v3, p1, Landroid/location/Country;
 
@@ -234,10 +207,8 @@
 
     move-object v0, p1
 
-    .line 167
     check-cast v0, Landroid/location/Country;
 
-    .line 169
     .local v0, "c":Landroid/location/Country;
     iget-object v3, p0, Landroid/location/Country;->mCountryIso:Ljava/lang/String;
 
@@ -267,7 +238,6 @@
 
     goto :goto_0
 
-    .line 171
     .end local v0    # "c":Landroid/location/Country;
     :cond_2
     return v2
@@ -278,7 +248,6 @@
     .param p1, "country"    # Landroid/location/Country;
 
     .prologue
-    .line 195
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Landroid/location/Country;->mCountryIso:Ljava/lang/String;
@@ -304,7 +273,6 @@
     .locals 1
 
     .prologue
-    .line 111
     iget-object v0, p0, Landroid/location/Country;->mCountryIso:Ljava/lang/String;
 
     return-object v0
@@ -314,7 +282,6 @@
     .locals 1
 
     .prologue
-    .line 125
     iget v0, p0, Landroid/location/Country;->mSource:I
 
     return v0
@@ -324,7 +291,6 @@
     .locals 2
 
     .prologue
-    .line 133
     iget-wide v0, p0, Landroid/location/Country;->mTimestamp:J
 
     return-wide v0
@@ -334,14 +300,11 @@
     .locals 3
 
     .prologue
-    .line 176
     iget v0, p0, Landroid/location/Country;->mHashCode:I
 
-    .line 177
     .local v0, "hash":I
     if-nez v0, :cond_0
 
-    .line 179
     iget-object v1, p0, Landroid/location/Country;->mCountryIso:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
@@ -350,17 +313,14 @@
 
     add-int/lit16 v0, v1, 0xdd
 
-    .line 180
     mul-int/lit8 v1, v0, 0xd
 
     iget v2, p0, Landroid/location/Country;->mSource:I
 
     add-int v0, v1, v2
 
-    .line 181
     iput v0, p0, Landroid/location/Country;->mHashCode:I
 
-    .line 183
     :cond_0
     iget v1, p0, Landroid/location/Country;->mHashCode:I
 
@@ -371,12 +331,11 @@
     .locals 4
 
     .prologue
-    .line 200
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "Country {ISO="
+    const-string v1, "Country {ISO="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -388,7 +347,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, ", source="
+    const-string v1, ", source="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -400,7 +359,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, ", time="
+    const-string v1, ", time="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -412,7 +371,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -431,21 +390,17 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 151
     iget-object v0, p0, Landroid/location/Country;->mCountryIso:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 152
     iget v0, p0, Landroid/location/Country;->mSource:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 153
     iget-wide v0, p0, Landroid/location/Country;->mTimestamp:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 150
     return-void
 .end method

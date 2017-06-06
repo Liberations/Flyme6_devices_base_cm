@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/fingerprint/FingerprintsUserState;
 
     .prologue
-    .line 140
     iput-object p1, p0, Lcom/android/server/fingerprint/FingerprintsUserState$1;->this$0:Lcom/android/server/fingerprint/FingerprintsUserState;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +40,9 @@
     .locals 1
 
     .prologue
-    .line 143
     iget-object v0, p0, Lcom/android/server/fingerprint/FingerprintsUserState$1;->this$0:Lcom/android/server/fingerprint/FingerprintsUserState;
 
     invoke-static {v0}, Lcom/android/server/fingerprint/FingerprintsUserState;->-wrap0(Lcom/android/server/fingerprint/FingerprintsUserState;)V
 
-    .line 142
     return-void
 .end method

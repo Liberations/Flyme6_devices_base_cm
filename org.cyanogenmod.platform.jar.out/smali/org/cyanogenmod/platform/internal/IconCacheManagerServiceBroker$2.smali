@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/cyanogenmod/platform/internal/IconCacheManagerServiceBroker;
 
     .prologue
-    .line 49
     iput-object p1, p0, Lorg/cyanogenmod/platform/internal/IconCacheManagerServiceBroker$2;->this$0:Lorg/cyanogenmod/platform/internal/IconCacheManagerServiceBroker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 0
 
     .prologue
-    .line 51
     return-void
 .end method
 
@@ -49,6 +47,5 @@
     .locals 0
 
     .prologue
-    .line 55
     return-void
 .end method

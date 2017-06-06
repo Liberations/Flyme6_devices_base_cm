@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/widget/CalendarViewLegacyDelegate;
 
     .prologue
-    .line 737
     iput-object p1, p0, Landroid/widget/CalendarViewLegacyDelegate$2;->this$0:Landroid/widget/CalendarViewLegacyDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,12 +44,10 @@
     .param p4, "totalItemCount"    # I
 
     .prologue
-    .line 745
     iget-object v0, p0, Landroid/widget/CalendarViewLegacyDelegate$2;->this$0:Landroid/widget/CalendarViewLegacyDelegate;
 
     invoke-static {v0, p1, p2, p3, p4}, Landroid/widget/CalendarViewLegacyDelegate;->-wrap2(Landroid/widget/CalendarViewLegacyDelegate;Landroid/widget/AbsListView;III)V
 
-    .line 744
     return-void
 .end method
 
@@ -60,11 +57,9 @@
     .param p2, "scrollState"    # I
 
     .prologue
-    .line 739
     iget-object v0, p0, Landroid/widget/CalendarViewLegacyDelegate$2;->this$0:Landroid/widget/CalendarViewLegacyDelegate;
 
     invoke-static {v0, p1, p2}, Landroid/widget/CalendarViewLegacyDelegate;->-wrap1(Landroid/widget/CalendarViewLegacyDelegate;Landroid/widget/AbsListView;I)V
 
-    .line 738
     return-void
 .end method

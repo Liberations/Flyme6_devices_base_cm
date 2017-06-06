@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/usage/UsageStatsService;
 
     .prologue
-    .line 235
     iput-object p1, p0, Lcom/android/server/usage/UsageStatsService$UserActionsReceiver;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -52,8 +51,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 239
-    const-string/jumbo v1, "android.intent.extra.user_handle"
+    const-string v1, "android.intent.extra.user_handle"
 
     const/4 v2, -0x1
 
@@ -61,9 +59,8 @@
 
     move-result v0
 
-    .line 240
     .local v0, "userId":I
-    const-string/jumbo v1, "android.intent.action.USER_REMOVED"
+    const-string v1, "android.intent.action.USER_REMOVED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -75,10 +72,8 @@
 
     if-eqz v1, :cond_1
 
-    .line 241
     if-ltz v0, :cond_0
 
-    .line 242
     iget-object v1, p0, Lcom/android/server/usage/UsageStatsService$UserActionsReceiver;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     iget-object v1, v1, Lcom/android/server/usage/UsageStatsService;->mHandler:Landroid/os/Handler;
@@ -91,14 +86,12 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 238
     :cond_0
     :goto_0
     return-void
 
-    .line 244
     :cond_1
-    const-string/jumbo v1, "android.intent.action.USER_STARTED"
+    const-string v1, "android.intent.action.USER_STARTED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -110,10 +103,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 245
     if-ltz v0, :cond_0
 
-    .line 246
     iget-object v1, p0, Lcom/android/server/usage/UsageStatsService$UserActionsReceiver;->this$0:Lcom/android/server/usage/UsageStatsService;
 
     invoke-virtual {v1, v0}, Lcom/android/server/usage/UsageStatsService;->postCheckIdleStates(I)V

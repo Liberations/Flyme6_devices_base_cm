@@ -32,24 +32,18 @@
     .param p5, "macAlgorithm"    # Ljava/lang/String;
 
     .prologue
-    .line 1088
     iput-object p1, p0, Landroid/media/MediaDrm$CryptoSession;->this$0:Landroid/media/MediaDrm;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1091
     iput-object p3, p0, Landroid/media/MediaDrm$CryptoSession;->mSessionId:[B
 
-    .line 1092
     iput-object p2, p0, Landroid/media/MediaDrm$CryptoSession;->mDrm:Landroid/media/MediaDrm;
 
-    .line 1093
     invoke-static {p2, p3, p4}, Landroid/media/MediaDrm;->-wrap5(Landroid/media/MediaDrm;[BLjava/lang/String;)V
 
-    .line 1094
     invoke-static {p2, p3, p5}, Landroid/media/MediaDrm;->-wrap6(Landroid/media/MediaDrm;[BLjava/lang/String;)V
 
-    .line 1089
     return-void
 .end method
 
@@ -62,7 +56,6 @@
     .param p3, "iv"    # [B
 
     .prologue
-    .line 1120
     iget-object v0, p0, Landroid/media/MediaDrm$CryptoSession;->mDrm:Landroid/media/MediaDrm;
 
     iget-object v1, p0, Landroid/media/MediaDrm$CryptoSession;->mSessionId:[B
@@ -81,7 +74,6 @@
     .param p3, "iv"    # [B
 
     .prologue
-    .line 1107
     iget-object v0, p0, Landroid/media/MediaDrm$CryptoSession;->mDrm:Landroid/media/MediaDrm;
 
     iget-object v1, p0, Landroid/media/MediaDrm$CryptoSession;->mSessionId:[B
@@ -99,7 +91,6 @@
     .param p2, "message"    # [B
 
     .prologue
-    .line 1131
     iget-object v0, p0, Landroid/media/MediaDrm$CryptoSession;->mDrm:Landroid/media/MediaDrm;
 
     iget-object v1, p0, Landroid/media/MediaDrm$CryptoSession;->mSessionId:[B
@@ -118,7 +109,6 @@
     .param p3, "signature"    # [B
 
     .prologue
-    .line 1145
     iget-object v0, p0, Landroid/media/MediaDrm$CryptoSession;->mDrm:Landroid/media/MediaDrm;
 
     iget-object v1, p0, Landroid/media/MediaDrm$CryptoSession;->mSessionId:[B

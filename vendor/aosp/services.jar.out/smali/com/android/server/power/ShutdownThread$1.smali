@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/power/ShutdownThread;
 
     .prologue
-    .line 976
     iput-object p1, p0, Lcom/android/server/power/ShutdownThread$1;->this$0:Lcom/android/server/power/ShutdownThread;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,12 +38,10 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 979
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/String;
 
-    .line 980
     .local v1, "path":Ljava/lang/String;
     new-instance v2, Landroid/media/MediaPlayer;
 
@@ -52,7 +49,6 @@
 
     invoke-static {v2}, Lcom/android/server/power/ShutdownThread;->-set1(Landroid/media/MediaPlayer;)Landroid/media/MediaPlayer;
 
-    .line 983
     :try_start_0
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->-get2()Landroid/media/MediaPlayer;
 
@@ -60,28 +56,24 @@
 
     invoke-virtual {v2}, Landroid/media/MediaPlayer;->reset()V
 
-    .line 984
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->-get2()Landroid/media/MediaPlayer;
 
     move-result-object v2
 
     invoke-virtual {v2, v1}, Landroid/media/MediaPlayer;->setDataSource(Ljava/lang/String;)V
 
-    .line 985
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->-get2()Landroid/media/MediaPlayer;
 
     move-result-object v2
 
     invoke-virtual {v2}, Landroid/media/MediaPlayer;->prepare()V
 
-    .line 986
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->-get2()Landroid/media/MediaPlayer;
 
     move-result-object v2
 
     invoke-virtual {v2}, Landroid/media/MediaPlayer;->start()V
 
-    .line 987
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->-get2()Landroid/media/MediaPlayer;
 
     move-result-object v2
@@ -94,23 +86,20 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 978
     :goto_0
     return-void
 
-    .line 996
     :catch_0
     move-exception v0
 
-    .line 997
     .local v0, "e":Ljava/io/IOException;
-    const-string/jumbo v2, "ShutdownThread"
+    const-string v2, "ShutdownThread"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "play shutdown music error:"
+    const-string v4, "play shutdown music error:"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

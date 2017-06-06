@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Landroid/app/PackageDeleteObserver;
 
     .prologue
-    .line 24
     iput-object p1, p0, Landroid/app/PackageDeleteObserver$1;->this$0:Landroid/app/PackageDeleteObserver;
 
     invoke-direct {p0}, Landroid/content/pm/IPackageDeleteObserver2$Stub;-><init>()V
@@ -41,12 +40,10 @@
     .param p3, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 32
     iget-object v0, p0, Landroid/app/PackageDeleteObserver$1;->this$0:Landroid/app/PackageDeleteObserver;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/app/PackageDeleteObserver;->onPackageDeleted(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 31
     return-void
 .end method
 
@@ -55,11 +52,9 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 27
     iget-object v0, p0, Landroid/app/PackageDeleteObserver$1;->this$0:Landroid/app/PackageDeleteObserver;
 
     invoke-virtual {v0, p1}, Landroid/app/PackageDeleteObserver;->onUserActionRequired(Landroid/content/Intent;)V
 
-    .line 26
     return-void
 .end method

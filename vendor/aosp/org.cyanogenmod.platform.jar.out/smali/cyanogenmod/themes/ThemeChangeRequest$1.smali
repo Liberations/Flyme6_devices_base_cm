@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 177
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 180
     new-instance v0, Lcyanogenmod/themes/ThemeChangeRequest;
 
     const/4 v1, 0x0
@@ -60,7 +58,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 179
     invoke-virtual {p0, p1}, Lcyanogenmod/themes/ThemeChangeRequest$1;->createFromParcel(Landroid/os/Parcel;)Lcyanogenmod/themes/ThemeChangeRequest;
 
     move-result-object v0
@@ -73,7 +70,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 185
     new-array v0, p1, [Lcyanogenmod/themes/ThemeChangeRequest;
 
     return-object v0
@@ -84,7 +80,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 184
     invoke-virtual {p0, p1}, Lcyanogenmod/themes/ThemeChangeRequest$1;->newArray(I)[Lcyanogenmod/themes/ThemeChangeRequest;
 
     move-result-object v0

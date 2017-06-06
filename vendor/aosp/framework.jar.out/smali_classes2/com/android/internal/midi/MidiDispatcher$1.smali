@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/internal/midi/MidiDispatcher;
 
     .prologue
-    .line 37
     iput-object p1, p0, Lcom/android/internal/midi/MidiDispatcher$1;->this$0:Lcom/android/internal/midi/MidiDispatcher;
 
     invoke-direct {p0}, Landroid/media/midi/MidiSender;-><init>()V
@@ -39,7 +38,6 @@
     .param p1, "receiver"    # Landroid/media/midi/MidiReceiver;
 
     .prologue
-    .line 40
     iget-object v0, p0, Lcom/android/internal/midi/MidiDispatcher$1;->this$0:Lcom/android/internal/midi/MidiDispatcher;
 
     invoke-static {v0}, Lcom/android/internal/midi/MidiDispatcher;->-get0(Lcom/android/internal/midi/MidiDispatcher;)Ljava/util/concurrent/CopyOnWriteArrayList;
@@ -48,7 +46,6 @@
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 39
     return-void
 .end method
 
@@ -57,7 +54,6 @@
     .param p1, "receiver"    # Landroid/media/midi/MidiReceiver;
 
     .prologue
-    .line 45
     iget-object v0, p0, Lcom/android/internal/midi/MidiDispatcher$1;->this$0:Lcom/android/internal/midi/MidiDispatcher;
 
     invoke-static {v0}, Lcom/android/internal/midi/MidiDispatcher;->-get0(Lcom/android/internal/midi/MidiDispatcher;)Ljava/util/concurrent/CopyOnWriteArrayList;
@@ -66,6 +62,5 @@
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 44
     return-void
 .end method

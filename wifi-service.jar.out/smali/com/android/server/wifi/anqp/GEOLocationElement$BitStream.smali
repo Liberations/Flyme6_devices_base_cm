@@ -26,15 +26,12 @@
     .param p1, "octets"    # I
 
     .prologue
-    .line 228
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 229
     new-array v0, p1, [B
 
     iput-object v0, p0, Lcom/android/server/wifi/anqp/GEOLocationElement$BitStream;->data:[B
 
-    .line 228
     return-void
 .end method
 
@@ -46,10 +43,9 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 233
     sget-object v5, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
-    const-string/jumbo v6, "Appending %x:%d\n"
+    const-string v6, "Appending %x:%d\n"
 
     const/4 v7, 0x2
 
@@ -71,41 +67,34 @@
 
     invoke-virtual {v5, v6, v7}, Ljava/io/PrintStream;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;
 
-    .line 234
     add-int/lit8 v3, p3, -0x1
 
     .local v3, "sbit":I
     :goto_0
     if-ltz v3, :cond_1
 
-    .line 235
     iget v5, p0, Lcom/android/server/wifi/anqp/GEOLocationElement$BitStream;->bitOffset:I
 
     ushr-int/lit8 v0, v5, 0x3
 
-    .line 236
     .local v0, "b0":I
     iget v5, p0, Lcom/android/server/wifi/anqp/GEOLocationElement$BitStream;->bitOffset:I
 
     and-int/lit8 v1, v5, 0x7
 
-    .line 238
     .local v1, "dbit":I
     add-int/lit8 v5, v3, -0x7
 
     add-int v4, v5, v1
 
-    .line 239
     .local v4, "shr":I
     const/16 v5, 0xff
 
     ushr-int v2, v5, v1
 
-    .line 241
     .local v2, "dmask":I
     if-ltz v4, :cond_0
 
-    .line 242
     iget-object v5, p0, Lcom/android/server/wifi/anqp/GEOLocationElement$BitStream;->data:[B
 
     iget-object v6, p0, Lcom/android/server/wifi/anqp/GEOLocationElement$BitStream;->data:[B
@@ -132,7 +121,6 @@
 
     aput-byte v6, v5, v0
 
-    .line 243
     iget v5, p0, Lcom/android/server/wifi/anqp/GEOLocationElement$BitStream;->bitOffset:I
 
     rsub-int/lit8 v6, v1, 0x8
@@ -141,14 +129,12 @@
 
     iput v5, p0, Lcom/android/server/wifi/anqp/GEOLocationElement$BitStream;->bitOffset:I
 
-    .line 244
     rsub-int/lit8 v5, v1, 0x8
 
     sub-int/2addr v3, v5
 
     goto :goto_0
 
-    .line 246
     :cond_0
     iget-object v5, p0, Lcom/android/server/wifi/anqp/GEOLocationElement$BitStream;->data:[B
 
@@ -178,7 +164,6 @@
 
     aput-byte v6, v5, v0
 
-    .line 247
     iget v5, p0, Lcom/android/server/wifi/anqp/GEOLocationElement$BitStream;->bitOffset:I
 
     add-int/lit8 v6, v3, 0x1
@@ -187,12 +172,10 @@
 
     iput v5, p0, Lcom/android/server/wifi/anqp/GEOLocationElement$BitStream;->bitOffset:I
 
-    .line 248
     const/4 v3, -0x1
 
     goto :goto_0
 
-    .line 232
     .end local v0    # "b0":I
     .end local v1    # "dbit":I
     .end local v2    # "dmask":I
@@ -205,7 +188,6 @@
     .locals 1
 
     .prologue
-    .line 254
     iget-object v0, p0, Lcom/android/server/wifi/anqp/GEOLocationElement$BitStream;->data:[B
 
     return-object v0

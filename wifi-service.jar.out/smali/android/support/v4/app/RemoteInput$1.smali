@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 263
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,7 +38,6 @@
     .param p5, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 268
     new-instance v0, Landroid/support/v4/app/RemoteInput;
 
     move-object v1, p1
@@ -66,7 +64,6 @@
     .param p5, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 265
     invoke-virtual/range {p0 .. p5}, Landroid/support/v4/app/RemoteInput$1;->build(Ljava/lang/String;Ljava/lang/CharSequence;[Ljava/lang/CharSequence;ZLandroid/os/Bundle;)Landroid/support/v4/app/RemoteInput;
 
     move-result-object v0
@@ -79,7 +76,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 273
     new-array v0, p1, [Landroid/support/v4/app/RemoteInput;
 
     return-object v0
@@ -90,7 +86,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 272
     invoke-virtual {p0, p1}, Landroid/support/v4/app/RemoteInput$1;->newArray(I)[Landroid/support/v4/app/RemoteInput;
 
     move-result-object v0

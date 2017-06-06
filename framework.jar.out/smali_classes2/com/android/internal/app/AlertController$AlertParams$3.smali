@@ -30,7 +30,6 @@
     .param p2, "val$dialog"    # Lcom/android/internal/app/AlertController;
 
     .prologue
-    .line 1105
     iput-object p1, p0, Lcom/android/internal/app/AlertController$AlertParams$3;->this$1:Lcom/android/internal/app/AlertController$AlertParams;
 
     iput-object p2, p0, Lcom/android/internal/app/AlertController$AlertParams$3;->val$dialog:Lcom/android/internal/app/AlertController;
@@ -58,7 +57,6 @@
     .end annotation
 
     .prologue
-    .line 1108
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     iget-object v0, p0, Lcom/android/internal/app/AlertController$AlertParams$3;->this$1:Lcom/android/internal/app/AlertController$AlertParams;
 
@@ -72,14 +70,12 @@
 
     invoke-interface {v0, v1, p3}, Landroid/content/DialogInterface$OnClickListener;->onClick(Landroid/content/DialogInterface;I)V
 
-    .line 1109
     iget-object v0, p0, Lcom/android/internal/app/AlertController$AlertParams$3;->this$1:Lcom/android/internal/app/AlertController$AlertParams;
 
     iget-boolean v0, v0, Lcom/android/internal/app/AlertController$AlertParams;->mIsSingleChoice:Z
 
     if-nez v0, :cond_0
 
-    .line 1110
     iget-object v0, p0, Lcom/android/internal/app/AlertController$AlertParams$3;->val$dialog:Lcom/android/internal/app/AlertController;
 
     invoke-static {v0}, Lcom/android/internal/app/AlertController;->-get7(Lcom/android/internal/app/AlertController;)Landroid/content/DialogInterface;
@@ -88,7 +84,6 @@
 
     invoke-interface {v0}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 1107
     :cond_0
     return-void
 .end method

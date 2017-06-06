@@ -133,28 +133,24 @@
 
     const/4 v5, 0x4
 
-    .line 12
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
     sput-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sEapIds:Ljava/util/Map;
 
-    .line 13
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
     sput-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sRevEapIds:Ljava/util/Map;
 
-    .line 14
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
     sput-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sAuthIds:Ljava/util/Map;
 
-    .line 100
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sEapIds:Ljava/util/Map;
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -165,7 +161,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 101
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sEapIds:Ljava/util/Map;
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -176,7 +171,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 102
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sEapIds:Ljava/util/Map;
 
     const/16 v3, 0x9
@@ -189,7 +183,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 103
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sEapIds:Ljava/util/Map;
 
     const/16 v3, 0xb
@@ -202,7 +195,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 104
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sEapIds:Ljava/util/Map;
 
     const/16 v3, 0xc
@@ -215,7 +207,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 105
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sEapIds:Ljava/util/Map;
 
     const/16 v3, 0xd
@@ -228,7 +219,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 106
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sEapIds:Ljava/util/Map;
 
     const/16 v3, 0x11
@@ -241,7 +231,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 107
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sEapIds:Ljava/util/Map;
 
     const/16 v3, 0x12
@@ -254,7 +243,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 108
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sEapIds:Ljava/util/Map;
 
     const/16 v3, 0x15
@@ -267,7 +255,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 109
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sEapIds:Ljava/util/Map;
 
     const/16 v3, 0x17
@@ -280,7 +267,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 110
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sEapIds:Ljava/util/Map;
 
     const/16 v3, 0x18
@@ -293,7 +279,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 111
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sEapIds:Ljava/util/Map;
 
     const/16 v3, 0x1a
@@ -306,7 +291,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 112
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sEapIds:Ljava/util/Map;
 
     const/16 v3, 0x1d
@@ -319,7 +303,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 113
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sEapIds:Ljava/util/Map;
 
     const/16 v3, 0x20
@@ -332,7 +315,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 114
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sEapIds:Ljava/util/Map;
 
     const/16 v3, 0x23
@@ -345,7 +327,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 115
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sEapIds:Ljava/util/Map;
 
     const/16 v3, 0x26
@@ -358,7 +339,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 116
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sEapIds:Ljava/util/Map;
 
     const/16 v3, 0x29
@@ -371,7 +351,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 117
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sEapIds:Ljava/util/Map;
 
     const/16 v3, 0x2a
@@ -384,7 +363,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 118
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sEapIds:Ljava/util/Map;
 
     const/16 v3, 0x2b
@@ -397,7 +375,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 119
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sEapIds:Ljava/util/Map;
 
     const/16 v3, 0x2c
@@ -410,7 +387,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 120
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sEapIds:Ljava/util/Map;
 
     const/16 v3, 0x2d
@@ -423,7 +399,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 121
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sEapIds:Ljava/util/Map;
 
     const/16 v3, 0x2e
@@ -436,7 +411,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 122
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sEapIds:Ljava/util/Map;
 
     const/16 v3, 0x2f
@@ -449,7 +423,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 123
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sEapIds:Ljava/util/Map;
 
     const/16 v3, 0x30
@@ -462,7 +435,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 124
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sEapIds:Ljava/util/Map;
 
     const/16 v3, 0x31
@@ -475,7 +447,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 125
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sEapIds:Ljava/util/Map;
 
     const/16 v3, 0x32
@@ -488,7 +459,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 126
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sEapIds:Ljava/util/Map;
 
     const/16 v3, 0x33
@@ -501,7 +471,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 127
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sEapIds:Ljava/util/Map;
 
     const/16 v3, 0x34
@@ -514,7 +483,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 128
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sEapIds:Ljava/util/Map;
 
     const/16 v3, 0x35
@@ -527,7 +495,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 129
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sEapIds:Ljava/util/Map;
 
     const/16 v3, 0x37
@@ -540,7 +507,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 131
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sEapIds:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -565,7 +531,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 132
     .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;>;"
     sget-object v4, Lcom/android/server/wifi/anqp/eap/EAP;->sRevEapIds:Ljava/util/Map;
 
@@ -585,7 +550,6 @@
 
     goto :goto_0
 
-    .line 135
     .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;>;"
     :cond_0
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sAuthIds:Ljava/util/Map;
@@ -600,7 +564,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 136
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sAuthIds:Ljava/util/Map;
 
     const/4 v3, 0x2
@@ -613,7 +576,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 137
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sAuthIds:Ljava/util/Map;
 
     const/4 v3, 0x3
@@ -626,7 +588,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 138
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sAuthIds:Ljava/util/Map;
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -637,7 +598,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 139
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sAuthIds:Ljava/util/Map;
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -648,7 +608,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 140
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sAuthIds:Ljava/util/Map;
 
     const/4 v3, 0x6
@@ -661,7 +620,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 141
     sget-object v2, Lcom/android/server/wifi/anqp/eap/EAP;->sAuthIds:Ljava/util/Map;
 
     const/16 v3, 0xdd
@@ -674,7 +632,6 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 10
     return-void
 .end method
 
@@ -682,7 +639,6 @@
     .locals 0
 
     .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -693,7 +649,6 @@
     .param p0, "methodID"    # I
 
     .prologue
-    .line 153
     sget-object v0, Lcom/android/server/wifi/anqp/eap/EAP;->sAuthIds:Ljava/util/Map;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -714,7 +669,6 @@
     .param p0, "methodID"    # I
 
     .prologue
-    .line 145
     sget-object v0, Lcom/android/server/wifi/anqp/eap/EAP;->sEapIds:Ljava/util/Map;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -735,7 +689,6 @@
     .param p0, "methodID"    # Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
     .prologue
-    .line 149
     sget-object v0, Lcom/android/server/wifi/anqp/eap/EAP;->sRevEapIds:Ljava/util/Map;
 
     invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;

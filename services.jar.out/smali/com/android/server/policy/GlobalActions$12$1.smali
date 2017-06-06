@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lcom/android/server/policy/GlobalActions$12;
 
     .prologue
-    .line 534
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$12$1;->this$1:Lcom/android/server/policy/GlobalActions$12;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,17 +42,14 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 539
     invoke-static {}, Landroid/app/ActivityManager;->isUserAMonkey()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 540
     return-void
 
-    .line 545
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$12$1;->this$1:Lcom/android/server/policy/GlobalActions$12;
 
@@ -67,12 +63,9 @@
 
     invoke-direct {v1, p0}, Lcom/android/server/policy/GlobalActions$12$1$1;-><init>(Lcom/android/server/policy/GlobalActions$12$1;)V
 
-    .line 553
     const-wide/16 v2, 0x1f4
 
-    .line 545
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 536
     return-void
 .end method

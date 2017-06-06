@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 574
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 576
     new-instance v0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$RequiredProtoPortTuple;
 
     invoke-direct {v0, p1}, Landroid/net/wifi/passpoint/WifiPasspointDmTree$RequiredProtoPortTuple;-><init>(Landroid/os/Parcel;)V
@@ -58,7 +56,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 575
     invoke-virtual {p0, p1}, Landroid/net/wifi/passpoint/WifiPasspointDmTree$RequiredProtoPortTuple$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/wifi/passpoint/WifiPasspointDmTree$RequiredProtoPortTuple;
 
     move-result-object v0
@@ -71,7 +68,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 580
     new-array v0, p1, [Landroid/net/wifi/passpoint/WifiPasspointDmTree$RequiredProtoPortTuple;
 
     return-object v0
@@ -82,7 +78,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 579
     invoke-virtual {p0, p1}, Landroid/net/wifi/passpoint/WifiPasspointDmTree$RequiredProtoPortTuple$1;->newArray(I)[Landroid/net/wifi/passpoint/WifiPasspointDmTree$RequiredProtoPortTuple;
 
     move-result-object v0

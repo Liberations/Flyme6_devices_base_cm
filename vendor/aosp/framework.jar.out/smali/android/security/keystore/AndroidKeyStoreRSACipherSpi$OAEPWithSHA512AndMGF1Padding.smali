@@ -19,12 +19,10 @@
     .locals 1
 
     .prologue
-    .line 343
     const/4 v0, 0x6
 
     invoke-direct {p0, v0}, Landroid/security/keystore/AndroidKeyStoreRSACipherSpi$OAEPWithMGF1Padding;-><init>(I)V
 
-    .line 342
     return-void
 .end method
 

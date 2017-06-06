@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +33,6 @@
     .param p3, "presentation"    # I
 
     .prologue
-    .line 151
     return-void
 .end method
 
@@ -45,7 +43,6 @@
     .param p3, "presentation"    # I
 
     .prologue
-    .line 163
     return-void
 .end method
 
@@ -55,7 +52,6 @@
     .param p2, "conference"    # Landroid/telecom/RemoteConference;
 
     .prologue
-    .line 215
     return-void
 .end method
 
@@ -74,7 +70,6 @@
     .end annotation
 
     .prologue
-    .line 192
     .local p2, "conferenceableConnections":Ljava/util/List;, "Ljava/util/List<Landroid/telecom/RemoteConnection;>;"
     return-void
 .end method
@@ -85,7 +80,6 @@
     .param p2, "connectionCapabilities"    # I
 
     .prologue
-    .line 90
     return-void
 .end method
 
@@ -95,7 +89,6 @@
     .param p2, "connectionProperties"    # I
 
     .prologue
-    .line 102
     return-void
 .end method
 
@@ -104,7 +97,6 @@
     .param p1, "connection"    # Landroid/telecom/RemoteConnection;
 
     .prologue
-    .line 180
     return-void
 .end method
 
@@ -114,7 +106,6 @@
     .param p2, "disconnectCause"    # Landroid/telecom/DisconnectCause;
 
     .prologue
-    .line 70
     return-void
 .end method
 
@@ -124,7 +115,6 @@
     .param p2, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 223
     return-void
 .end method
 
@@ -134,7 +124,6 @@
     .param p2, "nextChar"    # C
 
     .prologue
-    .line 122
     return-void
 .end method
 
@@ -144,7 +133,6 @@
     .param p2, "remainingPostDialSequence"    # Ljava/lang/String;
 
     .prologue
-    .line 113
     return-void
 .end method
 
@@ -154,7 +142,6 @@
     .param p2, "ringback"    # Z
 
     .prologue
-    .line 79
     return-void
 .end method
 
@@ -164,7 +151,6 @@
     .param p2, "state"    # I
 
     .prologue
-    .line 59
     return-void
 .end method
 
@@ -174,7 +160,6 @@
     .param p2, "statusHints"    # Landroid/telecom/StatusHints;
 
     .prologue
-    .line 140
     return-void
 .end method
 
@@ -184,7 +169,6 @@
     .param p2, "videoProvider"    # Landroid/telecom/RemoteConnection$VideoProvider;
 
     .prologue
-    .line 203
     return-void
 .end method
 
@@ -194,7 +178,6 @@
     .param p2, "videoState"    # I
 
     .prologue
-    .line 172
     return-void
 .end method
 
@@ -204,6 +187,5 @@
     .param p2, "isVoip"    # Z
 
     .prologue
-    .line 131
     return-void
 .end method

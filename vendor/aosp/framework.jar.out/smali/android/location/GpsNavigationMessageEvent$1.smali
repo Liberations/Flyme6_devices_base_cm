@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 88
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 91
     invoke-virtual {p0}, Landroid/location/GpsNavigationMessageEvent$1;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -54,7 +52,6 @@
 
     move-result-object v0
 
-    .line 92
     .local v0, "classLoader":Ljava/lang/ClassLoader;
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
@@ -62,7 +59,6 @@
 
     check-cast v1, Landroid/location/GpsNavigationMessage;
 
-    .line 93
     .local v1, "navigationMessage":Landroid/location/GpsNavigationMessage;
     new-instance v2, Landroid/location/GpsNavigationMessageEvent;
 
@@ -76,7 +72,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 90
     invoke-virtual {p0, p1}, Landroid/location/GpsNavigationMessageEvent$1;->createFromParcel(Landroid/os/Parcel;)Landroid/location/GpsNavigationMessageEvent;
 
     move-result-object v0
@@ -89,7 +84,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 98
     new-array v0, p1, [Landroid/location/GpsNavigationMessageEvent;
 
     return-object v0
@@ -100,7 +94,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 97
     invoke-virtual {p0, p1}, Landroid/location/GpsNavigationMessageEvent$1;->newArray(I)[Landroid/location/GpsNavigationMessageEvent;
 
     move-result-object v0

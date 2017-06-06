@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 498
     invoke-direct {p0}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompat$AccessibilityRecordIcsMr1Impl;-><init>()V
 
     return-void
@@ -34,9 +33,7 @@
     .param p3, "virtualDescendantId"    # I
 
     .prologue
-    .line 501
     invoke-static {p1, p2, p3}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatJellyBean;->setSource(Ljava/lang/Object;Landroid/view/View;I)V
 
-    .line 500
     return-void
 .end method

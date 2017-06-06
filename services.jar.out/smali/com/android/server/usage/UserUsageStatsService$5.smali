@@ -33,7 +33,6 @@
     .param p3, "val$screenOnTime"    # J
 
     .prologue
-    .line 624
     iput-object p1, p0, Lcom/android/server/usage/UserUsageStatsService$5;->this$0:Lcom/android/server/usage/UserUsageStatsService;
 
     iput-object p2, p0, Lcom/android/server/usage/UserUsageStatsService$5;->val$pw:Lcom/android/internal/util/IndentingPrintWriter;
@@ -52,7 +51,6 @@
     .param p1, "stats"    # Lcom/android/server/usage/IntervalStats;
 
     .prologue
-    .line 627
     iget-object v1, p0, Lcom/android/server/usage/UserUsageStatsService$5;->this$0:Lcom/android/server/usage/UserUsageStatsService;
 
     iget-object v2, p0, Lcom/android/server/usage/UserUsageStatsService$5;->val$pw:Lcom/android/internal/util/IndentingPrintWriter;
@@ -65,7 +63,6 @@
 
     invoke-virtual/range {v1 .. v6}, Lcom/android/server/usage/UserUsageStatsService;->printIntervalStats(Lcom/android/internal/util/IndentingPrintWriter;Lcom/android/server/usage/IntervalStats;JZ)V
 
-    .line 628
     const/4 v0, 0x1
 
     return v0

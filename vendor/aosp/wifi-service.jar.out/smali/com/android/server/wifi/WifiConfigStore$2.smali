@@ -37,7 +37,6 @@
     .param p1, "this$0"    # Lcom/android/server/wifi/WifiConfigStore;
 
     .prologue
-    .line 1353
     iput-object p1, p0, Lcom/android/server/wifi/WifiConfigStore$2;->this$0:Lcom/android/server/wifi/WifiConfigStore;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +52,6 @@
     .param p2, "b"    # Landroid/net/wifi/WifiConfiguration;
 
     .prologue
-    .line 1355
     iget v0, p1, Landroid/net/wifi/WifiConfiguration;->priority:I
 
     iget v1, p2, Landroid/net/wifi/WifiConfiguration;->priority:I
@@ -69,7 +67,6 @@
     .param p2, "b"    # Ljava/lang/Object;
 
     .prologue
-    .line 1354
     check-cast p1, Landroid/net/wifi/WifiConfiguration;
 
     .end local p1    # "a":Ljava/lang/Object;

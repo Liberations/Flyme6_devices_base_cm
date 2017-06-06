@@ -30,7 +30,6 @@
     .param p2, "val$sharedElementState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 396
     iput-object p1, p0, Landroid/app/EnterTransitionCoordinator$5$1$1;->this$2:Landroid/app/EnterTransitionCoordinator$5$1;
 
     iput-object p2, p0, Landroid/app/EnterTransitionCoordinator$5$1$1;->val$sharedElementState:Landroid/os/Bundle;
@@ -46,7 +45,6 @@
     .locals 2
 
     .prologue
-    .line 399
     iget-object v0, p0, Landroid/app/EnterTransitionCoordinator$5$1$1;->this$2:Landroid/app/EnterTransitionCoordinator$5$1;
 
     iget-object v0, v0, Landroid/app/EnterTransitionCoordinator$5$1;->this$1:Landroid/app/EnterTransitionCoordinator$5;
@@ -57,6 +55,5 @@
 
     invoke-static {v0, v1}, Landroid/app/EnterTransitionCoordinator;->-wrap4(Landroid/app/EnterTransitionCoordinator;Landroid/os/Bundle;)V
 
-    .line 398
     return-void
 .end method

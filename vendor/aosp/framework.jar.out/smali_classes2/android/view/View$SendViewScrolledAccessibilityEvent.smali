@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Landroid/view/View;
 
     .prologue
-    .line 22015
     iput-object p1, p0, Landroid/view/View$SendViewScrolledAccessibilityEvent;->this$0:Landroid/view/View;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,18 +52,15 @@
     .locals 2
 
     .prologue
-    .line 22019
     iget-object v0, p0, Landroid/view/View$SendViewScrolledAccessibilityEvent;->this$0:Landroid/view/View;
 
     const/16 v1, 0x1000
 
     invoke-virtual {v0, v1}, Landroid/view/View;->sendAccessibilityEvent(I)V
 
-    .line 22020
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/view/View$SendViewScrolledAccessibilityEvent;->mIsPending:Z
 
-    .line 22018
     return-void
 .end method

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
 
     .prologue
-    .line 766
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv$2;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,7 +49,6 @@
     .end annotation
 
     .prologue
-    .line 769
     .local p1, "deviceInfos":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/hdmi/HdmiDeviceInfo;>;"
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -70,7 +68,6 @@
 
     check-cast v3, Landroid/hardware/hdmi/HdmiDeviceInfo;
 
-    .line 770
     .local v3, "info":Landroid/hardware/hdmi/HdmiDeviceInfo;
     iget-object v5, p0, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv$2;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
 
@@ -78,7 +75,6 @@
 
     goto :goto_0
 
-    .line 776
     .end local v3    # "info":Landroid/hardware/hdmi/HdmiDeviceInfo;
     :cond_0
     iget-object v5, p0, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv$2;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
@@ -107,7 +103,6 @@
 
     check-cast v1, Lcom/android/server/hdmi/HdmiCecLocalDevice;
 
-    .line 777
     .local v1, "device":Lcom/android/server/hdmi/HdmiCecLocalDevice;
     iget-object v5, p0, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv$2;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
 
@@ -119,7 +114,6 @@
 
     goto :goto_1
 
-    .line 780
     .end local v1    # "device":Lcom/android/server/hdmi/HdmiCecLocalDevice;
     :cond_1
     iget-object v5, p0, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv$2;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
@@ -132,7 +126,6 @@
 
     invoke-virtual {v5, v6}, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;->addAndStartAction(Lcom/android/server/hdmi/HdmiCecFeatureAction;)V
 
-    .line 781
     iget-object v5, p0, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv$2;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
 
     new-instance v6, Lcom/android/server/hdmi/PowerStatusMonitorAction;
@@ -143,27 +136,22 @@
 
     invoke-virtual {v5, v6}, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;->addAndStartAction(Lcom/android/server/hdmi/HdmiCecFeatureAction;)V
 
-    .line 786
     iget-object v5, p0, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv$2;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
 
     invoke-virtual {v5}, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;->getAvrDeviceInfo()Landroid/hardware/hdmi/HdmiDeviceInfo;
 
     move-result-object v0
 
-    .line 787
     .local v0, "avr":Landroid/hardware/hdmi/HdmiDeviceInfo;
     if-eqz v0, :cond_2
 
-    .line 788
     iget-object v5, p0, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv$2;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
 
     invoke-virtual {v5, v0}, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;->onNewAvrAdded(Landroid/hardware/hdmi/HdmiDeviceInfo;)V
 
-    .line 768
     :goto_2
     return-void
 
-    .line 790
     :cond_2
     iget-object v5, p0, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv$2;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
 

@@ -40,27 +40,22 @@
 
     const/4 v2, 0x0
 
-    .line 233
     new-instance v0, Lcom/android/server/ConnectivityService$ReapUnvalidatedNetworks;
 
-    const-string/jumbo v1, "REAP"
+    const-string v1, "REAP"
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/ConnectivityService$ReapUnvalidatedNetworks;-><init>(Ljava/lang/String;I)V
 
-    .line 236
     sput-object v0, Lcom/android/server/ConnectivityService$ReapUnvalidatedNetworks;->REAP:Lcom/android/server/ConnectivityService$ReapUnvalidatedNetworks;
 
-    .line 237
     new-instance v0, Lcom/android/server/ConnectivityService$ReapUnvalidatedNetworks;
 
-    const-string/jumbo v1, "DONT_REAP"
+    const-string v1, "DONT_REAP"
 
     invoke-direct {v0, v1, v3}, Lcom/android/server/ConnectivityService$ReapUnvalidatedNetworks;-><init>(Ljava/lang/String;I)V
 
-    .line 239
     sput-object v0, Lcom/android/server/ConnectivityService$ReapUnvalidatedNetworks;->DONT_REAP:Lcom/android/server/ConnectivityService$ReapUnvalidatedNetworks;
 
-    .line 232
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/android/server/ConnectivityService$ReapUnvalidatedNetworks;
@@ -82,7 +77,6 @@
     .locals 0
 
     .prologue
-    .line 232
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -93,7 +87,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 232
     const-class v0, Lcom/android/server/ConnectivityService$ReapUnvalidatedNetworks;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -109,7 +102,6 @@
     .locals 1
 
     .prologue
-    .line 232
     sget-object v0, Lcom/android/server/ConnectivityService$ReapUnvalidatedNetworks;->$VALUES:[Lcom/android/server/ConnectivityService$ReapUnvalidatedNetworks;
 
     return-object v0

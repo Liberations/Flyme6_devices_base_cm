@@ -59,15 +59,12 @@
     .locals 1
 
     .prologue
-    .line 150
     new-instance v0, Landroid/telecom/VideoProfile$1;
 
     invoke-direct {v0}, Landroid/telecom/VideoProfile$1;-><init>()V
 
-    .line 149
     sput-object v0, Landroid/telecom/VideoProfile;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 25
     return-void
 .end method
 
@@ -76,12 +73,10 @@
     .param p1, "videoState"    # I
 
     .prologue
-    .line 111
     const/4 v0, 0x4
 
     invoke-direct {p0, p1, v0}, Landroid/telecom/VideoProfile;-><init>(II)V
 
-    .line 110
     return-void
 .end method
 
@@ -91,16 +86,12 @@
     .param p2, "quality"    # I
 
     .prologue
-    .line 120
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 121
     iput p1, p0, Landroid/telecom/VideoProfile;->mVideoState:I
 
-    .line 122
     iput p2, p0, Landroid/telecom/VideoProfile;->mQuality:I
 
-    .line 120
     return-void
 .end method
 
@@ -110,7 +101,6 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 308
     and-int v0, p0, p1
 
     if-ne v0, p1, :cond_0
@@ -135,14 +125,12 @@
 
     const/4 v0, 0x0
 
-    .line 244
     invoke-static {p0, v1}, Landroid/telecom/VideoProfile;->hasState(II)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 245
     const/4 v2, 0x2
 
     invoke-static {p0, v2}, Landroid/telecom/VideoProfile;->hasState(II)Z
@@ -151,7 +139,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 244
     :cond_0
     :goto_0
     return v0
@@ -159,7 +146,6 @@
     :cond_1
     move v0, v1
 
-    .line 245
     goto :goto_0
 .end method
 
@@ -168,7 +154,6 @@
     .param p0, "videoState"    # I
 
     .prologue
-    .line 287
     const/4 v0, 0x3
 
     invoke-static {p0, v0}, Landroid/telecom/VideoProfile;->hasState(II)Z
@@ -183,7 +168,6 @@
     .param p0, "videoState"    # I
 
     .prologue
-    .line 297
     const/4 v0, 0x4
 
     invoke-static {p0, v0}, Landroid/telecom/VideoProfile;->hasState(II)Z
@@ -198,7 +182,6 @@
     .param p0, "videoState"    # I
 
     .prologue
-    .line 277
     const/4 v0, 0x2
 
     invoke-static {p0, v0}, Landroid/telecom/VideoProfile;->hasState(II)Z
@@ -213,7 +196,6 @@
     .param p0, "videoState"    # I
 
     .prologue
-    .line 267
     const/4 v0, 0x1
 
     invoke-static {p0, v0}, Landroid/telecom/VideoProfile;->hasState(II)Z
@@ -230,31 +212,26 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 255
     invoke-static {p0, v0}, Landroid/telecom/VideoProfile;->hasState(II)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 256
     const/4 v1, 0x2
 
     invoke-static {p0, v1}, Landroid/telecom/VideoProfile;->hasState(II)Z
 
     move-result v1
 
-    .line 255
     if-nez v1, :cond_0
 
-    .line 257
     const/4 v0, 0x3
 
     invoke-static {p0, v0}, Landroid/telecom/VideoProfile;->hasState(II)Z
 
     move-result v0
 
-    .line 255
     :cond_0
     return v0
 .end method
@@ -264,30 +241,25 @@
     .param p0, "videoState"    # I
 
     .prologue
-    .line 215
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 216
     .local v0, "sb":Ljava/lang/StringBuilder;
-    const-string/jumbo v1, "Audio"
+    const-string v1, "Audio"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 218
     invoke-static {p0}, Landroid/telecom/VideoProfile;->isAudioOnly(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 219
-    const-string/jumbo v1, " Only"
+    const-string v1, " Only"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 234
     :cond_0
     :goto_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -296,7 +268,6 @@
 
     return-object v1
 
-    .line 221
     :cond_1
     invoke-static {p0}, Landroid/telecom/VideoProfile;->isTransmissionEnabled(I)Z
 
@@ -304,12 +275,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 222
-    const-string/jumbo v1, " Tx"
+    const-string v1, " Tx"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 225
     :cond_2
     invoke-static {p0}, Landroid/telecom/VideoProfile;->isReceptionEnabled(I)Z
 
@@ -317,12 +286,10 @@
 
     if-eqz v1, :cond_3
 
-    .line 226
-    const-string/jumbo v1, " Rx"
+    const-string v1, " Rx"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 229
     :cond_3
     invoke-static {p0}, Landroid/telecom/VideoProfile;->isPaused(I)Z
 
@@ -330,8 +297,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 230
-    const-string/jumbo v1, " Pause"
+    const-string v1, " Pause"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -344,7 +310,6 @@
     .locals 1
 
     .prologue
-    .line 181
     const/4 v0, 0x0
 
     return v0
@@ -354,7 +319,6 @@
     .locals 1
 
     .prologue
-    .line 143
     iget v0, p0, Landroid/telecom/VideoProfile;->mQuality:I
 
     return v0
@@ -364,7 +328,6 @@
     .locals 1
 
     .prologue
-    .line 134
     iget v0, p0, Landroid/telecom/VideoProfile;->mVideoState:I
 
     return v0
@@ -374,18 +337,15 @@
     .locals 2
 
     .prologue
-    .line 199
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 200
     .local v0, "sb":Ljava/lang/StringBuilder;
-    const-string/jumbo v1, "[VideoProfile videoState = "
+    const-string v1, "[VideoProfile videoState = "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 201
     iget v1, p0, Landroid/telecom/VideoProfile;->mVideoState:I
 
     invoke-static {v1}, Landroid/telecom/VideoProfile;->videoStateToString(I)Ljava/lang/String;
@@ -394,22 +354,18 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 202
-    const-string/jumbo v1, " videoQuality = "
+    const-string v1, " videoQuality = "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 203
     iget v1, p0, Landroid/telecom/VideoProfile;->mQuality:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 204
-    const-string/jumbo v1, "]"
+    const-string v1, "]"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 205
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -423,16 +379,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 193
     iget v0, p0, Landroid/telecom/VideoProfile;->mVideoState:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 194
     iget v0, p0, Landroid/telecom/VideoProfile;->mQuality:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 192
     return-void
 .end method

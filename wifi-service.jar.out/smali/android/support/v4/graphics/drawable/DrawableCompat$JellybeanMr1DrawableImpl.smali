@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 117
     invoke-direct {p0}, Landroid/support/v4/graphics/drawable/DrawableCompat$HoneycombDrawableImpl;-><init>()V
 
     return-void
@@ -34,12 +33,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 125
     invoke-static {p1}, Landroid/support/v4/graphics/drawable/DrawableCompatJellybeanMr1;->getLayoutDirection(Landroid/graphics/drawable/Drawable;)I
 
     move-result v0
 
-    .line 126
     .local v0, "dir":I
     if-ltz v0, :cond_0
 
@@ -60,9 +57,7 @@
     .param p2, "layoutDirection"    # I
 
     .prologue
-    .line 120
     invoke-static {p1, p2}, Landroid/support/v4/graphics/drawable/DrawableCompatJellybeanMr1;->setLayoutDirection(Landroid/graphics/drawable/Drawable;I)V
 
-    .line 119
     return-void
 .end method

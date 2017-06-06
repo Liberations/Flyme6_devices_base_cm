@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/twilight/TwilightService;
 
     .prologue
-    .line 464
     iput-object p1, p0, Lcom/android/server/twilight/TwilightService$4;->this$0:Lcom/android/server/twilight/TwilightService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,14 +41,12 @@
     .param p1, "location"    # Landroid/location/Location;
 
     .prologue
-    .line 466
     iget-object v0, p0, Lcom/android/server/twilight/TwilightService$4;->this$0:Lcom/android/server/twilight/TwilightService;
 
     iget-object v0, v0, Lcom/android/server/twilight/TwilightService;->mLocationHandler:Lcom/android/server/twilight/TwilightService$LocationHandler;
 
     invoke-virtual {v0, p1}, Lcom/android/server/twilight/TwilightService$LocationHandler;->processNewLocation(Landroid/location/Location;)V
 
-    .line 465
     return-void
 .end method
 
@@ -58,7 +55,6 @@
     .param p1, "provider"    # Ljava/lang/String;
 
     .prologue
-    .line 469
     return-void
 .end method
 
@@ -67,7 +63,6 @@
     .param p1, "provider"    # Ljava/lang/String;
 
     .prologue
-    .line 472
     return-void
 .end method
 
@@ -78,6 +73,5 @@
     .param p3, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 475
     return-void
 .end method

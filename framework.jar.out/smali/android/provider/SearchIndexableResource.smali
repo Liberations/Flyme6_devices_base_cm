@@ -16,22 +16,16 @@
     .param p4, "iconResId"    # I
 
     .prologue
-    .line 53
     invoke-direct {p0}, Landroid/provider/SearchIndexableData;-><init>()V
 
-    .line 54
     iput p1, p0, Landroid/provider/SearchIndexableResource;->rank:I
 
-    .line 55
     iput p2, p0, Landroid/provider/SearchIndexableResource;->xmlResId:I
 
-    .line 56
     iput-object p3, p0, Landroid/provider/SearchIndexableResource;->className:Ljava/lang/String;
 
-    .line 57
     iput p4, p0, Landroid/provider/SearchIndexableResource;->iconResId:I
 
-    .line 52
     return-void
 .end method
 
@@ -40,10 +34,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 66
     invoke-direct {p0, p1}, Landroid/provider/SearchIndexableData;-><init>(Landroid/content/Context;)V
 
-    .line 65
     return-void
 .end method
 
@@ -53,45 +45,37 @@
     .locals 2
 
     .prologue
-    .line 71
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 72
     .local v0, "sb":Ljava/lang/StringBuilder;
-    const-string/jumbo v1, "SearchIndexableResource["
+    const-string v1, "SearchIndexableResource["
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 73
     invoke-super {p0}, Landroid/provider/SearchIndexableData;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 74
-    const-string/jumbo v1, ", "
+    const-string v1, ", "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 75
-    const-string/jumbo v1, "xmlResId: "
+    const-string v1, "xmlResId: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 76
     iget v1, p0, Landroid/provider/SearchIndexableResource;->xmlResId:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 77
-    const-string/jumbo v1, "]"
+    const-string v1, "]"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 79
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

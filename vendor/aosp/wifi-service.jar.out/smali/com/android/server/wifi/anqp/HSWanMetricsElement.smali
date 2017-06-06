@@ -47,10 +47,8 @@
 
     const/4 v3, 0x0
 
-    .line 30
     invoke-direct {p0, p1}, Lcom/android/server/wifi/anqp/ANQPElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;)V
 
-    .line 32
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v1
@@ -59,14 +57,13 @@
 
     if-eq v1, v4, :cond_0
 
-    .line 33
     new-instance v1, Ljava/net/ProtocolException;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "Bad WAN metrics length: "
+    const-string v3, "Bad WAN metrics length: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -88,7 +85,6 @@
 
     throw v1
 
-    .line 36
     :cond_0
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->get()B
 
@@ -96,7 +92,6 @@
 
     and-int/lit16 v0, v1, 0xff
 
-    .line 37
     .local v0, "status":I
     invoke-static {}, Lcom/android/server/wifi/anqp/HSWanMetricsElement$LinkStatus;->values()[Lcom/android/server/wifi/anqp/HSWanMetricsElement$LinkStatus;
 
@@ -108,7 +103,6 @@
 
     iput-object v1, p0, Lcom/android/server/wifi/anqp/HSWanMetricsElement;->mStatus:Lcom/android/server/wifi/anqp/HSWanMetricsElement$LinkStatus;
 
-    .line 38
     and-int/lit8 v1, v0, 0x4
 
     if-eqz v1, :cond_1
@@ -118,7 +112,6 @@
     :goto_0
     iput-boolean v1, p0, Lcom/android/server/wifi/anqp/HSWanMetricsElement;->mSymmetric:Z
 
-    .line 39
     and-int/lit8 v1, v0, 0x8
 
     if-eqz v1, :cond_2
@@ -126,7 +119,6 @@
     :goto_1
     iput-boolean v2, p0, Lcom/android/server/wifi/anqp/HSWanMetricsElement;->mCapped:Z
 
-    .line 40
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v1
@@ -137,7 +129,6 @@
 
     iput-wide v2, p0, Lcom/android/server/wifi/anqp/HSWanMetricsElement;->mDlSpeed:J
 
-    .line 41
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v1
@@ -148,7 +139,6 @@
 
     iput-wide v2, p0, Lcom/android/server/wifi/anqp/HSWanMetricsElement;->mUlSpeed:J
 
-    .line 42
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v1
@@ -157,7 +147,6 @@
 
     iput v1, p0, Lcom/android/server/wifi/anqp/HSWanMetricsElement;->mDlLoad:I
 
-    .line 43
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v1
@@ -166,7 +155,6 @@
 
     iput v1, p0, Lcom/android/server/wifi/anqp/HSWanMetricsElement;->mUlLoad:I
 
-    .line 44
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v1
@@ -177,19 +165,16 @@
 
     iput v1, p0, Lcom/android/server/wifi/anqp/HSWanMetricsElement;->mLMD:I
 
-    .line 29
     return-void
 
     :cond_1
     move v1, v3
 
-    .line 38
     goto :goto_0
 
     :cond_2
     move v2, v3
 
-    .line 39
     goto :goto_1
 .end method
 
@@ -199,7 +184,6 @@
     .locals 1
 
     .prologue
-    .line 68
     iget v0, p0, Lcom/android/server/wifi/anqp/HSWanMetricsElement;->mDlLoad:I
 
     return v0
@@ -209,7 +193,6 @@
     .locals 2
 
     .prologue
-    .line 60
     iget-wide v0, p0, Lcom/android/server/wifi/anqp/HSWanMetricsElement;->mDlSpeed:J
 
     return-wide v0
@@ -219,7 +202,6 @@
     .locals 1
 
     .prologue
-    .line 76
     iget v0, p0, Lcom/android/server/wifi/anqp/HSWanMetricsElement;->mLMD:I
 
     return v0
@@ -229,7 +211,6 @@
     .locals 1
 
     .prologue
-    .line 48
     iget-object v0, p0, Lcom/android/server/wifi/anqp/HSWanMetricsElement;->mStatus:Lcom/android/server/wifi/anqp/HSWanMetricsElement$LinkStatus;
 
     return-object v0
@@ -239,7 +220,6 @@
     .locals 1
 
     .prologue
-    .line 72
     iget v0, p0, Lcom/android/server/wifi/anqp/HSWanMetricsElement;->mUlLoad:I
 
     return v0
@@ -249,7 +229,6 @@
     .locals 2
 
     .prologue
-    .line 64
     iget-wide v0, p0, Lcom/android/server/wifi/anqp/HSWanMetricsElement;->mUlSpeed:J
 
     return-wide v0
@@ -259,7 +238,6 @@
     .locals 1
 
     .prologue
-    .line 56
     iget-boolean v0, p0, Lcom/android/server/wifi/anqp/HSWanMetricsElement;->mCapped:Z
 
     return v0
@@ -269,7 +247,6 @@
     .locals 1
 
     .prologue
-    .line 52
     iget-boolean v0, p0, Lcom/android/server/wifi/anqp/HSWanMetricsElement;->mSymmetric:Z
 
     return v0
@@ -283,14 +260,12 @@
 
     const-wide/high16 v4, 0x4059000000000000L    # 100.0
 
-    .line 81
-    const-string/jumbo v0, "HSWanMetrics{mStatus=%s, mSymmetric=%s, mCapped=%s, mDlSpeed=%d, mUlSpeed=%d, mDlLoad=%f, mUlLoad=%f, mLMD=%d}"
+    const-string v0, "HSWanMetrics{mStatus=%s, mSymmetric=%s, mCapped=%s, mDlSpeed=%d, mUlSpeed=%d, mDlLoad=%f, mUlLoad=%f, mLMD=%d}"
 
     const/16 v1, 0x8
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    .line 83
     iget-object v2, p0, Lcom/android/server/wifi/anqp/HSWanMetricsElement;->mStatus:Lcom/android/server/wifi/anqp/HSWanMetricsElement$LinkStatus;
 
     const/4 v3, 0x0
@@ -317,7 +292,6 @@
 
     aput-object v2, v1, v3
 
-    .line 84
     iget-wide v2, p0, Lcom/android/server/wifi/anqp/HSWanMetricsElement;->mDlSpeed:J
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -338,7 +312,6 @@
 
     aput-object v2, v1, v3
 
-    .line 85
     iget v2, p0, Lcom/android/server/wifi/anqp/HSWanMetricsElement;->mDlLoad:I
 
     int-to-double v2, v2
@@ -355,7 +328,6 @@
 
     aput-object v2, v1, v3
 
-    .line 86
     iget v2, p0, Lcom/android/server/wifi/anqp/HSWanMetricsElement;->mUlLoad:I
 
     int-to-double v2, v2
@@ -372,7 +344,6 @@
 
     aput-object v2, v1, v3
 
-    .line 87
     iget v2, p0, Lcom/android/server/wifi/anqp/HSWanMetricsElement;->mLMD:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -383,7 +354,6 @@
 
     aput-object v2, v1, v3
 
-    .line 81
     invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0

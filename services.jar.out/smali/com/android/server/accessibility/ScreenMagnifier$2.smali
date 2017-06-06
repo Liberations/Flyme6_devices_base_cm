@@ -38,7 +38,6 @@
     .param p2, "val$scale"    # F
 
     .prologue
-    .line 854
     iput-object p1, p0, Lcom/android/server/accessibility/ScreenMagnifier$2;->this$0:Lcom/android/server/accessibility/ScreenMagnifier;
 
     iput p2, p0, Lcom/android/server/accessibility/ScreenMagnifier$2;->val$scale:F
@@ -55,7 +54,6 @@
     .param p1, "params"    # [Ljava/lang/Object;
 
     .prologue
-    .line 856
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1    # "params":[Ljava/lang/Object;
@@ -71,7 +69,6 @@
     .param p1, "params"    # [Ljava/lang/Void;
 
     .prologue
-    .line 857
     iget-object v0, p0, Lcom/android/server/accessibility/ScreenMagnifier$2;->this$0:Lcom/android/server/accessibility/ScreenMagnifier;
 
     invoke-static {v0}, Lcom/android/server/accessibility/ScreenMagnifier;->-get1(Lcom/android/server/accessibility/ScreenMagnifier;)Landroid/content/Context;
@@ -82,15 +79,12 @@
 
     move-result-object v0
 
-    .line 858
-    const-string/jumbo v1, "accessibility_display_magnification_scale"
+    const-string v1, "accessibility_display_magnification_scale"
 
     iget v2, p0, Lcom/android/server/accessibility/ScreenMagnifier$2;->val$scale:F
 
-    .line 857
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Secure;->putFloat(Landroid/content/ContentResolver;Ljava/lang/String;F)Z
 
-    .line 859
     const/4 v0, 0x0
 
     return-object v0

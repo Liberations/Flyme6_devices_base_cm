@@ -14,7 +14,6 @@
     .locals 0
 
     .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,30 +24,25 @@
     .param p0, "path"    # Ljava/io/File;
 
     .prologue
-    .line 56
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .line 57
     .local v3, "version":I
     const/16 v4, 0x13
 
     if-lt v3, v4, :cond_0
 
-    .line 58
     invoke-static {p0}, Landroid/support/v4/os/EnvironmentCompatKitKat;->getStorageState(Ljava/io/File;)Ljava/lang/String;
 
     move-result-object v4
 
     return-object v4
 
-    .line 62
     :cond_0
     :try_start_0
     invoke-virtual {p0}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 63
     .local v1, "canonicalPath":Ljava/lang/String;
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
 
@@ -58,7 +52,6 @@
 
     move-result-object v0
 
-    .line 66
     .local v0, "canonicalExternal":Ljava/lang/String;
     invoke-virtual {v1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -66,7 +59,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 67
     invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -75,21 +67,19 @@
 
     return-object v4
 
-    .line 69
     .end local v0    # "canonicalExternal":Ljava/lang/String;
     .end local v1    # "canonicalPath":Ljava/lang/String;
     :catch_0
     move-exception v2
 
-    .line 70
     .local v2, "e":Ljava/io/IOException;
-    const-string/jumbo v4, "EnvironmentCompat"
+    const-string v4, "EnvironmentCompat"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "Failed to resolve canonical path: "
+    const-string v6, "Failed to resolve canonical path: "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -105,10 +95,9 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 73
     .end local v2    # "e":Ljava/io/IOException;
     :cond_1
-    const-string/jumbo v4, "unknown"
+    const-string v4, "unknown"
 
     return-object v4
 .end method

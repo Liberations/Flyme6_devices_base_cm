@@ -14,7 +14,6 @@
     .locals 0
 
     .prologue
-    .line 35
     invoke-direct {p0}, Landroid/app/Fragment;-><init>()V
 
     return-void
@@ -26,7 +25,6 @@
     .locals 1
 
     .prologue
-    .line 96
     iget-boolean v0, p0, Landroid/webkit/WebViewFragment;->mIsWebViewAvailable:Z
 
     if-eqz v0, :cond_0
@@ -49,17 +47,14 @@
     .param p3, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    .line 44
     iget-object v0, p0, Landroid/webkit/WebViewFragment;->mWebView:Landroid/webkit/WebView;
 
     if-eqz v0, :cond_0
 
-    .line 45
     iget-object v0, p0, Landroid/webkit/WebViewFragment;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->destroy()V
 
-    .line 47
     :cond_0
     new-instance v0, Landroid/webkit/WebView;
 
@@ -71,12 +66,10 @@
 
     iput-object v0, p0, Landroid/webkit/WebViewFragment;->mWebView:Landroid/webkit/WebView;
 
-    .line 48
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/webkit/WebViewFragment;->mIsWebViewAvailable:Z
 
-    .line 49
     iget-object v0, p0, Landroid/webkit/WebViewFragment;->mWebView:Landroid/webkit/WebView;
 
     return-object v0
@@ -88,24 +81,19 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 85
     iget-object v0, p0, Landroid/webkit/WebViewFragment;->mWebView:Landroid/webkit/WebView;
 
     if-eqz v0, :cond_0
 
-    .line 86
     iget-object v0, p0, Landroid/webkit/WebViewFragment;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->destroy()V
 
-    .line 87
     iput-object v1, p0, Landroid/webkit/WebViewFragment;->mWebView:Landroid/webkit/WebView;
 
-    .line 89
     :cond_0
     invoke-super {p0}, Landroid/app/Fragment;->onDestroy()V
 
-    .line 84
     return-void
 .end method
 
@@ -113,15 +101,12 @@
     .locals 1
 
     .prologue
-    .line 76
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/webkit/WebViewFragment;->mIsWebViewAvailable:Z
 
-    .line 77
     invoke-super {p0}, Landroid/app/Fragment;->onDestroyView()V
 
-    .line 75
     return-void
 .end method
 
@@ -129,15 +114,12 @@
     .locals 1
 
     .prologue
-    .line 57
     invoke-super {p0}, Landroid/app/Fragment;->onPause()V
 
-    .line 58
     iget-object v0, p0, Landroid/webkit/WebViewFragment;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->onPause()V
 
-    .line 56
     return-void
 .end method
 
@@ -145,14 +127,11 @@
     .locals 1
 
     .prologue
-    .line 66
     iget-object v0, p0, Landroid/webkit/WebViewFragment;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->onResume()V
 
-    .line 67
     invoke-super {p0}, Landroid/app/Fragment;->onResume()V
 
-    .line 65
     return-void
 .end method

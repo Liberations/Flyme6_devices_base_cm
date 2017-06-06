@@ -22,22 +22,16 @@
     .param p4, "state"    # Landroid/net/wifi/SupplicantState;
 
     .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     iput-object p4, p0, Lcom/android/server/wifi/StateChangeResult;->state:Landroid/net/wifi/SupplicantState;
 
-    .line 32
     iput-object p2, p0, Lcom/android/server/wifi/StateChangeResult;->wifiSsid:Landroid/net/wifi/WifiSsid;
 
-    .line 33
     iput-object p3, p0, Lcom/android/server/wifi/StateChangeResult;->BSSID:Ljava/lang/String;
 
-    .line 34
     iput p1, p0, Lcom/android/server/wifi/StateChangeResult;->networkId:I
 
-    .line 30
     return-void
 .end method
 
@@ -47,14 +41,12 @@
     .locals 3
 
     .prologue
-    .line 44
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 46
     .local v0, "sb":Ljava/lang/StringBuffer;
-    const-string/jumbo v1, " SSID: "
+    const-string v1, " SSID: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -68,8 +60,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 47
-    const-string/jumbo v1, " BSSID: "
+    const-string v1, " BSSID: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -79,8 +70,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 48
-    const-string/jumbo v1, " nid: "
+    const-string v1, " nid: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -90,8 +80,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
-    .line 49
-    const-string/jumbo v1, " state: "
+    const-string v1, " state: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -101,7 +90,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
 
-    .line 50
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v1

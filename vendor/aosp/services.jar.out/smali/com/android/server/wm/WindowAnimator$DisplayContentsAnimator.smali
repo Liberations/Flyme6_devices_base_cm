@@ -26,17 +26,14 @@
     .param p1, "this$0"    # Lcom/android/server/wm/WindowAnimator;
 
     .prologue
-    .line 908
     iput-object p1, p0, Lcom/android/server/wm/WindowAnimator$DisplayContentsAnimator;->this$0:Lcom/android/server/wm/WindowAnimator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 909
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/wm/WindowAnimator$DisplayContentsAnimator;->mScreenRotationAnimation:Lcom/android/server/wm/ScreenRotationAnimation;
 
-    .line 908
     return-void
 .end method
 

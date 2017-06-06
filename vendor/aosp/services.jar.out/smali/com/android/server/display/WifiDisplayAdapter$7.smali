@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/display/WifiDisplayAdapter;
 
     .prologue
-    .line 198
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayAdapter$7;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 201
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter$7;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-static {v0}, Lcom/android/server/display/WifiDisplayAdapter;->-get4(Lcom/android/server/display/WifiDisplayAdapter;)Lcom/android/server/display/WifiDisplayController;
@@ -50,7 +48,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 202
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter$7;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-static {v0}, Lcom/android/server/display/WifiDisplayAdapter;->-get4(Lcom/android/server/display/WifiDisplayAdapter;)Lcom/android/server/display/WifiDisplayController;
@@ -59,7 +56,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/display/WifiDisplayController;->requestPause()V
 
-    .line 200
     :cond_0
     return-void
 .end method

@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcyanogenmod/weatherservice/WeatherProviderService;
 
     .prologue
-    .line 92
     iput-object p1, p0, Lcyanogenmod/weatherservice/WeatherProviderService$1;->this$0:Lcyanogenmod/weatherservice/WeatherProviderService;
 
     invoke-direct {p0}, Lcyanogenmod/weatherservice/IWeatherProviderService$Stub;-><init>()V
@@ -38,7 +37,6 @@
     .locals 5
 
     .prologue
-    .line 111
     iget-object v2, p0, Lcyanogenmod/weatherservice/WeatherProviderService$1;->this$0:Lcyanogenmod/weatherservice/WeatherProviderService;
 
     invoke-static {v2}, Lcyanogenmod/weatherservice/WeatherProviderService;->-get2(Lcyanogenmod/weatherservice/WeatherProviderService;)Ljava/util/Set;
@@ -47,7 +45,6 @@
 
     monitor-enter v3
 
-    .line 112
     :try_start_0
     iget-object v2, p0, Lcyanogenmod/weatherservice/WeatherProviderService$1;->this$0:Lcyanogenmod/weatherservice/WeatherProviderService;
 
@@ -73,11 +70,9 @@
 
     check-cast v0, Lcyanogenmod/weatherservice/ServiceRequest;
 
-    .line 113
     .local v0, "request":Lcyanogenmod/weatherservice/ServiceRequest;
     invoke-virtual {v0}, Lcyanogenmod/weatherservice/ServiceRequest;->cancel()V
 
-    .line 114
     iget-object v2, p0, Lcyanogenmod/weatherservice/WeatherProviderService$1;->this$0:Lcyanogenmod/weatherservice/WeatherProviderService;
 
     invoke-static {v2}, Lcyanogenmod/weatherservice/WeatherProviderService;->-get2(Lcyanogenmod/weatherservice/WeatherProviderService;)Ljava/util/Set;
@@ -86,7 +81,6 @@
 
     invoke-interface {v2, v0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 115
     iget-object v2, p0, Lcyanogenmod/weatherservice/WeatherProviderService$1;->this$0:Lcyanogenmod/weatherservice/WeatherProviderService;
 
     invoke-static {v2}, Lcyanogenmod/weatherservice/WeatherProviderService;->-get1(Lcyanogenmod/weatherservice/WeatherProviderService;)Landroid/os/Handler;
@@ -105,7 +99,6 @@
 
     goto :goto_0
 
-    .line 111
     .end local v0    # "request":Lcyanogenmod/weatherservice/ServiceRequest;
     .end local v1    # "request$iterator":Ljava/util/Iterator;
     :catchall_0
@@ -119,7 +112,6 @@
     :cond_0
     monitor-exit v3
 
-    .line 110
     return-void
 .end method
 
@@ -128,7 +120,6 @@
     .param p1, "requestId"    # I
 
     .prologue
-    .line 123
     iget-object v2, p0, Lcyanogenmod/weatherservice/WeatherProviderService$1;->this$0:Lcyanogenmod/weatherservice/WeatherProviderService;
 
     invoke-static {v2}, Lcyanogenmod/weatherservice/WeatherProviderService;->-get2(Lcyanogenmod/weatherservice/WeatherProviderService;)Ljava/util/Set;
@@ -137,7 +128,6 @@
 
     monitor-enter v3
 
-    .line 124
     :try_start_0
     iget-object v2, p0, Lcyanogenmod/weatherservice/WeatherProviderService$1;->this$0:Lcyanogenmod/weatherservice/WeatherProviderService;
 
@@ -163,7 +153,6 @@
 
     check-cast v0, Lcyanogenmod/weatherservice/ServiceRequest;
 
-    .line 125
     .local v0, "request":Lcyanogenmod/weatherservice/ServiceRequest;
     invoke-virtual {v0}, Lcyanogenmod/weatherservice/ServiceRequest;->getRequestInfo()Lcyanogenmod/weather/RequestInfo;
 
@@ -175,7 +164,6 @@
 
     if-ne v2, p1, :cond_0
 
-    .line 126
     iget-object v2, p0, Lcyanogenmod/weatherservice/WeatherProviderService$1;->this$0:Lcyanogenmod/weatherservice/WeatherProviderService;
 
     invoke-static {v2}, Lcyanogenmod/weatherservice/WeatherProviderService;->-get2(Lcyanogenmod/weatherservice/WeatherProviderService;)Ljava/util/Set;
@@ -184,10 +172,8 @@
 
     invoke-interface {v2, v0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 127
     invoke-virtual {v0}, Lcyanogenmod/weatherservice/ServiceRequest;->cancel()V
 
-    .line 128
     iget-object v2, p0, Lcyanogenmod/weatherservice/WeatherProviderService$1;->this$0:Lcyanogenmod/weatherservice/WeatherProviderService;
 
     invoke-static {v2}, Lcyanogenmod/weatherservice/WeatherProviderService;->-get1(Lcyanogenmod/weatherservice/WeatherProviderService;)Landroid/os/Handler;
@@ -208,10 +194,8 @@
     :cond_1
     monitor-exit v3
 
-    .line 122
     return-void
 
-    .line 123
     .end local v1    # "request$iterator":Ljava/util/Iterator;
     :catchall_0
     move-exception v2
@@ -226,7 +210,6 @@
     .param p1, "info"    # Lcyanogenmod/weather/RequestInfo;
 
     .prologue
-    .line 101
     iget-object v0, p0, Lcyanogenmod/weatherservice/WeatherProviderService$1;->this$0:Lcyanogenmod/weatherservice/WeatherProviderService;
 
     invoke-static {v0}, Lcyanogenmod/weatherservice/WeatherProviderService;->-get1(Lcyanogenmod/weatherservice/WeatherProviderService;)Landroid/os/Handler;
@@ -241,7 +224,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 100
     return-void
 .end method
 
@@ -250,7 +232,6 @@
     .param p1, "info"    # Lcyanogenmod/weather/RequestInfo;
 
     .prologue
-    .line 96
     iget-object v0, p0, Lcyanogenmod/weatherservice/WeatherProviderService$1;->this$0:Lcyanogenmod/weatherservice/WeatherProviderService;
 
     invoke-static {v0}, Lcyanogenmod/weatherservice/WeatherProviderService;->-get1(Lcyanogenmod/weatherservice/WeatherProviderService;)Landroid/os/Handler;
@@ -265,7 +246,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 95
     return-void
 .end method
 
@@ -274,7 +254,6 @@
     .param p1, "client"    # Lcyanogenmod/weatherservice/IWeatherProviderServiceClient;
 
     .prologue
-    .line 106
     iget-object v0, p0, Lcyanogenmod/weatherservice/WeatherProviderService$1;->this$0:Lcyanogenmod/weatherservice/WeatherProviderService;
 
     invoke-static {v0}, Lcyanogenmod/weatherservice/WeatherProviderService;->-get1(Lcyanogenmod/weatherservice/WeatherProviderService;)Landroid/os/Handler;
@@ -289,6 +268,5 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 105
     return-void
 .end method

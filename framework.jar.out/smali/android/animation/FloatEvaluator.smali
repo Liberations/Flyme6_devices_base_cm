@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,12 +37,10 @@
     .param p3, "endValue"    # Ljava/lang/Number;
 
     .prologue
-    .line 39
     invoke-virtual {p2}, Ljava/lang/Number;->floatValue()F
 
     move-result v0
 
-    .line 40
     .local v0, "startFloat":F
     invoke-virtual {p3}, Ljava/lang/Number;->floatValue()F
 
@@ -69,7 +66,6 @@
     .param p3, "endValue"    # Ljava/lang/Object;
 
     .prologue
-    .line 38
     check-cast p2, Ljava/lang/Number;
 
     .end local p2    # "startValue":Ljava/lang/Object;

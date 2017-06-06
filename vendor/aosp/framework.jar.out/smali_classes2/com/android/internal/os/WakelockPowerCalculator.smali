@@ -21,16 +21,13 @@
     .param p1, "profile"    # Lcom/android/internal/os/PowerProfile;
 
     .prologue
-    .line 28
     invoke-direct {p0}, Lcom/android/internal/os/PowerCalculator;-><init>()V
 
-    .line 26
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/internal/os/WakelockPowerCalculator;->mTotalAppWakelockTimeMs:J
 
-    .line 29
-    const-string/jumbo v0, "cpu.awake"
+    const-string v0, "cpu.awake"
 
     invoke-virtual {p1, v0}, Lcom/android/internal/os/PowerProfile;->getAveragePower(Ljava/lang/String;)D
 
@@ -38,7 +35,6 @@
 
     iput-wide v0, p0, Lcom/android/internal/os/WakelockPowerCalculator;->mPowerWakelock:D
 
-    .line 28
     return-void
 .end method
 
@@ -53,22 +49,18 @@
     .param p7, "statsType"    # I
 
     .prologue
-    .line 35
     const-wide/16 v6, 0x0
 
-    .line 37
     .local v6, "wakeLockTimeUs":J
     invoke-virtual/range {p2 .. p2}, Landroid/os/BatteryStats$Uid;->getWakelockStats()Landroid/util/ArrayMap;
 
     move-result-object v9
 
-    .line 38
     .local v9, "wakelockStats":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;+Landroid/os/BatteryStats$Uid$Wakelock;>;"
     invoke-virtual {v9}, Landroid/util/ArrayMap;->size()I
 
     move-result v10
 
-    .line 39
     .local v10, "wakelockStatsCount":I
     const/4 v4, 0x0
 
@@ -76,14 +68,12 @@
     :goto_0
     if-ge v4, v10, :cond_1
 
-    .line 40
     invoke-virtual {v9, v4}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v8
 
     check-cast v8, Landroid/os/BatteryStats$Uid$Wakelock;
 
-    .line 44
     .local v8, "wakelock":Landroid/os/BatteryStats$Uid$Wakelock;
     const/4 v11, 0x0
 
@@ -91,11 +81,9 @@
 
     move-result-object v5
 
-    .line 45
     .local v5, "timer":Landroid/os/BatteryStats$Timer;
     if-eqz v5, :cond_0
 
-    .line 46
     move-wide/from16 v0, p3
 
     move/from16 v2, p7
@@ -106,13 +94,11 @@
 
     add-long/2addr v6, v12
 
-    .line 39
     :cond_0
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 49
     .end local v5    # "timer":Landroid/os/BatteryStats$Timer;
     .end local v8    # "wakelock":Landroid/os/BatteryStats$Uid$Wakelock;
     :cond_1
@@ -124,7 +110,6 @@
 
     iput-wide v12, v0, Lcom/android/internal/os/BatterySipper;->wakeLockTimeMs:J
 
-    .line 50
     move-object/from16 v0, p0
 
     iget-wide v12, v0, Lcom/android/internal/os/WakelockPowerCalculator;->mTotalAppWakelockTimeMs:J
@@ -139,7 +124,6 @@
 
     iput-wide v12, v0, Lcom/android/internal/os/WakelockPowerCalculator;->mTotalAppWakelockTimeMs:J
 
-    .line 53
     move-object/from16 v0, p1
 
     iget-wide v12, v0, Lcom/android/internal/os/BatterySipper;->wakeLockTimeMs:J
@@ -160,7 +144,6 @@
 
     iput-wide v12, v0, Lcom/android/internal/os/BatterySipper;->wakeLockPowerMah:D
 
-    .line 34
     return-void
 .end method
 
@@ -173,7 +156,6 @@
     .param p7, "statsType"    # I
 
     .prologue
-    .line 63
     move-object/from16 v0, p2
 
     move-wide/from16 v1, p5
@@ -186,11 +168,9 @@
 
     div-long v6, v8, v10
 
-    .line 64
     .local v6, "wakeTimeMillis":J
     iget-wide v8, p0, Lcom/android/internal/os/WakelockPowerCalculator;->mTotalAppWakelockTimeMs:J
 
-    .line 65
     move-object/from16 v0, p2
 
     move-wide/from16 v1, p3
@@ -205,19 +185,16 @@
 
     div-long/2addr v10, v12
 
-    .line 64
     add-long/2addr v8, v10
 
     sub-long/2addr v6, v8
 
-    .line 66
     const-wide/16 v8, 0x0
 
     cmp-long v8, v6, v8
 
     if-lez v8, :cond_0
 
-    .line 67
     long-to-double v8, v6
 
     iget-wide v10, p0, Lcom/android/internal/os/WakelockPowerCalculator;->mPowerWakelock:D
@@ -228,7 +205,6 @@
 
     div-double v4, v8, v10
 
-    .line 72
     .local v4, "power":D
     move-object/from16 v0, p1
 
@@ -240,7 +216,6 @@
 
     iput-wide v8, v0, Lcom/android/internal/os/BatterySipper;->wakeLockTimeMs:J
 
-    .line 73
     move-object/from16 v0, p1
 
     iget-wide v8, v0, Lcom/android/internal/os/BatterySipper;->wakeLockPowerMah:D
@@ -251,7 +226,6 @@
 
     iput-wide v8, v0, Lcom/android/internal/os/BatterySipper;->wakeLockPowerMah:D
 
-    .line 62
     .end local v4    # "power":D
     :cond_0
     return-void
@@ -261,11 +235,9 @@
     .locals 2
 
     .prologue
-    .line 79
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/internal/os/WakelockPowerCalculator;->mTotalAppWakelockTimeMs:J
 
-    .line 78
     return-void
 .end method

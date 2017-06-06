@@ -33,22 +33,18 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 45
     invoke-direct {p0, p1}, Landroid/filterfw/core/Filter;-><init>(Ljava/lang/String;)V
 
-    .line 37
     invoke-static {}, Landroid/filterfw/core/FrameFormat;->unspecified()Landroid/filterfw/core/FrameFormat;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/filterpacks/base/ObjectSource;->mOutputFormat:Landroid/filterfw/core/FrameFormat;
 
-    .line 40
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/filterpacks/base/ObjectSource;->mRepeatFrame:Z
 
-    .line 44
     return-void
 .end method
 
@@ -62,8 +58,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 83
-    const-string/jumbo v0, "object"
+    const-string v0, "object"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -71,20 +66,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 84
     iget-object v0, p0, Landroid/filterpacks/base/ObjectSource;->mFrame:Landroid/filterfw/core/Frame;
 
     if-eqz v0, :cond_0
 
-    .line 85
     iget-object v0, p0, Landroid/filterpacks/base/ObjectSource;->mFrame:Landroid/filterfw/core/Frame;
 
     invoke-virtual {v0}, Landroid/filterfw/core/Frame;->release()Landroid/filterfw/core/Frame;
 
-    .line 86
     iput-object v1, p0, Landroid/filterpacks/base/ObjectSource;->mFrame:Landroid/filterfw/core/Frame;
 
-    .line 81
     :cond_0
     return-void
 .end method
@@ -94,26 +85,22 @@
     .param p1, "context"    # Landroid/filterfw/core/FilterContext;
 
     .prologue
-    .line 56
     iget-object v1, p0, Landroid/filterpacks/base/ObjectSource;->mFrame:Landroid/filterfw/core/Frame;
 
     if-nez v1, :cond_1
 
-    .line 57
     iget-object v1, p0, Landroid/filterpacks/base/ObjectSource;->mObject:Ljava/lang/Object;
 
     if-nez v1, :cond_0
 
-    .line 58
     new-instance v1, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v2, "ObjectSource producing frame with no object set!"
+    const-string v2, "ObjectSource producing frame with no object set!"
 
     invoke-direct {v1, v2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 60
     :cond_0
     iget-object v1, p0, Landroid/filterpacks/base/ObjectSource;->mObject:Ljava/lang/Object;
 
@@ -123,7 +110,6 @@
 
     move-result-object v0
 
-    .line 61
     .local v0, "outputFormat":Landroid/filterfw/core/FrameFormat;
     invoke-virtual {p1}, Landroid/filterfw/core/FilterContext;->getFrameManager()Landroid/filterfw/core/FrameManager;
 
@@ -135,40 +121,34 @@
 
     iput-object v1, p0, Landroid/filterpacks/base/ObjectSource;->mFrame:Landroid/filterfw/core/Frame;
 
-    .line 62
     iget-object v1, p0, Landroid/filterpacks/base/ObjectSource;->mFrame:Landroid/filterfw/core/Frame;
 
     iget-object v2, p0, Landroid/filterpacks/base/ObjectSource;->mObject:Ljava/lang/Object;
 
     invoke-virtual {v1, v2}, Landroid/filterfw/core/Frame;->setObjectValue(Ljava/lang/Object;)V
 
-    .line 63
     iget-object v1, p0, Landroid/filterpacks/base/ObjectSource;->mFrame:Landroid/filterfw/core/Frame;
 
     const-wide/16 v2, -0x1
 
     invoke-virtual {v1, v2, v3}, Landroid/filterfw/core/Frame;->setTimestamp(J)V
 
-    .line 67
     .end local v0    # "outputFormat":Landroid/filterfw/core/FrameFormat;
     :cond_1
-    const-string/jumbo v1, "frame"
+    const-string v1, "frame"
 
     iget-object v2, p0, Landroid/filterpacks/base/ObjectSource;->mFrame:Landroid/filterfw/core/Frame;
 
     invoke-virtual {p0, v1, v2}, Landroid/filterpacks/base/ObjectSource;->pushOutput(Ljava/lang/String;Landroid/filterfw/core/Frame;)V
 
-    .line 70
     iget-boolean v1, p0, Landroid/filterpacks/base/ObjectSource;->mRepeatFrame:Z
 
     if-nez v1, :cond_2
 
-    .line 71
-    const-string/jumbo v1, "frame"
+    const-string v1, "frame"
 
     invoke-virtual {p0, v1}, Landroid/filterpacks/base/ObjectSource;->closeOutputPort(Ljava/lang/String;)V
 
-    .line 54
     :cond_2
     return-void
 .end method
@@ -177,14 +157,12 @@
     .locals 2
 
     .prologue
-    .line 50
-    const-string/jumbo v0, "frame"
+    const-string v0, "frame"
 
     iget-object v1, p0, Landroid/filterpacks/base/ObjectSource;->mOutputFormat:Landroid/filterfw/core/FrameFormat;
 
     invoke-virtual {p0, v0, v1}, Landroid/filterpacks/base/ObjectSource;->addOutputPort(Ljava/lang/String;Landroid/filterfw/core/FrameFormat;)V
 
-    .line 49
     return-void
 .end method
 
@@ -193,11 +171,9 @@
     .param p1, "context"    # Landroid/filterfw/core/FilterContext;
 
     .prologue
-    .line 77
     iget-object v0, p0, Landroid/filterpacks/base/ObjectSource;->mFrame:Landroid/filterfw/core/Frame;
 
     invoke-virtual {v0}, Landroid/filterfw/core/Frame;->release()Landroid/filterfw/core/Frame;
 
-    .line 76
     return-void
 .end method

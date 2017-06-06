@@ -23,17 +23,14 @@
     .locals 1
 
     .prologue
-    .line 201
     invoke-direct {p0}, Landroid/os/ICancellationSignal$Stub;-><init>()V
 
-    .line 202
     new-instance v0, Landroid/os/CancellationSignal;
 
     invoke-direct {v0}, Landroid/os/CancellationSignal;-><init>()V
 
     iput-object v0, p0, Landroid/os/CancellationSignal$Transport;->mCancellationSignal:Landroid/os/CancellationSignal;
 
-    .line 201
     return-void
 .end method
 
@@ -57,11 +54,9 @@
     .end annotation
 
     .prologue
-    .line 206
     iget-object v0, p0, Landroid/os/CancellationSignal$Transport;->mCancellationSignal:Landroid/os/CancellationSignal;
 
     invoke-virtual {v0}, Landroid/os/CancellationSignal;->cancel()V
 
-    .line 205
     return-void
 .end method

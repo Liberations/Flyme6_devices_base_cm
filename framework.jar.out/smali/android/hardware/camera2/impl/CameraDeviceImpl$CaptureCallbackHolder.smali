@@ -56,48 +56,37 @@
     .end annotation
 
     .prologue
-    .line 1204
     .local p2, "requestList":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/camera2/CaptureRequest;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1206
     if-eqz p1, :cond_0
 
     if-nez p3, :cond_1
 
-    .line 1207
     :cond_0
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    .line 1208
-    const-string/jumbo v1, "Must have a valid handler and a valid callback"
+    const-string v1, "Must have a valid handler and a valid callback"
 
-    .line 1207
     invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 1210
     :cond_1
     iput-boolean p4, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallbackHolder;->mRepeating:Z
 
-    .line 1211
     iput-object p3, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallbackHolder;->mHandler:Landroid/os/Handler;
 
-    .line 1212
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0, p2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     iput-object v0, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallbackHolder;->mRequestList:Ljava/util/List;
 
-    .line 1213
     iput-object p1, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallbackHolder;->mCallback:Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallback;
 
-    .line 1214
     iput p5, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallbackHolder;->mSessionId:I
 
-    .line 1205
     return-void
 .end method
 
@@ -107,7 +96,6 @@
     .locals 1
 
     .prologue
-    .line 1222
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallbackHolder;->mCallback:Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallback;
 
     return-object v0
@@ -117,7 +105,6 @@
     .locals 1
 
     .prologue
-    .line 1246
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallbackHolder;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -127,7 +114,6 @@
     .locals 1
 
     .prologue
-    .line 1242
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallbackHolder;->getRequest(I)Landroid/hardware/camera2/CaptureRequest;
@@ -146,7 +132,6 @@
 
     const/4 v4, 0x0
 
-    .line 1226
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallbackHolder;->mRequestList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -155,18 +140,14 @@
 
     if-lt p1, v0, :cond_0
 
-    .line 1227
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    .line 1229
-    const-string/jumbo v1, "Requested subsequenceId %d is larger than request list size %d."
+    const-string v1, "Requested subsequenceId %d is larger than request list size %d."
 
-    .line 1228
     const/4 v2, 0x2
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    .line 1230
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -185,37 +166,29 @@
 
     aput-object v3, v2, v5
 
-    .line 1228
     invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1227
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 1232
     :cond_0
     if-gez p1, :cond_1
 
-    .line 1233
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    .line 1234
-    const-string/jumbo v1, "Requested subsequenceId %d is negative"
+    const-string v1, "Requested subsequenceId %d is negative"
 
-    .line 1233
     new-array v2, v5, [Ljava/lang/Object;
 
-    .line 1234
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
     aput-object v3, v2, v4
 
-    .line 1233
     invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -224,7 +197,6 @@
 
     throw v0
 
-    .line 1236
     :cond_1
     iget-object v0, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallbackHolder;->mRequestList:Ljava/util/List;
 
@@ -241,7 +213,6 @@
     .locals 1
 
     .prologue
-    .line 1250
     iget v0, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallbackHolder;->mSessionId:I
 
     return v0
@@ -251,7 +222,6 @@
     .locals 1
 
     .prologue
-    .line 1218
     iget-boolean v0, p0, Landroid/hardware/camera2/impl/CameraDeviceImpl$CaptureCallbackHolder;->mRepeating:Z
 
     return v0

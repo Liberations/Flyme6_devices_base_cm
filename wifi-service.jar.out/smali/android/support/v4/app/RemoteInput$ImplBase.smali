@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 215
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,14 +36,12 @@
     .param p3, "results"    # Landroid/os/Bundle;
 
     .prologue
-    .line 224
-    const-string/jumbo v0, "RemoteInput"
+    const-string v0, "RemoteInput"
 
-    const-string/jumbo v1, "RemoteInput is only supported from API Level 16"
+    const-string v1, "RemoteInput is only supported from API Level 16"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 223
     return-void
 .end method
 
@@ -53,14 +50,12 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 218
-    const-string/jumbo v0, "RemoteInput"
+    const-string v0, "RemoteInput"
 
-    const-string/jumbo v1, "RemoteInput is only supported from API Level 16"
+    const-string v1, "RemoteInput is only supported from API Level 16"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 219
     const/4 v0, 0x0
 
     return-object v0

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,13 +42,11 @@
     .end annotation
 
     .prologue
-    .line 68
     .local p0, "sizes":Ljava/util/List;, "Ljava/util/List<Landroid/hardware/Camera$Size;>;"
-    const-string/jumbo v0, "sizes must not be null"
+    const-string v0, "sizes must not be null"
 
     invoke-static {p0, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 70
     new-instance v0, Landroid/hardware/camera2/legacy/SizeAreaComparator;
 
     invoke-direct {v0}, Landroid/hardware/camera2/legacy/SizeAreaComparator;-><init>()V
@@ -75,41 +72,34 @@
 
     const/4 v9, -0x1
 
-    .line 39
-    const-string/jumbo v10, "size must not be null"
+    const-string v10, "size must not be null"
 
     invoke-static {p1, v10}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 40
-    const-string/jumbo v10, "size2 must not be null"
+    const-string v10, "size2 must not be null"
 
     invoke-static {p2, v10}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 42
     invoke-virtual {p1, p2}, Landroid/hardware/Camera$Size;->equals(Ljava/lang/Object;)Z
 
     move-result v10
 
     if-eqz v10, :cond_0
 
-    .line 43
     const/4 v8, 0x0
 
     return v8
 
-    .line 46
     :cond_0
     iget v10, p1, Landroid/hardware/Camera$Size;->width:I
 
     int-to-long v4, v10
 
-    .line 47
     .local v4, "width":J
     iget v10, p2, Landroid/hardware/Camera$Size;->width:I
 
     int-to-long v6, v10
 
-    .line 48
     .local v6, "width2":J
     iget v10, p1, Landroid/hardware/Camera$Size;->height:I
 
@@ -117,7 +107,6 @@
 
     mul-long v0, v4, v10
 
-    .line 49
     .local v0, "area":J
     iget v10, p2, Landroid/hardware/Camera$Size;->height:I
 
@@ -125,13 +114,11 @@
 
     mul-long v2, v6, v10
 
-    .line 51
     .local v2, "area2":J
     cmp-long v10, v0, v2
 
     if-nez v10, :cond_2
 
-    .line 52
     cmp-long v10, v4, v6
 
     if-lez v10, :cond_1
@@ -144,7 +131,6 @@
 
     goto :goto_0
 
-    .line 55
     :cond_2
     cmp-long v10, v0, v2
 
@@ -165,7 +151,6 @@
     .param p2, "size2"    # Ljava/lang/Object;
 
     .prologue
-    .line 38
     check-cast p1, Landroid/hardware/Camera$Size;
 
     .end local p1    # "size":Ljava/lang/Object;

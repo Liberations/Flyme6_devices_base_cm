@@ -20,14 +20,12 @@
 
     const/4 v2, 0x0
 
-    .line 22
     new-instance v0, Landroid/view/animation/PathInterpolator;
 
     invoke-direct {v0, v2, v2, v3, v4}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
 
     sput-object v0, Lcom/android/internal/transition/TransitionConstants;->LINEAR_OUT_SLOW_IN:Landroid/animation/TimeInterpolator;
 
-    .line 23
     new-instance v0, Landroid/view/animation/PathInterpolator;
 
     const v1, 0x3ecccccd    # 0.4f
@@ -36,7 +34,6 @@
 
     sput-object v0, Lcom/android/internal/transition/TransitionConstants;->FAST_OUT_SLOW_IN:Landroid/animation/TimeInterpolator;
 
-    .line 21
     return-void
 .end method
 
@@ -44,7 +41,6 @@
     .locals 0
 
     .prologue
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -36,15 +36,12 @@
     .locals 1
 
     .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/view/ActionMode;->mType:I
 
-    .line 34
     return-void
 .end method
 
@@ -69,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 82
     iget-object v0, p0, Landroid/view/ActionMode;->mTag:Ljava/lang/Object;
 
     return-object v0
@@ -82,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 156
     iget-boolean v0, p0, Landroid/view/ActionMode;->mTitleOptionalHint:Z
 
     return v0
@@ -92,7 +87,6 @@
     .locals 1
 
     .prologue
-    .line 194
     iget v0, p0, Landroid/view/ActionMode;->mType:I
 
     return v0
@@ -103,7 +97,6 @@
     .param p1, "duration"    # J
 
     .prologue
-    .line 226
     return-void
 .end method
 
@@ -114,7 +107,6 @@
     .locals 0
 
     .prologue
-    .line 213
     return-void
 .end method
 
@@ -122,7 +114,6 @@
     .locals 1
 
     .prologue
-    .line 164
     const/4 v0, 0x0
 
     return v0
@@ -132,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 282
     const/4 v0, 0x1
 
     return v0
@@ -143,7 +133,6 @@
     .param p1, "hasWindowFocus"    # Z
 
     .prologue
-    .line 271
     return-void
 .end method
 
@@ -161,10 +150,8 @@
     .param p1, "tag"    # Ljava/lang/Object;
 
     .prologue
-    .line 68
     iput-object p1, p0, Landroid/view/ActionMode;->mTag:Ljava/lang/Object;
 
-    .line 67
     return-void
 .end method
 
@@ -179,10 +166,8 @@
     .param p1, "titleOptional"    # Z
 
     .prologue
-    .line 145
     iput-boolean p1, p0, Landroid/view/ActionMode;->mTitleOptionalHint:Z
 
-    .line 144
     return-void
 .end method
 
@@ -191,10 +176,8 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 185
     iput p1, p0, Landroid/view/ActionMode;->mType:I
 
-    .line 184
     return-void
 .end method
 

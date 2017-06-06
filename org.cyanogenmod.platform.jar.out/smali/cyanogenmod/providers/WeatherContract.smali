@@ -22,8 +22,7 @@
     .locals 1
 
     .prologue
-    .line 34
-    const-string/jumbo v0, "content://com.cyanogenmod.weather"
+    const-string v0, "content://com.cyanogenmod.weather"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -31,7 +30,6 @@
 
     sput-object v0, Lcyanogenmod/providers/WeatherContract;->AUTHORITY_URI:Landroid/net/Uri;
 
-    .line 24
     return-void
 .end method
 
@@ -39,7 +37,6 @@
     .locals 0
 
     .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 163
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,7 +36,6 @@
     .locals 3
 
     .prologue
-    .line 186
     new-instance v0, Lcyanogenmod/app/LiveLockScreenInfo;
 
     iget-object v1, p0, Lcyanogenmod/app/LiveLockScreenInfo$Builder;->mComponent:Landroid/content/ComponentName;
@@ -54,25 +52,19 @@
     .param p1, "component"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 177
     if-nez p1, :cond_0
 
-    .line 178
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    .line 179
-    const-string/jumbo v1, "Cannot call setComponent with a null component"
+    const-string v1, "Cannot call setComponent with a null component"
 
-    .line 178
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 181
     :cond_0
     iput-object p1, p0, Lcyanogenmod/app/LiveLockScreenInfo$Builder;->mComponent:Landroid/content/ComponentName;
 
-    .line 182
     return-object p0
 .end method
 
@@ -83,14 +75,12 @@
     .prologue
     const/4 v3, -0x2
 
-    .line 168
     if-lt p1, v3, :cond_0
 
     const/4 v0, 0x2
 
     if-le p1, v0, :cond_1
 
-    .line 169
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -98,7 +88,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Invalid priorty given ("
+    const-string v2, "Invalid priorty given ("
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -108,7 +98,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "): "
+    const-string v2, "): "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -118,10 +108,8 @@
 
     move-result-object v1
 
-    .line 170
-    const-string/jumbo v2, " <= priority <= "
+    const-string v2, " <= priority <= "
 
-    .line 169
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -138,10 +126,8 @@
 
     throw v0
 
-    .line 172
     :cond_1
     iput p1, p0, Lcyanogenmod/app/LiveLockScreenInfo$Builder;->mPriority:I
 
-    .line 173
     return-object p0
 .end method

@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 29
     invoke-direct {p0}, Landroid/app/backup/BackupAgent;-><init>()V
 
     return-void
@@ -28,7 +27,6 @@
     .end annotation
 
     .prologue
-    .line 32
     return-void
 .end method
 
@@ -44,6 +42,5 @@
     .end annotation
 
     .prologue
-    .line 38
     return-void
 .end method

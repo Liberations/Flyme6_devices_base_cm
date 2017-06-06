@@ -25,13 +25,10 @@
     .param p2, "appContext"    # Landroid/content/Context;
 
     .prologue
-    .line 673
     invoke-direct {p0, p1}, Landroid/content/ContextWrapper;-><init>(Landroid/content/Context;)V
 
-    .line 674
     iput-object p2, p0, Lorg/cyanogenmod/internal/util/ThemeUtils$ThemedUiContext;->mAppContext:Landroid/content/Context;
 
-    .line 672
     return-void
 .end method
 
@@ -41,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 679
     iget-object v0, p0, Lorg/cyanogenmod/internal/util/ThemeUtils$ThemedUiContext;->mAppContext:Landroid/content/Context;
 
     return-object v0
@@ -51,7 +47,6 @@
     .locals 1
 
     .prologue
-    .line 684
     iget-object v0, p0, Lorg/cyanogenmod/internal/util/ThemeUtils$ThemedUiContext;->mAppContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;

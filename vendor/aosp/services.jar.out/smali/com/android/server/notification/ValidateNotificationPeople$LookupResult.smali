@@ -39,15 +39,12 @@
     .locals 4
 
     .prologue
-    .line 371
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 369
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mAffinity:F
 
-    .line 372
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -58,7 +55,6 @@
 
     iput-wide v0, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mExpireMillis:J
 
-    .line 371
     return-void
 .end method
 
@@ -66,7 +62,6 @@
     .locals 4
 
     .prologue
-    .line 403
     iget-wide v0, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mExpireMillis:J
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -92,7 +87,6 @@
     .locals 2
 
     .prologue
-    .line 407
     iget v0, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mAffinity:F
 
     const/4 v1, 0x0
@@ -120,19 +114,16 @@
     .locals 1
 
     .prologue
-    .line 411
     invoke-direct {p0}, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->isInvalid()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 412
     const/4 v0, 0x0
 
     return v0
 
-    .line 414
     :cond_0
     iget v0, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mAffinity:F
 
@@ -144,7 +135,6 @@
     .param p1, "cursor"    # Landroid/database/Cursor;
 
     .prologue
-    .line 376
     iget v4, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mAffinity:F
 
     const/high16 v5, 0x3f000000    # 0.5f
@@ -155,23 +145,19 @@
 
     iput v4, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mAffinity:F
 
-    .line 380
-    const-string/jumbo v4, "_id"
+    const-string v4, "_id"
 
     invoke-interface {p1, v4}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 381
     .local v1, "idIdx":I
     if-ltz v1, :cond_3
 
-    .line 382
     invoke-interface {p1, v1}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v0
 
-    .line 383
     .local v0, "id":I
     invoke-static {}, Lcom/android/server/notification/ValidateNotificationPeople;->-get0()Z
 
@@ -179,13 +165,13 @@
 
     if-eqz v4, :cond_0
 
-    const-string/jumbo v4, "ValidateNoPeople"
+    const-string v4, "ValidateNoPeople"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "contact _ID is: "
+    const-string v6, "contact _ID is: "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -201,20 +187,17 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 390
     :cond_0
     :goto_0
-    const-string/jumbo v4, "starred"
+    const-string v4, "starred"
 
     invoke-interface {p1, v4}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v3
 
-    .line 391
     .local v3, "starIdx":I
     if-ltz v3, :cond_5
 
-    .line 392
     invoke-interface {p1, v3}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v4
@@ -223,12 +206,10 @@
 
     const/4 v2, 0x1
 
-    .line 393
     .local v2, "isStarred":Z
     :goto_1
     if-eqz v2, :cond_1
 
-    .line 394
     iget v4, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mAffinity:F
 
     const/high16 v5, 0x3f800000    # 1.0f
@@ -239,7 +220,6 @@
 
     iput v4, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mAffinity:F
 
-    .line 396
     :cond_1
     invoke-static {}, Lcom/android/server/notification/ValidateNotificationPeople;->-get0()Z
 
@@ -247,13 +227,13 @@
 
     if-eqz v4, :cond_2
 
-    const-string/jumbo v4, "ValidateNoPeople"
+    const-string v4, "ValidateNoPeople"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "contact STARRED is: "
+    const-string v6, "contact STARRED is: "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -269,29 +249,25 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 375
     .end local v2    # "isStarred":Z
     :cond_2
     :goto_2
     return-void
 
-    .line 385
     .end local v0    # "id":I
     .end local v3    # "starIdx":I
     :cond_3
     const/4 v0, -0x1
 
-    .line 386
     .restart local v0    # "id":I
-    const-string/jumbo v4, "ValidateNoPeople"
+    const-string v4, "ValidateNoPeople"
 
-    const-string/jumbo v5, "invalid cursor: no _ID"
+    const-string v5, "invalid cursor: no _ID"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 392
     .restart local v3    # "starIdx":I
     :cond_4
     const/4 v2, 0x0
@@ -299,7 +275,6 @@
     .restart local v2    # "isStarred":Z
     goto :goto_1
 
-    .line 398
     .end local v2    # "isStarred":Z
     :cond_5
     invoke-static {}, Lcom/android/server/notification/ValidateNotificationPeople;->-get0()Z
@@ -308,9 +283,9 @@
 
     if-eqz v4, :cond_2
 
-    const-string/jumbo v4, "ValidateNoPeople"
+    const-string v4, "ValidateNoPeople"
 
-    const-string/jumbo v5, "invalid cursor: no STARRED"
+    const-string v5, "invalid cursor: no STARRED"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 

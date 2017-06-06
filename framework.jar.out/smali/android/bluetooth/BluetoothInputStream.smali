@@ -13,13 +13,10 @@
     .param p1, "s"    # Landroid/bluetooth/BluetoothSocket;
 
     .prologue
-    .line 32
     invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
 
-    .line 33
     iput-object p1, p0, Landroid/bluetooth/BluetoothInputStream;->mSocket:Landroid/bluetooth/BluetoothSocket;
 
-    .line 32
     return-void
 .end method
 
@@ -34,7 +31,6 @@
     .end annotation
 
     .prologue
-    .line 40
     iget-object v0, p0, Landroid/bluetooth/BluetoothInputStream;->mSocket:Landroid/bluetooth/BluetoothSocket;
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothSocket;->available()I
@@ -53,12 +49,10 @@
     .end annotation
 
     .prologue
-    .line 44
     iget-object v0, p0, Landroid/bluetooth/BluetoothInputStream;->mSocket:Landroid/bluetooth/BluetoothSocket;
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothSocket;->close()V
 
-    .line 43
     return-void
 .end method
 
@@ -75,10 +69,8 @@
 
     const/4 v3, 0x1
 
-    .line 59
     new-array v0, v3, [B
 
-    .line 60
     .local v0, "b":[B
     iget-object v2, p0, Landroid/bluetooth/BluetoothInputStream;->mSocket:Landroid/bluetooth/BluetoothSocket;
 
@@ -86,18 +78,15 @@
 
     move-result v1
 
-    .line 61
     .local v1, "ret":I
     if-ne v1, v3, :cond_0
 
-    .line 62
     aget-byte v2, v0, v4
 
     and-int/lit16 v2, v2, 0xff
 
     return v2
 
-    .line 64
     :cond_0
     const/4 v2, -0x1
 
@@ -116,19 +105,16 @@
     .end annotation
 
     .prologue
-    .line 90
     if-nez p1, :cond_0
 
-    .line 91
     new-instance v0, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v1, "byte array is null"
+    const-string v1, "byte array is null"
 
     invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 93
     :cond_0
     or-int v0, p2, p3
 
@@ -140,17 +126,15 @@
 
     if-le p3, v0, :cond_2
 
-    .line 94
     :cond_1
     new-instance v0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
-    const-string/jumbo v1, "invalid offset or length"
+    const-string v1, "invalid offset or length"
 
     invoke-direct {v0, v1}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 96
     :cond_2
     iget-object v0, p0, Landroid/bluetooth/BluetoothInputStream;->mSocket:Landroid/bluetooth/BluetoothSocket;
 

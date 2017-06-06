@@ -24,7 +24,6 @@
     .param p1, "this$2"    # Landroid/os/BatteryStats$Uid$Pkg;
 
     .prologue
-    .line 582
     iput-object p1, p0, Landroid/os/BatteryStats$Uid$Pkg$Serv;->this$2:Landroid/os/BatteryStats$Uid$Pkg;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

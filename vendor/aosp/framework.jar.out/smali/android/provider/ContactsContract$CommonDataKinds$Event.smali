@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 6912
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,7 +48,6 @@
     .param p2, "label"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 6951
     if-nez p1, :cond_0
 
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -58,7 +56,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 6954
     :cond_0
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -68,7 +65,6 @@
 
     move-result v0
 
-    .line 6955
     .local v0, "labelRes":I
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -76,7 +72,6 @@
 
     return-object v1
 
-    .line 6952
     .end local v0    # "labelRes":I
     :cond_1
     return-object p2
@@ -87,15 +82,12 @@
     .param p0, "type"    # Ljava/lang/Integer;
 
     .prologue
-    const v1, 0x10402b0
+    const v1, 0x10402bb
 
-    .line 6932
     if-nez p0, :cond_0
 
-    .line 6933
     return v1
 
-    .line 6935
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
@@ -103,28 +95,23 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 6940
-    const v0, 0x10402ad
+    const v0, 0x10402b8
 
     return v0
 
-    .line 6937
     :pswitch_0
-    const v0, 0x10402af
+    const v0, 0x10402ba
 
     return v0
 
-    .line 6938
     :pswitch_1
-    const v0, 0x10402ae
+    const v0, 0x10402b9
 
     return v0
 
-    .line 6939
     :pswitch_2
     return v1
 
-    .line 6935
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

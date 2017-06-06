@@ -30,7 +30,6 @@
     .param p2, "val$mgr"    # Landroid/app/IActivityManager;
 
     .prologue
-    .line 382
     iput-object p1, p0, Landroid/content/BroadcastReceiver$PendingResult$1;->this$1:Landroid/content/BroadcastReceiver$PendingResult;
 
     iput-object p2, p0, Landroid/content/BroadcastReceiver$PendingResult$1;->val$mgr:Landroid/app/IActivityManager;
@@ -46,13 +45,11 @@
     .locals 2
 
     .prologue
-    .line 386
     iget-object v0, p0, Landroid/content/BroadcastReceiver$PendingResult$1;->this$1:Landroid/content/BroadcastReceiver$PendingResult;
 
     iget-object v1, p0, Landroid/content/BroadcastReceiver$PendingResult$1;->val$mgr:Landroid/app/IActivityManager;
 
     invoke-virtual {v0, v1}, Landroid/content/BroadcastReceiver$PendingResult;->sendFinished(Landroid/app/IActivityManager;)V
 
-    .line 383
     return-void
 .end method

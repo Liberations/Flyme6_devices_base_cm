@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 154
     invoke-direct {p0}, Landroid/support/v4/view/ViewParentCompat$ViewParentCompatKitKatImpl;-><init>()V
 
     return-void
@@ -36,7 +35,6 @@
     .param p5, "consumed"    # Z
 
     .prologue
-    .line 190
     invoke-static {p1, p2, p3, p4, p5}, Landroid/support/v4/view/ViewParentCompatLollipop;->onNestedFling(Landroid/view/ViewParent;Landroid/view/View;FFZ)Z
 
     move-result v0
@@ -52,7 +50,6 @@
     .param p4, "velocityY"    # F
 
     .prologue
-    .line 197
     invoke-static {p1, p2, p3, p4}, Landroid/support/v4/view/ViewParentCompatLollipop;->onNestedPreFling(Landroid/view/ViewParent;Landroid/view/View;FF)Z
 
     move-result v0
@@ -69,10 +66,8 @@
     .param p5, "consumed"    # [I
 
     .prologue
-    .line 184
     invoke-static {p1, p2, p3, p4, p5}, Landroid/support/v4/view/ViewParentCompatLollipop;->onNestedPreScroll(Landroid/view/ViewParent;Landroid/view/View;II[I)V
 
-    .line 183
     return-void
 .end method
 
@@ -86,10 +81,8 @@
     .param p6, "dyUnconsumed"    # I
 
     .prologue
-    .line 177
     invoke-static/range {p1 .. p6}, Landroid/support/v4/view/ViewParentCompatLollipop;->onNestedScroll(Landroid/view/ViewParent;Landroid/view/View;IIII)V
 
-    .line 176
     return-void
 .end method
 
@@ -101,10 +94,8 @@
     .param p4, "nestedScrollAxes"    # I
 
     .prologue
-    .line 165
     invoke-static {p1, p2, p3, p4}, Landroid/support/v4/view/ViewParentCompatLollipop;->onNestedScrollAccepted(Landroid/view/ViewParent;Landroid/view/View;Landroid/view/View;I)V
 
-    .line 164
     return-void
 .end method
 
@@ -116,7 +107,6 @@
     .param p4, "nestedScrollAxes"    # I
 
     .prologue
-    .line 158
     invoke-static {p1, p2, p3, p4}, Landroid/support/v4/view/ViewParentCompatLollipop;->onStartNestedScroll(Landroid/view/ViewParent;Landroid/view/View;Landroid/view/View;I)Z
 
     move-result v0
@@ -130,9 +120,7 @@
     .param p2, "target"    # Landroid/view/View;
 
     .prologue
-    .line 171
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewParentCompatLollipop;->onStopNestedScroll(Landroid/view/ViewParent;Landroid/view/View;)V
 
-    .line 170
     return-void
 .end method

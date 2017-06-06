@@ -42,7 +42,6 @@
     .param p6, "val$userId"    # I
 
     .prologue
-    .line 410
     iput-object p1, p0, Lcom/android/server/dreams/DreamManagerService$5;->this$0:Lcom/android/server/dreams/DreamManagerService;
 
     iput-object p2, p0, Lcom/android/server/dreams/DreamManagerService$5;->val$newToken:Landroid/os/Binder;
@@ -66,7 +65,6 @@
     .locals 6
 
     .prologue
-    .line 413
     iget-object v0, p0, Lcom/android/server/dreams/DreamManagerService$5;->this$0:Lcom/android/server/dreams/DreamManagerService;
 
     invoke-static {v0}, Lcom/android/server/dreams/DreamManagerService;->-get1(Lcom/android/server/dreams/DreamManagerService;)Lcom/android/server/dreams/DreamController;
@@ -85,6 +83,5 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/dreams/DreamController;->startDream(Landroid/os/Binder;Landroid/content/ComponentName;ZZI)V
 
-    .line 412
     return-void
 .end method

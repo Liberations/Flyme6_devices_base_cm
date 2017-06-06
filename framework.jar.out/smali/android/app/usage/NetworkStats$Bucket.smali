@@ -139,7 +139,6 @@
     .locals 0
 
     .prologue
-    .line 179
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -150,33 +149,27 @@
     .param p0, "networkStatsSet"    # I
 
     .prologue
-    .line 163
     packed-switch p0, :pswitch_data_0
 
-    .line 168
     const/4 v0, 0x0
 
     return v0
 
-    .line 164
     :pswitch_0
     const/4 v0, -0x1
 
     return v0
 
-    .line 165
     :pswitch_1
     const/4 v0, 0x1
 
     return v0
 
-    .line 166
     :pswitch_2
     const/4 v0, 0x2
 
     return v0
 
-    .line 163
     nop
 
     :pswitch_data_0
@@ -192,25 +185,20 @@
     .param p0, "uid"    # I
 
     .prologue
-    .line 172
     packed-switch p0, :pswitch_data_0
 
-    .line 176
     return p0
 
-    .line 173
     :pswitch_0
     const/4 v0, -0x4
 
     return v0
 
-    .line 174
     :pswitch_1
     const/4 v0, -0x5
 
     return v0
 
-    .line 172
     :pswitch_data_0
     .packed-switch -0x5
         :pswitch_1
@@ -224,7 +212,6 @@
     .locals 2
 
     .prologue
-    .line 223
     iget-wide v0, p0, Landroid/app/usage/NetworkStats$Bucket;->mEndTimeStamp:J
 
     return-wide v0
@@ -234,7 +221,6 @@
     .locals 2
 
     .prologue
-    .line 232
     iget-wide v0, p0, Landroid/app/usage/NetworkStats$Bucket;->mRxBytes:J
 
     return-wide v0
@@ -244,7 +230,6 @@
     .locals 2
 
     .prologue
-    .line 250
     iget-wide v0, p0, Landroid/app/usage/NetworkStats$Bucket;->mRxPackets:J
 
     return-wide v0
@@ -254,7 +239,6 @@
     .locals 2
 
     .prologue
-    .line 214
     iget-wide v0, p0, Landroid/app/usage/NetworkStats$Bucket;->mBeginTimeStamp:J
 
     return-wide v0
@@ -264,7 +248,6 @@
     .locals 1
 
     .prologue
-    .line 205
     iget v0, p0, Landroid/app/usage/NetworkStats$Bucket;->mState:I
 
     return v0
@@ -274,7 +257,6 @@
     .locals 2
 
     .prologue
-    .line 241
     iget-wide v0, p0, Landroid/app/usage/NetworkStats$Bucket;->mTxBytes:J
 
     return-wide v0
@@ -284,7 +266,6 @@
     .locals 2
 
     .prologue
-    .line 259
     iget-wide v0, p0, Landroid/app/usage/NetworkStats$Bucket;->mTxPackets:J
 
     return-wide v0
@@ -294,7 +275,6 @@
     .locals 1
 
     .prologue
-    .line 192
     iget v0, p0, Landroid/app/usage/NetworkStats$Bucket;->mUid:I
 
     return v0

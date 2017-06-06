@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 369
     invoke-direct {p0}, Landroid/app/SystemServiceRegistry$CachedServiceFetcher;-><init>()V
 
     return-void
@@ -41,31 +40,26 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 372
-    const-string/jumbo v2, "power"
+    const-string v2, "power"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 373
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Landroid/os/IPowerManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/IPowerManager;
 
     move-result-object v1
 
-    .line 374
     .local v1, "service":Landroid/os/IPowerManager;
     if-nez v1, :cond_0
 
-    .line 375
-    const-string/jumbo v2, "SystemServiceRegistry"
+    const-string v2, "SystemServiceRegistry"
 
-    const-string/jumbo v3, "Failed to get power manager service."
+    const-string v3, "Failed to get power manager service."
 
     invoke-static {v2, v3}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 377
     :cond_0
     new-instance v2, Landroid/os/PowerManager;
 
@@ -73,14 +67,12 @@
 
     move-result-object v3
 
-    .line 378
     iget-object v4, p1, Landroid/app/ContextImpl;->mMainThread:Landroid/app/ActivityThread;
 
     invoke-virtual {v4}, Landroid/app/ActivityThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v4
 
-    .line 377
     invoke-direct {v2, v3, v1, v4}, Landroid/os/PowerManager;-><init>(Landroid/content/Context;Landroid/os/IPowerManager;Landroid/os/Handler;)V
 
     return-object v2
@@ -91,7 +83,6 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 371
     invoke-virtual {p0, p1}, Landroid/app/SystemServiceRegistry$28;->createService(Landroid/app/ContextImpl;)Landroid/os/PowerManager;
 
     move-result-object v0

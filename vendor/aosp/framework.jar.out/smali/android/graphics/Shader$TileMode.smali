@@ -48,37 +48,30 @@
 
     const/4 v2, 0x0
 
-    .line 43
     new-instance v0, Landroid/graphics/Shader$TileMode;
 
-    const-string/jumbo v1, "CLAMP"
+    const-string v1, "CLAMP"
 
     invoke-direct {v0, v1, v2, v2}, Landroid/graphics/Shader$TileMode;-><init>(Ljava/lang/String;II)V
 
-    .line 47
     sput-object v0, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
 
-    .line 48
     new-instance v0, Landroid/graphics/Shader$TileMode;
 
-    const-string/jumbo v1, "REPEAT"
+    const-string v1, "REPEAT"
 
     invoke-direct {v0, v1, v3, v3}, Landroid/graphics/Shader$TileMode;-><init>(Ljava/lang/String;II)V
 
-    .line 51
     sput-object v0, Landroid/graphics/Shader$TileMode;->REPEAT:Landroid/graphics/Shader$TileMode;
 
-    .line 52
     new-instance v0, Landroid/graphics/Shader$TileMode;
 
-    const-string/jumbo v1, "MIRROR"
+    const-string v1, "MIRROR"
 
     invoke-direct {v0, v1, v4, v4}, Landroid/graphics/Shader$TileMode;-><init>(Ljava/lang/String;II)V
 
-    .line 56
     sput-object v0, Landroid/graphics/Shader$TileMode;->MIRROR:Landroid/graphics/Shader$TileMode;
 
-    .line 42
     const/4 v0, 0x3
 
     new-array v0, v0, [Landroid/graphics/Shader$TileMode;
@@ -105,13 +98,10 @@
     .param p3, "nativeInt"    # I
 
     .prologue
-    .line 58
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 59
     iput p3, p0, Landroid/graphics/Shader$TileMode;->nativeInt:I
 
-    .line 58
     return-void
 .end method
 
@@ -120,7 +110,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 42
     const-class v0, Landroid/graphics/Shader$TileMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -136,7 +125,6 @@
     .locals 1
 
     .prologue
-    .line 42
     sget-object v0, Landroid/graphics/Shader$TileMode;->$VALUES:[Landroid/graphics/Shader$TileMode;
 
     return-object v0

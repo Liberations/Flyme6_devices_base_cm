@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Landroid/service/voice/VoiceInteractionSessionService;
 
     .prologue
-    .line 46
     iput-object p1, p0, Landroid/service/voice/VoiceInteractionSessionService$1;->this$0:Landroid/service/voice/VoiceInteractionSessionService;
 
     invoke-direct {p0}, Landroid/service/voice/IVoiceInteractionSessionService$Stub;-><init>()V
@@ -41,7 +40,6 @@
     .param p3, "startFlags"    # I
 
     .prologue
-    .line 48
     iget-object v0, p0, Landroid/service/voice/VoiceInteractionSessionService$1;->this$0:Landroid/service/voice/VoiceInteractionSessionService;
 
     iget-object v0, v0, Landroid/service/voice/VoiceInteractionSessionService;->mHandlerCaller:Lcom/android/internal/os/HandlerCaller;
@@ -58,6 +56,5 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/os/HandlerCaller;->sendMessage(Landroid/os/Message;)V
 
-    .line 47
     return-void
 .end method

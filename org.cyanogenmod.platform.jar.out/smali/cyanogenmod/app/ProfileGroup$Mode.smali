@@ -44,10 +44,9 @@
 
     const/4 v2, 0x0
 
-    .line 319
     new-instance v0, Lcyanogenmod/app/ProfileGroup$Mode;
 
-    const-string/jumbo v1, "SUPPRESS"
+    const-string v1, "SUPPRESS"
 
     invoke-direct {v0, v1, v2}, Lcyanogenmod/app/ProfileGroup$Mode;-><init>(Ljava/lang/String;I)V
 
@@ -55,7 +54,7 @@
 
     new-instance v0, Lcyanogenmod/app/ProfileGroup$Mode;
 
-    const-string/jumbo v1, "DEFAULT"
+    const-string v1, "DEFAULT"
 
     invoke-direct {v0, v1, v3}, Lcyanogenmod/app/ProfileGroup$Mode;-><init>(Ljava/lang/String;I)V
 
@@ -63,13 +62,12 @@
 
     new-instance v0, Lcyanogenmod/app/ProfileGroup$Mode;
 
-    const-string/jumbo v1, "OVERRIDE"
+    const-string v1, "OVERRIDE"
 
     invoke-direct {v0, v1, v4}, Lcyanogenmod/app/ProfileGroup$Mode;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcyanogenmod/app/ProfileGroup$Mode;->OVERRIDE:Lcyanogenmod/app/ProfileGroup$Mode;
 
-    .line 318
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcyanogenmod/app/ProfileGroup$Mode;
@@ -95,7 +93,6 @@
     .locals 0
 
     .prologue
-    .line 318
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -106,7 +103,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 318
     const-class v0, Lcyanogenmod/app/ProfileGroup$Mode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -122,7 +118,6 @@
     .locals 1
 
     .prologue
-    .line 318
     sget-object v0, Lcyanogenmod/app/ProfileGroup$Mode;->$VALUES:[Lcyanogenmod/app/ProfileGroup$Mode;
 
     return-object v0

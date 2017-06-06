@@ -33,7 +33,6 @@
     .param p3, "val$conference"    # Landroid/telecom/RemoteConference;
 
     .prologue
-    .line 266
     iput-object p1, p0, Landroid/telecom/RemoteConference$6;->this$0:Landroid/telecom/RemoteConference;
 
     iput-object p2, p0, Landroid/telecom/RemoteConference$6;->val$callback:Landroid/telecom/RemoteConference$Callback;
@@ -51,10 +50,8 @@
     .locals 3
 
     .prologue
-    .line 269
     iget-object v0, p0, Landroid/telecom/RemoteConference$6;->val$callback:Landroid/telecom/RemoteConference$Callback;
 
-    .line 270
     iget-object v1, p0, Landroid/telecom/RemoteConference$6;->val$conference:Landroid/telecom/RemoteConference;
 
     iget-object v2, p0, Landroid/telecom/RemoteConference$6;->this$0:Landroid/telecom/RemoteConference;
@@ -63,9 +60,7 @@
 
     move-result v2
 
-    .line 269
     invoke-virtual {v0, v1, v2}, Landroid/telecom/RemoteConference$Callback;->onConnectionPropertiesChanged(Landroid/telecom/RemoteConference;I)V
 
-    .line 268
     return-void
 .end method

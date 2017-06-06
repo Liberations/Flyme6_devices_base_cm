@@ -46,27 +46,20 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 555
     iput-object p1, p0, Lcom/android/server/tv/TvInputHardwareManager$Connection;->this$0:Lcom/android/server/tv/TvInputHardwareManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 548
     iput-object v0, p0, Lcom/android/server/tv/TvInputHardwareManager$Connection;->mHardware:Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;
 
-    .line 550
     iput-object v0, p0, Lcom/android/server/tv/TvInputHardwareManager$Connection;->mConfigs:[Landroid/media/tv/TvStreamConfig;
 
-    .line 551
     iput-object v0, p0, Lcom/android/server/tv/TvInputHardwareManager$Connection;->mCallingUid:Ljava/lang/Integer;
 
-    .line 552
     iput-object v0, p0, Lcom/android/server/tv/TvInputHardwareManager$Connection;->mResolvedUserId:Ljava/lang/Integer;
 
-    .line 556
     iput-object p2, p0, Lcom/android/server/tv/TvInputHardwareManager$Connection;->mHardwareInfo:Landroid/media/tv/TvInputHardwareInfo;
 
-    .line 555
     return-void
 .end method
 
@@ -76,7 +69,6 @@
     .locals 7
 
     .prologue
-    .line 633
     iget-object v0, p0, Lcom/android/server/tv/TvInputHardwareManager$Connection;->this$0:Lcom/android/server/tv/TvInputHardwareManager;
 
     invoke-static {v0}, Lcom/android/server/tv/TvInputHardwareManager;->-get10(Lcom/android/server/tv/TvInputHardwareManager;)Ljava/lang/Object;
@@ -85,7 +77,6 @@
 
     monitor-enter v6
 
-    .line 634
     const/4 v1, 0x0
 
     const/4 v2, 0x0
@@ -105,10 +96,8 @@
 
     monitor-exit v6
 
-    .line 632
     return-void
 
-    .line 633
     :catchall_0
     move-exception v0
 
@@ -121,7 +110,6 @@
     .locals 1
 
     .prologue
-    .line 608
     iget-object v0, p0, Lcom/android/server/tv/TvInputHardwareManager$Connection;->mCallback:Landroid/media/tv/ITvInputHardwareCallback;
 
     return-object v0
@@ -131,7 +119,6 @@
     .locals 1
 
     .prologue
-    .line 616
     iget-object v0, p0, Lcom/android/server/tv/TvInputHardwareManager$Connection;->mCallingUid:Ljava/lang/Integer;
 
     return-object v0
@@ -141,7 +128,6 @@
     .locals 1
 
     .prologue
-    .line 612
     iget-object v0, p0, Lcom/android/server/tv/TvInputHardwareManager$Connection;->mConfigs:[Landroid/media/tv/TvStreamConfig;
 
     return-object v0
@@ -151,7 +137,6 @@
     .locals 1
 
     .prologue
-    .line 604
     iget-object v0, p0, Lcom/android/server/tv/TvInputHardwareManager$Connection;->mHardware:Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;
 
     return-object v0
@@ -161,7 +146,6 @@
     .locals 1
 
     .prologue
-    .line 592
     iget-object v0, p0, Lcom/android/server/tv/TvInputHardwareManager$Connection;->mHardwareInfo:Landroid/media/tv/TvInputHardwareInfo;
 
     return-object v0
@@ -171,7 +155,6 @@
     .locals 1
 
     .prologue
-    .line 600
     iget-object v0, p0, Lcom/android/server/tv/TvInputHardwareManager$Connection;->mHardware:Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;
 
     return-object v0
@@ -181,7 +164,6 @@
     .locals 1
 
     .prologue
-    .line 596
     iget-object v0, p0, Lcom/android/server/tv/TvInputHardwareManager$Connection;->mInfo:Landroid/media/tv/TvInputInfo;
 
     return-object v0
@@ -191,7 +173,6 @@
     .locals 1
 
     .prologue
-    .line 628
     iget-object v0, p0, Lcom/android/server/tv/TvInputHardwareManager$Connection;->mOnFirstFrameCaptured:Ljava/lang/Runnable;
 
     return-object v0
@@ -201,7 +182,6 @@
     .locals 1
 
     .prologue
-    .line 620
     iget-object v0, p0, Lcom/android/server/tv/TvInputHardwareManager$Connection;->mResolvedUserId:Ljava/lang/Integer;
 
     return-object v0
@@ -218,12 +198,10 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 563
     iget-object v1, p0, Lcom/android/server/tv/TvInputHardwareManager$Connection;->mHardware:Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;
 
     if-eqz v1, :cond_0
 
-    .line 565
     :try_start_0
     iget-object v1, p0, Lcom/android/server/tv/TvInputHardwareManager$Connection;->mCallback:Landroid/media/tv/ITvInputHardwareCallback;
 
@@ -231,32 +209,24 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 569
     :goto_0
     iget-object v1, p0, Lcom/android/server/tv/TvInputHardwareManager$Connection;->mHardware:Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;
 
     invoke-virtual {v1}, Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;->release()V
 
-    .line 571
     :cond_0
     iput-object p1, p0, Lcom/android/server/tv/TvInputHardwareManager$Connection;->mHardware:Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;
 
-    .line 572
     iput-object p2, p0, Lcom/android/server/tv/TvInputHardwareManager$Connection;->mCallback:Landroid/media/tv/ITvInputHardwareCallback;
 
-    .line 573
     iput-object p3, p0, Lcom/android/server/tv/TvInputHardwareManager$Connection;->mInfo:Landroid/media/tv/TvInputInfo;
 
-    .line 574
     iput-object p4, p0, Lcom/android/server/tv/TvInputHardwareManager$Connection;->mCallingUid:Ljava/lang/Integer;
 
-    .line 575
     iput-object p5, p0, Lcom/android/server/tv/TvInputHardwareManager$Connection;->mResolvedUserId:Ljava/lang/Integer;
 
-    .line 576
     iput-object v3, p0, Lcom/android/server/tv/TvInputHardwareManager$Connection;->mOnFirstFrameCaptured:Ljava/lang/Runnable;
 
-    .line 578
     iget-object v1, p0, Lcom/android/server/tv/TvInputHardwareManager$Connection;->mHardware:Lcom/android/server/tv/TvInputHardwareManager$TvInputHardwareImpl;
 
     if-eqz v1, :cond_1
@@ -265,7 +235,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 580
     :try_start_1
     iget-object v1, p0, Lcom/android/server/tv/TvInputHardwareManager$Connection;->mCallback:Landroid/media/tv/ITvInputHardwareCallback;
 
@@ -277,39 +246,34 @@
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 562
     :cond_1
     :goto_1
     return-void
 
-    .line 566
     :catch_0
     move-exception v0
 
-    .line 567
     .local v0, "e":Landroid/os/RemoteException;
     invoke-static {}, Lcom/android/server/tv/TvInputHardwareManager;->-get0()Ljava/lang/String;
 
     move-result-object v1
 
-    const-string/jumbo v2, "error in Connection::resetLocked"
+    const-string v2, "error in Connection::resetLocked"
 
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
-    .line 581
     .end local v0    # "e":Landroid/os/RemoteException;
     :catch_1
     move-exception v0
 
-    .line 582
     .restart local v0    # "e":Landroid/os/RemoteException;
     invoke-static {}, Lcom/android/server/tv/TvInputHardwareManager;->-get0()Ljava/lang/String;
 
     move-result-object v1
 
-    const-string/jumbo v2, "error in Connection::resetLocked"
+    const-string v2, "error in Connection::resetLocked"
 
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -321,10 +285,8 @@
     .param p1, "runnable"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 624
     iput-object p1, p0, Lcom/android/server/tv/TvInputHardwareManager$Connection;->mOnFirstFrameCaptured:Ljava/lang/Runnable;
 
-    .line 623
     return-void
 .end method
 
@@ -333,9 +295,7 @@
     .param p1, "configs"    # [Landroid/media/tv/TvStreamConfig;
 
     .prologue
-    .line 588
     iput-object p1, p0, Lcom/android/server/tv/TvInputHardwareManager$Connection;->mConfigs:[Landroid/media/tv/TvStreamConfig;
 
-    .line 587
     return-void
 .end method

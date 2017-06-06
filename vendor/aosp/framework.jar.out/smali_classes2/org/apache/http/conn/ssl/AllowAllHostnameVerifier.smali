@@ -13,7 +13,6 @@
     .locals 0
 
     .prologue
-    .line 45
     invoke-direct {p0}, Lorg/apache/http/conn/ssl/AbstractVerifier;-><init>()V
 
     return-void
@@ -25,8 +24,7 @@
     .locals 1
 
     .prologue
-    .line 56
-    const-string/jumbo v0, "ALLOW_ALL"
+    const-string v0, "ALLOW_ALL"
 
     return-object v0
 .end method
@@ -38,6 +36,5 @@
     .param p3, "subjectAlts"    # [Ljava/lang/String;
 
     .prologue
-    .line 50
     return-void
 .end method

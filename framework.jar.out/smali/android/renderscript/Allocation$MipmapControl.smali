@@ -48,37 +48,30 @@
 
     const/4 v2, 0x0
 
-    .line 220
     new-instance v0, Landroid/renderscript/Allocation$MipmapControl;
 
-    const-string/jumbo v1, "MIPMAP_NONE"
+    const-string v1, "MIPMAP_NONE"
 
     invoke-direct {v0, v1, v2, v2}, Landroid/renderscript/Allocation$MipmapControl;-><init>(Ljava/lang/String;II)V
 
-    .line 224
     sput-object v0, Landroid/renderscript/Allocation$MipmapControl;->MIPMAP_NONE:Landroid/renderscript/Allocation$MipmapControl;
 
-    .line 226
     new-instance v0, Landroid/renderscript/Allocation$MipmapControl;
 
-    const-string/jumbo v1, "MIPMAP_FULL"
+    const-string v1, "MIPMAP_FULL"
 
     invoke-direct {v0, v1, v3, v3}, Landroid/renderscript/Allocation$MipmapControl;-><init>(Ljava/lang/String;II)V
 
-    .line 231
     sput-object v0, Landroid/renderscript/Allocation$MipmapControl;->MIPMAP_FULL:Landroid/renderscript/Allocation$MipmapControl;
 
-    .line 233
     new-instance v0, Landroid/renderscript/Allocation$MipmapControl;
 
-    const-string/jumbo v1, "MIPMAP_ON_SYNC_TO_TEXTURE"
+    const-string v1, "MIPMAP_ON_SYNC_TO_TEXTURE"
 
     invoke-direct {v0, v1, v4, v4}, Landroid/renderscript/Allocation$MipmapControl;-><init>(Ljava/lang/String;II)V
 
-    .line 238
     sput-object v0, Landroid/renderscript/Allocation$MipmapControl;->MIPMAP_ON_SYNC_TO_TEXTURE:Landroid/renderscript/Allocation$MipmapControl;
 
-    .line 219
     const/4 v0, 0x3
 
     new-array v0, v0, [Landroid/renderscript/Allocation$MipmapControl;
@@ -105,13 +98,10 @@
     .param p3, "id"    # I
 
     .prologue
-    .line 241
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 242
     iput p3, p0, Landroid/renderscript/Allocation$MipmapControl;->mID:I
 
-    .line 241
     return-void
 .end method
 
@@ -120,7 +110,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 219
     const-class v0, Landroid/renderscript/Allocation$MipmapControl;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -136,7 +125,6 @@
     .locals 1
 
     .prologue
-    .line 219
     sget-object v0, Landroid/renderscript/Allocation$MipmapControl;->$VALUES:[Landroid/renderscript/Allocation$MipmapControl;
 
     return-object v0

@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 91
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 101
     return-void
 .end method
 
@@ -40,7 +38,6 @@
     .param p1, "token"    # Landroid/os/IBinder;
 
     .prologue
-    .line 119
     return-void
 .end method
 
@@ -48,7 +45,6 @@
     .locals 0
 
     .prologue
-    .line 96
     return-void
 .end method
 
@@ -60,6 +56,5 @@
     .param p4, "closeAnimation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 112
     return-void
 .end method

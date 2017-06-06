@@ -28,12 +28,10 @@
     .locals 1
 
     .prologue
-    .line 1227
-    const-string/jumbo v0, "android.type.money"
+    const-string v0, "android.type.money"
 
     invoke-direct {p0, v0}, Landroid/text/style/TtsSpan$SemioticClassBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 1226
     return-void
 .end method
 
@@ -44,8 +42,7 @@
     .param p1, "currency"    # Ljava/lang/String;
 
     .prologue
-    .line 1265
-    const-string/jumbo v0, "android.arg.money"
+    const-string v0, "android.arg.money"
 
     invoke-virtual {p0, v0, p1}, Landroid/text/style/TtsSpan$MoneyBuilder;->setStringArgument(Ljava/lang/String;Ljava/lang/String;)Landroid/text/style/TtsSpan$Builder;
 
@@ -61,8 +58,7 @@
     .param p1, "fractionalPart"    # Ljava/lang/String;
 
     .prologue
-    .line 1256
-    const-string/jumbo v0, "android.arg.fractional_part"
+    const-string v0, "android.arg.fractional_part"
 
     invoke-virtual {p0, v0, p1}, Landroid/text/style/TtsSpan$MoneyBuilder;->setStringArgument(Ljava/lang/String;Ljava/lang/String;)Landroid/text/style/TtsSpan$Builder;
 
@@ -78,7 +74,6 @@
     .param p1, "integerPart"    # J
 
     .prologue
-    .line 1237
     invoke-static {p1, p2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v0
@@ -95,8 +90,7 @@
     .param p1, "integerPart"    # Ljava/lang/String;
 
     .prologue
-    .line 1247
-    const-string/jumbo v0, "android.arg.integer_part"
+    const-string v0, "android.arg.integer_part"
 
     invoke-virtual {p0, v0, p1}, Landroid/text/style/TtsSpan$MoneyBuilder;->setStringArgument(Ljava/lang/String;Ljava/lang/String;)Landroid/text/style/TtsSpan$Builder;
 
@@ -112,8 +106,7 @@
     .param p1, "quantity"    # Ljava/lang/String;
 
     .prologue
-    .line 1274
-    const-string/jumbo v0, "android.arg.quantity"
+    const-string v0, "android.arg.quantity"
 
     invoke-virtual {p0, v0, p1}, Landroid/text/style/TtsSpan$MoneyBuilder;->setStringArgument(Ljava/lang/String;Ljava/lang/String;)Landroid/text/style/TtsSpan$Builder;
 

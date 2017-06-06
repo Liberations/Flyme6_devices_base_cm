@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,14 +25,13 @@
     .param p2, "status"    # I
 
     .prologue
-    .line 46
-    const-string/jumbo v0, "BluetoothHealthCallback"
+    const-string v0, "BluetoothHealthCallback"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onHealthAppConfigurationStatusChange: "
+    const-string v2, "onHealthAppConfigurationStatusChange: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -43,7 +41,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Status: "
+    const-string v2, "Status: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -59,7 +57,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 45
     return-void
 .end method
 
@@ -73,14 +70,13 @@
     .param p6, "channelId"    # I
 
     .prologue
-    .line 67
-    const-string/jumbo v0, "BluetoothHealthCallback"
+    const-string v0, "BluetoothHealthCallback"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onHealthChannelStateChange: "
+    const-string v2, "onHealthChannelStateChange: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -90,7 +86,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Device: "
+    const-string v2, "Device: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -100,10 +96,8 @@
 
     move-result-object v1
 
-    .line 68
-    const-string/jumbo v2, "prevState:"
+    const-string v2, "prevState:"
 
-    .line 67
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -112,10 +106,8 @@
 
     move-result-object v1
 
-    .line 68
-    const-string/jumbo v2, "newState:"
+    const-string v2, "newState:"
 
-    .line 67
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -124,10 +116,8 @@
 
     move-result-object v1
 
-    .line 68
-    const-string/jumbo v2, "ParcelFd:"
+    const-string v2, "ParcelFd:"
 
-    .line 67
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -136,10 +126,8 @@
 
     move-result-object v1
 
-    .line 69
-    const-string/jumbo v2, "ChannelId:"
+    const-string v2, "ChannelId:"
 
-    .line 67
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -154,6 +142,5 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 66
     return-void
 .end method

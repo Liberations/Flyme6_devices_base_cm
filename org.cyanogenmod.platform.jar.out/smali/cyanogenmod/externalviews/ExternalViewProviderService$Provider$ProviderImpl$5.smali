@@ -27,7 +27,6 @@
     .param p1, "this$2"    # Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;
 
     .prologue
-    .line 155
     iput-object p1, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl$5;->this$2:Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,13 +40,11 @@
     .locals 1
 
     .prologue
-    .line 158
     iget-object v0, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl$5;->this$2:Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;
 
     iget-object v0, v0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;->this$1:Lcyanogenmod/externalviews/ExternalViewProviderService$Provider;
 
     invoke-virtual {v0}, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider;->onStop()V
 
-    .line 157
     return-void
 .end method

@@ -44,15 +44,12 @@
     .locals 1
 
     .prologue
-    .line 486
     new-instance v0, Landroid/preference/DialogPreference$SavedState$1;
 
     invoke-direct {v0}, Landroid/preference/DialogPreference$SavedState$1;-><init>()V
 
-    .line 485
     sput-object v0, Landroid/preference/DialogPreference$SavedState;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 464
     return-void
 .end method
 
@@ -63,10 +60,8 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 469
     invoke-direct {p0, p1}, Landroid/preference/Preference$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 470
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -76,17 +71,14 @@
     :goto_0
     iput-boolean v0, p0, Landroid/preference/DialogPreference$SavedState;->isDialogShowing:Z
 
-    .line 471
     invoke-virtual {p1}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/preference/DialogPreference$SavedState;->dialogBundle:Landroid/os/Bundle;
 
-    .line 468
     return-void
 
-    .line 470
     :cond_0
     const/4 v0, 0x0
 
@@ -98,10 +90,8 @@
     .param p1, "superState"    # Landroid/os/Parcelable;
 
     .prologue
-    .line 482
     invoke-direct {p0, p1}, Landroid/preference/Preference$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 481
     return-void
 .end method
 
@@ -113,10 +103,8 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 476
     invoke-super {p0, p1, p2}, Landroid/preference/Preference$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 477
     iget-boolean v0, p0, Landroid/preference/DialogPreference$SavedState;->isDialogShowing:Z
 
     if-eqz v0, :cond_0
@@ -126,15 +114,12 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 478
     iget-object v0, p0, Landroid/preference/DialogPreference$SavedState;->dialogBundle:Landroid/os/Bundle;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
-    .line 475
     return-void
 
-    .line 477
     :cond_0
     const/4 v0, 0x0
 

@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 47
     new-instance v0, Landroid/hardware/camera2/utils/BinderHolder;
 
     const/4 v1, 0x0
@@ -60,7 +58,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 46
     invoke-virtual {p0, p1}, Landroid/hardware/camera2/utils/BinderHolder$1;->createFromParcel(Landroid/os/Parcel;)Landroid/hardware/camera2/utils/BinderHolder;
 
     move-result-object v0
@@ -73,7 +70,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 52
     new-array v0, p1, [Landroid/hardware/camera2/utils/BinderHolder;
 
     return-object v0
@@ -84,7 +80,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 51
     invoke-virtual {p0, p1}, Landroid/hardware/camera2/utils/BinderHolder$1;->newArray(I)[Landroid/hardware/camera2/utils/BinderHolder;
 
     move-result-object v0

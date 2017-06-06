@@ -16,10 +16,8 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 29
     invoke-direct {p0, p1, p2}, Landroid/filterfw/core/InputPort;-><init>(Landroid/filterfw/core/Filter;Ljava/lang/String;)V
 
-    .line 28
     return-void
 .end method
 
@@ -33,27 +31,21 @@
     .prologue
     monitor-enter p0
 
-    .line 51
     :try_start_0
     invoke-virtual {p0}, Landroid/filterfw/core/StreamPort;->assertPortIsOpen()V
 
-    .line 52
     invoke-virtual {p0, p1, p2}, Landroid/filterfw/core/StreamPort;->checkFrameType(Landroid/filterfw/core/Frame;Z)V
 
-    .line 54
     if-eqz p2, :cond_1
 
-    .line 55
     iget-object v0, p0, Landroid/filterfw/core/StreamPort;->mFrame:Landroid/filterfw/core/Frame;
 
     if-eqz v0, :cond_0
 
-    .line 56
     iget-object v0, p0, Landroid/filterfw/core/StreamPort;->mFrame:Landroid/filterfw/core/Frame;
 
     invoke-virtual {v0}, Landroid/filterfw/core/Frame;->release()Landroid/filterfw/core/Frame;
 
-    .line 62
     :cond_0
     invoke-virtual {p1}, Landroid/filterfw/core/Frame;->retain()Landroid/filterfw/core/Frame;
 
@@ -61,37 +53,31 @@
 
     iput-object v0, p0, Landroid/filterfw/core/StreamPort;->mFrame:Landroid/filterfw/core/Frame;
 
-    .line 63
     iget-object v0, p0, Landroid/filterfw/core/StreamPort;->mFrame:Landroid/filterfw/core/Frame;
 
     invoke-virtual {v0}, Landroid/filterfw/core/Frame;->markReadOnly()V
 
-    .line 64
     iput-boolean p2, p0, Landroid/filterfw/core/StreamPort;->mPersistent:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     monitor-exit p0
 
-    .line 50
     return-void
 
-    .line 58
     :cond_1
     :try_start_1
     iget-object v0, p0, Landroid/filterfw/core/StreamPort;->mFrame:Landroid/filterfw/core/Frame;
 
     if-eqz v0, :cond_0
 
-    .line 59
     new-instance v0, Ljava/lang/RuntimeException;
 
-    .line 60
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Attempting to push more than one frame on port: "
+    const-string v2, "Attempting to push more than one frame on port: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -101,7 +87,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "!"
+    const-string v2, "!"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -111,7 +97,6 @@
 
     move-result-object v1
 
-    .line 59
     invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
     throw v0
@@ -132,20 +117,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 34
     iget-object v0, p0, Landroid/filterfw/core/StreamPort;->mFrame:Landroid/filterfw/core/Frame;
 
     if-eqz v0, :cond_0
 
-    .line 35
     iget-object v0, p0, Landroid/filterfw/core/StreamPort;->mFrame:Landroid/filterfw/core/Frame;
 
     invoke-virtual {v0}, Landroid/filterfw/core/Frame;->release()Landroid/filterfw/core/Frame;
 
-    .line 36
     iput-object v1, p0, Landroid/filterfw/core/StreamPort;->mFrame:Landroid/filterfw/core/Frame;
 
-    .line 33
     :cond_0
     return-void
 .end method
@@ -156,7 +137,6 @@
     .prologue
     monitor-enter p0
 
-    .line 86
     :try_start_0
     iget-object v0, p0, Landroid/filterfw/core/StreamPort;->mFrame:Landroid/filterfw/core/Frame;
     :try_end_0
@@ -190,20 +170,18 @@
     .prologue
     monitor-enter p0
 
-    .line 70
     :try_start_0
     iget-object v1, p0, Landroid/filterfw/core/StreamPort;->mFrame:Landroid/filterfw/core/Frame;
 
     if-nez v1, :cond_0
 
-    .line 71
     new-instance v1, Ljava/lang/RuntimeException;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "No frame available to pull on port: "
+    const-string v3, "No frame available to pull on port: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -213,7 +191,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "!"
+    const-string v3, "!"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -236,18 +214,15 @@
 
     throw v1
 
-    .line 75
     :cond_0
     :try_start_1
     iget-object v0, p0, Landroid/filterfw/core/StreamPort;->mFrame:Landroid/filterfw/core/Frame;
 
-    .line 76
     .local v0, "result":Landroid/filterfw/core/Frame;
     iget-boolean v1, p0, Landroid/filterfw/core/StreamPort;->mPersistent:Z
 
     if-eqz v1, :cond_1
 
-    .line 77
     iget-object v1, p0, Landroid/filterfw/core/StreamPort;->mFrame:Landroid/filterfw/core/Frame;
 
     invoke-virtual {v1}, Landroid/filterfw/core/Frame;->retain()Landroid/filterfw/core/Frame;
@@ -257,10 +232,8 @@
     :goto_0
     monitor-exit p0
 
-    .line 81
     return-object v0
 
-    .line 79
     :cond_1
     const/4 v1, 0x0
 
@@ -277,12 +250,10 @@
     .param p1, "frame"    # Landroid/filterfw/core/Frame;
 
     .prologue
-    .line 47
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Landroid/filterfw/core/StreamPort;->assignFrame(Landroid/filterfw/core/Frame;Z)V
 
-    .line 46
     return-void
 .end method
 
@@ -291,12 +262,10 @@
     .param p1, "frame"    # Landroid/filterfw/core/Frame;
 
     .prologue
-    .line 42
     const/4 v0, 0x1
 
     invoke-virtual {p0, p1, v0}, Landroid/filterfw/core/StreamPort;->assignFrame(Landroid/filterfw/core/Frame;Z)V
 
-    .line 41
     return-void
 .end method
 
@@ -304,12 +273,11 @@
     .locals 2
 
     .prologue
-    .line 91
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "input "
+    const-string v1, "input "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -337,13 +305,11 @@
     .prologue
     monitor-enter p0
 
-    .line 96
     :try_start_0
     iget-object v0, p0, Landroid/filterfw/core/StreamPort;->mFrame:Landroid/filterfw/core/Frame;
 
     if-eqz v0, :cond_0
 
-    .line 97
     iget-object v0, p0, Landroid/filterfw/core/StreamPort;->mFrame:Landroid/filterfw/core/Frame;
 
     invoke-virtual {p0, v0, p1}, Landroid/filterfw/core/StreamPort;->checkFrameManager(Landroid/filterfw/core/Frame;Landroid/filterfw/core/FilterContext;)V
@@ -353,7 +319,6 @@
     :cond_0
     monitor-exit p0
 
-    .line 95
     return-void
 
     :catchall_0

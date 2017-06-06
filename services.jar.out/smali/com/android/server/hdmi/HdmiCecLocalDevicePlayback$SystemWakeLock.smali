@@ -29,19 +29,17 @@
     .param p1, "this$0"    # Lcom/android/server/hdmi/HdmiCecLocalDevicePlayback;
 
     .prologue
-    .line 391
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecLocalDevicePlayback$SystemWakeLock;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDevicePlayback;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 392
     iget-object v0, p1, Lcom/android/server/hdmi/HdmiCecLocalDevicePlayback;->mService:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-virtual {v0}, Lcom/android/server/hdmi/HdmiControlService;->getPowerManager()Landroid/os/PowerManager;
 
     move-result-object v0
 
-    const-string/jumbo v1, "HdmiCecLocalDevicePlayback"
+    const-string v1, "HdmiCecLocalDevicePlayback"
 
     const/4 v2, 0x1
 
@@ -51,14 +49,12 @@
 
     iput-object v0, p0, Lcom/android/server/hdmi/HdmiCecLocalDevicePlayback$SystemWakeLock;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 393
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecLocalDevicePlayback$SystemWakeLock;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/os/PowerManager$WakeLock;->setReferenceCounted(Z)V
 
-    .line 391
     return-void
 .end method
 
@@ -68,13 +64,11 @@
     .locals 4
 
     .prologue
-    .line 398
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecLocalDevicePlayback$SystemWakeLock;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 399
-    const-string/jumbo v0, "active source: %b. Wake lock acquired"
+    const-string v0, "active source: %b. Wake lock acquired"
 
     const/4 v1, 0x1
 
@@ -96,7 +90,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/hdmi/HdmiLogger;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 397
     return-void
 .end method
 
@@ -104,7 +97,6 @@
     .locals 1
 
     .prologue
-    .line 410
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecLocalDevicePlayback$SystemWakeLock;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -118,13 +110,11 @@
     .locals 2
 
     .prologue
-    .line 404
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecLocalDevicePlayback$SystemWakeLock;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 405
-    const-string/jumbo v0, "Wake lock released"
+    const-string v0, "Wake lock released"
 
     const/4 v1, 0x0
 
@@ -132,6 +122,5 @@
 
     invoke-static {v0, v1}, Lcom/android/server/hdmi/HdmiLogger;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 403
     return-void
 .end method

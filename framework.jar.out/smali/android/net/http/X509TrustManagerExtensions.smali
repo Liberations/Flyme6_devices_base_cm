@@ -18,38 +18,32 @@
     .end annotation
 
     .prologue
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     instance-of v0, p1, Lcom/android/org/conscrypt/TrustManagerImpl;
 
     if-eqz v0, :cond_0
 
-    .line 47
     check-cast p1, Lcom/android/org/conscrypt/TrustManagerImpl;
 
     .end local p1    # "tm":Ljavax/net/ssl/X509TrustManager;
     iput-object p1, p0, Landroid/net/http/X509TrustManagerExtensions;->mDelegate:Lcom/android/org/conscrypt/TrustManagerImpl;
 
-    .line 45
     return-void
 
-    .line 49
     .restart local p1    # "tm":Ljavax/net/ssl/X509TrustManager;
     :cond_0
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/net/http/X509TrustManagerExtensions;->mDelegate:Lcom/android/org/conscrypt/TrustManagerImpl;
 
-    .line 50
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "tm is an instance of "
+    const-string v2, "tm is an instance of "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -67,10 +61,8 @@
 
     move-result-object v1
 
-    .line 51
-    const-string/jumbo v2, " which is not a supported type of X509TrustManager"
+    const-string v2, " which is not a supported type of X509TrustManager"
 
-    .line 50
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -112,7 +104,6 @@
     .end annotation
 
     .prologue
-    .line 67
     iget-object v0, p0, Landroid/net/http/X509TrustManagerExtensions;->mDelegate:Lcom/android/org/conscrypt/TrustManagerImpl;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/org/conscrypt/TrustManagerImpl;->checkServerTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
@@ -127,7 +118,6 @@
     .param p1, "cert"    # Ljava/security/cert/X509Certificate;
 
     .prologue
-    .line 81
     iget-object v0, p0, Landroid/net/http/X509TrustManagerExtensions;->mDelegate:Lcom/android/org/conscrypt/TrustManagerImpl;
 
     invoke-virtual {v0, p1}, Lcom/android/org/conscrypt/TrustManagerImpl;->isUserAddedCertificate(Ljava/security/cert/X509Certificate;)Z

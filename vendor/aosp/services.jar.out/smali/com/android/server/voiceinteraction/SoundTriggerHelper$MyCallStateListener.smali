@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/voiceinteraction/SoundTriggerHelper;
 
     .prologue
-    .line 549
     iput-object p1, p0, Lcom/android/server/voiceinteraction/SoundTriggerHelper$MyCallStateListener;->this$0:Lcom/android/server/voiceinteraction/SoundTriggerHelper;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -42,7 +41,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 553
     iget-object v1, p0, Lcom/android/server/voiceinteraction/SoundTriggerHelper$MyCallStateListener;->this$0:Lcom/android/server/voiceinteraction/SoundTriggerHelper;
 
     invoke-static {v1}, Lcom/android/server/voiceinteraction/SoundTriggerHelper;->-get0(Lcom/android/server/voiceinteraction/SoundTriggerHelper;)Ljava/lang/Object;
@@ -51,7 +49,6 @@
 
     monitor-enter v1
 
-    .line 554
     :try_start_0
     iget-object v2, p0, Lcom/android/server/voiceinteraction/SoundTriggerHelper$MyCallStateListener;->this$0:Lcom/android/server/voiceinteraction/SoundTriggerHelper;
 
@@ -66,10 +63,8 @@
 
     monitor-exit v1
 
-    .line 551
     return-void
 
-    .line 553
     :catchall_0
     move-exception v0
 

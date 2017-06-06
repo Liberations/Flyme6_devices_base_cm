@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 3157
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,12 +39,10 @@
     .param p6, "latestTimestamp"    # J
 
     .prologue
-    .line 3163
     new-instance v0, Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation;
 
     move-object v2, p2
 
-    .line 3164
     check-cast v2, Landroid/support/v4/app/RemoteInput;
 
     move-object v1, p1
@@ -58,7 +55,6 @@
 
     move-wide v6, p6
 
-    .line 3163
     invoke-direct/range {v0 .. v7}, Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation;-><init>([Ljava/lang/String;Landroid/support/v4/app/RemoteInput;Landroid/app/PendingIntent;Landroid/app/PendingIntent;[Ljava/lang/String;J)V
 
     return-object v0
@@ -74,7 +70,6 @@
     .param p6, "latestTimestamp"    # J
 
     .prologue
-    .line 3159
     invoke-virtual/range {p0 .. p7}, Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation$1;->build([Ljava/lang/String;Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;Landroid/app/PendingIntent;Landroid/app/PendingIntent;[Ljava/lang/String;J)Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation;
 
     move-result-object v0

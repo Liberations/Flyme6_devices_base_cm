@@ -30,7 +30,6 @@
     .param p2, "val$receiver"    # Lcom/android/internal/app/IAssistScreenshotReceiver;
 
     .prologue
-    .line 6202
     iput-object p1, p0, Lcom/android/server/wm/WindowManagerService$8;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iput-object p2, p0, Lcom/android/server/wm/WindowManagerService$8;->val$receiver:Lcom/android/internal/app/IAssistScreenshotReceiver;
@@ -48,24 +47,20 @@
     .prologue
     const/4 v3, -0x1
 
-    .line 6205
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$8;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     const/4 v1, 0x0
 
     const/4 v2, 0x0
 
-    .line 6206
     const/4 v5, 0x1
 
     move v4, v3
 
-    .line 6205
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/wm/WindowManagerService;->screenshotApplicationsInner(Landroid/os/IBinder;IIIZ)Landroid/graphics/Bitmap;
 
     move-result-object v6
 
-    .line 6208
     .local v6, "bm":Landroid/graphics/Bitmap;
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$8;->val$receiver:Lcom/android/internal/app/IAssistScreenshotReceiver;
@@ -74,11 +69,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 6204
     :goto_0
     return-void
 
-    .line 6209
     :catch_0
     move-exception v7
 

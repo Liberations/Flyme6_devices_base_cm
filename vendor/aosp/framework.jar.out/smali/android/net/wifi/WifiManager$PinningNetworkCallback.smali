@@ -26,7 +26,6 @@
     .param p1, "this$0"    # Landroid/net/wifi/WifiManager;
 
     .prologue
-    .line 2103
     iput-object p1, p0, Landroid/net/wifi/WifiManager$PinningNetworkCallback;->this$0:Landroid/net/wifi/WifiManager;
 
     invoke-direct {p0}, Landroid/net/ConnectivityManager$NetworkCallback;-><init>()V
@@ -53,7 +52,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 2117
     iget-object v0, p0, Landroid/net/wifi/WifiManager$PinningNetworkCallback;->mPinnedNetwork:Landroid/net/Network;
 
     invoke-virtual {p1, v0}, Landroid/net/Network;->equals(Ljava/lang/Object;)Z
@@ -74,19 +72,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 2118
     invoke-static {}, Landroid/net/wifi/WifiManager;->-get2()Landroid/net/ConnectivityManager;
 
     invoke-static {v3}, Landroid/net/ConnectivityManager;->setProcessDefaultNetwork(Landroid/net/Network;)Z
 
-    .line 2119
-    const-string/jumbo v0, "WifiManager"
+    const-string v0, "WifiManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Wifi alternate reality disabled on network "
+    const-string v2, "Wifi alternate reality disabled on network "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -102,15 +98,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2120
     iput-object v3, p0, Landroid/net/wifi/WifiManager$PinningNetworkCallback;->mPinnedNetwork:Landroid/net/Network;
 
-    .line 2121
     iget-object v0, p0, Landroid/net/wifi/WifiManager$PinningNetworkCallback;->this$0:Landroid/net/wifi/WifiManager;
 
     invoke-static {v0}, Landroid/net/wifi/WifiManager;->-wrap1(Landroid/net/wifi/WifiManager;)V
 
-    .line 2116
     :cond_0
     return-void
 .end method
@@ -120,7 +113,6 @@
     .param p1, "network"    # Landroid/net/Network;
 
     .prologue
-    .line 2108
     invoke-static {}, Landroid/net/wifi/WifiManager;->-get2()Landroid/net/ConnectivityManager;
 
     invoke-static {}, Landroid/net/ConnectivityManager;->getProcessDefaultNetwork()Landroid/net/Network;
@@ -133,22 +125,19 @@
 
     if-nez v0, :cond_0
 
-    .line 2109
     invoke-static {}, Landroid/net/wifi/WifiManager;->-get2()Landroid/net/ConnectivityManager;
 
     invoke-static {p1}, Landroid/net/ConnectivityManager;->setProcessDefaultNetwork(Landroid/net/Network;)Z
 
-    .line 2110
     iput-object p1, p0, Landroid/net/wifi/WifiManager$PinningNetworkCallback;->mPinnedNetwork:Landroid/net/Network;
 
-    .line 2111
-    const-string/jumbo v0, "WifiManager"
+    const-string v0, "WifiManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Wifi alternate reality enabled on network "
+    const-string v2, "Wifi alternate reality enabled on network "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -164,7 +153,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2107
     :cond_0
     return-void
 .end method

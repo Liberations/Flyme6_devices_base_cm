@@ -25,7 +25,6 @@
     .param p2, "val$cb"    # Lorg/cyanogenmod/internal/util/QSUtils$OnQSChanged;
 
     .prologue
-    .line 222
     iput-object p2, p0, Lorg/cyanogenmod/internal/util/QSUtils$1;->val$cb:Lorg/cyanogenmod/internal/util/QSUtils$OnQSChanged;
 
     invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -41,11 +40,9 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 225
     iget-object v0, p0, Lorg/cyanogenmod/internal/util/QSUtils$1;->val$cb:Lorg/cyanogenmod/internal/util/QSUtils$OnQSChanged;
 
     invoke-interface {v0}, Lorg/cyanogenmod/internal/util/QSUtils$OnQSChanged;->onQSChanged()V
 
-    .line 224
     return-void
 .end method

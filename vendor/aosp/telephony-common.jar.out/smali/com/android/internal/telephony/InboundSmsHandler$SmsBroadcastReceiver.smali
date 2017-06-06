@@ -47,33 +47,28 @@
     .param p2, "tracker"    # Lcom/android/internal/telephony/InboundSmsTracker;
 
     .prologue
-    .line 1199
     iput-object p1, p0, Lcom/android/internal/telephony/InboundSmsHandler$SmsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 1200
     invoke-virtual {p2}, Lcom/android/internal/telephony/InboundSmsTracker;->getDeleteWhere()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/telephony/InboundSmsHandler$SmsBroadcastReceiver;->mDeleteWhere:Ljava/lang/String;
 
-    .line 1201
     invoke-virtual {p2}, Lcom/android/internal/telephony/InboundSmsTracker;->getDeleteWhereArgs()[Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/telephony/InboundSmsHandler$SmsBroadcastReceiver;->mDeleteWhereArgs:[Ljava/lang/String;
 
-    .line 1202
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/internal/telephony/InboundSmsHandler$SmsBroadcastReceiver;->mBroadcastTimeNano:J
 
-    .line 1199
     return-void
 .end method
 
@@ -85,14 +80,12 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1207
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 1208
     .local v9, "action":Ljava/lang/String;
-    const-string/jumbo v2, "android.provider.Telephony.SMS_DELIVER"
+    const-string v2, "android.provider.Telephony.SMS_DELIVER"
 
     invoke-virtual {v9, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -100,21 +93,18 @@
 
     if-eqz v2, :cond_0
 
-    .line 1210
-    const-string/jumbo v2, "android.provider.Telephony.SMS_RECEIVED"
+    const-string v2, "android.provider.Telephony.SMS_RECEIVED"
 
     move-object/from16 v0, p2
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1211
     const/4 v2, 0x0
 
     move-object/from16 v0, p2
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 1213
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/telephony/InboundSmsHandler$SmsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
@@ -125,15 +115,13 @@
 
     move-result-object v6
 
-    .line 1214
     .local v6, "options":Landroid/os/Bundle;
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/telephony/InboundSmsHandler$SmsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
-    const-string/jumbo v4, "android.permission.RECEIVE_SMS"
+    const-string v4, "android.permission.RECEIVE_SMS"
 
-    .line 1215
     sget-object v8, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     const/16 v5, 0x10
@@ -142,17 +130,14 @@
 
     move-object/from16 v7, p0
 
-    .line 1214
     invoke-virtual/range {v2 .. v8}, Lcom/android/internal/telephony/InboundSmsHandler;->dispatchIntent(Landroid/content/Intent;Ljava/lang/String;ILandroid/os/Bundle;Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;)V
 
-    .line 1206
     .end local v6    # "options":Landroid/os/Bundle;
     :goto_0
     return-void
 
-    .line 1216
     :cond_0
-    const-string/jumbo v2, "android.provider.Telephony.WAP_PUSH_DELIVER"
+    const-string v2, "android.provider.Telephony.WAP_PUSH_DELIVER"
 
     invoke-virtual {v9, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -160,24 +145,20 @@
 
     if-eqz v2, :cond_1
 
-    .line 1218
-    const-string/jumbo v2, "android.provider.Telephony.WAP_PUSH_RECEIVED"
+    const-string v2, "android.provider.Telephony.WAP_PUSH_RECEIVED"
 
     move-object/from16 v0, p2
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1219
     const/4 v2, 0x0
 
     move-object/from16 v0, p2
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 1222
     const/4 v6, 0x0
 
-    .line 1224
     .local v6, "options":Landroid/os/Bundle;
     :try_start_0
     move-object/from16 v0, p0
@@ -186,7 +167,6 @@
 
     iget-object v2, v2, Lcom/android/internal/telephony/InboundSmsHandler;->mDeviceIdleController:Landroid/os/IDeviceIdleController;
 
-    .line 1225
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/telephony/InboundSmsHandler$SmsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
@@ -197,33 +177,28 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "mms-broadcast"
+    const-string v4, "mms-broadcast"
 
     const/4 v5, 0x0
 
-    .line 1224
     invoke-interface {v2, v3, v5, v4}, Landroid/os/IDeviceIdleController;->addPowerSaveTempWhitelistAppForMms(Ljava/lang/String;ILjava/lang/String;)J
 
     move-result-wide v12
 
-    .line 1226
     .local v12, "duration":J
     invoke-static {}, Landroid/app/BroadcastOptions;->makeBasic()Landroid/app/BroadcastOptions;
 
     move-result-object v10
 
-    .line 1227
     .local v10, "bopts":Landroid/app/BroadcastOptions;
     invoke-virtual {v10, v12, v13}, Landroid/app/BroadcastOptions;->setTemporaryAppWhitelistDuration(J)V
 
-    .line 1228
     invoke-virtual {v10}, Landroid/app/BroadcastOptions;->toBundle()Landroid/os/Bundle;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v6
 
-    .line 1231
     .end local v6    # "options":Landroid/os/Bundle;
     .end local v10    # "bopts":Landroid/app/BroadcastOptions;
     .end local v12    # "duration":J
@@ -232,9 +207,8 @@
 
     iget-object v2, v0, Lcom/android/internal/telephony/InboundSmsHandler$SmsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
-    const-string/jumbo v4, "android.permission.RECEIVE_SMS"
+    const-string v4, "android.permission.RECEIVE_SMS"
 
-    .line 1232
     sget-object v8, Landroid/os/UserHandle;->OWNER:Landroid/os/UserHandle;
 
     const/16 v5, 0x10
@@ -243,14 +217,12 @@
 
     move-object/from16 v7, p0
 
-    .line 1231
     invoke-virtual/range {v2 .. v8}, Lcom/android/internal/telephony/InboundSmsHandler;->dispatchIntent(Landroid/content/Intent;Ljava/lang/String;ILandroid/os/Bundle;Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;)V
 
     goto :goto_0
 
-    .line 1235
     :cond_1
-    const-string/jumbo v2, "android.intent.action.DATA_SMS_RECEIVED"
+    const-string v2, "android.intent.action.DATA_SMS_RECEIVED"
 
     invoke-virtual {v2, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -258,8 +230,7 @@
 
     if-nez v2, :cond_2
 
-    .line 1236
-    const-string/jumbo v2, "android.provider.Telephony.SMS_RECEIVED"
+    const-string v2, "android.provider.Telephony.SMS_RECEIVED"
 
     invoke-virtual {v2, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -267,14 +238,12 @@
 
     if-eqz v2, :cond_3
 
-    .line 1242
     :cond_2
     :goto_2
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/InboundSmsHandler$SmsBroadcastReceiver;->getResultCode()I
 
     move-result v15
 
-    .line 1243
     .local v15, "rc":I
     const/4 v2, -0x1
 
@@ -284,7 +253,6 @@
 
     if-eq v15, v2, :cond_4
 
-    .line 1244
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/telephony/InboundSmsHandler$SmsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
@@ -293,7 +261,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "a broadcast receiver set the result code to "
+    const-string v4, "a broadcast receiver set the result code to "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -303,10 +271,8 @@
 
     move-result-object v3
 
-    .line 1245
-    const-string/jumbo v4, ", deleting from raw table anyway!"
+    const-string v4, ", deleting from raw table anyway!"
 
-    .line 1244
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
@@ -317,7 +283,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/InboundSmsHandler;->loge(Ljava/lang/String;)V
 
-    .line 1250
     :goto_3
     move-object/from16 v0, p0
 
@@ -333,7 +298,6 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/internal/telephony/InboundSmsHandler;->deleteFromRawTable(Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 1251
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/telephony/InboundSmsHandler$SmsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
@@ -342,7 +306,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/InboundSmsHandler;->sendMessage(I)V
 
-    .line 1253
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v2
@@ -359,13 +322,11 @@
 
     long-to-int v11, v2
 
-    .line 1254
     .local v11, "durationMillis":I
     const/16 v2, 0x1388
 
     if-lt v11, v2, :cond_5
 
-    .line 1255
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/telephony/InboundSmsHandler$SmsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
@@ -374,7 +335,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "Slow ordered broadcast completion time: "
+    const-string v4, "Slow ordered broadcast completion time: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -384,7 +345,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, " ms"
+    const-string v4, " ms"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -398,11 +359,10 @@
 
     goto/16 :goto_0
 
-    .line 1237
     .end local v11    # "durationMillis":I
     .end local v15    # "rc":I
     :cond_3
-    const-string/jumbo v2, "android.intent.action.DATA_SMS_RECEIVED"
+    const-string v2, "android.intent.action.DATA_SMS_RECEIVED"
 
     invoke-virtual {v2, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -410,8 +370,7 @@
 
     if-nez v2, :cond_2
 
-    .line 1238
-    const-string/jumbo v2, "android.provider.Telephony.WAP_PUSH_RECEIVED"
+    const-string v2, "android.provider.Telephony.WAP_PUSH_RECEIVED"
 
     invoke-virtual {v2, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -419,7 +378,6 @@
 
     if-nez v2, :cond_2
 
-    .line 1239
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/telephony/InboundSmsHandler$SmsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
@@ -428,7 +386,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "unexpected BroadcastReceiver action: "
+    const-string v4, "unexpected BroadcastReceiver action: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -446,20 +404,18 @@
 
     goto/16 :goto_2
 
-    .line 1247
     .restart local v15    # "rc":I
     :cond_4
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/internal/telephony/InboundSmsHandler$SmsBroadcastReceiver;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
-    const-string/jumbo v3, "successful broadcast, deleting from raw table."
+    const-string v3, "successful broadcast, deleting from raw table."
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/InboundSmsHandler;->log(Ljava/lang/String;)V
 
     goto/16 :goto_3
 
-    .line 1257
     .restart local v11    # "durationMillis":I
     :cond_5
     move-object/from16 v0, p0
@@ -470,7 +426,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "ordered broadcast completed in: "
+    const-string v4, "ordered broadcast completed in: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -480,7 +436,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, " ms"
+    const-string v4, " ms"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -494,7 +450,6 @@
 
     goto/16 :goto_0
 
-    .line 1229
     .end local v11    # "durationMillis":I
     .end local v15    # "rc":I
     .restart local v6    # "options":Landroid/os/Bundle;

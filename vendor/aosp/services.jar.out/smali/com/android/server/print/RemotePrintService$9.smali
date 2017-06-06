@@ -30,7 +30,6 @@
     .param p2, "val$printerId"    # Landroid/print/PrinterId;
 
     .prologue
-    .line 413
     iput-object p1, p0, Lcom/android/server/print/RemotePrintService$9;->this$0:Lcom/android/server/print/RemotePrintService;
 
     iput-object p2, p0, Lcom/android/server/print/RemotePrintService$9;->val$printerId:Landroid/print/PrinterId;
@@ -46,13 +45,11 @@
     .locals 2
 
     .prologue
-    .line 416
     iget-object v0, p0, Lcom/android/server/print/RemotePrintService$9;->this$0:Lcom/android/server/print/RemotePrintService;
 
     iget-object v1, p0, Lcom/android/server/print/RemotePrintService$9;->val$printerId:Landroid/print/PrinterId;
 
     invoke-static {v0, v1}, Lcom/android/server/print/RemotePrintService;->-wrap9(Lcom/android/server/print/RemotePrintService;Landroid/print/PrinterId;)V
 
-    .line 415
     return-void
 .end method

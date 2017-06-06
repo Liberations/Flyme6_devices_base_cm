@@ -26,12 +26,10 @@
     .param p3, "$anonymous1"    # I
 
     .prologue
-    .line 507
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$11;->this$0:Lcom/android/server/policy/GlobalActions;
 
     invoke-direct {p0, p2, p3}, Lcom/android/server/policy/GlobalActions$SinglePressAction;-><init>(II)V
 
-    .line 508
     return-void
 .end method
 
@@ -41,12 +39,10 @@
     .locals 1
 
     .prologue
-    .line 511
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$11;->this$0:Lcom/android/server/policy/GlobalActions;
 
     invoke-static {v0}, Lcom/android/server/policy/GlobalActions;->-wrap6(Lcom/android/server/policy/GlobalActions;)V
 
-    .line 510
     return-void
 .end method
 
@@ -54,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 519
     const/4 v0, 0x1
 
     return v0
@@ -64,7 +59,6 @@
     .locals 1
 
     .prologue
-    .line 515
     const/4 v0, 0x1
 
     return v0

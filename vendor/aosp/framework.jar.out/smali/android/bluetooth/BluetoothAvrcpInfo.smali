@@ -161,16 +161,13 @@
     .locals 1
 
     .prologue
-    .line 182
     new-instance v0, Landroid/bluetooth/BluetoothAvrcpInfo$1;
 
     invoke-direct {v0}, Landroid/bluetooth/BluetoothAvrcpInfo$1;-><init>()V
 
-    .line 181
     sput-object v0, Landroid/bluetooth/BluetoothAvrcpInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 192
-    const-string/jumbo v0, "content://com.android.bluetooth.avrcp/btavrcp_ct"
+    const-string v0, "content://com.android.bluetooth.avrcp/btavrcp_ct"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -178,7 +175,6 @@
 
     sput-object v0, Landroid/bluetooth/BluetoothAvrcpInfo;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 48
     return-void
 .end method
 
@@ -188,24 +184,18 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 59
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
-    const-string/jumbo v0, "BluetoothAvrcpInfo"
+    const-string v0, "BluetoothAvrcpInfo"
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->TAG:Ljava/lang/String;
 
-    .line 60
     iput-object v1, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->supportedPlayerAttributes:[B
 
-    .line 61
     iput-object v1, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->numSupportedPlayerAttribValues:[B
 
-    .line 62
     iput-object v1, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->supportedPlayerAtribValues:[B
 
-    .line 59
     return-void
 .end method
 
@@ -214,32 +204,26 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 80
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
-    const-string/jumbo v6, "BluetoothAvrcpInfo"
+    const-string v6, "BluetoothAvrcpInfo"
 
     iput-object v6, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->TAG:Ljava/lang/String;
 
-    .line 81
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 82
     .local v1, "attribs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Byte;>;"
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 83
     .local v2, "numAttribVal":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Byte;>;"
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 84
     .local v0, "attribVals":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Byte;>;"
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
@@ -249,7 +233,6 @@
 
     move-result-object v3
 
-    .line 88
     .local v3, "numAttributes":Ljava/lang/Byte;
     const/4 v4, 0x0
 
@@ -261,7 +244,6 @@
 
     if-ge v4, v6, :cond_1
 
-    .line 89
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v6
@@ -272,7 +254,6 @@
 
     invoke-virtual {v1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 90
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v6
@@ -283,7 +264,6 @@
 
     invoke-virtual {v2, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 91
     const/4 v5, 0x0
 
     .local v5, "zz":I
@@ -300,7 +280,6 @@
 
     if-ge v5, v6, :cond_0
 
-    .line 92
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v6
@@ -311,18 +290,15 @@
 
     invoke-virtual {v0, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 91
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_1
 
-    .line 88
     :cond_0
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 99
     .end local v5    # "zz":I
     :cond_1
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -333,7 +309,6 @@
 
     iput-object v6, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->supportedPlayerAttributes:[B
 
-    .line 100
     const/4 v5, 0x0
 
     .restart local v5    # "zz":I
@@ -344,7 +319,6 @@
 
     if-ge v5, v6, :cond_2
 
-    .line 101
     iget-object v7, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->supportedPlayerAttributes:[B
 
     invoke-virtual {v1, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -359,12 +333,10 @@
 
     aput-byte v6, v7, v5
 
-    .line 100
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_2
 
-    .line 104
     :cond_2
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
@@ -374,7 +346,6 @@
 
     iput-object v6, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->numSupportedPlayerAttribValues:[B
 
-    .line 105
     const/4 v5, 0x0
 
     :goto_3
@@ -384,7 +355,6 @@
 
     if-ge v5, v6, :cond_3
 
-    .line 106
     iget-object v7, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->numSupportedPlayerAttribValues:[B
 
     invoke-virtual {v2, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -399,12 +369,10 @@
 
     aput-byte v6, v7, v5
 
-    .line 105
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_3
 
-    .line 109
     :cond_3
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -414,7 +382,6 @@
 
     iput-object v6, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->supportedPlayerAtribValues:[B
 
-    .line 110
     const/4 v5, 0x0
 
     :goto_4
@@ -424,7 +391,6 @@
 
     if-ge v5, v6, :cond_4
 
-    .line 111
     iget-object v7, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->supportedPlayerAtribValues:[B
 
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -439,12 +405,10 @@
 
     aput-byte v6, v7, v5
 
-    .line 110
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_4
 
-    .line 80
     :cond_4
     return-void
 .end method
@@ -456,65 +420,53 @@
     .param p3, "valuesSupported"    # [B
 
     .prologue
-    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
-    const-string/jumbo v2, "BluetoothAvrcpInfo"
+    const-string v2, "BluetoothAvrcpInfo"
 
     iput-object v2, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->TAG:Ljava/lang/String;
 
-    .line 65
     array-length v0, p1
 
-    .line 66
     .local v0, "numAttributes":I
     const/4 v1, 0x0
 
-    .line 67
     .local v1, "zz":I
     new-array v2, v0, [B
 
     iput-object v2, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->supportedPlayerAttributes:[B
 
-    .line 68
     new-array v2, v0, [B
 
     iput-object v2, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->numSupportedPlayerAttribValues:[B
 
-    .line 69
     array-length v2, p3
 
     new-array v2, v2, [B
 
     iput-object v2, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->supportedPlayerAtribValues:[B
 
-    .line 70
     const/4 v1, 0x0
 
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 71
     iget-object v2, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->supportedPlayerAttributes:[B
 
     aget-byte v3, p1, v1
 
     aput-byte v3, v2, v1
 
-    .line 72
     iget-object v2, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->numSupportedPlayerAttribValues:[B
 
     aget-byte v3, p2, v1
 
     aput-byte v3, v2, v1
 
-    .line 70
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 74
     :cond_0
     const/4 v1, 0x0
 
@@ -525,19 +477,16 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 75
     iget-object v2, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->supportedPlayerAtribValues:[B
 
     aget-byte v3, p3, v1
 
     aput-byte v3, v2, v1
 
-    .line 74
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 64
     :cond_1
     return-void
 .end method
@@ -548,7 +497,6 @@
     .locals 1
 
     .prologue
-    .line 116
     const/4 v0, 0x0
 
     return v0
@@ -559,7 +507,6 @@
     .param p1, "playerAttributeId"    # B
 
     .prologue
-    .line 139
     const/4 v0, 0x0
 
     .local v0, "zz":I
@@ -570,27 +517,23 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 140
     iget-object v1, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->supportedPlayerAttributes:[B
 
     aget-byte v1, v1, v0
 
     if-ne p1, v1, :cond_0
 
-    .line 141
     iget-object v1, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->numSupportedPlayerAttribValues:[B
 
     aget-byte v1, v1, v0
 
     return v1
 
-    .line 139
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 144
     :cond_1
     const/4 v1, 0x0
 
@@ -602,18 +545,14 @@
     .param p1, "playerAttributeId"    # B
 
     .prologue
-    .line 148
     const/4 v1, 0x0
 
-    .line 149
     .local v1, "index":I
     const/4 v4, 0x0
 
-    .line 150
     .local v4, "zz":I
     const/4 v0, 0x0
 
-    .line 151
     .local v0, "attributeFound":Z
     const/4 v4, 0x0
 
@@ -624,28 +563,23 @@
 
     if-ge v4, v5, :cond_0
 
-    .line 152
     iget-object v5, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->supportedPlayerAttributes:[B
 
     aget-byte v5, v5, v4
 
     if-ne p1, v5, :cond_1
 
-    .line 153
     const/4 v0, 0x1
 
-    .line 159
     :cond_0
     if-eqz v0, :cond_3
 
-    .line 160
     iget-object v5, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->numSupportedPlayerAttribValues:[B
 
     aget-byte v5, v5, v4
 
     new-array v2, v5, [B
 
-    .line 161
     .local v2, "supportedValues":[B
     const/4 v3, 0x0
 
@@ -657,7 +591,6 @@
 
     if-ge v3, v5, :cond_2
 
-    .line 162
     iget-object v5, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->supportedPlayerAtribValues:[B
 
     add-int v6, v3, v1
@@ -666,12 +599,10 @@
 
     aput-byte v5, v2, v3
 
-    .line 161
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 157
     .end local v2    # "supportedValues":[B
     .end local v3    # "xx":I
     :cond_1
@@ -681,18 +612,15 @@
 
     add-int/2addr v1, v5
 
-    .line 151
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 163
     .restart local v2    # "supportedValues":[B
     .restart local v3    # "xx":I
     :cond_2
     return-object v2
 
-    .line 166
     .end local v2    # "supportedValues":[B
     .end local v3    # "xx":I
     :cond_3
@@ -707,7 +635,6 @@
     .locals 1
 
     .prologue
-    .line 135
     iget-object v0, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->supportedPlayerAttributes:[B
 
     return-object v0
@@ -720,57 +647,47 @@
     .param p3, "valuesSupported"    # [B
 
     .prologue
-    .line 169
     array-length v0, p1
 
-    .line 170
     .local v0, "numAttributes":I
     const/4 v1, 0x0
 
-    .line 171
     .local v1, "zz":I
     new-array v2, v0, [B
 
     iput-object v2, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->supportedPlayerAttributes:[B
 
-    .line 172
     new-array v2, v0, [B
 
     iput-object v2, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->numSupportedPlayerAttribValues:[B
 
-    .line 173
     array-length v2, p3
 
     new-array v2, v2, [B
 
     iput-object v2, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->supportedPlayerAtribValues:[B
 
-    .line 174
     const/4 v1, 0x0
 
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 175
     iget-object v2, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->supportedPlayerAttributes:[B
 
     aget-byte v3, p1, v1
 
     aput-byte v3, v2, v1
 
-    .line 176
     iget-object v2, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->numSupportedPlayerAttribValues:[B
 
     aget-byte v3, p2, v1
 
     aput-byte v3, v2, v1
 
-    .line 174
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 178
     :cond_0
     const/4 v1, 0x0
 
@@ -781,19 +698,16 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 179
     iget-object v2, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->supportedPlayerAtribValues:[B
 
     aget-byte v3, p3, v1
 
     aput-byte v3, v2, v1
 
-    .line 178
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 168
     :cond_1
     return-void
 .end method
@@ -804,39 +718,33 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 123
     iget-object v3, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->supportedPlayerAttributes:[B
 
     array-length v3, v3
 
     int-to-byte v0, v3
 
-    .line 124
     .local v0, "numSuppAttributes":B
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 125
     const/4 v1, 0x0
 
     .local v1, "xx":I
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 126
     iget-object v3, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->supportedPlayerAttributes:[B
 
     aget-byte v3, v3, v1
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 127
     iget-object v3, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->numSupportedPlayerAttribValues:[B
 
     aget-byte v3, v3, v1
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 128
     const/4 v2, 0x0
 
     .local v2, "zz":I
@@ -847,25 +755,21 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 129
     iget-object v3, p0, Landroid/bluetooth/BluetoothAvrcpInfo;->supportedPlayerAtribValues:[B
 
     aget-byte v3, v3, v2
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 128
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 125
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 122
     .end local v2    # "zz":I
     :cond_1
     return-void

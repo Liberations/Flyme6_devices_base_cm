@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 1753
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 1756
     new-instance v0, Landroid/widget/AbsListView$SavedState;
 
     const/4 v1, 0x0
@@ -60,7 +58,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 1755
     invoke-virtual {p0, p1}, Landroid/widget/AbsListView$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Landroid/widget/AbsListView$SavedState;
 
     move-result-object v0
@@ -73,7 +70,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 1761
     new-array v0, p1, [Landroid/widget/AbsListView$SavedState;
 
     return-object v0
@@ -84,7 +80,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 1760
     invoke-virtual {p0, p1}, Landroid/widget/AbsListView$SavedState$1;->newArray(I)[Landroid/widget/AbsListView$SavedState;
 
     move-result-object v0

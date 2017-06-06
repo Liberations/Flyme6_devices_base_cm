@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/display/OverlayDisplayWindow;
 
     .prologue
-    .line 287
     iput-object p1, p0, Lcom/android/server/display/OverlayDisplayWindow$1;->this$0:Lcom/android/server/display/OverlayDisplayWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 289
     return-void
 .end method
 
@@ -51,7 +49,6 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 294
     iget-object v0, p0, Lcom/android/server/display/OverlayDisplayWindow$1;->this$0:Lcom/android/server/display/OverlayDisplayWindow;
 
     invoke-static {v0}, Lcom/android/server/display/OverlayDisplayWindow;->-get0(Lcom/android/server/display/OverlayDisplayWindow;)Landroid/view/Display;
@@ -64,7 +61,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 295
     iget-object v0, p0, Lcom/android/server/display/OverlayDisplayWindow$1;->this$0:Lcom/android/server/display/OverlayDisplayWindow;
 
     invoke-static {v0}, Lcom/android/server/display/OverlayDisplayWindow;->-wrap0(Lcom/android/server/display/OverlayDisplayWindow;)Z
@@ -73,12 +69,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 296
     iget-object v0, p0, Lcom/android/server/display/OverlayDisplayWindow$1;->this$0:Lcom/android/server/display/OverlayDisplayWindow;
 
     invoke-virtual {v0}, Lcom/android/server/display/OverlayDisplayWindow;->relayout()V
 
-    .line 297
     iget-object v0, p0, Lcom/android/server/display/OverlayDisplayWindow$1;->this$0:Lcom/android/server/display/OverlayDisplayWindow;
 
     invoke-static {v0}, Lcom/android/server/display/OverlayDisplayWindow;->-get3(Lcom/android/server/display/OverlayDisplayWindow;)Lcom/android/server/display/OverlayDisplayWindow$Listener;
@@ -95,12 +89,10 @@
 
     invoke-interface {v0, v1}, Lcom/android/server/display/OverlayDisplayWindow$Listener;->onStateChanged(I)V
 
-    .line 293
     :cond_0
     :goto_0
     return-void
 
-    .line 299
     :cond_1
     iget-object v0, p0, Lcom/android/server/display/OverlayDisplayWindow$1;->this$0:Lcom/android/server/display/OverlayDisplayWindow;
 
@@ -114,7 +106,6 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 306
     iget-object v0, p0, Lcom/android/server/display/OverlayDisplayWindow$1;->this$0:Lcom/android/server/display/OverlayDisplayWindow;
 
     invoke-static {v0}, Lcom/android/server/display/OverlayDisplayWindow;->-get0(Lcom/android/server/display/OverlayDisplayWindow;)Landroid/view/Display;
@@ -127,12 +118,10 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 307
     iget-object v0, p0, Lcom/android/server/display/OverlayDisplayWindow$1;->this$0:Lcom/android/server/display/OverlayDisplayWindow;
 
     invoke-virtual {v0}, Lcom/android/server/display/OverlayDisplayWindow;->dismiss()V
 
-    .line 305
     :cond_0
     return-void
 .end method

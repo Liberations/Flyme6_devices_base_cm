@@ -28,7 +28,6 @@
     .param p3, "val$myConn"    # Landroid/content/ServiceConnection;
 
     .prologue
-    .line 771
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$18$1;->this$1:Lcom/android/server/policy/GlobalActions$18;
 
     iput-object p3, p0, Lcom/android/server/policy/GlobalActions$18$1;->val$myConn:Landroid/content/ServiceConnection;
@@ -45,7 +44,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 774
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$18$1;->this$1:Lcom/android/server/policy/GlobalActions$18;
 
     iget-object v0, v0, Lcom/android/server/policy/GlobalActions$18;->this$0:Lcom/android/server/policy/GlobalActions;
@@ -54,7 +52,6 @@
 
     monitor-enter v1
 
-    .line 775
     :try_start_0
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$18$1;->this$1:Lcom/android/server/policy/GlobalActions$18;
 
@@ -66,7 +63,6 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 776
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$18$1;->this$1:Lcom/android/server/policy/GlobalActions$18;
 
     iget-object v0, v0, Lcom/android/server/policy/GlobalActions$18;->this$0:Lcom/android/server/policy/GlobalActions;
@@ -83,7 +79,6 @@
 
     invoke-virtual {v0, v2}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 777
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$18$1;->this$1:Lcom/android/server/policy/GlobalActions$18;
 
     iget-object v0, v0, Lcom/android/server/policy/GlobalActions$18;->this$0:Lcom/android/server/policy/GlobalActions;
@@ -92,7 +87,6 @@
 
     iput-object v2, v0, Lcom/android/server/policy/GlobalActions;->mScreenshotConnection:Landroid/content/ServiceConnection;
 
-    .line 778
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$18$1;->this$1:Lcom/android/server/policy/GlobalActions$18;
 
     iget-object v0, v0, Lcom/android/server/policy/GlobalActions$18;->this$0:Lcom/android/server/policy/GlobalActions;
@@ -114,10 +108,8 @@
     :cond_0
     monitor-exit v1
 
-    .line 773
     return-void
 
-    .line 774
     :catchall_0
     move-exception v0
 

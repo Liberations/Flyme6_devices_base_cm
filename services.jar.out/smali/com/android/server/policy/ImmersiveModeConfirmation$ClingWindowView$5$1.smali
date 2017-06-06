@@ -27,7 +27,6 @@
     .param p1, "this$2"    # Lcom/android/server/policy/ImmersiveModeConfirmation$ClingWindowView$5;
 
     .prologue
-    .line 282
     iput-object p1, p0, Lcom/android/server/policy/ImmersiveModeConfirmation$ClingWindowView$5$1;->this$2:Lcom/android/server/policy/ImmersiveModeConfirmation$ClingWindowView$5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "animation"    # Landroid/animation/ValueAnimator;
 
     .prologue
-    .line 285
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -53,7 +51,6 @@
 
     move-result v0
 
-    .line 286
     .local v0, "c":I
     iget-object v1, p0, Lcom/android/server/policy/ImmersiveModeConfirmation$ClingWindowView$5$1;->this$2:Lcom/android/server/policy/ImmersiveModeConfirmation$ClingWindowView$5;
 
@@ -65,6 +62,5 @@
 
     invoke-virtual {v1, v0}, Landroid/graphics/drawable/ColorDrawable;->setColor(I)V
 
-    .line 284
     return-void
 .end method

@@ -42,17 +42,14 @@
     .locals 1
 
     .prologue
-    .line 188
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 192
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wifi/WifiLogger$BugReport;->ringBuffers:Ljava/util/HashMap;
 
-    .line 188
     return-void
 .end method
 
@@ -71,18 +68,15 @@
     .locals 18
 
     .prologue
-    .line 197
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 199
     .local v4, "builder":Ljava/lang/StringBuilder;
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v5
 
-    .line 200
     .local v5, "c":Ljava/util/Calendar;
     move-object/from16 v0, p0
 
@@ -90,15 +84,13 @@
 
     invoke-virtual {v5, v14, v15}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    .line 201
-    const-string/jumbo v14, "system time = "
+    const-string v14, "system time = "
 
     invoke-virtual {v4, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v14
 
-    .line 202
-    const-string/jumbo v15, "%tm-%td %tH:%tM:%tS.%tL"
+    const-string v15, "%tm-%td %tH:%tM:%tS.%tL"
 
     const/16 v16, 0x6
 
@@ -136,18 +128,14 @@
 
     move-result-object v15
 
-    .line 201
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v14
 
-    .line 202
-    const-string/jumbo v15, "\n"
+    const-string v15, "\n"
 
-    .line 201
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 204
     move-object/from16 v0, p0
 
     iget-wide v14, v0, Lcom/android/server/wifi/WifiLogger$BugReport;->kernelTimeNanos:J
@@ -156,9 +144,8 @@
 
     div-long v10, v14, v16
 
-    .line 205
     .local v10, "kernelTimeMs":J
-    const-string/jumbo v14, "kernel time = "
+    const-string v14, "kernel time = "
 
     invoke-virtual {v4, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -174,39 +161,33 @@
 
     move-result-object v14
 
-    const-string/jumbo v15, "."
+    const-string v15, "."
 
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v14
 
-    .line 206
     const-wide/16 v16, 0x3e8
 
     rem-long v16, v10, v16
 
-    .line 205
     move-wide/from16 v0, v16
 
     invoke-virtual {v14, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v14
 
-    .line 206
-    const-string/jumbo v15, "\n"
+    const-string v15, "\n"
 
-    .line 205
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 208
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiLogger$BugReport;->alertData:[B
 
     if-nez v14, :cond_0
 
-    .line 209
-    const-string/jumbo v14, "reason = "
+    const-string v14, "reason = "
 
     invoke-virtual {v4, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -220,11 +201,10 @@
 
     move-result-object v14
 
-    const-string/jumbo v15, "\n"
+    const-string v15, "\n"
 
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 216
     :goto_0
     move-object/from16 v0, p0
 
@@ -252,7 +232,6 @@
 
     check-cast v6, Ljava/util/Map$Entry;
 
-    .line 217
     .local v6, "e":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;[[B>;"
     invoke-interface {v6}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -260,7 +239,6 @@
 
     check-cast v12, Ljava/lang/String;
 
-    .line 218
     .local v12, "ringName":Ljava/lang/String;
     invoke-interface {v6}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -268,9 +246,8 @@
 
     check-cast v3, [[B
 
-    .line 219
     .local v3, "buffers":[[B
-    const-string/jumbo v14, "ring-buffer = "
+    const-string v14, "ring-buffer = "
 
     invoke-virtual {v4, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -280,14 +257,12 @@
 
     move-result-object v14
 
-    const-string/jumbo v15, "\n"
+    const-string v15, "\n"
 
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 221
     const/4 v13, 0x0
 
-    .line 222
     .local v13, "size":I
     const/4 v8, 0x0
 
@@ -297,19 +272,16 @@
 
     if-ge v8, v14, :cond_1
 
-    .line 223
     aget-object v14, v3, v8
 
     array-length v14, v14
 
     add-int/2addr v13, v14
 
-    .line 222
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_2
 
-    .line 211
     .end local v3    # "buffers":[[B
     .end local v6    # "e":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;[[B>;"
     .end local v7    # "e$iterator":Ljava/util/Iterator;
@@ -317,7 +289,7 @@
     .end local v12    # "ringName":Ljava/lang/String;
     .end local v13    # "size":I
     :cond_0
-    const-string/jumbo v14, "errorCode = "
+    const-string v14, "errorCode = "
 
     invoke-virtual {v4, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -329,12 +301,10 @@
 
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 212
-    const-string/jumbo v14, "data \n"
+    const-string v14, "data \n"
 
     invoke-virtual {v4, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 213
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiLogger$BugReport;->alertData:[B
@@ -347,13 +317,12 @@
 
     move-result-object v14
 
-    const-string/jumbo v15, "\n"
+    const-string v15, "\n"
 
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 226
     .restart local v3    # "buffers":[[B
     .restart local v6    # "e":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;[[B>;"
     .restart local v7    # "e$iterator":Ljava/util/Iterator;
@@ -363,11 +332,9 @@
     :cond_1
     new-array v2, v13, [B
 
-    .line 227
     .local v2, "buffer":[B
     const/4 v9, 0x0
 
-    .line 228
     .local v9, "index":I
     const/4 v8, 0x0
 
@@ -376,7 +343,6 @@
 
     if-ge v8, v14, :cond_2
 
-    .line 229
     aget-object v14, v3, v8
 
     aget-object v15, v3, v8
@@ -389,19 +355,16 @@
 
     invoke-static {v14, v0, v2, v9, v15}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 230
     aget-object v14, v3, v8
 
     array-length v14, v14
 
     add-int/2addr v9, v14
 
-    .line 228
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_3
 
-    .line 233
     :cond_2
     invoke-static {v2}, Lcom/android/server/wifi/WifiLogger;->-wrap0([B)Ljava/lang/String;
 
@@ -409,14 +372,12 @@
 
     invoke-virtual {v4, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 234
-    const-string/jumbo v14, "\n"
+    const-string v14, "\n"
 
     invoke-virtual {v4, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto/16 :goto_1
 
-    .line 237
     .end local v2    # "buffer":[B
     .end local v3    # "buffers":[[B
     .end local v6    # "e":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;[[B>;"
@@ -431,12 +392,10 @@
 
     if-eqz v14, :cond_4
 
-    .line 238
-    const-string/jumbo v14, "FW Memory dump \n"
+    const-string v14, "FW Memory dump \n"
 
     invoke-virtual {v4, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 239
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiLogger$BugReport;->fwMemoryDump:[B
@@ -447,7 +406,6 @@
 
     invoke-virtual {v4, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 242
     :cond_4
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

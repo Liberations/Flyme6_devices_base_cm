@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Landroid/support/v4/media/MediaBrowserServiceCompat;
 
     .prologue
-    .line 128
     iput-object p1, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi23;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 139
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi23;->mServiceObj:Ljava/lang/Object;
 
     invoke-static {v0, p1}, Landroid/support/v4/media/MediaBrowserServiceCompatApi23;->onBind(Ljava/lang/Object;Landroid/content/Intent;)Landroid/os/IBinder;
@@ -58,14 +56,12 @@
     .locals 4
 
     .prologue
-    .line 133
     invoke-static {}, Landroid/support/v4/media/MediaBrowserServiceCompatApi23;->createService()Ljava/lang/Object;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi23;->mServiceObj:Ljava/lang/Object;
 
-    .line 134
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi23;->mServiceObj:Ljava/lang/Object;
 
     new-instance v1, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImplApi23;
@@ -78,6 +74,5 @@
 
     invoke-static {v0, v1}, Landroid/support/v4/media/MediaBrowserServiceCompatApi23;->onCreate(Ljava/lang/Object;Landroid/support/v4/media/MediaBrowserServiceCompatApi23$ServiceImplApi23;)V
 
-    .line 132
     return-void
 .end method

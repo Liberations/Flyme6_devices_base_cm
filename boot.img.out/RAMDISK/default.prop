@@ -3,7 +3,7 @@
 #
 ro.adb.secure=0
 ro.secure=0
-security.perf_harden=1
+security.perf_harden=0
 ro.allow.mock.location=0
 ro.debuggable=1
 ro.zygote=zygote64_32
@@ -16,7 +16,7 @@ debug.atrace.tags.enableflags=0
 #
 # BOOTIMAGE_BUILD_PROPERTIES
 #
-ro.bootimage.build.date=la 27.8.2016 11.22.05 +0300
-ro.bootimage.build.date.utc=1472286125
-ro.bootimage.build.fingerprint=Xiaomi/cm_libra/libra:6.0.1/MOB30Z/3f404abc51:userdebug/test-keys
-persist.sys.usb.config=adb
+ro.bootimage.build.date=Wed Feb 1 22:03:42 CST 2017
+ro.bootimage.build.date.utc=1485957822
+ro.bootimage.build.fingerprint=Xiaomi/markw/markw:6.0.1/MOB31K/e77db55081:userdebug/test-keys
+persist.sys.usb.config=mtp,adb

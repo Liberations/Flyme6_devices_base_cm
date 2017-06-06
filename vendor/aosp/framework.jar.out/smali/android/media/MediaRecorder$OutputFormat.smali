@@ -52,7 +52,6 @@
     .param p1, "this$0"    # Landroid/media/MediaRecorder;
 
     .prologue
-    .line 313
     iput-object p1, p0, Landroid/media/MediaRecorder$OutputFormat;->this$0:Landroid/media/MediaRecorder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

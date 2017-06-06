@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 82
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,7 +34,6 @@
     .param p1, "lp"    # Landroid/view/ViewGroup$MarginLayoutParams;
 
     .prologue
-    .line 111
     invoke-static {p1}, Landroid/support/v4/view/MarginLayoutParamsCompatJellybeanMr1;->getLayoutDirection(Landroid/view/ViewGroup$MarginLayoutParams;)I
 
     move-result v0
@@ -48,7 +46,6 @@
     .param p1, "lp"    # Landroid/view/ViewGroup$MarginLayoutParams;
 
     .prologue
-    .line 91
     invoke-static {p1}, Landroid/support/v4/view/MarginLayoutParamsCompatJellybeanMr1;->getMarginEnd(Landroid/view/ViewGroup$MarginLayoutParams;)I
 
     move-result v0
@@ -61,7 +58,6 @@
     .param p1, "lp"    # Landroid/view/ViewGroup$MarginLayoutParams;
 
     .prologue
-    .line 86
     invoke-static {p1}, Landroid/support/v4/view/MarginLayoutParamsCompatJellybeanMr1;->getMarginStart(Landroid/view/ViewGroup$MarginLayoutParams;)I
 
     move-result v0
@@ -74,7 +70,6 @@
     .param p1, "lp"    # Landroid/view/ViewGroup$MarginLayoutParams;
 
     .prologue
-    .line 106
     invoke-static {p1}, Landroid/support/v4/view/MarginLayoutParamsCompatJellybeanMr1;->isMarginRelative(Landroid/view/ViewGroup$MarginLayoutParams;)Z
 
     move-result v0
@@ -88,10 +83,8 @@
     .param p2, "layoutDirection"    # I
 
     .prologue
-    .line 121
     invoke-static {p1, p2}, Landroid/support/v4/view/MarginLayoutParamsCompatJellybeanMr1;->resolveLayoutDirection(Landroid/view/ViewGroup$MarginLayoutParams;I)V
 
-    .line 120
     return-void
 .end method
 
@@ -101,10 +94,8 @@
     .param p2, "layoutDirection"    # I
 
     .prologue
-    .line 116
     invoke-static {p1, p2}, Landroid/support/v4/view/MarginLayoutParamsCompatJellybeanMr1;->setLayoutDirection(Landroid/view/ViewGroup$MarginLayoutParams;I)V
 
-    .line 115
     return-void
 .end method
 
@@ -114,10 +105,8 @@
     .param p2, "marginEnd"    # I
 
     .prologue
-    .line 101
     invoke-static {p1, p2}, Landroid/support/v4/view/MarginLayoutParamsCompatJellybeanMr1;->setMarginEnd(Landroid/view/ViewGroup$MarginLayoutParams;I)V
 
-    .line 100
     return-void
 .end method
 
@@ -127,9 +116,7 @@
     .param p2, "marginStart"    # I
 
     .prologue
-    .line 96
     invoke-static {p1, p2}, Landroid/support/v4/view/MarginLayoutParamsCompatJellybeanMr1;->setMarginStart(Landroid/view/ViewGroup$MarginLayoutParams;I)V
 
-    .line 95
     return-void
 .end method

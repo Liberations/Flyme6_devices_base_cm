@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 74
     invoke-direct {p0}, Landroid/support/v4/view/ViewConfigurationCompat$HoneycombViewConfigurationVersionImpl;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
     .param p1, "config"    # Landroid/view/ViewConfiguration;
 
     .prologue
-    .line 77
     invoke-static {p1}, Landroid/support/v4/view/ViewConfigurationCompatICS;->hasPermanentMenuKey(Landroid/view/ViewConfiguration;)Z
 
     move-result v0

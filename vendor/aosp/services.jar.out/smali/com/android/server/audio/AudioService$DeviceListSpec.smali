@@ -33,21 +33,16 @@
     .param p4, "deviceAddress"    # Ljava/lang/String;
 
     .prologue
-    .line 441
     iput-object p1, p0, Lcom/android/server/audio/AudioService$DeviceListSpec;->this$0:Lcom/android/server/audio/AudioService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 442
     iput p2, p0, Lcom/android/server/audio/AudioService$DeviceListSpec;->mDeviceType:I
 
-    .line 443
     iput-object p3, p0, Lcom/android/server/audio/AudioService$DeviceListSpec;->mDeviceName:Ljava/lang/String;
 
-    .line 444
     iput-object p4, p0, Lcom/android/server/audio/AudioService$DeviceListSpec;->mDeviceAddress:Ljava/lang/String;
 
-    .line 441
     return-void
 .end method
 
@@ -57,12 +52,11 @@
     .locals 2
 
     .prologue
-    .line 448
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "[type:0x"
+    const-string v1, "[type:0x"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -78,7 +72,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, " name:"
+    const-string v1, " name:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -90,26 +84,20 @@
 
     move-result-object v0
 
-    .line 449
-    const-string/jumbo v1, " address:"
+    const-string v1, " address:"
 
-    .line 448
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 449
     iget-object v1, p0, Lcom/android/server/audio/AudioService$DeviceListSpec;->mDeviceAddress:Ljava/lang/String;
 
-    .line 448
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 449
-    const-string/jumbo v1, "]"
+    const-string v1, "]"
 
-    .line 448
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0

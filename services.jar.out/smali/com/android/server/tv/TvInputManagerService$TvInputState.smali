@@ -57,15 +57,12 @@
     .locals 1
 
     .prologue
-    .line 1898
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1903
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/tv/TvInputManagerService$TvInputState;->state:I
 
-    .line 1898
     return-void
 .end method
 
@@ -84,12 +81,11 @@
     .locals 2
 
     .prologue
-    .line 1907
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "info: "
+    const-string v1, "info: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -101,7 +97,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "; state: "
+    const-string v1, "; state: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

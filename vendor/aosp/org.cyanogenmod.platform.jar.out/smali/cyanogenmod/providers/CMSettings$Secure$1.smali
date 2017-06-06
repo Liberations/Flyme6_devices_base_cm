@@ -26,15 +26,12 @@
     .locals 1
 
     .prologue
-    .line 2893
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2894
-    const-string/jumbo v0, "|"
+    const-string v0, "|"
 
     iput-object v0, p0, Lcyanogenmod/providers/CMSettings$Secure$1;->mDelimiter:Ljava/lang/String;
 
-    .line 2893
     return-void
 .end method
 
@@ -47,15 +44,13 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 2898
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    .line 2899
-    const-string/jumbo v2, "|"
+    const-string v2, "|"
 
     invoke-static {v2}, Ljava/util/regex/Pattern;->quote(Ljava/lang/String;)Ljava/lang/String;
 
@@ -65,7 +60,6 @@
 
     move-result-object v0
 
-    .line 2900
     .local v0, "array":[Ljava/lang/String;
     array-length v4, v0
 
@@ -76,7 +70,6 @@
 
     aget-object v1, v0, v2
 
-    .line 2901
     .local v1, "item":Ljava/lang/String;
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -84,16 +77,13 @@
 
     if-eqz v5, :cond_0
 
-    .line 2902
     return v3
 
-    .line 2900
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 2906
     .end local v0    # "array":[Ljava/lang/String;
     .end local v1    # "item":Ljava/lang/String;
     :cond_1

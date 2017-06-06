@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/LocationManagerService;
 
     .prologue
-    .line 289
     iput-object p1, p0, Lcom/android/server/LocationManagerService$3;->this$0:Lcom/android/server/LocationManagerService;
 
     invoke-direct {p0}, Landroid/app/AppOpsManager$OnOpChangedInternalListener;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 291
     iget-object v2, p0, Lcom/android/server/LocationManagerService$3;->this$0:Lcom/android/server/LocationManagerService;
 
     invoke-static {v2}, Lcom/android/server/LocationManagerService;->-get4(Lcom/android/server/LocationManagerService;)Ljava/lang/Object;
@@ -49,7 +47,6 @@
 
     monitor-enter v3
 
-    .line 292
     :try_start_0
     iget-object v2, p0, Lcom/android/server/LocationManagerService$3;->this$0:Lcom/android/server/LocationManagerService;
 
@@ -79,7 +76,6 @@
 
     check-cast v0, Lcom/android/server/LocationManagerService$Receiver;
 
-    .line 293
     .local v0, "receiver":Lcom/android/server/LocationManagerService$Receiver;
     const/4 v2, 0x1
 
@@ -89,7 +85,6 @@
 
     goto :goto_0
 
-    .line 291
     .end local v0    # "receiver":Lcom/android/server/LocationManagerService$Receiver;
     .end local v1    # "receiver$iterator":Ljava/util/Iterator;
     :catchall_0
@@ -99,7 +94,6 @@
 
     throw v2
 
-    .line 295
     .restart local v1    # "receiver$iterator":Ljava/util/Iterator;
     :cond_0
     :try_start_1
@@ -111,6 +105,5 @@
 
     monitor-exit v3
 
-    .line 290
     return-void
 .end method

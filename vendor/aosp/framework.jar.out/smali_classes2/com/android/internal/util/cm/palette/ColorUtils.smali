@@ -14,7 +14,6 @@
     .locals 0
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,24 +24,20 @@
     .param p0, "hsl"    # [F
 
     .prologue
-    .line 228
     const/4 v10, 0x0
 
     aget v3, p0, v10
 
-    .line 229
     .local v3, "h":F
     const/4 v10, 0x1
 
     aget v8, p0, v10
 
-    .line 230
     .local v8, "s":F
     const/4 v10, 0x2
 
     aget v5, p0, v10
 
-    .line 232
     .local v5, "l":F
     const/high16 v10, 0x40000000    # 2.0f
 
@@ -62,7 +57,6 @@
 
     mul-float v1, v10, v8
 
-    .line 233
     .local v1, "c":F
     const/high16 v10, 0x3f000000    # 0.5f
 
@@ -70,7 +64,6 @@
 
     sub-float v6, v5, v10
 
-    .line 234
     .local v6, "m":F
     const/high16 v10, 0x42700000    # 60.0f
 
@@ -94,13 +87,11 @@
 
     mul-float v9, v1, v10
 
-    .line 236
     .local v9, "x":F
     float-to-int v10, v3
 
     div-int/lit8 v4, v10, 0x3c
 
-    .line 238
     .local v4, "hueSegment":I
     const/4 v7, 0x0
 
@@ -110,11 +101,9 @@
     .local v2, "g":I
     const/4 v0, 0x0
 
-    .line 240
     .local v0, "b":I
     packed-switch v4, :pswitch_data_0
 
-    .line 274
     :goto_0
     const/4 v10, 0x0
 
@@ -124,7 +113,6 @@
 
     move-result v7
 
-    .line 275
     const/4 v10, 0x0
 
     const/16 v11, 0xff
@@ -133,7 +121,6 @@
 
     move-result v2
 
-    .line 276
     const/4 v10, 0x0
 
     const/16 v11, 0xff
@@ -142,14 +129,12 @@
 
     move-result v0
 
-    .line 278
     invoke-static {v7, v2, v0}, Landroid/graphics/Color;->rgb(III)I
 
     move-result v10
 
     return v10
 
-    .line 242
     :pswitch_0
     add-float v10, v1, v6
 
@@ -161,7 +146,6 @@
 
     move-result v7
 
-    .line 243
     add-float v10, v9, v6
 
     const/high16 v11, 0x437f0000    # 255.0f
@@ -172,7 +156,6 @@
 
     move-result v2
 
-    .line 244
     const/high16 v10, 0x437f0000    # 255.0f
 
     mul-float/2addr v10, v6
@@ -183,7 +166,6 @@
 
     goto :goto_0
 
-    .line 247
     :pswitch_1
     add-float v10, v9, v6
 
@@ -195,7 +177,6 @@
 
     move-result v7
 
-    .line 248
     add-float v10, v1, v6
 
     const/high16 v11, 0x437f0000    # 255.0f
@@ -206,7 +187,6 @@
 
     move-result v2
 
-    .line 249
     const/high16 v10, 0x437f0000    # 255.0f
 
     mul-float/2addr v10, v6
@@ -217,7 +197,6 @@
 
     goto :goto_0
 
-    .line 252
     :pswitch_2
     const/high16 v10, 0x437f0000    # 255.0f
 
@@ -227,7 +206,6 @@
 
     move-result v7
 
-    .line 253
     add-float v10, v1, v6
 
     const/high16 v11, 0x437f0000    # 255.0f
@@ -238,7 +216,6 @@
 
     move-result v2
 
-    .line 254
     add-float v10, v9, v6
 
     const/high16 v11, 0x437f0000    # 255.0f
@@ -251,7 +228,6 @@
 
     goto :goto_0
 
-    .line 257
     :pswitch_3
     const/high16 v10, 0x437f0000    # 255.0f
 
@@ -261,7 +237,6 @@
 
     move-result v7
 
-    .line 258
     add-float v10, v9, v6
 
     const/high16 v11, 0x437f0000    # 255.0f
@@ -272,7 +247,6 @@
 
     move-result v2
 
-    .line 259
     add-float v10, v1, v6
 
     const/high16 v11, 0x437f0000    # 255.0f
@@ -285,7 +259,6 @@
 
     goto/16 :goto_0
 
-    .line 262
     :pswitch_4
     add-float v10, v9, v6
 
@@ -297,7 +270,6 @@
 
     move-result v7
 
-    .line 263
     const/high16 v10, 0x437f0000    # 255.0f
 
     mul-float/2addr v10, v6
@@ -306,7 +278,6 @@
 
     move-result v2
 
-    .line 264
     add-float v10, v1, v6
 
     const/high16 v11, 0x437f0000    # 255.0f
@@ -319,7 +290,6 @@
 
     goto/16 :goto_0
 
-    .line 268
     :pswitch_5
     add-float v10, v1, v6
 
@@ -331,7 +301,6 @@
 
     move-result v7
 
-    .line 269
     const/high16 v10, 0x437f0000    # 255.0f
 
     mul-float/2addr v10, v6
@@ -340,7 +309,6 @@
 
     move-result v2
 
-    .line 270
     add-float v10, v9, v6
 
     const/high16 v11, 0x437f0000    # 255.0f
@@ -353,7 +321,6 @@
 
     goto/16 :goto_0
 
-    .line 240
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -374,14 +341,12 @@
     .param p3, "hsl"    # [F
 
     .prologue
-    .line 164
     int-to-float v9, p0
 
     const/high16 v10, 0x437f0000    # 255.0f
 
     div-float v7, v9, v10
 
-    .line 165
     .local v7, "rf":F
     int-to-float v9, p1
 
@@ -389,7 +354,6 @@
 
     div-float v2, v9, v10
 
-    .line 166
     .local v2, "gf":F
     int-to-float v9, p2
 
@@ -397,7 +361,6 @@
 
     div-float v0, v9, v10
 
-    .line 168
     .local v0, "bf":F
     invoke-static {v2, v0}, Ljava/lang/Math;->max(FF)F
 
@@ -407,7 +370,6 @@
 
     move-result v5
 
-    .line 169
     .local v5, "max":F
     invoke-static {v2, v0}, Ljava/lang/Math;->min(FF)F
 
@@ -417,11 +379,9 @@
 
     move-result v6
 
-    .line 170
     .local v6, "min":F
     sub-float v1, v5, v6
 
-    .line 173
     .local v1, "deltaMaxMin":F
     add-float v9, v5, v6
 
@@ -429,19 +389,16 @@
 
     div-float v4, v9, v10
 
-    .line 175
     .local v4, "l":F
     cmpl-float v9, v5, v6
 
     if-nez v9, :cond_1
 
-    .line 177
     const/4 v8, 0x0
 
     .local v8, "s":F
     const/4 v3, 0x0
 
-    .line 190
     .local v3, "h":F
     :goto_0
     const/high16 v9, 0x42700000    # 60.0f
@@ -452,19 +409,16 @@
 
     rem-float v3, v9, v10
 
-    .line 191
     const/4 v9, 0x0
 
     cmpg-float v9, v3, v9
 
     if-gez v9, :cond_0
 
-    .line 192
     const/high16 v9, 0x43b40000    # 360.0f
 
     add-float/2addr v3, v9
 
-    .line 195
     :cond_0
     const/4 v9, 0x0
 
@@ -478,7 +432,6 @@
 
     aput v9, p3, v10
 
-    .line 196
     const/4 v9, 0x0
 
     const/high16 v10, 0x3f800000    # 1.0f
@@ -491,7 +444,6 @@
 
     aput v9, p3, v10
 
-    .line 197
     const/4 v9, 0x0
 
     const/high16 v10, 0x3f800000    # 1.0f
@@ -504,10 +456,8 @@
 
     aput v9, p3, v10
 
-    .line 163
     return-void
 
-    .line 179
     .end local v3    # "h":F
     .end local v8    # "s":F
     :cond_1
@@ -515,7 +465,6 @@
 
     if-nez v9, :cond_2
 
-    .line 180
     sub-float v9, v2, v0
 
     div-float/2addr v9, v1
@@ -524,7 +473,6 @@
 
     rem-float v3, v9, v10
 
-    .line 187
     .restart local v3    # "h":F
     :goto_1
     const/high16 v9, 0x40000000    # 2.0f
@@ -548,7 +496,6 @@
     .restart local v8    # "s":F
     goto :goto_0
 
-    .line 181
     .end local v3    # "h":F
     .end local v8    # "s":F
     :cond_2
@@ -556,7 +503,6 @@
 
     if-nez v9, :cond_3
 
-    .line 182
     sub-float v9, v0, v7
 
     div-float/2addr v9, v1
@@ -568,7 +514,6 @@
     .restart local v3    # "h":F
     goto :goto_1
 
-    .line 184
     .end local v3    # "h":F
     :cond_3
     sub-float v9, v7, v2
@@ -593,23 +538,20 @@
 
     const-wide v6, 0x3fa999999999999aL    # 0.05
 
-    .line 86
     invoke-static {p1}, Landroid/graphics/Color;->alpha(I)I
 
     move-result v4
 
     if-eq v4, v5, :cond_0
 
-    .line 87
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v5, "background can not be translucent"
+    const-string v5, "background can not be translucent"
 
     invoke-direct {v4, v5}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v4
 
-    .line 89
     :cond_0
     invoke-static {p0}, Landroid/graphics/Color;->alpha(I)I
 
@@ -617,12 +559,10 @@
 
     if-ge v4, v5, :cond_1
 
-    .line 91
     invoke-static {p0, p1}, Lcom/android/internal/util/cm/palette/ColorUtils;->compositeColors(II)I
 
     move-result p0
 
-    .line 94
     :cond_1
     invoke-static {p0}, Lcom/android/internal/util/cm/palette/ColorUtils;->calculateLuminance(I)D
 
@@ -630,7 +570,6 @@
 
     add-double v0, v4, v6
 
-    .line 95
     .local v0, "luminance1":D
     invoke-static {p1}, Lcom/android/internal/util/cm/palette/ColorUtils;->calculateLuminance(I)D
 
@@ -638,7 +577,6 @@
 
     add-double v2, v4, v6
 
-    .line 98
     .local v2, "luminance2":D
     invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->max(DD)D
 
@@ -658,7 +596,6 @@
     .param p0, "color"    # I
 
     .prologue
-    .line 66
     invoke-static {p0}, Landroid/graphics/Color;->red(I)I
 
     move-result v6
@@ -669,7 +606,6 @@
 
     div-double v4, v6, v8
 
-    .line 67
     .local v4, "red":D
     const-wide v6, 0x3fa41c8216c61523L    # 0.03928
 
@@ -681,7 +617,6 @@
 
     div-double/2addr v4, v6
 
-    .line 69
     :goto_0
     invoke-static {p0}, Landroid/graphics/Color;->green(I)I
 
@@ -693,7 +628,6 @@
 
     div-double v2, v6, v8
 
-    .line 70
     .local v2, "green":D
     const-wide v6, 0x3fa41c8216c61523L    # 0.03928
 
@@ -705,7 +639,6 @@
 
     div-double/2addr v2, v6
 
-    .line 72
     :goto_1
     invoke-static {p0}, Landroid/graphics/Color;->blue(I)I
 
@@ -717,7 +650,6 @@
 
     div-double v0, v6, v8
 
-    .line 73
     .local v0, "blue":D
     const-wide v6, 0x3fa41c8216c61523L    # 0.03928
 
@@ -729,7 +661,6 @@
 
     div-double/2addr v0, v6
 
-    .line 75
     :goto_2
     const-wide v6, 0x3fcb367a0f9096bcL    # 0.2126
 
@@ -749,7 +680,6 @@
 
     return-wide v6
 
-    .line 67
     .end local v0    # "blue":D
     .end local v2    # "green":D
     :cond_0
@@ -769,7 +699,6 @@
 
     goto :goto_0
 
-    .line 70
     .restart local v2    # "green":D
     :cond_1
     const-wide v6, 0x3fac28f5c28f5c29L    # 0.055
@@ -788,7 +717,6 @@
 
     goto :goto_1
 
-    .line 73
     .restart local v0    # "blue":D
     :cond_2
     const-wide v6, 0x3fac28f5c28f5c29L    # 0.055
@@ -819,35 +747,30 @@
 
     const/16 v10, 0xa
 
-    .line 113
     invoke-static {p1}, Landroid/graphics/Color;->alpha(I)I
 
     move-result v5
 
     if-eq v5, v8, :cond_0
 
-    .line 114
     new-instance v5, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v8, "background can not be translucent"
+    const-string v8, "background can not be translucent"
 
     invoke-direct {v5, v8}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v5
 
-    .line 118
     :cond_0
     invoke-static {p0, v8}, Lcom/android/internal/util/cm/palette/ColorUtils;->setAlphaComponent(II)I
 
     move-result v4
 
-    .line 119
     .local v4, "testForeground":I
     invoke-static {v4, p1}, Lcom/android/internal/util/cm/palette/ColorUtils;->calculateContrast(II)D
 
     move-result-wide v6
 
-    .line 120
     .local v6, "testRatio":D
     float-to-double v8, p2
 
@@ -855,72 +778,58 @@
 
     if-gez v5, :cond_1
 
-    .line 122
     const/4 v5, -0x1
 
     return v5
 
-    .line 126
     :cond_1
     const/4 v2, 0x0
 
-    .line 127
     .local v2, "numIterations":I
     const/4 v1, 0x0
 
-    .line 128
     .local v1, "minAlpha":I
     const/16 v0, 0xff
 
-    .line 130
     .local v0, "maxAlpha":I
     :goto_0
     if-gt v2, v10, :cond_3
 
-    .line 131
     sub-int v5, v0, v1
 
     if-le v5, v10, :cond_3
 
-    .line 132
     add-int v5, v1, v0
 
     div-int/lit8 v3, v5, 0x2
 
-    .line 134
     .local v3, "testAlpha":I
     invoke-static {p0, v3}, Lcom/android/internal/util/cm/palette/ColorUtils;->setAlphaComponent(II)I
 
     move-result v4
 
-    .line 135
     invoke-static {v4, p1}, Lcom/android/internal/util/cm/palette/ColorUtils;->calculateContrast(II)D
 
     move-result-wide v6
 
-    .line 137
     float-to-double v8, p2
 
     cmpg-double v5, v6, v8
 
     if-gez v5, :cond_2
 
-    .line 138
     move v1, v3
 
-    .line 143
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 140
     :cond_2
     move v0, v3
 
     goto :goto_1
 
-    .line 147
     .end local v3    # "testAlpha":I
     :cond_3
     return v0
@@ -932,7 +841,6 @@
     .param p1, "hsl"    # [F
 
     .prologue
-    .line 212
     invoke-static {p0}, Landroid/graphics/Color;->red(I)I
 
     move-result v0
@@ -947,7 +855,6 @@
 
     invoke-static {v0, v1, v2, p1}, Lcom/android/internal/util/cm/palette/ColorUtils;->RGBToHSL(III[F)V
 
-    .line 211
     return-void
 .end method
 
@@ -957,7 +864,6 @@
     .param p1, "backgroundAlpha"    # I
 
     .prologue
-    .line 52
     rsub-int v0, p1, 0xff
 
     rsub-int v1, p0, 0xff
@@ -977,72 +883,59 @@
     .param p1, "background"    # I
 
     .prologue
-    .line 37
     invoke-static {p1}, Landroid/graphics/Color;->alpha(I)I
 
     move-result v2
 
-    .line 38
     .local v2, "bgAlpha":I
     invoke-static {p0}, Landroid/graphics/Color;->alpha(I)I
 
     move-result v3
 
-    .line 39
     .local v3, "fgAlpha":I
     invoke-static {v3, v2}, Lcom/android/internal/util/cm/palette/ColorUtils;->compositeAlpha(II)I
 
     move-result v0
 
-    .line 41
     .local v0, "a":I
     invoke-static {p0}, Landroid/graphics/Color;->red(I)I
 
     move-result v6
 
-    .line 42
     invoke-static {p1}, Landroid/graphics/Color;->red(I)I
 
     move-result v7
 
-    .line 41
     invoke-static {v6, v3, v7, v2, v0}, Lcom/android/internal/util/cm/palette/ColorUtils;->compositeComponent(IIIII)I
 
     move-result v5
 
-    .line 43
     .local v5, "r":I
     invoke-static {p0}, Landroid/graphics/Color;->green(I)I
 
     move-result v6
 
-    .line 44
     invoke-static {p1}, Landroid/graphics/Color;->green(I)I
 
     move-result v7
 
-    .line 43
     invoke-static {v6, v3, v7, v2, v0}, Lcom/android/internal/util/cm/palette/ColorUtils;->compositeComponent(IIIII)I
 
     move-result v4
 
-    .line 45
     .local v4, "g":I
     invoke-static {p0}, Landroid/graphics/Color;->blue(I)I
 
     move-result v6
 
-    .line 46
     invoke-static {p1}, Landroid/graphics/Color;->blue(I)I
 
     move-result v7
 
-    .line 45
     invoke-static {v6, v3, v7, v2, v0}, Lcom/android/internal/util/cm/palette/ColorUtils;->compositeComponent(IIIII)I
 
     move-result v1
 
-    .line 48
     .local v1, "b":I
     invoke-static {v0, v5, v4, v1}, Landroid/graphics/Color;->argb(IIII)I
 
@@ -1062,12 +955,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 56
     if-nez p4, :cond_0
 
     return v0
 
-    .line 57
     :cond_0
     mul-int/lit16 v0, p0, 0xff
 
@@ -1095,7 +986,6 @@
     .param p2, "high"    # F
 
     .prologue
-    .line 292
     cmpg-float v0, p0, p1
 
     if-gez v0, :cond_0
@@ -1127,7 +1017,6 @@
     .param p2, "high"    # I
 
     .prologue
-    .line 296
     if-ge p0, p1, :cond_0
 
     .end local p1    # "low":I
@@ -1154,24 +1043,21 @@
     .param p1, "alpha"    # I
 
     .prologue
-    .line 285
     if-ltz p1, :cond_0
 
     const/16 v0, 0xff
 
     if-le p1, v0, :cond_1
 
-    .line 286
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "alpha must be between 0 and 255."
+    const-string v1, "alpha must be between 0 and 255."
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 288
     :cond_1
     const v0, 0xffffff
 

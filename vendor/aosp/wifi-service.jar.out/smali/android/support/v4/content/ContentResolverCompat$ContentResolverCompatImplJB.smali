@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 51
     invoke-direct {p0}, Landroid/support/v4/content/ContentResolverCompat$ContentResolverCompatImplBase;-><init>()V
 
     return-void
@@ -40,10 +39,8 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 59
     if-eqz p7, :cond_0
 
-    .line 60
     :try_start_0
     invoke-virtual {p7}, Landroid/support/v4/os/CancellationSignal;->getCancellationSignalObject()Ljava/lang/Object;
 
@@ -62,7 +59,6 @@
 
     move-object v5, p6
 
-    .line 57
     invoke-static/range {v0 .. v6}, Landroid/support/v4/content/ContentResolverCompatJellybean;->query(Landroid/content/ContentResolver;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)Landroid/database/Cursor;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -71,11 +67,9 @@
 
     return-object v0
 
-    .line 61
     :catch_0
     move-exception v7
 
-    .line 62
     .local v7, "e":Ljava/lang/Exception;
     invoke-static {v7}, Landroid/support/v4/content/ContentResolverCompatJellybean;->isFrameworkOperationCanceledException(Ljava/lang/Exception;)Z
 
@@ -83,14 +77,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 65
     new-instance v0, Landroid/support/v4/os/OperationCanceledException;
 
     invoke-direct {v0}, Landroid/support/v4/os/OperationCanceledException;-><init>()V
 
     throw v0
 
-    .line 68
     :cond_1
     throw v7
 .end method

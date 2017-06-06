@@ -28,17 +28,14 @@
     .prologue
     const/4 v1, 0x2
 
-    .line 64
     invoke-direct {p0, p1, v1}, Landroid/nfc/tech/BasicTagTechnology;-><init>(Landroid/nfc/Tag;I)V
 
-    .line 65
     invoke-virtual {p1, v1}, Landroid/nfc/Tag;->getTechExtras(I)Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 66
     .local v0, "extras":Landroid/os/Bundle;
-    const-string/jumbo v1, "appdata"
+    const-string v1, "appdata"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getByteArray(Ljava/lang/String;)[B
 
@@ -46,8 +43,7 @@
 
     iput-object v1, p0, Landroid/nfc/tech/NfcB;->mAppData:[B
 
-    .line 67
-    const-string/jumbo v1, "protinfo"
+    const-string v1, "protinfo"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getByteArray(Ljava/lang/String;)[B
 
@@ -55,7 +51,6 @@
 
     iput-object v1, p0, Landroid/nfc/tech/NfcB;->mProtInfo:[B
 
-    .line 63
     return-void
 .end method
 
@@ -66,7 +61,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 54
     const/4 v1, 0x2
 
     invoke-virtual {p0, v1}, Landroid/nfc/Tag;->hasTech(I)Z
@@ -77,7 +71,6 @@
 
     return-object v2
 
-    .line 56
     :cond_0
     :try_start_0
     new-instance v1, Landroid/nfc/tech/NfcB;
@@ -88,11 +81,9 @@
 
     return-object v1
 
-    .line 57
     :catch_0
     move-exception v0
 
-    .line 58
     .local v0, "e":Landroid/os/RemoteException;
     return-object v2
 .end method
@@ -121,7 +112,6 @@
     .locals 1
 
     .prologue
-    .line 78
     iget-object v0, p0, Landroid/nfc/tech/NfcB;->mAppData:[B
 
     return-object v0
@@ -131,7 +121,6 @@
     .locals 1
 
     .prologue
-    .line 123
     invoke-virtual {p0}, Landroid/nfc/tech/NfcB;->getMaxTransceiveLengthInternal()I
 
     move-result v0
@@ -143,7 +132,6 @@
     .locals 1
 
     .prologue
-    .line 89
     iget-object v0, p0, Landroid/nfc/tech/NfcB;->mProtInfo:[B
 
     return-object v0
@@ -190,7 +178,6 @@
     .end annotation
 
     .prologue
-    .line 115
     const/4 v0, 0x1
 
     invoke-virtual {p0, p1, v0}, Landroid/nfc/tech/NfcB;->transceive([BZ)[B

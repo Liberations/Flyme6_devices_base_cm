@@ -31,24 +31,23 @@
     .locals 3
 
     .prologue
-    .line 130
     const/4 v0, 0x3
 
     new-array v0, v0, [Ljava/lang/String;
 
-    const-string/jumbo v1, "OPEN"
+    const-string v1, "OPEN"
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    const-string/jumbo v1, "SHARED"
+    const-string v1, "SHARED"
 
     const/4 v2, 0x1
 
     aput-object v1, v0, v2
 
-    const-string/jumbo v1, "LEAP"
+    const-string v1, "LEAP"
 
     const/4 v2, 0x2
 
@@ -56,7 +55,6 @@
 
     sput-object v0, Landroid/net/wifi/WifiConfiguration$AuthAlgorithm;->strings:[Ljava/lang/String;
 
-    .line 118
     return-void
 .end method
 
@@ -64,7 +62,6 @@
     .locals 0
 
     .prologue
-    .line 119
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

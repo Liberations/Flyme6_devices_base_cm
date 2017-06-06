@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/widget/AdapterViewAnimator;
 
     .prologue
-    .line 608
     iput-object p1, p0, Landroid/widget/AdapterViewAnimator$CheckForTap;->this$0:Landroid/widget/AdapterViewAnimator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 3
 
     .prologue
-    .line 610
     iget-object v1, p0, Landroid/widget/AdapterViewAnimator$CheckForTap;->this$0:Landroid/widget/AdapterViewAnimator;
 
     invoke-static {v1}, Landroid/widget/AdapterViewAnimator;->-get0(Landroid/widget/AdapterViewAnimator;)I
@@ -52,20 +50,17 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 611
     iget-object v1, p0, Landroid/widget/AdapterViewAnimator$CheckForTap;->this$0:Landroid/widget/AdapterViewAnimator;
 
     invoke-virtual {v1}, Landroid/widget/AdapterViewAnimator;->getCurrentView()Landroid/view/View;
 
     move-result-object v0
 
-    .line 612
     .local v0, "v":Landroid/view/View;
     iget-object v1, p0, Landroid/widget/AdapterViewAnimator$CheckForTap;->this$0:Landroid/widget/AdapterViewAnimator;
 
     invoke-virtual {v1, v0}, Landroid/widget/AdapterViewAnimator;->showTapFeedback(Landroid/view/View;)V
 
-    .line 609
     .end local v0    # "v":Landroid/view/View;
     :cond_0
     return-void

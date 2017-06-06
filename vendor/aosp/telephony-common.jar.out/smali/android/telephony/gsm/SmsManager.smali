@@ -68,17 +68,14 @@
     .end annotation
 
     .prologue
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     invoke-static {}, Landroid/telephony/SmsManager;->getDefault()Landroid/telephony/SmsManager;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/telephony/gsm/SmsManager;->mSmsMgrProxy:Landroid/telephony/SmsManager;
 
-    .line 47
     return-void
 .end method
 
@@ -88,19 +85,16 @@
     .end annotation
 
     .prologue
-    .line 40
     sget-object v0, Landroid/telephony/gsm/SmsManager;->sInstance:Landroid/telephony/gsm/SmsManager;
 
     if-nez v0, :cond_0
 
-    .line 41
     new-instance v0, Landroid/telephony/gsm/SmsManager;
 
     invoke-direct {v0}, Landroid/telephony/gsm/SmsManager;-><init>()V
 
     sput-object v0, Landroid/telephony/gsm/SmsManager;->sInstance:Landroid/telephony/gsm/SmsManager;
 
-    .line 43
     :cond_0
     sget-object v0, Landroid/telephony/gsm/SmsManager;->sInstance:Landroid/telephony/gsm/SmsManager;
 
@@ -118,12 +112,10 @@
     .end annotation
 
     .prologue
-    .line 184
     const/16 v0, 0x52
 
     invoke-static {v0}, Landroid/util/SeempLog;->record(I)I
 
-    .line 185
     iget-object v0, p0, Landroid/telephony/gsm/SmsManager;->mSmsMgrProxy:Landroid/telephony/SmsManager;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/telephony/SmsManager;->copyMessageToIcc([B[BI)Z
@@ -140,12 +132,10 @@
     .end annotation
 
     .prologue
-    .line 198
     const/16 v0, 0x53
 
     invoke-static {v0}, Landroid/util/SeempLog;->record(I)I
 
-    .line 199
     iget-object v0, p0, Landroid/telephony/gsm/SmsManager;->mSmsMgrProxy:Landroid/telephony/SmsManager;
 
     invoke-virtual {v0, p1}, Landroid/telephony/SmsManager;->deleteMessageFromIcc(I)Z
@@ -174,7 +164,6 @@
     .end annotation
 
     .prologue
-    .line 95
     iget-object v0, p0, Landroid/telephony/gsm/SmsManager;->mSmsMgrProxy:Landroid/telephony/SmsManager;
 
     invoke-virtual {v0, p1}, Landroid/telephony/SmsManager;->divideMessage(Ljava/lang/String;)Ljava/util/ArrayList;
@@ -200,12 +189,10 @@
     .end annotation
 
     .prologue
-    .line 228
     const/16 v0, 0x55
 
     invoke-static {v0}, Landroid/util/SeempLog;->record(I)I
 
-    .line 229
     invoke-static {}, Landroid/telephony/SmsManager;->getDefault()Landroid/telephony/SmsManager;
 
     move-result-object v0
@@ -229,12 +216,10 @@
     .end annotation
 
     .prologue
-    .line 166
     const/16 v0, 0x49
 
     invoke-static {v0, p1}, Landroid/util/SeempLog;->record_str(ILjava/lang/String;)I
 
-    .line 167
     iget-object v0, p0, Landroid/telephony/gsm/SmsManager;->mSmsMgrProxy:Landroid/telephony/SmsManager;
 
     move-object v1, p1
@@ -251,7 +236,6 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/telephony/SmsManager;->sendDataMessage(Ljava/lang/String;Ljava/lang/String;S[BLandroid/app/PendingIntent;Landroid/app/PendingIntent;)V
 
-    .line 165
     return-void
 .end method
 
@@ -283,7 +267,6 @@
     .end annotation
 
     .prologue
-    .line 132
     .local p3, "parts":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     .local p4, "sentIntents":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/app/PendingIntent;>;"
     .local p5, "deliveryIntents":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/app/PendingIntent;>;"
@@ -291,7 +274,6 @@
 
     invoke-static {v0, p1}, Landroid/util/SeempLog;->record_str(ILjava/lang/String;)I
 
-    .line 133
     iget-object v0, p0, Landroid/telephony/gsm/SmsManager;->mSmsMgrProxy:Landroid/telephony/SmsManager;
 
     move-object v1, p1
@@ -306,7 +288,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/telephony/SmsManager;->sendMultipartTextMessage(Ljava/lang/String;Ljava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
-    .line 131
     return-void
 .end method
 
@@ -321,12 +302,10 @@
     .end annotation
 
     .prologue
-    .line 79
     const/16 v0, 0x4b
 
     invoke-static {v0, p1}, Landroid/util/SeempLog;->record_str(ILjava/lang/String;)I
 
-    .line 80
     iget-object v0, p0, Landroid/telephony/gsm/SmsManager;->mSmsMgrProxy:Landroid/telephony/SmsManager;
 
     move-object v1, p1
@@ -341,7 +320,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/telephony/SmsManager;->sendTextMessage(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent;Landroid/app/PendingIntent;)V
 
-    .line 78
     return-void
 .end method
 
@@ -354,12 +332,10 @@
     .end annotation
 
     .prologue
-    .line 216
     const/16 v0, 0x54
 
     invoke-static {v0}, Landroid/util/SeempLog;->record(I)I
 
-    .line 217
     iget-object v0, p0, Landroid/telephony/gsm/SmsManager;->mSmsMgrProxy:Landroid/telephony/SmsManager;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/telephony/SmsManager;->updateMessageOnIcc(II[B)Z

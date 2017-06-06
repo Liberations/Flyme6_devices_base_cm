@@ -44,15 +44,12 @@
     .locals 1
 
     .prologue
-    .line 30
     new-instance v0, Landroid/database/BulkCursorDescriptor$1;
 
     invoke-direct {v0}, Landroid/database/BulkCursorDescriptor$1;-><init>()V
 
-    .line 29
     sput-object v0, Landroid/database/BulkCursorDescriptor;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 28
     return-void
 .end method
 
@@ -60,7 +57,6 @@
     .locals 0
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -72,7 +68,6 @@
     .locals 1
 
     .prologue
-    .line 52
     const/4 v0, 0x0
 
     return v0
@@ -85,7 +80,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 70
     invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v1
@@ -96,14 +90,12 @@
 
     iput-object v1, p0, Landroid/database/BulkCursorDescriptor;->cursor:Landroid/database/IBulkCursor;
 
-    .line 71
     invoke-virtual {p1}, Landroid/os/Parcel;->readStringArray()[Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/database/BulkCursorDescriptor;->columnNames:[Ljava/lang/String;
 
-    .line 72
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -115,21 +107,18 @@
     :cond_0
     iput-boolean v0, p0, Landroid/database/BulkCursorDescriptor;->wantsAllOnMoveCalls:Z
 
-    .line 73
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/database/BulkCursorDescriptor;->count:I
 
-    .line 74
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 75
     sget-object v0, Landroid/database/CursorWindow;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -140,7 +129,6 @@
 
     iput-object v0, p0, Landroid/database/BulkCursorDescriptor;->window:Landroid/database/CursorWindow;
 
-    .line 69
     :cond_1
     return-void
 .end method
@@ -155,7 +143,6 @@
 
     const/4 v2, 0x0
 
-    .line 57
     iget-object v0, p0, Landroid/database/BulkCursorDescriptor;->cursor:Landroid/database/IBulkCursor;
 
     invoke-interface {v0}, Landroid/database/IBulkCursor;->asBinder()Landroid/os/IBinder;
@@ -164,12 +151,10 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 58
     iget-object v0, p0, Landroid/database/BulkCursorDescriptor;->columnNames:[Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    .line 59
     iget-boolean v0, p0, Landroid/database/BulkCursorDescriptor;->wantsAllOnMoveCalls:Z
 
     if-eqz v0, :cond_0
@@ -179,35 +164,28 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 60
     iget v0, p0, Landroid/database/BulkCursorDescriptor;->count:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 61
     iget-object v0, p0, Landroid/database/BulkCursorDescriptor;->window:Landroid/database/CursorWindow;
 
     if-eqz v0, :cond_1
 
-    .line 62
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 63
     iget-object v0, p0, Landroid/database/BulkCursorDescriptor;->window:Landroid/database/CursorWindow;
 
     invoke-virtual {v0, p1, p2}, Landroid/database/CursorWindow;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 56
     :goto_1
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 59
     goto :goto_0
 
-    .line 65
     :cond_1
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 

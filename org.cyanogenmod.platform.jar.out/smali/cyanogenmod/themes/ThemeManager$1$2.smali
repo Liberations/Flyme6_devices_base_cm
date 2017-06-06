@@ -30,7 +30,6 @@
     .param p2, "val$isSuccess"    # Z
 
     .prologue
-    .line 111
     iput-object p1, p0, Lcyanogenmod/themes/ThemeManager$1$2;->this$1:Lcyanogenmod/themes/ThemeManager$1;
 
     iput-boolean p2, p0, Lcyanogenmod/themes/ThemeManager$1$2;->val$isSuccess:Z
@@ -46,7 +45,6 @@
     .locals 7
 
     .prologue
-    .line 114
     iget-object v4, p0, Lcyanogenmod/themes/ThemeManager$1$2;->this$1:Lcyanogenmod/themes/ThemeManager$1;
 
     iget-object v4, v4, Lcyanogenmod/themes/ThemeManager$1;->this$0:Lcyanogenmod/themes/ThemeManager;
@@ -57,13 +55,11 @@
 
     monitor-enter v5
 
-    .line 115
     :try_start_0
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 116
     .local v3, "listenersToRemove":Ljava/util/List;, "Ljava/util/List<Lcyanogenmod/themes/ThemeManager$ThemeChangeListener;>;"
     iget-object v4, p0, Lcyanogenmod/themes/ThemeManager$1$2;->this$1:Lcyanogenmod/themes/ThemeManager$1;
 
@@ -93,7 +89,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 118
     .local v1, "listener":Lcyanogenmod/themes/ThemeManager$ThemeChangeListener;
     :try_start_1
     iget-boolean v4, p0, Lcyanogenmod/themes/ThemeManager$1$2;->val$isSuccess:Z
@@ -105,29 +100,25 @@
 
     goto :goto_0
 
-    .line 119
     :catch_0
     move-exception v0
 
-    .line 120
     .local v0, "e":Ljava/lang/Throwable;
     :try_start_2
     invoke-static {}, Lcyanogenmod/themes/ThemeManager;->-get0()Ljava/lang/String;
 
     move-result-object v4
 
-    const-string/jumbo v6, "Unable to update theme change listener"
+    const-string v6, "Unable to update theme change listener"
 
     invoke-static {v4, v6, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 121
     invoke-interface {v3, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     goto :goto_0
 
-    .line 114
     .end local v0    # "e":Ljava/lang/Throwable;
     .end local v1    # "listener":Lcyanogenmod/themes/ThemeManager$ThemeChangeListener;
     .end local v2    # "listener$iterator":Ljava/util/Iterator;
@@ -139,7 +130,6 @@
 
     throw v4
 
-    .line 124
     .restart local v2    # "listener$iterator":Ljava/util/Iterator;
     .restart local v3    # "listenersToRemove":Ljava/util/List;, "Ljava/util/List<Lcyanogenmod/themes/ThemeManager$ThemeChangeListener;>;"
     :cond_0
@@ -150,7 +140,6 @@
 
     if-lez v4, :cond_1
 
-    .line 125
     invoke-interface {v3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -168,7 +157,6 @@
 
     check-cast v1, Lcyanogenmod/themes/ThemeManager$ThemeChangeListener;
 
-    .line 126
     .restart local v1    # "listener":Lcyanogenmod/themes/ThemeManager$ThemeChangeListener;
     iget-object v4, p0, Lcyanogenmod/themes/ThemeManager$1$2;->this$1:Lcyanogenmod/themes/ThemeManager$1;
 
@@ -188,6 +176,5 @@
     :cond_1
     monitor-exit v5
 
-    .line 113
     return-void
 .end method

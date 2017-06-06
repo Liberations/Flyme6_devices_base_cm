@@ -52,10 +52,9 @@
 
     const/4 v2, 0x0
 
-    .line 32
     new-instance v0, Landroid/annotation/SdkConstant$SdkConstantType;
 
-    const-string/jumbo v1, "ACTIVITY_INTENT_ACTION"
+    const-string v1, "ACTIVITY_INTENT_ACTION"
 
     invoke-direct {v0, v1, v2}, Landroid/annotation/SdkConstant$SdkConstantType;-><init>(Ljava/lang/String;I)V
 
@@ -63,7 +62,7 @@
 
     new-instance v0, Landroid/annotation/SdkConstant$SdkConstantType;
 
-    const-string/jumbo v1, "BROADCAST_INTENT_ACTION"
+    const-string v1, "BROADCAST_INTENT_ACTION"
 
     invoke-direct {v0, v1, v3}, Landroid/annotation/SdkConstant$SdkConstantType;-><init>(Ljava/lang/String;I)V
 
@@ -71,7 +70,7 @@
 
     new-instance v0, Landroid/annotation/SdkConstant$SdkConstantType;
 
-    const-string/jumbo v1, "SERVICE_ACTION"
+    const-string v1, "SERVICE_ACTION"
 
     invoke-direct {v0, v1, v4}, Landroid/annotation/SdkConstant$SdkConstantType;-><init>(Ljava/lang/String;I)V
 
@@ -79,7 +78,7 @@
 
     new-instance v0, Landroid/annotation/SdkConstant$SdkConstantType;
 
-    const-string/jumbo v1, "INTENT_CATEGORY"
+    const-string v1, "INTENT_CATEGORY"
 
     invoke-direct {v0, v1, v5}, Landroid/annotation/SdkConstant$SdkConstantType;-><init>(Ljava/lang/String;I)V
 
@@ -87,13 +86,12 @@
 
     new-instance v0, Landroid/annotation/SdkConstant$SdkConstantType;
 
-    const-string/jumbo v1, "FEATURE"
+    const-string v1, "FEATURE"
 
     invoke-direct {v0, v1, v6}, Landroid/annotation/SdkConstant$SdkConstantType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Landroid/annotation/SdkConstant$SdkConstantType;->FEATURE:Landroid/annotation/SdkConstant$SdkConstantType;
 
-    .line 31
     const/4 v0, 0x5
 
     new-array v0, v0, [Landroid/annotation/SdkConstant$SdkConstantType;
@@ -127,7 +125,6 @@
     .locals 0
 
     .prologue
-    .line 31
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -138,7 +135,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 31
     const-class v0, Landroid/annotation/SdkConstant$SdkConstantType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -154,7 +150,6 @@
     .locals 1
 
     .prologue
-    .line 31
     sget-object v0, Landroid/annotation/SdkConstant$SdkConstantType;->$VALUES:[Landroid/annotation/SdkConstant$SdkConstantType;
 
     return-object v0

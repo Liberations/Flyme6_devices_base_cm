@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/widget/VideoView;
 
     .prologue
-    .line 551
     iput-object p1, p0, Landroid/widget/VideoView$6;->this$0:Landroid/widget/VideoView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,11 +42,9 @@
     .param p2, "percent"    # I
 
     .prologue
-    .line 553
     iget-object v0, p0, Landroid/widget/VideoView$6;->this$0:Landroid/widget/VideoView;
 
     invoke-static {v0, p2}, Landroid/widget/VideoView;->-set3(Landroid/widget/VideoView;I)I
 
-    .line 552
     return-void
 .end method

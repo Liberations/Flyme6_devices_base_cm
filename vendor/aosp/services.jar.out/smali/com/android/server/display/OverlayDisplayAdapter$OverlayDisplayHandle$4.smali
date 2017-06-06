@@ -35,7 +35,6 @@
     .param p14, "$anonymous10"    # I
 
     .prologue
-    .line 402
     .local p5, "$anonymous2":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/display/OverlayDisplayAdapter$OverlayMode;>;"
     move-object/from16 v0, p1
 
@@ -71,7 +70,6 @@
 
     invoke-direct/range {v2 .. v15}, Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayDevice;-><init>(Lcom/android/server/display/OverlayDisplayAdapter;Landroid/os/IBinder;Ljava/lang/String;Ljava/util/List;IIFJZILandroid/graphics/SurfaceTexture;I)V
 
-    .line 404
     return-void
 .end method
 
@@ -82,11 +80,9 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 407
     iget-object v0, p0, Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle$4;->this$1:Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;
 
     invoke-static {v0, p1}, Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;->-wrap0(Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;I)V
 
-    .line 406
     return-void
 .end method

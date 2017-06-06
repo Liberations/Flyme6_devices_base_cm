@@ -27,13 +27,10 @@
     .param p1, "remote"    # Landroid/os/IBinder;
 
     .prologue
-    .line 98
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 100
     iput-object p1, p0, Landroid/content/pm/IPackageInstallerCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    .line 98
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 104
     iget-object v0, p0, Landroid/content/pm/IPackageInstallerCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object v0
@@ -53,8 +49,7 @@
     .locals 1
 
     .prologue
-    .line 108
-    const-string/jumbo v0, "android.content.pm.IPackageInstallerCallback"
+    const-string v0, "android.content.pm.IPackageInstallerCallback"
 
     return-object v0
 .end method
@@ -72,28 +67,23 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 136
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 138
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
-    const-string/jumbo v2, "android.content.pm.IPackageInstallerCallback"
+    const-string v2, "android.content.pm.IPackageInstallerCallback"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 139
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 140
     if-eqz p2, :cond_0
 
     :goto_0
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 141
     iget-object v1, p0, Landroid/content/pm/IPackageInstallerCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x3
@@ -106,26 +96,20 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 144
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 134
     return-void
 
-    .line 140
     :cond_0
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 143
     :catchall_0
     move-exception v1
 
-    .line 144
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 143
     throw v1
 .end method
 
@@ -139,22 +123,18 @@
     .end annotation
 
     .prologue
-    .line 124
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 126
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
-    const-string/jumbo v1, "android.content.pm.IPackageInstallerCallback"
+    const-string v1, "android.content.pm.IPackageInstallerCallback"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 127
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 128
     iget-object v1, p0, Landroid/content/pm/IPackageInstallerCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x2
@@ -167,20 +147,15 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 131
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 122
     return-void
 
-    .line 130
     :catchall_0
     move-exception v1
 
-    .line 131
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 130
     throw v1
 .end method
 
@@ -194,22 +169,18 @@
     .end annotation
 
     .prologue
-    .line 112
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 114
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
-    const-string/jumbo v1, "android.content.pm.IPackageInstallerCallback"
+    const-string v1, "android.content.pm.IPackageInstallerCallback"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 115
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 116
     iget-object v1, p0, Landroid/content/pm/IPackageInstallerCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x1
@@ -222,20 +193,15 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 119
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 110
     return-void
 
-    .line 118
     :catchall_0
     move-exception v1
 
-    .line 119
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 118
     throw v1
 .end method
 
@@ -252,28 +218,23 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 162
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 164
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
-    const-string/jumbo v2, "android.content.pm.IPackageInstallerCallback"
+    const-string v2, "android.content.pm.IPackageInstallerCallback"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 165
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 166
     if-eqz p2, :cond_0
 
     :goto_0
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 167
     iget-object v1, p0, Landroid/content/pm/IPackageInstallerCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x5
@@ -286,26 +247,20 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 170
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 160
     return-void
 
-    .line 166
     :cond_0
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 169
     :catchall_0
     move-exception v1
 
-    .line 170
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 169
     throw v1
 .end method
 
@@ -320,25 +275,20 @@
     .end annotation
 
     .prologue
-    .line 149
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 151
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
-    const-string/jumbo v1, "android.content.pm.IPackageInstallerCallback"
+    const-string v1, "android.content.pm.IPackageInstallerCallback"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 152
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 153
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 154
     iget-object v1, p0, Landroid/content/pm/IPackageInstallerCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x4
@@ -351,19 +301,14 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 157
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 147
     return-void
 
-    .line 156
     :catchall_0
     move-exception v1
 
-    .line 157
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 156
     throw v1
 .end method

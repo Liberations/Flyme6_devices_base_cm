@@ -30,7 +30,6 @@
     .param p2, "val$deferTime"    # J
 
     .prologue
-    .line 4554
     iput-object p1, p0, Lcom/android/server/backup/BackupManagerService$4;->this$0:Lcom/android/server/backup/BackupManagerService;
 
     iput-wide p2, p0, Lcom/android/server/backup/BackupManagerService$4;->val$deferTime:J
@@ -46,7 +45,6 @@
     .locals 4
 
     .prologue
-    .line 4556
     iget-object v0, p0, Lcom/android/server/backup/BackupManagerService$4;->this$0:Lcom/android/server/backup/BackupManagerService;
 
     iget-object v0, v0, Lcom/android/server/backup/BackupManagerService;->mContext:Landroid/content/Context;
@@ -55,6 +53,5 @@
 
     invoke-static {v0, v2, v3}, Lcom/android/server/backup/FullBackupJob;->schedule(Landroid/content/Context;J)V
 
-    .line 4555
     return-void
 .end method

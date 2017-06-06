@@ -30,7 +30,6 @@
     .param p2, "val$callbacks"    # Landroid/service/media/IMediaBrowserServiceCallbacks;
 
     .prologue
-    .line 217
     iput-object p1, p0, Landroid/service/media/MediaBrowserService$ServiceBinder$2;->this$1:Landroid/service/media/MediaBrowserService$ServiceBinder;
 
     iput-object p2, p0, Landroid/service/media/MediaBrowserService$ServiceBinder$2;->val$callbacks:Landroid/service/media/IMediaBrowserServiceCallbacks;
@@ -46,14 +45,12 @@
     .locals 3
 
     .prologue
-    .line 220
     iget-object v2, p0, Landroid/service/media/MediaBrowserService$ServiceBinder$2;->val$callbacks:Landroid/service/media/IMediaBrowserServiceCallbacks;
 
     invoke-interface {v2}, Landroid/service/media/IMediaBrowserServiceCallbacks;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 223
     .local v0, "b":Landroid/os/IBinder;
     iget-object v2, p0, Landroid/service/media/MediaBrowserService$ServiceBinder$2;->this$1:Landroid/service/media/MediaBrowserService$ServiceBinder;
 
@@ -69,11 +66,9 @@
 
     check-cast v1, Landroid/service/media/MediaBrowserService$ConnectionRecord;
 
-    .line 224
     .local v1, "old":Landroid/service/media/MediaBrowserService$ConnectionRecord;
     if-eqz v1, :cond_0
 
-    .line 219
     :cond_0
     return-void
 .end method

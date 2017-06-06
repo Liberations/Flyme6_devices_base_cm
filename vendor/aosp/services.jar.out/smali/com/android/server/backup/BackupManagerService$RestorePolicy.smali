@@ -44,34 +44,30 @@
 
     const/4 v2, 0x0
 
-    .line 4659
     new-instance v0, Lcom/android/server/backup/BackupManagerService$RestorePolicy;
 
-    const-string/jumbo v1, "IGNORE"
+    const-string v1, "IGNORE"
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/backup/BackupManagerService$RestorePolicy;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/server/backup/BackupManagerService$RestorePolicy;->IGNORE:Lcom/android/server/backup/BackupManagerService$RestorePolicy;
 
-    .line 4660
     new-instance v0, Lcom/android/server/backup/BackupManagerService$RestorePolicy;
 
-    const-string/jumbo v1, "ACCEPT"
+    const-string v1, "ACCEPT"
 
     invoke-direct {v0, v1, v3}, Lcom/android/server/backup/BackupManagerService$RestorePolicy;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/server/backup/BackupManagerService$RestorePolicy;->ACCEPT:Lcom/android/server/backup/BackupManagerService$RestorePolicy;
 
-    .line 4661
     new-instance v0, Lcom/android/server/backup/BackupManagerService$RestorePolicy;
 
-    const-string/jumbo v1, "ACCEPT_IF_APK"
+    const-string v1, "ACCEPT_IF_APK"
 
     invoke-direct {v0, v1, v4}, Lcom/android/server/backup/BackupManagerService$RestorePolicy;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/server/backup/BackupManagerService$RestorePolicy;->ACCEPT_IF_APK:Lcom/android/server/backup/BackupManagerService$RestorePolicy;
 
-    .line 4658
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/android/server/backup/BackupManagerService$RestorePolicy;
@@ -97,7 +93,6 @@
     .locals 0
 
     .prologue
-    .line 4658
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -108,7 +103,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 4658
     const-class v0, Lcom/android/server/backup/BackupManagerService$RestorePolicy;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -124,7 +118,6 @@
     .locals 1
 
     .prologue
-    .line 4658
     sget-object v0, Lcom/android/server/backup/BackupManagerService$RestorePolicy;->$VALUES:[Lcom/android/server/backup/BackupManagerService$RestorePolicy;
 
     return-object v0

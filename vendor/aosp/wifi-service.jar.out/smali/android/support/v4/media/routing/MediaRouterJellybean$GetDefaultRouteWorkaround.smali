@@ -23,10 +23,8 @@
     .locals 4
 
     .prologue
-    .line 335
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 336
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x10
@@ -39,7 +37,6 @@
 
     if-le v1, v2, :cond_1
 
-    .line 337
     :cond_0
     new-instance v1, Ljava/lang/UnsupportedOperationException;
 
@@ -47,12 +44,11 @@
 
     throw v1
 
-    .line 341
     :cond_1
     :try_start_0
     const-class v1, Landroid/media/MediaRouter;
 
-    const-string/jumbo v2, "getSystemAudioRoute"
+    const-string v2, "getSystemAudioRoute"
 
     const/4 v3, 0x0
 
@@ -62,16 +58,13 @@
 
     move-result-object v1
 
-    .line 340
     iput-object v1, p0, Landroid/support/v4/media/routing/MediaRouterJellybean$GetDefaultRouteWorkaround;->mGetSystemAudioRouteMethod:Ljava/lang/reflect/Method;
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 335
     :goto_0
     return-void
 
-    .line 342
     :catch_0
     move-exception v0
 
@@ -90,16 +83,13 @@
 
     move-object v2, p1
 
-    .line 347
     check-cast v2, Landroid/media/MediaRouter;
 
-    .line 349
     .local v2, "router":Landroid/media/MediaRouter;
     iget-object v3, p0, Landroid/support/v4/media/routing/MediaRouterJellybean$GetDefaultRouteWorkaround;->mGetSystemAudioRouteMethod:Ljava/lang/reflect/Method;
 
     if-eqz v3, :cond_0
 
-    .line 351
     :try_start_0
     iget-object v3, p0, Landroid/support/v4/media/routing/MediaRouterJellybean$GetDefaultRouteWorkaround;->mGetSystemAudioRouteMethod:Ljava/lang/reflect/Method;
 
@@ -116,11 +106,9 @@
 
     return-object v3
 
-    .line 352
     :catch_0
     move-exception v0
 
-    .line 359
     :cond_0
     :goto_0
     invoke-virtual {v2, v5}, Landroid/media/MediaRouter;->getRouteAt(I)Landroid/media/MediaRouter$RouteInfo;
@@ -129,7 +117,6 @@
 
     return-object v3
 
-    .line 353
     :catch_1
     move-exception v1
 

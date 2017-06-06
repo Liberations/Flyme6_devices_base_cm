@@ -48,47 +48,38 @@
 
     const/4 v2, 0x0
 
-    .line 48
     new-instance v0, Landroid/net/IpConfiguration$ProxySettings;
 
-    const-string/jumbo v1, "NONE"
+    const-string v1, "NONE"
 
     invoke-direct {v0, v1, v2}, Landroid/net/IpConfiguration$ProxySettings;-><init>(Ljava/lang/String;I)V
 
-    .line 50
     sput-object v0, Landroid/net/IpConfiguration$ProxySettings;->NONE:Landroid/net/IpConfiguration$ProxySettings;
 
-    .line 51
     new-instance v0, Landroid/net/IpConfiguration$ProxySettings;
 
-    const-string/jumbo v1, "STATIC"
+    const-string v1, "STATIC"
 
     invoke-direct {v0, v1, v3}, Landroid/net/IpConfiguration$ProxySettings;-><init>(Ljava/lang/String;I)V
 
-    .line 53
     sput-object v0, Landroid/net/IpConfiguration$ProxySettings;->STATIC:Landroid/net/IpConfiguration$ProxySettings;
 
-    .line 54
     new-instance v0, Landroid/net/IpConfiguration$ProxySettings;
 
-    const-string/jumbo v1, "UNASSIGNED"
+    const-string v1, "UNASSIGNED"
 
     invoke-direct {v0, v1, v4}, Landroid/net/IpConfiguration$ProxySettings;-><init>(Ljava/lang/String;I)V
 
-    .line 56
     sput-object v0, Landroid/net/IpConfiguration$ProxySettings;->UNASSIGNED:Landroid/net/IpConfiguration$ProxySettings;
 
-    .line 57
     new-instance v0, Landroid/net/IpConfiguration$ProxySettings;
 
-    const-string/jumbo v1, "PAC"
+    const-string v1, "PAC"
 
     invoke-direct {v0, v1, v5}, Landroid/net/IpConfiguration$ProxySettings;-><init>(Ljava/lang/String;I)V
 
-    .line 59
     sput-object v0, Landroid/net/IpConfiguration$ProxySettings;->PAC:Landroid/net/IpConfiguration$ProxySettings;
 
-    .line 47
     const/4 v0, 0x4
 
     new-array v0, v0, [Landroid/net/IpConfiguration$ProxySettings;
@@ -118,7 +109,6 @@
     .locals 0
 
     .prologue
-    .line 47
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -129,7 +119,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 47
     const-class v0, Landroid/net/IpConfiguration$ProxySettings;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -145,7 +134,6 @@
     .locals 1
 
     .prologue
-    .line 47
     sget-object v0, Landroid/net/IpConfiguration$ProxySettings;->$VALUES:[Landroid/net/IpConfiguration$ProxySettings;
 
     return-object v0

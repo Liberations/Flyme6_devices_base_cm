@@ -37,7 +37,6 @@
     .param p1, "this$0"    # Lcom/android/internal/telephony/SubscriptionController;
 
     .prologue
-    .line 577
     iput-object p1, p0, Lcom/android/internal/telephony/SubscriptionController$1;->this$0:Lcom/android/internal/telephony/SubscriptionController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +52,6 @@
     .param p2, "arg1"    # Landroid/telephony/SubscriptionInfo;
 
     .prologue
-    .line 581
     invoke-virtual {p1}, Landroid/telephony/SubscriptionInfo;->getSimSlotIndex()I
 
     move-result v1
@@ -64,11 +62,9 @@
 
     sub-int v0, v1, v2
 
-    .line 582
     .local v0, "flag":I
     if-nez v0, :cond_0
 
-    .line 584
     invoke-virtual {p1}, Landroid/telephony/SubscriptionInfo;->getSubscriptionId()I
 
     move-result v1
@@ -81,7 +77,6 @@
 
     return v1
 
-    .line 586
     :cond_0
     return v0
 .end method
@@ -92,7 +87,6 @@
     .param p2, "arg1"    # Ljava/lang/Object;
 
     .prologue
-    .line 579
     check-cast p1, Landroid/telephony/SubscriptionInfo;
 
     .end local p1    # "arg0":Ljava/lang/Object;

@@ -29,7 +29,6 @@
     .param p1, "$anonymous0"    # Ljava/lang/String;
 
     .prologue
-    .line 952
     invoke-direct {p0, p1}, Landroid/util/FloatProperty;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -42,7 +41,6 @@
     .param p1, "object"    # Lcom/android/internal/app/ChooserActivity$RowScale;
 
     .prologue
-    .line 961
     iget v0, p1, Lcom/android/internal/app/ChooserActivity$RowScale;->mScale:F
 
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -57,7 +55,6 @@
     .param p1, "object"    # Ljava/lang/Object;
 
     .prologue
-    .line 960
     check-cast p1, Lcom/android/internal/app/ChooserActivity$RowScale;
 
     .end local p1    # "object":Ljava/lang/Object;
@@ -74,15 +71,12 @@
     .param p2, "value"    # F
 
     .prologue
-    .line 955
     iput p2, p1, Lcom/android/internal/app/ChooserActivity$RowScale;->mScale:F
 
-    .line 956
     iget-object v0, p1, Lcom/android/internal/app/ChooserActivity$RowScale;->mAdapter:Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;
 
     invoke-virtual {v0}, Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;->notifyDataSetChanged()V
 
-    .line 954
     return-void
 .end method
 
@@ -92,7 +86,6 @@
     .param p2, "value"    # F
 
     .prologue
-    .line 954
     check-cast p1, Lcom/android/internal/app/ChooserActivity$RowScale;
 
     .end local p1    # "object":Ljava/lang/Object;

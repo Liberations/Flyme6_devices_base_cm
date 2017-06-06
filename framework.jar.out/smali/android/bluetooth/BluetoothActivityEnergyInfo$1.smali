@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,42 +44,35 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 66
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v1
 
-    .line 67
     .local v1, "timestamp":J
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 68
     .local v3, "stackState":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v4
 
-    .line 69
     .local v4, "txTime":J
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v6
 
-    .line 70
     .local v6, "rxTime":J
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v8
 
-    .line 71
     .local v8, "idleTime":J
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v10
 
-    .line 72
     .local v10, "energyUsed":J
     new-instance v0, Landroid/bluetooth/BluetoothActivityEnergyInfo;
 
@@ -94,7 +86,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 65
     invoke-virtual {p0, p1}, Landroid/bluetooth/BluetoothActivityEnergyInfo$1;->createFromParcel(Landroid/os/Parcel;)Landroid/bluetooth/BluetoothActivityEnergyInfo;
 
     move-result-object v0
@@ -107,7 +98,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 76
     new-array v0, p1, [Landroid/bluetooth/BluetoothActivityEnergyInfo;
 
     return-object v0
@@ -118,7 +108,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 75
     invoke-virtual {p0, p1}, Landroid/bluetooth/BluetoothActivityEnergyInfo$1;->newArray(I)[Landroid/bluetooth/BluetoothActivityEnergyInfo;
 
     move-result-object v0

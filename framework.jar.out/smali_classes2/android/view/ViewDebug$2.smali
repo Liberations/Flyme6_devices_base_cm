@@ -37,7 +37,6 @@
     .param p1, "val$view"    # Landroid/view/View;
 
     .prologue
-    .line 531
     iput-object p1, p0, Landroid/view/ViewDebug$2;->val$view:Landroid/view/View;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,26 +49,21 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 538
     invoke-virtual {p1}, Landroid/view/View;->forceLayout()V
 
-    .line 539
     instance-of v3, p1, Landroid/view/ViewGroup;
 
     if-eqz v3, :cond_0
 
     move-object v1, p1
 
-    .line 540
     check-cast v1, Landroid/view/ViewGroup;
 
-    .line 541
     .local v1, "group":Landroid/view/ViewGroup;
     invoke-virtual {v1}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
 
-    .line 542
     .local v0, "count":I
     const/4 v2, 0x0
 
@@ -77,19 +71,16 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
-    .line 543
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
     invoke-direct {p0, v3}, Landroid/view/ViewDebug$2;->forceLayout(Landroid/view/View;)V
 
-    .line 542
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 537
     .end local v0    # "count":I
     .end local v1    # "group":Landroid/view/ViewGroup;
     .end local v2    # "i":I
@@ -104,7 +95,6 @@
     .param p1, "data"    # [Ljava/lang/Object;
 
     .prologue
-    .line 552
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1    # "data":[Ljava/lang/Object;
@@ -118,7 +108,6 @@
     .param p1, "data"    # [Ljava/lang/Void;
 
     .prologue
-    .line 552
     return-void
 .end method
 
@@ -126,7 +115,6 @@
     .locals 1
 
     .prologue
-    .line 532
     invoke-virtual {p0}, Landroid/view/ViewDebug$2;->pre()[Ljava/lang/Void;
 
     move-result-object v0
@@ -138,12 +126,10 @@
     .locals 1
 
     .prologue
-    .line 533
     iget-object v0, p0, Landroid/view/ViewDebug$2;->val$view:Landroid/view/View;
 
     invoke-direct {p0, v0}, Landroid/view/ViewDebug$2;->forceLayout(Landroid/view/View;)V
 
-    .line 534
     const/4 v0, 0x0
 
     return-object v0
@@ -154,7 +140,6 @@
     .param p1, "data"    # [Ljava/lang/Object;
 
     .prologue
-    .line 548
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1    # "data":[Ljava/lang/Object;
@@ -168,7 +153,6 @@
     .param p1, "data"    # [Ljava/lang/Void;
 
     .prologue
-    .line 549
     iget-object v0, p0, Landroid/view/ViewDebug$2;->val$view:Landroid/view/View;
 
     iget-object v1, p0, Landroid/view/ViewDebug$2;->val$view:Landroid/view/View;
@@ -181,6 +165,5 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/view/View;->measure(II)V
 
-    .line 548
     return-void
 .end method

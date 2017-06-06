@@ -47,17 +47,14 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 431
     iput-object p1, p0, Landroid/printservice/PrintService$ServiceHandler;->this$0:Landroid/printservice/PrintService;
 
-    .line 432
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-direct {p0, p2, v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 431
     return-void
 .end method
 
@@ -70,21 +67,18 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 438
     iget v0, p1, Landroid/os/Message;->what:I
 
-    .line 439
     .local v0, "action":I
     packed-switch v0, :pswitch_data_0
 
-    .line 557
     new-instance v6, Ljava/lang/IllegalArgumentException;
 
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "Unknown message: "
+    const-string v8, "Unknown message: "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -102,7 +96,6 @@
 
     throw v6
 
-    .line 445
     :pswitch_0
     iget-object v6, p0, Landroid/printservice/PrintService$ServiceHandler;->this$0:Landroid/printservice/PrintService;
 
@@ -110,20 +103,17 @@
 
     move-result-object v5
 
-    .line 446
     .local v5, "session":Landroid/printservice/PrinterDiscoverySession;
     if-nez v5, :cond_0
 
-    .line 447
     new-instance v6, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v7, "session cannot be null"
+    const-string v7, "session cannot be null"
 
     invoke-direct {v6, v7}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v6
 
-    .line 449
     :cond_0
     invoke-virtual {v5}, Landroid/printservice/PrinterDiscoverySession;->getId()I
 
@@ -137,22 +127,19 @@
 
     if-ne v6, v7, :cond_1
 
-    .line 450
     new-instance v6, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v7, "cannot reuse session instances"
+    const-string v7, "cannot reuse session instances"
 
     invoke-direct {v6, v7}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v6
 
-    .line 452
     :cond_1
     iget-object v6, p0, Landroid/printservice/PrintService$ServiceHandler;->this$0:Landroid/printservice/PrintService;
 
     invoke-static {v6, v5}, Landroid/printservice/PrintService;->-set1(Landroid/printservice/PrintService;Landroid/printservice/PrinterDiscoverySession;)Landroid/printservice/PrinterDiscoverySession;
 
-    .line 453
     iget-object v6, p0, Landroid/printservice/PrintService$ServiceHandler;->this$0:Landroid/printservice/PrintService;
 
     invoke-virtual {v5}, Landroid/printservice/PrinterDiscoverySession;->getId()I
@@ -161,7 +148,6 @@
 
     invoke-static {v6, v7}, Landroid/printservice/PrintService;->-set2(Landroid/printservice/PrintService;I)I
 
-    .line 454
     iget-object v6, p0, Landroid/printservice/PrintService$ServiceHandler;->this$0:Landroid/printservice/PrintService;
 
     invoke-static {v6}, Landroid/printservice/PrintService;->-get0(Landroid/printservice/PrintService;)Landroid/printservice/IPrintServiceClient;
@@ -170,13 +156,11 @@
 
     invoke-virtual {v5, v6}, Landroid/printservice/PrinterDiscoverySession;->setObserver(Landroid/printservice/IPrintServiceClient;)V
 
-    .line 437
     .end local v5    # "session":Landroid/printservice/PrinterDiscoverySession;
     :cond_2
     :goto_0
     return-void
 
-    .line 462
     :pswitch_1
     iget-object v6, p0, Landroid/printservice/PrintService$ServiceHandler;->this$0:Landroid/printservice/PrintService;
 
@@ -186,7 +170,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 463
     iget-object v6, p0, Landroid/printservice/PrintService$ServiceHandler;->this$0:Landroid/printservice/PrintService;
 
     invoke-static {v6}, Landroid/printservice/PrintService;->-get1(Landroid/printservice/PrintService;)Landroid/printservice/PrinterDiscoverySession;
@@ -195,14 +178,12 @@
 
     invoke-virtual {v6}, Landroid/printservice/PrinterDiscoverySession;->destroy()V
 
-    .line 464
     iget-object v6, p0, Landroid/printservice/PrintService$ServiceHandler;->this$0:Landroid/printservice/PrintService;
 
     invoke-static {v6, v7}, Landroid/printservice/PrintService;->-set1(Landroid/printservice/PrintService;Landroid/printservice/PrinterDiscoverySession;)Landroid/printservice/PrinterDiscoverySession;
 
     goto :goto_0
 
-    .line 473
     :pswitch_2
     iget-object v6, p0, Landroid/printservice/PrintService$ServiceHandler;->this$0:Landroid/printservice/PrintService;
 
@@ -212,12 +193,10 @@
 
     if-eqz v6, :cond_2
 
-    .line 474
     iget-object v4, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v4, Ljava/util/ArrayList;
 
-    .line 475
     .local v4, "priorityList":Ljava/util/List;, "Ljava/util/List<Landroid/print/PrinterId;>;"
     iget-object v6, p0, Landroid/printservice/PrintService$ServiceHandler;->this$0:Landroid/printservice/PrintService;
 
@@ -229,7 +208,6 @@
 
     goto :goto_0
 
-    .line 484
     .end local v4    # "priorityList":Ljava/util/List;, "Ljava/util/List<Landroid/print/PrinterId;>;"
     :pswitch_3
     iget-object v6, p0, Landroid/printservice/PrintService$ServiceHandler;->this$0:Landroid/printservice/PrintService;
@@ -240,7 +218,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 485
     iget-object v6, p0, Landroid/printservice/PrintService$ServiceHandler;->this$0:Landroid/printservice/PrintService;
 
     invoke-static {v6}, Landroid/printservice/PrintService;->-get1(Landroid/printservice/PrintService;)Landroid/printservice/PrinterDiscoverySession;
@@ -251,7 +228,6 @@
 
     goto :goto_0
 
-    .line 494
     :pswitch_4
     iget-object v6, p0, Landroid/printservice/PrintService$ServiceHandler;->this$0:Landroid/printservice/PrintService;
 
@@ -261,12 +237,10 @@
 
     if-eqz v6, :cond_2
 
-    .line 495
     iget-object v3, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v3, Ljava/util/List;
 
-    .line 496
     .local v3, "printerIds":Ljava/util/List;, "Ljava/util/List<Landroid/print/PrinterId;>;"
     iget-object v6, p0, Landroid/printservice/PrintService$ServiceHandler;->this$0:Landroid/printservice/PrintService;
 
@@ -278,7 +252,6 @@
 
     goto :goto_0
 
-    .line 505
     .end local v3    # "printerIds":Ljava/util/List;, "Ljava/util/List<Landroid/print/PrinterId;>;"
     :pswitch_5
     iget-object v6, p0, Landroid/printservice/PrintService$ServiceHandler;->this$0:Landroid/printservice/PrintService;
@@ -289,12 +262,10 @@
 
     if-eqz v6, :cond_2
 
-    .line 506
     iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v2, Landroid/print/PrinterId;
 
-    .line 507
     .local v2, "printerId":Landroid/print/PrinterId;
     iget-object v6, p0, Landroid/printservice/PrintService$ServiceHandler;->this$0:Landroid/printservice/PrintService;
 
@@ -306,7 +277,6 @@
 
     goto :goto_0
 
-    .line 516
     .end local v2    # "printerId":Landroid/print/PrinterId;
     :pswitch_6
     iget-object v6, p0, Landroid/printservice/PrintService$ServiceHandler;->this$0:Landroid/printservice/PrintService;
@@ -317,12 +287,10 @@
 
     if-eqz v6, :cond_2
 
-    .line 517
     iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v2, Landroid/print/PrinterId;
 
-    .line 518
     .restart local v2    # "printerId":Landroid/print/PrinterId;
     iget-object v6, p0, Landroid/printservice/PrintService$ServiceHandler;->this$0:Landroid/printservice/PrintService;
 
@@ -334,14 +302,12 @@
 
     goto/16 :goto_0
 
-    .line 527
     .end local v2    # "printerId":Landroid/print/PrinterId;
     :pswitch_7
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Landroid/print/PrintJobInfo;
 
-    .line 528
     .local v1, "printJobInfo":Landroid/print/PrintJobInfo;
     iget-object v6, p0, Landroid/printservice/PrintService$ServiceHandler;->this$0:Landroid/printservice/PrintService;
 
@@ -359,14 +325,12 @@
 
     goto/16 :goto_0
 
-    .line 536
     .end local v1    # "printJobInfo":Landroid/print/PrintJobInfo;
     :pswitch_8
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Landroid/print/PrintJobInfo;
 
-    .line 540
     .restart local v1    # "printJobInfo":Landroid/print/PrintJobInfo;
     iget-object v6, p0, Landroid/printservice/PrintService$ServiceHandler;->this$0:Landroid/printservice/PrintService;
 
@@ -384,7 +348,6 @@
 
     goto/16 :goto_0
 
-    .line 548
     .end local v1    # "printJobInfo":Landroid/print/PrintJobInfo;
     :pswitch_9
     iget-object v7, p0, Landroid/printservice/PrintService$ServiceHandler;->this$0:Landroid/printservice/PrintService;
@@ -395,7 +358,6 @@
 
     invoke-static {v7, v6}, Landroid/printservice/PrintService;->-set0(Landroid/printservice/PrintService;Landroid/printservice/IPrintServiceClient;)Landroid/printservice/IPrintServiceClient;
 
-    .line 549
     iget-object v6, p0, Landroid/printservice/PrintService$ServiceHandler;->this$0:Landroid/printservice/PrintService;
 
     invoke-static {v6}, Landroid/printservice/PrintService;->-get0(Landroid/printservice/PrintService;)Landroid/printservice/IPrintServiceClient;
@@ -404,14 +366,12 @@
 
     if-eqz v6, :cond_3
 
-    .line 550
     iget-object v6, p0, Landroid/printservice/PrintService$ServiceHandler;->this$0:Landroid/printservice/PrintService;
 
     invoke-virtual {v6}, Landroid/printservice/PrintService;->onConnected()V
 
     goto/16 :goto_0
 
-    .line 552
     :cond_3
     iget-object v6, p0, Landroid/printservice/PrintService$ServiceHandler;->this$0:Landroid/printservice/PrintService;
 
@@ -419,7 +379,6 @@
 
     goto/16 :goto_0
 
-    .line 439
     nop
 
     :pswitch_data_0

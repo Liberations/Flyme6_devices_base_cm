@@ -31,7 +31,6 @@
     .locals 0
 
     .prologue
-    .line 1697
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -57,7 +56,6 @@
     .param p5, "state"    # Landroid/telephony/ServiceState;
 
     .prologue
-    .line 1705
     iput-object p1, p0, Lcom/android/server/TelephonyRegistry$LogSSC;->mTime:Landroid/text/format/Time;
 
     iput-object p2, p0, Lcom/android/server/TelephonyRegistry$LogSSC;->mS:Ljava/lang/String;
@@ -68,7 +66,6 @@
 
     iput-object p5, p0, Lcom/android/server/TelephonyRegistry$LogSSC;->mState:Landroid/telephony/ServiceState;
 
-    .line 1704
     return-void
 .end method
 
@@ -76,7 +73,6 @@
     .locals 2
 
     .prologue
-    .line 1710
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -87,7 +83,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, " Time "
+    const-string v1, " Time "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -103,7 +99,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, " mSubId "
+    const-string v1, " mSubId "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -115,32 +111,26 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, " mPhoneId "
+    const-string v1, " mPhoneId "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 1711
     iget v1, p0, Lcom/android/server/TelephonyRegistry$LogSSC;->mPhoneId:I
 
-    .line 1710
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 1711
-    const-string/jumbo v1, "  mState "
+    const-string v1, "  mState "
 
-    .line 1710
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 1711
     iget-object v1, p0, Lcom/android/server/TelephonyRegistry$LogSSC;->mState:Landroid/telephony/ServiceState;
 
-    .line 1710
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0

@@ -40,26 +40,22 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 4589
     iput-object p1, p0, Lcom/android/server/backup/BackupManagerService$RestoreEngine;->this$0:Lcom/android/server/backup/BackupManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4596
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v0, p0, Lcom/android/server/backup/BackupManagerService$RestoreEngine;->mRunning:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 4597
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
     iput-object v0, p0, Lcom/android/server/backup/BackupManagerService$RestoreEngine;->mResult:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 4589
     return-void
 .end method
 
@@ -69,7 +65,6 @@
     .locals 1
 
     .prologue
-    .line 4622
     iget-object v0, p0, Lcom/android/server/backup/BackupManagerService$RestoreEngine;->mResult:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
@@ -83,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 4600
     iget-object v0, p0, Lcom/android/server/backup/BackupManagerService$RestoreEngine;->mRunning:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -98,12 +92,10 @@
     .param p1, "result"    # I
 
     .prologue
-    .line 4626
     iget-object v0, p0, Lcom/android/server/backup/BackupManagerService$RestoreEngine;->mResult:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 4625
     return-void
 .end method
 
@@ -112,18 +104,15 @@
     .param p1, "stillRunning"    # Z
 
     .prologue
-    .line 4604
     iget-object v1, p0, Lcom/android/server/backup/BackupManagerService$RestoreEngine;->mRunning:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     monitor-enter v1
 
-    .line 4605
     :try_start_0
     iget-object v0, p0, Lcom/android/server/backup/BackupManagerService$RestoreEngine;->mRunning:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 4606
     iget-object v0, p0, Lcom/android/server/backup/BackupManagerService$RestoreEngine;->mRunning:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->notifyAll()V
@@ -132,10 +121,8 @@
 
     monitor-exit v1
 
-    .line 4603
     return-void
 
-    .line 4604
     :catchall_0
     move-exception v0
 
@@ -148,12 +135,10 @@
     .locals 3
 
     .prologue
-    .line 4611
     iget-object v2, p0, Lcom/android/server/backup/BackupManagerService$RestoreEngine;->mRunning:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     monitor-enter v2
 
-    .line 4612
     :goto_0
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/backup/BackupManagerService$RestoreEngine;->isRunning()Z
@@ -164,7 +149,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 4614
     :try_start_1
     iget-object v1, p0, Lcom/android/server/backup/BackupManagerService$RestoreEngine;->mRunning:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -175,7 +159,6 @@
 
     goto :goto_0
 
-    .line 4615
     :catch_0
     move-exception v0
 
@@ -186,14 +169,12 @@
     :cond_0
     monitor-exit v2
 
-    .line 4618
     invoke-virtual {p0}, Lcom/android/server/backup/BackupManagerService$RestoreEngine;->getResult()I
 
     move-result v1
 
     return v1
 
-    .line 4611
     :catchall_0
     move-exception v1
 

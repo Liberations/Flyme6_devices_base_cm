@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/internal/telephony/RIL;
 
     .prologue
-    .line 343
     iput-object p1, p0, Lcom/android/internal/telephony/RIL$2;->this$0:Lcom/android/internal/telephony/RIL;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -42,16 +41,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 346
     iget-object v2, p0, Lcom/android/internal/telephony/RIL$2;->this$0:Lcom/android/internal/telephony/RIL;
 
     iget-boolean v0, v2, Lcom/android/internal/telephony/RIL;->mIsDevicePlugged:Z
 
-    .line 348
     .local v0, "oldState":Z
     iget-object v2, p0, Lcom/android/internal/telephony/RIL$2;->this$0:Lcom/android/internal/telephony/RIL;
 
-    const-string/jumbo v3, "plugged"
+    const-string v3, "plugged"
 
     invoke-virtual {p2, v3, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
@@ -64,19 +61,16 @@
     :cond_0
     iput-boolean v1, v2, Lcom/android/internal/telephony/RIL;->mIsDevicePlugged:Z
 
-    .line 349
     iget-object v1, p0, Lcom/android/internal/telephony/RIL$2;->this$0:Lcom/android/internal/telephony/RIL;
 
     iget-boolean v1, v1, Lcom/android/internal/telephony/RIL;->mIsDevicePlugged:Z
 
     if-eq v1, v0, :cond_1
 
-    .line 350
     iget-object v1, p0, Lcom/android/internal/telephony/RIL$2;->this$0:Lcom/android/internal/telephony/RIL;
 
     invoke-static {v1}, Lcom/android/internal/telephony/RIL;->-wrap3(Lcom/android/internal/telephony/RIL;)V
 
-    .line 345
     :cond_1
     return-void
 .end method

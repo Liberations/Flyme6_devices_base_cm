@@ -24,15 +24,12 @@
     .param p1, "cause"    # I
 
     .prologue
-    .line 234
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 235
     int-to-byte v0, p1
 
     iput-byte v0, p0, Lcom/android/internal/telephony/cdma/CdmaInformationRecords$CdmaT53ClirInfoRec;->cause:B
 
-    .line 234
     return-void
 .end method
 
@@ -42,29 +39,24 @@
     .locals 2
 
     .prologue
-    .line 240
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "CdmaT53ClirInfoRec: { cause: "
+    const-string v1, "CdmaT53ClirInfoRec: { cause: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 241
     iget-byte v1, p0, Lcom/android/internal/telephony/cdma/CdmaInformationRecords$CdmaT53ClirInfoRec;->cause:B
 
-    .line 240
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 242
-    const-string/jumbo v1, " }"
+    const-string v1, " }"
 
-    .line 240
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0

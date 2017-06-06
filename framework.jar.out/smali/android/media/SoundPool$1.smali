@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Landroid/media/SoundPool;
 
     .prologue
-    .line 168
     iput-object p1, p0, Landroid/media/SoundPool$1;->this$0:Landroid/media/SoundPool;
 
     invoke-direct {p0}, Lcom/android/internal/app/IAppOpsCallback$Stub;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 170
     iget-object v0, p0, Landroid/media/SoundPool$1;->this$0:Landroid/media/SoundPool;
 
     invoke-static {v0}, Landroid/media/SoundPool;->-get1(Landroid/media/SoundPool;)Ljava/lang/Object;
@@ -49,12 +47,10 @@
 
     monitor-enter v1
 
-    .line 171
     const/16 v0, 0x1c
 
     if-ne p1, v0, :cond_0
 
-    .line 172
     :try_start_0
     iget-object v0, p0, Landroid/media/SoundPool$1;->this$0:Landroid/media/SoundPool;
 
@@ -65,10 +61,8 @@
     :cond_0
     monitor-exit v1
 
-    .line 169
     return-void
 
-    .line 170
     :catchall_0
     move-exception v0
 

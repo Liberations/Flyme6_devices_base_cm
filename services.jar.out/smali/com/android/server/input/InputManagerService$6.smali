@@ -30,7 +30,6 @@
     .param p2, "val$result"    # [Landroid/hardware/input/KeyboardLayout;
 
     .prologue
-    .line 997
     iput-object p1, p0, Lcom/android/server/input/InputManagerService$6;->this$0:Lcom/android/server/input/InputManagerService;
 
     iput-object p2, p0, Lcom/android/server/input/InputManagerService$6;->val$result:[Landroid/hardware/input/KeyboardLayout;
@@ -52,7 +51,6 @@
     .param p6, "priority"    # I
 
     .prologue
-    .line 1001
     iget-object v0, p0, Lcom/android/server/input/InputManagerService$6;->val$result:[Landroid/hardware/input/KeyboardLayout;
 
     new-instance v1, Landroid/hardware/input/KeyboardLayout;
@@ -63,6 +61,5 @@
 
     aput-object v1, v0, v2
 
-    .line 1000
     return-void
 .end method

@@ -25,7 +25,6 @@
     .param p2, "$anonymous0"    # Landroid/os/Handler;
 
     .prologue
-    .line 320
     iput-object p1, p0, Lcom/android/server/GestureLauncherService$2;->this$0:Lcom/android/server/GestureLauncherService;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -42,7 +41,6 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 322
     iget-object v0, p0, Lcom/android/server/GestureLauncherService$2;->this$0:Lcom/android/server/GestureLauncherService;
 
     invoke-static {v0}, Lcom/android/server/GestureLauncherService;->-get9(Lcom/android/server/GestureLauncherService;)I
@@ -51,17 +49,14 @@
 
     if-ne p3, v0, :cond_0
 
-    .line 323
     iget-object v0, p0, Lcom/android/server/GestureLauncherService$2;->this$0:Lcom/android/server/GestureLauncherService;
 
     invoke-static {v0}, Lcom/android/server/GestureLauncherService;->-wrap3(Lcom/android/server/GestureLauncherService;)V
 
-    .line 324
     iget-object v0, p0, Lcom/android/server/GestureLauncherService$2;->this$0:Lcom/android/server/GestureLauncherService;
 
     invoke-static {v0}, Lcom/android/server/GestureLauncherService;->-wrap2(Lcom/android/server/GestureLauncherService;)V
 
-    .line 321
     :cond_0
     return-void
 .end method

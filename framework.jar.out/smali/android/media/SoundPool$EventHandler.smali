@@ -25,13 +25,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 537
     iput-object p1, p0, Landroid/media/SoundPool$EventHandler;->this$0:Landroid/media/SoundPool;
 
-    .line 538
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 537
     return-void
 .end method
 
@@ -42,19 +39,17 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 543
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 553
-    const-string/jumbo v0, "SoundPool"
+    const-string v0, "SoundPool"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Unknown message type "
+    const-string v2, "Unknown message type "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -72,10 +67,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 554
     return-void
 
-    .line 545
     :pswitch_0
     invoke-static {}, Landroid/media/SoundPool;->-get0()Z
 
@@ -83,13 +76,13 @@
 
     if-eqz v0, :cond_0
 
-    const-string/jumbo v0, "SoundPool"
+    const-string v0, "SoundPool"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Sample "
+    const-string v2, "Sample "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -101,7 +94,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, " loaded"
+    const-string v2, " loaded"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -113,7 +106,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 546
     :cond_0
     iget-object v0, p0, Landroid/media/SoundPool$EventHandler;->this$0:Landroid/media/SoundPool;
 
@@ -123,7 +115,6 @@
 
     monitor-enter v1
 
-    .line 547
     :try_start_0
     iget-object v0, p0, Landroid/media/SoundPool$EventHandler;->this$0:Landroid/media/SoundPool;
 
@@ -133,7 +124,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 548
     iget-object v0, p0, Landroid/media/SoundPool$EventHandler;->this$0:Landroid/media/SoundPool;
 
     invoke-static {v0}, Landroid/media/SoundPool;->-get2(Landroid/media/SoundPool;)Landroid/media/SoundPool$OnLoadCompleteListener;
@@ -153,10 +143,8 @@
     :cond_1
     monitor-exit v1
 
-    .line 542
     return-void
 
-    .line 546
     :catchall_0
     move-exception v0
 
@@ -164,7 +152,6 @@
 
     throw v0
 
-    .line 543
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

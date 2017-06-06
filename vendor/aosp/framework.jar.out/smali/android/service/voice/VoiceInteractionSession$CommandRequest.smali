@@ -41,13 +41,10 @@
 
     move-object v5, p6
 
-    .line 699
     invoke-direct/range {v0 .. v5}, Landroid/service/voice/VoiceInteractionSession$Request;-><init>(Ljava/lang/String;ILcom/android/internal/app/IVoiceInteractorCallback;Landroid/service/voice/VoiceInteractionSession;Landroid/os/Bundle;)V
 
-    .line 700
     iput-object p5, p0, Landroid/service/voice/VoiceInteractionSession$CommandRequest;->mCommand:Ljava/lang/String;
 
-    .line 698
     return-void
 .end method
 
@@ -61,22 +58,18 @@
     .param p4, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 744
     invoke-super {p0, p1, p2, p3, p4}, Landroid/service/voice/VoiceInteractionSession$Request;->dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 745
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string/jumbo v0, "mCommand="
+    const-string v0, "mCommand="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 746
     iget-object v0, p0, Landroid/service/voice/VoiceInteractionSession$CommandRequest;->mCommand:Ljava/lang/String;
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 743
     return-void
 .end method
 
@@ -84,7 +77,6 @@
     .locals 1
 
     .prologue
-    .line 708
     iget-object v0, p0, Landroid/service/voice/VoiceInteractionSession$CommandRequest;->mCommand:Ljava/lang/String;
 
     return-object v0
@@ -96,14 +88,11 @@
     .param p2, "result"    # Landroid/os/Bundle;
 
     .prologue
-    .line 715
     if-eqz p1, :cond_0
 
-    .line 716
     :try_start_0
     invoke-virtual {p0}, Landroid/service/voice/VoiceInteractionSession$CommandRequest;->finishRequest()V
 
-    .line 718
     :cond_0
     iget-object v1, p0, Landroid/service/voice/VoiceInteractionSession$CommandRequest;->mCallback:Lcom/android/internal/app/IVoiceInteractorCallback;
 
@@ -113,11 +102,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 711
     :goto_0
     return-void
 
-    .line 719
     :catch_0
     move-exception v0
 
@@ -130,12 +117,10 @@
     .param p1, "result"    # Landroid/os/Bundle;
 
     .prologue
-    .line 730
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0, p1}, Landroid/service/voice/VoiceInteractionSession$CommandRequest;->sendCommandResult(ZLandroid/os/Bundle;)V
 
-    .line 729
     return-void
 .end method
 
@@ -144,11 +129,9 @@
     .param p1, "result"    # Landroid/os/Bundle;
 
     .prologue
-    .line 740
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0, p1}, Landroid/service/voice/VoiceInteractionSession$CommandRequest;->sendCommandResult(ZLandroid/os/Bundle;)V
 
-    .line 739
     return-void
 .end method

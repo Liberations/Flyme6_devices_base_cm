@@ -25,7 +25,6 @@
     .param p2, "$anonymous0"    # Landroid/os/Handler;
 
     .prologue
-    .line 166
     iput-object p1, p0, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker$2;->this$0:Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -40,18 +39,15 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 169
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker$2;->this$0:Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;
 
-    const-string/jumbo v1, "Auto time zone state changed"
+    const-string v1, "Auto time zone state changed"
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;->log(Ljava/lang/String;)V
 
-    .line 170
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker$2;->this$0:Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;
 
     invoke-static {v0}, Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;->-wrap0(Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;)V
 
-    .line 168
     return-void
 .end method

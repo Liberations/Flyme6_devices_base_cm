@@ -37,7 +37,6 @@
     .param p1, "this$1"    # Landroid/widget/Editor$SuggestionsPopupWindow;
 
     .prologue
-    .line 2756
     iput-object p1, p0, Landroid/widget/Editor$SuggestionsPopupWindow$SuggestionSpanComparator;->this$1:Landroid/widget/Editor$SuggestionsPopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -67,29 +66,24 @@
 
     const/4 v7, -0x1
 
-    .line 2758
     invoke-virtual {p1}, Landroid/text/style/SuggestionSpan;->getFlags()I
 
     move-result v2
 
-    .line 2759
     .local v2, "flag1":I
     invoke-virtual {p2}, Landroid/text/style/SuggestionSpan;->getFlags()I
 
     move-result v3
 
-    .line 2760
     .local v3, "flag2":I
     if-eq v2, v3, :cond_9
 
-    .line 2762
     and-int/lit8 v6, v2, 0x1
 
     if-eqz v6, :cond_2
 
     const/4 v0, 0x1
 
-    .line 2763
     .local v0, "easy1":Z
     :goto_0
     and-int/lit8 v6, v3, 0x1
@@ -98,7 +92,6 @@
 
     const/4 v1, 0x1
 
-    .line 2764
     .local v1, "easy2":Z
     :goto_1
     and-int/lit8 v6, v2, 0x2
@@ -107,7 +100,6 @@
 
     const/4 v4, 0x1
 
-    .line 2765
     .local v4, "misspelled1":Z
     :goto_2
     and-int/lit8 v6, v3, 0x2
@@ -116,26 +108,22 @@
 
     const/4 v5, 0x1
 
-    .line 2766
     .local v5, "misspelled2":Z
     :goto_3
     if-eqz v0, :cond_0
 
     if-eqz v4, :cond_6
 
-    .line 2767
     :cond_0
     if-eqz v1, :cond_1
 
     if-eqz v5, :cond_7
 
-    .line 2768
     :cond_1
     if-eqz v4, :cond_8
 
     return v7
 
-    .line 2762
     .end local v0    # "easy1":Z
     .end local v1    # "easy2":Z
     .end local v4    # "misspelled1":Z
@@ -146,42 +134,35 @@
     .restart local v0    # "easy1":Z
     goto :goto_0
 
-    .line 2763
     :cond_3
     const/4 v1, 0x0
 
     .restart local v1    # "easy2":Z
     goto :goto_1
 
-    .line 2764
     :cond_4
     const/4 v4, 0x0
 
     .restart local v4    # "misspelled1":Z
     goto :goto_2
 
-    .line 2765
     :cond_5
     const/4 v5, 0x0
 
     .restart local v5    # "misspelled2":Z
     goto :goto_3
 
-    .line 2766
     :cond_6
     return v7
 
-    .line 2767
     :cond_7
     return v8
 
-    .line 2769
     :cond_8
     if-eqz v5, :cond_9
 
     return v8
 
-    .line 2772
     .end local v0    # "easy1":Z
     .end local v1    # "easy2":Z
     .end local v4    # "misspelled1":Z
@@ -230,7 +211,6 @@
     .param p2, "span2"    # Ljava/lang/Object;
 
     .prologue
-    .line 2757
     check-cast p1, Landroid/text/style/SuggestionSpan;
 
     .end local p1    # "span1":Ljava/lang/Object;

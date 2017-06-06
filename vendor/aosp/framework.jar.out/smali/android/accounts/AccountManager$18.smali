@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Landroid/accounts/AccountManager;
 
     .prologue
-    .line 1869
     .local p2, "val$callback":Landroid/accounts/AccountManagerCallback;, "Landroid/accounts/AccountManagerCallback<Landroid/os/Bundle;>;"
     .local p3, "val$future":Landroid/accounts/AccountManagerFuture;, "Landroid/accounts/AccountManagerFuture<Landroid/os/Bundle;>;"
     iput-object p1, p0, Landroid/accounts/AccountManager$18;->this$0:Landroid/accounts/AccountManager;
@@ -51,13 +50,11 @@
     .locals 2
 
     .prologue
-    .line 1871
     iget-object v0, p0, Landroid/accounts/AccountManager$18;->val$callback:Landroid/accounts/AccountManagerCallback;
 
     iget-object v1, p0, Landroid/accounts/AccountManager$18;->val$future:Landroid/accounts/AccountManagerFuture;
 
     invoke-interface {v0, v1}, Landroid/accounts/AccountManagerCallback;->run(Landroid/accounts/AccountManagerFuture;)V
 
-    .line 1870
     return-void
 .end method

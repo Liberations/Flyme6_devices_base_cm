@@ -38,10 +38,8 @@
     .param p1, "octets"    # Ljava/nio/ByteBuffer;
 
     .prologue
-    .line 190
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 191
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v0
@@ -50,12 +48,10 @@
 
     iput-object v0, p0, Lcom/android/server/wifi/anqp/GEOLocationElement$ReverseBitStream;->mOctets:[B
 
-    .line 192
     iget-object v0, p0, Lcom/android/server/wifi/anqp/GEOLocationElement$ReverseBitStream;->mOctets:[B
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
-    .line 190
     return-void
 .end method
 
@@ -76,14 +72,12 @@
     .param p2, "width"    # I
 
     .prologue
-    .line 218
     const/4 v1, 0x1
 
     shl-int/2addr v1, p2
 
     add-int/lit8 v0, v1, -0x1
 
-    .line 219
     .local v0, "mask":I
     rsub-int/lit8 v1, p1, 0x8
 
@@ -101,38 +95,31 @@
     .param p1, "bits"    # I
 
     .prologue
-    .line 196
     iget v7, p0, Lcom/android/server/wifi/anqp/GEOLocationElement$ReverseBitStream;->mBitoffset:I
 
     add-int v0, v7, p1
 
-    .line 197
     .local v0, "bn":I
     move v2, p1
 
-    .line 198
     .local v2, "remaining":I
     const-wide/16 v4, 0x0
 
-    .line 200
     .local v4, "value":J
     :goto_0
     iget v7, p0, Lcom/android/server/wifi/anqp/GEOLocationElement$ReverseBitStream;->mBitoffset:I
 
     if-ge v7, v0, :cond_0
 
-    .line 201
     iget v7, p0, Lcom/android/server/wifi/anqp/GEOLocationElement$ReverseBitStream;->mBitoffset:I
 
     and-int/lit8 v3, v7, 0x7
 
-    .line 202
     .local v3, "sbit":I
     iget v7, p0, Lcom/android/server/wifi/anqp/GEOLocationElement$ReverseBitStream;->mBitoffset:I
 
     ushr-int/lit8 v1, v7, 0x3
 
-    .line 206
     .local v1, "octet":I
     rsub-int/lit8 v7, v3, 0x8
 
@@ -140,7 +127,6 @@
 
     move-result v6
 
-    .line 208
     .local v6, "width":I
     shl-long v8, v4, v6
 
@@ -156,19 +142,16 @@
 
     or-long v4, v8, v10
 
-    .line 210
     iget v7, p0, Lcom/android/server/wifi/anqp/GEOLocationElement$ReverseBitStream;->mBitoffset:I
 
     add-int/2addr v7, v6
 
     iput v7, p0, Lcom/android/server/wifi/anqp/GEOLocationElement$ReverseBitStream;->mBitoffset:I
 
-    .line 211
     sub-int/2addr v2, v6
 
     goto :goto_0
 
-    .line 214
     .end local v1    # "octet":I
     .end local v3    # "sbit":I
     .end local v6    # "width":I

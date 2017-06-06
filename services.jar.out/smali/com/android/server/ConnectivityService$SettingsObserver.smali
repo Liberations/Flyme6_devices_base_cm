@@ -39,25 +39,20 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 3036
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 3037
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/ConnectivityService$SettingsObserver;->mUriEventMap:Ljava/util/HashMap;
 
-    .line 3038
     iput-object p1, p0, Lcom/android/server/ConnectivityService$SettingsObserver;->mContext:Landroid/content/Context;
 
-    .line 3039
     iput-object p2, p0, Lcom/android/server/ConnectivityService$SettingsObserver;->mHandler:Landroid/os/Handler;
 
-    .line 3035
     return-void
 .end method
 
@@ -69,7 +64,6 @@
     .param p2, "what"    # I
 
     .prologue
-    .line 3043
     iget-object v1, p0, Lcom/android/server/ConnectivityService$SettingsObserver;->mUriEventMap:Ljava/util/HashMap;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -78,20 +72,17 @@
 
     invoke-virtual {v1, p1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3044
     iget-object v1, p0, Lcom/android/server/ConnectivityService$SettingsObserver;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 3045
     .local v0, "resolver":Landroid/content/ContentResolver;
     const/4 v1, 0x0
 
     invoke-virtual {v0, p1, v1, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 3042
     return-void
 .end method
 
@@ -100,14 +91,12 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 3050
-    const-string/jumbo v0, "ConnectivityService"
+    const-string v0, "ConnectivityService"
 
-    const-string/jumbo v1, "Should never be reached."
+    const-string v1, "Should never be reached."
 
     invoke-static {v0, v1}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3049
     return-void
 .end method
 
@@ -117,7 +106,6 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 3055
     iget-object v1, p0, Lcom/android/server/ConnectivityService$SettingsObserver;->mUriEventMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -126,11 +114,9 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 3056
     .local v0, "what":Ljava/lang/Integer;
     if-eqz v0, :cond_0
 
-    .line 3057
     iget-object v1, p0, Lcom/android/server/ConnectivityService$SettingsObserver;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -143,17 +129,15 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 3054
     :goto_0
     return-void
 
-    .line 3059
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "No matching event to send for URI="
+    const-string v2, "No matching event to send for URI="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

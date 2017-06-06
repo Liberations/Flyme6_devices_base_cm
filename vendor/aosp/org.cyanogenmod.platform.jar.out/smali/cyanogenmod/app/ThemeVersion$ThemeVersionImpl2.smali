@@ -38,14 +38,12 @@
     .locals 1
 
     .prologue
-    .line 135
     new-instance v0, Lcyanogenmod/app/ThemeVersion$ThemeVersionImpl2$1;
 
     invoke-direct {v0}, Lcyanogenmod/app/ThemeVersion$ThemeVersionImpl2$1;-><init>()V
 
     sput-object v0, Lcyanogenmod/app/ThemeVersion$ThemeVersionImpl2;->cVersions:Ljava/util/ArrayList;
 
-    .line 134
     return-void
 .end method
 
@@ -53,7 +51,6 @@
     .locals 0
 
     .prologue
-    .line 134
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -64,7 +61,6 @@
     .param p0, "component"    # Lcyanogenmod/app/ThemeComponent;
 
     .prologue
-    .line 148
     sget-object v2, Lcyanogenmod/app/ThemeVersion$ThemeVersionImpl2;->cVersions:Ljava/util/ArrayList;
 
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -85,7 +81,6 @@
 
     check-cast v0, Lcyanogenmod/app/ThemeVersion$ComponentVersion;
 
-    .line 149
     .local v0, "compVersion":Lcyanogenmod/app/ThemeVersion$ComponentVersion;
     iget-object v2, v0, Lcyanogenmod/app/ThemeVersion$ComponentVersion;->component:Lcyanogenmod/app/ThemeComponent;
 
@@ -95,14 +90,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 150
     new-instance v2, Lcyanogenmod/app/ThemeVersion$ComponentVersion;
 
     invoke-direct {v2, v0}, Lcyanogenmod/app/ThemeVersion$ComponentVersion;-><init>(Lcyanogenmod/app/ThemeVersion$ComponentVersion;)V
 
     return-object v2
 
-    .line 153
     .end local v0    # "compVersion":Lcyanogenmod/app/ThemeVersion$ComponentVersion;
     :cond_1
     const/4 v2, 0x0
@@ -123,17 +116,14 @@
     .end annotation
 
     .prologue
-    .line 157
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 158
     .local v0, "versions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcyanogenmod/app/ThemeVersion$ComponentVersion;>;"
     sget-object v1, Lcyanogenmod/app/ThemeVersion$ThemeVersionImpl2;->cVersions:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 159
     return-object v0
 .end method

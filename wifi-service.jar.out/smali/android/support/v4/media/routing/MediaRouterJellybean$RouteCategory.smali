@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 238
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,7 +30,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 240
     check-cast p0, Landroid/media/MediaRouter$RouteCategory;
 
     .end local p0    # "categoryObj":Ljava/lang/Object;
@@ -47,19 +45,16 @@
     .param p0, "categoryObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 245
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 246
     .local v0, "out":Ljava/util/ArrayList;
     check-cast p0, Landroid/media/MediaRouter$RouteCategory;
 
     .end local p0    # "categoryObj":Ljava/lang/Object;
     invoke-virtual {p0, v0}, Landroid/media/MediaRouter$RouteCategory;->getRoutes(Ljava/util/List;)Ljava/util/List;
 
-    .line 247
     return-object v0
 .end method
 
@@ -68,7 +63,6 @@
     .param p0, "categoryObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 251
     check-cast p0, Landroid/media/MediaRouter$RouteCategory;
 
     .end local p0    # "categoryObj":Ljava/lang/Object;
@@ -84,7 +78,6 @@
     .param p0, "categoryObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 255
     check-cast p0, Landroid/media/MediaRouter$RouteCategory;
 
     .end local p0    # "categoryObj":Ljava/lang/Object;

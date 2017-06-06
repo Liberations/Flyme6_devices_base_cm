@@ -45,7 +45,6 @@
     .param p7, "val$clipRect"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 237
     iput-object p1, p0, Lcyanogenmod/externalviews/KeyguardExternalView$3;->this$0:Lcyanogenmod/externalviews/KeyguardExternalView;
 
     iput p2, p0, Lcyanogenmod/externalviews/KeyguardExternalView$3;->val$x:I
@@ -71,7 +70,6 @@
     .locals 8
 
     .prologue
-    .line 241
     :try_start_0
     iget-object v0, p0, Lcyanogenmod/externalviews/KeyguardExternalView$3;->this$0:Lcyanogenmod/externalviews/KeyguardExternalView;
 
@@ -89,19 +87,15 @@
 
     iget-boolean v5, p0, Lcyanogenmod/externalviews/KeyguardExternalView$3;->val$visible:Z
 
-    .line 242
     iget-object v6, p0, Lcyanogenmod/externalviews/KeyguardExternalView$3;->val$clipRect:Landroid/graphics/Rect;
 
-    .line 241
     invoke-interface/range {v0 .. v6}, Lcyanogenmod/externalviews/IKeyguardExternalViewProvider;->alterWindow(IIIIZLandroid/graphics/Rect;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 239
     :goto_0
     return-void
 
-    .line 243
     :catch_0
     move-exception v7
 

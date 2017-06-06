@@ -57,34 +57,28 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
     new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
 
     invoke-direct {v0}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
 
-    .line 27
     iput-object v0, p0, Landroid/speech/tts/AudioPlaybackHandler;->mQueue:Ljava/util/concurrent/LinkedBlockingQueue;
 
-    .line 31
     iput-object v2, p0, Landroid/speech/tts/AudioPlaybackHandler;->mCurrentWorkItem:Landroid/speech/tts/PlaybackQueueItem;
 
-    .line 34
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Landroid/speech/tts/AudioPlaybackHandler$MessageLoop;
 
     invoke-direct {v1, p0, v2}, Landroid/speech/tts/AudioPlaybackHandler$MessageLoop;-><init>(Landroid/speech/tts/AudioPlaybackHandler;Landroid/speech/tts/AudioPlaybackHandler$MessageLoop;)V
 
-    const-string/jumbo v2, "TTS.AudioPlaybackThread"
+    const-string v2, "TTS.AudioPlaybackThread"
 
     invoke-direct {v0, v1, v2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
     iput-object v0, p0, Landroid/speech/tts/AudioPlaybackHandler;->mHandlerThread:Ljava/lang/Thread;
 
-    .line 33
     return-void
 .end method
 
@@ -92,12 +86,10 @@
     .locals 1
 
     .prologue
-    .line 96
     iget-object v0, p0, Landroid/speech/tts/AudioPlaybackHandler;->mQueue:Ljava/util/concurrent/LinkedBlockingQueue;
 
     invoke-virtual {v0}, Ljava/util/concurrent/LinkedBlockingQueue;->clear()V
 
-    .line 95
     return-void
 .end method
 
@@ -106,14 +98,12 @@
     .param p1, "callerIdentity"    # Ljava/lang/Object;
 
     .prologue
-    .line 103
     iget-object v2, p0, Landroid/speech/tts/AudioPlaybackHandler;->mQueue:Ljava/util/concurrent/LinkedBlockingQueue;
 
     invoke-virtual {v2}, Ljava/util/concurrent/LinkedBlockingQueue;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .line 105
     .local v0, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/speech/tts/PlaybackQueueItem;>;"
     :cond_0
     :goto_0
@@ -123,14 +113,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 106
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/speech/tts/PlaybackQueueItem;
 
-    .line 107
     .local v1, "item":Landroid/speech/tts/PlaybackQueueItem;
     invoke-virtual {v1}, Landroid/speech/tts/PlaybackQueueItem;->getCallerIdentity()Ljava/lang/Object;
 
@@ -138,12 +126,10 @@
 
     if-ne v2, p1, :cond_0
 
-    .line 108
     invoke-interface {v0}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
-    .line 102
     .end local v1    # "item":Landroid/speech/tts/PlaybackQueueItem;
     :cond_1
     return-void
@@ -154,19 +140,15 @@
     .param p1, "item"    # Landroid/speech/tts/PlaybackQueueItem;
 
     .prologue
-    .line 42
     if-nez p1, :cond_0
 
-    .line 43
     return-void
 
-    .line 46
     :cond_0
     const/4 v0, -0x2
 
     invoke-virtual {p1, v0}, Landroid/speech/tts/PlaybackQueueItem;->stop(I)V
 
-    .line 41
     return-void
 .end method
 
@@ -177,7 +159,6 @@
     .param p1, "item"    # Landroid/speech/tts/PlaybackQueueItem;
 
     .prologue
-    .line 51
     :try_start_0
     iget-object v1, p0, Landroid/speech/tts/AudioPlaybackHandler;->mQueue:Ljava/util/concurrent/LinkedBlockingQueue;
 
@@ -185,11 +166,9 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 49
     :goto_0
     return-void
 
-    .line 52
     :catch_0
     move-exception v0
 
@@ -203,7 +182,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 80
     iget-object v1, p0, Landroid/speech/tts/AudioPlaybackHandler;->mQueue:Ljava/util/concurrent/LinkedBlockingQueue;
 
     invoke-virtual {v1}, Ljava/util/concurrent/LinkedBlockingQueue;->peek()Ljava/lang/Object;
@@ -230,20 +208,16 @@
     .locals 1
 
     .prologue
-    .line 87
     invoke-direct {p0}, Landroid/speech/tts/AudioPlaybackHandler;->removeAllMessages()V
 
-    .line 88
     iget-object v0, p0, Landroid/speech/tts/AudioPlaybackHandler;->mCurrentWorkItem:Landroid/speech/tts/PlaybackQueueItem;
 
     invoke-direct {p0, v0}, Landroid/speech/tts/AudioPlaybackHandler;->stop(Landroid/speech/tts/PlaybackQueueItem;)V
 
-    .line 89
     iget-object v0, p0, Landroid/speech/tts/AudioPlaybackHandler;->mHandlerThread:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
 
-    .line 86
     return-void
 .end method
 
@@ -251,12 +225,10 @@
     .locals 1
 
     .prologue
-    .line 38
     iget-object v0, p0, Landroid/speech/tts/AudioPlaybackHandler;->mHandlerThread:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 37
     return-void
 .end method
 
@@ -264,15 +236,12 @@
     .locals 1
 
     .prologue
-    .line 70
     invoke-direct {p0}, Landroid/speech/tts/AudioPlaybackHandler;->removeAllMessages()V
 
-    .line 72
     iget-object v0, p0, Landroid/speech/tts/AudioPlaybackHandler;->mCurrentWorkItem:Landroid/speech/tts/PlaybackQueueItem;
 
     invoke-direct {p0, v0}, Landroid/speech/tts/AudioPlaybackHandler;->stop(Landroid/speech/tts/PlaybackQueueItem;)V
 
-    .line 68
     return-void
 .end method
 
@@ -281,13 +250,10 @@
     .param p1, "callerIdentity"    # Ljava/lang/Object;
 
     .prologue
-    .line 60
     invoke-direct {p0, p1}, Landroid/speech/tts/AudioPlaybackHandler;->removeWorkItemsFor(Ljava/lang/Object;)V
 
-    .line 62
     iget-object v0, p0, Landroid/speech/tts/AudioPlaybackHandler;->mCurrentWorkItem:Landroid/speech/tts/PlaybackQueueItem;
 
-    .line 63
     .local v0, "current":Landroid/speech/tts/PlaybackQueueItem;
     if-eqz v0, :cond_0
 
@@ -297,10 +263,8 @@
 
     if-ne v1, p1, :cond_0
 
-    .line 64
     invoke-direct {p0, v0}, Landroid/speech/tts/AudioPlaybackHandler;->stop(Landroid/speech/tts/PlaybackQueueItem;)V
 
-    .line 58
     :cond_0
     return-void
 .end method

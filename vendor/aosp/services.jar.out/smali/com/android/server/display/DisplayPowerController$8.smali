@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/server/display/DisplayPowerController;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/android/server/display/DisplayPowerController;->dump(Ljava/io/PrintWriter;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,15 +20,19 @@
 # instance fields
 .field final synthetic this$0:Lcom/android/server/display/DisplayPowerController;
 
+.field final synthetic val$pw:Ljava/io/PrintWriter;
+
 
 # direct methods
-.method constructor <init>(Lcom/android/server/display/DisplayPowerController;)V
+.method constructor <init>(Lcom/android/server/display/DisplayPowerController;Ljava/io/PrintWriter;)V
     .locals 0
     .param p1, "this$0"    # Lcom/android/server/display/DisplayPowerController;
+    .param p2, "val$pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 1130
     iput-object p1, p0, Lcom/android/server/display/DisplayPowerController$8;->this$0:Lcom/android/server/display/DisplayPowerController;
+
+    iput-object p2, p0, Lcom/android/server/display/DisplayPowerController$8;->val$pw:Ljava/io/PrintWriter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,27 +42,14 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 2
 
     .prologue
-    .line 1133
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$8;->this$0:Lcom/android/server/display/DisplayPowerController;
 
-    invoke-static {v0}, Lcom/android/server/display/DisplayPowerController;->-get0(Lcom/android/server/display/DisplayPowerController;)Landroid/hardware/display/DisplayManagerInternal$DisplayPowerCallbacks;
+    iget-object v1, p0, Lcom/android/server/display/DisplayPowerController$8;->val$pw:Ljava/io/PrintWriter;
 
-    move-result-object v0
+    invoke-static {v0, v1}, Lcom/android/server/display/DisplayPowerController;->-wrap1(Lcom/android/server/display/DisplayPowerController;Ljava/io/PrintWriter;)V
 
-    invoke-interface {v0}, Landroid/hardware/display/DisplayManagerInternal$DisplayPowerCallbacks;->onProximityNegative()V
-
-    .line 1134
-    iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$8;->this$0:Lcom/android/server/display/DisplayPowerController;
-
-    invoke-static {v0}, Lcom/android/server/display/DisplayPowerController;->-get0(Lcom/android/server/display/DisplayPowerController;)Landroid/hardware/display/DisplayManagerInternal$DisplayPowerCallbacks;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/hardware/display/DisplayManagerInternal$DisplayPowerCallbacks;->releaseSuspendBlocker()V
-
-    .line 1132
     return-void
 .end method

@@ -27,15 +27,12 @@
     .param p2, "context"    # Landroid/service/wallpaper/WallpaperService;
 
     .prologue
-    .line 1234
     iput-object p1, p0, Landroid/service/wallpaper/WallpaperService$IWallpaperServiceWrapper;->this$0:Landroid/service/wallpaper/WallpaperService;
 
     invoke-direct {p0}, Landroid/service/wallpaper/IWallpaperService$Stub;-><init>()V
 
-    .line 1235
     iput-object p2, p0, Landroid/service/wallpaper/WallpaperService$IWallpaperServiceWrapper;->mTarget:Landroid/service/wallpaper/WallpaperService;
 
-    .line 1234
     return-void
 .end method
 
@@ -52,7 +49,6 @@
     .param p7, "padding"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 1241
     new-instance v0, Landroid/service/wallpaper/WallpaperService$IWallpaperEngineWrapper;
 
     iget-object v1, p0, Landroid/service/wallpaper/WallpaperService$IWallpaperServiceWrapper;->this$0:Landroid/service/wallpaper/WallpaperService;
@@ -75,6 +71,5 @@
 
     invoke-direct/range {v0 .. v9}, Landroid/service/wallpaper/WallpaperService$IWallpaperEngineWrapper;-><init>(Landroid/service/wallpaper/WallpaperService;Landroid/service/wallpaper/WallpaperService;Landroid/service/wallpaper/IWallpaperConnection;Landroid/os/IBinder;IZIILandroid/graphics/Rect;)V
 
-    .line 1240
     return-void
 .end method

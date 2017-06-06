@@ -92,55 +92,49 @@
 
     const/4 v3, 0x0
 
-    .line 71
     new-instance v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    const-string/jumbo v1, "PERSOSUBSTATE_UNKNOWN"
+    const-string v1, "PERSOSUBSTATE_UNKNOWN"
 
     invoke-direct {v0, v1, v3}, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;->PERSOSUBSTATE_UNKNOWN:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    .line 72
     new-instance v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    const-string/jumbo v1, "PERSOSUBSTATE_IN_PROGRESS"
+    const-string v1, "PERSOSUBSTATE_IN_PROGRESS"
 
     invoke-direct {v0, v1, v4}, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;->PERSOSUBSTATE_IN_PROGRESS:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    .line 73
     new-instance v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    const-string/jumbo v1, "PERSOSUBSTATE_READY"
+    const-string v1, "PERSOSUBSTATE_READY"
 
     invoke-direct {v0, v1, v5}, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;->PERSOSUBSTATE_READY:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    .line 74
     new-instance v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    const-string/jumbo v1, "PERSOSUBSTATE_SIM_NETWORK"
+    const-string v1, "PERSOSUBSTATE_SIM_NETWORK"
 
     invoke-direct {v0, v1, v6}, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;->PERSOSUBSTATE_SIM_NETWORK:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    .line 75
     new-instance v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    const-string/jumbo v1, "PERSOSUBSTATE_SIM_NETWORK_SUBSET"
+    const-string v1, "PERSOSUBSTATE_SIM_NETWORK_SUBSET"
 
     invoke-direct {v0, v1, v7}, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;->PERSOSUBSTATE_SIM_NETWORK_SUBSET:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    .line 76
     new-instance v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    const-string/jumbo v1, "PERSOSUBSTATE_SIM_CORPORATE"
+    const-string v1, "PERSOSUBSTATE_SIM_CORPORATE"
 
     const/4 v2, 0x5
 
@@ -148,10 +142,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;->PERSOSUBSTATE_SIM_CORPORATE:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    .line 77
     new-instance v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    const-string/jumbo v1, "PERSOSUBSTATE_SIM_SERVICE_PROVIDER"
+    const-string v1, "PERSOSUBSTATE_SIM_SERVICE_PROVIDER"
 
     const/4 v2, 0x6
 
@@ -159,10 +152,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;->PERSOSUBSTATE_SIM_SERVICE_PROVIDER:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    .line 78
     new-instance v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    const-string/jumbo v1, "PERSOSUBSTATE_SIM_SIM"
+    const-string v1, "PERSOSUBSTATE_SIM_SIM"
 
     const/4 v2, 0x7
 
@@ -170,10 +162,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;->PERSOSUBSTATE_SIM_SIM:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    .line 79
     new-instance v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    const-string/jumbo v1, "PERSOSUBSTATE_SIM_NETWORK_PUK"
+    const-string v1, "PERSOSUBSTATE_SIM_NETWORK_PUK"
 
     const/16 v2, 0x8
 
@@ -181,10 +172,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;->PERSOSUBSTATE_SIM_NETWORK_PUK:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    .line 80
     new-instance v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    const-string/jumbo v1, "PERSOSUBSTATE_SIM_NETWORK_SUBSET_PUK"
+    const-string v1, "PERSOSUBSTATE_SIM_NETWORK_SUBSET_PUK"
 
     const/16 v2, 0x9
 
@@ -192,10 +182,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;->PERSOSUBSTATE_SIM_NETWORK_SUBSET_PUK:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    .line 81
     new-instance v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    const-string/jumbo v1, "PERSOSUBSTATE_SIM_CORPORATE_PUK"
+    const-string v1, "PERSOSUBSTATE_SIM_CORPORATE_PUK"
 
     const/16 v2, 0xa
 
@@ -203,10 +192,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;->PERSOSUBSTATE_SIM_CORPORATE_PUK:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    .line 82
     new-instance v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    const-string/jumbo v1, "PERSOSUBSTATE_SIM_SERVICE_PROVIDER_PUK"
+    const-string v1, "PERSOSUBSTATE_SIM_SERVICE_PROVIDER_PUK"
 
     const/16 v2, 0xb
 
@@ -214,10 +202,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;->PERSOSUBSTATE_SIM_SERVICE_PROVIDER_PUK:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    .line 83
     new-instance v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    const-string/jumbo v1, "PERSOSUBSTATE_SIM_SIM_PUK"
+    const-string v1, "PERSOSUBSTATE_SIM_SIM_PUK"
 
     const/16 v2, 0xc
 
@@ -225,10 +212,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;->PERSOSUBSTATE_SIM_SIM_PUK:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    .line 84
     new-instance v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    const-string/jumbo v1, "PERSOSUBSTATE_RUIM_NETWORK1"
+    const-string v1, "PERSOSUBSTATE_RUIM_NETWORK1"
 
     const/16 v2, 0xd
 
@@ -236,10 +222,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;->PERSOSUBSTATE_RUIM_NETWORK1:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    .line 85
     new-instance v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    const-string/jumbo v1, "PERSOSUBSTATE_RUIM_NETWORK2"
+    const-string v1, "PERSOSUBSTATE_RUIM_NETWORK2"
 
     const/16 v2, 0xe
 
@@ -247,10 +232,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;->PERSOSUBSTATE_RUIM_NETWORK2:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    .line 86
     new-instance v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    const-string/jumbo v1, "PERSOSUBSTATE_RUIM_HRPD"
+    const-string v1, "PERSOSUBSTATE_RUIM_HRPD"
 
     const/16 v2, 0xf
 
@@ -258,10 +242,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;->PERSOSUBSTATE_RUIM_HRPD:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    .line 87
     new-instance v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    const-string/jumbo v1, "PERSOSUBSTATE_RUIM_CORPORATE"
+    const-string v1, "PERSOSUBSTATE_RUIM_CORPORATE"
 
     const/16 v2, 0x10
 
@@ -269,10 +252,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;->PERSOSUBSTATE_RUIM_CORPORATE:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    .line 88
     new-instance v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    const-string/jumbo v1, "PERSOSUBSTATE_RUIM_SERVICE_PROVIDER"
+    const-string v1, "PERSOSUBSTATE_RUIM_SERVICE_PROVIDER"
 
     const/16 v2, 0x11
 
@@ -280,10 +262,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;->PERSOSUBSTATE_RUIM_SERVICE_PROVIDER:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    .line 89
     new-instance v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    const-string/jumbo v1, "PERSOSUBSTATE_RUIM_RUIM"
+    const-string v1, "PERSOSUBSTATE_RUIM_RUIM"
 
     const/16 v2, 0x12
 
@@ -291,10 +272,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;->PERSOSUBSTATE_RUIM_RUIM:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    .line 90
     new-instance v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    const-string/jumbo v1, "PERSOSUBSTATE_RUIM_NETWORK1_PUK"
+    const-string v1, "PERSOSUBSTATE_RUIM_NETWORK1_PUK"
 
     const/16 v2, 0x13
 
@@ -302,10 +282,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;->PERSOSUBSTATE_RUIM_NETWORK1_PUK:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    .line 91
     new-instance v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    const-string/jumbo v1, "PERSOSUBSTATE_RUIM_NETWORK2_PUK"
+    const-string v1, "PERSOSUBSTATE_RUIM_NETWORK2_PUK"
 
     const/16 v2, 0x14
 
@@ -313,10 +292,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;->PERSOSUBSTATE_RUIM_NETWORK2_PUK:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    .line 92
     new-instance v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    const-string/jumbo v1, "PERSOSUBSTATE_RUIM_HRPD_PUK"
+    const-string v1, "PERSOSUBSTATE_RUIM_HRPD_PUK"
 
     const/16 v2, 0x15
 
@@ -324,10 +302,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;->PERSOSUBSTATE_RUIM_HRPD_PUK:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    .line 93
     new-instance v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    const-string/jumbo v1, "PERSOSUBSTATE_RUIM_CORPORATE_PUK"
+    const-string v1, "PERSOSUBSTATE_RUIM_CORPORATE_PUK"
 
     const/16 v2, 0x16
 
@@ -335,10 +312,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;->PERSOSUBSTATE_RUIM_CORPORATE_PUK:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    .line 94
     new-instance v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    const-string/jumbo v1, "PERSOSUBSTATE_RUIM_SERVICE_PROVIDER_PUK"
+    const-string v1, "PERSOSUBSTATE_RUIM_SERVICE_PROVIDER_PUK"
 
     const/16 v2, 0x17
 
@@ -346,10 +322,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;->PERSOSUBSTATE_RUIM_SERVICE_PROVIDER_PUK:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    .line 95
     new-instance v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    const-string/jumbo v1, "PERSOSUBSTATE_RUIM_RUIM_PUK"
+    const-string v1, "PERSOSUBSTATE_RUIM_RUIM_PUK"
 
     const/16 v2, 0x18
 
@@ -357,7 +332,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;->PERSOSUBSTATE_RUIM_RUIM_PUK:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
-    .line 70
     const/16 v0, 0x19
 
     new-array v0, v0, [Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
@@ -511,7 +485,6 @@
     .locals 0
 
     .prologue
-    .line 70
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -522,7 +495,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 70
     const-class v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -538,7 +510,6 @@
     .locals 1
 
     .prologue
-    .line 70
     sget-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;->$VALUES:[Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
     return-object v0
@@ -550,7 +521,6 @@
     .locals 1
 
     .prologue
-    .line 98
     sget-object v0, Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;->PERSOSUBSTATE_UNKNOWN:Lcom/android/internal/telephony/uicc/IccCardApplicationStatus$PersoSubState;
 
     if-ne p0, v0, :cond_0

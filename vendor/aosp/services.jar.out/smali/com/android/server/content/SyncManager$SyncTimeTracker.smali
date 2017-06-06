@@ -30,22 +30,18 @@
     .param p1, "this$0"    # Lcom/android/server/content/SyncManager;
 
     .prologue
-    .line 2040
     iput-object p1, p0, Lcom/android/server/content/SyncManager$SyncTimeTracker;->this$0:Lcom/android/server/content/SyncManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2042
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/content/SyncManager$SyncTimeTracker;->mLastWasSyncing:Z
 
-    .line 2044
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/server/content/SyncManager$SyncTimeTracker;->mWhenSyncStarted:J
 
-    .line 2040
     return-void
 .end method
 
@@ -67,7 +63,6 @@
     .prologue
     monitor-enter p0
 
-    .line 2063
     :try_start_0
     iget-boolean v2, p0, Lcom/android/server/content/SyncManager$SyncTimeTracker;->mLastWasSyncing:Z
 
@@ -81,14 +76,12 @@
 
     return-wide v2
 
-    .line 2065
     :cond_0
     :try_start_1
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 2066
     .local v0, "now":J
     iget-wide v2, p0, Lcom/android/server/content/SyncManager$SyncTimeTracker;->mTimeSpentSyncing:J
 
@@ -119,7 +112,6 @@
     .prologue
     monitor-enter p0
 
-    .line 2050
     :try_start_0
     iget-object v1, p0, Lcom/android/server/content/SyncManager$SyncTimeTracker;->this$0:Lcom/android/server/content/SyncManager;
 
@@ -133,7 +125,6 @@
 
     const/4 v0, 0x0
 
-    .line 2051
     .local v0, "isSyncInProgress":Z
     :goto_0
     iget-boolean v1, p0, Lcom/android/server/content/SyncManager$SyncTimeTracker;->mLastWasSyncing:Z
@@ -146,7 +137,6 @@
 
     return-void
 
-    .line 2050
     .end local v0    # "isSyncInProgress":Z
     :cond_0
     const/4 v0, 0x1
@@ -154,21 +144,17 @@
     .restart local v0    # "isSyncInProgress":Z
     goto :goto_0
 
-    .line 2052
     :cond_1
     :try_start_1
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 2053
     .local v2, "now":J
     if-eqz v0, :cond_2
 
-    .line 2054
     iput-wide v2, p0, Lcom/android/server/content/SyncManager$SyncTimeTracker;->mWhenSyncStarted:J
 
-    .line 2058
     :goto_1
     iput-boolean v0, p0, Lcom/android/server/content/SyncManager$SyncTimeTracker;->mLastWasSyncing:Z
     :try_end_1
@@ -176,10 +162,8 @@
 
     monitor-exit p0
 
-    .line 2049
     return-void
 
-    .line 2056
     :cond_2
     :try_start_2
     iget-wide v4, p0, Lcom/android/server/content/SyncManager$SyncTimeTracker;->mTimeSpentSyncing:J

@@ -30,7 +30,6 @@
     .param p2, "val$timeToFirstFix"    # I
 
     .prologue
-    .line 66
     iput-object p1, p0, Lcom/android/server/location/GpsStatusListenerHelper$3;->this$0:Lcom/android/server/location/GpsStatusListenerHelper;
 
     iput p2, p0, Lcom/android/server/location/GpsStatusListenerHelper$3;->val$timeToFirstFix:I
@@ -52,12 +51,10 @@
     .end annotation
 
     .prologue
-    .line 69
     iget v0, p0, Lcom/android/server/location/GpsStatusListenerHelper$3;->val$timeToFirstFix:I
 
     invoke-interface {p1, v0}, Landroid/location/IGpsStatusListener;->onFirstFix(I)V
 
-    .line 68
     return-void
 .end method
 
@@ -71,7 +68,6 @@
     .end annotation
 
     .prologue
-    .line 68
     check-cast p1, Landroid/location/IGpsStatusListener;
 
     .end local p1    # "listener":Landroid/os/IInterface;

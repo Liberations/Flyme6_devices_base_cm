@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 115
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 117
     new-instance v0, Landroid/content/pm/PermissionGroupInfo;
 
     const/4 v1, 0x0
@@ -60,7 +58,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 116
     invoke-virtual {p0, p1}, Landroid/content/pm/PermissionGroupInfo$1;->createFromParcel(Landroid/os/Parcel;)Landroid/content/pm/PermissionGroupInfo;
 
     move-result-object v0
@@ -73,7 +70,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 120
     new-array v0, p1, [Landroid/content/pm/PermissionGroupInfo;
 
     return-object v0
@@ -84,7 +80,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 119
     invoke-virtual {p0, p1}, Landroid/content/pm/PermissionGroupInfo$1;->newArray(I)[Landroid/content/pm/PermissionGroupInfo;
 
     move-result-object v0

@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/midi/MidiService;
 
     .prologue
-    .line 103
     iput-object p1, p0, Lcom/android/server/midi/MidiService$1;->this$0:Lcom/android/server/midi/MidiService;
 
     invoke-direct {p0}, Lcom/android/internal/content/PackageMonitor;-><init>()V
@@ -40,12 +39,10 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 106
     iget-object v0, p0, Lcom/android/server/midi/MidiService$1;->this$0:Lcom/android/server/midi/MidiService;
 
     invoke-static {v0, p1}, Lcom/android/server/midi/MidiService;->-wrap0(Lcom/android/server/midi/MidiService;Ljava/lang/String;)V
 
-    .line 105
     return-void
 .end method
 
@@ -54,17 +51,14 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 111
     iget-object v0, p0, Lcom/android/server/midi/MidiService$1;->this$0:Lcom/android/server/midi/MidiService;
 
     invoke-static {v0, p1}, Lcom/android/server/midi/MidiService;->-wrap2(Lcom/android/server/midi/MidiService;Ljava/lang/String;)V
 
-    .line 112
     iget-object v0, p0, Lcom/android/server/midi/MidiService$1;->this$0:Lcom/android/server/midi/MidiService;
 
     invoke-static {v0, p1}, Lcom/android/server/midi/MidiService;->-wrap0(Lcom/android/server/midi/MidiService;Ljava/lang/String;)V
 
-    .line 110
     return-void
 .end method
 
@@ -74,11 +68,9 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 117
     iget-object v0, p0, Lcom/android/server/midi/MidiService$1;->this$0:Lcom/android/server/midi/MidiService;
 
     invoke-static {v0, p1}, Lcom/android/server/midi/MidiService;->-wrap2(Lcom/android/server/midi/MidiService;Ljava/lang/String;)V
 
-    .line 116
     return-void
 .end method

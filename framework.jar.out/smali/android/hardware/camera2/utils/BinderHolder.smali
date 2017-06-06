@@ -36,15 +36,12 @@
     .locals 1
 
     .prologue
-    .line 44
     new-instance v0, Landroid/hardware/camera2/utils/BinderHolder$1;
 
     invoke-direct {v0}, Landroid/hardware/camera2/utils/BinderHolder$1;-><init>()V
 
-    .line 43
     sput-object v0, Landroid/hardware/camera2/utils/BinderHolder;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 26
     return-void
 .end method
 
@@ -52,15 +49,12 @@
     .locals 1
 
     .prologue
-    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/hardware/camera2/utils/BinderHolder;->mBinder:Landroid/os/IBinder;
 
-    .line 64
     return-void
 .end method
 
@@ -69,18 +63,14 @@
     .param p1, "binder"    # Landroid/os/IBinder;
 
     .prologue
-    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/hardware/camera2/utils/BinderHolder;->mBinder:Landroid/os/IBinder;
 
-    .line 67
     iput-object p1, p0, Landroid/hardware/camera2/utils/BinderHolder;->mBinder:Landroid/os/IBinder;
 
-    .line 66
     return-void
 .end method
 
@@ -89,22 +79,18 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 70
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/hardware/camera2/utils/BinderHolder;->mBinder:Landroid/os/IBinder;
 
-    .line 71
     invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/hardware/camera2/utils/BinderHolder;->mBinder:Landroid/os/IBinder;
 
-    .line 70
     return-void
 .end method
 
@@ -124,7 +110,6 @@
     .locals 1
 
     .prologue
-    .line 31
     const/4 v0, 0x0
 
     return v0
@@ -134,7 +119,6 @@
     .locals 1
 
     .prologue
-    .line 57
     iget-object v0, p0, Landroid/hardware/camera2/utils/BinderHolder;->mBinder:Landroid/os/IBinder;
 
     return-object v0
@@ -145,14 +129,12 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 40
     invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/hardware/camera2/utils/BinderHolder;->mBinder:Landroid/os/IBinder;
 
-    .line 39
     return-void
 .end method
 
@@ -161,10 +143,8 @@
     .param p1, "binder"    # Landroid/os/IBinder;
 
     .prologue
-    .line 61
     iput-object p1, p0, Landroid/hardware/camera2/utils/BinderHolder;->mBinder:Landroid/os/IBinder;
 
-    .line 60
     return-void
 .end method
 
@@ -174,11 +154,9 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 36
     iget-object v0, p0, Landroid/hardware/camera2/utils/BinderHolder;->mBinder:Landroid/os/IBinder;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 35
     return-void
 .end method

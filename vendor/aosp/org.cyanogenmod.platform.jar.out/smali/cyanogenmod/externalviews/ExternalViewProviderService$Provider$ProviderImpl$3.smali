@@ -27,7 +27,6 @@
     .param p1, "this$2"    # Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;
 
     .prologue
-    .line 131
     iput-object p1, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl$3;->this$2:Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,25 +40,21 @@
     .locals 2
 
     .prologue
-    .line 134
     iget-object v0, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl$3;->this$2:Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;->-set1(Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;Z)Z
 
-    .line 135
     iget-object v0, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl$3;->this$2:Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;
 
     invoke-static {v0}, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;->-wrap0(Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;)V
 
-    .line 136
     iget-object v0, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl$3;->this$2:Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;
 
     iget-object v0, v0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;->this$1:Lcyanogenmod/externalviews/ExternalViewProviderService$Provider;
 
     invoke-virtual {v0}, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider;->onResume()V
 
-    .line 133
     return-void
 .end method

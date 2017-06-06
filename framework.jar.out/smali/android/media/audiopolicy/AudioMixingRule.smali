@@ -90,17 +90,13 @@
     .end annotation
 
     .prologue
-    .line 44
     .local p2, "criteria":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/media/audiopolicy/AudioMixingRule$AttributeMatchCriterion;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     iput-object p2, p0, Landroid/media/audiopolicy/AudioMixingRule;->mCriteria:Ljava/util/ArrayList;
 
-    .line 46
     iput p1, p0, Landroid/media/audiopolicy/AudioMixingRule;->mTargetMixType:I
 
-    .line 44
     return-void
 .end method
 
@@ -122,20 +118,16 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 133
     if-eq p0, v0, :cond_0
 
-    .line 134
     const v1, 0x8001
 
     if-ne p0, v1, :cond_1
 
-    .line 133
     :cond_0
     :goto_0
     return v0
 
-    .line 134
     :cond_1
     const/4 v0, 0x0
 
@@ -147,21 +139,17 @@
     .param p0, "rule"    # I
 
     .prologue
-    .line 121
     sparse-switch p0, :sswitch_data_0
 
-    .line 128
     const/4 v0, 0x0
 
     return v0
 
-    .line 126
     :sswitch_0
     const/4 v0, 0x1
 
     return v0
 
-    .line 121
     nop
 
     :sswitch_data_0
@@ -178,21 +166,17 @@
     .param p0, "rule"    # I
 
     .prologue
-    .line 111
     packed-switch p0, :pswitch_data_0
 
-    .line 116
     const/4 v0, 0x0
 
     return v0
 
-    .line 114
     :pswitch_0
     const/4 v0, 0x1
 
     return v0
 
-    .line 111
     nop
 
     :pswitch_data_0
@@ -217,7 +201,6 @@
     .end annotation
 
     .prologue
-    .line 103
     iget-object v0, p0, Landroid/media/audiopolicy/AudioMixingRule;->mCriteria:Ljava/util/ArrayList;
 
     return-object v0
@@ -227,7 +210,6 @@
     .locals 1
 
     .prologue
-    .line 101
     iget v0, p0, Landroid/media/audiopolicy/AudioMixingRule;->mTargetMixType:I
 
     return v0
@@ -237,7 +219,6 @@
     .locals 3
 
     .prologue
-    .line 107
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/Object;

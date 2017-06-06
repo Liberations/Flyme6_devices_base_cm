@@ -53,15 +53,12 @@
     .locals 1
 
     .prologue
-    .line 605
     new-instance v0, Landroid/app/IActivityManager$WaitResult$1;
 
     invoke-direct {v0}, Landroid/app/IActivityManager$WaitResult$1;-><init>()V
 
-    .line 604
     sput-object v0, Landroid/app/IActivityManager$WaitResult;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 580
     return-void
 .end method
 
@@ -69,7 +66,6 @@
     .locals 0
 
     .prologue
-    .line 587
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -82,17 +78,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 617
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 618
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/app/IActivityManager$WaitResult;->result:I
 
-    .line 619
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -104,28 +97,24 @@
     :cond_0
     iput-boolean v0, p0, Landroid/app/IActivityManager$WaitResult;->timeout:Z
 
-    .line 620
     invoke-static {p1}, Landroid/content/ComponentName;->readFromParcel(Landroid/os/Parcel;)Landroid/content/ComponentName;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/app/IActivityManager$WaitResult;->who:Landroid/content/ComponentName;
 
-    .line 621
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/app/IActivityManager$WaitResult;->thisTime:J
 
-    .line 622
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/app/IActivityManager$WaitResult;->totalTime:J
 
-    .line 617
     return-void
 .end method
 
@@ -145,7 +134,6 @@
     .locals 1
 
     .prologue
-    .line 592
     const/4 v0, 0x0
 
     return v0
@@ -157,12 +145,10 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 597
     iget v0, p0, Landroid/app/IActivityManager$WaitResult;->result:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 598
     iget-boolean v0, p0, Landroid/app/IActivityManager$WaitResult;->timeout:Z
 
     if-eqz v0, :cond_0
@@ -172,25 +158,20 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 599
     iget-object v0, p0, Landroid/app/IActivityManager$WaitResult;->who:Landroid/content/ComponentName;
 
     invoke-static {v0, p1}, Landroid/content/ComponentName;->writeToParcel(Landroid/content/ComponentName;Landroid/os/Parcel;)V
 
-    .line 600
     iget-wide v0, p0, Landroid/app/IActivityManager$WaitResult;->thisTime:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 601
     iget-wide v0, p0, Landroid/app/IActivityManager$WaitResult;->totalTime:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 596
     return-void
 
-    .line 598
     :cond_0
     const/4 v0, 0x0
 

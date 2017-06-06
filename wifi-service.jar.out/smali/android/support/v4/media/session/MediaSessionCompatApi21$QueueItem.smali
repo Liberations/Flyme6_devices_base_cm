@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 237
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,7 +30,6 @@
     .param p1, "id"    # J
 
     .prologue
-    .line 240
     new-instance v0, Landroid/media/session/MediaSession$QueueItem;
 
     check-cast p0, Landroid/media/MediaDescription;
@@ -47,7 +45,6 @@
     .param p0, "queueItem"    # Ljava/lang/Object;
 
     .prologue
-    .line 244
     check-cast p0, Landroid/media/session/MediaSession$QueueItem;
 
     .end local p0    # "queueItem":Ljava/lang/Object;
@@ -63,7 +60,6 @@
     .param p0, "queueItem"    # Ljava/lang/Object;
 
     .prologue
-    .line 248
     check-cast p0, Landroid/media/session/MediaSession$QueueItem;
 
     .end local p0    # "queueItem":Ljava/lang/Object;

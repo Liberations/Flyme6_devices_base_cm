@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Landroid/animation/ValueAnimator$AnimationHandler;
 
     .prologue
-    .line 806
     iput-object p1, p0, Landroid/animation/ValueAnimator$AnimationHandler$2;->this$1:Landroid/animation/ValueAnimator$AnimationHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 4
 
     .prologue
-    .line 809
     iget-object v0, p0, Landroid/animation/ValueAnimator$AnimationHandler$2;->this$1:Landroid/animation/ValueAnimator$AnimationHandler;
 
     iget-object v1, p0, Landroid/animation/ValueAnimator$AnimationHandler$2;->this$1:Landroid/animation/ValueAnimator$AnimationHandler;
@@ -56,6 +54,5 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ValueAnimator$AnimationHandler;->commitAnimationFrame(J)V
 
-    .line 808
     return-void
 .end method

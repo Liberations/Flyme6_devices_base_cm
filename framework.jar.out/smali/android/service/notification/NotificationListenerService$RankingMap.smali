@@ -80,14 +80,12 @@
     .locals 1
 
     .prologue
-    .line 992
     new-instance v0, Landroid/service/notification/NotificationListenerService$RankingMap$1;
 
     invoke-direct {v0}, Landroid/service/notification/NotificationListenerService$RankingMap$1;-><init>()V
 
     sput-object v0, Landroid/service/notification/NotificationListenerService$RankingMap;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 879
     return-void
 .end method
 
@@ -96,13 +94,10 @@
     .param p1, "rankingUpdate"    # Landroid/service/notification/NotificationRankingUpdate;
 
     .prologue
-    .line 885
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 886
     iput-object p1, p0, Landroid/service/notification/NotificationListenerService$RankingMap;->mRankingUpdate:Landroid/service/notification/NotificationRankingUpdate;
 
-    .line 885
     return-void
 .end method
 
@@ -120,14 +115,12 @@
     .locals 3
 
     .prologue
-    .line 966
     iget-object v1, p0, Landroid/service/notification/NotificationListenerService$RankingMap;->mRankingUpdate:Landroid/service/notification/NotificationRankingUpdate;
 
     invoke-virtual {v1}, Landroid/service/notification/NotificationRankingUpdate;->getInterceptedKeys()[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 967
     .local v0, "dndInterceptedKeys":[Ljava/lang/String;
     new-instance v1, Landroid/util/ArraySet;
 
@@ -137,12 +130,10 @@
 
     iput-object v1, p0, Landroid/service/notification/NotificationListenerService$RankingMap;->mIntercepted:Landroid/util/ArraySet;
 
-    .line 968
     iget-object v1, p0, Landroid/service/notification/NotificationListenerService$RankingMap;->mIntercepted:Landroid/util/ArraySet;
 
     invoke-static {v1, v0}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
 
-    .line 965
     return-void
 .end method
 
@@ -150,14 +141,12 @@
     .locals 5
 
     .prologue
-    .line 956
     iget-object v3, p0, Landroid/service/notification/NotificationListenerService$RankingMap;->mRankingUpdate:Landroid/service/notification/NotificationRankingUpdate;
 
     invoke-virtual {v3}, Landroid/service/notification/NotificationRankingUpdate;->getOrderedKeys()[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 957
     .local v2, "orderedKeys":[Ljava/lang/String;
     new-instance v3, Landroid/util/ArrayMap;
 
@@ -167,7 +156,6 @@
 
     iput-object v3, p0, Landroid/service/notification/NotificationListenerService$RankingMap;->mRanks:Landroid/util/ArrayMap;
 
-    .line 958
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -176,10 +164,8 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 959
     aget-object v1, v2, v0
 
-    .line 960
     .local v1, "key":Ljava/lang/String;
     iget-object v3, p0, Landroid/service/notification/NotificationListenerService$RankingMap;->mRanks:Landroid/util/ArrayMap;
 
@@ -189,12 +175,10 @@
 
     invoke-virtual {v3, v1, v4}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 958
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 955
     .end local v1    # "key":Ljava/lang/String;
     :cond_0
     return-void
@@ -204,14 +188,12 @@
     .locals 5
 
     .prologue
-    .line 973
     iget-object v3, p0, Landroid/service/notification/NotificationListenerService$RankingMap;->mRankingUpdate:Landroid/service/notification/NotificationRankingUpdate;
 
     invoke-virtual {v3}, Landroid/service/notification/NotificationRankingUpdate;->getVisibilityOverrides()Landroid/os/Bundle;
 
     move-result-object v2
 
-    .line 974
     .local v2, "visibilityBundle":Landroid/os/Bundle;
     new-instance v3, Landroid/util/ArrayMap;
 
@@ -223,7 +205,6 @@
 
     iput-object v3, p0, Landroid/service/notification/NotificationListenerService$RankingMap;->mVisibilityOverrides:Landroid/util/ArrayMap;
 
-    .line 975
     invoke-virtual {v2}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v3
@@ -246,7 +227,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 976
     .local v0, "key":Ljava/lang/String;
     iget-object v3, p0, Landroid/service/notification/NotificationListenerService$RankingMap;->mVisibilityOverrides:Landroid/util/ArrayMap;
 
@@ -262,7 +242,6 @@
 
     goto :goto_0
 
-    .line 972
     .end local v0    # "key":Ljava/lang/String;
     :cond_0
     return-void
@@ -273,16 +252,13 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 914
     monitor-enter p0
 
-    .line 915
     :try_start_0
     iget-object v1, p0, Landroid/service/notification/NotificationListenerService$RankingMap;->mRanks:Landroid/util/ArrayMap;
 
     if-nez v1, :cond_0
 
-    .line 916
     invoke-direct {p0}, Landroid/service/notification/NotificationListenerService$RankingMap;->buildRanksLocked()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -290,7 +266,6 @@
     :cond_0
     monitor-exit p0
 
-    .line 919
     iget-object v1, p0, Landroid/service/notification/NotificationListenerService$RankingMap;->mRanks:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -299,7 +274,6 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 920
     .local v0, "rank":Ljava/lang/Integer;
     if-eqz v0, :cond_1
 
@@ -310,7 +284,6 @@
     :goto_0
     return v1
 
-    .line 914
     .end local v0    # "rank":Ljava/lang/Integer;
     :catchall_0
     move-exception v1
@@ -319,7 +292,6 @@
 
     throw v1
 
-    .line 920
     .restart local v0    # "rank":Ljava/lang/Integer;
     :cond_1
     const/4 v1, -0x1
@@ -332,16 +304,13 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 942
     monitor-enter p0
 
-    .line 943
     :try_start_0
     iget-object v1, p0, Landroid/service/notification/NotificationListenerService$RankingMap;->mVisibilityOverrides:Landroid/util/ArrayMap;
 
     if-nez v1, :cond_0
 
-    .line 944
     invoke-direct {p0}, Landroid/service/notification/NotificationListenerService$RankingMap;->buildVisibilityOverridesLocked()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -349,7 +318,6 @@
     :cond_0
     monitor-exit p0
 
-    .line 947
     iget-object v1, p0, Landroid/service/notification/NotificationListenerService$RankingMap;->mVisibilityOverrides:Landroid/util/ArrayMap;
 
     invoke-virtual {v1, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -358,16 +326,13 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 948
     .local v0, "overide":Ljava/lang/Integer;
     if-nez v0, :cond_1
 
-    .line 949
     const/16 v1, -0x3e8
 
     return v1
 
-    .line 942
     .end local v0    # "overide":Ljava/lang/Integer;
     :catchall_0
     move-exception v1
@@ -376,7 +341,6 @@
 
     throw v1
 
-    .line 951
     .restart local v0    # "overide":Ljava/lang/Integer;
     :cond_1
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -393,27 +357,22 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 924
     iget-object v3, p0, Landroid/service/notification/NotificationListenerService$RankingMap;->mRankingUpdate:Landroid/service/notification/NotificationRankingUpdate;
 
     invoke-virtual {v3}, Landroid/service/notification/NotificationRankingUpdate;->getFirstAmbientIndex()I
 
     move-result v0
 
-    .line 925
     .local v0, "firstAmbientIndex":I
     if-gez v0, :cond_0
 
-    .line 926
     return v2
 
-    .line 928
     :cond_0
     invoke-direct {p0, p1}, Landroid/service/notification/NotificationListenerService$RankingMap;->getRank(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 929
     .local v1, "rank":I
     if-ltz v1, :cond_1
 
@@ -430,16 +389,13 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 933
     monitor-enter p0
 
-    .line 934
     :try_start_0
     iget-object v0, p0, Landroid/service/notification/NotificationListenerService$RankingMap;->mIntercepted:Landroid/util/ArraySet;
 
     if-nez v0, :cond_0
 
-    .line 935
     invoke-direct {p0}, Landroid/service/notification/NotificationListenerService$RankingMap;->buildInterceptedSetLocked()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -447,7 +403,6 @@
     :cond_0
     monitor-exit p0
 
-    .line 938
     iget-object v0, p0, Landroid/service/notification/NotificationListenerService$RankingMap;->mIntercepted:Landroid/util/ArraySet;
 
     invoke-virtual {v0, p1}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
@@ -456,7 +411,6 @@
 
     return v0
 
-    .line 933
     :catchall_0
     move-exception v0
 
@@ -471,7 +425,6 @@
     .locals 1
 
     .prologue
-    .line 984
     const/4 v0, 0x0
 
     return v0
@@ -481,7 +434,6 @@
     .locals 1
 
     .prologue
-    .line 896
     iget-object v0, p0, Landroid/service/notification/NotificationListenerService$RankingMap;->mRankingUpdate:Landroid/service/notification/NotificationRankingUpdate;
 
     invoke-virtual {v0}, Landroid/service/notification/NotificationRankingUpdate;->getOrderedKeys()[Ljava/lang/String;
@@ -501,12 +453,10 @@
 
     const/4 v6, 0x0
 
-    .line 907
     invoke-direct {p0, p1}, Landroid/service/notification/NotificationListenerService$RankingMap;->getRank(Ljava/lang/String;)I
 
     move-result v2
 
-    .line 908
     .local v2, "rank":I
     invoke-direct {p0, p1}, Landroid/service/notification/NotificationListenerService$RankingMap;->isAmbient(Ljava/lang/String;)Z
 
@@ -520,7 +470,6 @@
 
     move v4, v6
 
-    .line 909
     :goto_0
     invoke-direct {p0, p1}, Landroid/service/notification/NotificationListenerService$RankingMap;->getVisibilityOverride(Ljava/lang/String;)I
 
@@ -530,10 +479,8 @@
 
     move-object v1, p1
 
-    .line 908
     invoke-static/range {v0 .. v5}, Landroid/service/notification/NotificationListenerService$Ranking;->-wrap0(Landroid/service/notification/NotificationListenerService$Ranking;Ljava/lang/String;IZZI)V
 
-    .line 910
     if-ltz v2, :cond_1
 
     :goto_1
@@ -542,13 +489,11 @@
     :cond_0
     move v4, v7
 
-    .line 908
     goto :goto_0
 
     :cond_1
     move v7, v6
 
-    .line 910
     goto :goto_1
 .end method
 
@@ -558,11 +503,9 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 989
     iget-object v0, p0, Landroid/service/notification/NotificationListenerService$RankingMap;->mRankingUpdate:Landroid/service/notification/NotificationRankingUpdate;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 988
     return-void
 .end method

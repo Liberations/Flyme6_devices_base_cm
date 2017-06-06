@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Landroid/net/DhcpStateMachine;
 
     .prologue
-    .line 183
     iput-object p1, p0, Landroid/net/DhcpStateMachine$DefaultState;->this$0:Landroid/net/DhcpStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -38,7 +37,6 @@
     .locals 2
 
     .prologue
-    .line 186
     iget-object v0, p0, Landroid/net/DhcpStateMachine$DefaultState;->this$0:Landroid/net/DhcpStateMachine;
 
     invoke-static {v0}, Landroid/net/DhcpStateMachine;->-get2(Landroid/net/DhcpStateMachine;)Landroid/content/Context;
@@ -53,7 +51,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 185
     return-void
 .end method
 
@@ -62,19 +59,17 @@
     .param p1, "message"    # Landroid/os/Message;
 
     .prologue
-    .line 191
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 197
-    const-string/jumbo v0, "DhcpStateMachine"
+    const-string v0, "DhcpStateMachine"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Error! unhandled message  "
+    const-string v2, "Error! unhandled message  "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -90,21 +85,19 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 200
     :goto_0
     const/4 v0, 0x1
 
     return v0
 
-    .line 193
     :pswitch_0
-    const-string/jumbo v0, "DhcpStateMachine"
+    const-string v0, "DhcpStateMachine"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Error! Failed to handle a DHCP renewal on "
+    const-string v2, "Error! Failed to handle a DHCP renewal on "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -126,7 +119,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 194
     iget-object v0, p0, Landroid/net/DhcpStateMachine$DefaultState;->this$0:Landroid/net/DhcpStateMachine;
 
     invoke-static {v0}, Landroid/net/DhcpStateMachine;->-get4(Landroid/net/DhcpStateMachine;)Landroid/os/PowerManager$WakeLock;
@@ -137,7 +129,6 @@
 
     goto :goto_0
 
-    .line 191
     nop
 
     :pswitch_data_0

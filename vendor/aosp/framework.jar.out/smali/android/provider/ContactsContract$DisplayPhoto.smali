@@ -29,10 +29,9 @@
     .locals 2
 
     .prologue
-    .line 8506
     sget-object v0, Landroid/provider/ContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
-    const-string/jumbo v1, "display_photo"
+    const-string v1, "display_photo"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -40,19 +39,16 @@
 
     sput-object v0, Landroid/provider/ContactsContract$DisplayPhoto;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 8514
     sget-object v0, Landroid/provider/ContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
-    const-string/jumbo v1, "photo_dimensions"
+    const-string v1, "photo_dimensions"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 8513
     sput-object v0, Landroid/provider/ContactsContract$DisplayPhoto;->CONTENT_MAX_DIMENSIONS_URI:Landroid/net/Uri;
 
-    .line 8496
     return-void
 .end method
 
@@ -60,7 +56,6 @@
     .locals 0
 
     .prologue
-    .line 8500
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

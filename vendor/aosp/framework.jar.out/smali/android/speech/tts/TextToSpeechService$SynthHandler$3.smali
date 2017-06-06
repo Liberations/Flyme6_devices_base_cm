@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Landroid/speech/tts/TextToSpeechService$SynthHandler;
 
     .prologue
-    .line 634
     iput-object p1, p0, Landroid/speech/tts/TextToSpeechService$SynthHandler$3;->this$1:Landroid/speech/tts/TextToSpeechService$SynthHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,13 +40,11 @@
     .locals 2
 
     .prologue
-    .line 637
     iget-object v0, p0, Landroid/speech/tts/TextToSpeechService$SynthHandler$3;->this$1:Landroid/speech/tts/TextToSpeechService$SynthHandler;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Landroid/speech/tts/TextToSpeechService$SynthHandler;->-wrap2(Landroid/speech/tts/TextToSpeechService$SynthHandler;Ljava/lang/Object;)V
 
-    .line 636
     return-void
 .end method

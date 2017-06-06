@@ -74,7 +74,6 @@
     .locals 0
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -87,28 +86,23 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 331
     new-instance v3, Landroid/content/Intent;
 
-    const-string/jumbo v4, "android.speech.action.WEB_SEARCH"
+    const-string v4, "android.speech.action.WEB_SEARCH"
 
     invoke-direct {v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 332
     .local v3, "voiceSearchIntent":Landroid/content/Intent;
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v4
 
-    .line 333
     const/16 v5, 0x80
 
-    .line 332
     invoke-virtual {v4, v3, v5}, Landroid/content/pm/PackageManager;->resolveActivity(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;
 
     move-result-object v2
 
-    .line 334
     .local v2, "ri":Landroid/content/pm/ResolveInfo;
     if-eqz v2, :cond_0
 
@@ -126,32 +120,28 @@
 
     if-eqz v4, :cond_0
 
-    .line 336
     iget-object v4, v2, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v4, v4, Landroid/content/pm/ActivityInfo;->metaData:Landroid/os/Bundle;
 
-    const-string/jumbo v5, "android.speech.DETAILS"
+    const-string v5, "android.speech.DETAILS"
 
     invoke-virtual {v4, v5}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 337
     .local v0, "className":Ljava/lang/String;
     if-nez v0, :cond_2
 
     return-object v6
 
-    .line 339
     :cond_2
     new-instance v1, Landroid/content/Intent;
 
-    const-string/jumbo v4, "android.speech.action.GET_LANGUAGE_DETAILS"
+    const-string v4, "android.speech.action.GET_LANGUAGE_DETAILS"
 
     invoke-direct {v1, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 340
     .local v1, "detailsIntent":Landroid/content/Intent;
     new-instance v4, Landroid/content/ComponentName;
 
@@ -163,6 +153,5 @@
 
     invoke-virtual {v1, v4}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 341
     return-object v1
 .end method

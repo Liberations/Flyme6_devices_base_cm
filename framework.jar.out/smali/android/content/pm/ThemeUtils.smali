@@ -40,7 +40,6 @@
 
     const/4 v2, 0x0
 
-    .line 30
     const-class v0, Landroid/content/pm/ThemeUtils;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -49,49 +48,38 @@
 
     sput-object v0, Landroid/content/pm/ThemeUtils;->TAG:Ljava/lang/String;
 
-    .line 52
     new-array v0, v5, [Ljava/lang/String;
 
-    .line 53
-    const-string/jumbo v1, "org.adw.launcher.THEMES"
+    const-string v1, "org.adw.launcher.THEMES"
 
     aput-object v1, v0, v2
 
-    .line 54
-    const-string/jumbo v1, "com.gau.go.launcherex.theme"
+    const-string v1, "com.gau.go.launcherex.theme"
 
     aput-object v1, v0, v3
 
-    .line 55
-    const-string/jumbo v1, "com.novalauncher.THEME"
+    const-string v1, "com.novalauncher.THEME"
 
     aput-object v1, v0, v4
 
-    .line 52
     sput-object v0, Landroid/content/pm/ThemeUtils;->sSupportedActions:[Ljava/lang/String;
 
-    .line 59
     new-array v0, v5, [Ljava/lang/String;
 
-    .line 60
-    const-string/jumbo v1, "com.fede.launcher.THEME_ICONPACK"
+    const-string v1, "com.fede.launcher.THEME_ICONPACK"
 
     aput-object v1, v0, v2
 
-    .line 61
-    const-string/jumbo v1, "com.anddoes.launcher.THEME"
+    const-string v1, "com.anddoes.launcher.THEME"
 
     aput-object v1, v0, v3
 
-    .line 62
-    const-string/jumbo v1, "com.teslacoilsw.launcher.THEME"
+    const-string v1, "com.teslacoilsw.launcher.THEME"
 
     aput-object v1, v0, v4
 
-    .line 59
     sput-object v0, Landroid/content/pm/ThemeUtils;->sSupportedCategories:[Ljava/lang/String;
 
-    .line 29
     return-void
 .end method
 
@@ -99,7 +87,6 @@
     .locals 0
 
     .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -110,7 +97,6 @@
     .param p0, "themePackageName"    # Ljava/lang/String;
 
     .prologue
-    .line 111
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -121,9 +107,8 @@
 
     return-object v0
 
-    .line 113
     :cond_0
-    const-string/jumbo v0, "common"
+    const-string v0, "common"
 
     return-object v0
 .end method
@@ -133,7 +118,6 @@
     .param p0, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 95
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -146,7 +130,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "/resources.apk"
+    const-string v1, "/resources.apk"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -164,7 +148,6 @@
     .param p0, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 91
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -183,7 +166,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "icons"
+    const-string v1, "icons"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -202,7 +185,6 @@
     .param p1, "overlayPkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 99
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -221,7 +203,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "idmap"
+    const-string v1, "idmap"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -239,26 +221,21 @@
     .param p0, "targetPkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 103
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 104
     .local v0, "sb":Ljava/lang/StringBuilder;
-    const-string/jumbo v1, "assets/overlays/"
+    const-string v1, "assets/overlays/"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 105
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 106
     const/16 v1, 0x2f
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 107
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -271,12 +248,11 @@
     .param p0, "themePkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 72
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "/data/resource-cache/"
+    const-string v1, "/data/resource-cache/"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -299,7 +275,6 @@
     .param p1, "jarFile"    # Ljava/util/jar/StrictJarFile;
 
     .prologue
-    .line 134
     iget-object v4, p0, Landroid/content/pm/PackageParser$Package;->manifestDigest:Landroid/content/pm/ManifestDigest;
 
     if-eqz v4, :cond_2
@@ -310,35 +285,29 @@
 
     move-result v2
 
-    .line 135
     .local v2, "hash":I
     :goto_0
-    const-string/jumbo v4, "META-INF/MANIFEST.MF"
+    const-string v4, "META-INF/MANIFEST.MF"
 
     invoke-virtual {p1, v4}, Ljava/util/jar/StrictJarFile;->findEntry(Ljava/lang/String;)Ljava/util/zip/ZipEntry;
 
     move-result-object v3
 
-    .line 136
     .local v3, "je":Ljava/util/zip/ZipEntry;
     if-eqz v3, :cond_1
 
-    .line 140
     :try_start_0
     invoke-virtual {p1, v3}, Ljava/util/jar/StrictJarFile;->getInputStream(Ljava/util/zip/ZipEntry;)Ljava/io/InputStream;
 
     move-result-object v4
 
-    .line 139
     invoke-static {v4}, Landroid/content/pm/ManifestDigest;->fromInputStream(Ljava/io/InputStream;)Landroid/content/pm/ManifestDigest;
 
     move-result-object v0
 
-    .line 141
     .local v0, "digest":Landroid/content/pm/ManifestDigest;
     if-eqz v0, :cond_0
 
-    .line 142
     invoke-virtual {v0}, Landroid/content/pm/ManifestDigest;->hashCode()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -347,12 +316,10 @@
 
     add-int/2addr v2, v4
 
-    .line 145
     :cond_0
     :try_start_1
     invoke-virtual {p1}, Ljava/util/jar/StrictJarFile;->close()V
 
-    .line 151
     .end local v0    # "digest":Landroid/content/pm/ManifestDigest;
     :cond_1
     :goto_1
@@ -360,10 +327,8 @@
 
     add-int/lit8 v2, v4, 0x3
 
-    .line 152
     return v2
 
-    .line 134
     .end local v2    # "hash":I
     .end local v3    # "je":Ljava/util/zip/ZipEntry;
     :cond_2
@@ -372,21 +337,17 @@
     .restart local v2    # "hash":I
     goto :goto_0
 
-    .line 144
     .restart local v3    # "je":Ljava/util/zip/ZipEntry;
     :catchall_0
     move-exception v4
 
-    .line 145
     invoke-virtual {p1}, Ljava/util/jar/StrictJarFile;->close()V
 
-    .line 144
     throw v4
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 147
     :catch_0
     move-exception v1
 
@@ -400,7 +361,6 @@
     .param p1, "themePkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 82
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -435,8 +395,7 @@
     .param p0, "component"    # Ljava/lang/String;
 
     .prologue
-    .line 123
-    const-string/jumbo v0, "default"
+    const-string v0, "default"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -444,24 +403,20 @@
 
     if-nez v0, :cond_0
 
-    .line 124
-    const-string/jumbo v0, "com.android.systemui"
+    const-string v0, "com.android.systemui"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    .line 123
     if-nez v0, :cond_0
 
-    .line 125
-    const-string/jumbo v0, "com.android.systemui.navbar"
+    const-string v0, "com.android.systemui.navbar"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    .line 123
     if-eqz v0, :cond_1
 
     :cond_0

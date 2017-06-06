@@ -56,10 +56,9 @@
 
     const/4 v3, 0x0
 
-    .line 379
     new-instance v0, Lcom/android/internal/telephony/Connection$PostDialState;
 
-    const-string/jumbo v1, "NOT_STARTED"
+    const-string v1, "NOT_STARTED"
 
     invoke-direct {v0, v1, v3}, Lcom/android/internal/telephony/Connection$PostDialState;-><init>(Ljava/lang/String;I)V
 
@@ -67,63 +66,56 @@
 
     new-instance v0, Lcom/android/internal/telephony/Connection$PostDialState;
 
-    const-string/jumbo v1, "STARTED"
+    const-string v1, "STARTED"
 
     invoke-direct {v0, v1, v4}, Lcom/android/internal/telephony/Connection$PostDialState;-><init>(Ljava/lang/String;I)V
 
-    .line 382
     sput-object v0, Lcom/android/internal/telephony/Connection$PostDialState;->STARTED:Lcom/android/internal/telephony/Connection$PostDialState;
 
     new-instance v0, Lcom/android/internal/telephony/Connection$PostDialState;
 
-    const-string/jumbo v1, "WAIT"
+    const-string v1, "WAIT"
 
     invoke-direct {v0, v1, v5}, Lcom/android/internal/telephony/Connection$PostDialState;-><init>(Ljava/lang/String;I)V
 
-    .line 383
     sput-object v0, Lcom/android/internal/telephony/Connection$PostDialState;->WAIT:Lcom/android/internal/telephony/Connection$PostDialState;
 
     new-instance v0, Lcom/android/internal/telephony/Connection$PostDialState;
 
-    const-string/jumbo v1, "WILD"
+    const-string v1, "WILD"
 
     invoke-direct {v0, v1, v6}, Lcom/android/internal/telephony/Connection$PostDialState;-><init>(Ljava/lang/String;I)V
 
-    .line 385
     sput-object v0, Lcom/android/internal/telephony/Connection$PostDialState;->WILD:Lcom/android/internal/telephony/Connection$PostDialState;
 
     new-instance v0, Lcom/android/internal/telephony/Connection$PostDialState;
 
-    const-string/jumbo v1, "COMPLETE"
+    const-string v1, "COMPLETE"
 
     invoke-direct {v0, v1, v7}, Lcom/android/internal/telephony/Connection$PostDialState;-><init>(Ljava/lang/String;I)V
 
-    .line 387
     sput-object v0, Lcom/android/internal/telephony/Connection$PostDialState;->COMPLETE:Lcom/android/internal/telephony/Connection$PostDialState;
 
     new-instance v0, Lcom/android/internal/telephony/Connection$PostDialState;
 
-    const-string/jumbo v1, "CANCELLED"
+    const-string v1, "CANCELLED"
 
     const/4 v2, 0x5
 
     invoke-direct {v0, v1, v2}, Lcom/android/internal/telephony/Connection$PostDialState;-><init>(Ljava/lang/String;I)V
 
-    .line 388
     sput-object v0, Lcom/android/internal/telephony/Connection$PostDialState;->CANCELLED:Lcom/android/internal/telephony/Connection$PostDialState;
 
     new-instance v0, Lcom/android/internal/telephony/Connection$PostDialState;
 
-    const-string/jumbo v1, "PAUSE"
+    const-string v1, "PAUSE"
 
     const/4 v2, 0x6
 
     invoke-direct {v0, v1, v2}, Lcom/android/internal/telephony/Connection$PostDialState;-><init>(Ljava/lang/String;I)V
 
-    .line 390
     sput-object v0, Lcom/android/internal/telephony/Connection$PostDialState;->PAUSE:Lcom/android/internal/telephony/Connection$PostDialState;
 
-    .line 378
     const/4 v0, 0x7
 
     new-array v0, v0, [Lcom/android/internal/telephony/Connection$PostDialState;
@@ -169,7 +161,6 @@
     .locals 0
 
     .prologue
-    .line 378
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -180,7 +171,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 378
     const-class v0, Lcom/android/internal/telephony/Connection$PostDialState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -196,7 +186,6 @@
     .locals 1
 
     .prologue
-    .line 378
     sget-object v0, Lcom/android/internal/telephony/Connection$PostDialState;->$VALUES:[Lcom/android/internal/telephony/Connection$PostDialState;
 
     return-object v0

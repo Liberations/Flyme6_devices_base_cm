@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 621
     invoke-direct {p0}, Landroid/support/v4/view/ViewPropertyAnimatorCompat$KitKatViewPropertyAnimatorCompatImpl;-><init>()V
 
     return-void
@@ -34,10 +33,8 @@
     .param p3, "value"    # F
 
     .prologue
-    .line 624
     invoke-static {p2, p3}, Landroid/support/v4/view/ViewPropertyAnimatorCompatLollipop;->translationZ(Landroid/view/View;F)V
 
-    .line 623
     return-void
 .end method
 
@@ -48,10 +45,8 @@
     .param p3, "value"    # F
 
     .prologue
-    .line 629
     invoke-static {p2, p3}, Landroid/support/v4/view/ViewPropertyAnimatorCompatLollipop;->translationZBy(Landroid/view/View;F)V
 
-    .line 628
     return-void
 .end method
 
@@ -62,10 +57,8 @@
     .param p3, "value"    # F
 
     .prologue
-    .line 634
     invoke-static {p2, p3}, Landroid/support/v4/view/ViewPropertyAnimatorCompatLollipop;->z(Landroid/view/View;F)V
 
-    .line 633
     return-void
 .end method
 
@@ -76,9 +69,7 @@
     .param p3, "value"    # F
 
     .prologue
-    .line 639
     invoke-static {p2, p3}, Landroid/support/v4/view/ViewPropertyAnimatorCompatLollipop;->zBy(Landroid/view/View;F)V
 
-    .line 638
     return-void
 .end method

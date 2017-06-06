@@ -33,19 +33,14 @@
     .param p6, "utteranceId"    # Ljava/lang/String;
 
     .prologue
-    .line 880
     iput-object p1, p0, Landroid/speech/tts/TextToSpeechService$SpeechItemV1;->this$0:Landroid/speech/tts/TextToSpeechService;
 
-    .line 882
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/speech/tts/TextToSpeechService$UtteranceSpeechItem;-><init>(Landroid/speech/tts/TextToSpeechService;Ljava/lang/Object;II)V
 
-    .line 883
     iput-object p5, p0, Landroid/speech/tts/TextToSpeechService$SpeechItemV1;->mParams:Landroid/os/Bundle;
 
-    .line 884
     iput-object p6, p0, Landroid/speech/tts/TextToSpeechService$SpeechItemV1;->mUtteranceId:Ljava/lang/String;
 
-    .line 881
     return-void
 .end method
 
@@ -55,7 +50,6 @@
     .locals 2
 
     .prologue
-    .line 905
     iget-object v0, p0, Landroid/speech/tts/TextToSpeechService$SpeechItemV1;->mParams:Landroid/os/Bundle;
 
     const/4 v1, 0x1
@@ -71,10 +65,9 @@
     .locals 3
 
     .prologue
-    .line 896
     iget-object v0, p0, Landroid/speech/tts/TextToSpeechService$SpeechItemV1;->mParams:Landroid/os/Bundle;
 
-    const-string/jumbo v1, "pitch"
+    const-string v1, "pitch"
 
     const/16 v2, 0x64
 
@@ -89,10 +82,9 @@
     .locals 3
 
     .prologue
-    .line 892
     iget-object v0, p0, Landroid/speech/tts/TextToSpeechService$SpeechItemV1;->mParams:Landroid/os/Bundle;
 
-    const-string/jumbo v1, "rate"
+    const-string v1, "rate"
 
     iget-object v2, p0, Landroid/speech/tts/TextToSpeechService$SpeechItemV1;->this$0:Landroid/speech/tts/TextToSpeechService;
 
@@ -111,7 +103,6 @@
     .locals 1
 
     .prologue
-    .line 901
     iget-object v0, p0, Landroid/speech/tts/TextToSpeechService$SpeechItemV1;->mUtteranceId:Ljava/lang/String;
 
     return-object v0
@@ -121,10 +112,9 @@
     .locals 3
 
     .prologue
-    .line 888
     iget-object v0, p0, Landroid/speech/tts/TextToSpeechService$SpeechItemV1;->mParams:Landroid/os/Bundle;
 
-    const-string/jumbo v1, "language"
+    const-string v1, "language"
 
     const/4 v2, 0x0
 

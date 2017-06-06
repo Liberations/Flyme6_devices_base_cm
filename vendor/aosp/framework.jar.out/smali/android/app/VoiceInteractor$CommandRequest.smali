@@ -27,16 +27,12 @@
     .param p2, "args"    # Landroid/os/Bundle;
 
     .prologue
-    .line 735
     invoke-direct {p0}, Landroid/app/VoiceInteractor$Request;-><init>()V
 
-    .line 736
     iput-object p1, p0, Landroid/app/VoiceInteractor$CommandRequest;->mCommand:Ljava/lang/String;
 
-    .line 737
     iput-object p2, p0, Landroid/app/VoiceInteractor$CommandRequest;->mArgs:Landroid/os/Bundle;
 
-    .line 735
     return-void
 .end method
 
@@ -50,13 +46,11 @@
     .param p4, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 749
     invoke-super {p0, p1, p2, p3, p4}, Landroid/app/VoiceInteractor$Request;->dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 750
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string/jumbo v0, "mCommand="
+    const-string v0, "mCommand="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -64,15 +58,13 @@
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 751
     iget-object v0, p0, Landroid/app/VoiceInteractor$CommandRequest;->mArgs:Landroid/os/Bundle;
 
     if-eqz v0, :cond_0
 
-    .line 752
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    const-string/jumbo v0, "mArgs="
+    const-string v0, "mArgs="
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -80,7 +72,6 @@
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 748
     :cond_0
     return-void
 .end method
@@ -89,8 +80,7 @@
     .locals 1
 
     .prologue
-    .line 757
-    const-string/jumbo v0, "Command"
+    const-string v0, "Command"
 
     return-object v0
 .end method
@@ -101,7 +91,6 @@
     .param p2, "result"    # Landroid/os/Bundle;
 
     .prologue
-    .line 745
     return-void
 .end method
 
@@ -117,7 +106,6 @@
     .end annotation
 
     .prologue
-    .line 762
     iget-object v0, p0, Landroid/app/VoiceInteractor$CommandRequest;->mCommand:Ljava/lang/String;
 
     iget-object v1, p0, Landroid/app/VoiceInteractor$CommandRequest;->mArgs:Landroid/os/Bundle;

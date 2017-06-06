@@ -53,7 +53,6 @@
     .param p7, "val$layoutResultCallback"    # Landroid/print/PrintDocumentAdapter$LayoutResultCallback;
 
     .prologue
-    .line 345
     iput-object p1, p0, Landroid/support/v4/print/PrintHelperKitkat$2$1;->this$1:Landroid/support/v4/print/PrintHelperKitkat$2;
 
     iput-object p2, p0, Landroid/support/v4/print/PrintHelperKitkat$2$1;->val$cancellationSignal:Landroid/os/CancellationSignal;
@@ -80,7 +79,6 @@
     .param p1, "uris"    # [Landroid/net/Uri;
 
     .prologue
-    .line 363
     :try_start_0
     iget-object v1, p0, Landroid/support/v4/print/PrintHelperKitkat$2$1;->this$1:Landroid/support/v4/print/PrintHelperKitkat$2;
 
@@ -98,11 +96,9 @@
 
     return-object v1
 
-    .line 364
     :catch_0
     move-exception v0
 
-    .line 367
     .local v0, "e":Ljava/io/FileNotFoundException;
     const/4 v1, 0x0
 
@@ -114,7 +110,6 @@
     .param p1, "uris"    # [Ljava/lang/Object;
 
     .prologue
-    .line 361
     check-cast p1, [Landroid/net/Uri;
 
     .end local p1    # "uris":[Ljava/lang/Object;
@@ -130,19 +125,16 @@
     .param p1, "result"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 392
     iget-object v0, p0, Landroid/support/v4/print/PrintHelperKitkat$2$1;->val$layoutResultCallback:Landroid/print/PrintDocumentAdapter$LayoutResultCallback;
 
     invoke-virtual {v0}, Landroid/print/PrintDocumentAdapter$LayoutResultCallback;->onLayoutCancelled()V
 
-    .line 393
     iget-object v0, p0, Landroid/support/v4/print/PrintHelperKitkat$2$1;->this$1:Landroid/support/v4/print/PrintHelperKitkat$2;
 
     const/4 v1, 0x0
 
     iput-object v1, v0, Landroid/support/v4/print/PrintHelperKitkat$2;->mLoadBitmap:Landroid/os/AsyncTask;
 
-    .line 390
     return-void
 .end method
 
@@ -151,7 +143,6 @@
     .param p1, "result"    # Ljava/lang/Object;
 
     .prologue
-    .line 390
     check-cast p1, Landroid/graphics/Bitmap;
 
     .end local p1    # "result":Ljava/lang/Object;
@@ -169,18 +160,14 @@
 
     const/4 v4, 0x0
 
-    .line 372
     invoke-super {p0, p1}, Landroid/os/AsyncTask;->onPostExecute(Ljava/lang/Object;)V
 
-    .line 373
     iget-object v2, p0, Landroid/support/v4/print/PrintHelperKitkat$2$1;->this$1:Landroid/support/v4/print/PrintHelperKitkat$2;
 
     iput-object p1, v2, Landroid/support/v4/print/PrintHelperKitkat$2;->mBitmap:Landroid/graphics/Bitmap;
 
-    .line 374
     if-eqz p1, :cond_1
 
-    .line 375
     new-instance v2, Landroid/print/PrintDocumentInfo$Builder;
 
     iget-object v3, p0, Landroid/support/v4/print/PrintHelperKitkat$2$1;->val$jobName:Ljava/lang/String;
@@ -199,7 +186,6 @@
 
     move-result-object v1
 
-    .line 379
     .local v1, "info":Landroid/print/PrintDocumentInfo;
     iget-object v2, p0, Landroid/support/v4/print/PrintHelperKitkat$2$1;->val$newPrintAttributes:Landroid/print/PrintAttributes;
 
@@ -213,14 +199,12 @@
 
     const/4 v0, 0x0
 
-    .line 381
     .local v0, "changed":Z
     :goto_0
     iget-object v2, p0, Landroid/support/v4/print/PrintHelperKitkat$2$1;->val$layoutResultCallback:Landroid/print/PrintDocumentAdapter$LayoutResultCallback;
 
     invoke-virtual {v2, v1, v0}, Landroid/print/PrintDocumentAdapter$LayoutResultCallback;->onLayoutFinished(Landroid/print/PrintDocumentInfo;Z)V
 
-    .line 386
     .end local v0    # "changed":Z
     .end local v1    # "info":Landroid/print/PrintDocumentInfo;
     :goto_1
@@ -228,10 +212,8 @@
 
     iput-object v4, v2, Landroid/support/v4/print/PrintHelperKitkat$2;->mLoadBitmap:Landroid/os/AsyncTask;
 
-    .line 371
     return-void
 
-    .line 379
     .restart local v1    # "info":Landroid/print/PrintDocumentInfo;
     :cond_0
     const/4 v0, 0x1
@@ -239,7 +221,6 @@
     .restart local v0    # "changed":Z
     goto :goto_0
 
-    .line 384
     .end local v0    # "changed":Z
     .end local v1    # "info":Landroid/print/PrintDocumentInfo;
     :cond_1
@@ -255,7 +236,6 @@
     .param p1, "bitmap"    # Ljava/lang/Object;
 
     .prologue
-    .line 371
     check-cast p1, Landroid/graphics/Bitmap;
 
     .end local p1    # "bitmap":Ljava/lang/Object;
@@ -268,17 +248,13 @@
     .locals 2
 
     .prologue
-    .line 350
     iget-object v0, p0, Landroid/support/v4/print/PrintHelperKitkat$2$1;->val$cancellationSignal:Landroid/os/CancellationSignal;
 
-    .line 351
     new-instance v1, Landroid/support/v4/print/PrintHelperKitkat$2$1$1;
 
     invoke-direct {v1, p0}, Landroid/support/v4/print/PrintHelperKitkat$2$1$1;-><init>(Landroid/support/v4/print/PrintHelperKitkat$2$1;)V
 
-    .line 350
     invoke-virtual {v0, v1}, Landroid/os/CancellationSignal;->setOnCancelListener(Landroid/os/CancellationSignal$OnCancelListener;)V
 
-    .line 348
     return-void
 .end method

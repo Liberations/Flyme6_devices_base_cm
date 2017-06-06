@@ -30,7 +30,6 @@
     .param p2, "val$reason"    # I
 
     .prologue
-    .line 481
     iput-object p1, p0, Landroid/media/tv/TvInputService$Session$7;->this$1:Landroid/media/tv/TvInputService$Session;
 
     iput p2, p0, Landroid/media/tv/TvInputService$Session$7;->val$reason:I
@@ -46,7 +45,6 @@
     .locals 3
 
     .prologue
-    .line 486
     :try_start_0
     iget-object v1, p0, Landroid/media/tv/TvInputService$Session$7;->this$1:Landroid/media/tv/TvInputService$Session;
 
@@ -56,7 +54,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 487
     iget-object v1, p0, Landroid/media/tv/TvInputService$Session$7;->this$1:Landroid/media/tv/TvInputService$Session;
 
     invoke-static {v1}, Landroid/media/tv/TvInputService$Session;->-get3(Landroid/media/tv/TvInputService$Session;)Landroid/media/tv/ITvInputSessionCallback;
@@ -69,20 +66,17 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 483
     :cond_0
     :goto_0
     return-void
 
-    .line 489
     :catch_0
     move-exception v0
 
-    .line 490
     .local v0, "e":Landroid/os/RemoteException;
-    const-string/jumbo v1, "TvInputService"
+    const-string v1, "TvInputService"
 
-    const-string/jumbo v2, "error in notifyVideoUnavailable"
+    const-string v2, "error in notifyVideoUnavailable"
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 

@@ -37,13 +37,10 @@
     .param p2, "detailMessage"    # Ljava/lang/String;
 
     .prologue
-    .line 2037
     invoke-direct {p0, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    .line 2038
     iput p1, p0, Landroid/media/MediaCodec$CryptoException;->mErrorCode:I
 
-    .line 2036
     return-void
 .end method
 
@@ -53,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 2093
     iget v0, p0, Landroid/media/MediaCodec$CryptoException;->mErrorCode:I
 
     return v0

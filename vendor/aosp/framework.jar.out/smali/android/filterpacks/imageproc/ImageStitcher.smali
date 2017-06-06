@@ -47,15 +47,12 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 55
     invoke-direct {p0, p1}, Landroid/filterfw/core/Filter;-><init>(Ljava/lang/String;)V
 
-    .line 56
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mSliceIndex:I
 
-    .line 54
     return-void
 .end method
 
@@ -64,12 +61,10 @@
     .param p1, "format"    # Landroid/filterfw/core/FrameFormat;
 
     .prologue
-    .line 72
     invoke-virtual {p1}, Landroid/filterfw/core/FrameFormat;->mutableCopy()Landroid/filterfw/core/MutableFrameFormat;
 
     move-result-object v0
 
-    .line 74
     .local v0, "outputFormat":Landroid/filterfw/core/MutableFrameFormat;
     invoke-virtual {p1}, Landroid/filterfw/core/FrameFormat;->getWidth()I
 
@@ -77,14 +72,12 @@
 
     iput v1, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mInputWidth:I
 
-    .line 75
     invoke-virtual {p1}, Landroid/filterfw/core/FrameFormat;->getHeight()I
 
     move-result v1
 
     iput v1, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mInputHeight:I
 
-    .line 77
     iget v1, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mInputWidth:I
 
     iget v2, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mPadSize:I
@@ -95,7 +88,6 @@
 
     iput v1, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mSliceWidth:I
 
-    .line 78
     iget v1, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mInputHeight:I
 
     iget v2, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mPadSize:I
@@ -106,7 +98,6 @@
 
     iput v1, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mSliceHeight:I
 
-    .line 80
     iget v1, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mSliceWidth:I
 
     iget v2, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mXSlices:I
@@ -115,7 +106,6 @@
 
     iput v1, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mImageWidth:I
 
-    .line 81
     iget v1, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mSliceHeight:I
 
     iget v2, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mYSlices:I
@@ -124,14 +114,12 @@
 
     iput v1, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mImageHeight:I
 
-    .line 83
     iget v1, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mImageWidth:I
 
     iget v2, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mImageHeight:I
 
     invoke-virtual {v0, v1, v2}, Landroid/filterfw/core/MutableFrameFormat;->setDimensions(II)V
 
-    .line 84
     return-object v0
 .end method
 
@@ -143,7 +131,6 @@
     .param p2, "inputFormat"    # Landroid/filterfw/core/FrameFormat;
 
     .prologue
-    .line 68
     return-object p2
 .end method
 
@@ -154,26 +141,22 @@
     .prologue
     const/4 v13, 0x0
 
-    .line 90
-    const-string/jumbo v8, "image"
+    const-string v8, "image"
 
     invoke-virtual {p0, v8}, Landroid/filterpacks/imageproc/ImageStitcher;->pullInput(Ljava/lang/String;)Landroid/filterfw/core/Frame;
 
     move-result-object v1
 
-    .line 91
     .local v1, "input":Landroid/filterfw/core/Frame;
     invoke-virtual {v1}, Landroid/filterfw/core/Frame;->getFormat()Landroid/filterfw/core/FrameFormat;
 
     move-result-object v0
 
-    .line 94
     .local v0, "format":Landroid/filterfw/core/FrameFormat;
     iget v8, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mSliceIndex:I
 
     if-nez v8, :cond_3
 
-    .line 95
     invoke-virtual {p1}, Landroid/filterfw/core/FilterContext;->getFrameManager()Landroid/filterfw/core/FrameManager;
 
     move-result-object v8
@@ -188,20 +171,17 @@
 
     iput-object v8, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mOutputFrame:Landroid/filterfw/core/Frame;
 
-    .line 105
     :cond_0
     iget-object v8, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mProgram:Landroid/filterfw/core/Program;
 
     if-nez v8, :cond_1
 
-    .line 106
     invoke-static {p1}, Landroid/filterfw/core/ShaderProgram;->createIdentity(Landroid/filterfw/core/FilterContext;)Landroid/filterfw/core/ShaderProgram;
 
     move-result-object v8
 
     iput-object v8, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mProgram:Landroid/filterfw/core/Program;
 
-    .line 110
     :cond_1
     iget v8, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mPadSize:I
 
@@ -213,7 +193,6 @@
 
     div-float v6, v8, v9
 
-    .line 111
     .local v6, "x0":F
     iget v8, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mPadSize:I
 
@@ -225,7 +204,6 @@
 
     div-float v7, v8, v9
 
-    .line 113
     .local v7, "y0":F
     iget v8, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mSliceIndex:I
 
@@ -237,7 +215,6 @@
 
     mul-int v3, v8, v9
 
-    .line 114
     .local v3, "outputOffsetX":I
     iget v8, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mSliceIndex:I
 
@@ -249,7 +226,6 @@
 
     mul-int v4, v8, v9
 
-    .line 116
     .local v4, "outputOffsetY":I
     iget v8, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mSliceWidth:I
 
@@ -263,7 +239,6 @@
 
     int-to-float v5, v8
 
-    .line 117
     .local v5, "outputWidth":F
     iget v8, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mSliceHeight:I
 
@@ -277,30 +252,25 @@
 
     int-to-float v2, v8
 
-    .line 120
     .local v2, "outputHeight":F
     iget-object v8, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mProgram:Landroid/filterfw/core/Program;
 
     check-cast v8, Landroid/filterfw/core/ShaderProgram;
 
-    .line 121
     iget v9, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mInputWidth:I
 
     int-to-float v9, v9
 
     div-float v9, v5, v9
 
-    .line 122
     iget v10, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mInputHeight:I
 
     int-to-float v10, v10
 
     div-float v10, v2, v10
 
-    .line 120
     invoke-virtual {v8, v6, v7, v9, v10}, Landroid/filterfw/core/ShaderProgram;->setSourceRect(FFFF)V
 
-    .line 124
     iget-object v8, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mProgram:Landroid/filterfw/core/Program;
 
     check-cast v8, Landroid/filterfw/core/ShaderProgram;
@@ -313,7 +283,6 @@
 
     div-float/2addr v9, v10
 
-    .line 125
     int-to-float v10, v4
 
     iget v11, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mImageHeight:I
@@ -322,38 +291,32 @@
 
     div-float/2addr v10, v11
 
-    .line 126
     iget v11, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mImageWidth:I
 
     int-to-float v11, v11
 
     div-float v11, v5, v11
 
-    .line 127
     iget v12, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mImageHeight:I
 
     int-to-float v12, v12
 
     div-float v12, v2, v12
 
-    .line 124
     invoke-virtual {v8, v9, v10, v11, v12}, Landroid/filterfw/core/ShaderProgram;->setTargetRect(FFFF)V
 
-    .line 130
     iget-object v8, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mProgram:Landroid/filterfw/core/Program;
 
     iget-object v9, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mOutputFrame:Landroid/filterfw/core/Frame;
 
     invoke-virtual {v8, v1, v9}, Landroid/filterfw/core/Program;->process(Landroid/filterfw/core/Frame;Landroid/filterfw/core/Frame;)V
 
-    .line 131
     iget v8, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mSliceIndex:I
 
     add-int/lit8 v8, v8, 0x1
 
     iput v8, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mSliceIndex:I
 
-    .line 134
     iget v8, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mSliceIndex:I
 
     iget v9, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mXSlices:I
@@ -364,26 +327,21 @@
 
     if-ne v8, v9, :cond_2
 
-    .line 135
-    const-string/jumbo v8, "image"
+    const-string v8, "image"
 
     iget-object v9, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mOutputFrame:Landroid/filterfw/core/Frame;
 
     invoke-virtual {p0, v8, v9}, Landroid/filterpacks/imageproc/ImageStitcher;->pushOutput(Ljava/lang/String;Landroid/filterfw/core/Frame;)V
 
-    .line 136
     iget-object v8, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mOutputFrame:Landroid/filterfw/core/Frame;
 
     invoke-virtual {v8}, Landroid/filterfw/core/Frame;->release()Landroid/filterfw/core/Frame;
 
-    .line 137
     iput v13, p0, Landroid/filterpacks/imageproc/ImageStitcher;->mSliceIndex:I
 
-    .line 88
     :cond_2
     return-void
 
-    .line 97
     .end local v2    # "outputHeight":F
     .end local v3    # "outputOffsetX":I
     .end local v4    # "outputOffsetY":I
@@ -399,7 +357,6 @@
 
     if-ne v8, v9, :cond_4
 
-    .line 98
     invoke-virtual {v0}, Landroid/filterfw/core/FrameFormat;->getHeight()I
 
     move-result v8
@@ -408,11 +365,10 @@
 
     if-eq v8, v9, :cond_0
 
-    .line 100
     :cond_4
     new-instance v8, Ljava/lang/RuntimeException;
 
-    const-string/jumbo v9, "Image size should not change."
+    const-string v9, "Image size should not change."
 
     invoke-direct {v8, v9}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
@@ -425,8 +381,7 @@
     .prologue
     const/4 v1, 0x3
 
-    .line 61
-    const-string/jumbo v0, "image"
+    const-string v0, "image"
 
     invoke-static {v1, v1}, Landroid/filterfw/format/ImageFormat;->create(II)Landroid/filterfw/core/MutableFrameFormat;
 
@@ -434,13 +389,11 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/filterpacks/imageproc/ImageStitcher;->addMaskedInputPort(Ljava/lang/String;Landroid/filterfw/core/FrameFormat;)V
 
-    .line 63
-    const-string/jumbo v0, "image"
+    const-string v0, "image"
 
-    const-string/jumbo v1, "image"
+    const-string v1, "image"
 
     invoke-virtual {p0, v0, v1}, Landroid/filterpacks/imageproc/ImageStitcher;->addOutputBasedOnInput(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 60
     return-void
 .end method

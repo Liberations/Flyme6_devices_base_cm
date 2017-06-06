@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 470
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 472
     const/4 v6, 0x0
 
     invoke-virtual {p1, v6}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
@@ -54,17 +52,14 @@
 
     check-cast v1, Landroid/net/IpPrefix;
 
-    .line 474
     .local v1, "dest":Landroid/net/IpPrefix;
     const/4 v3, 0x0
 
-    .line 475
     .local v3, "gateway":Ljava/net/InetAddress;
     invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v0
 
-    .line 477
     .local v0, "addr":[B
     :try_start_0
     invoke-static {v0}, Ljava/net/InetAddress;->getByAddress([B)Ljava/net/InetAddress;
@@ -73,20 +68,17 @@
 
     move-result-object v3
 
-    .line 480
     .end local v3    # "gateway":Ljava/net/InetAddress;
     :goto_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 481
     .local v4, "iface":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 483
     .local v5, "type":I
     new-instance v6, Landroid/net/RouteInfo;
 
@@ -94,7 +86,6 @@
 
     return-object v6
 
-    .line 478
     .end local v4    # "iface":Ljava/lang/String;
     .end local v5    # "type":I
     .restart local v3    # "gateway":Ljava/net/InetAddress;
@@ -110,7 +101,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 471
     invoke-virtual {p0, p1}, Landroid/net/RouteInfo$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/RouteInfo;
 
     move-result-object v0
@@ -123,7 +113,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 487
     new-array v0, p1, [Landroid/net/RouteInfo;
 
     return-object v0
@@ -134,7 +123,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 486
     invoke-virtual {p0, p1}, Landroid/net/RouteInfo$1;->newArray(I)[Landroid/net/RouteInfo;
 
     move-result-object v0

@@ -14,10 +14,8 @@
     .param p3, "rs"    # Landroid/renderscript/RenderScript;
 
     .prologue
-    .line 28
     invoke-direct {p0, p1, p2, p3}, Landroid/renderscript/ScriptIntrinsic;-><init>(JLandroid/renderscript/RenderScript;)V
 
-    .line 27
     return-void
 .end method
 
@@ -27,7 +25,6 @@
     .param p1, "e"    # Landroid/renderscript/Element;
 
     .prologue
-    .line 45
     invoke-static {p0}, Landroid/renderscript/Element;->U8_4(Landroid/renderscript/RenderScript;)Landroid/renderscript/Element;
 
     move-result-object v3
@@ -38,7 +35,6 @@
 
     if-nez v3, :cond_0
 
-    .line 46
     invoke-static {p0}, Landroid/renderscript/Element;->U8_3(Landroid/renderscript/RenderScript;)Landroid/renderscript/Element;
 
     move-result-object v3
@@ -49,7 +45,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 51
     :cond_0
     invoke-virtual {p1, p0}, Landroid/renderscript/Element;->getID(Landroid/renderscript/RenderScript;)J
 
@@ -61,17 +56,14 @@
 
     move-result-wide v0
 
-    .line 52
     .local v0, "id":J
     new-instance v2, Landroid/renderscript/ScriptIntrinsicHistogram;
 
     invoke-direct {v2, v0, v1, p0}, Landroid/renderscript/ScriptIntrinsicHistogram;-><init>(JLandroid/renderscript/RenderScript;)V
 
-    .line 53
     .local v2, "sib":Landroid/renderscript/ScriptIntrinsicHistogram;
     return-object v2
 
-    .line 47
     .end local v0    # "id":J
     .end local v2    # "sib":Landroid/renderscript/ScriptIntrinsicHistogram;
     :cond_1
@@ -85,7 +77,6 @@
 
     if-nez v3, :cond_0
 
-    .line 48
     invoke-static {p0}, Landroid/renderscript/Element;->U8(Landroid/renderscript/RenderScript;)Landroid/renderscript/Element;
 
     move-result-object v3
@@ -96,10 +87,9 @@
 
     if-nez v3, :cond_0
 
-    .line 49
     new-instance v3, Landroid/renderscript/RSIllegalArgumentException;
 
-    const-string/jumbo v4, "Unsuported element type."
+    const-string v4, "Unsuported element type."
 
     invoke-direct {v3, v4}, Landroid/renderscript/RSIllegalArgumentException;-><init>(Ljava/lang/String;)V
 
@@ -113,12 +103,10 @@
     .param p1, "ain"    # Landroid/renderscript/Allocation;
 
     .prologue
-    .line 70
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Landroid/renderscript/ScriptIntrinsicHistogram;->forEach(Landroid/renderscript/Allocation;Landroid/renderscript/Script$LaunchOptions;)V
 
-    .line 69
     return-void
 .end method
 
@@ -130,7 +118,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 88
     invoke-virtual {p1}, Landroid/renderscript/Allocation;->getType()Landroid/renderscript/Type;
 
     move-result-object v0
@@ -143,7 +130,6 @@
 
     move-result v0
 
-    .line 89
     iget-object v1, p0, Landroid/renderscript/ScriptIntrinsicHistogram;->mOut:Landroid/renderscript/Allocation;
 
     invoke-virtual {v1}, Landroid/renderscript/Allocation;->getType()Landroid/renderscript/Type;
@@ -158,21 +144,16 @@
 
     move-result v1
 
-    .line 88
     if-ge v0, v1, :cond_0
 
-    .line 91
     new-instance v0, Landroid/renderscript/RSIllegalArgumentException;
 
-    .line 92
-    const-string/jumbo v1, "Input vector size must be >= output vector size."
+    const-string v1, "Input vector size must be >= output vector size."
 
-    .line 91
     invoke-direct {v0, v1}, Landroid/renderscript/RSIllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 94
     :cond_0
     invoke-virtual {p1}, Landroid/renderscript/Allocation;->getType()Landroid/renderscript/Type;
 
@@ -194,7 +175,6 @@
 
     if-nez v0, :cond_1
 
-    .line 95
     invoke-virtual {p1}, Landroid/renderscript/Allocation;->getType()Landroid/renderscript/Type;
 
     move-result-object v0
@@ -215,7 +195,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 101
     :cond_1
     const/4 v1, 0x0
 
@@ -229,10 +208,8 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/renderscript/ScriptIntrinsicHistogram;->forEach(ILandroid/renderscript/Allocation;Landroid/renderscript/Allocation;Landroid/renderscript/FieldPacker;Landroid/renderscript/Script$LaunchOptions;)V
 
-    .line 87
     return-void
 
-    .line 96
     :cond_2
     invoke-virtual {p1}, Landroid/renderscript/Allocation;->getType()Landroid/renderscript/Type;
 
@@ -254,7 +231,6 @@
 
     if-nez v0, :cond_1
 
-    .line 97
     invoke-virtual {p1}, Landroid/renderscript/Allocation;->getType()Landroid/renderscript/Type;
 
     move-result-object v0
@@ -275,10 +251,9 @@
 
     if-nez v0, :cond_1
 
-    .line 98
     new-instance v0, Landroid/renderscript/RSIllegalArgumentException;
 
-    const-string/jumbo v1, "Input type must be U8, U8_1, U8_2 or U8_4."
+    const-string v1, "Input type must be U8, U8_1, U8_2 or U8_4."
 
     invoke-direct {v0, v1}, Landroid/renderscript/RSIllegalArgumentException;-><init>(Ljava/lang/String;)V
 
@@ -290,12 +265,10 @@
     .param p1, "ain"    # Landroid/renderscript/Allocation;
 
     .prologue
-    .line 174
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Landroid/renderscript/ScriptIntrinsicHistogram;->forEach_Dot(Landroid/renderscript/Allocation;Landroid/renderscript/Script$LaunchOptions;)V
 
-    .line 173
     return-void
 .end method
 
@@ -309,7 +282,6 @@
 
     const/4 v1, 0x1
 
-    .line 189
     iget-object v0, p0, Landroid/renderscript/ScriptIntrinsicHistogram;->mOut:Landroid/renderscript/Allocation;
 
     invoke-virtual {v0}, Landroid/renderscript/Allocation;->getType()Landroid/renderscript/Type;
@@ -326,16 +298,14 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 190
     new-instance v0, Landroid/renderscript/RSIllegalArgumentException;
 
-    const-string/jumbo v1, "Output vector size must be one."
+    const-string v1, "Output vector size must be one."
 
     invoke-direct {v0, v1}, Landroid/renderscript/RSIllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 192
     :cond_0
     invoke-virtual {p1}, Landroid/renderscript/Allocation;->getType()Landroid/renderscript/Type;
 
@@ -357,7 +327,6 @@
 
     if-nez v0, :cond_1
 
-    .line 193
     invoke-virtual {p1}, Landroid/renderscript/Allocation;->getType()Landroid/renderscript/Type;
 
     move-result-object v0
@@ -387,13 +356,10 @@
 
     move-object v5, p2
 
-    .line 199
     invoke-virtual/range {v0 .. v5}, Landroid/renderscript/ScriptIntrinsicHistogram;->forEach(ILandroid/renderscript/Allocation;Landroid/renderscript/Allocation;Landroid/renderscript/FieldPacker;Landroid/renderscript/Script$LaunchOptions;)V
 
-    .line 188
     return-void
 
-    .line 194
     :cond_2
     invoke-virtual {p1}, Landroid/renderscript/Allocation;->getType()Landroid/renderscript/Type;
 
@@ -415,7 +381,6 @@
 
     if-nez v0, :cond_1
 
-    .line 195
     invoke-virtual {p1}, Landroid/renderscript/Allocation;->getType()Landroid/renderscript/Type;
 
     move-result-object v0
@@ -436,10 +401,9 @@
 
     if-nez v0, :cond_1
 
-    .line 196
     new-instance v0, Landroid/renderscript/RSIllegalArgumentException;
 
-    const-string/jumbo v1, "Input type must be U8, U8_1, U8_2 or U8_4."
+    const-string v1, "Input type must be U8, U8_1, U8_2 or U8_4."
 
     invoke-direct {v0, v1}, Landroid/renderscript/RSIllegalArgumentException;-><init>(Ljava/lang/String;)V
 
@@ -450,7 +414,6 @@
     .locals 2
 
     .prologue
-    .line 219
     const/4 v0, 0x1
 
     const/4 v1, 0x0
@@ -468,7 +431,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 210
     const/4 v0, 0x0
 
     const/4 v1, 0x3
@@ -490,7 +452,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 118
     cmpg-float v1, p1, v2
 
     if-ltz v1, :cond_0
@@ -499,17 +460,15 @@
 
     if-gez v1, :cond_1
 
-    .line 119
     :cond_0
     new-instance v1, Landroid/renderscript/RSIllegalArgumentException;
 
-    const-string/jumbo v2, "Coefficient may not be negative."
+    const-string v2, "Coefficient may not be negative."
 
     invoke-direct {v1, v2}, Landroid/renderscript/RSIllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 118
     :cond_1
     cmpg-float v1, p3, v2
 
@@ -519,7 +478,6 @@
 
     if-ltz v1, :cond_0
 
-    .line 121
     add-float v1, p1, p2
 
     add-float/2addr v1, p3
@@ -532,16 +490,14 @@
 
     if-lez v1, :cond_2
 
-    .line 122
     new-instance v1, Landroid/renderscript/RSIllegalArgumentException;
 
-    const-string/jumbo v2, "Sum of coefficients must be 1.0 or less."
+    const-string v2, "Sum of coefficients must be 1.0 or less."
 
     invoke-direct {v1, v2}, Landroid/renderscript/RSIllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 125
     :cond_2
     new-instance v0, Landroid/renderscript/FieldPacker;
 
@@ -549,25 +505,19 @@
 
     invoke-direct {v0, v1}, Landroid/renderscript/FieldPacker;-><init>(I)V
 
-    .line 126
     .local v0, "fp":Landroid/renderscript/FieldPacker;
     invoke-virtual {v0, p1}, Landroid/renderscript/FieldPacker;->addF32(F)V
 
-    .line 127
     invoke-virtual {v0, p2}, Landroid/renderscript/FieldPacker;->addF32(F)V
 
-    .line 128
     invoke-virtual {v0, p3}, Landroid/renderscript/FieldPacker;->addF32(F)V
 
-    .line 129
     invoke-virtual {v0, p4}, Landroid/renderscript/FieldPacker;->addF32(F)V
 
-    .line 130
     const/4 v1, 0x0
 
     invoke-virtual {p0, v1, v0}, Landroid/renderscript/ScriptIntrinsicHistogram;->setVar(ILandroid/renderscript/FieldPacker;)V
 
-    .line 117
     return-void
 .end method
 
@@ -576,10 +526,8 @@
     .param p1, "aout"    # Landroid/renderscript/Allocation;
 
     .prologue
-    .line 140
     iput-object p1, p0, Landroid/renderscript/ScriptIntrinsicHistogram;->mOut:Landroid/renderscript/Allocation;
 
-    .line 141
     iget-object v0, p0, Landroid/renderscript/ScriptIntrinsicHistogram;->mOut:Landroid/renderscript/Allocation;
 
     invoke-virtual {v0}, Landroid/renderscript/Allocation;->getType()Landroid/renderscript/Type;
@@ -598,7 +546,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 142
     iget-object v0, p0, Landroid/renderscript/ScriptIntrinsicHistogram;->mOut:Landroid/renderscript/Allocation;
 
     invoke-virtual {v0}, Landroid/renderscript/Allocation;->getType()Landroid/renderscript/Type;
@@ -617,7 +564,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 143
     iget-object v0, p0, Landroid/renderscript/ScriptIntrinsicHistogram;->mOut:Landroid/renderscript/Allocation;
 
     invoke-virtual {v0}, Landroid/renderscript/Allocation;->getType()Landroid/renderscript/Type;
@@ -636,7 +582,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 144
     iget-object v0, p0, Landroid/renderscript/ScriptIntrinsicHistogram;->mOut:Landroid/renderscript/Allocation;
 
     invoke-virtual {v0}, Landroid/renderscript/Allocation;->getType()Landroid/renderscript/Type;
@@ -655,7 +600,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 145
     iget-object v0, p0, Landroid/renderscript/ScriptIntrinsicHistogram;->mOut:Landroid/renderscript/Allocation;
 
     invoke-virtual {v0}, Landroid/renderscript/Allocation;->getType()Landroid/renderscript/Type;
@@ -674,7 +618,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 146
     iget-object v0, p0, Landroid/renderscript/ScriptIntrinsicHistogram;->mOut:Landroid/renderscript/Allocation;
 
     invoke-virtual {v0}, Landroid/renderscript/Allocation;->getType()Landroid/renderscript/Type;
@@ -693,7 +636,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 147
     iget-object v0, p0, Landroid/renderscript/ScriptIntrinsicHistogram;->mOut:Landroid/renderscript/Allocation;
 
     invoke-virtual {v0}, Landroid/renderscript/Allocation;->getType()Landroid/renderscript/Type;
@@ -712,7 +654,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 148
     iget-object v0, p0, Landroid/renderscript/ScriptIntrinsicHistogram;->mOut:Landroid/renderscript/Allocation;
 
     invoke-virtual {v0}, Landroid/renderscript/Allocation;->getType()Landroid/renderscript/Type;
@@ -731,16 +672,14 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 150
     new-instance v0, Landroid/renderscript/RSIllegalArgumentException;
 
-    const-string/jumbo v1, "Output type must be U32 or I32."
+    const-string v1, "Output type must be U32 or I32."
 
     invoke-direct {v0, v1}, Landroid/renderscript/RSIllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 152
     :cond_0
     iget-object v0, p0, Landroid/renderscript/ScriptIntrinsicHistogram;->mOut:Landroid/renderscript/Allocation;
 
@@ -756,7 +695,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 153
     iget-object v0, p0, Landroid/renderscript/ScriptIntrinsicHistogram;->mOut:Landroid/renderscript/Allocation;
 
     invoke-virtual {v0}, Landroid/renderscript/Allocation;->getType()Landroid/renderscript/Type;
@@ -769,17 +707,15 @@
 
     if-eqz v0, :cond_2
 
-    .line 157
     :cond_1
     new-instance v0, Landroid/renderscript/RSIllegalArgumentException;
 
-    const-string/jumbo v1, "Output must be 1D, 256 elements."
+    const-string v1, "Output must be 1D, 256 elements."
 
     invoke-direct {v0, v1}, Landroid/renderscript/RSIllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 154
     :cond_2
     iget-object v0, p0, Landroid/renderscript/ScriptIntrinsicHistogram;->mOut:Landroid/renderscript/Allocation;
 
@@ -791,10 +727,8 @@
 
     move-result v0
 
-    .line 152
     if-nez v0, :cond_1
 
-    .line 155
     iget-object v0, p0, Landroid/renderscript/ScriptIntrinsicHistogram;->mOut:Landroid/renderscript/Allocation;
 
     invoke-virtual {v0}, Landroid/renderscript/Allocation;->getType()Landroid/renderscript/Type;
@@ -807,11 +741,9 @@
 
     if-nez v0, :cond_1
 
-    .line 159
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0, p1}, Landroid/renderscript/ScriptIntrinsicHistogram;->setVar(ILandroid/renderscript/BaseObj;)V
 
-    .line 139
     return-void
 .end method

@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 57
     invoke-direct {p0}, Landroid/support/v4/graphics/BitmapCompat$HcMr1BitmapCompatImpl;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
     .param p1, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 60
     invoke-static {p1}, Landroid/support/v4/graphics/BitmapCompatJellybeanMR2;->hasMipMap(Landroid/graphics/Bitmap;)Z
 
     move-result v0
@@ -46,9 +44,7 @@
     .param p2, "hasMipMap"    # Z
 
     .prologue
-    .line 65
     invoke-static {p1, p2}, Landroid/support/v4/graphics/BitmapCompatJellybeanMR2;->setHasMipMap(Landroid/graphics/Bitmap;Z)V
 
-    .line 64
     return-void
 .end method

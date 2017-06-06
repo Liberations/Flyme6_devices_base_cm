@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 336
     invoke-direct {p0}, Landroid/app/SystemServiceRegistry$CachedServiceFetcher;-><init>()V
 
     return-void
@@ -41,17 +40,14 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 339
     new-instance v0, Landroid/net/NetworkPolicyManager;
 
-    .line 340
-    const-string/jumbo v1, "netpolicy"
+    const-string v1, "netpolicy"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v1
 
-    .line 339
     invoke-static {v1}, Landroid/net/INetworkPolicyManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/net/INetworkPolicyManager;
 
     move-result-object v1
@@ -66,7 +62,6 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 338
     invoke-virtual {p0, p1}, Landroid/app/SystemServiceRegistry$25;->createService(Landroid/app/ContextImpl;)Landroid/net/NetworkPolicyManager;
 
     move-result-object v0

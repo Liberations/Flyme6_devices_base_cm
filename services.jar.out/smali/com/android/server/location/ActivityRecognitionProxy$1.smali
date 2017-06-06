@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/location/ActivityRecognitionProxy;
 
     .prologue
-    .line 53
     iput-object p1, p0, Lcom/android/server/location/ActivityRecognitionProxy$1;->this$0:Lcom/android/server/location/ActivityRecognitionProxy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +40,9 @@
     .locals 1
 
     .prologue
-    .line 56
     iget-object v0, p0, Lcom/android/server/location/ActivityRecognitionProxy$1;->this$0:Lcom/android/server/location/ActivityRecognitionProxy;
 
     invoke-static {v0}, Lcom/android/server/location/ActivityRecognitionProxy;->-wrap0(Lcom/android/server/location/ActivityRecognitionProxy;)V
 
-    .line 55
     return-void
 .end method

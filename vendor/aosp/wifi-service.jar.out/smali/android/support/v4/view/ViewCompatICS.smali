@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,7 +19,6 @@
     .param p1, "direction"    # I
 
     .prologue
-    .line 31
     invoke-virtual {p0, p1}, Landroid/view/View;->canScrollHorizontally(I)Z
 
     move-result v0
@@ -34,7 +32,6 @@
     .param p1, "direction"    # I
 
     .prologue
-    .line 35
     invoke-virtual {p0, p1}, Landroid/view/View;->canScrollVertically(I)Z
 
     move-result v0
@@ -48,10 +45,8 @@
     .param p1, "event"    # Landroid/view/accessibility/AccessibilityEvent;
 
     .prologue
-    .line 47
     invoke-virtual {p0, p1}, Landroid/view/View;->onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 46
     return-void
 .end method
 
@@ -61,13 +56,11 @@
     .param p1, "info"    # Ljava/lang/Object;
 
     .prologue
-    .line 51
     check-cast p1, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     .end local p1    # "info":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Landroid/view/View;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    .line 50
     return-void
 .end method
 
@@ -77,10 +70,8 @@
     .param p1, "event"    # Landroid/view/accessibility/AccessibilityEvent;
 
     .prologue
-    .line 43
     invoke-virtual {p0, p1}, Landroid/view/View;->onPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 42
     return-void
 .end method
 
@@ -93,13 +84,11 @@
     .end param
 
     .prologue
-    .line 39
     check-cast p1, Landroid/view/View$AccessibilityDelegate;
 
     .end local p1    # "delegate":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Landroid/view/View;->setAccessibilityDelegate(Landroid/view/View$AccessibilityDelegate;)V
 
-    .line 38
     return-void
 .end method
 
@@ -109,9 +98,7 @@
     .param p1, "fitSystemWindows"    # Z
 
     .prologue
-    .line 55
     invoke-virtual {p0, p1}, Landroid/view/View;->setFitsSystemWindows(Z)V
 
-    .line 54
     return-void
 .end method

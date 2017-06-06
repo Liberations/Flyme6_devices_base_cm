@@ -48,17 +48,14 @@
     .locals 2
 
     .prologue
-    .line 952
     new-instance v0, Lcom/android/internal/app/ChooserActivity$RowScale$1;
 
-    const-string/jumbo v1, "scale"
+    const-string v1, "scale"
 
     invoke-direct {v0, v1}, Lcom/android/internal/app/ChooserActivity$RowScale$1;-><init>(Ljava/lang/String;)V
 
-    .line 951
     sput-object v0, Lcom/android/internal/app/ChooserActivity$RowScale;->PROPERTY:Landroid/util/FloatProperty;
 
-    .line 944
     return-void
 .end method
 
@@ -69,29 +66,22 @@
     .param p3, "to"    # F
 
     .prologue
-    .line 965
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 966
     iput-object p1, p0, Lcom/android/internal/app/ChooserActivity$RowScale;->mAdapter:Lcom/android/internal/app/ChooserActivity$ChooserRowAdapter;
 
-    .line 967
     iput p2, p0, Lcom/android/internal/app/ChooserActivity$RowScale;->mScale:F
 
-    .line 968
     cmpl-float v0, p2, p3
 
     if-nez v0, :cond_0
 
-    .line 969
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/app/ChooserActivity$RowScale;->mAnimator:Landroid/animation/ObjectAnimator;
 
-    .line 970
     return-void
 
-    .line 973
     :cond_0
     sget-object v0, Lcom/android/internal/app/ChooserActivity$RowScale;->PROPERTY:Landroid/util/FloatProperty;
 
@@ -119,7 +109,6 @@
 
     iput-object v0, p0, Lcom/android/internal/app/ChooserActivity$RowScale;->mAnimator:Landroid/animation/ObjectAnimator;
 
-    .line 965
     return-void
 .end method
 
@@ -129,17 +118,14 @@
     .locals 1
 
     .prologue
-    .line 994
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$RowScale;->mAnimator:Landroid/animation/ObjectAnimator;
 
     if-eqz v0, :cond_0
 
-    .line 995
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$RowScale;->mAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 993
     :cond_0
     return-void
 .end method
@@ -148,7 +134,6 @@
     .locals 1
 
     .prologue
-    .line 984
     iget v0, p0, Lcom/android/internal/app/ChooserActivity$RowScale;->mScale:F
 
     return v0
@@ -159,17 +144,14 @@
     .param p1, "interpolator"    # Landroid/view/animation/Interpolator;
 
     .prologue
-    .line 977
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$RowScale;->mAnimator:Landroid/animation/ObjectAnimator;
 
     if-eqz v0, :cond_0
 
-    .line 978
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$RowScale;->mAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0, p1}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 980
     :cond_0
     return-object p0
 .end method
@@ -178,17 +160,14 @@
     .locals 1
 
     .prologue
-    .line 988
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$RowScale;->mAnimator:Landroid/animation/ObjectAnimator;
 
     if-eqz v0, :cond_0
 
-    .line 989
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$RowScale;->mAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 987
     :cond_0
     return-void
 .end method

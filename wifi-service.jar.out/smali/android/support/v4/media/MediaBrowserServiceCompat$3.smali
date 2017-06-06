@@ -42,7 +42,6 @@
     .param p4, "val$parentId"    # Ljava/lang/String;
 
     .prologue
-    .line 719
     iput-object p1, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$3;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
     iput-object p3, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$3;->val$connection:Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;
@@ -61,7 +60,6 @@
     .param p1, "list"    # Ljava/lang/Object;
 
     .prologue
-    .line 721
     check-cast p1, Ljava/util/List;
 
     .end local p1    # "list":Ljava/lang/Object;
@@ -83,7 +81,6 @@
     .end annotation
 
     .prologue
-    .line 722
     .local p1, "list":Ljava/util/List;, "Ljava/util/List<Landroid/support/v4/media/MediaBrowserCompat$MediaItem;>;"
     iget-object v1, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$3;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
@@ -107,10 +104,8 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 727
     return-void
 
-    .line 731
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$3;->val$connection:Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;
@@ -123,23 +118,20 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 721
     :goto_0
     return-void
 
-    .line 732
     :catch_0
     move-exception v0
 
-    .line 734
     .local v0, "ex":Landroid/os/RemoteException;
-    const-string/jumbo v1, "MediaBrowserServiceCompat"
+    const-string v1, "MediaBrowserServiceCompat"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "Calling onLoadChildren() failed for id="
+    const-string v3, "Calling onLoadChildren() failed for id="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -151,20 +143,16 @@
 
     move-result-object v2
 
-    .line 735
-    const-string/jumbo v3, " package="
+    const-string v3, " package="
 
-    .line 734
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 735
     iget-object v3, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$3;->val$connection:Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;
 
     iget-object v3, v3, Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;->pkg:Ljava/lang/String;
 
-    .line 734
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2

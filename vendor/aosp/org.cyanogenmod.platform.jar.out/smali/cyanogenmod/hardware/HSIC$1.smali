@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 116
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,16 +44,13 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 118
     const/4 v1, 0x5
 
     new-array v0, v1, [F
 
-    .line 119
     .local v0, "fromParcel":[F
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readFloatArray([F)V
 
-    .line 120
     invoke-static {v0}, Lcyanogenmod/hardware/HSIC;->fromFloatArray([F)Lcyanogenmod/hardware/HSIC;
 
     move-result-object v1
@@ -67,7 +63,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 117
     invoke-virtual {p0, p1}, Lcyanogenmod/hardware/HSIC$1;->createFromParcel(Landroid/os/Parcel;)Lcyanogenmod/hardware/HSIC;
 
     move-result-object v0
@@ -80,7 +75,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 125
     new-array v0, p1, [Lcyanogenmod/hardware/HSIC;
 
     return-object v0
@@ -91,7 +85,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 124
     invoke-virtual {p0, p1}, Lcyanogenmod/hardware/HSIC$1;->newArray(I)[Lcyanogenmod/hardware/HSIC;
 
     move-result-object v0

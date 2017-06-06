@@ -24,15 +24,12 @@
     .locals 1
 
     .prologue
-    .line 48
     invoke-direct {p0}, Ljava/io/IOException;-><init>()V
 
-    .line 49
     const/16 v0, 0x6e
 
     iput v0, p0, Lorg/ksoap2/SoapFault;->version:I
 
-    .line 47
     return-void
 .end method
 
@@ -41,13 +38,10 @@
     .param p1, "version"    # I
 
     .prologue
-    .line 53
     invoke-direct {p0}, Ljava/io/IOException;-><init>()V
 
-    .line 54
     iput p1, p0, Lorg/ksoap2/SoapFault;->version:I
 
-    .line 52
     return-void
 .end method
 
@@ -57,7 +51,6 @@
     .locals 1
 
     .prologue
-    .line 107
     iget-object v0, p0, Lorg/ksoap2/SoapFault;->faultstring:Ljava/lang/String;
 
     return-object v0
@@ -78,14 +71,12 @@
 
     const/4 v3, 0x2
 
-    .line 59
-    const-string/jumbo v1, "http://schemas.xmlsoap.org/soap/envelope/"
+    const-string v1, "http://schemas.xmlsoap.org/soap/envelope/"
 
-    const-string/jumbo v2, "Fault"
+    const-string v2, "Fault"
 
     invoke-interface {p1, v3, v1, v2}, Lorg/xmlpull/v1/XmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 60
     :cond_0
     :goto_0
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->nextTag()I
@@ -94,14 +85,12 @@
 
     if-ne v1, v3, :cond_1
 
-    .line 61
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 62
     .local v0, "name":Ljava/lang/String;
-    const-string/jumbo v1, "detail"
+    const-string v1, "detail"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -109,24 +98,21 @@
 
     if-eqz v1, :cond_2
 
-    .line 63
     new-instance v1, Lorg/ksoap2/kdom/Node;
 
     invoke-direct {v1}, Lorg/ksoap2/kdom/Node;-><init>()V
 
     iput-object v1, p0, Lorg/ksoap2/SoapFault;->detail:Lorg/ksoap2/kdom/Node;
 
-    .line 64
     iget-object v1, p0, Lorg/ksoap2/SoapFault;->detail:Lorg/ksoap2/kdom/Node;
 
     invoke-virtual {v1, p1}, Lorg/ksoap2/kdom/Node;->parse(Lorg/xmlpull/v1/XmlPullParser;)V
 
-    .line 66
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getNamespace()Ljava/lang/String;
 
     move-result-object v1
 
-    const-string/jumbo v2, "http://schemas.xmlsoap.org/soap/envelope/"
+    const-string v2, "http://schemas.xmlsoap.org/soap/envelope/"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -134,39 +120,33 @@
 
     if-eqz v1, :cond_0
 
-    .line 67
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    const-string/jumbo v2, "Fault"
+    const-string v2, "Fault"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    .line 66
     if-eqz v1, :cond_0
 
-    .line 82
     .end local v0    # "name":Ljava/lang/String;
     :cond_1
-    const-string/jumbo v1, "http://schemas.xmlsoap.org/soap/envelope/"
+    const-string v1, "http://schemas.xmlsoap.org/soap/envelope/"
 
-    const-string/jumbo v2, "Fault"
+    const-string v2, "Fault"
 
     invoke-interface {p1, v4, v1, v2}, Lorg/xmlpull/v1/XmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 83
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->nextTag()I
 
-    .line 58
     return-void
 
-    .line 71
     .restart local v0    # "name":Ljava/lang/String;
     :cond_2
-    const-string/jumbo v1, "faultcode"
+    const-string v1, "faultcode"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -174,14 +154,12 @@
 
     if-eqz v1, :cond_3
 
-    .line 72
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->nextText()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lorg/ksoap2/SoapFault;->faultcode:Ljava/lang/String;
 
-    .line 80
     :goto_1
     const/4 v1, 0x0
 
@@ -189,9 +167,8 @@
 
     goto :goto_0
 
-    .line 73
     :cond_3
-    const-string/jumbo v1, "faultstring"
+    const-string v1, "faultstring"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -199,7 +176,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 74
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->nextText()Ljava/lang/String;
 
     move-result-object v1
@@ -208,9 +184,8 @@
 
     goto :goto_1
 
-    .line 75
     :cond_4
-    const-string/jumbo v1, "faultactor"
+    const-string v1, "faultactor"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -218,7 +193,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 76
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->nextText()Ljava/lang/String;
 
     move-result-object v1
@@ -227,7 +201,6 @@
 
     goto :goto_1
 
-    .line 78
     :cond_5
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -235,7 +208,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "unexpected tag:"
+    const-string v3, "unexpected tag:"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -258,12 +231,11 @@
     .locals 2
 
     .prologue
-    .line 112
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "SoapFault - faultcode: \'"
+    const-string v1, "SoapFault - faultcode: \'"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -275,48 +247,38 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "\' faultstring: \'"
+    const-string v1, "\' faultstring: \'"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 113
     iget-object v1, p0, Lorg/ksoap2/SoapFault;->faultstring:Ljava/lang/String;
 
-    .line 112
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 113
-    const-string/jumbo v1, "\' faultactor: \'"
+    const-string v1, "\' faultactor: \'"
 
-    .line 112
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 113
     iget-object v1, p0, Lorg/ksoap2/SoapFault;->faultactor:Ljava/lang/String;
 
-    .line 112
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 113
-    const-string/jumbo v1, "\' detail: "
+    const-string v1, "\' detail: "
 
-    .line 112
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 114
     iget-object v1, p0, Lorg/ksoap2/SoapFault;->detail:Lorg/ksoap2/kdom/Node;
 
-    .line 112
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -340,24 +302,21 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 88
-    const-string/jumbo v0, "http://schemas.xmlsoap.org/soap/envelope/"
+    const-string v0, "http://schemas.xmlsoap.org/soap/envelope/"
 
-    const-string/jumbo v1, "Fault"
+    const-string v1, "Fault"
 
     invoke-interface {p1, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 89
-    const-string/jumbo v0, "faultcode"
+    const-string v0, "faultcode"
 
     invoke-interface {p1, v2, v0}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 90
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, ""
+    const-string v1, ""
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -375,22 +334,19 @@
 
     invoke-interface {p1, v0}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 91
-    const-string/jumbo v0, "faultcode"
+    const-string v0, "faultcode"
 
     invoke-interface {p1, v2, v0}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 92
-    const-string/jumbo v0, "faultstring"
+    const-string v0, "faultstring"
 
     invoke-interface {p1, v2, v0}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 93
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, ""
+    const-string v1, ""
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -408,39 +364,32 @@
 
     invoke-interface {p1, v0}, Lorg/xmlpull/v1/XmlSerializer;->text(Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 94
-    const-string/jumbo v0, "faultstring"
+    const-string v0, "faultstring"
 
     invoke-interface {p1, v2, v0}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 95
-    const-string/jumbo v0, "detail"
+    const-string v0, "detail"
 
     invoke-interface {p1, v2, v0}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 96
     iget-object v0, p0, Lorg/ksoap2/SoapFault;->detail:Lorg/ksoap2/kdom/Node;
 
     if-eqz v0, :cond_0
 
-    .line 97
     iget-object v0, p0, Lorg/ksoap2/SoapFault;->detail:Lorg/ksoap2/kdom/Node;
 
     invoke-virtual {v0, p1}, Lorg/ksoap2/kdom/Node;->write(Lorg/xmlpull/v1/XmlSerializer;)V
 
-    .line 99
     :cond_0
-    const-string/jumbo v0, "detail"
+    const-string v0, "detail"
 
     invoke-interface {p1, v2, v0}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 100
-    const-string/jumbo v0, "http://schemas.xmlsoap.org/soap/envelope/"
+    const-string v0, "http://schemas.xmlsoap.org/soap/envelope/"
 
-    const-string/jumbo v1, "Fault"
+    const-string v1, "Fault"
 
     invoke-interface {p1, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 87
     return-void
 .end method

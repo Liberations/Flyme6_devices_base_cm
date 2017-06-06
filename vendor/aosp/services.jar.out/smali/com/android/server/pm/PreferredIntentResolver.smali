@@ -20,7 +20,6 @@
     .locals 0
 
     .prologue
-    .line 23
     invoke-direct {p0}, Lcom/android/server/IntentResolver;-><init>()V
 
     return-void
@@ -35,7 +34,6 @@
     .param p3, "filter"    # Landroid/content/IntentFilter;
 
     .prologue
-    .line 36
     check-cast p3, Lcom/android/server/pm/PreferredActivity;
 
     .end local p3    # "filter":Landroid/content/IntentFilter;
@@ -51,12 +49,10 @@
     .param p3, "filter"    # Lcom/android/server/pm/PreferredActivity;
 
     .prologue
-    .line 38
     iget-object v0, p3, Lcom/android/server/pm/PreferredActivity;->mPref:Lcom/android/server/pm/PreferredComponent;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/server/pm/PreferredComponent;->dump(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 37
     return-void
 .end method
 
@@ -66,7 +62,6 @@
     .param p2, "filter"    # Landroid/content/IntentFilter;
 
     .prologue
-    .line 31
     check-cast p2, Lcom/android/server/pm/PreferredActivity;
 
     .end local p2    # "filter":Landroid/content/IntentFilter;
@@ -83,7 +78,6 @@
     .param p2, "filter"    # Lcom/android/server/pm/PreferredActivity;
 
     .prologue
-    .line 32
     iget-object v0, p2, Lcom/android/server/pm/PreferredActivity;->mPref:Lcom/android/server/pm/PreferredComponent;
 
     iget-object v0, v0, Lcom/android/server/pm/PreferredComponent;->mComponent:Landroid/content/ComponentName;
@@ -104,7 +98,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 26
     invoke-virtual {p0, p1}, Lcom/android/server/pm/PreferredIntentResolver;->newArray(I)[Lcom/android/server/pm/PreferredActivity;
 
     move-result-object v0
@@ -117,7 +110,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 27
     new-array v0, p1, [Lcom/android/server/pm/PreferredActivity;
 
     return-object v0

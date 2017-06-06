@@ -14,7 +14,6 @@
     .locals 1
 
     .prologue
-    .line 56
     const/16 v0, 0xe
 
     new-array v0, v0, [C
@@ -23,10 +22,8 @@
 
     sput-object v0, Landroid/text/method/TimeKeyListener;->CHARACTERS:[C
 
-    .line 29
     return-void
 
-    .line 56
     :array_0
     .array-data 2
         0x30s
@@ -50,7 +47,6 @@
     .locals 0
 
     .prologue
-    .line 29
     invoke-direct {p0}, Landroid/text/method/NumberKeyListener;-><init>()V
 
     return-void
@@ -60,17 +56,14 @@
     .locals 1
 
     .prologue
-    .line 43
     sget-object v0, Landroid/text/method/TimeKeyListener;->sInstance:Landroid/text/method/TimeKeyListener;
 
     if-eqz v0, :cond_0
 
-    .line 44
     sget-object v0, Landroid/text/method/TimeKeyListener;->sInstance:Landroid/text/method/TimeKeyListener;
 
     return-object v0
 
-    .line 46
     :cond_0
     new-instance v0, Landroid/text/method/TimeKeyListener;
 
@@ -78,7 +71,6 @@
 
     sput-object v0, Landroid/text/method/TimeKeyListener;->sInstance:Landroid/text/method/TimeKeyListener;
 
-    .line 47
     sget-object v0, Landroid/text/method/TimeKeyListener;->sInstance:Landroid/text/method/TimeKeyListener;
 
     return-object v0
@@ -90,7 +82,6 @@
     .locals 1
 
     .prologue
-    .line 39
     sget-object v0, Landroid/text/method/TimeKeyListener;->CHARACTERS:[C
 
     return-object v0
@@ -100,7 +91,6 @@
     .locals 1
 
     .prologue
-    .line 32
     const/16 v0, 0x24
 
     return v0

@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/webkit/WebViewUpdateService;
 
     .prologue
-    .line 78
     iput-object p1, p0, Lcom/android/server/webkit/WebViewUpdateService$BinderService;->this$0:Lcom/android/server/webkit/WebViewUpdateService;
 
     invoke-direct {p0}, Landroid/webkit/IWebViewUpdateService$Stub;-><init>()V
@@ -50,7 +49,6 @@
     .param p2, "success"    # Z
 
     .prologue
-    .line 90
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -59,7 +57,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 91
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -68,19 +65,15 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 92
     return-void
 
-    .line 95
     :cond_0
     iget-object v1, p0, Lcom/android/server/webkit/WebViewUpdateService$BinderService;->this$0:Lcom/android/server/webkit/WebViewUpdateService;
 
     monitor-enter v1
 
-    .line 96
     if-eqz p1, :cond_1
 
-    .line 97
     :try_start_0
     iget-object v0, p0, Lcom/android/server/webkit/WebViewUpdateService$BinderService;->this$0:Lcom/android/server/webkit/WebViewUpdateService;
 
@@ -88,7 +81,6 @@
 
     invoke-static {v0, v2}, Lcom/android/server/webkit/WebViewUpdateService;->-set1(Lcom/android/server/webkit/WebViewUpdateService;Z)Z
 
-    .line 101
     :goto_0
     iget-object v0, p0, Lcom/android/server/webkit/WebViewUpdateService$BinderService;->this$0:Lcom/android/server/webkit/WebViewUpdateService;
 
@@ -98,10 +90,8 @@
 
     monitor-exit v1
 
-    .line 86
     return-void
 
-    .line 99
     :cond_1
     :try_start_1
     iget-object v0, p0, Lcom/android/server/webkit/WebViewUpdateService$BinderService;->this$0:Lcom/android/server/webkit/WebViewUpdateService;
@@ -114,7 +104,6 @@
 
     goto :goto_0
 
-    .line 95
     :catchall_0
     move-exception v0
 
@@ -130,7 +119,6 @@
     .prologue
     const-wide/32 v10, 0xf4240
 
-    .line 114
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v8
@@ -141,20 +129,17 @@
 
     if-ne v8, v9, :cond_0
 
-    .line 115
     new-instance v8, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v9, "Cannot create a WebView from the SystemServer"
+    const-string v9, "Cannot create a WebView from the SystemServer"
 
     invoke-direct {v8, v9}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v8
 
-    .line 118
     :cond_0
     const-wide/32 v0, 0xf4240
 
-    .line 119
     .local v0, "NS_PER_MS":J
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
@@ -166,7 +151,6 @@
 
     add-long v6, v8, v10
 
-    .line 120
     .local v6, "timeoutTimeMs":J
     if-eqz p1, :cond_3
 
@@ -176,18 +160,15 @@
 
     move-result v3
 
-    .line 121
     .local v3, "relroReady":Z
     :goto_0
     iget-object v9, p0, Lcom/android/server/webkit/WebViewUpdateService$BinderService;->this$0:Lcom/android/server/webkit/WebViewUpdateService;
 
     monitor-enter v9
 
-    .line 122
     :goto_1
     if-nez v3, :cond_1
 
-    .line 123
     :try_start_0
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
@@ -199,7 +180,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 124
     .local v4, "timeNowMs":J
     cmp-long v8, v4, v6
 
@@ -209,20 +189,17 @@
     :cond_1
     monitor-exit v9
 
-    .line 131
     if-nez v3, :cond_2
 
-    const-string/jumbo v8, "WebViewUpdateService"
+    const-string v8, "WebViewUpdateService"
 
-    const-string/jumbo v9, "creating relro file timed out"
+    const-string v9, "creating relro file timed out"
 
     invoke-static {v8, v9}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 109
     :cond_2
     return-void
 
-    .line 120
     .end local v3    # "relroReady":Z
     :cond_3
     iget-object v8, p0, Lcom/android/server/webkit/WebViewUpdateService$BinderService;->this$0:Lcom/android/server/webkit/WebViewUpdateService;
@@ -234,7 +211,6 @@
     .restart local v3    # "relroReady":Z
     goto :goto_0
 
-    .line 126
     .restart local v4    # "timeNowMs":J
     :cond_4
     :try_start_1
@@ -247,7 +223,6 @@
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 128
     :goto_2
     if-eqz p1, :cond_5
 
@@ -271,7 +246,6 @@
 
     goto :goto_1
 
-    .line 121
     .end local v4    # "timeNowMs":J
     :catchall_0
     move-exception v8
@@ -280,7 +254,6 @@
 
     throw v8
 
-    .line 127
     .restart local v4    # "timeNowMs":J
     :catch_0
     move-exception v2

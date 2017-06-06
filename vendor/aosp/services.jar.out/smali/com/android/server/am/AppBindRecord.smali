@@ -30,26 +30,20 @@
     .param p3, "_client"    # Lcom/android/server/am/ProcessRecord;
 
     .prologue
-    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/AppBindRecord;->connections:Landroid/util/ArraySet;
 
-    .line 53
     iput-object p1, p0, Lcom/android/server/am/AppBindRecord;->service:Lcom/android/server/am/ServiceRecord;
 
-    .line 54
     iput-object p2, p0, Lcom/android/server/am/AppBindRecord;->intent:Lcom/android/server/am/IntentBindRecord;
 
-    .line 55
     iput-object p3, p0, Lcom/android/server/am/AppBindRecord;->client:Lcom/android/server/am/ProcessRecord;
 
-    .line 52
     return-void
 .end method
 
@@ -61,7 +55,6 @@
     .param p2, "prefix"    # Ljava/lang/String;
 
     .prologue
-    .line 35
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -70,7 +63,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "service="
+    const-string v1, "service="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -88,7 +81,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 36
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -97,7 +89,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "client="
+    const-string v1, "client="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -115,10 +107,8 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 37
     invoke-virtual {p0, p1, p2}, Lcom/android/server/am/AppBindRecord;->dumpInIntentBind(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
-    .line 34
     return-void
 .end method
 
@@ -128,18 +118,15 @@
     .param p2, "prefix"    # Ljava/lang/String;
 
     .prologue
-    .line 41
     iget-object v3, p0, Lcom/android/server/am/AppBindRecord;->connections:Landroid/util/ArraySet;
 
     invoke-virtual {v3}, Landroid/util/ArraySet;->size()I
 
     move-result v0
 
-    .line 42
     .local v0, "N":I
     if-lez v0, :cond_0
 
-    .line 43
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -148,7 +135,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "Per-process Connections:"
+    const-string v4, "Per-process Connections:"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -160,14 +147,12 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 44
     const/4 v2, 0x0
 
     .local v2, "i":I
     :goto_0
     if-ge v2, v0, :cond_0
 
-    .line 45
     iget-object v3, p0, Lcom/android/server/am/AppBindRecord;->connections:Landroid/util/ArraySet;
 
     invoke-virtual {v3, v2}, Landroid/util/ArraySet;->valueAt(I)Ljava/lang/Object;
@@ -176,7 +161,6 @@
 
     check-cast v1, Lcom/android/server/am/ConnectionRecord;
 
-    .line 46
     .local v1, "c":Lcom/android/server/am/ConnectionRecord;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -186,7 +170,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "  "
+    const-string v4, "  "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -202,12 +186,10 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 44
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 40
     .end local v1    # "c":Lcom/android/server/am/ConnectionRecord;
     .end local v2    # "i":I
     :cond_0
@@ -218,18 +200,16 @@
     .locals 2
 
     .prologue
-    .line 59
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "AppBindRecord{"
+    const-string v1, "AppBindRecord{"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 60
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
@@ -238,51 +218,40 @@
 
     move-result-object v1
 
-    .line 59
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 61
-    const-string/jumbo v1, " "
+    const-string v1, " "
 
-    .line 59
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 61
     iget-object v1, p0, Lcom/android/server/am/AppBindRecord;->service:Lcom/android/server/am/ServiceRecord;
 
     iget-object v1, v1, Lcom/android/server/am/ServiceRecord;->shortName:Ljava/lang/String;
 
-    .line 59
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 61
-    const-string/jumbo v1, ":"
+    const-string v1, ":"
 
-    .line 59
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 61
     iget-object v1, p0, Lcom/android/server/am/AppBindRecord;->client:Lcom/android/server/am/ProcessRecord;
 
     iget-object v1, v1, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
-    .line 59
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 61
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
-    .line 59
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0

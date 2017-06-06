@@ -31,7 +31,6 @@
     .param p4, "val$mediaId"    # Ljava/lang/String;
 
     .prologue
-    .line 395
     iput-object p1, p0, Landroid/media/browse/MediaBrowser$3;->this$0:Landroid/media/browse/MediaBrowser;
 
     iput-object p3, p0, Landroid/media/browse/MediaBrowser$3;->val$cb:Landroid/media/browse/MediaBrowser$ItemCallback;
@@ -51,12 +50,10 @@
     .param p2, "resultData"    # Landroid/os/Bundle;
 
     .prologue
-    .line 398
     if-nez p1, :cond_0
 
     if-nez p2, :cond_1
 
-    .line 400
     :cond_0
     iget-object v1, p0, Landroid/media/browse/MediaBrowser$3;->val$cb:Landroid/media/browse/MediaBrowser$ItemCallback;
 
@@ -64,12 +61,10 @@
 
     invoke-virtual {v1, v2}, Landroid/media/browse/MediaBrowser$ItemCallback;->onError(Ljava/lang/String;)V
 
-    .line 401
     return-void
 
-    .line 399
     :cond_1
-    const-string/jumbo v1, "media_item"
+    const-string v1, "media_item"
 
     invoke-virtual {p2, v1}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
@@ -77,30 +72,25 @@
 
     if-eqz v1, :cond_0
 
-    .line 403
-    const-string/jumbo v1, "media_item"
+    const-string v1, "media_item"
 
     invoke-virtual {p2, v1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v0
 
-    .line 404
     .local v0, "item":Landroid/os/Parcelable;
     instance-of v1, v0, Landroid/media/browse/MediaBrowser$MediaItem;
 
     if-nez v1, :cond_2
 
-    .line 405
     iget-object v1, p0, Landroid/media/browse/MediaBrowser$3;->val$cb:Landroid/media/browse/MediaBrowser$ItemCallback;
 
     iget-object v2, p0, Landroid/media/browse/MediaBrowser$3;->val$mediaId:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Landroid/media/browse/MediaBrowser$ItemCallback;->onError(Ljava/lang/String;)V
 
-    .line 406
     return-void
 
-    .line 408
     :cond_2
     iget-object v1, p0, Landroid/media/browse/MediaBrowser$3;->val$cb:Landroid/media/browse/MediaBrowser$ItemCallback;
 
@@ -109,6 +99,5 @@
     .end local v0    # "item":Landroid/os/Parcelable;
     invoke-virtual {v1, v0}, Landroid/media/browse/MediaBrowser$ItemCallback;->onItemLoaded(Landroid/media/browse/MediaBrowser$MediaItem;)V
 
-    .line 397
     return-void
 .end method

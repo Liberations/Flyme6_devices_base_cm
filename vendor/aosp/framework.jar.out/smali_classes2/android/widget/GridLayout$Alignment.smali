@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 2738
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +33,6 @@
     .locals 2
 
     .prologue
-    .line 2773
     new-instance v0, Landroid/widget/GridLayout$Bounds;
 
     const/4 v1, 0x0
@@ -54,6 +52,5 @@
     .param p3, "cellSize"    # I
 
     .prologue
-    .line 2769
     return p2
 .end method

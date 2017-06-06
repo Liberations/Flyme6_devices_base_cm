@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 673
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,10 +29,8 @@
     .param p0, "origin"    # I
 
     .prologue
-    .line 676
     packed-switch p0, :pswitch_data_0
 
-    .line 684
     :pswitch_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -41,7 +38,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Unknown origin: "
+    const-string v2, "Unknown origin: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -59,25 +56,21 @@
 
     throw v0
 
-    .line 678
     :pswitch_1
     const/4 v0, 0x1
 
     return v0
 
-    .line 680
     :pswitch_2
     const/4 v0, 0x2
 
     return v0
 
-    .line 682
     :pswitch_3
     const/4 v0, 0x4
 
     return v0
 
-    .line 676
     nop
 
     :pswitch_data_0

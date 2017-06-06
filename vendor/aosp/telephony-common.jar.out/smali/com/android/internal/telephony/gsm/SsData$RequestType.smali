@@ -52,52 +52,46 @@
 
     const/4 v2, 0x0
 
-    .line 84
     new-instance v0, Lcom/android/internal/telephony/gsm/SsData$RequestType;
 
-    const-string/jumbo v1, "SS_ACTIVATION"
+    const-string v1, "SS_ACTIVATION"
 
     invoke-direct {v0, v1, v2}, Lcom/android/internal/telephony/gsm/SsData$RequestType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/gsm/SsData$RequestType;->SS_ACTIVATION:Lcom/android/internal/telephony/gsm/SsData$RequestType;
 
-    .line 85
     new-instance v0, Lcom/android/internal/telephony/gsm/SsData$RequestType;
 
-    const-string/jumbo v1, "SS_DEACTIVATION"
+    const-string v1, "SS_DEACTIVATION"
 
     invoke-direct {v0, v1, v3}, Lcom/android/internal/telephony/gsm/SsData$RequestType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/gsm/SsData$RequestType;->SS_DEACTIVATION:Lcom/android/internal/telephony/gsm/SsData$RequestType;
 
-    .line 86
     new-instance v0, Lcom/android/internal/telephony/gsm/SsData$RequestType;
 
-    const-string/jumbo v1, "SS_INTERROGATION"
+    const-string v1, "SS_INTERROGATION"
 
     invoke-direct {v0, v1, v4}, Lcom/android/internal/telephony/gsm/SsData$RequestType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/gsm/SsData$RequestType;->SS_INTERROGATION:Lcom/android/internal/telephony/gsm/SsData$RequestType;
 
-    .line 87
     new-instance v0, Lcom/android/internal/telephony/gsm/SsData$RequestType;
 
-    const-string/jumbo v1, "SS_REGISTRATION"
+    const-string v1, "SS_REGISTRATION"
 
     invoke-direct {v0, v1, v5}, Lcom/android/internal/telephony/gsm/SsData$RequestType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/gsm/SsData$RequestType;->SS_REGISTRATION:Lcom/android/internal/telephony/gsm/SsData$RequestType;
 
-    .line 88
     new-instance v0, Lcom/android/internal/telephony/gsm/SsData$RequestType;
 
-    const-string/jumbo v1, "SS_ERASURE"
+    const-string v1, "SS_ERASURE"
 
     invoke-direct {v0, v1, v6}, Lcom/android/internal/telephony/gsm/SsData$RequestType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/gsm/SsData$RequestType;->SS_ERASURE:Lcom/android/internal/telephony/gsm/SsData$RequestType;
 
-    .line 83
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/android/internal/telephony/gsm/SsData$RequestType;
@@ -131,7 +125,6 @@
     .locals 0
 
     .prologue
-    .line 83
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -142,7 +135,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 83
     const-class v0, Lcom/android/internal/telephony/gsm/SsData$RequestType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -158,7 +150,6 @@
     .locals 1
 
     .prologue
-    .line 83
     sget-object v0, Lcom/android/internal/telephony/gsm/SsData$RequestType;->$VALUES:[Lcom/android/internal/telephony/gsm/SsData$RequestType;
 
     return-object v0
@@ -170,7 +161,6 @@
     .locals 1
 
     .prologue
-    .line 91
     sget-object v0, Lcom/android/internal/telephony/gsm/SsData$RequestType;->SS_INTERROGATION:Lcom/android/internal/telephony/gsm/SsData$RequestType;
 
     if-ne p0, v0, :cond_0

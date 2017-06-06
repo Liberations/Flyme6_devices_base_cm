@@ -27,16 +27,12 @@
     .param p2, "url"    # Ljava/lang/String;
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     iput-object p1, p0, Lcom/android/server/wifi/anqp/NetworkAuthenticationTypeElement$NetworkAuthentication;->m_type:Lcom/android/server/wifi/anqp/NetworkAuthenticationTypeElement$NwkAuthTypeEnum;
 
-    .line 33
     iput-object p2, p0, Lcom/android/server/wifi/anqp/NetworkAuthenticationTypeElement$NetworkAuthentication;->m_url:Ljava/lang/String;
 
-    .line 31
     return-void
 .end method
 
@@ -57,7 +53,6 @@
     .locals 1
 
     .prologue
-    .line 37
     iget-object v0, p0, Lcom/android/server/wifi/anqp/NetworkAuthenticationTypeElement$NetworkAuthentication;->m_type:Lcom/android/server/wifi/anqp/NetworkAuthenticationTypeElement$NwkAuthTypeEnum;
 
     return-object v0
@@ -67,7 +62,6 @@
     .locals 1
 
     .prologue
-    .line 41
     iget-object v0, p0, Lcom/android/server/wifi/anqp/NetworkAuthenticationTypeElement$NetworkAuthentication;->m_url:Ljava/lang/String;
 
     return-object v0
@@ -77,53 +71,42 @@
     .locals 2
 
     .prologue
-    .line 46
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "NetworkAuthentication{m_type="
+    const-string v1, "NetworkAuthentication{m_type="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 47
     iget-object v1, p0, Lcom/android/server/wifi/anqp/NetworkAuthenticationTypeElement$NetworkAuthentication;->m_type:Lcom/android/server/wifi/anqp/NetworkAuthenticationTypeElement$NwkAuthTypeEnum;
 
-    .line 46
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 48
-    const-string/jumbo v1, ", m_url=\'"
+    const-string v1, ", m_url=\'"
 
-    .line 46
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 48
     iget-object v1, p0, Lcom/android/server/wifi/anqp/NetworkAuthenticationTypeElement$NetworkAuthentication;->m_url:Ljava/lang/String;
 
-    .line 46
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 48
     const/16 v1, 0x27
 
-    .line 46
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 49
     const/16 v1, 0x7d
 
-    .line 46
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     move-result-object v0

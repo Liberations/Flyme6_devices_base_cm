@@ -41,20 +41,16 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 137
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 138
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/media/audiopolicy/AudioPolicy$Builder;->mMixes:Ljava/util/ArrayList;
 
-    .line 139
     iput-object p1, p0, Landroid/media/audiopolicy/AudioPolicy$Builder;->mContext:Landroid/content/Context;
 
-    .line 137
     return-void
 .end method
 
@@ -70,25 +66,21 @@
     .end annotation
 
     .prologue
-    .line 150
     if-nez p1, :cond_0
 
-    .line 151
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "Illegal null AudioMix argument"
+    const-string v1, "Illegal null AudioMix argument"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 153
     :cond_0
     iget-object v0, p0, Landroid/media/audiopolicy/AudioPolicy$Builder;->mMixes:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 154
     return-object p0
 .end method
 
@@ -98,12 +90,10 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 192
     iget-object v0, p0, Landroid/media/audiopolicy/AudioPolicy$Builder;->mStatusListener:Landroid/media/audiopolicy/AudioPolicy$AudioPolicyStatusListener;
 
     if-eqz v0, :cond_0
 
-    .line 194
     iget-object v0, p0, Landroid/media/audiopolicy/AudioPolicy$Builder;->mMixes:Ljava/util/ArrayList;
 
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -124,7 +114,6 @@
 
     check-cast v7, Landroid/media/audiopolicy/AudioMix;
 
-    .line 195
     .local v7, "mix":Landroid/media/audiopolicy/AudioMix;
     iget v0, v7, Landroid/media/audiopolicy/AudioMix;->mCallbackFlags:I
 
@@ -134,7 +123,6 @@
 
     goto :goto_0
 
-    .line 198
     .end local v7    # "mix":Landroid/media/audiopolicy/AudioMix;
     .end local v8    # "mix$iterator":Ljava/util/Iterator;
     :cond_0
@@ -150,12 +138,10 @@
 
     iget-object v3, p0, Landroid/media/audiopolicy/AudioPolicy$Builder;->mLooper:Landroid/os/Looper;
 
-    .line 199
     iget-object v4, p0, Landroid/media/audiopolicy/AudioPolicy$Builder;->mFocusListener:Landroid/media/audiopolicy/AudioPolicy$AudioPolicyFocusListener;
 
     iget-object v5, p0, Landroid/media/audiopolicy/AudioPolicy$Builder;->mStatusListener:Landroid/media/audiopolicy/AudioPolicy$AudioPolicyStatusListener;
 
-    .line 198
     invoke-direct/range {v0 .. v6}, Landroid/media/audiopolicy/AudioPolicy;-><init>(Landroid/media/audiopolicy/AudioPolicyConfig;Landroid/content/Context;Landroid/os/Looper;Landroid/media/audiopolicy/AudioPolicy$AudioPolicyFocusListener;Landroid/media/audiopolicy/AudioPolicy$AudioPolicyStatusListener;Landroid/media/audiopolicy/AudioPolicy;)V
 
     return-object v0
@@ -166,10 +152,8 @@
     .param p1, "l"    # Landroid/media/audiopolicy/AudioPolicy$AudioPolicyFocusListener;
 
     .prologue
-    .line 178
     iput-object p1, p0, Landroid/media/audiopolicy/AudioPolicy$Builder;->mFocusListener:Landroid/media/audiopolicy/AudioPolicy$AudioPolicyFocusListener;
 
-    .line 177
     return-void
 .end method
 
@@ -178,10 +162,8 @@
     .param p1, "l"    # Landroid/media/audiopolicy/AudioPolicy$AudioPolicyStatusListener;
 
     .prologue
-    .line 187
     iput-object p1, p0, Landroid/media/audiopolicy/AudioPolicy$Builder;->mStatusListener:Landroid/media/audiopolicy/AudioPolicy$AudioPolicyStatusListener;
 
-    .line 186
     return-void
 .end method
 
@@ -195,22 +177,18 @@
     .end annotation
 
     .prologue
-    .line 165
     if-nez p1, :cond_0
 
-    .line 166
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "Illegal null Looper argument"
+    const-string v1, "Illegal null Looper argument"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 168
     :cond_0
     iput-object p1, p0, Landroid/media/audiopolicy/AudioPolicy$Builder;->mLooper:Landroid/os/Looper;
 
-    .line 169
     return-object p0
 .end method

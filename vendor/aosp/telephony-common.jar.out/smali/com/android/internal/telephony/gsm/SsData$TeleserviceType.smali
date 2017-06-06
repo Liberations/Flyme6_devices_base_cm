@@ -54,55 +54,49 @@
 
     const/4 v3, 0x0
 
-    .line 96
     new-instance v0, Lcom/android/internal/telephony/gsm/SsData$TeleserviceType;
 
-    const-string/jumbo v1, "SS_ALL_TELE_AND_BEARER_SERVICES"
+    const-string v1, "SS_ALL_TELE_AND_BEARER_SERVICES"
 
     invoke-direct {v0, v1, v3}, Lcom/android/internal/telephony/gsm/SsData$TeleserviceType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/gsm/SsData$TeleserviceType;->SS_ALL_TELE_AND_BEARER_SERVICES:Lcom/android/internal/telephony/gsm/SsData$TeleserviceType;
 
-    .line 97
     new-instance v0, Lcom/android/internal/telephony/gsm/SsData$TeleserviceType;
 
-    const-string/jumbo v1, "SS_ALL_TELESEVICES"
+    const-string v1, "SS_ALL_TELESEVICES"
 
     invoke-direct {v0, v1, v4}, Lcom/android/internal/telephony/gsm/SsData$TeleserviceType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/gsm/SsData$TeleserviceType;->SS_ALL_TELESEVICES:Lcom/android/internal/telephony/gsm/SsData$TeleserviceType;
 
-    .line 98
     new-instance v0, Lcom/android/internal/telephony/gsm/SsData$TeleserviceType;
 
-    const-string/jumbo v1, "SS_TELEPHONY"
+    const-string v1, "SS_TELEPHONY"
 
     invoke-direct {v0, v1, v5}, Lcom/android/internal/telephony/gsm/SsData$TeleserviceType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/gsm/SsData$TeleserviceType;->SS_TELEPHONY:Lcom/android/internal/telephony/gsm/SsData$TeleserviceType;
 
-    .line 99
     new-instance v0, Lcom/android/internal/telephony/gsm/SsData$TeleserviceType;
 
-    const-string/jumbo v1, "SS_ALL_DATA_TELESERVICES"
+    const-string v1, "SS_ALL_DATA_TELESERVICES"
 
     invoke-direct {v0, v1, v6}, Lcom/android/internal/telephony/gsm/SsData$TeleserviceType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/gsm/SsData$TeleserviceType;->SS_ALL_DATA_TELESERVICES:Lcom/android/internal/telephony/gsm/SsData$TeleserviceType;
 
-    .line 100
     new-instance v0, Lcom/android/internal/telephony/gsm/SsData$TeleserviceType;
 
-    const-string/jumbo v1, "SS_SMS_SERVICES"
+    const-string v1, "SS_SMS_SERVICES"
 
     invoke-direct {v0, v1, v7}, Lcom/android/internal/telephony/gsm/SsData$TeleserviceType;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/gsm/SsData$TeleserviceType;->SS_SMS_SERVICES:Lcom/android/internal/telephony/gsm/SsData$TeleserviceType;
 
-    .line 101
     new-instance v0, Lcom/android/internal/telephony/gsm/SsData$TeleserviceType;
 
-    const-string/jumbo v1, "SS_ALL_TELESERVICES_EXCEPT_SMS"
+    const-string v1, "SS_ALL_TELESERVICES_EXCEPT_SMS"
 
     const/4 v2, 0x5
 
@@ -110,7 +104,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/gsm/SsData$TeleserviceType;->SS_ALL_TELESERVICES_EXCEPT_SMS:Lcom/android/internal/telephony/gsm/SsData$TeleserviceType;
 
-    .line 95
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/android/internal/telephony/gsm/SsData$TeleserviceType;
@@ -150,7 +143,6 @@
     .locals 0
 
     .prologue
-    .line 95
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -161,7 +153,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 95
     const-class v0, Lcom/android/internal/telephony/gsm/SsData$TeleserviceType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -177,7 +168,6 @@
     .locals 1
 
     .prologue
-    .line 95
     sget-object v0, Lcom/android/internal/telephony/gsm/SsData$TeleserviceType;->$VALUES:[Lcom/android/internal/telephony/gsm/SsData$TeleserviceType;
 
     return-object v0

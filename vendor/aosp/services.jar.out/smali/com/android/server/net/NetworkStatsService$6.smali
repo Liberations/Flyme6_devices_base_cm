@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/net/NetworkStatsService;
 
     .prologue
-    .line 880
     iput-object p1, p0, Lcom/android/server/net/NetworkStatsService$6;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     invoke-direct {p0}, Lcom/android/server/net/BaseNetworkObserver;-><init>()V
@@ -42,21 +41,19 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 884
     iget-object v1, p0, Lcom/android/server/net/NetworkStatsService$6;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     invoke-static {v1}, Lcom/android/server/net/NetworkStatsService;->-get0(Lcom/android/server/net/NetworkStatsService;)Landroid/content/Context;
 
     move-result-object v1
 
-    const-string/jumbo v2, "android.permission.CONNECTIVITY_INTERNAL"
+    const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
 
-    const-string/jumbo v3, "NetworkStats"
+    const-string v3, "NetworkStats"
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 886
-    const-string/jumbo v1, "globalAlert"
+    const-string v1, "globalAlert"
 
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -64,10 +61,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 889
     const/4 v0, 0x1
 
-    .line 890
     .local v0, "flags":I
     iget-object v1, p0, Lcom/android/server/net/NetworkStatsService$6;->this$0:Lcom/android/server/net/NetworkStatsService;
 
@@ -83,7 +78,6 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 893
     iget-object v1, p0, Lcom/android/server/net/NetworkStatsService$6;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     invoke-static {v1}, Lcom/android/server/net/NetworkStatsService;->-get1(Lcom/android/server/net/NetworkStatsService;)Landroid/os/Handler;
@@ -98,7 +92,6 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 882
     .end local v0    # "flags":I
     :cond_0
     return-void

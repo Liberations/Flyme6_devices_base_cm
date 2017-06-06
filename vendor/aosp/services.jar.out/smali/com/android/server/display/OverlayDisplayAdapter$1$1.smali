@@ -25,7 +25,6 @@
     .param p2, "$anonymous0"    # Landroid/os/Handler;
 
     .prologue
-    .line 118
     iput-object p1, p0, Lcom/android/server/display/OverlayDisplayAdapter$1$1;->this$1:Lcom/android/server/display/OverlayDisplayAdapter$1;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -40,13 +39,11 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 121
     iget-object v0, p0, Lcom/android/server/display/OverlayDisplayAdapter$1$1;->this$1:Lcom/android/server/display/OverlayDisplayAdapter$1;
 
     iget-object v0, v0, Lcom/android/server/display/OverlayDisplayAdapter$1;->this$0:Lcom/android/server/display/OverlayDisplayAdapter;
 
     invoke-static {v0}, Lcom/android/server/display/OverlayDisplayAdapter;->-wrap0(Lcom/android/server/display/OverlayDisplayAdapter;)V
 
-    .line 120
     return-void
 .end method

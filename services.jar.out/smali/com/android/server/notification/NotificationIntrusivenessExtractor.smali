@@ -19,8 +19,7 @@
     .locals 2
 
     .prologue
-    .line 30
-    const-string/jumbo v0, "IntrusivenessExtractor"
+    const-string v0, "IntrusivenessExtractor"
 
     const/4 v1, 0x3
 
@@ -30,7 +29,6 @@
 
     sput-boolean v0, Lcom/android/server/notification/NotificationIntrusivenessExtractor;->DBG:Z
 
-    .line 28
     return-void
 .end method
 
@@ -38,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -52,18 +49,17 @@
     .param p2, "usageStats"    # Lcom/android/server/notification/NotificationUsageStats;
 
     .prologue
-    .line 37
     sget-boolean v0, Lcom/android/server/notification/NotificationIntrusivenessExtractor;->DBG:Z
 
     if-eqz v0, :cond_0
 
-    const-string/jumbo v0, "IntrusivenessExtractor"
+    const-string v0, "IntrusivenessExtractor"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Initializing  "
+    const-string v2, "Initializing  "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -81,7 +77,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "."
+    const-string v2, "."
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -93,7 +89,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 36
     :cond_0
     return-void
 .end method
@@ -105,7 +100,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 41
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
@@ -114,29 +108,25 @@
 
     if-nez v1, :cond_2
 
-    .line 42
     :cond_0
     sget-boolean v1, Lcom/android/server/notification/NotificationIntrusivenessExtractor;->DBG:Z
 
     if-eqz v1, :cond_1
 
-    const-string/jumbo v1, "IntrusivenessExtractor"
+    const-string v1, "IntrusivenessExtractor"
 
-    const-string/jumbo v2, "skipping empty notification"
+    const-string v2, "skipping empty notification"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 43
     :cond_1
     return-object v3
 
-    .line 46
     :cond_2
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
     move-result-object v0
 
-    .line 47
     .local v0, "notification":Landroid/app/Notification;
     iget v1, v0, Landroid/app/Notification;->defaults:I
 
@@ -144,19 +134,16 @@
 
     if-nez v1, :cond_3
 
-    .line 48
     iget-object v1, v0, Landroid/app/Notification;->vibrate:[J
 
     if-eqz v1, :cond_5
 
-    .line 52
     :cond_3
     :goto_0
     const/4 v1, 0x1
 
     invoke-virtual {p1, v1}, Lcom/android/server/notification/NotificationRecord;->setRecentlyIntrusive(Z)V
 
-    .line 55
     :cond_4
     new-instance v1, Lcom/android/server/notification/NotificationIntrusivenessExtractor$1;
 
@@ -170,7 +157,6 @@
 
     return-object v1
 
-    .line 49
     :cond_5
     iget v1, v0, Landroid/app/Notification;->defaults:I
 
@@ -178,12 +164,10 @@
 
     if-nez v1, :cond_3
 
-    .line 50
     iget-object v1, v0, Landroid/app/Notification;->sound:Landroid/net/Uri;
 
     if-nez v1, :cond_3
 
-    .line 51
     iget-object v1, v0, Landroid/app/Notification;->fullScreenIntent:Landroid/app/PendingIntent;
 
     if-eqz v1, :cond_4
@@ -196,6 +180,5 @@
     .param p1, "config"    # Lcom/android/server/notification/RankingConfig;
 
     .prologue
-    .line 69
     return-void
 .end method

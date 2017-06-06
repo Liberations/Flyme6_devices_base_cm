@@ -40,7 +40,6 @@
     .param p2, "val$deviceUsageTime"    # J
 
     .prologue
-    .line 593
     iput-object p1, p0, Lcom/android/server/usage/UserUsageStatsService$4;->this$0:Lcom/android/server/usage/UserUsageStatsService;
 
     iput-wide p2, p0, Lcom/android/server/usage/UserUsageStatsService$4;->val$deviceUsageTime:J
@@ -69,7 +68,6 @@
     .end annotation
 
     .prologue
-    .line 598
     .local p3, "accumulatedResult":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/usage/IntervalStats;>;"
     invoke-interface {p3}, Ljava/util/List;->isEmpty()Z
 
@@ -77,30 +75,24 @@
 
     if-eqz v1, :cond_0
 
-    .line 599
     new-instance v0, Lcom/android/server/usage/IntervalStats;
 
     invoke-direct {v0}, Lcom/android/server/usage/IntervalStats;-><init>()V
 
-    .line 600
     .local v0, "accum":Lcom/android/server/usage/IntervalStats;
     iget-wide v2, p1, Lcom/android/server/usage/IntervalStats;->beginTime:J
 
     iput-wide v2, v0, Lcom/android/server/usage/IntervalStats;->beginTime:J
 
-    .line 601
     invoke-interface {p3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 606
     :goto_0
     iget-wide v2, p0, Lcom/android/server/usage/UserUsageStatsService$4;->val$deviceUsageTime:J
 
     invoke-static {v0, p1, v2, v3}, Lcom/android/server/usage/UserUsageStatsService;->-wrap0(Lcom/android/server/usage/IntervalStats;Lcom/android/server/usage/IntervalStats;J)V
 
-    .line 596
     return-void
 
-    .line 603
     .end local v0    # "accum":Lcom/android/server/usage/IntervalStats;
     :cond_0
     const/4 v1, 0x0

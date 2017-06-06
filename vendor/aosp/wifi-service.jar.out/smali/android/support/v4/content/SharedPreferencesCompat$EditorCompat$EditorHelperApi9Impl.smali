@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,9 +46,7 @@
     .end param
 
     .prologue
-    .line 45
     invoke-static {p1}, Landroid/support/v4/content/EditorCompatGingerbread;->apply(Landroid/content/SharedPreferences$Editor;)V
 
-    .line 44
     return-void
 .end method

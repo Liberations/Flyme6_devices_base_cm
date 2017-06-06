@@ -25,17 +25,14 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 637
     iput-object p1, p0, Landroid/media/ImageReader$ListenerHandler;->this$0:Landroid/media/ImageReader;
 
-    .line 638
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-direct {p0, p2, v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 637
     return-void
 .end method
 
@@ -46,7 +43,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 644
     iget-object v1, p0, Landroid/media/ImageReader$ListenerHandler;->this$0:Landroid/media/ImageReader;
 
     invoke-static {v1}, Landroid/media/ImageReader;->-get2(Landroid/media/ImageReader;)Ljava/lang/Object;
@@ -55,7 +51,6 @@
 
     monitor-enter v2
 
-    .line 645
     :try_start_0
     iget-object v1, p0, Landroid/media/ImageReader$ListenerHandler;->this$0:Landroid/media/ImageReader;
 
@@ -68,19 +63,15 @@
     .local v0, "listener":Landroid/media/ImageReader$OnImageAvailableListener;
     monitor-exit v2
 
-    .line 647
     if-eqz v0, :cond_0
 
-    .line 648
     iget-object v1, p0, Landroid/media/ImageReader$ListenerHandler;->this$0:Landroid/media/ImageReader;
 
     invoke-interface {v0, v1}, Landroid/media/ImageReader$OnImageAvailableListener;->onImageAvailable(Landroid/media/ImageReader;)V
 
-    .line 642
     :cond_0
     return-void
 
-    .line 644
     .end local v0    # "listener":Landroid/media/ImageReader$OnImageAvailableListener;
     :catchall_0
     move-exception v1

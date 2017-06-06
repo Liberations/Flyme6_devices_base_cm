@@ -36,7 +36,6 @@
     .param p4, "val$ringback"    # Z
 
     .prologue
-    .line 1085
     iput-object p1, p0, Landroid/telecom/RemoteConnection$3;->this$0:Landroid/telecom/RemoteConnection;
 
     iput-object p2, p0, Landroid/telecom/RemoteConnection$3;->val$callback:Landroid/telecom/RemoteConnection$Callback;
@@ -56,7 +55,6 @@
     .locals 3
 
     .prologue
-    .line 1088
     iget-object v0, p0, Landroid/telecom/RemoteConnection$3;->val$callback:Landroid/telecom/RemoteConnection$Callback;
 
     iget-object v1, p0, Landroid/telecom/RemoteConnection$3;->val$connection:Landroid/telecom/RemoteConnection;
@@ -65,6 +63,5 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/telecom/RemoteConnection$Callback;->onRingbackRequested(Landroid/telecom/RemoteConnection;Z)V
 
-    .line 1087
     return-void
 .end method

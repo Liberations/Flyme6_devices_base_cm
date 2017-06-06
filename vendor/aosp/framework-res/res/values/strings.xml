@@ -168,7 +168,7 @@
     <string name="config_geocoderProviderPackageName">@null</string>
     <string name="config_geofenceProviderPackageName">@null</string>
     <string name="config_activityRecognitionHardwarePackageName">@null</string>
-    <string name="config_comboNetworkLocationProvider">@null</string>
+    <string name="config_comboNetworkLocationProvider">com.qualcomm.location</string>
     <string name="config_geofenceProvider">@null</string>
     <string name="config_datause_iface">rmnet0</string>
     <string name="default_sms_application">com.android.messaging</string>
@@ -181,7 +181,7 @@
     <string name="db_default_sync_mode">FULL</string>
     <string name="db_wal_sync_mode">FULL</string>
     <string name="config_useragentprofile_url" />
-    <string name="config_mms_user_agent">CyanogenMod</string>
+    <string name="config_mms_user_agent">Android-Mms/2.0</string>
     <string name="config_mms_user_agent_profile_url">http://www.google.com/oha/rdf/ua-profile-kila.xml</string>
     <string name="config_isoImagePath" />
     <string name="config_ntpServer">2.android.pool.ntp.org</string>
@@ -193,7 +193,7 @@
     <string name="config_dreamsDefaultComponent">com.google.android.deskclock/com.android.deskclock.Screensaver</string>
     <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
     <string name="config_ethernet_tcp_buffers">524288,1048576,3145728,524288,1048576,2097152</string>
-    <string name="config_wifi_tcp_buffers">524288,2097152,4194304,262144,524288,1048576</string>
+    <string name="config_wifi_tcp_buffers">524288,1048576,2097152,262144,524288,1048576</string>
     <string name="config_chooseAccountActivity">android/android.accounts.ChooseAccountActivity</string>
     <string name="config_chooseTypeAndAccountActivity">android/android.accounts.ChooseTypeAndAccountActivity</string>
     <string name="config_customResolverActivity" />
@@ -202,7 +202,7 @@
     <string name="config_customVpnConfirmDialogComponent">com.android.vpndialogs/com.android.vpndialogs.ConfirmDialog</string>
     <string name="config_appsAuthorizedForSharedAccounts">;com.android.settings;</string>
     <string name="config_defaultNetworkScorerPackageName" />
-    <string name="config_persistentDataPackageName" />
+    <string name="config_persistentDataPackageName">com.google.android.gms</string>
     <string name="config_deviceKeyHandlerLib" />
     <string name="config_deviceKeyHandlerClass" />
     <string name="config_webViewPackageName">com.android.webview</string>
@@ -210,10 +210,12 @@
     <string name="prohibit_manual_network_selection_in_gobal_mode">false</string>
     <string name="config_keyguardComponent">com.android.systemui/com.android.systemui.keyguard.KeyguardService</string>
     <string name="config_forceVoiceInteractionServicePackage" />
-    <string name="config_radio_access_family">GPRS|EDGE|UMTS|IS95A|IS95B|1XRTT|EVDO_0|EVDO_A|HSDPA|HSUPA|HSPA|EVDO_B|EHRPD|LTE|HSPAP|GSM|TD_SCDMA|HS|CDMA|EVDO|WCDMA</string>
+    <string name="config_radio_access_family" />
     <string name="config_cameraLaunchGestureSensorStringType" />
     <string name="config_networkPolicyNotificationComponent" />
     <string name="config_packagedKeyboardName" />
+    <string name="operator_config_url" />
+    <string name="operator_ping_url" />
     <string name="locale_codes" />
     <string name="month_day_year" formatted="false">%B %-e, %Y</string>
     <string name="time_of_day" formatted="false">%-l:%M:%S %p</string>
@@ -238,6 +240,15 @@
     <string name="font_family_body_1_material">sans-serif</string>
     <string name="font_family_caption_material">sans-serif</string>
     <string name="font_family_button_material">sans-serif-medium</string>
+    <string name="lc">凌晨</string>
+    <string name="lm">黎明</string>
+    <string name="zc">早晨</string>
+    <string name="sw">上午</string>
+    <string name="zw">中午</string>
+    <string name="xw">下午</string>
+    <string name="bw">晚上</string>
+    <string name="sy">深夜</string>
+    <string name="android_installing_apk_complete">Congratulations, system upgrade is complete.</string>
     <string name="byteShort">B</string>
     <string name="kilobyteShort">KB</string>
     <string name="megabyteShort">MB</string>

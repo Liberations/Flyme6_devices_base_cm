@@ -31,7 +31,6 @@
     .param p4, "val$callFlags"    # I
 
     .prologue
-    .line 164
     .local p1, "this$0":Landroid/content/pm/ParceledListSlice;, "Landroid/content/pm/ParceledListSlice<TT;>;"
     .local p3, "val$listElementClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iput-object p1, p0, Landroid/content/pm/ParceledListSlice$2;->this$0:Landroid/content/pm/ParceledListSlice;
@@ -64,23 +63,19 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 168
     if-eq p1, v5, :cond_0
 
-    .line 169
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v2
 
     return v2
 
-    .line 171
     :cond_0
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 172
     .local v0, "i":I
     invoke-static {}, Landroid/content/pm/ParceledListSlice;->-get0()Z
 
@@ -96,7 +91,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "Writing more @"
+    const-string v4, "Writing more @"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -106,7 +101,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, " of "
+    const-string v4, " of "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -124,7 +119,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 173
     :cond_1
     :goto_0
     iget v2, p0, Landroid/content/pm/ParceledListSlice$2;->val$N:I
@@ -139,10 +133,8 @@
 
     if-ge v2, v3, :cond_3
 
-    .line 174
     invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 176
     iget-object v2, p0, Landroid/content/pm/ParceledListSlice$2;->this$0:Landroid/content/pm/ParceledListSlice;
 
     invoke-static {v2}, Landroid/content/pm/ParceledListSlice;->-get2(Landroid/content/pm/ParceledListSlice;)Ljava/util/List;
@@ -155,7 +147,6 @@
 
     check-cast v1, Landroid/os/Parcelable;
 
-    .line 177
     .local v1, "parcelable":Landroid/os/Parcelable;, "TT;"
     iget-object v2, p0, Landroid/content/pm/ParceledListSlice$2;->val$listElementClass:Ljava/lang/Class;
 
@@ -165,12 +156,10 @@
 
     invoke-static {v2, v3}, Landroid/content/pm/ParceledListSlice;->-wrap0(Ljava/lang/Class;Ljava/lang/Class;)V
 
-    .line 178
     iget v2, p0, Landroid/content/pm/ParceledListSlice$2;->val$callFlags:I
 
     invoke-interface {v1, p3, v2}, Landroid/os/Parcelable;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 180
     invoke-static {}, Landroid/content/pm/ParceledListSlice;->-get0()Z
 
     move-result v2
@@ -185,7 +174,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "Wrote extra #"
+    const-string v4, "Wrote extra #"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -195,7 +184,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, ": "
+    const-string v4, ": "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -221,20 +210,17 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 181
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 183
     .end local v1    # "parcelable":Landroid/os/Parcelable;, "TT;"
     :cond_3
     iget v2, p0, Landroid/content/pm/ParceledListSlice$2;->val$N:I
 
     if-ge v0, v2, :cond_5
 
-    .line 184
     invoke-static {}, Landroid/content/pm/ParceledListSlice;->-get0()Z
 
     move-result v2
@@ -249,7 +235,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "Breaking @"
+    const-string v4, "Breaking @"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -259,7 +245,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, " of "
+    const-string v4, " of "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -277,13 +263,11 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 185
     :cond_4
     const/4 v2, 0x0
 
     invoke-virtual {p3, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 187
     :cond_5
     return v5
 .end method

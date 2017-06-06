@@ -31,7 +31,6 @@
     .locals 0
 
     .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,39 +41,32 @@
     .param p0, "state"    # I
 
     .prologue
-    .line 30
     packed-switch p0, :pswitch_data_0
 
-    .line 40
-    const-string/jumbo v0, "STATE_UNKNOWN"
+    const-string v0, "STATE_UNKNOWN"
 
     return-object v0
 
-    .line 32
     :pswitch_0
-    const-string/jumbo v0, "STATE_COOL"
+    const-string v0, "STATE_COOL"
 
     return-object v0
 
-    .line 34
     :pswitch_1
-    const-string/jumbo v0, "STATE_WARM_FALLING"
+    const-string v0, "STATE_WARM_FALLING"
 
     return-object v0
 
-    .line 36
     :pswitch_2
-    const-string/jumbo v0, "STATE_WARM_RISING"
+    const-string v0, "STATE_WARM_RISING"
 
     return-object v0
 
-    .line 38
     :pswitch_3
-    const-string/jumbo v0, "STATE_CRITICAL"
+    const-string v0, "STATE_CRITICAL"
 
     return-object v0
 
-    .line 30
     nop
 
     :pswitch_data_0

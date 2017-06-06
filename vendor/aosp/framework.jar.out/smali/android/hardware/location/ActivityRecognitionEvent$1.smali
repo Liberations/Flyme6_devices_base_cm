@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,24 +44,20 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 54
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 55
     .local v0, "activity":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 56
     .local v1, "eventType":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v2
 
-    .line 58
     .local v2, "timestampNs":J
     new-instance v4, Landroid/hardware/location/ActivityRecognitionEvent;
 
@@ -76,7 +71,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 53
     invoke-virtual {p0, p1}, Landroid/hardware/location/ActivityRecognitionEvent$1;->createFromParcel(Landroid/os/Parcel;)Landroid/hardware/location/ActivityRecognitionEvent;
 
     move-result-object v0
@@ -89,7 +83,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 63
     new-array v0, p1, [Landroid/hardware/location/ActivityRecognitionEvent;
 
     return-object v0
@@ -100,7 +93,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 62
     invoke-virtual {p0, p1}, Landroid/hardware/location/ActivityRecognitionEvent$1;->newArray(I)[Landroid/hardware/location/ActivityRecognitionEvent;
 
     move-result-object v0

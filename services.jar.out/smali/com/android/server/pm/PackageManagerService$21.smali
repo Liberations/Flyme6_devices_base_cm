@@ -29,7 +29,6 @@
     .param p2, "val$reportStatus"    # Z
 
     .prologue
-    .line 16830
     .local p3, "val$keys":Ljava/util/Set;, "Ljava/util/Set<Lcom/android/server/pm/PackageManagerService$AsecInstallArgs;>;"
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$21;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -62,12 +61,10 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 16834
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$21;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v3, v1, Lcom/android/server/pm/PackageManagerService;->mHandler:Lcom/android/server/pm/PackageManagerService$PackageHandler;
 
-    .line 16835
     iget-boolean v1, p0, Lcom/android/server/pm/PackageManagerService$21;->val$reportStatus:Z
 
     if-eqz v1, :cond_0
@@ -77,14 +74,12 @@
     :goto_0
     iget-object v4, p0, Lcom/android/server/pm/PackageManagerService$21;->val$keys:Ljava/util/Set;
 
-    .line 16834
     const/16 v5, 0xc
 
     invoke-virtual {v3, v5, v1, v2, v4}, Lcom/android/server/pm/PackageManagerService$PackageHandler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 16836
     .local v0, "msg":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$21;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -92,10 +87,8 @@
 
     invoke-virtual {v1, v0}, Lcom/android/server/pm/PackageManagerService$PackageHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 16833
     return-void
 
-    .line 16835
     .end local v0    # "msg":Landroid/os/Message;
     :cond_0
     const/4 v1, 0x0

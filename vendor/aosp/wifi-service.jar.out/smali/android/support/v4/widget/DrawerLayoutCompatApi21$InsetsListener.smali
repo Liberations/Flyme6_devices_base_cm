@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 86
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,10 +39,8 @@
 
     move-object v0, p1
 
-    .line 89
     check-cast v0, Landroid/support/v4/widget/DrawerLayoutImpl;
 
-    .line 90
     .local v0, "drawerLayout":Landroid/support/v4/widget/DrawerLayoutImpl;
     invoke-virtual {p2}, Landroid/view/WindowInsets;->getSystemWindowInsetTop()I
 
@@ -56,7 +53,6 @@
     :cond_0
     invoke-interface {v0, p2, v1}, Landroid/support/v4/widget/DrawerLayoutImpl;->setChildInsets(Ljava/lang/Object;Z)V
 
-    .line 91
     invoke-virtual {p2}, Landroid/view/WindowInsets;->consumeSystemWindowInsets()Landroid/view/WindowInsets;
 
     move-result-object v1

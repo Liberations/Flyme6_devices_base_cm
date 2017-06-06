@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 131
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,18 +44,15 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 135
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 136
     .local v0, "phoneId":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 138
     .local v1, "radioAccessFamily":I
     new-instance v2, Landroid/telephony/RadioAccessFamily;
 
@@ -70,7 +66,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 134
     invoke-virtual {p0, p1}, Landroid/telephony/RadioAccessFamily$1;->createFromParcel(Landroid/os/Parcel;)Landroid/telephony/RadioAccessFamily;
 
     move-result-object v0
@@ -83,7 +78,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 143
     new-array v0, p1, [Landroid/telephony/RadioAccessFamily;
 
     return-object v0
@@ -94,7 +88,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 142
     invoke-virtual {p0, p1}, Landroid/telephony/RadioAccessFamily$1;->newArray(I)[Landroid/telephony/RadioAccessFamily;
 
     move-result-object v0

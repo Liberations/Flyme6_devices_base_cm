@@ -45,7 +45,6 @@
     .locals 0
 
     .prologue
-    .line 677
     .local p0, "this":Landroid/os/AsyncTask$WorkerRunnable;, "Landroid/os/AsyncTask<TParams;TProgress;TResult;>.WorkerRunnable<TParams;TResult;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

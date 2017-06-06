@@ -76,15 +76,12 @@
     .locals 1
 
     .prologue
-    .line 133
     new-instance v0, Lcom/android/ims/ImsConferenceState$1;
 
     invoke-direct {v0}, Lcom/android/ims/ImsConferenceState$1;-><init>()V
 
-    .line 132
     sput-object v0, Lcom/android/ims/ImsConferenceState;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 35
     return-void
 .end method
 
@@ -92,17 +89,14 @@
     .locals 1
 
     .prologue
-    .line 90
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 88
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/ims/ImsConferenceState;->mParticipants:Ljava/util/HashMap;
 
-    .line 90
     return-void
 .end method
 
@@ -111,20 +105,16 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 93
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 88
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/ims/ImsConferenceState;->mParticipants:Ljava/util/HashMap;
 
-    .line 94
     invoke-direct {p0, p1}, Lcom/android/ims/ImsConferenceState;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 93
     return-void
 .end method
 
@@ -135,8 +125,7 @@
     .prologue
     const/4 v1, 0x4
 
-    .line 152
-    const-string/jumbo v0, "pending"
+    const-string v0, "pending"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -144,14 +133,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 153
     const/4 v0, 0x0
 
     return v0
 
-    .line 154
     :cond_0
-    const-string/jumbo v0, "dialing-in"
+    const-string v0, "dialing-in"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -159,14 +146,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 155
     const/4 v0, 0x2
 
     return v0
 
-    .line 156
     :cond_1
-    const-string/jumbo v0, "alerting"
+    const-string v0, "alerting"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -174,25 +159,21 @@
 
     if-nez v0, :cond_2
 
-    .line 157
-    const-string/jumbo v0, "dialing-out"
+    const-string v0, "dialing-out"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    .line 156
     if-eqz v0, :cond_3
 
-    .line 158
     :cond_2
     const/4 v0, 0x3
 
     return v0
 
-    .line 159
     :cond_3
-    const-string/jumbo v0, "on-hold"
+    const-string v0, "on-hold"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -200,14 +181,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 160
     const/4 v0, 0x5
 
     return v0
 
-    .line 161
     :cond_4
-    const-string/jumbo v0, "connected"
+    const-string v0, "connected"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -215,33 +194,27 @@
 
     if-nez v0, :cond_5
 
-    .line 162
-    const-string/jumbo v0, "muted-via-focus"
+    const-string v0, "muted-via-focus"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    .line 161
     if-nez v0, :cond_5
 
-    .line 163
-    const-string/jumbo v0, "disconnecting"
+    const-string v0, "disconnecting"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    .line 161
     if-eqz v0, :cond_6
 
-    .line 164
     :cond_5
     return v1
 
-    .line 165
     :cond_6
-    const-string/jumbo v0, "disconnected"
+    const-string v0, "disconnected"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -249,12 +222,10 @@
 
     if-eqz v0, :cond_7
 
-    .line 166
     const/4 v0, 0x6
 
     return v0
 
-    .line 168
     :cond_7
     return v1
 .end method
@@ -264,12 +235,10 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 123
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 125
     .local v1, "size":I
     const/4 v0, 0x0
 
@@ -277,12 +246,10 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 126
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 127
     .local v3, "user":Ljava/lang/String;
     const/4 v4, 0x0
 
@@ -292,18 +259,15 @@
 
     check-cast v2, Landroid/os/Bundle;
 
-    .line 128
     .local v2, "state":Landroid/os/Bundle;
     iget-object v4, p0, Lcom/android/ims/ImsConferenceState;->mParticipants:Ljava/util/HashMap;
 
     invoke-virtual {v4, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 125
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 122
     .end local v2    # "state":Landroid/os/Bundle;
     .end local v3    # "user":Ljava/lang/String;
     :cond_0
@@ -316,7 +280,6 @@
     .locals 1
 
     .prologue
-    .line 99
     const/4 v0, 0x0
 
     return v0
@@ -330,7 +293,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 104
     iget-object v3, p0, Lcom/android/ims/ImsConferenceState;->mParticipants:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->size()I
@@ -339,7 +301,6 @@
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 106
     iget-object v3, p0, Lcom/android/ims/ImsConferenceState;->mParticipants:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->size()I
@@ -348,23 +309,19 @@
 
     if-lez v3, :cond_0
 
-    .line 107
     iget-object v3, p0, Lcom/android/ims/ImsConferenceState;->mParticipants:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object v0
 
-    .line 109
     .local v0, "entries":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Landroid/os/Bundle;>;>;"
     if-eqz v0, :cond_0
 
-    .line 110
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    .line 112
     .local v2, "iterator":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Landroid/os/Bundle;>;>;"
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
@@ -373,14 +330,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 113
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 115
     .local v1, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Landroid/os/Bundle;>;"
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -390,7 +345,6 @@
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 116
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
@@ -401,7 +355,6 @@
 
     goto :goto_0
 
-    .line 103
     .end local v0    # "entries":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Landroid/os/Bundle;>;>;"
     .end local v1    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Landroid/os/Bundle;>;"
     .end local v2    # "iterator":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Landroid/os/Bundle;>;>;"

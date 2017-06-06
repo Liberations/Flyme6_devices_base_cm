@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/accessibility/AccessibilityManagerService;
 
     .prologue
-    .line 1343
     iput-object p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$4;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,9 +42,7 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 1346
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 1345
     return-void
 .end method

@@ -33,7 +33,6 @@
     .param p3, "val$connection"    # Landroid/telecom/RemoteConnection;
 
     .prologue
-    .line 1292
     iput-object p1, p0, Landroid/telecom/RemoteConnection$15;->this$0:Landroid/telecom/RemoteConnection;
 
     iput-object p2, p0, Landroid/telecom/RemoteConnection$15;->val$callback:Landroid/telecom/RemoteConnection$Callback;
@@ -51,10 +50,8 @@
     .locals 3
 
     .prologue
-    .line 1295
     iget-object v0, p0, Landroid/telecom/RemoteConnection$15;->val$callback:Landroid/telecom/RemoteConnection$Callback;
 
-    .line 1296
     iget-object v1, p0, Landroid/telecom/RemoteConnection$15;->val$connection:Landroid/telecom/RemoteConnection;
 
     iget-object v2, p0, Landroid/telecom/RemoteConnection$15;->this$0:Landroid/telecom/RemoteConnection;
@@ -63,9 +60,7 @@
 
     move-result-object v2
 
-    .line 1295
     invoke-virtual {v0, v1, v2}, Landroid/telecom/RemoteConnection$Callback;->onConferenceableConnectionsChanged(Landroid/telecom/RemoteConnection;Ljava/util/List;)V
 
-    .line 1294
     return-void
 .end method

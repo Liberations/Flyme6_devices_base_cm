@@ -33,7 +33,6 @@
     .param p3, "val$mediaId"    # Ljava/lang/String;
 
     .prologue
-    .line 387
     iput-object p1, p0, Landroid/media/browse/MediaBrowser$2;->this$0:Landroid/media/browse/MediaBrowser;
 
     iput-object p2, p0, Landroid/media/browse/MediaBrowser$2;->val$cb:Landroid/media/browse/MediaBrowser$ItemCallback;
@@ -51,13 +50,11 @@
     .locals 2
 
     .prologue
-    .line 390
     iget-object v0, p0, Landroid/media/browse/MediaBrowser$2;->val$cb:Landroid/media/browse/MediaBrowser$ItemCallback;
 
     iget-object v1, p0, Landroid/media/browse/MediaBrowser$2;->val$mediaId:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/media/browse/MediaBrowser$ItemCallback;->onError(Ljava/lang/String;)V
 
-    .line 389
     return-void
 .end method

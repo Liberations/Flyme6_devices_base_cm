@@ -30,7 +30,6 @@
     .param p2, "val$userHandle"    # I
 
     .prologue
-    .line 3388
     iput-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$5;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iput p2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$5;->val$userHandle:I
@@ -46,13 +45,11 @@
     .locals 6
 
     .prologue
-    .line 3392
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
     move-result-object v0
 
-    .line 3393
     .local v0, "am":Landroid/app/IActivityManager;
     invoke-interface {v0}, Landroid/app/IActivityManager;->getCurrentUser()Landroid/content/pm/UserInfo;
 
@@ -64,12 +61,10 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 3394
     const/4 v3, 0x0
 
     invoke-interface {v0, v3}, Landroid/app/IActivityManager;->switchUser(I)Z
 
-    .line 3397
     :cond_0
     iget-object v3, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$5;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
@@ -79,7 +74,6 @@
 
     move-result v1
 
-    .line 3398
     .local v1, "isManagedProfile":Z
     iget-object v3, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$5;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
@@ -93,14 +87,13 @@
 
     if-nez v3, :cond_2
 
-    .line 3399
-    const-string/jumbo v3, "DevicePolicyManagerService"
+    const-string v3, "DevicePolicyManagerService"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "Couldn\'t remove user "
+    const-string v5, "Couldn\'t remove user "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -118,20 +111,17 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3390
     .end local v0    # "am":Landroid/app/IActivityManager;
     .end local v1    # "isManagedProfile":Z
     :cond_1
     :goto_0
     return-void
 
-    .line 3400
     .restart local v0    # "am":Landroid/app/IActivityManager;
     .restart local v1    # "isManagedProfile":Z
     :cond_2
     if-eqz v1, :cond_1
 
-    .line 3401
     iget-object v3, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$5;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     invoke-static {v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->-wrap9(Lcom/android/server/devicepolicy/DevicePolicyManagerService;)V
@@ -140,7 +130,6 @@
 
     goto :goto_0
 
-    .line 3403
     .end local v0    # "am":Landroid/app/IActivityManager;
     .end local v1    # "isManagedProfile":Z
     :catch_0

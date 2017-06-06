@@ -32,24 +32,18 @@
     .param p3, "l"    # Landroid/util/LocalLog;
 
     .prologue
-    .line 75
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 76
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel$RequestInfo;->request:Landroid/net/NetworkRequest;
 
-    .line 77
     iput p2, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel$RequestInfo;->priority:I
 
-    .line 78
     iput-object p3, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel$RequestInfo;->requestLog:Landroid/util/LocalLog;
 
-    .line 79
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel$RequestInfo;->executedPhoneId:I
 
-    .line 75
     return-void
 .end method
 
@@ -59,7 +53,6 @@
     .locals 1
 
     .prologue
-    .line 87
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel$RequestInfo;->requestLog:Landroid/util/LocalLog;
 
     return-object v0
@@ -70,12 +63,10 @@
     .param p1, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 83
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel$RequestInfo;->requestLog:Landroid/util/LocalLog;
 
     invoke-virtual {v0, p1}, Landroid/util/LocalLog;->log(Ljava/lang/String;)V
 
-    .line 82
     return-void
 .end method
 
@@ -83,12 +74,11 @@
     .locals 2
 
     .prologue
-    .line 92
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "[ request="
+    const-string v1, "[ request="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -100,7 +90,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, ", executedPhoneId="
+    const-string v1, ", executedPhoneId="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -112,26 +102,20 @@
 
     move-result-object v0
 
-    .line 93
-    const-string/jumbo v1, ", priority="
+    const-string v1, ", priority="
 
-    .line 92
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 93
     iget v1, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchAsyncChannel$RequestInfo;->priority:I
 
-    .line 92
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 93
-    const-string/jumbo v1, "]"
+    const-string v1, "]"
 
-    .line 92
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0

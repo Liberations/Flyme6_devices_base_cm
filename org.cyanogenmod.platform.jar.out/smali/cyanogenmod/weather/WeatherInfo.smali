@@ -187,15 +187,12 @@
     .locals 1
 
     .prologue
-    .line 413
     new-instance v0, Lcyanogenmod/weather/WeatherInfo$1;
 
     invoke-direct {v0}, Lcyanogenmod/weather/WeatherInfo$1;-><init>()V
 
-    .line 412
     sput-object v0, Lcyanogenmod/weather/WeatherInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 44
     return-void
 .end method
 
@@ -203,7 +200,6 @@
     .locals 0
 
     .prologue
-    .line 60
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -214,116 +210,98 @@
     .param p1, "parcel"    # Landroid/os/Parcel;
 
     .prologue
-    .line 350
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 352
     invoke-static {p1}, Lcyanogenmod/os/Concierge;->receiveParcel(Landroid/os/Parcel;)Lcyanogenmod/os/Concierge$ParcelInfo;
 
     move-result-object v1
 
-    .line 353
     .local v1, "parcelInfo":Lcyanogenmod/os/Concierge$ParcelInfo;
     invoke-virtual {v1}, Lcyanogenmod/os/Concierge$ParcelInfo;->getParcelVersion()I
 
     move-result v2
 
-    .line 355
     .local v2, "parcelableVersion":I
     const/4 v3, 0x5
 
     if-lt v2, v3, :cond_0
 
-    .line 356
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, p0, Lcyanogenmod/weather/WeatherInfo;->mKey:Ljava/lang/String;
 
-    .line 357
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, p0, Lcyanogenmod/weather/WeatherInfo;->mCity:Ljava/lang/String;
 
-    .line 358
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     iput v3, p0, Lcyanogenmod/weather/WeatherInfo;->mConditionCode:I
 
-    .line 359
     invoke-virtual {p1}, Landroid/os/Parcel;->readDouble()D
 
     move-result-wide v4
 
     iput-wide v4, p0, Lcyanogenmod/weather/WeatherInfo;->mTemperature:D
 
-    .line 360
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     iput v3, p0, Lcyanogenmod/weather/WeatherInfo;->mTempUnit:I
 
-    .line 361
     invoke-virtual {p1}, Landroid/os/Parcel;->readDouble()D
 
     move-result-wide v4
 
     iput-wide v4, p0, Lcyanogenmod/weather/WeatherInfo;->mHumidity:D
 
-    .line 362
     invoke-virtual {p1}, Landroid/os/Parcel;->readDouble()D
 
     move-result-wide v4
 
     iput-wide v4, p0, Lcyanogenmod/weather/WeatherInfo;->mWindSpeed:D
 
-    .line 363
     invoke-virtual {p1}, Landroid/os/Parcel;->readDouble()D
 
     move-result-wide v4
 
     iput-wide v4, p0, Lcyanogenmod/weather/WeatherInfo;->mWindDirection:D
 
-    .line 364
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     iput v3, p0, Lcyanogenmod/weather/WeatherInfo;->mWindSpeedUnit:I
 
-    .line 365
     invoke-virtual {p1}, Landroid/os/Parcel;->readDouble()D
 
     move-result-wide v4
 
     iput-wide v4, p0, Lcyanogenmod/weather/WeatherInfo;->mTodaysHighTemp:D
 
-    .line 366
     invoke-virtual {p1}, Landroid/os/Parcel;->readDouble()D
 
     move-result-wide v4
 
     iput-wide v4, p0, Lcyanogenmod/weather/WeatherInfo;->mTodaysLowTemp:D
 
-    .line 367
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v4
 
     iput-wide v4, p0, Lcyanogenmod/weather/WeatherInfo;->mTimestamp:J
 
-    .line 368
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 369
     .local v0, "forecastListSize":I
     new-instance v3, Ljava/util/ArrayList;
 
@@ -331,11 +309,9 @@
 
     iput-object v3, p0, Lcyanogenmod/weather/WeatherInfo;->mForecastList:Ljava/util/List;
 
-    .line 370
     :goto_0
     if-lez v0, :cond_0
 
-    .line 371
     iget-object v4, p0, Lcyanogenmod/weather/WeatherInfo;->mForecastList:Ljava/util/List;
 
     sget-object v3, Lcyanogenmod/weather/WeatherInfo$DayForecast;->CREATOR:Landroid/os/Parcelable$Creator;
@@ -348,17 +324,14 @@
 
     invoke-interface {v4, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 372
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 377
     .end local v0    # "forecastListSize":I
     :cond_0
     invoke-virtual {v1}, Lcyanogenmod/os/Concierge$ParcelInfo;->complete()V
 
-    .line 350
     return-void
 .end method
 
@@ -388,24 +361,19 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 255
     if-ltz p0, :cond_0
 
-    .line 256
     const/16 v0, 0x2c
 
     if-le p0, v0, :cond_1
 
-    .line 257
     :cond_0
     const/16 v0, 0xc80
 
     if-eq p0, v0, :cond_1
 
-    .line 258
     return v1
 
-    .line 261
     :cond_1
     const/4 v0, 0x1
 
@@ -418,7 +386,6 @@
     .locals 1
 
     .prologue
-    .line 382
     const/4 v0, 0x0
 
     return v0
@@ -431,12 +398,10 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 632
     if-nez p1, :cond_0
 
     return v3
 
-    .line 634
     :cond_0
     invoke-virtual {p0}, Lcyanogenmod/weather/WeatherInfo;->getClass()Ljava/lang/Class;
 
@@ -450,10 +415,8 @@
 
     move-object v0, p1
 
-    .line 635
     check-cast v0, Lcyanogenmod/weather/WeatherInfo;
 
-    .line 636
     .local v0, "info":Lcyanogenmod/weather/WeatherInfo;
     iget-object v1, p0, Lcyanogenmod/weather/WeatherInfo;->mKey:Ljava/lang/String;
 
@@ -465,7 +428,6 @@
 
     return v1
 
-    .line 638
     .end local v0    # "info":Lcyanogenmod/weather/WeatherInfo;
     :cond_1
     return v3
@@ -475,7 +437,6 @@
     .locals 1
 
     .prologue
-    .line 268
     iget-object v0, p0, Lcyanogenmod/weather/WeatherInfo;->mCity:Ljava/lang/String;
 
     return-object v0
@@ -485,7 +446,6 @@
     .locals 1
 
     .prologue
-    .line 275
     iget v0, p0, Lcyanogenmod/weather/WeatherInfo;->mConditionCode:I
 
     return v0
@@ -504,7 +464,6 @@
     .end annotation
 
     .prologue
-    .line 347
     new-instance v0, Ljava/util/ArrayList;
 
     iget-object v1, p0, Lcyanogenmod/weather/WeatherInfo;->mForecastList:Ljava/util/List;
@@ -518,7 +477,6 @@
     .locals 2
 
     .prologue
-    .line 282
     iget-wide v0, p0, Lcyanogenmod/weather/WeatherInfo;->mHumidity:D
 
     return-wide v0
@@ -528,7 +486,6 @@
     .locals 2
 
     .prologue
-    .line 317
     iget-wide v0, p0, Lcyanogenmod/weather/WeatherInfo;->mTemperature:D
 
     return-wide v0
@@ -538,7 +495,6 @@
     .locals 1
 
     .prologue
-    .line 324
     iget v0, p0, Lcyanogenmod/weather/WeatherInfo;->mTempUnit:I
 
     return v0
@@ -548,7 +504,6 @@
     .locals 2
 
     .prologue
-    .line 289
     iget-wide v0, p0, Lcyanogenmod/weather/WeatherInfo;->mTimestamp:J
 
     return-wide v0
@@ -558,7 +513,6 @@
     .locals 2
 
     .prologue
-    .line 331
     iget-wide v0, p0, Lcyanogenmod/weather/WeatherInfo;->mTodaysHighTemp:D
 
     return-wide v0
@@ -568,7 +522,6 @@
     .locals 2
 
     .prologue
-    .line 338
     iget-wide v0, p0, Lcyanogenmod/weather/WeatherInfo;->mTodaysLowTemp:D
 
     return-wide v0
@@ -578,7 +531,6 @@
     .locals 2
 
     .prologue
-    .line 296
     iget-wide v0, p0, Lcyanogenmod/weather/WeatherInfo;->mWindDirection:D
 
     return-wide v0
@@ -588,7 +540,6 @@
     .locals 2
 
     .prologue
-    .line 303
     iget-wide v0, p0, Lcyanogenmod/weather/WeatherInfo;->mWindSpeed:D
 
     return-wide v0
@@ -598,7 +549,6 @@
     .locals 1
 
     .prologue
-    .line 310
     iget v0, p0, Lcyanogenmod/weather/WeatherInfo;->mWindSpeedUnit:I
 
     return v0
@@ -608,10 +558,8 @@
     .locals 3
 
     .prologue
-    .line 624
     const/16 v0, 0x1f
 
-    .line 626
     .local v0, "prime":I
     iget-object v2, p0, Lcyanogenmod/weather/WeatherInfo;->mKey:Ljava/lang/String;
 
@@ -626,11 +574,9 @@
     :goto_0
     add-int/lit8 v1, v2, 0x1f
 
-    .line 627
     .local v1, "result":I
     return v1
 
-    .line 626
     .end local v1    # "result":I
     :cond_0
     const/4 v2, 0x0
@@ -642,196 +588,148 @@
     .locals 6
 
     .prologue
-    .line 604
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 605
-    const-string/jumbo v4, " City Name: "
+    const-string v4, " City Name: "
 
-    .line 604
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 605
     iget-object v4, p0, Lcyanogenmod/weather/WeatherInfo;->mCity:Ljava/lang/String;
 
-    .line 604
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 606
-    const-string/jumbo v4, " Condition Code: "
+    const-string v4, " Condition Code: "
 
-    .line 604
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 606
     iget v4, p0, Lcyanogenmod/weather/WeatherInfo;->mConditionCode:I
 
-    .line 604
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 607
-    const-string/jumbo v4, " Temperature: "
+    const-string v4, " Temperature: "
 
-    .line 604
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 607
     iget-wide v4, p0, Lcyanogenmod/weather/WeatherInfo;->mTemperature:D
 
-    .line 604
     invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 608
-    const-string/jumbo v4, " Temperature Unit: "
+    const-string v4, " Temperature Unit: "
 
-    .line 604
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 608
     iget v4, p0, Lcyanogenmod/weather/WeatherInfo;->mTempUnit:I
 
-    .line 604
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 609
-    const-string/jumbo v4, " Humidity: "
+    const-string v4, " Humidity: "
 
-    .line 604
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 609
     iget-wide v4, p0, Lcyanogenmod/weather/WeatherInfo;->mHumidity:D
 
-    .line 604
     invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 610
-    const-string/jumbo v4, " Wind speed: "
+    const-string v4, " Wind speed: "
 
-    .line 604
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 610
     iget-wide v4, p0, Lcyanogenmod/weather/WeatherInfo;->mWindSpeed:D
 
-    .line 604
     invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 611
-    const-string/jumbo v4, " Wind direction: "
+    const-string v4, " Wind direction: "
 
-    .line 604
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 611
     iget-wide v4, p0, Lcyanogenmod/weather/WeatherInfo;->mWindDirection:D
 
-    .line 604
     invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 612
-    const-string/jumbo v4, " Wind Speed Unit: "
+    const-string v4, " Wind Speed Unit: "
 
-    .line 604
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 612
     iget v4, p0, Lcyanogenmod/weather/WeatherInfo;->mWindSpeedUnit:I
 
-    .line 604
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 613
-    const-string/jumbo v4, " Today\'s high temp: "
+    const-string v4, " Today\'s high temp: "
 
-    .line 604
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 613
     iget-wide v4, p0, Lcyanogenmod/weather/WeatherInfo;->mTodaysHighTemp:D
 
-    .line 604
     invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 614
-    const-string/jumbo v4, " Today\'s low temp: "
+    const-string v4, " Today\'s low temp: "
 
-    .line 604
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 614
     iget-wide v4, p0, Lcyanogenmod/weather/WeatherInfo;->mTodaysLowTemp:D
 
-    .line 604
     invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 615
-    const-string/jumbo v4, " Timestamp: "
+    const-string v4, " Timestamp: "
 
-    .line 604
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 615
     iget-wide v4, p0, Lcyanogenmod/weather/WeatherInfo;->mTimestamp:J
 
-    .line 604
     invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 615
-    const-string/jumbo v4, " Forecasts: ["
+    const-string v4, " Forecasts: ["
 
-    .line 604
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 616
     .local v0, "builder":Ljava/lang/StringBuilder;
     iget-object v3, p0, Lcyanogenmod/weather/WeatherInfo;->mForecastList:Ljava/util/List;
 
@@ -853,7 +751,6 @@
 
     check-cast v1, Lcyanogenmod/weather/WeatherInfo$DayForecast;
 
-    .line 617
     .local v1, "dayForecast":Lcyanogenmod/weather/WeatherInfo$DayForecast;
     invoke-virtual {v1}, Lcyanogenmod/weather/WeatherInfo$DayForecast;->toString()Ljava/lang/String;
 
@@ -863,10 +760,9 @@
 
     goto :goto_0
 
-    .line 619
     .end local v1    # "dayForecast":Lcyanogenmod/weather/WeatherInfo$DayForecast;
     :cond_0
-    const-string/jumbo v3, "]}"
+    const-string v3, "]}"
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -885,73 +781,59 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 388
     invoke-static {p1}, Lcyanogenmod/os/Concierge;->prepareParcel(Landroid/os/Parcel;)Lcyanogenmod/os/Concierge$ParcelInfo;
 
     move-result-object v2
 
-    .line 391
     .local v2, "parcelInfo":Lcyanogenmod/os/Concierge$ParcelInfo;
     iget-object v3, p0, Lcyanogenmod/weather/WeatherInfo;->mKey:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 392
     iget-object v3, p0, Lcyanogenmod/weather/WeatherInfo;->mCity:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 393
     iget v3, p0, Lcyanogenmod/weather/WeatherInfo;->mConditionCode:I
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 394
     iget-wide v4, p0, Lcyanogenmod/weather/WeatherInfo;->mTemperature:D
 
     invoke-virtual {p1, v4, v5}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 395
     iget v3, p0, Lcyanogenmod/weather/WeatherInfo;->mTempUnit:I
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 396
     iget-wide v4, p0, Lcyanogenmod/weather/WeatherInfo;->mHumidity:D
 
     invoke-virtual {p1, v4, v5}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 397
     iget-wide v4, p0, Lcyanogenmod/weather/WeatherInfo;->mWindSpeed:D
 
     invoke-virtual {p1, v4, v5}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 398
     iget-wide v4, p0, Lcyanogenmod/weather/WeatherInfo;->mWindDirection:D
 
     invoke-virtual {p1, v4, v5}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 399
     iget v3, p0, Lcyanogenmod/weather/WeatherInfo;->mWindSpeedUnit:I
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 400
     iget-wide v4, p0, Lcyanogenmod/weather/WeatherInfo;->mTodaysHighTemp:D
 
     invoke-virtual {p1, v4, v5}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 401
     iget-wide v4, p0, Lcyanogenmod/weather/WeatherInfo;->mTodaysLowTemp:D
 
     invoke-virtual {p1, v4, v5}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 402
     iget-wide v4, p0, Lcyanogenmod/weather/WeatherInfo;->mTimestamp:J
 
     invoke-virtual {p1, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 403
     iget-object v3, p0, Lcyanogenmod/weather/WeatherInfo;->mForecastList:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->size()I
@@ -960,7 +842,6 @@
 
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 404
     iget-object v3, p0, Lcyanogenmod/weather/WeatherInfo;->mForecastList:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -981,7 +862,6 @@
 
     check-cast v0, Lcyanogenmod/weather/WeatherInfo$DayForecast;
 
-    .line 405
     .local v0, "dayForecast":Lcyanogenmod/weather/WeatherInfo$DayForecast;
     const/4 v3, 0x0
 
@@ -989,11 +869,9 @@
 
     goto :goto_0
 
-    .line 409
     .end local v0    # "dayForecast":Lcyanogenmod/weather/WeatherInfo$DayForecast;
     :cond_0
     invoke-virtual {v2}, Lcyanogenmod/os/Concierge$ParcelInfo;->complete()V
 
-    .line 386
     return-void
 .end method

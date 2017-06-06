@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/net/NetworkStatsService;
 
     .prologue
-    .line 847
     iput-object p1, p0, Lcom/android/server/net/NetworkStatsService$4;->this$0:Lcom/android/server/net/NetworkStatsService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -42,20 +41,17 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 853
-    const-string/jumbo v1, "android.intent.extra.user_handle"
+    const-string v1, "android.intent.extra.user_handle"
 
     invoke-virtual {p2, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 854
     .local v0, "userId":I
     if-ne v0, v2, :cond_0
 
     return-void
 
-    .line 856
     :cond_0
     iget-object v1, p0, Lcom/android/server/net/NetworkStatsService$4;->this$0:Lcom/android/server/net/NetworkStatsService;
 
@@ -65,7 +61,6 @@
 
     monitor-enter v2
 
-    .line 857
     :try_start_0
     iget-object v1, p0, Lcom/android/server/net/NetworkStatsService$4;->this$0:Lcom/android/server/net/NetworkStatsService;
 
@@ -77,7 +72,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 859
     :try_start_1
     iget-object v1, p0, Lcom/android/server/net/NetworkStatsService$4;->this$0:Lcom/android/server/net/NetworkStatsService;
 
@@ -85,7 +79,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 861
     :try_start_2
     iget-object v1, p0, Lcom/android/server/net/NetworkStatsService$4;->this$0:Lcom/android/server/net/NetworkStatsService;
 
@@ -99,14 +92,11 @@
 
     monitor-exit v2
 
-    .line 849
     return-void
 
-    .line 860
     :catchall_0
     move-exception v1
 
-    .line 861
     :try_start_3
     iget-object v3, p0, Lcom/android/server/net/NetworkStatsService$4;->this$0:Lcom/android/server/net/NetworkStatsService;
 
@@ -116,12 +106,10 @@
 
     invoke-virtual {v3}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 860
     throw v1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 856
     :catchall_1
     move-exception v1
 

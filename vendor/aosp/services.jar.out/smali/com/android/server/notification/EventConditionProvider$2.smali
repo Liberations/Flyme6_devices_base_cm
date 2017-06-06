@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/notification/EventConditionProvider;
 
     .prologue
-    .line 315
     iput-object p1, p0, Lcom/android/server/notification/EventConditionProvider$2;->this$0:Lcom/android/server/notification/EventConditionProvider;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,20 +39,19 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 318
     invoke-static {}, Lcom/android/server/notification/EventConditionProvider;->-get0()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    const-string/jumbo v0, "ConditionProviders.ECP"
+    const-string v0, "ConditionProviders.ECP"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onReceive "
+    const-string v2, "onReceive "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -73,12 +71,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 319
     :cond_0
     iget-object v0, p0, Lcom/android/server/notification/EventConditionProvider$2;->this$0:Lcom/android/server/notification/EventConditionProvider;
 
     invoke-static {v0}, Lcom/android/server/notification/EventConditionProvider;->-wrap1(Lcom/android/server/notification/EventConditionProvider;)V
 
-    .line 317
     return-void
 .end method

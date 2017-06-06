@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/widget/SlidingDrawer;
 
     .prologue
-    .line 960
     iput-object p1, p0, Landroid/widget/SlidingDrawer$DrawerToggler;->this$0:Landroid/widget/SlidingDrawer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 962
     iget-object v0, p0, Landroid/widget/SlidingDrawer$DrawerToggler;->this$0:Landroid/widget/SlidingDrawer;
 
     invoke-static {v0}, Landroid/widget/SlidingDrawer;->-get1(Landroid/widget/SlidingDrawer;)Z
@@ -61,10 +59,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 963
     return-void
 
-    .line 969
     :cond_0
     iget-object v0, p0, Landroid/widget/SlidingDrawer$DrawerToggler;->this$0:Landroid/widget/SlidingDrawer;
 
@@ -74,16 +70,13 @@
 
     if-eqz v0, :cond_1
 
-    .line 970
     iget-object v0, p0, Landroid/widget/SlidingDrawer$DrawerToggler;->this$0:Landroid/widget/SlidingDrawer;
 
     invoke-virtual {v0}, Landroid/widget/SlidingDrawer;->animateToggle()V
 
-    .line 961
     :goto_0
     return-void
 
-    .line 972
     :cond_1
     iget-object v0, p0, Landroid/widget/SlidingDrawer$DrawerToggler;->this$0:Landroid/widget/SlidingDrawer;
 

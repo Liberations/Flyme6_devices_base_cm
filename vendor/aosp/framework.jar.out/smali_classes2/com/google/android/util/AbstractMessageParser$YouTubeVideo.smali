@@ -27,17 +27,14 @@
     .locals 1
 
     .prologue
-    .line 872
-    const-string/jumbo v0, "(?i)http://(?:[a-z0-9]+\\.)?youtube\\.[a-z0-9]+(?:\\.[a-z0-9]+)?/watch\\?.*\\bv=([-_a-zA-Z0-9=]+).*"
+    const-string v0, "(?i)http://(?:[a-z0-9]+\\.)?youtube\\.[a-z0-9]+(?:\\.[a-z0-9]+)?/watch\\?.*\\bv=([-_a-zA-Z0-9=]+).*"
 
-    .line 871
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/android/util/AbstractMessageParser$YouTubeVideo;->URL_PATTERN:Ljava/util/regex/Pattern;
 
-    .line 869
     return-void
 .end method
 
@@ -47,15 +44,12 @@
     .param p2, "text"    # Ljava/lang/String;
 
     .prologue
-    .line 878
     sget-object v0, Lcom/google/android/util/AbstractMessageParser$Token$Type;->YOUTUBE_VIDEO:Lcom/google/android/util/AbstractMessageParser$Token$Type;
 
     invoke-direct {p0, v0, p2}, Lcom/google/android/util/AbstractMessageParser$Token;-><init>(Lcom/google/android/util/AbstractMessageParser$Token$Type;Ljava/lang/String;)V
 
-    .line 879
     iput-object p1, p0, Lcom/google/android/util/AbstractMessageParser$YouTubeVideo;->docid:Ljava/lang/String;
 
-    .line 877
     return-void
 .end method
 
@@ -67,31 +61,23 @@
     .param p3, "extraParams"    # Ljava/lang/String;
 
     .prologue
-    .line 931
-    const-string/jumbo v0, ""
+    const-string v0, ""
 
-    .line 933
     .local v0, "protocol":Ljava/lang/String;
     if-eqz p0, :cond_0
 
-    .line 934
-    const-string/jumbo v0, "http://"
+    const-string v0, "http://"
 
-    .line 937
     :cond_0
     if-nez p1, :cond_1
 
-    .line 938
-    const-string/jumbo p1, ""
+    const-string p1, ""
 
-    .line 941
     :cond_1
     if-nez p3, :cond_3
 
-    .line 942
-    const-string/jumbo p3, ""
+    const-string p3, ""
 
-    .line 947
     :cond_2
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
@@ -106,7 +92,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "youtube.com/watch?"
+    const-string v2, "youtube.com/watch?"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -116,7 +102,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "v="
+    const-string v2, "v="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -132,7 +118,6 @@
 
     return-object v1
 
-    .line 943
     :cond_3
     invoke-virtual {p3}, Ljava/lang/String;->length()I
 
@@ -140,7 +125,6 @@
 
     if-lez v1, :cond_2
 
-    .line 944
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -149,7 +133,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "&"
+    const-string v2, "&"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -167,12 +151,11 @@
     .param p0, "docid"    # Ljava/lang/String;
 
     .prologue
-    .line 906
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "http://youtube.com/watch?v="
+    const-string v1, "http://youtube.com/watch?v="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -194,7 +177,6 @@
     .param p0, "docid"    # Ljava/lang/String;
 
     .prologue
-    .line 911
     const/4 v0, 0x0
 
     invoke-static {p0, v0}, Lcom/google/android/util/AbstractMessageParser$YouTubeVideo;->getURL(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -210,20 +192,17 @@
     .param p1, "extraParams"    # Ljava/lang/String;
 
     .prologue
-    .line 916
     if-nez p1, :cond_1
 
-    .line 917
-    const-string/jumbo p1, ""
+    const-string p1, ""
 
-    .line 921
     :cond_0
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "http://youtube.com/watch?"
+    const-string v1, "http://youtube.com/watch?"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -233,7 +212,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "v="
+    const-string v1, "v="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -249,7 +228,6 @@
 
     return-object v0
 
-    .line 918
     :cond_1
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -257,7 +235,6 @@
 
     if-lez v0, :cond_0
 
-    .line 919
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -266,7 +243,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "&"
+    const-string v1, "&"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -285,14 +262,12 @@
     .param p1, "text"    # Ljava/lang/String;
 
     .prologue
-    .line 889
     sget-object v1, Lcom/google/android/util/AbstractMessageParser$YouTubeVideo;->URL_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v1, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
-    .line 890
     .local v0, "m":Ljava/util/regex/Matcher;
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
@@ -300,7 +275,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 891
     new-instance v1, Lcom/google/android/util/AbstractMessageParser$YouTubeVideo;
 
     const/4 v2, 0x1
@@ -313,7 +287,6 @@
 
     return-object v1
 
-    .line 893
     :cond_0
     const/4 v1, 0x0
 
@@ -326,7 +299,6 @@
     .locals 1
 
     .prologue
-    .line 882
     iget-object v0, p0, Lcom/google/android/util/AbstractMessageParser$YouTubeVideo;->docid:Ljava/lang/String;
 
     return-object v0
@@ -345,12 +317,10 @@
     .end annotation
 
     .prologue
-    .line 898
     invoke-super {p0}, Lcom/google/android/util/AbstractMessageParser$Token;->getInfo()Ljava/util/List;
 
     move-result-object v0
 
-    .line 899
     .local v0, "info":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iget-object v1, p0, Lcom/google/android/util/AbstractMessageParser$YouTubeVideo;->docid:Ljava/lang/String;
 
@@ -360,7 +330,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 900
     iget-object v1, p0, Lcom/google/android/util/AbstractMessageParser$YouTubeVideo;->docid:Ljava/lang/String;
 
     invoke-static {v1}, Lcom/google/android/util/AbstractMessageParser$YouTubeVideo;->getURL(Ljava/lang/String;)Ljava/lang/String;
@@ -369,7 +338,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 901
     return-object v0
 .end method
 
@@ -377,7 +345,6 @@
     .locals 1
 
     .prologue
-    .line 884
     const/4 v0, 0x0
 
     return v0
@@ -387,7 +354,6 @@
     .locals 1
 
     .prologue
-    .line 885
     const/4 v0, 0x1
 
     return v0

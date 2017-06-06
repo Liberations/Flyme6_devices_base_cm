@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,7 +19,6 @@
     .param p1, "src"    # Landroid/view/View;
 
     .prologue
-    .line 28
     check-cast p0, Landroid/widget/ListPopupWindow;
 
     .end local p0    # "listPopupWindow":Ljava/lang/Object;

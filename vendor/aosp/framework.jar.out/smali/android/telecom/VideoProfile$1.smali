@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 150
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,18 +44,15 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 159
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 160
     .local v2, "state":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 162
     .local v1, "quality":I
     const-class v3, Landroid/telecom/VideoProfile;
 
@@ -64,7 +60,6 @@
 
     move-result-object v0
 
-    .line 163
     .local v0, "classLoader":Ljava/lang/ClassLoader;
     new-instance v3, Landroid/telecom/VideoProfile;
 
@@ -78,7 +73,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 158
     invoke-virtual {p0, p1}, Landroid/telecom/VideoProfile$1;->createFromParcel(Landroid/os/Parcel;)Landroid/telecom/VideoProfile;
 
     move-result-object v0
@@ -91,7 +85,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 168
     new-array v0, p1, [Landroid/telecom/VideoProfile;
 
     return-object v0
@@ -102,7 +95,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 167
     invoke-virtual {p0, p1}, Landroid/telecom/VideoProfile$1;->newArray(I)[Landroid/telecom/VideoProfile;
 
     move-result-object v0

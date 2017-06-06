@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 422
     invoke-direct {p0}, Landroid/view/animation/Animation;-><init>()V
 
     return-void
@@ -33,7 +32,6 @@
     .param p3, "outTransformation"    # Landroid/view/animation/Transformation;
 
     .prologue
-    .line 425
     const/4 v0, 0x0
 
     return v0

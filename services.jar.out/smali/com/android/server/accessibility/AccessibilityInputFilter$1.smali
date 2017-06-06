@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/accessibility/AccessibilityInputFilter;
 
     .prologue
-    .line 66
     iput-object p1, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$1;->this$0:Lcom/android/server/accessibility/AccessibilityInputFilter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 3
 
     .prologue
-    .line 69
     iget-object v2, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$1;->this$0:Lcom/android/server/accessibility/AccessibilityInputFilter;
 
     invoke-static {v2}, Lcom/android/server/accessibility/AccessibilityInputFilter;->-get0(Lcom/android/server/accessibility/AccessibilityInputFilter;)Landroid/view/Choreographer;
@@ -52,13 +50,11 @@
 
     move-result-wide v0
 
-    .line 73
     .local v0, "frameTimeNanos":J
     iget-object v2, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$1;->this$0:Lcom/android/server/accessibility/AccessibilityInputFilter;
 
     invoke-static {v2, v0, v1}, Lcom/android/server/accessibility/AccessibilityInputFilter;->-wrap0(Lcom/android/server/accessibility/AccessibilityInputFilter;J)V
 
-    .line 77
     iget-object v2, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$1;->this$0:Lcom/android/server/accessibility/AccessibilityInputFilter;
 
     invoke-static {v2}, Lcom/android/server/accessibility/AccessibilityInputFilter;->-get1(Lcom/android/server/accessibility/AccessibilityInputFilter;)Lcom/android/server/accessibility/AccessibilityInputFilter$MotionEventHolder;
@@ -67,12 +63,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 78
     iget-object v2, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$1;->this$0:Lcom/android/server/accessibility/AccessibilityInputFilter;
 
     invoke-static {v2}, Lcom/android/server/accessibility/AccessibilityInputFilter;->-wrap1(Lcom/android/server/accessibility/AccessibilityInputFilter;)V
 
-    .line 68
     :cond_0
     return-void
 .end method

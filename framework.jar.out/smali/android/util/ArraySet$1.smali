@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 611
     .local p1, "this$0":Landroid/util/ArraySet;, "Landroid/util/ArraySet<TE;>;"
     iput-object p1, p0, Landroid/util/ArraySet$1;->this$0:Landroid/util/ArraySet;
 
@@ -45,12 +44,10 @@
     .locals 1
 
     .prologue
-    .line 654
     iget-object v0, p0, Landroid/util/ArraySet$1;->this$0:Landroid/util/ArraySet;
 
     invoke-virtual {v0}, Landroid/util/ArraySet;->clear()V
 
-    .line 653
     return-void
 .end method
 
@@ -60,7 +57,6 @@
     .param p2, "offset"    # I
 
     .prologue
-    .line 619
     iget-object v0, p0, Landroid/util/ArraySet$1;->this$0:Landroid/util/ArraySet;
 
     iget-object v0, v0, Landroid/util/ArraySet;->mArray:[Ljava/lang/Object;
@@ -81,10 +77,9 @@
     .end annotation
 
     .prologue
-    .line 634
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    const-string/jumbo v1, "not a map"
+    const-string v1, "not a map"
 
     invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
@@ -95,7 +90,6 @@
     .locals 1
 
     .prologue
-    .line 614
     iget-object v0, p0, Landroid/util/ArraySet$1;->this$0:Landroid/util/ArraySet;
 
     iget v0, v0, Landroid/util/ArraySet;->mSize:I
@@ -108,7 +102,6 @@
     .param p1, "key"    # Ljava/lang/Object;
 
     .prologue
-    .line 624
     iget-object v0, p0, Landroid/util/ArraySet$1;->this$0:Landroid/util/ArraySet;
 
     invoke-virtual {v0, p1}, Landroid/util/ArraySet;->indexOf(Ljava/lang/Object;)I
@@ -123,7 +116,6 @@
     .param p1, "value"    # Ljava/lang/Object;
 
     .prologue
-    .line 629
     iget-object v0, p0, Landroid/util/ArraySet$1;->this$0:Landroid/util/ArraySet;
 
     invoke-virtual {v0, p1}, Landroid/util/ArraySet;->indexOf(Ljava/lang/Object;)I
@@ -142,14 +134,12 @@
     .end annotation
 
     .prologue
-    .line 639
     .local p1, "key":Ljava/lang/Object;, "TE;"
     .local p2, "value":Ljava/lang/Object;, "TE;"
     iget-object v0, p0, Landroid/util/ArraySet$1;->this$0:Landroid/util/ArraySet;
 
     invoke-virtual {v0, p1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 638
     return-void
 .end method
 
@@ -158,12 +148,10 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 649
     iget-object v0, p0, Landroid/util/ArraySet$1;->this$0:Landroid/util/ArraySet;
 
     invoke-virtual {v0, p1}, Landroid/util/ArraySet;->removeAt(I)Ljava/lang/Object;
 
-    .line 648
     return-void
 .end method
 
@@ -177,11 +165,10 @@
     .end annotation
 
     .prologue
-    .line 644
     .local p2, "value":Ljava/lang/Object;, "TE;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    const-string/jumbo v1, "not a map"
+    const-string v1, "not a map"
 
     invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 

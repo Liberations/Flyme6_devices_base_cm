@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/speech/tts/AudioPlaybackQueueItem;
 
     .prologue
-    .line 75
     iput-object p1, p0, Landroid/speech/tts/AudioPlaybackQueueItem$2;->this$0:Landroid/speech/tts/AudioPlaybackQueueItem;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,14 +41,12 @@
     .param p1, "mp"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 78
     iget-object v0, p0, Landroid/speech/tts/AudioPlaybackQueueItem$2;->this$0:Landroid/speech/tts/AudioPlaybackQueueItem;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Landroid/speech/tts/AudioPlaybackQueueItem;->-set0(Landroid/speech/tts/AudioPlaybackQueueItem;Z)Z
 
-    .line 79
     iget-object v0, p0, Landroid/speech/tts/AudioPlaybackQueueItem$2;->this$0:Landroid/speech/tts/AudioPlaybackQueueItem;
 
     invoke-static {v0}, Landroid/speech/tts/AudioPlaybackQueueItem;->-get0(Landroid/speech/tts/AudioPlaybackQueueItem;)Landroid/os/ConditionVariable;
@@ -58,6 +55,5 @@
 
     invoke-virtual {v0}, Landroid/os/ConditionVariable;->open()V
 
-    .line 77
     return-void
 .end method

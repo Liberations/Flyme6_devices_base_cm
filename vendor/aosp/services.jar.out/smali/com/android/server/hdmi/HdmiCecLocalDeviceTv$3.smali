@@ -30,7 +30,6 @@
     .param p2, "val$recorderAddress"    # I
 
     .prologue
-    .line 1843
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv$3;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
 
     iput p2, p0, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv$3;->val$recorderAddress:I
@@ -47,21 +46,16 @@
     .param p1, "error"    # I
 
     .prologue
-    .line 1846
     if-eqz p1, :cond_0
 
-    .line 1847
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv$3;->this$0:Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;
 
     iget v1, p0, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv$3;->val$recorderAddress:I
 
-    .line 1848
     const/16 v2, 0xa1
 
-    .line 1847
     invoke-virtual {v0, v1, v2}, Lcom/android/server/hdmi/HdmiCecLocalDeviceTv;->announceClearTimerRecordingResult(II)V
 
-    .line 1845
     :cond_0
     return-void
 .end method

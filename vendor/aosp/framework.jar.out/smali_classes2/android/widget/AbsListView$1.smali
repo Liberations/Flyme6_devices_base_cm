@@ -30,7 +30,6 @@
     .param p2, "val$enabled"    # Z
 
     .prologue
-    .line 1262
     iput-object p1, p0, Landroid/widget/AbsListView$1;->this$0:Landroid/widget/AbsListView;
 
     iput-boolean p2, p0, Landroid/widget/AbsListView$1;->val$enabled:Z
@@ -46,13 +45,11 @@
     .locals 2
 
     .prologue
-    .line 1265
     iget-object v0, p0, Landroid/widget/AbsListView$1;->this$0:Landroid/widget/AbsListView;
 
     iget-boolean v1, p0, Landroid/widget/AbsListView$1;->val$enabled:Z
 
     invoke-static {v0, v1}, Landroid/widget/AbsListView;->-wrap9(Landroid/widget/AbsListView;Z)V
 
-    .line 1264
     return-void
 .end method

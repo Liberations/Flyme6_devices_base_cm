@@ -27,7 +27,6 @@
     .param p2, "val$packageManagerInternal"    # Landroid/content/pm/PackageManagerInternal;
 
     .prologue
-    .line 315
     iput-object p1, p0, Lcom/android/server/telecom/TelecomLoaderService$5;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
     iput-object p2, p0, Lcom/android/server/telecom/TelecomLoaderService$5;->val$packageManagerInternal:Landroid/content/pm/PackageManagerInternal;
@@ -45,12 +44,11 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 318
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
 
-    const-string/jumbo v2, "android.telephony.action.CARRIER_CONFIG_CHANGED"
+    const-string v2, "android.telephony.action.CARRIER_CONFIG_CHANGED"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -58,7 +56,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 319
     invoke-static {}, Lcom/android/server/pm/UserManagerService;->getInstance()Lcom/android/server/pm/UserManagerService;
 
     move-result-object v1
@@ -76,7 +73,6 @@
 
     aget v0, v2, v1
 
-    .line 320
     .local v0, "userId":I
     iget-object v4, p0, Lcom/android/server/telecom/TelecomLoaderService$5;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
@@ -84,12 +80,10 @@
 
     invoke-static {v4, v5, v0}, Lcom/android/server/telecom/TelecomLoaderService;->-wrap1(Lcom/android/server/telecom/TelecomLoaderService;Landroid/content/pm/PackageManagerInternal;I)V
 
-    .line 319
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 317
     .end local v0    # "userId":I
     :cond_0
     return-void

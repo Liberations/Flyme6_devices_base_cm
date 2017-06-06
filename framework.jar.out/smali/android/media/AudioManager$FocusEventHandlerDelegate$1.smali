@@ -25,7 +25,6 @@
     .param p2, "$anonymous0"    # Landroid/os/Looper;
 
     .prologue
-    .line 2162
     iput-object p1, p0, Landroid/media/AudioManager$FocusEventHandlerDelegate$1;->this$1:Landroid/media/AudioManager$FocusEventHandlerDelegate;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -40,10 +39,8 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 2165
     const/4 v0, 0x0
 
-    .line 2166
     .local v0, "listener":Landroid/media/AudioManager$OnAudioFocusChangeListener;
     iget-object v1, p0, Landroid/media/AudioManager$FocusEventHandlerDelegate$1;->this$1:Landroid/media/AudioManager$FocusEventHandlerDelegate;
 
@@ -55,7 +52,6 @@
 
     monitor-enter v2
 
-    .line 2167
     :try_start_0
     iget-object v1, p0, Landroid/media/AudioManager$FocusEventHandlerDelegate$1;->this$1:Landroid/media/AudioManager$FocusEventHandlerDelegate;
 
@@ -74,10 +70,8 @@
     .local v0, "listener":Landroid/media/AudioManager$OnAudioFocusChangeListener;
     monitor-exit v2
 
-    .line 2169
     if-eqz v0, :cond_0
 
-    .line 2170
     invoke-static {}, Landroid/media/AudioManager;->-get0()Ljava/lang/String;
 
     move-result-object v1
@@ -86,32 +80,26 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "AudioManager dispatching onAudioFocusChange("
+    const-string v3, "AudioManager dispatching onAudioFocusChange("
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 2171
     iget v3, p1, Landroid/os/Message;->what:I
 
-    .line 2170
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 2171
-    const-string/jumbo v3, ") for "
+    const-string v3, ") for "
 
-    .line 2170
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 2171
     iget-object v3, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 2170
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -122,16 +110,13 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2172
     iget v1, p1, Landroid/os/Message;->what:I
 
     invoke-interface {v0, v1}, Landroid/media/AudioManager$OnAudioFocusChangeListener;->onAudioFocusChange(I)V
 
-    .line 2164
     :cond_0
     return-void
 
-    .line 2166
     .local v0, "listener":Landroid/media/AudioManager$OnAudioFocusChangeListener;
     :catchall_0
     move-exception v1

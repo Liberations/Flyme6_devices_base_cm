@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 165
     .local p0, "this":Landroid/util/MapCollections$EntrySet;, "Landroid/util/MapCollections<TK;TV;>.EntrySet;"
     .local p1, "this$0":Landroid/util/MapCollections;, "Landroid/util/MapCollections<TK;TV;>;"
     iput-object p1, p0, Landroid/util/MapCollections$EntrySet;->this$0:Landroid/util/MapCollections;
@@ -53,7 +52,6 @@
     .param p1, "object"    # Ljava/lang/Object;
 
     .prologue
-    .line 167
     .local p0, "this":Landroid/util/MapCollections$EntrySet;, "Landroid/util/MapCollections<TK;TV;>.EntrySet;"
     check-cast p1, Ljava/util/Map$Entry;
 
@@ -76,7 +74,6 @@
     .end annotation
 
     .prologue
-    .line 168
     .local p0, "this":Landroid/util/MapCollections$EntrySet;, "Landroid/util/MapCollections<TK;TV;>.EntrySet;"
     .local p1, "object":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<TK;TV;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
@@ -99,7 +96,6 @@
     .end annotation
 
     .prologue
-    .line 173
     .local p0, "this":Landroid/util/MapCollections$EntrySet;, "Landroid/util/MapCollections<TK;TV;>.EntrySet;"
     .local p1, "collection":Ljava/util/Collection;, "Ljava/util/Collection<+Ljava/util/Map$Entry<TK;TV;>;>;"
     iget-object v3, p0, Landroid/util/MapCollections$EntrySet;->this$0:Landroid/util/MapCollections;
@@ -108,7 +104,6 @@
 
     move-result v2
 
-    .line 174
     .local v2, "oldSize":I
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -128,7 +123,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 175
     .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<TK;TV;>;"
     iget-object v3, p0, Landroid/util/MapCollections$EntrySet;->this$0:Landroid/util/MapCollections;
 
@@ -144,7 +138,6 @@
 
     goto :goto_0
 
-    .line 177
     .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<TK;TV;>;"
     :cond_0
     iget-object v3, p0, Landroid/util/MapCollections$EntrySet;->this$0:Landroid/util/MapCollections;
@@ -170,13 +163,11 @@
     .locals 1
 
     .prologue
-    .line 182
     .local p0, "this":Landroid/util/MapCollections$EntrySet;, "Landroid/util/MapCollections<TK;TV;>.EntrySet;"
     iget-object v0, p0, Landroid/util/MapCollections$EntrySet;->this$0:Landroid/util/MapCollections;
 
     invoke-virtual {v0}, Landroid/util/MapCollections;->colClear()V
 
-    .line 181
     return-void
 .end method
 
@@ -188,21 +179,17 @@
     .local p0, "this":Landroid/util/MapCollections$EntrySet;, "Landroid/util/MapCollections<TK;TV;>.EntrySet;"
     const/4 v5, 0x0
 
-    .line 187
     instance-of v3, p1, Ljava/util/Map$Entry;
 
     if-nez v3, :cond_0
 
-    .line 188
     return v5
 
     :cond_0
     move-object v0, p1
 
-    .line 189
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 190
     .local v0, "e":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<**>;"
     iget-object v3, p0, Landroid/util/MapCollections$EntrySet;->this$0:Landroid/util/MapCollections;
 
@@ -214,14 +201,11 @@
 
     move-result v2
 
-    .line 191
     .local v2, "index":I
     if-gez v2, :cond_1
 
-    .line 192
     return v5
 
-    .line 194
     :cond_1
     iget-object v3, p0, Landroid/util/MapCollections$EntrySet;->this$0:Landroid/util/MapCollections;
 
@@ -231,7 +215,6 @@
 
     move-result-object v1
 
-    .line 195
     .local v1, "foundVal":Ljava/lang/Object;
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -255,14 +238,12 @@
     .end annotation
 
     .prologue
-    .line 200
     .local p0, "this":Landroid/util/MapCollections$EntrySet;, "Landroid/util/MapCollections<TK;TV;>.EntrySet;"
     .local p1, "collection":Ljava/util/Collection;, "Ljava/util/Collection<*>;"
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .line 201
     .local v0, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<*>;"
     :cond_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -271,7 +252,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 202
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -282,12 +262,10 @@
 
     if-nez v1, :cond_0
 
-    .line 203
     const/4 v1, 0x0
 
     return v1
 
-    .line 206
     :cond_1
     const/4 v1, 0x1
 
@@ -299,7 +277,6 @@
     .param p1, "object"    # Ljava/lang/Object;
 
     .prologue
-    .line 251
     .local p0, "this":Landroid/util/MapCollections$EntrySet;, "Landroid/util/MapCollections<TK;TV;>.EntrySet;"
     invoke-static {p0, p1}, Landroid/util/MapCollections;->equalsSetHelper(Ljava/util/Set;Ljava/lang/Object;)Z
 
@@ -315,10 +292,8 @@
     .local p0, "this":Landroid/util/MapCollections$EntrySet;, "Landroid/util/MapCollections<TK;TV;>.EntrySet;"
     const/4 v5, 0x0
 
-    .line 256
     const/4 v2, 0x0
 
-    .line 257
     .local v2, "result":I
     iget-object v4, p0, Landroid/util/MapCollections$EntrySet;->this$0:Landroid/util/MapCollections;
 
@@ -332,14 +307,12 @@
     :goto_0
     if-ltz v0, :cond_2
 
-    .line 258
     iget-object v4, p0, Landroid/util/MapCollections$EntrySet;->this$0:Landroid/util/MapCollections;
 
     invoke-virtual {v4, v0, v5}, Landroid/util/MapCollections;->colGetEntry(II)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 259
     .local v1, "key":Ljava/lang/Object;
     iget-object v4, p0, Landroid/util/MapCollections$EntrySet;->this$0:Landroid/util/MapCollections;
 
@@ -349,30 +322,25 @@
 
     move-result-object v3
 
-    .line 260
     .local v3, "value":Ljava/lang/Object;
     if-nez v1, :cond_0
 
     move v6, v5
 
-    .line 261
     :goto_1
     if-nez v3, :cond_1
 
     move v4, v5
 
-    .line 260
     :goto_2
     xor-int/2addr v4, v6
 
     add-int/2addr v2, v4
 
-    .line 257
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 260
     :cond_0
     invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
@@ -382,7 +350,6 @@
 
     goto :goto_1
 
-    .line 261
     :cond_1
     invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
 
@@ -390,7 +357,6 @@
 
     goto :goto_2
 
-    .line 263
     .end local v1    # "key":Ljava/lang/Object;
     .end local v3    # "value":Ljava/lang/Object;
     :cond_2
@@ -404,7 +370,6 @@
     .local p0, "this":Landroid/util/MapCollections$EntrySet;, "Landroid/util/MapCollections<TK;TV;>.EntrySet;"
     const/4 v0, 0x0
 
-    .line 211
     iget-object v1, p0, Landroid/util/MapCollections$EntrySet;->this$0:Landroid/util/MapCollections;
 
     invoke-virtual {v1}, Landroid/util/MapCollections;->colGetSize()I
@@ -432,7 +397,6 @@
     .end annotation
 
     .prologue
-    .line 216
     .local p0, "this":Landroid/util/MapCollections$EntrySet;, "Landroid/util/MapCollections<TK;TV;>.EntrySet;"
     new-instance v0, Landroid/util/MapCollections$MapIterator;
 
@@ -448,7 +412,6 @@
     .param p1, "object"    # Ljava/lang/Object;
 
     .prologue
-    .line 221
     .local p0, "this":Landroid/util/MapCollections$EntrySet;, "Landroid/util/MapCollections<TK;TV;>.EntrySet;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
@@ -468,7 +431,6 @@
     .end annotation
 
     .prologue
-    .line 226
     .local p0, "this":Landroid/util/MapCollections$EntrySet;, "Landroid/util/MapCollections<TK;TV;>.EntrySet;"
     .local p1, "collection":Ljava/util/Collection;, "Ljava/util/Collection<*>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
@@ -489,7 +451,6 @@
     .end annotation
 
     .prologue
-    .line 231
     .local p0, "this":Landroid/util/MapCollections$EntrySet;, "Landroid/util/MapCollections<TK;TV;>.EntrySet;"
     .local p1, "collection":Ljava/util/Collection;, "Ljava/util/Collection<*>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
@@ -503,7 +464,6 @@
     .locals 1
 
     .prologue
-    .line 236
     .local p0, "this":Landroid/util/MapCollections$EntrySet;, "Landroid/util/MapCollections<TK;TV;>.EntrySet;"
     iget-object v0, p0, Landroid/util/MapCollections$EntrySet;->this$0:Landroid/util/MapCollections;
 
@@ -518,7 +478,6 @@
     .locals 1
 
     .prologue
-    .line 241
     .local p0, "this":Landroid/util/MapCollections$EntrySet;, "Landroid/util/MapCollections<TK;TV;>.EntrySet;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
@@ -538,7 +497,6 @@
     .end annotation
 
     .prologue
-    .line 246
     .local p0, "this":Landroid/util/MapCollections$EntrySet;, "Landroid/util/MapCollections<TK;TV;>.EntrySet;"
     .local p1, "array":[Ljava/lang/Object;, "[TT;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;

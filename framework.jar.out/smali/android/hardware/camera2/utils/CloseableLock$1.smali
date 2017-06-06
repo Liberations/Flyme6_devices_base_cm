@@ -33,7 +33,6 @@
     .param p1, "this$0"    # Landroid/hardware/camera2/utils/CloseableLock;
 
     .prologue
-    .line 64
     iput-object p1, p0, Landroid/hardware/camera2/utils/CloseableLock$1;->this$0:Landroid/hardware/camera2/utils/CloseableLock;
 
     invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
@@ -47,7 +46,6 @@
     .locals 1
 
     .prologue
-    .line 66
     const/4 v0, 0x0
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -61,7 +59,6 @@
     .locals 1
 
     .prologue
-    .line 65
     invoke-virtual {p0}, Landroid/hardware/camera2/utils/CloseableLock$1;->initialValue()Ljava/lang/Integer;
 
     move-result-object v0

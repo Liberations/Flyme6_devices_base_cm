@@ -43,13 +43,11 @@
     .end annotation
 
     .prologue
-    .line 32
     .local p0, "this":Landroid/hardware/camera2/dispatch/InvokeDispatcher;, "Landroid/hardware/camera2/dispatch/InvokeDispatcher<TT;>;"
     .local p1, "target":Ljava/lang/Object;, "TT;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
-    const-string/jumbo v0, "target must not be null"
+    const-string v0, "target must not be null"
 
     invoke-static {p1, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -57,7 +55,6 @@
 
     iput-object v0, p0, Landroid/hardware/camera2/dispatch/InvokeDispatcher;->mTarget:Ljava/lang/Object;
 
-    .line 32
     return-void
 .end method
 
@@ -69,7 +66,6 @@
     .param p2, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 39
     .local p0, "this":Landroid/hardware/camera2/dispatch/InvokeDispatcher;, "Landroid/hardware/camera2/dispatch/InvokeDispatcher<TT;>;"
     :try_start_0
     iget-object v4, p0, Landroid/hardware/camera2/dispatch/InvokeDispatcher;->mTarget:Ljava/lang/Object;
@@ -84,19 +80,17 @@
 
     return-object v4
 
-    .line 47
     :catch_0
     move-exception v1
 
-    .line 49
     .local v1, "e":Ljava/lang/IllegalArgumentException;
-    const-string/jumbo v4, "InvocationSink"
+    const-string v4, "InvocationSink"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "IllegalArgumentException while invoking "
+    const-string v6, "IllegalArgumentException while invoking "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -112,26 +106,23 @@
 
     invoke-static {v4, v5, v1}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 53
     .end local v1    # "e":Ljava/lang/IllegalArgumentException;
     :goto_0
     const/4 v4, 0x0
 
     return-object v4
 
-    .line 44
     :catch_1
     move-exception v0
 
-    .line 46
     .local v0, "e":Ljava/lang/IllegalAccessException;
-    const-string/jumbo v4, "InvocationSink"
+    const-string v4, "InvocationSink"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "IllegalAccessException while invoking "
+    const-string v6, "IllegalAccessException while invoking "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -149,18 +140,15 @@
 
     goto :goto_0
 
-    .line 40
     .end local v0    # "e":Ljava/lang/IllegalAccessException;
     :catch_2
     move-exception v2
 
-    .line 41
     .local v2, "e":Ljava/lang/reflect/InvocationTargetException;
     invoke-virtual {v2}, Ljava/lang/reflect/InvocationTargetException;->getTargetException()Ljava/lang/Throwable;
 
     move-result-object v3
 
-    .line 43
     .local v3, "t":Ljava/lang/Throwable;
     invoke-static {v3}, Landroid/hardware/camera2/utils/UncheckedThrow;->throwAnyException(Ljava/lang/Throwable;)V
 

@@ -25,10 +25,8 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 46
     new-instance v0, Lcom/android/internal/location/ProviderProperties;
 
-    .line 48
     const/4 v8, 0x1
 
     const/4 v9, 0x2
@@ -45,12 +43,10 @@
 
     move v7, v1
 
-    .line 46
     invoke-direct/range {v0 .. v9}, Lcom/android/internal/location/ProviderProperties;-><init>(ZZZZZZZII)V
 
     sput-object v0, Lcom/android/server/location/PassiveProvider;->PROPERTIES:Lcom/android/internal/location/ProviderProperties;
 
-    .line 43
     return-void
 .end method
 
@@ -59,13 +55,10 @@
     .param p1, "locationManager"    # Landroid/location/ILocationManager;
 
     .prologue
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     iput-object p1, p0, Lcom/android/server/location/PassiveProvider;->mLocationManager:Landroid/location/ILocationManager;
 
-    .line 53
     return-void
 .end method
 
@@ -75,7 +68,6 @@
     .locals 0
 
     .prologue
-    .line 77
     return-void
 .end method
 
@@ -86,12 +78,11 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 117
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "mReportLocation="
+    const-string v1, "mReportLocation="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -109,7 +100,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 116
     return-void
 .end method
 
@@ -117,7 +107,6 @@
     .locals 0
 
     .prologue
-    .line 73
     return-void
 .end method
 
@@ -125,8 +114,7 @@
     .locals 1
 
     .prologue
-    .line 59
-    const-string/jumbo v0, "passive"
+    const-string v0, "passive"
 
     return-object v0
 .end method
@@ -135,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 64
     sget-object v0, Lcom/android/server/location/PassiveProvider;->PROPERTIES:Lcom/android/internal/location/ProviderProperties;
 
     return-object v0
@@ -146,17 +133,14 @@
     .param p1, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 82
     iget-boolean v0, p0, Lcom/android/server/location/PassiveProvider;->mReportLocation:Z
 
     if-eqz v0, :cond_0
 
-    .line 83
     const/4 v0, 0x2
 
     return v0
 
-    .line 85
     :cond_0
     const/4 v0, 0x1
 
@@ -167,7 +151,6 @@
     .locals 2
 
     .prologue
-    .line 91
     const-wide/16 v0, -0x1
 
     return-wide v0
@@ -177,7 +160,6 @@
     .locals 1
 
     .prologue
-    .line 69
     const/4 v0, 0x1
 
     return v0
@@ -189,7 +171,6 @@
     .param p2, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 112
     const/4 v0, 0x0
 
     return v0
@@ -201,12 +182,10 @@
     .param p2, "source"    # Landroid/os/WorkSource;
 
     .prologue
-    .line 96
     iget-boolean v0, p1, Lcom/android/internal/location/ProviderRequest;->reportLocation:Z
 
     iput-boolean v0, p0, Lcom/android/server/location/PassiveProvider;->mReportLocation:Z
 
-    .line 95
     return-void
 .end method
 
@@ -215,12 +194,10 @@
     .param p1, "location"    # Landroid/location/Location;
 
     .prologue
-    .line 100
     iget-boolean v1, p0, Lcom/android/server/location/PassiveProvider;->mReportLocation:Z
 
     if-eqz v1, :cond_0
 
-    .line 103
     :try_start_0
     iget-object v1, p0, Lcom/android/server/location/PassiveProvider;->mLocationManager:Landroid/location/ILocationManager;
 
@@ -230,20 +207,17 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 99
     :cond_0
     :goto_0
     return-void
 
-    .line 104
     :catch_0
     move-exception v0
 
-    .line 105
     .local v0, "e":Landroid/os/RemoteException;
-    const-string/jumbo v1, "PassiveProvider"
+    const-string v1, "PassiveProvider"
 
-    const-string/jumbo v2, "RemoteException calling reportLocation"
+    const-string v2, "RemoteException calling reportLocation"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 

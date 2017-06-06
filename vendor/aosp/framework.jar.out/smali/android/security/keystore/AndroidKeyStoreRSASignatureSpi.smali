@@ -37,16 +37,12 @@
     .param p2, "keymasterPadding"    # I
 
     .prologue
-    .line 133
     invoke-direct {p0}, Landroid/security/keystore/AndroidKeyStoreSignatureSpiBase;-><init>()V
 
-    .line 134
     iput p1, p0, Landroid/security/keystore/AndroidKeyStoreRSASignatureSpi;->mKeymasterDigest:I
 
-    .line 135
     iput p2, p0, Landroid/security/keystore/AndroidKeyStoreRSASignatureSpi;->mKeymasterPadding:I
 
-    .line 133
     return-void
 .end method
 
@@ -57,28 +53,24 @@
     .param p1, "keymasterArgs"    # Landroid/security/keymaster/KeymasterArguments;
 
     .prologue
-    .line 160
     const v0, 0x10000002
 
     const/4 v1, 0x1
 
     invoke-virtual {p1, v0, v1}, Landroid/security/keymaster/KeymasterArguments;->addEnum(II)V
 
-    .line 161
     iget v0, p0, Landroid/security/keystore/AndroidKeyStoreRSASignatureSpi;->mKeymasterDigest:I
 
     const v1, 0x20000005
 
     invoke-virtual {p1, v1, v0}, Landroid/security/keymaster/KeymasterArguments;->addEnum(II)V
 
-    .line 162
     iget v0, p0, Landroid/security/keystore/AndroidKeyStoreRSASignatureSpi;->mKeymasterPadding:I
 
     const v1, 0x20000006
 
     invoke-virtual {p1, v1, v0}, Landroid/security/keymaster/KeymasterArguments;->addEnum(II)V
 
-    .line 159
     return-void
 .end method
 
@@ -92,8 +84,7 @@
     .end annotation
 
     .prologue
-    .line 140
-    const-string/jumbo v0, "RSA"
+    const-string v0, "RSA"
 
     invoke-virtual {p1}, Landroid/security/keystore/AndroidKeyStoreKey;->getAlgorithm()Ljava/lang/String;
 
@@ -105,14 +96,13 @@
 
     if-nez v0, :cond_0
 
-    .line 141
     new-instance v0, Ljava/security/InvalidKeyException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Unsupported key algorithm: "
+    const-string v2, "Unsupported key algorithm: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -126,26 +116,20 @@
 
     move-result-object v1
 
-    .line 142
-    const-string/jumbo v2, ". Only"
+    const-string v2, ". Only"
 
-    .line 141
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 142
-    const-string/jumbo v2, "RSA"
+    const-string v2, "RSA"
 
-    .line 141
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 142
-    const-string/jumbo v2, " supported"
+    const-string v2, " supported"
 
-    .line 141
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -158,11 +142,9 @@
 
     throw v0
 
-    .line 144
     :cond_0
     invoke-super {p0, p1}, Landroid/security/keystore/AndroidKeyStoreSignatureSpiBase;->initKey(Landroid/security/keystore/AndroidKeyStoreKey;)V
 
-    .line 139
     return-void
 .end method
 
@@ -170,10 +152,8 @@
     .locals 0
 
     .prologue
-    .line 149
     invoke-super {p0}, Landroid/security/keystore/AndroidKeyStoreSignatureSpiBase;->resetAll()V
 
-    .line 148
     return-void
 .end method
 
@@ -181,9 +161,7 @@
     .locals 0
 
     .prologue
-    .line 154
     invoke-super {p0}, Landroid/security/keystore/AndroidKeyStoreSignatureSpiBase;->resetWhilePreservingInitState()V
 
-    .line 153
     return-void
 .end method

@@ -24,7 +24,6 @@
     .param p1, "this$1"    # Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;
 
     .prologue
-    .line 1098
     iput-object p1, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner$1;->this$1:Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1101
     iget-object v2, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner$1;->this$1:Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;
 
     iget-object v2, v2, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
@@ -53,13 +51,12 @@
 
     return-void
 
-    .line 1103
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v2
 
-    const-string/jumbo v3, "android.net.conn.CONNECTIVITY_CHANGE"
+    const-string v3, "android.net.conn.CONNECTIVITY_CHANGE"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -67,18 +64,14 @@
 
     if-eqz v2, :cond_1
 
-    .line 1104
-    const-string/jumbo v2, "networkType"
+    const-string v2, "networkType"
 
-    .line 1105
     const/4 v3, -0x1
 
-    .line 1104
     invoke-virtual {p2, v2, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v2
 
-    .line 1105
     iget-object v3, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner$1;->this$1:Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;
 
     invoke-static {v3}, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->-get0(Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;)Ljava/util/concurrent/atomic/AtomicInteger;
@@ -89,20 +82,16 @@
 
     move-result v3
 
-    .line 1104
     if-ne v2, v3, :cond_1
 
-    .line 1107
-    const-string/jumbo v2, "networkInfo"
+    const-string v2, "networkInfo"
 
-    .line 1106
     invoke-virtual {p2, v2}, Landroid/content/Intent;->getExtra(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/net/NetworkInfo;
 
-    .line 1108
     .local v1, "info":Landroid/net/NetworkInfo;
     if-eqz v1, :cond_1
 
@@ -112,13 +101,11 @@
 
     if-eqz v2, :cond_2
 
-    .line 1100
     .end local v1    # "info":Landroid/net/NetworkInfo;
     :cond_1
     :goto_0
     return-void
 
-    .line 1110
     .restart local v1    # "info":Landroid/net/NetworkInfo;
     :cond_2
     :try_start_0
@@ -144,7 +131,6 @@
 
     goto :goto_0
 
-    .line 1111
     :catch_0
     move-exception v0
 

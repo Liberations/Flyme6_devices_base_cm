@@ -55,10 +55,9 @@
 
     const/4 v2, 0x0
 
-    .line 44
     new-instance v0, Landroid/telephony/gsm/SmsMessage$MessageClass;
 
-    const-string/jumbo v1, "UNKNOWN"
+    const-string v1, "UNKNOWN"
 
     invoke-direct {v0, v1, v2}, Landroid/telephony/gsm/SmsMessage$MessageClass;-><init>(Ljava/lang/String;I)V
 
@@ -66,7 +65,7 @@
 
     new-instance v0, Landroid/telephony/gsm/SmsMessage$MessageClass;
 
-    const-string/jumbo v1, "CLASS_0"
+    const-string v1, "CLASS_0"
 
     invoke-direct {v0, v1, v3}, Landroid/telephony/gsm/SmsMessage$MessageClass;-><init>(Ljava/lang/String;I)V
 
@@ -74,7 +73,7 @@
 
     new-instance v0, Landroid/telephony/gsm/SmsMessage$MessageClass;
 
-    const-string/jumbo v1, "CLASS_1"
+    const-string v1, "CLASS_1"
 
     invoke-direct {v0, v1, v4}, Landroid/telephony/gsm/SmsMessage$MessageClass;-><init>(Ljava/lang/String;I)V
 
@@ -82,7 +81,7 @@
 
     new-instance v0, Landroid/telephony/gsm/SmsMessage$MessageClass;
 
-    const-string/jumbo v1, "CLASS_2"
+    const-string v1, "CLASS_2"
 
     invoke-direct {v0, v1, v5}, Landroid/telephony/gsm/SmsMessage$MessageClass;-><init>(Ljava/lang/String;I)V
 
@@ -90,13 +89,12 @@
 
     new-instance v0, Landroid/telephony/gsm/SmsMessage$MessageClass;
 
-    const-string/jumbo v1, "CLASS_3"
+    const-string v1, "CLASS_3"
 
     invoke-direct {v0, v1, v6}, Landroid/telephony/gsm/SmsMessage$MessageClass;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Landroid/telephony/gsm/SmsMessage$MessageClass;->CLASS_3:Landroid/telephony/gsm/SmsMessage$MessageClass;
 
-    .line 43
     const/4 v0, 0x5
 
     new-array v0, v0, [Landroid/telephony/gsm/SmsMessage$MessageClass;
@@ -130,7 +128,6 @@
     .locals 0
 
     .prologue
-    .line 43
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -141,7 +138,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 43
     const-class v0, Landroid/telephony/gsm/SmsMessage$MessageClass;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -157,7 +153,6 @@
     .locals 1
 
     .prologue
-    .line 43
     sget-object v0, Landroid/telephony/gsm/SmsMessage$MessageClass;->$VALUES:[Landroid/telephony/gsm/SmsMessage$MessageClass;
 
     return-object v0

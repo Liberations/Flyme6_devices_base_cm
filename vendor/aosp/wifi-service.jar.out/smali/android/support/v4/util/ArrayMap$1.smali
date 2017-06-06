@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 73
     .local p1, "this$0":Landroid/support/v4/util/ArrayMap;, "Landroid/support/v4/util/ArrayMap<TK;TV;>;"
     iput-object p1, p0, Landroid/support/v4/util/ArrayMap$1;->this$0:Landroid/support/v4/util/ArrayMap;
 
@@ -45,12 +44,10 @@
     .locals 1
 
     .prologue
-    .line 116
     iget-object v0, p0, Landroid/support/v4/util/ArrayMap$1;->this$0:Landroid/support/v4/util/ArrayMap;
 
     invoke-virtual {v0}, Landroid/support/v4/util/ArrayMap;->clear()V
 
-    .line 115
     return-void
 .end method
 
@@ -60,7 +57,6 @@
     .param p2, "offset"    # I
 
     .prologue
-    .line 81
     iget-object v0, p0, Landroid/support/v4/util/ArrayMap$1;->this$0:Landroid/support/v4/util/ArrayMap;
 
     iget-object v0, v0, Landroid/support/v4/util/ArrayMap;->mArray:[Ljava/lang/Object;
@@ -85,7 +81,6 @@
     .end annotation
 
     .prologue
-    .line 96
     iget-object v0, p0, Landroid/support/v4/util/ArrayMap$1;->this$0:Landroid/support/v4/util/ArrayMap;
 
     return-object v0
@@ -95,7 +90,6 @@
     .locals 1
 
     .prologue
-    .line 76
     iget-object v0, p0, Landroid/support/v4/util/ArrayMap$1;->this$0:Landroid/support/v4/util/ArrayMap;
 
     iget v0, v0, Landroid/support/v4/util/ArrayMap;->mSize:I
@@ -108,7 +102,6 @@
     .param p1, "key"    # Ljava/lang/Object;
 
     .prologue
-    .line 86
     iget-object v0, p0, Landroid/support/v4/util/ArrayMap$1;->this$0:Landroid/support/v4/util/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroid/support/v4/util/ArrayMap;->indexOfKey(Ljava/lang/Object;)I
@@ -123,7 +116,6 @@
     .param p1, "value"    # Ljava/lang/Object;
 
     .prologue
-    .line 91
     iget-object v0, p0, Landroid/support/v4/util/ArrayMap$1;->this$0:Landroid/support/v4/util/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroid/support/v4/util/ArrayMap;->indexOfValue(Ljava/lang/Object;)I
@@ -142,14 +134,12 @@
     .end annotation
 
     .prologue
-    .line 101
     .local p1, "key":Ljava/lang/Object;, "TK;"
     .local p2, "value":Ljava/lang/Object;, "TV;"
     iget-object v0, p0, Landroid/support/v4/util/ArrayMap$1;->this$0:Landroid/support/v4/util/ArrayMap;
 
     invoke-virtual {v0, p1, p2}, Landroid/support/v4/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 100
     return-void
 .end method
 
@@ -158,12 +148,10 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 111
     iget-object v0, p0, Landroid/support/v4/util/ArrayMap$1;->this$0:Landroid/support/v4/util/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroid/support/v4/util/ArrayMap;->removeAt(I)Ljava/lang/Object;
 
-    .line 110
     return-void
 .end method
 
@@ -177,7 +165,6 @@
     .end annotation
 
     .prologue
-    .line 106
     .local p2, "value":Ljava/lang/Object;, "TV;"
     iget-object v0, p0, Landroid/support/v4/util/ArrayMap$1;->this$0:Landroid/support/v4/util/ArrayMap;
 

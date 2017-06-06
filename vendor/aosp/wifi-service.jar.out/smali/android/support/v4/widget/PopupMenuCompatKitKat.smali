@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,7 +18,6 @@
     .param p0, "popupMenu"    # Ljava/lang/Object;
 
     .prologue
-    .line 27
     check-cast p0, Landroid/widget/PopupMenu;
 
     .end local p0    # "popupMenu":Ljava/lang/Object;

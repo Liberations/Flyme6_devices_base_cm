@@ -33,7 +33,6 @@
     .param p3, "val$id"    # Ljava/lang/String;
 
     .prologue
-    .line 349
     iput-object p1, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl$4;->this$1:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;
 
     iput-object p2, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl$4;->val$callbacks:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;
@@ -51,14 +50,12 @@
     .locals 5
 
     .prologue
-    .line 352
     iget-object v2, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl$4;->val$callbacks:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;
 
     invoke-interface {v2}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 354
     .local v0, "b":Landroid/os/IBinder;
     iget-object v2, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl$4;->this$1:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;
 
@@ -74,27 +71,23 @@
 
     check-cast v1, Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;
 
-    .line 355
     .local v1, "connection":Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;
     if-nez v1, :cond_0
 
-    .line 356
-    const-string/jumbo v2, "MediaBrowserServiceCompat"
+    const-string v2, "MediaBrowserServiceCompat"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "removeSubscription for callback that isn\'t registered id="
+    const-string v4, "removeSubscription for callback that isn\'t registered id="
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 357
     iget-object v4, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl$4;->val$id:Ljava/lang/String;
 
-    .line 356
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
@@ -105,10 +98,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 358
     return-void
 
-    .line 360
     :cond_0
     iget-object v2, v1, Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;->subscriptions:Ljava/util/HashSet;
 
@@ -120,14 +111,13 @@
 
     if-nez v2, :cond_1
 
-    .line 361
-    const-string/jumbo v2, "MediaBrowserServiceCompat"
+    const-string v2, "MediaBrowserServiceCompat"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "removeSubscription called for "
+    const-string v4, "removeSubscription called for "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -139,10 +129,8 @@
 
     move-result-object v3
 
-    .line 362
-    const-string/jumbo v4, " which is not subscribed"
+    const-string v4, " which is not subscribed"
 
-    .line 361
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
@@ -153,7 +141,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 351
     :cond_1
     return-void
 .end method

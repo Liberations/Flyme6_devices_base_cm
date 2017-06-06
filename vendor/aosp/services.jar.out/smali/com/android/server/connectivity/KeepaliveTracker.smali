@@ -52,21 +52,16 @@
     .param p1, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 72
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 69
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 68
     iput-object v0, p0, Lcom/android/server/connectivity/KeepaliveTracker;->mKeepalives:Ljava/util/HashMap;
 
-    .line 73
     iput-object p1, p0, Lcom/android/server/connectivity/KeepaliveTracker;->mConnectivityServiceHandler:Landroid/os/Handler;
 
-    .line 72
     return-void
 .end method
 
@@ -75,7 +70,6 @@
     .param p1, "nai"    # Lcom/android/server/connectivity/NetworkAgentInfo;
 
     .prologue
-    .line 231
     iget-object v2, p0, Lcom/android/server/connectivity/KeepaliveTracker;->mKeepalives:Ljava/util/HashMap;
 
     invoke-virtual {v2, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -84,23 +78,19 @@
 
     check-cast v0, Ljava/util/HashMap;
 
-    .line 232
     .local v0, "networkKeepalives":Ljava/util/HashMap;
     if-nez v0, :cond_0
 
-    .line 233
     new-instance v0, Ljava/util/HashMap;
 
     .end local v0    # "networkKeepalives":Ljava/util/HashMap;
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 234
     .restart local v0    # "networkKeepalives":Ljava/util/HashMap;
     iget-object v2, p0, Lcom/android/server/connectivity/KeepaliveTracker;->mKeepalives:Ljava/util/HashMap;
 
     invoke-virtual {v2, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 240
     :cond_0
     const/4 v1, 0x1
 
@@ -112,7 +102,6 @@
 
     if-gt v1, v2, :cond_2
 
-    .line 241
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -123,16 +112,13 @@
 
     if-nez v2, :cond_1
 
-    .line 242
     return v1
 
-    .line 240
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 245
     :cond_2
     return v1
 .end method
@@ -144,15 +130,12 @@
     .param p1, "pw"    # Lcom/android/internal/util/IndentingPrintWriter;
 
     .prologue
-    .line 363
-    const-string/jumbo v5, "Packet keepalives:"
+    const-string v5, "Packet keepalives:"
 
     invoke-virtual {p1, v5}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 364
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()V
 
-    .line 365
     iget-object v5, p0, Lcom/android/server/connectivity/KeepaliveTracker;->mKeepalives:Ljava/util/HashMap;
 
     invoke-virtual {v5}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
@@ -177,7 +160,6 @@
 
     check-cast v1, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 366
     .local v1, "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     invoke-virtual {v1}, Lcom/android/server/connectivity/NetworkAgentInfo;->name()Ljava/lang/String;
 
@@ -185,10 +167,8 @@
 
     invoke-virtual {p1, v5}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 367
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()V
 
-    .line 368
     iget-object v5, p0, Lcom/android/server/connectivity/KeepaliveTracker;->mKeepalives:Ljava/util/HashMap;
 
     invoke-virtual {v5, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -223,7 +203,6 @@
 
     move-result v3
 
-    .line 369
     .local v3, "slot":I
     iget-object v5, p0, Lcom/android/server/connectivity/KeepaliveTracker;->mKeepalives:Ljava/util/HashMap;
 
@@ -243,7 +222,6 @@
 
     check-cast v0, Lcom/android/server/connectivity/KeepaliveTracker$KeepaliveInfo;
 
-    .line 370
     .local v0, "ki":Lcom/android/server/connectivity/KeepaliveTracker$KeepaliveInfo;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -253,7 +231,7 @@
 
     move-result-object v5
 
-    const-string/jumbo v6, ": "
+    const-string v6, ": "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -275,7 +253,6 @@
 
     goto :goto_1
 
-    .line 372
     .end local v0    # "ki":Lcom/android/server/connectivity/KeepaliveTracker$KeepaliveInfo;
     .end local v3    # "slot":I
     :cond_0
@@ -283,13 +260,11 @@
 
     goto :goto_0
 
-    .line 374
     .end local v1    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     .end local v4    # "slot$iterator":Ljava/util/Iterator;
     :cond_1
     invoke-virtual {p1}, Lcom/android/internal/util/IndentingPrintWriter;->decreaseIndent()V
 
-    .line 362
     return-void
 .end method
 
@@ -298,7 +273,6 @@
     .param p1, "nai"    # Lcom/android/server/connectivity/NetworkAgentInfo;
 
     .prologue
-    .line 287
     iget-object v7, p0, Lcom/android/server/connectivity/KeepaliveTracker;->mKeepalives:Ljava/util/HashMap;
 
     invoke-virtual {v7, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -307,16 +281,13 @@
 
     check-cast v2, Ljava/util/HashMap;
 
-    .line 288
     .local v2, "networkKeepalives":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Integer;Lcom/android/server/connectivity/KeepaliveTracker$KeepaliveInfo;>;"
     if-eqz v2, :cond_2
 
-    .line 289
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 290
     .local v1, "invalidKeepalives":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/util/Pair<Ljava/lang/Integer;Ljava/lang/Integer;>;>;"
     invoke-virtual {v2}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
@@ -345,7 +316,6 @@
 
     move-result v3
 
-    .line 291
     .local v3, "slot":I
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -361,11 +331,9 @@
 
     move-result v0
 
-    .line 292
     .local v0, "error":I
     if-eqz v0, :cond_0
 
-    .line 293
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v7
@@ -382,7 +350,6 @@
 
     goto :goto_0
 
-    .line 296
     .end local v0    # "error":I
     .end local v3    # "slot":I
     :cond_1
@@ -404,7 +371,6 @@
 
     check-cast v5, Landroid/util/Pair;
 
-    .line 297
     .local v5, "slotAndError":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     iget-object v7, v5, Landroid/util/Pair;->first:Ljava/lang/Object;
 
@@ -426,7 +392,6 @@
 
     goto :goto_1
 
-    .line 286
     .end local v1    # "invalidKeepalives":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/util/Pair<Ljava/lang/Integer;Ljava/lang/Integer;>;>;"
     .end local v4    # "slot$iterator":Ljava/util/Iterator;
     .end local v5    # "slotAndError":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/Integer;Ljava/lang/Integer;>;"
@@ -443,18 +408,14 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 303
     iget v4, p2, Landroid/os/Message;->arg1:I
 
-    .line 304
     .local v4, "slot":I
     iget v3, p2, Landroid/os/Message;->arg2:I
 
-    .line 306
     .local v3, "reason":I
     const/4 v2, 0x0
 
-    .line 308
     .local v2, "ki":Lcom/android/server/connectivity/KeepaliveTracker$KeepaliveInfo;
     :try_start_0
     iget-object v5, p0, Lcom/android/server/connectivity/KeepaliveTracker;->mKeepalives:Ljava/util/HashMap;
@@ -481,19 +442,17 @@
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 310
     .end local v2    # "ki":Lcom/android/server/connectivity/KeepaliveTracker$KeepaliveInfo;
     :goto_0
     if-nez v2, :cond_0
 
-    .line 311
-    const-string/jumbo v5, "KeepaliveTracker"
+    const-string v5, "KeepaliveTracker"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "Event for unknown keepalive "
+    const-string v7, "Event for unknown keepalive "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -503,7 +462,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, " on "
+    const-string v7, " on "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -523,10 +482,8 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 312
     return-void
 
-    .line 315
     :cond_0
     if-nez v3, :cond_1
 
@@ -534,21 +491,18 @@
 
     if-eqz v5, :cond_2
 
-    .line 322
     :cond_1
     iput-boolean v7, v2, Lcom/android/server/connectivity/KeepaliveTracker$KeepaliveInfo;->isStarted:Z
 
-    .line 323
     if-nez v3, :cond_3
 
-    .line 324
-    const-string/jumbo v5, "KeepaliveTracker"
+    const-string v5, "KeepaliveTracker"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "Successfully stopped keepalive "
+    const-string v7, "Successfully stopped keepalive "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -558,7 +512,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, " on "
+    const-string v7, " on "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -578,23 +532,20 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 328
     :goto_1
     invoke-virtual {p0, p1, v4, v3}, Lcom/android/server/connectivity/KeepaliveTracker;->handleStopKeepalive(Lcom/android/server/connectivity/NetworkAgentInfo;II)V
 
-    .line 302
     :goto_2
     return-void
 
-    .line 317
     :cond_2
-    const-string/jumbo v5, "KeepaliveTracker"
+    const-string v5, "KeepaliveTracker"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "Started keepalive "
+    const-string v7, "Started keepalive "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -604,7 +555,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, " on "
+    const-string v7, " on "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -624,25 +575,22 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 318
     const/4 v5, 0x1
 
     iput-boolean v5, v2, Lcom/android/server/connectivity/KeepaliveTracker$KeepaliveInfo;->isStarted:Z
 
-    .line 319
     invoke-virtual {v2, v4, v3}, Lcom/android/server/connectivity/KeepaliveTracker$KeepaliveInfo;->notifyMessenger(II)V
 
     goto :goto_2
 
-    .line 326
     :cond_3
-    const-string/jumbo v5, "KeepaliveTracker"
+    const-string v5, "KeepaliveTracker"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "Keepalive "
+    const-string v7, "Keepalive "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -652,7 +600,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, " on "
+    const-string v7, " on "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -666,7 +614,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, " error "
+    const-string v7, " error "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -684,7 +632,6 @@
 
     goto :goto_1
 
-    .line 309
     .restart local v2    # "ki":Lcom/android/server/connectivity/KeepaliveTracker$KeepaliveInfo;
     :catch_0
     move-exception v1
@@ -698,24 +645,20 @@
     .param p1, "message"    # Landroid/os/Message;
 
     .prologue
-    .line 249
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/server/connectivity/KeepaliveTracker$KeepaliveInfo;
 
-    .line 250
     .local v0, "ki":Lcom/android/server/connectivity/KeepaliveTracker$KeepaliveInfo;
     invoke-virtual {v0}, Lcom/android/server/connectivity/KeepaliveTracker$KeepaliveInfo;->getNai()Lcom/android/server/connectivity/NetworkAgentInfo;
 
     move-result-object v1
 
-    .line 251
     .local v1, "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     invoke-direct {p0, v1}, Lcom/android/server/connectivity/KeepaliveTracker;->findFirstFreeSlot(Lcom/android/server/connectivity/NetworkAgentInfo;)I
 
     move-result v2
 
-    .line 252
     .local v2, "slot":I
     iget-object v3, p0, Lcom/android/server/connectivity/KeepaliveTracker;->mKeepalives:Ljava/util/HashMap;
 
@@ -731,10 +674,8 @@
 
     invoke-virtual {v3, v4, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 253
     invoke-virtual {v0, v2}, Lcom/android/server/connectivity/KeepaliveTracker$KeepaliveInfo;->start(I)V
 
-    .line 248
     return-void
 .end method
 
@@ -744,7 +685,6 @@
     .param p2, "reason"    # I
 
     .prologue
-    .line 257
     iget-object v3, p0, Lcom/android/server/connectivity/KeepaliveTracker;->mKeepalives:Ljava/util/HashMap;
 
     invoke-virtual {v3, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -753,11 +693,9 @@
 
     check-cast v2, Ljava/util/HashMap;
 
-    .line 258
     .local v2, "networkKeepalives":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Integer;Lcom/android/server/connectivity/KeepaliveTracker$KeepaliveInfo;>;"
     if-eqz v2, :cond_1
 
-    .line 259
     invoke-virtual {v2}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
     move-result-object v3
@@ -780,23 +718,19 @@
 
     check-cast v0, Lcom/android/server/connectivity/KeepaliveTracker$KeepaliveInfo;
 
-    .line 260
     .local v0, "ki":Lcom/android/server/connectivity/KeepaliveTracker$KeepaliveInfo;
     invoke-virtual {v0, p2}, Lcom/android/server/connectivity/KeepaliveTracker$KeepaliveInfo;->stop(I)V
 
     goto :goto_0
 
-    .line 262
     .end local v0    # "ki":Lcom/android/server/connectivity/KeepaliveTracker$KeepaliveInfo;
     :cond_0
     invoke-virtual {v2}, Ljava/util/HashMap;->clear()V
 
-    .line 263
     iget-object v3, p0, Lcom/android/server/connectivity/KeepaliveTracker;->mKeepalives:Ljava/util/HashMap;
 
     invoke-virtual {v3, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 256
     .end local v1    # "ki$iterator":Ljava/util/Iterator;
     :cond_1
     return-void
@@ -809,12 +743,10 @@
     .param p3, "reason"    # I
 
     .prologue
-    .line 268
     if-nez p1, :cond_0
 
-    const-string/jumbo v2, "(null)"
+    const-string v2, "(null)"
 
-    .line 269
     .local v2, "networkName":Ljava/lang/String;
     :goto_0
     iget-object v3, p0, Lcom/android/server/connectivity/KeepaliveTracker;->mKeepalives:Ljava/util/HashMap;
@@ -825,18 +757,16 @@
 
     check-cast v1, Ljava/util/HashMap;
 
-    .line 270
     .local v1, "networkKeepalives":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Integer;Lcom/android/server/connectivity/KeepaliveTracker$KeepaliveInfo;>;"
     if-nez v1, :cond_1
 
-    .line 271
-    const-string/jumbo v3, "KeepaliveTracker"
+    const-string v3, "KeepaliveTracker"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "Attempt to stop keepalive on nonexistent network "
+    const-string v5, "Attempt to stop keepalive on nonexistent network "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -852,10 +782,8 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 272
     return-void
 
-    .line 268
     .end local v1    # "networkKeepalives":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Integer;Lcom/android/server/connectivity/KeepaliveTracker$KeepaliveInfo;>;"
     .end local v2    # "networkName":Ljava/lang/String;
     :cond_0
@@ -866,7 +794,6 @@
     .restart local v2    # "networkName":Ljava/lang/String;
     goto :goto_0
 
-    .line 274
     .restart local v1    # "networkKeepalives":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Integer;Lcom/android/server/connectivity/KeepaliveTracker$KeepaliveInfo;>;"
     :cond_1
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -879,18 +806,16 @@
 
     check-cast v0, Lcom/android/server/connectivity/KeepaliveTracker$KeepaliveInfo;
 
-    .line 275
     .local v0, "ki":Lcom/android/server/connectivity/KeepaliveTracker$KeepaliveInfo;
     if-nez v0, :cond_2
 
-    .line 276
-    const-string/jumbo v3, "KeepaliveTracker"
+    const-string v3, "KeepaliveTracker"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "Attempt to stop nonexistent keepalive "
+    const-string v5, "Attempt to stop nonexistent keepalive "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -900,7 +825,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, " on "
+    const-string v5, " on "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -916,33 +841,27 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 277
     return-void
 
-    .line 279
     :cond_2
     invoke-virtual {v0, p3}, Lcom/android/server/connectivity/KeepaliveTracker$KeepaliveInfo;->stop(I)V
 
-    .line 280
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
     invoke-virtual {v1, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 281
     invoke-virtual {v1}, Ljava/util/HashMap;->isEmpty()Z
 
     move-result v3
 
     if-eqz v3, :cond_3
 
-    .line 282
     iget-object v3, p0, Lcom/android/server/connectivity/KeepaliveTracker;->mKeepalives:Ljava/util/HashMap;
 
     invoke-virtual {v3, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 267
     :cond_3
     return-void
 .end method
@@ -954,39 +873,31 @@
     .param p3, "err"    # I
 
     .prologue
-    .line 218
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v1
 
-    .line 219
     .local v1, "message":Landroid/os/Message;
     const v2, 0x8100d
 
     iput v2, v1, Landroid/os/Message;->what:I
 
-    .line 220
     iput p2, v1, Landroid/os/Message;->arg1:I
 
-    .line 221
     iput p3, v1, Landroid/os/Message;->arg2:I
 
-    .line 222
     const/4 v2, 0x0
 
     iput-object v2, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 224
     :try_start_0
     invoke-virtual {p1, v1}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 217
     :goto_0
     return-void
 
-    .line 225
     :catch_0
     move-exception v0
 
@@ -1006,27 +917,22 @@
     .param p8, "dstPort"    # I
 
     .prologue
-    .line 334
     if-nez p1, :cond_0
 
-    .line 335
     const/4 v2, -0x1
 
     const/16 v3, -0x14
 
     invoke-virtual {p0, p3, v2, v3}, Lcom/android/server/connectivity/KeepaliveTracker;->notifyMessenger(Landroid/os/Messenger;II)V
 
-    .line 336
     return-void
 
-    .line 341
     :cond_0
     :try_start_0
     invoke-static/range {p5 .. p5}, Landroid/net/NetworkUtils;->numericToInetAddress(Ljava/lang/String;)Ljava/net/InetAddress;
 
     move-result-object v11
 
-    .line 342
     .local v11, "srcAddress":Ljava/net/InetAddress;
     invoke-static/range {p7 .. p7}, Landroid/net/NetworkUtils;->numericToInetAddress(Ljava/lang/String;)Ljava/net/InetAddress;
     :try_end_0
@@ -1034,11 +940,9 @@
 
     move-result-object v8
 
-    .line 351
     .local v8, "dstAddress":Ljava/net/InetAddress;
     const/16 v2, 0x1194
 
-    .line 350
     :try_start_1
     move/from16 v0, p6
 
@@ -1048,7 +952,6 @@
 
     move-result-object v6
 
-    .line 356
     .local v6, "packet":Lcom/android/server/connectivity/KeepalivePacketData;
     new-instance v1, Lcom/android/server/connectivity/KeepaliveTracker$KeepaliveInfo;
 
@@ -1064,15 +967,14 @@
 
     invoke-direct/range {v1 .. v7}, Lcom/android/server/connectivity/KeepaliveTracker$KeepaliveInfo;-><init>(Lcom/android/server/connectivity/KeepaliveTracker;Landroid/os/Messenger;Landroid/os/IBinder;Lcom/android/server/connectivity/NetworkAgentInfo;Lcom/android/server/connectivity/KeepalivePacketData;I)V
 
-    .line 357
     .local v1, "ki":Lcom/android/server/connectivity/KeepaliveTracker$KeepaliveInfo;
-    const-string/jumbo v2, "KeepaliveTracker"
+    const-string v2, "KeepaliveTracker"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "Created keepalive: "
+    const-string v4, "Created keepalive: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1092,23 +994,18 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 358
     iget-object v2, p0, Lcom/android/server/connectivity/KeepaliveTracker;->mConnectivityServiceHandler:Landroid/os/Handler;
 
-    .line 359
     const v3, 0x8100b
 
-    .line 358
     invoke-virtual {v2, v3, v1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v2
 
     invoke-virtual {v2}, Landroid/os/Message;->sendToTarget()V
 
-    .line 333
     return-void
 
-    .line 343
     .end local v1    # "ki":Lcom/android/server/connectivity/KeepaliveTracker$KeepaliveInfo;
     .end local v6    # "packet":Lcom/android/server/connectivity/KeepalivePacketData;
     .end local v8    # "dstAddress":Ljava/net/InetAddress;
@@ -1116,7 +1013,6 @@
     :catch_0
     move-exception v10
 
-    .line 344
     .local v10, "e":Ljava/lang/IllegalArgumentException;
     const/4 v2, -0x1
 
@@ -1124,17 +1020,14 @@
 
     invoke-virtual {p0, p3, v2, v3}, Lcom/android/server/connectivity/KeepaliveTracker;->notifyMessenger(Landroid/os/Messenger;II)V
 
-    .line 345
     return-void
 
-    .line 352
     .end local v10    # "e":Ljava/lang/IllegalArgumentException;
     .restart local v8    # "dstAddress":Ljava/net/InetAddress;
     .restart local v11    # "srcAddress":Ljava/net/InetAddress;
     :catch_1
     move-exception v9
 
-    .line 353
     .local v9, "e":Lcom/android/server/connectivity/KeepalivePacketData$InvalidPacketException;
     iget v2, v9, Lcom/android/server/connectivity/KeepalivePacketData$InvalidPacketException;->error:I
 
@@ -1142,6 +1035,5 @@
 
     invoke-virtual {p0, p3, v3, v2}, Lcom/android/server/connectivity/KeepaliveTracker;->notifyMessenger(Landroid/os/Messenger;II)V
 
-    .line 354
     return-void
 .end method

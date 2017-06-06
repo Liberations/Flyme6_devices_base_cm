@@ -34,12 +34,10 @@
     .end annotation
 
     .prologue
-    .line 167
     .local p0, "this":Landroid/support/v4/media/routing/MediaRouterJellybeanMr1$CallbackProxy;, "Landroid/support/v4/media/routing/MediaRouterJellybeanMr1$CallbackProxy<TT;>;"
     .local p1, "callback":Landroid/support/v4/media/routing/MediaRouterJellybeanMr1$Callback;, "TT;"
     invoke-direct {p0, p1}, Landroid/support/v4/media/routing/MediaRouterJellybean$CallbackProxy;-><init>(Landroid/support/v4/media/routing/MediaRouterJellybean$Callback;)V
 
-    .line 166
     return-void
 .end method
 
@@ -51,7 +49,6 @@
     .param p2, "route"    # Landroid/media/MediaRouter$RouteInfo;
 
     .prologue
-    .line 173
     .local p0, "this":Landroid/support/v4/media/routing/MediaRouterJellybeanMr1$CallbackProxy;, "Landroid/support/v4/media/routing/MediaRouterJellybeanMr1$CallbackProxy<TT;>;"
     iget-object v0, p0, Landroid/support/v4/media/routing/MediaRouterJellybeanMr1$CallbackProxy;->mCallback:Landroid/support/v4/media/routing/MediaRouterJellybean$Callback;
 
@@ -59,6 +56,5 @@
 
     invoke-interface {v0, p2}, Landroid/support/v4/media/routing/MediaRouterJellybeanMr1$Callback;->onRoutePresentationDisplayChanged(Ljava/lang/Object;)V
 
-    .line 172
     return-void
 .end method

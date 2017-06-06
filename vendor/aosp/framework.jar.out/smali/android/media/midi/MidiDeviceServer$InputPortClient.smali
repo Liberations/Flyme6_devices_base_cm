@@ -28,16 +28,12 @@
     .param p3, "outputPort"    # Landroid/media/midi/MidiOutputPort;
 
     .prologue
-    .line 114
     iput-object p1, p0, Landroid/media/midi/MidiDeviceServer$InputPortClient;->this$0:Landroid/media/midi/MidiDeviceServer;
 
-    .line 115
     invoke-direct {p0, p1, p2}, Landroid/media/midi/MidiDeviceServer$PortClient;-><init>(Landroid/media/midi/MidiDeviceServer;Landroid/os/IBinder;)V
 
-    .line 116
     iput-object p3, p0, Landroid/media/midi/MidiDeviceServer$InputPortClient;->mOutputPort:Landroid/media/midi/MidiOutputPort;
 
-    .line 114
     return-void
 .end method
 
@@ -49,12 +45,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 121
     iget-object v1, p0, Landroid/media/midi/MidiDeviceServer$InputPortClient;->mToken:Landroid/os/IBinder;
 
     invoke-interface {v1, p0, v2}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 122
     iget-object v1, p0, Landroid/media/midi/MidiDeviceServer$InputPortClient;->this$0:Landroid/media/midi/MidiDeviceServer;
 
     invoke-static {v1}, Landroid/media/midi/MidiDeviceServer;->-get4(Landroid/media/midi/MidiDeviceServer;)[Landroid/media/midi/MidiOutputPort;
@@ -63,7 +57,6 @@
 
     monitor-enter v2
 
-    .line 123
     :try_start_0
     iget-object v1, p0, Landroid/media/midi/MidiDeviceServer$InputPortClient;->mOutputPort:Landroid/media/midi/MidiOutputPort;
 
@@ -71,7 +64,6 @@
 
     move-result v0
 
-    .line 124
     .local v0, "portNumber":I
     iget-object v1, p0, Landroid/media/midi/MidiDeviceServer$InputPortClient;->this$0:Landroid/media/midi/MidiDeviceServer;
 
@@ -83,7 +75,6 @@
 
     aput-object v3, v1, v0
 
-    .line 125
     iget-object v1, p0, Landroid/media/midi/MidiDeviceServer$InputPortClient;->this$0:Landroid/media/midi/MidiDeviceServer;
 
     invoke-static {v1}, Landroid/media/midi/MidiDeviceServer;->-get3(Landroid/media/midi/MidiDeviceServer;)[Z
@@ -94,7 +85,6 @@
 
     aput-boolean v3, v1, v0
 
-    .line 126
     iget-object v1, p0, Landroid/media/midi/MidiDeviceServer$InputPortClient;->this$0:Landroid/media/midi/MidiDeviceServer;
 
     invoke-static {v1}, Landroid/media/midi/MidiDeviceServer;->-wrap0(Landroid/media/midi/MidiDeviceServer;)V
@@ -103,15 +93,12 @@
 
     monitor-exit v2
 
-    .line 128
     iget-object v1, p0, Landroid/media/midi/MidiDeviceServer$InputPortClient;->mOutputPort:Landroid/media/midi/MidiOutputPort;
 
     invoke-static {v1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 120
     return-void
 
-    .line 122
     .end local v0    # "portNumber":I
     :catchall_0
     move-exception v1

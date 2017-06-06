@@ -29,18 +29,14 @@
     .param p1, "callback"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 1952
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1953
     iput-object p1, p0, Landroid/app/Instrumentation$Idler;->mCallback:Ljava/lang/Runnable;
 
-    .line 1954
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/app/Instrumentation$Idler;->mIdle:Z
 
-    .line 1952
     return-void
 .end method
 
@@ -50,39 +46,32 @@
     .locals 1
 
     .prologue
-    .line 1958
     iget-object v0, p0, Landroid/app/Instrumentation$Idler;->mCallback:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_0
 
-    .line 1959
     iget-object v0, p0, Landroid/app/Instrumentation$Idler;->mCallback:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 1961
     :cond_0
     monitor-enter p0
 
-    .line 1962
     const/4 v0, 0x1
 
     :try_start_0
     iput-boolean v0, p0, Landroid/app/Instrumentation$Idler;->mIdle:Z
 
-    .line 1963
     invoke-virtual {p0}, Landroid/app/Instrumentation$Idler;->notifyAll()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     monitor-exit p0
 
-    .line 1965
     const/4 v0, 0x0
 
     return v0
 
-    .line 1961
     :catchall_0
     move-exception v0
 
@@ -95,10 +84,8 @@
     .locals 2
 
     .prologue
-    .line 1969
     monitor-enter p0
 
-    .line 1970
     :goto_0
     :try_start_0
     iget-boolean v1, p0, Landroid/app/Instrumentation$Idler;->mIdle:Z
@@ -107,7 +94,6 @@
 
     if-nez v1, :cond_0
 
-    .line 1972
     :try_start_1
     invoke-virtual {p0}, Landroid/app/Instrumentation$Idler;->wait()V
     :try_end_1
@@ -116,7 +102,6 @@
 
     goto :goto_0
 
-    .line 1973
     :catch_0
     move-exception v0
 
@@ -127,10 +112,8 @@
     :cond_0
     monitor-exit p0
 
-    .line 1968
     return-void
 
-    .line 1969
     :catchall_0
     move-exception v1
 

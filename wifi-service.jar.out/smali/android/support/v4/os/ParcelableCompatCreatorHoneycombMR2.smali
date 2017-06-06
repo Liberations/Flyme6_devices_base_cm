@@ -42,15 +42,12 @@
     .end annotation
 
     .prologue
-    .line 31
     .local p0, "this":Landroid/support/v4/os/ParcelableCompatCreatorHoneycombMR2;, "Landroid/support/v4/os/ParcelableCompatCreatorHoneycombMR2<TT;>;"
     .local p1, "callbacks":Landroid/support/v4/os/ParcelableCompatCreatorCallbacks;, "Landroid/support/v4/os/ParcelableCompatCreatorCallbacks<TT;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     iput-object p1, p0, Landroid/support/v4/os/ParcelableCompatCreatorHoneycombMR2;->mCallbacks:Landroid/support/v4/os/ParcelableCompatCreatorCallbacks;
 
-    .line 31
     return-void
 .end method
 
@@ -68,7 +65,6 @@
     .end annotation
 
     .prologue
-    .line 36
     .local p0, "this":Landroid/support/v4/os/ParcelableCompatCreatorHoneycombMR2;, "Landroid/support/v4/os/ParcelableCompatCreatorHoneycombMR2<TT;>;"
     iget-object v0, p0, Landroid/support/v4/os/ParcelableCompatCreatorHoneycombMR2;->mCallbacks:Landroid/support/v4/os/ParcelableCompatCreatorCallbacks;
 
@@ -95,7 +91,6 @@
     .end annotation
 
     .prologue
-    .line 40
     .local p0, "this":Landroid/support/v4/os/ParcelableCompatCreatorHoneycombMR2;, "Landroid/support/v4/os/ParcelableCompatCreatorHoneycombMR2<TT;>;"
     iget-object v0, p0, Landroid/support/v4/os/ParcelableCompatCreatorHoneycombMR2;->mCallbacks:Landroid/support/v4/os/ParcelableCompatCreatorCallbacks;
 
@@ -116,7 +111,6 @@
     .end annotation
 
     .prologue
-    .line 44
     .local p0, "this":Landroid/support/v4/os/ParcelableCompatCreatorHoneycombMR2;, "Landroid/support/v4/os/ParcelableCompatCreatorHoneycombMR2<TT;>;"
     iget-object v0, p0, Landroid/support/v4/os/ParcelableCompatCreatorHoneycombMR2;->mCallbacks:Landroid/support/v4/os/ParcelableCompatCreatorCallbacks;
 

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/app/Presentation;
 
     .prologue
-    .line 325
     iput-object p1, p0, Landroid/app/Presentation$1;->this$0:Landroid/app/Presentation;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 327
     return-void
 .end method
 
@@ -51,7 +49,6 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 339
     iget-object v0, p0, Landroid/app/Presentation$1;->this$0:Landroid/app/Presentation;
 
     invoke-static {v0}, Landroid/app/Presentation;->-get0(Landroid/app/Presentation;)Landroid/view/Display;
@@ -64,12 +61,10 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 340
     iget-object v0, p0, Landroid/app/Presentation$1;->this$0:Landroid/app/Presentation;
 
     invoke-static {v0}, Landroid/app/Presentation;->-wrap0(Landroid/app/Presentation;)V
 
-    .line 338
     :cond_0
     return-void
 .end method
@@ -79,7 +74,6 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 332
     iget-object v0, p0, Landroid/app/Presentation$1;->this$0:Landroid/app/Presentation;
 
     invoke-static {v0}, Landroid/app/Presentation;->-get0(Landroid/app/Presentation;)Landroid/view/Display;
@@ -92,12 +86,10 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 333
     iget-object v0, p0, Landroid/app/Presentation$1;->this$0:Landroid/app/Presentation;
 
     invoke-static {v0}, Landroid/app/Presentation;->-wrap1(Landroid/app/Presentation;)V
 
-    .line 331
     :cond_0
     return-void
 .end method

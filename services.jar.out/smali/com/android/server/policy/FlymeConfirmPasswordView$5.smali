@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/policy/FlymeConfirmPasswordView;
 
     .prologue
-    .line 324
     iput-object p1, p0, Lcom/android/server/policy/FlymeConfirmPasswordView$5;->this$0:Lcom/android/server/policy/FlymeConfirmPasswordView;
 
     invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
@@ -42,7 +41,6 @@
 
     const/4 v5, 0x0
 
-    .line 327
     iget-object v0, p0, Lcom/android/server/policy/FlymeConfirmPasswordView$5;->this$0:Lcom/android/server/policy/FlymeConfirmPasswordView;
 
     invoke-static {v0}, Lcom/android/server/policy/FlymeConfirmPasswordView;->-get3(Lcom/android/server/policy/FlymeConfirmPasswordView;)I
@@ -51,7 +49,6 @@
 
     if-nez v0, :cond_1
 
-    .line 328
     iget-object v0, p0, Lcom/android/server/policy/FlymeConfirmPasswordView$5;->this$0:Lcom/android/server/policy/FlymeConfirmPasswordView;
 
     iget-object v1, p0, Lcom/android/server/policy/FlymeConfirmPasswordView$5;->this$0:Lcom/android/server/policy/FlymeConfirmPasswordView;
@@ -68,12 +65,10 @@
 
     invoke-static {v0, v1}, Lcom/android/server/policy/FlymeConfirmPasswordView;->-set2(Lcom/android/server/policy/FlymeConfirmPasswordView;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 329
     iget-object v0, p0, Lcom/android/server/policy/FlymeConfirmPasswordView$5;->this$0:Lcom/android/server/policy/FlymeConfirmPasswordView;
 
     invoke-static {v0, v5}, Lcom/android/server/policy/FlymeConfirmPasswordView;->-set0(Lcom/android/server/policy/FlymeConfirmPasswordView;Z)Z
 
-    .line 335
     :goto_0
     iget-object v0, p0, Lcom/android/server/policy/FlymeConfirmPasswordView$5;->this$0:Lcom/android/server/policy/FlymeConfirmPasswordView;
 
@@ -83,7 +78,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/policy/FlymeConfirmPasswordView;->post(Ljava/lang/Runnable;)Z
 
-    .line 341
     iget-object v0, p0, Lcom/android/server/policy/FlymeConfirmPasswordView$5;->this$0:Lcom/android/server/policy/FlymeConfirmPasswordView;
 
     invoke-static {v0}, Lcom/android/server/policy/FlymeConfirmPasswordView;->-get3(Lcom/android/server/policy/FlymeConfirmPasswordView;)I
@@ -94,7 +88,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/policy/FlymeConfirmPasswordView;->-set1(Lcom/android/server/policy/FlymeConfirmPasswordView;I)I
 
-    .line 343
     iget-object v0, p0, Lcom/android/server/policy/FlymeConfirmPasswordView$5;->this$0:Lcom/android/server/policy/FlymeConfirmPasswordView;
 
     invoke-static {v0}, Lcom/android/server/policy/FlymeConfirmPasswordView;->-get3(Lcom/android/server/policy/FlymeConfirmPasswordView;)I
@@ -105,22 +98,18 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 344
     iget-object v0, p0, Lcom/android/server/policy/FlymeConfirmPasswordView$5;->this$0:Lcom/android/server/policy/FlymeConfirmPasswordView;
 
     invoke-static {v0}, Lcom/android/server/policy/FlymeConfirmPasswordView;->-wrap0(Lcom/android/server/policy/FlymeConfirmPasswordView;)V
 
-    .line 326
     :cond_0
     return-void
 
-    .line 331
     :cond_1
     iget-object v0, p0, Lcom/android/server/policy/FlymeConfirmPasswordView$5;->this$0:Lcom/android/server/policy/FlymeConfirmPasswordView;
 
     invoke-static {v0, v3}, Lcom/android/server/policy/FlymeConfirmPasswordView;->-set0(Lcom/android/server/policy/FlymeConfirmPasswordView;Z)Z
 
-    .line 332
     iget-object v0, p0, Lcom/android/server/policy/FlymeConfirmPasswordView$5;->this$0:Lcom/android/server/policy/FlymeConfirmPasswordView;
 
     iget-object v1, p0, Lcom/android/server/policy/FlymeConfirmPasswordView$5;->this$0:Lcom/android/server/policy/FlymeConfirmPasswordView;

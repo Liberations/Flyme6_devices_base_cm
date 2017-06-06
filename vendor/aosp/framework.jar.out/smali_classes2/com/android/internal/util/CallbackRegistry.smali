@@ -70,27 +70,22 @@
     .end annotation
 
     .prologue
-    .line 77
     .local p0, "this":Lcom/android/internal/util/CallbackRegistry;, "Lcom/android/internal/util/CallbackRegistry<TC;TT;TA;>;"
     .local p1, "notifier":Lcom/android/internal/util/CallbackRegistry$NotifierCallback;, "Lcom/android/internal/util/CallbackRegistry$NotifierCallback<TC;TT;TA;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/util/CallbackRegistry;->mCallbacks:Ljava/util/List;
 
-    .line 54
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/internal/util/CallbackRegistry;->mFirst64Removed:J
 
-    .line 78
     iput-object p1, p0, Lcom/android/internal/util/CallbackRegistry;->mNotifier:Lcom/android/internal/util/CallbackRegistry$NotifierCallback;
 
-    .line 77
     return-void
 .end method
 
@@ -108,15 +103,12 @@
 
     const/4 v6, 0x0
 
-    .line 229
     const/16 v7, 0x40
 
     if-ge p1, v7, :cond_1
 
-    .line 231
     shl-long v0, v8, p1
 
-    .line 232
     .local v0, "bitMask":J
     iget-wide v8, p0, Lcom/android/internal/util/CallbackRegistry;->mFirst64Removed:J
 
@@ -134,23 +126,19 @@
 
     goto :goto_0
 
-    .line 233
     .end local v0    # "bitMask":J
     :cond_1
     iget-object v7, p0, Lcom/android/internal/util/CallbackRegistry;->mRemainderRemoved:[J
 
     if-nez v7, :cond_2
 
-    .line 235
     return v6
 
-    .line 237
     :cond_2
     div-int/lit8 v7, p1, 0x40
 
     add-int/lit8 v4, v7, -0x1
 
-    .line 238
     .local v4, "maskIndex":I
     iget-object v7, p0, Lcom/android/internal/util/CallbackRegistry;->mRemainderRemoved:[J
 
@@ -158,22 +146,18 @@
 
     if-lt v4, v7, :cond_3
 
-    .line 240
     return v6
 
-    .line 243
     :cond_3
     iget-object v7, p0, Lcom/android/internal/util/CallbackRegistry;->mRemainderRemoved:[J
 
     aget-wide v2, v7, v4
 
-    .line 244
     .local v2, "bits":J
     rem-int/lit8 v7, p1, 0x40
 
     shl-long v0, v8, v7
 
-    .line 245
     .restart local v0    # "bitMask":J
     and-long v8, v2, v0
 
@@ -203,13 +187,11 @@
     .end annotation
 
     .prologue
-    .line 201
     .local p0, "this":Lcom/android/internal/util/CallbackRegistry;, "Lcom/android/internal/util/CallbackRegistry<TC;TT;TA;>;"
     .local p1, "sender":Ljava/lang/Object;, "TT;"
     .local p3, "arg2":Ljava/lang/Object;, "TA;"
     const-wide/16 v0, 0x1
 
-    .line 202
     .local v0, "bitMask":J
     move v2, p4
 
@@ -217,7 +199,6 @@
     :goto_0
     if-ge v2, p5, :cond_1
 
-    .line 203
     and-long v4, p6, v0
 
     const-wide/16 v6, 0x0
@@ -226,7 +207,6 @@
 
     if-nez v3, :cond_0
 
-    .line 204
     iget-object v3, p0, Lcom/android/internal/util/CallbackRegistry;->mNotifier:Lcom/android/internal/util/CallbackRegistry$NotifierCallback;
 
     iget-object v4, p0, Lcom/android/internal/util/CallbackRegistry;->mCallbacks:Ljava/util/List;
@@ -237,18 +217,15 @@
 
     invoke-virtual {v3, v4, p1, p2, p3}, Lcom/android/internal/util/CallbackRegistry$NotifierCallback;->onNotifyCallback(Ljava/lang/Object;Ljava/lang/Object;ILjava/lang/Object;)V
 
-    .line 206
     :cond_0
     const/4 v3, 0x1
 
     shl-long/2addr v0, v3
 
-    .line 202
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 200
     :cond_1
     return-void
 .end method
@@ -263,7 +240,6 @@
     .end annotation
 
     .prologue
-    .line 123
     .local p0, "this":Lcom/android/internal/util/CallbackRegistry;, "Lcom/android/internal/util/CallbackRegistry<TC;TT;TA;>;"
     .local p1, "sender":Ljava/lang/Object;, "TT;"
     .local p3, "arg2":Ljava/lang/Object;, "TA;"
@@ -279,7 +255,6 @@
 
     move-result v5
 
-    .line 124
     .local v5, "maxNotified":I
     iget-wide v6, p0, Lcom/android/internal/util/CallbackRegistry;->mFirst64Removed:J
 
@@ -295,7 +270,6 @@
 
     invoke-direct/range {v0 .. v7}, Lcom/android/internal/util/CallbackRegistry;->notifyCallbacksLocked(Ljava/lang/Object;ILjava/lang/Object;IIJ)V
 
-    .line 122
     return-void
 .end method
 
@@ -309,7 +283,6 @@
     .end annotation
 
     .prologue
-    .line 143
     .local p0, "this":Lcom/android/internal/util/CallbackRegistry;, "Lcom/android/internal/util/CallbackRegistry<TC;TT;TA;>;"
     .local p1, "sender":Ljava/lang/Object;, "TT;"
     .local p3, "arg2":Ljava/lang/Object;, "TA;"
@@ -319,7 +292,6 @@
 
     move-result v5
 
-    .line 144
     .local v5, "callbackCount":I
     iget-object v0, p0, Lcom/android/internal/util/CallbackRegistry;->mRemainderRemoved:[J
 
@@ -327,17 +299,14 @@
 
     const/4 v8, -0x1
 
-    .line 148
     .local v8, "remainderIndex":I
     :goto_0
     invoke-direct {p0, p1, p2, p3, v8}, Lcom/android/internal/util/CallbackRegistry;->notifyRemainderLocked(Ljava/lang/Object;ILjava/lang/Object;I)V
 
-    .line 152
     add-int/lit8 v0, v8, 0x2
 
     mul-int/lit8 v4, v0, 0x40
 
-    .line 155
     .local v4, "startCallbackIndex":I
     const-wide/16 v6, 0x0
 
@@ -351,10 +320,8 @@
 
     invoke-direct/range {v0 .. v7}, Lcom/android/internal/util/CallbackRegistry;->notifyCallbacksLocked(Ljava/lang/Object;ILjava/lang/Object;IIJ)V
 
-    .line 142
     return-void
 
-    .line 144
     .end local v4    # "startCallbackIndex":I
     .end local v8    # "remainderIndex":I
     :cond_0
@@ -379,32 +346,26 @@
     .end annotation
 
     .prologue
-    .line 171
     .local p0, "this":Lcom/android/internal/util/CallbackRegistry;, "Lcom/android/internal/util/CallbackRegistry<TC;TT;TA;>;"
     .local p1, "sender":Ljava/lang/Object;, "TT;"
     .local p3, "arg2":Ljava/lang/Object;, "TA;"
     if-gez p4, :cond_0
 
-    .line 172
     invoke-direct {p0, p1, p2, p3}, Lcom/android/internal/util/CallbackRegistry;->notifyFirst64Locked(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    .line 170
     :goto_0
     return-void
 
-    .line 174
     :cond_0
     iget-object v0, p0, Lcom/android/internal/util/CallbackRegistry;->mRemainderRemoved:[J
 
     aget-wide v6, v0, p4
 
-    .line 175
     .local v6, "bits":J
     add-int/lit8 v0, p4, 0x1
 
     mul-int/lit8 v4, v0, 0x40
 
-    .line 176
     .local v4, "startIndex":I
     iget-object v0, p0, Lcom/android/internal/util/CallbackRegistry;->mCallbacks:Ljava/util/List;
 
@@ -418,7 +379,6 @@
 
     move-result v5
 
-    .line 177
     .local v5, "endIndex":I
     add-int/lit8 v0, p4, -0x1
 
@@ -432,7 +392,6 @@
 
     move-object v3, p3
 
-    .line 178
     invoke-direct/range {v0 .. v7}, Lcom/android/internal/util/CallbackRegistry;->notifyCallbacksLocked(Ljava/lang/Object;ILjava/lang/Object;IIJ)V
 
     goto :goto_0
@@ -444,15 +403,12 @@
     .param p2, "removed"    # J
 
     .prologue
-    .line 259
     .local p0, "this":Lcom/android/internal/util/CallbackRegistry;, "Lcom/android/internal/util/CallbackRegistry<TC;TT;TA;>;"
     add-int/lit8 v2, p1, 0x40
 
-    .line 261
     .local v2, "endIndex":I
     const-wide/high16 v0, -0x8000000000000000L
 
-    .line 262
     .local v0, "bitMask":J
     add-int/lit8 v3, v2, -0x1
 
@@ -460,7 +416,6 @@
     :goto_0
     if-lt v3, p1, :cond_1
 
-    .line 263
     and-long v4, p2, v0
 
     const-wide/16 v6, 0x0
@@ -469,23 +424,19 @@
 
     if-eqz v4, :cond_0
 
-    .line 264
     iget-object v4, p0, Lcom/android/internal/util/CallbackRegistry;->mCallbacks:Ljava/util/List;
 
     invoke-interface {v4, v3}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 266
     :cond_0
     const/4 v4, 0x1
 
     ushr-long/2addr v0, v4
 
-    .line 262
     add-int/lit8 v3, v3, -0x1
 
     goto :goto_0
 
-    .line 257
     :cond_1
     return-void
 .end method
@@ -500,15 +451,12 @@
 
     const/4 v6, 0x0
 
-    .line 286
     const/16 v4, 0x40
 
     if-ge p1, v4, :cond_0
 
-    .line 288
     shl-long v0, v8, p1
 
-    .line 289
     .local v0, "bitMask":J
     iget-wide v4, p0, Lcom/android/internal/util/CallbackRegistry;->mFirst64Removed:J
 
@@ -516,24 +464,20 @@
 
     iput-wide v4, p0, Lcom/android/internal/util/CallbackRegistry;->mFirst64Removed:J
 
-    .line 285
     :goto_0
     return-void
 
-    .line 291
     .end local v0    # "bitMask":J
     :cond_0
     div-int/lit8 v4, p1, 0x40
 
     add-int/lit8 v3, v4, -0x1
 
-    .line 292
     .local v3, "remainderIndex":I
     iget-object v4, p0, Lcom/android/internal/util/CallbackRegistry;->mRemainderRemoved:[J
 
     if-nez v4, :cond_2
 
-    .line 293
     iget-object v4, p0, Lcom/android/internal/util/CallbackRegistry;->mCallbacks:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->size()I
@@ -546,14 +490,12 @@
 
     iput-object v4, p0, Lcom/android/internal/util/CallbackRegistry;->mRemainderRemoved:[J
 
-    .line 300
     :cond_1
     :goto_1
     rem-int/lit8 v4, p1, 0x40
 
     shl-long v0, v8, v4
 
-    .line 301
     .restart local v0    # "bitMask":J
     iget-object v4, p0, Lcom/android/internal/util/CallbackRegistry;->mRemainderRemoved:[J
 
@@ -565,7 +507,6 @@
 
     goto :goto_0
 
-    .line 294
     .end local v0    # "bitMask":J
     :cond_2
     iget-object v4, p0, Lcom/android/internal/util/CallbackRegistry;->mRemainderRemoved:[J
@@ -574,7 +515,6 @@
 
     if-ge v4, v3, :cond_1
 
-    .line 296
     iget-object v4, p0, Lcom/android/internal/util/CallbackRegistry;->mCallbacks:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->size()I
@@ -585,7 +525,6 @@
 
     new-array v2, v4, [J
 
-    .line 297
     .local v2, "newRemainders":[J
     iget-object v4, p0, Lcom/android/internal/util/CallbackRegistry;->mRemainderRemoved:[J
 
@@ -595,7 +534,6 @@
 
     invoke-static {v4, v6, v2, v6, v5}, Ljava/lang/System;->arraycopy([JI[JII)V
 
-    .line 298
     iput-object v2, p0, Lcom/android/internal/util/CallbackRegistry;->mRemainderRemoved:[J
 
     goto :goto_1
@@ -616,7 +554,6 @@
     .local p1, "callback":Ljava/lang/Object;, "TC;"
     monitor-enter p0
 
-    .line 216
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/util/CallbackRegistry;->mCallbacks:Ljava/util/List;
 
@@ -624,7 +561,6 @@
 
     move-result v0
 
-    .line 217
     .local v0, "index":I
     if-ltz v0, :cond_0
 
@@ -634,7 +570,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 218
     :cond_0
     iget-object v1, p0, Lcom/android/internal/util/CallbackRegistry;->mCallbacks:Ljava/util/List;
 
@@ -645,7 +580,6 @@
     :cond_1
     monitor-exit p0
 
-    .line 215
     return-void
 
     .end local v0    # "index":I
@@ -664,13 +598,11 @@
     .local p0, "this":Lcom/android/internal/util/CallbackRegistry;, "Lcom/android/internal/util/CallbackRegistry<TC;TT;TA;>;"
     monitor-enter p0
 
-    .line 346
     :try_start_0
     iget v1, p0, Lcom/android/internal/util/CallbackRegistry;->mNotificationLevel:I
 
     if-nez v1, :cond_1
 
-    .line 347
     iget-object v1, p0, Lcom/android/internal/util/CallbackRegistry;->mCallbacks:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->clear()V
@@ -680,10 +612,8 @@
     :cond_0
     monitor-exit p0
 
-    .line 345
     return-void
 
-    .line 348
     :cond_1
     :try_start_1
     iget-object v1, p0, Lcom/android/internal/util/CallbackRegistry;->mCallbacks:Ljava/util/List;
@@ -694,7 +624,6 @@
 
     if-nez v1, :cond_0
 
-    .line 349
     iget-object v1, p0, Lcom/android/internal/util/CallbackRegistry;->mCallbacks:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -707,12 +636,10 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 350
     invoke-direct {p0, v0}, Lcom/android/internal/util/CallbackRegistry;->setRemovalBitLocked(I)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 349
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
@@ -740,10 +667,8 @@
     .local p0, "this":Lcom/android/internal/util/CallbackRegistry;, "Lcom/android/internal/util/CallbackRegistry<TC;TT;TA;>;"
     monitor-enter p0
 
-    .line 356
     const/4 v2, 0x0
 
-    .line 358
     .local v2, "clone":Lcom/android/internal/util/CallbackRegistry;, "Lcom/android/internal/util/CallbackRegistry<TC;TT;TA;>;"
     :try_start_0
     invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
@@ -756,37 +681,31 @@
 
     move-object v2, v0
 
-    .line 359
     .local v2, "clone":Lcom/android/internal/util/CallbackRegistry;, "Lcom/android/internal/util/CallbackRegistry<TC;TT;TA;>;"
     const-wide/16 v6, 0x0
 
     iput-wide v6, v2, Lcom/android/internal/util/CallbackRegistry;->mFirst64Removed:J
 
-    .line 360
     const/4 v6, 0x0
 
     iput-object v6, v2, Lcom/android/internal/util/CallbackRegistry;->mRemainderRemoved:[J
 
-    .line 361
     const/4 v6, 0x0
 
     iput v6, v2, Lcom/android/internal/util/CallbackRegistry;->mNotificationLevel:I
 
-    .line 362
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v6, v2, Lcom/android/internal/util/CallbackRegistry;->mCallbacks:Ljava/util/List;
 
-    .line 363
     iget-object v6, p0, Lcom/android/internal/util/CallbackRegistry;->mCallbacks:Ljava/util/List;
 
     invoke-interface {v6}, Ljava/util/List;->size()I
 
     move-result v5
 
-    .line 364
     .local v5, "numListeners":I
     const/4 v4, 0x0
 
@@ -794,14 +713,12 @@
     :goto_0
     if-ge v4, v5, :cond_1
 
-    .line 365
     invoke-direct {p0, v4}, Lcom/android/internal/util/CallbackRegistry;->isRemovedLocked(I)Z
 
     move-result v6
 
     if-nez v6, :cond_0
 
-    .line 366
     iget-object v6, v2, Lcom/android/internal/util/CallbackRegistry;->mCallbacks:Ljava/util/List;
 
     iget-object v7, p0, Lcom/android/internal/util/CallbackRegistry;->mCallbacks:Ljava/util/List;
@@ -815,20 +732,17 @@
     .catch Ljava/lang/CloneNotSupportedException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 364
     :cond_0
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 369
     .end local v2    # "clone":Lcom/android/internal/util/CallbackRegistry;, "Lcom/android/internal/util/CallbackRegistry<TC;TT;TA;>;"
     .end local v4    # "i":I
     .end local v5    # "numListeners":I
     :catch_0
     move-exception v3
 
-    .line 370
     .local v3, "e":Ljava/lang/CloneNotSupportedException;
     :try_start_1
     invoke-virtual {v3}, Ljava/lang/CloneNotSupportedException;->printStackTrace()V
@@ -839,7 +753,6 @@
     :cond_1
     monitor-exit p0
 
-    .line 372
     return-object v2
 
     :catchall_0
@@ -859,7 +772,6 @@
     .end annotation
 
     .prologue
-    .line 355
     .local p0, "this":Lcom/android/internal/util/CallbackRegistry;, "Lcom/android/internal/util/CallbackRegistry<TC;TT;TA;>;"
     invoke-virtual {p0}, Lcom/android/internal/util/CallbackRegistry;->clone()Lcom/android/internal/util/CallbackRegistry;
 
@@ -882,7 +794,6 @@
     .local p0, "this":Lcom/android/internal/util/CallbackRegistry;, "Lcom/android/internal/util/CallbackRegistry<TC;TT;TA;>;"
     monitor-enter p0
 
-    .line 311
     :try_start_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -894,7 +805,6 @@
 
     invoke-direct {v0, v3}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 312
     .local v0, "callbacks":Ljava/util/ArrayList;, "Ljava/util/ArrayList<TC;>;"
     iget-object v3, p0, Lcom/android/internal/util/CallbackRegistry;->mCallbacks:Ljava/util/List;
 
@@ -902,7 +812,6 @@
 
     move-result v2
 
-    .line 313
     .local v2, "numListeners":I
     const/4 v1, 0x0
 
@@ -910,14 +819,12 @@
     :goto_0
     if-ge v1, v2, :cond_1
 
-    .line 314
     invoke-direct {p0, v1}, Lcom/android/internal/util/CallbackRegistry;->isRemovedLocked(I)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 315
     iget-object v3, p0, Lcom/android/internal/util/CallbackRegistry;->mCallbacks:Ljava/util/List;
 
     invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -928,7 +835,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 313
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
@@ -937,7 +843,6 @@
     :cond_1
     monitor-exit p0
 
-    .line 318
     return-object v0
 
     .end local v0    # "callbacks":Ljava/util/ArrayList;, "Ljava/util/ArrayList<TC;>;"
@@ -962,7 +867,6 @@
 
     monitor-enter p0
 
-    .line 327
     :try_start_0
     iget-object v2, p0, Lcom/android/internal/util/CallbackRegistry;->mCallbacks:Ljava/util/List;
 
@@ -976,10 +880,8 @@
 
     monitor-exit p0
 
-    .line 328
     return v4
 
-    .line 329
     :cond_0
     :try_start_1
     iget v2, p0, Lcom/android/internal/util/CallbackRegistry;->mNotificationLevel:I
@@ -990,10 +892,8 @@
 
     monitor-exit p0
 
-    .line 330
     return v3
 
-    .line 332
     :cond_1
     :try_start_2
     iget-object v2, p0, Lcom/android/internal/util/CallbackRegistry;->mCallbacks:Ljava/util/List;
@@ -1002,7 +902,6 @@
 
     move-result v1
 
-    .line 333
     .local v1, "numListeners":I
     const/4 v0, 0x0
 
@@ -1010,7 +909,6 @@
     :goto_0
     if-ge v0, v1, :cond_3
 
-    .line 334
     invoke-direct {p0, v0}, Lcom/android/internal/util/CallbackRegistry;->isRemovedLocked(I)Z
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -1021,10 +919,8 @@
 
     monitor-exit p0
 
-    .line 335
     return v3
 
-    .line 333
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
@@ -1033,7 +929,6 @@
     :cond_3
     monitor-exit p0
 
-    .line 338
     return v4
 
     .end local v0    # "i":I
@@ -1063,7 +958,6 @@
 
     monitor-enter p0
 
-    .line 92
     :try_start_0
     iget v1, p0, Lcom/android/internal/util/CallbackRegistry;->mNotificationLevel:I
 
@@ -1071,27 +965,22 @@
 
     iput v1, p0, Lcom/android/internal/util/CallbackRegistry;->mNotificationLevel:I
 
-    .line 93
     invoke-direct {p0, p1, p2, p3}, Lcom/android/internal/util/CallbackRegistry;->notifyRecurseLocked(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    .line 94
     iget v1, p0, Lcom/android/internal/util/CallbackRegistry;->mNotificationLevel:I
 
     add-int/lit8 v1, v1, -0x1
 
     iput v1, p0, Lcom/android/internal/util/CallbackRegistry;->mNotificationLevel:I
 
-    .line 95
     iget v1, p0, Lcom/android/internal/util/CallbackRegistry;->mNotificationLevel:I
 
     if-nez v1, :cond_2
 
-    .line 96
     iget-object v1, p0, Lcom/android/internal/util/CallbackRegistry;->mRemainderRemoved:[J
 
     if-eqz v1, :cond_1
 
-    .line 97
     iget-object v1, p0, Lcom/android/internal/util/CallbackRegistry;->mRemainderRemoved:[J
 
     array-length v1, v1
@@ -1102,38 +991,32 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 98
     iget-object v1, p0, Lcom/android/internal/util/CallbackRegistry;->mRemainderRemoved:[J
 
     aget-wide v2, v1, v0
 
-    .line 99
     .local v2, "removedBits":J
     cmp-long v1, v2, v6
 
     if-eqz v1, :cond_0
 
-    .line 100
     add-int/lit8 v1, v0, 0x1
 
     mul-int/lit8 v1, v1, 0x40
 
     invoke-direct {p0, v1, v2, v3}, Lcom/android/internal/util/CallbackRegistry;->removeRemovedCallbacks(IJ)V
 
-    .line 101
     iget-object v1, p0, Lcom/android/internal/util/CallbackRegistry;->mRemainderRemoved:[J
 
     const-wide/16 v4, 0x0
 
     aput-wide v4, v1, v0
 
-    .line 97
     :cond_0
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 105
     .end local v0    # "i":I
     .end local v2    # "removedBits":J
     :cond_1
@@ -1143,14 +1026,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 106
     iget-wide v4, p0, Lcom/android/internal/util/CallbackRegistry;->mFirst64Removed:J
 
     const/4 v1, 0x0
 
     invoke-direct {p0, v1, v4, v5}, Lcom/android/internal/util/CallbackRegistry;->removeRemovedCallbacks(IJ)V
 
-    .line 107
     const-wide/16 v4, 0x0
 
     iput-wide v4, p0, Lcom/android/internal/util/CallbackRegistry;->mFirst64Removed:J
@@ -1160,7 +1041,6 @@
     :cond_2
     monitor-exit p0
 
-    .line 91
     return-void
 
     :catchall_0
@@ -1184,13 +1064,11 @@
     .local p1, "callback":Ljava/lang/Object;, "TC;"
     monitor-enter p0
 
-    .line 275
     :try_start_0
     iget v1, p0, Lcom/android/internal/util/CallbackRegistry;->mNotificationLevel:I
 
     if-nez v1, :cond_1
 
-    .line 276
     iget-object v1, p0, Lcom/android/internal/util/CallbackRegistry;->mCallbacks:Ljava/util/List;
 
     invoke-interface {v1, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
@@ -1201,10 +1079,8 @@
     :goto_0
     monitor-exit p0
 
-    .line 274
     return-void
 
-    .line 278
     :cond_1
     :try_start_1
     iget-object v1, p0, Lcom/android/internal/util/CallbackRegistry;->mCallbacks:Ljava/util/List;
@@ -1213,11 +1089,9 @@
 
     move-result v0
 
-    .line 279
     .local v0, "index":I
     if-ltz v0, :cond_0
 
-    .line 280
     invoke-direct {p0, v0}, Lcom/android/internal/util/CallbackRegistry;->setRemovalBitLocked(I)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0

@@ -40,29 +40,22 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 142
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 135
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mFrameCount:I
 
-    .line 136
     iput-wide v2, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mLastTime:J
 
-    .line 137
     iput-wide v2, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mLastPrintTime:J
 
-    .line 138
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mLastFps:D
 
-    .line 143
     iput-object p1, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mStreamType:Ljava/lang/String;
 
-    .line 142
     return-void
 .end method
 
@@ -74,7 +67,6 @@
     .prologue
     monitor-enter p0
 
-    .line 161
     :try_start_0
     iget-wide v0, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mLastFps:D
     :try_end_0
@@ -98,18 +90,15 @@
     .prologue
     monitor-enter p0
 
-    .line 172
     :try_start_0
     invoke-virtual {p0}, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->countFrame()V
 
-    .line 173
     invoke-virtual {p0}, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->staggeredLog()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     monitor-exit p0
 
-    .line 171
     return-void
 
     :catchall_0
@@ -126,7 +115,6 @@
     .prologue
     monitor-enter p0
 
-    .line 147
     :try_start_0
     iget v4, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mFrameCount:I
 
@@ -134,12 +122,10 @@
 
     iput v4, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mFrameCount:I
 
-    .line 148
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v2
 
-    .line 149
     .local v2, "nextTime":J
     iget-wide v4, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mLastTime:J
 
@@ -149,10 +135,8 @@
 
     if-nez v4, :cond_0
 
-    .line 150
     iput-wide v2, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mLastTime:J
 
-    .line 152
     :cond_0
     iget-wide v4, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mLastTime:J
 
@@ -164,12 +148,10 @@
 
     if-lez v4, :cond_1
 
-    .line 153
     iget-wide v4, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mLastTime:J
 
     sub-long v0, v2, v4
 
-    .line 154
     .local v0, "elapsed":J
     iget v4, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mFrameCount:I
 
@@ -185,12 +167,10 @@
 
     iput-wide v4, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mLastFps:D
 
-    .line 155
     const/4 v4, 0x0
 
     iput v4, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mFrameCount:I
 
-    .line 156
     iput-wide v2, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mLastTime:J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -199,7 +179,6 @@
     :cond_1
     monitor-exit p0
 
-    .line 146
     return-void
 
     .end local v2    # "nextTime":J
@@ -217,7 +196,6 @@
     .prologue
     monitor-enter p0
 
-    .line 165
     :try_start_0
     iget-wide v0, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mLastTime:J
 
@@ -231,19 +209,17 @@
 
     if-lez v0, :cond_0
 
-    .line 166
     iget-wide v0, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mLastTime:J
 
     iput-wide v0, p0, Landroid/hardware/camera2/legacy/RequestThreadManager$FpsCounter;->mLastPrintTime:J
 
-    .line 167
-    const-string/jumbo v0, "FpsCounter"
+    const-string v0, "FpsCounter"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "FPS for "
+    const-string v2, "FPS for "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -255,7 +231,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, " stream: "
+    const-string v2, " stream: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -278,7 +254,6 @@
     :cond_0
     monitor-exit p0
 
-    .line 164
     return-void
 
     :catchall_0

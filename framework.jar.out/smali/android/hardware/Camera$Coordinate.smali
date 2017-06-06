@@ -30,18 +30,14 @@
     .param p3, "y"    # I
 
     .prologue
-    .line 2129
     iput-object p1, p0, Landroid/hardware/Camera$Coordinate;->this$0:Landroid/hardware/Camera;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2130
     iput p2, p0, Landroid/hardware/Camera$Coordinate;->xCoordinate:I
 
-    .line 2131
     iput p3, p0, Landroid/hardware/Camera$Coordinate;->yCoordinate:I
 
-    .line 2129
     return-void
 .end method
 
@@ -54,21 +50,17 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2142
     instance-of v2, p1, Landroid/hardware/Camera$Coordinate;
 
     if-nez v2, :cond_0
 
-    .line 2143
     return v1
 
     :cond_0
     move-object v0, p1
 
-    .line 2145
     check-cast v0, Landroid/hardware/Camera$Coordinate;
 
-    .line 2146
     .local v0, "c":Landroid/hardware/Camera$Coordinate;
     iget v2, p0, Landroid/hardware/Camera$Coordinate;->xCoordinate:I
 

@@ -30,7 +30,6 @@
     .param p2, "val$notifIdString"    # Ljava/lang/String;
 
     .prologue
-    .line 3128
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$10;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iput-object p2, p0, Lcom/android/server/notification/NotificationManagerService$10;->val$notifIdString:Ljava/lang/String;
@@ -48,20 +47,16 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 3131
     invoke-static {}, Lcom/android/server/notification/NotificationManagerService;->-get3()Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 3132
     iget-object v2, p0, Lcom/android/server/notification/NotificationManagerService$10;->val$notifIdString:Ljava/lang/String;
 
-    .line 3131
     invoke-static {v1, v2}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 3133
     .local v0, "updateUri":Landroid/net/Uri;
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$10;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
@@ -73,14 +68,11 @@
 
     move-result-object v1
 
-    .line 3134
     new-instance v2, Landroid/content/ContentValues;
 
     invoke-direct {v2}, Landroid/content/ContentValues;-><init>()V
 
-    .line 3133
     invoke-virtual {v1, v0, v2, v3, v3}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 3130
     return-void
 .end method

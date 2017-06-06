@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 577
     invoke-direct {p0}, Landroid/support/v4/app/NotificationCompat$NotificationCompatImplBase;-><init>()V
 
     return-void
@@ -33,10 +32,8 @@
     .param p2, "extender"    # Landroid/support/v4/app/NotificationCompat$BuilderExtender;
 
     .prologue
-    .line 581
     new-instance v2, Landroid/support/v4/app/NotificationCompatIceCreamSandwich$Builder;
 
-    .line 582
     move-object/from16 v0, p1
 
     iget-object v3, v0, Landroid/support/v4/app/NotificationCompat$Builder;->mContext:Landroid/content/Context;
@@ -57,7 +54,6 @@
 
     iget-object v7, v0, Landroid/support/v4/app/NotificationCompat$Builder;->mContentInfo:Ljava/lang/CharSequence;
 
-    .line 583
     move-object/from16 v0, p1
 
     iget-object v8, v0, Landroid/support/v4/app/NotificationCompat$Builder;->mTickerView:Landroid/widget/RemoteViews;
@@ -78,7 +74,6 @@
 
     iget-object v12, v0, Landroid/support/v4/app/NotificationCompat$Builder;->mLargeIcon:Landroid/graphics/Bitmap;
 
-    .line 584
     move-object/from16 v0, p1
 
     iget v13, v0, Landroid/support/v4/app/NotificationCompat$Builder;->mProgressMax:I
@@ -91,10 +86,8 @@
 
     iget-boolean v15, v0, Landroid/support/v4/app/NotificationCompat$Builder;->mProgressIndeterminate:Z
 
-    .line 581
     invoke-direct/range {v2 .. v15}, Landroid/support/v4/app/NotificationCompatIceCreamSandwich$Builder;-><init>(Landroid/content/Context;Landroid/app/Notification;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/widget/RemoteViews;ILandroid/app/PendingIntent;Landroid/app/PendingIntent;Landroid/graphics/Bitmap;IIZ)V
 
-    .line 585
     .local v2, "builder":Landroid/support/v4/app/NotificationCompatIceCreamSandwich$Builder;
     move-object/from16 v0, p2
 

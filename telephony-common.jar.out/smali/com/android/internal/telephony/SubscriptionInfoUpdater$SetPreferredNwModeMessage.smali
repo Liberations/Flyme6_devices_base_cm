@@ -30,18 +30,13 @@
     .param p3, "networkType"    # I
 
     .prologue
-    .line 288
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 289
     iput p1, p0, Lcom/android/internal/telephony/SubscriptionInfoUpdater$SetPreferredNwModeMessage;->slotId:I
 
-    .line 290
     iput p2, p0, Lcom/android/internal/telephony/SubscriptionInfoUpdater$SetPreferredNwModeMessage;->subId:I
 
-    .line 291
     iput p3, p0, Lcom/android/internal/telephony/SubscriptionInfoUpdater$SetPreferredNwModeMessage;->networkType:I
 
-    .line 288
     return-void
 .end method

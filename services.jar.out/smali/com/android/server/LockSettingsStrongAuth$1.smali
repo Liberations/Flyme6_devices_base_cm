@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/LockSettingsStrongAuth;
 
     .prologue
-    .line 155
     iput-object p1, p0, Lcom/android/server/LockSettingsStrongAuth$1;->this$0:Lcom/android/server/LockSettingsStrongAuth;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,18 +41,15 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 158
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 172
     :goto_0
     const/4 v0, 0x1
 
     return v0
 
-    .line 160
     :pswitch_0
     iget-object v1, p0, Lcom/android/server/LockSettingsStrongAuth$1;->this$0:Lcom/android/server/LockSettingsStrongAuth;
 
@@ -65,7 +61,6 @@
 
     goto :goto_0
 
-    .line 163
     :pswitch_1
     iget-object v1, p0, Lcom/android/server/LockSettingsStrongAuth$1;->this$0:Lcom/android/server/LockSettingsStrongAuth;
 
@@ -77,7 +72,6 @@
 
     goto :goto_0
 
-    .line 166
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/LockSettingsStrongAuth$1;->this$0:Lcom/android/server/LockSettingsStrongAuth;
 
@@ -89,7 +83,6 @@
 
     goto :goto_0
 
-    .line 169
     :pswitch_3
     iget-object v0, p0, Lcom/android/server/LockSettingsStrongAuth$1;->this$0:Lcom/android/server/LockSettingsStrongAuth;
 
@@ -99,7 +92,6 @@
 
     goto :goto_0
 
-    .line 158
     nop
 
     :pswitch_data_0

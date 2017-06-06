@@ -29,7 +29,6 @@
     .param p1, "$anonymous0"    # Ljava/lang/String;
 
     .prologue
-    .line 387
     invoke-direct {p0, p1}, Landroid/util/FloatProperty;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -42,7 +41,6 @@
     .param p1, "object"    # Landroid/graphics/drawable/RippleForeground;
 
     .prologue
-    .line 396
     invoke-static {p1}, Landroid/graphics/drawable/RippleForeground;->-get1(Landroid/graphics/drawable/RippleForeground;)F
 
     move-result v0
@@ -59,7 +57,6 @@
     .param p1, "object"    # Ljava/lang/Object;
 
     .prologue
-    .line 395
     check-cast p1, Landroid/graphics/drawable/RippleForeground;
 
     .end local p1    # "object":Ljava/lang/Object;
@@ -76,13 +73,10 @@
     .param p2, "value"    # F
 
     .prologue
-    .line 390
     invoke-static {p1, p2}, Landroid/graphics/drawable/RippleForeground;->-set2(Landroid/graphics/drawable/RippleForeground;F)F
 
-    .line 391
     invoke-virtual {p1}, Landroid/graphics/drawable/RippleForeground;->invalidateSelf()V
 
-    .line 389
     return-void
 .end method
 
@@ -92,7 +86,6 @@
     .param p2, "value"    # F
 
     .prologue
-    .line 389
     check-cast p1, Landroid/graphics/drawable/RippleForeground;
 
     .end local p1    # "object":Ljava/lang/Object;

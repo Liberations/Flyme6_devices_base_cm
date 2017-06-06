@@ -30,7 +30,6 @@
     .param p2, "val$p"    # Landroid/view/ViewGroup$LayoutParams;
 
     .prologue
-    .line 1659
     iput-object p1, p0, Landroid/view/ViewDebug$10;->val$view:Landroid/view/View;
 
     iput-object p2, p0, Landroid/view/ViewDebug$10;->val$p:Landroid/view/ViewGroup$LayoutParams;
@@ -46,13 +45,11 @@
     .locals 2
 
     .prologue
-    .line 1662
     iget-object v0, p0, Landroid/view/ViewDebug$10;->val$view:Landroid/view/View;
 
     iget-object v1, p0, Landroid/view/ViewDebug$10;->val$p:Landroid/view/ViewGroup$LayoutParams;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1661
     return-void
 .end method

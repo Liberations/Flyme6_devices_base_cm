@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Landroid/service/chooser/ChooserTargetService;
 
     .prologue
-    .line 137
     iput-object p1, p0, Landroid/service/chooser/ChooserTargetService$IChooserTargetServiceWrapper;->this$0:Landroid/service/chooser/ChooserTargetService;
 
     invoke-direct {p0}, Landroid/service/chooser/IChooserTargetService$Stub;-><init>()V
@@ -56,10 +55,8 @@
     .end annotation
 
     .prologue
-    .line 141
     const/4 v0, 0x0
 
-    .line 147
     .local v0, "targets":Ljava/util/List;, "Ljava/util/List<Landroid/service/chooser/ChooserTarget;>;"
     :try_start_0
     iget-object v1, p0, Landroid/service/chooser/ChooserTargetService$IChooserTargetServiceWrapper;->this$0:Landroid/service/chooser/ChooserTargetService;
@@ -70,21 +67,16 @@
 
     move-result-object v0
 
-    .line 149
     .local v0, "targets":Ljava/util/List;, "Ljava/util/List<Landroid/service/chooser/ChooserTarget;>;"
     invoke-interface {p3, v0}, Landroid/service/chooser/IChooserTargetResult;->sendResult(Ljava/util/List;)V
 
-    .line 140
     return-void
 
-    .line 148
     .local v0, "targets":Ljava/util/List;, "Ljava/util/List<Landroid/service/chooser/ChooserTarget;>;"
     :catchall_0
     move-exception v1
 
-    .line 149
     invoke-interface {p3, v0}, Landroid/service/chooser/IChooserTargetResult;->sendResult(Ljava/util/List;)V
 
-    .line 148
     throw v1
 .end method

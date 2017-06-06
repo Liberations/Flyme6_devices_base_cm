@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/policy/PhoneWindowManager;->updateSystemUiVisibilityLw()I
+    value = Lcom/android/server/policy/PhoneWindowManager;->showBootMessage(Ljava/lang/CharSequence;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,30 +20,24 @@
 # instance fields
 .field final synthetic this$0:Lcom/android/server/policy/PhoneWindowManager;
 
-.field final synthetic val$needsMenu:Z
+.field final synthetic val$cte:Ljava/lang/CharSequence;
 
-.field final synthetic val$visibility:I
-
-.field final synthetic val$win:Landroid/view/WindowManagerPolicy$WindowState;
+.field final synthetic val$msg:Ljava/lang/CharSequence;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/server/policy/PhoneWindowManager;ILandroid/view/WindowManagerPolicy$WindowState;Z)V
+.method constructor <init>(Lcom/android/server/policy/PhoneWindowManager;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
     .locals 0
     .param p1, "this$0"    # Lcom/android/server/policy/PhoneWindowManager;
-    .param p2, "val$visibility"    # I
-    .param p3, "val$win"    # Landroid/view/WindowManagerPolicy$WindowState;
-    .param p4, "val$needsMenu"    # Z
+    .param p2, "val$msg"    # Ljava/lang/CharSequence;
+    .param p3, "val$cte"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 7521
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$25;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
-    iput p2, p0, Lcom/android/server/policy/PhoneWindowManager$25;->val$visibility:I
+    iput-object p2, p0, Lcom/android/server/policy/PhoneWindowManager$25;->val$msg:Ljava/lang/CharSequence;
 
-    iput-object p3, p0, Lcom/android/server/policy/PhoneWindowManager$25;->val$win:Landroid/view/WindowManagerPolicy$WindowState;
-
-    iput-boolean p4, p0, Lcom/android/server/policy/PhoneWindowManager$25;->val$needsMenu:Z
+    iput-object p3, p0, Lcom/android/server/policy/PhoneWindowManager$25;->val$cte:Ljava/lang/CharSequence;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -56,55 +50,191 @@
     .locals 6
 
     .prologue
-    const/4 v5, 0x0
-
-    .line 7525
-    :try_start_0
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$25;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
-    invoke-virtual {v2}, Lcom/android/server/policy/PhoneWindowManager;->getStatusBarService()Lcom/android/internal/statusbar/IStatusBarService;
+    iget-object v2, v2, Lcom/android/server/policy/PhoneWindowManager;->mBootMsgDialog:Landroid/app/SudaModDialog;
 
-    move-result-object v1
+    if-nez v2, :cond_0
 
-    .line 7526
-    .local v1, "statusbar":Lcom/android/internal/statusbar/IStatusBarService;
-    if-eqz v1, :cond_0
+    iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$25;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
-    .line 7527
-    iget v2, p0, Lcom/android/server/policy/PhoneWindowManager$25;->val$visibility:I
+    iget-object v2, v2, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
 
-    iget-object v3, p0, Lcom/android/server/policy/PhoneWindowManager$25;->val$win:Landroid/view/WindowManagerPolicy$WindowState;
+    invoke-virtual {v2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    move-result-object v2
 
-    move-result-object v3
+    const-string v3, "android.hardware.type.watch"
 
-    const/4 v4, -0x1
+    invoke-virtual {v2, v3}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
 
-    invoke-interface {v1, v2, v4, v3}, Lcom/android/internal/statusbar/IStatusBarService;->setSystemUiVisibility(IILjava/lang/String;)V
+    move-result v2
 
-    .line 7528
-    iget-boolean v2, p0, Lcom/android/server/policy/PhoneWindowManager$25;->val$needsMenu:Z
+    if-eqz v2, :cond_1
 
-    invoke-interface {v1, v2}, Lcom/android/internal/statusbar/IStatusBarService;->topAppWindowChanged(Z)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    const v1, 0x10304c4
 
-    .line 7523
-    .end local v1    # "statusbar":Lcom/android/internal/statusbar/IStatusBarService;
-    :cond_0
+    .local v1, "theme":I
     :goto_0
+    iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$25;->this$0:Lcom/android/server/policy/PhoneWindowManager;
+
+    new-instance v3, Landroid/app/SudaModDialog;
+
+    iget-object v4, p0, Lcom/android/server/policy/PhoneWindowManager$25;->this$0:Lcom/android/server/policy/PhoneWindowManager;
+
+    iget-object v4, v4, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
+
+    const v5, 0x1030010
+
+    invoke-direct {v3, v4, v5}, Landroid/app/SudaModDialog;-><init>(Landroid/content/Context;I)V
+
+    iput-object v3, v2, Lcom/android/server/policy/PhoneWindowManager;->mBootMsgDialog:Landroid/app/SudaModDialog;
+
+    iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$25;->this$0:Lcom/android/server/policy/PhoneWindowManager;
+
+    iget-object v2, v2, Lcom/android/server/policy/PhoneWindowManager;->mBootMsgDialog:Landroid/app/SudaModDialog;
+
+    invoke-virtual {v2}, Landroid/app/SudaModDialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v2
+
+    const/16 v3, 0x7e5
+
+    invoke-virtual {v2, v3}, Landroid/view/Window;->setType(I)V
+
+    iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$25;->this$0:Lcom/android/server/policy/PhoneWindowManager;
+
+    iget-object v2, v2, Lcom/android/server/policy/PhoneWindowManager;->mBootMsgDialog:Landroid/app/SudaModDialog;
+
+    invoke-virtual {v2}, Landroid/app/SudaModDialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v2
+
+    const/16 v3, 0x102
+
+    invoke-virtual {v2, v3}, Landroid/view/Window;->addFlags(I)V
+
+    iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$25;->this$0:Lcom/android/server/policy/PhoneWindowManager;
+
+    iget-object v2, v2, Lcom/android/server/policy/PhoneWindowManager;->mBootMsgDialog:Landroid/app/SudaModDialog;
+
+    invoke-virtual {v2}, Landroid/app/SudaModDialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v2
+
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    invoke-virtual {v2, v3}, Landroid/view/Window;->setDimAmount(F)V
+
+    iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$25;->this$0:Lcom/android/server/policy/PhoneWindowManager;
+
+    iget-object v2, v2, Lcom/android/server/policy/PhoneWindowManager;->mBootMsgDialog:Landroid/app/SudaModDialog;
+
+    invoke-virtual {v2}, Landroid/app/SudaModDialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
+
+    move-result-object v0
+
+    .local v0, "lp":Landroid/view/WindowManager$LayoutParams;
+    const/4 v2, 0x5
+
+    iput v2, v0, Landroid/view/WindowManager$LayoutParams;->screenOrientation:I
+
+    iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$25;->this$0:Lcom/android/server/policy/PhoneWindowManager;
+
+    iget-object v2, v2, Lcom/android/server/policy/PhoneWindowManager;->mBootMsgDialog:Landroid/app/SudaModDialog;
+
+    invoke-virtual {v2}, Landroid/app/SudaModDialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
+
+    iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$25;->this$0:Lcom/android/server/policy/PhoneWindowManager;
+
+    iget-object v2, v2, Lcom/android/server/policy/PhoneWindowManager;->mBootMsgDialog:Landroid/app/SudaModDialog;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v3}, Landroid/app/SudaModDialog;->setCancelable(Z)V
+
+    iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$25;->this$0:Lcom/android/server/policy/PhoneWindowManager;
+
+    iget-object v2, v2, Lcom/android/server/policy/PhoneWindowManager;->mBootMsgDialog:Landroid/app/SudaModDialog;
+
+    invoke-virtual {v2}, Landroid/app/SudaModDialog;->show()V
+
+    .end local v0    # "lp":Landroid/view/WindowManager$LayoutParams;
+    .end local v1    # "theme":I
+    :cond_0
+    iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$25;->this$0:Lcom/android/server/policy/PhoneWindowManager;
+
+    iget-object v3, v2, Lcom/android/server/policy/PhoneWindowManager;->mBootMsgDialog:Landroid/app/SudaModDialog;
+
+    iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$25;->this$0:Lcom/android/server/policy/PhoneWindowManager;
+
+    iget-object v2, v2, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v4, 0x1040402
+
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-object v4, p0, Lcom/android/server/policy/PhoneWindowManager$25;->val$msg:Ljava/lang/CharSequence;
+
+    invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$25;->val$cte:Ljava/lang/CharSequence;
+
+    :goto_1
+    invoke-virtual {v3, v2}, Landroid/app/SudaModDialog;->setMessage(Ljava/lang/CharSequence;)V
+
     return-void
 
-    .line 7530
-    :catch_0
-    move-exception v0
-
-    .line 7532
-    .local v0, "e":Landroid/os/RemoteException;
+    :cond_1
     iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$25;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
-    iput-object v5, v2, Lcom/android/server/policy/PhoneWindowManager;->mStatusBarService:Lcom/android/internal/statusbar/IStatusBarService;
+    iget-object v2, v2, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
 
-    goto :goto_0
+    invoke-virtual {v2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v2
+
+    const-string v3, "android.hardware.type.television"
+
+    invoke-virtual {v2, v3}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    const v1, 0x10304a3
+
+    .restart local v1    # "theme":I
+    goto/16 :goto_0
+
+    .end local v1    # "theme":I
+    :cond_2
+    const/4 v1, 0x0
+
+    .restart local v1    # "theme":I
+    goto/16 :goto_0
+
+    .end local v1    # "theme":I
+    :cond_3
+    iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager$25;->val$msg:Ljava/lang/CharSequence;
+
+    goto :goto_1
 .end method

@@ -20,7 +20,6 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +40,6 @@
     .end annotation
 
     .prologue
-    .line 70
     .local p1, "results":Ljava/util/List;, "Ljava/util/List<Landroid/bluetooth/le/ScanResult;>;"
     return-void
 .end method
@@ -51,7 +49,6 @@
     .param p1, "errorCode"    # I
 
     .prologue
-    .line 78
     return-void
 .end method
 
@@ -61,6 +58,5 @@
     .param p2, "result"    # Landroid/bluetooth/le/ScanResult;
 
     .prologue
-    .line 62
     return-void
 .end method

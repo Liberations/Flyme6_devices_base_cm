@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 395
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,16 +44,13 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 397
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 398
     .local v1, "n":I
     new-array v2, v1, [Landroid/net/wifi/ScanResult;
 
-    .line 399
     .local v2, "results":[Landroid/net/wifi/ScanResult;
     const/4 v0, 0x0
 
@@ -62,7 +58,6 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 400
     sget-object v3, Landroid/net/wifi/ScanResult;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v3, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -73,12 +68,10 @@
 
     aput-object v3, v2, v0
 
-    .line 399
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 402
     :cond_0
     new-instance v3, Landroid/net/wifi/WifiScanner$ParcelableScanResults;
 
@@ -92,7 +85,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 396
     invoke-virtual {p0, p1}, Landroid/net/wifi/WifiScanner$ParcelableScanResults$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/wifi/WifiScanner$ParcelableScanResults;
 
     move-result-object v0
@@ -105,7 +97,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 406
     new-array v0, p1, [Landroid/net/wifi/WifiScanner$ParcelableScanResults;
 
     return-object v0
@@ -116,7 +107,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 405
     invoke-virtual {p0, p1}, Landroid/net/wifi/WifiScanner$ParcelableScanResults$1;->newArray(I)[Landroid/net/wifi/WifiScanner$ParcelableScanResults;
 
     move-result-object v0

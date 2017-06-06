@@ -56,7 +56,6 @@
     .end annotation
 
     .prologue
-    .line 239
     .local p0, "this":Lcom/android/server/location/RemoteListenerHelper$HandlerRunnable;, "Lcom/android/server/location/RemoteListenerHelper<TTListener;>.HandlerRunnable;"
     .local p1, "this$0":Lcom/android/server/location/RemoteListenerHelper;, "Lcom/android/server/location/RemoteListenerHelper<TTListener;>;"
     .local p2, "listener":Landroid/os/IInterface;, "TTListener;"
@@ -65,13 +64,10 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 240
     iput-object p2, p0, Lcom/android/server/location/RemoteListenerHelper$HandlerRunnable;->mListener:Landroid/os/IInterface;
 
-    .line 241
     iput-object p3, p0, Lcom/android/server/location/RemoteListenerHelper$HandlerRunnable;->mOperation:Lcom/android/server/location/RemoteListenerHelper$ListenerOperation;
 
-    .line 239
     return-void
 .end method
 
@@ -81,7 +77,6 @@
     .locals 3
 
     .prologue
-    .line 247
     .local p0, "this":Lcom/android/server/location/RemoteListenerHelper$HandlerRunnable;, "Lcom/android/server/location/RemoteListenerHelper<TTListener;>.HandlerRunnable;"
     :try_start_0
     iget-object v1, p0, Lcom/android/server/location/RemoteListenerHelper$HandlerRunnable;->mOperation:Lcom/android/server/location/RemoteListenerHelper$ListenerOperation;
@@ -92,15 +87,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 245
     :goto_0
     return-void
 
-    .line 248
     :catch_0
     move-exception v0
 
-    .line 249
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v1, p0, Lcom/android/server/location/RemoteListenerHelper$HandlerRunnable;->this$0:Lcom/android/server/location/RemoteListenerHelper;
 
@@ -108,7 +100,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "Error in monitored listener."
+    const-string v2, "Error in monitored listener."
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 

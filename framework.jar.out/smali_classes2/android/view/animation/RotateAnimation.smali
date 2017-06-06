@@ -32,34 +32,24 @@
 
     const/4 v0, 0x0
 
-    .line 82
     invoke-direct {p0}, Landroid/view/animation/Animation;-><init>()V
 
-    .line 34
     iput v1, p0, Landroid/view/animation/RotateAnimation;->mPivotXType:I
 
-    .line 35
     iput v1, p0, Landroid/view/animation/RotateAnimation;->mPivotYType:I
 
-    .line 36
     iput v0, p0, Landroid/view/animation/RotateAnimation;->mPivotXValue:F
 
-    .line 37
     iput v0, p0, Landroid/view/animation/RotateAnimation;->mPivotYValue:F
 
-    .line 83
     iput p1, p0, Landroid/view/animation/RotateAnimation;->mFromDegrees:F
 
-    .line 84
     iput p2, p0, Landroid/view/animation/RotateAnimation;->mToDegrees:F
 
-    .line 85
     iput v0, p0, Landroid/view/animation/RotateAnimation;->mPivotX:F
 
-    .line 86
     iput v0, p0, Landroid/view/animation/RotateAnimation;->mPivotY:F
 
-    .line 82
     return-void
 .end method
 
@@ -75,43 +65,30 @@
 
     const/4 v0, 0x0
 
-    .line 104
     invoke-direct {p0}, Landroid/view/animation/Animation;-><init>()V
 
-    .line 34
     iput v0, p0, Landroid/view/animation/RotateAnimation;->mPivotXType:I
 
-    .line 35
     iput v0, p0, Landroid/view/animation/RotateAnimation;->mPivotYType:I
 
-    .line 36
     iput v1, p0, Landroid/view/animation/RotateAnimation;->mPivotXValue:F
 
-    .line 37
     iput v1, p0, Landroid/view/animation/RotateAnimation;->mPivotYValue:F
 
-    .line 105
     iput p1, p0, Landroid/view/animation/RotateAnimation;->mFromDegrees:F
 
-    .line 106
     iput p2, p0, Landroid/view/animation/RotateAnimation;->mToDegrees:F
 
-    .line 108
     iput v0, p0, Landroid/view/animation/RotateAnimation;->mPivotXType:I
 
-    .line 109
     iput v0, p0, Landroid/view/animation/RotateAnimation;->mPivotYType:I
 
-    .line 110
     iput p3, p0, Landroid/view/animation/RotateAnimation;->mPivotXValue:F
 
-    .line 111
     iput p4, p0, Landroid/view/animation/RotateAnimation;->mPivotYValue:F
 
-    .line 112
     invoke-direct {p0}, Landroid/view/animation/RotateAnimation;->initializePivotPoint()V
 
-    .line 104
     return-void
 .end method
 
@@ -129,43 +106,30 @@
 
     const/4 v0, 0x0
 
-    .line 140
     invoke-direct {p0}, Landroid/view/animation/Animation;-><init>()V
 
-    .line 34
     iput v1, p0, Landroid/view/animation/RotateAnimation;->mPivotXType:I
 
-    .line 35
     iput v1, p0, Landroid/view/animation/RotateAnimation;->mPivotYType:I
 
-    .line 36
     iput v0, p0, Landroid/view/animation/RotateAnimation;->mPivotXValue:F
 
-    .line 37
     iput v0, p0, Landroid/view/animation/RotateAnimation;->mPivotYValue:F
 
-    .line 142
     iput p1, p0, Landroid/view/animation/RotateAnimation;->mFromDegrees:F
 
-    .line 143
     iput p2, p0, Landroid/view/animation/RotateAnimation;->mToDegrees:F
 
-    .line 145
     iput p4, p0, Landroid/view/animation/RotateAnimation;->mPivotXValue:F
 
-    .line 146
     iput p3, p0, Landroid/view/animation/RotateAnimation;->mPivotXType:I
 
-    .line 147
     iput p6, p0, Landroid/view/animation/RotateAnimation;->mPivotYValue:F
 
-    .line 148
     iput p5, p0, Landroid/view/animation/RotateAnimation;->mPivotYType:I
 
-    .line 149
     invoke-direct {p0}, Landroid/view/animation/RotateAnimation;->initializePivotPoint()V
 
-    .line 141
     return-void
 .end method
 
@@ -179,30 +143,22 @@
 
     const/4 v3, 0x0
 
-    .line 49
     invoke-direct {p0, p1, p2}, Landroid/view/animation/Animation;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 34
     iput v4, p0, Landroid/view/animation/RotateAnimation;->mPivotXType:I
 
-    .line 35
     iput v4, p0, Landroid/view/animation/RotateAnimation;->mPivotYType:I
 
-    .line 36
     iput v3, p0, Landroid/view/animation/RotateAnimation;->mPivotXValue:F
 
-    .line 37
     iput v3, p0, Landroid/view/animation/RotateAnimation;->mPivotYValue:F
 
-    .line 52
     sget-object v2, Lcom/android/internal/R$styleable;->RotateAnimation:[I
 
-    .line 51
     invoke-virtual {p1, p2, v2}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 54
     .local v0, "a":Landroid/content/res/TypedArray;
     invoke-virtual {v0, v4, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
@@ -210,7 +166,6 @@
 
     iput v2, p0, Landroid/view/animation/RotateAnimation;->mFromDegrees:F
 
-    .line 56
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
@@ -219,10 +174,8 @@
 
     iput v2, p0, Landroid/view/animation/RotateAnimation;->mToDegrees:F
 
-    .line 59
     const/4 v2, 0x2
 
-    .line 58
     invoke-virtual {v0, v2}, Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
 
     move-result-object v2
@@ -231,21 +184,17 @@
 
     move-result-object v1
 
-    .line 60
     .local v1, "d":Landroid/view/animation/Animation$Description;
     iget v2, v1, Landroid/view/animation/Animation$Description;->type:I
 
     iput v2, p0, Landroid/view/animation/RotateAnimation;->mPivotXType:I
 
-    .line 61
     iget v2, v1, Landroid/view/animation/Animation$Description;->value:F
 
     iput v2, p0, Landroid/view/animation/RotateAnimation;->mPivotXValue:F
 
-    .line 64
     const/4 v2, 0x3
 
-    .line 63
     invoke-virtual {v0, v2}, Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
 
     move-result-object v2
@@ -254,23 +203,18 @@
 
     move-result-object v1
 
-    .line 65
     iget v2, v1, Landroid/view/animation/Animation$Description;->type:I
 
     iput v2, p0, Landroid/view/animation/RotateAnimation;->mPivotYType:I
 
-    .line 66
     iget v2, v1, Landroid/view/animation/Animation$Description;->value:F
 
     iput v2, p0, Landroid/view/animation/RotateAnimation;->mPivotYValue:F
 
-    .line 68
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 70
     invoke-direct {p0}, Landroid/view/animation/RotateAnimation;->initializePivotPoint()V
 
-    .line 48
     return-void
 .end method
 
@@ -278,28 +222,23 @@
     .locals 1
 
     .prologue
-    .line 157
     iget v0, p0, Landroid/view/animation/RotateAnimation;->mPivotXType:I
 
     if-nez v0, :cond_0
 
-    .line 158
     iget v0, p0, Landroid/view/animation/RotateAnimation;->mPivotXValue:F
 
     iput v0, p0, Landroid/view/animation/RotateAnimation;->mPivotX:F
 
-    .line 160
     :cond_0
     iget v0, p0, Landroid/view/animation/RotateAnimation;->mPivotYType:I
 
     if-nez v0, :cond_1
 
-    .line 161
     iget v0, p0, Landroid/view/animation/RotateAnimation;->mPivotYValue:F
 
     iput v0, p0, Landroid/view/animation/RotateAnimation;->mPivotY:F
 
-    .line 156
     :cond_1
     return-void
 .end method
@@ -314,7 +253,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 167
     iget v2, p0, Landroid/view/animation/RotateAnimation;->mFromDegrees:F
 
     iget v3, p0, Landroid/view/animation/RotateAnimation;->mToDegrees:F
@@ -327,13 +265,11 @@
 
     add-float v0, v2, v3
 
-    .line 168
     .local v0, "degrees":F
     invoke-virtual {p0}, Landroid/view/animation/RotateAnimation;->getScaleFactor()F
 
     move-result v1
 
-    .line 170
     .local v1, "scale":F
     iget v2, p0, Landroid/view/animation/RotateAnimation;->mPivotX:F
 
@@ -347,18 +283,15 @@
 
     if-nez v2, :cond_0
 
-    .line 171
     invoke-virtual {p2}, Landroid/view/animation/Transformation;->getMatrix()Landroid/graphics/Matrix;
 
     move-result-object v2
 
     invoke-virtual {v2, v0}, Landroid/graphics/Matrix;->setRotate(F)V
 
-    .line 166
     :goto_0
     return-void
 
-    .line 173
     :cond_0
     invoke-virtual {p2}, Landroid/view/animation/Transformation;->getMatrix()Landroid/graphics/Matrix;
 
@@ -385,10 +318,8 @@
     .param p4, "parentHeight"    # I
 
     .prologue
-    .line 179
     invoke-super {p0, p1, p2, p3, p4}, Landroid/view/animation/Animation;->initialize(IIII)V
 
-    .line 180
     iget v0, p0, Landroid/view/animation/RotateAnimation;->mPivotXType:I
 
     iget v1, p0, Landroid/view/animation/RotateAnimation;->mPivotXValue:F
@@ -399,7 +330,6 @@
 
     iput v0, p0, Landroid/view/animation/RotateAnimation;->mPivotX:F
 
-    .line 181
     iget v0, p0, Landroid/view/animation/RotateAnimation;->mPivotYType:I
 
     iget v1, p0, Landroid/view/animation/RotateAnimation;->mPivotYValue:F
@@ -410,6 +340,5 @@
 
     iput v0, p0, Landroid/view/animation/RotateAnimation;->mPivotY:F
 
-    .line 178
     return-void
 .end method

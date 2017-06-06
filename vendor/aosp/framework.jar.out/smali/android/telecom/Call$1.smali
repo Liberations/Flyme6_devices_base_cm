@@ -36,7 +36,6 @@
     .param p4, "val$newState"    # I
 
     .prologue
-    .line 1284
     iput-object p1, p0, Landroid/telecom/Call$1;->this$0:Landroid/telecom/Call;
 
     iput-object p2, p0, Landroid/telecom/Call$1;->val$callback:Landroid/telecom/Call$Callback;
@@ -56,7 +55,6 @@
     .locals 3
 
     .prologue
-    .line 1287
     iget-object v0, p0, Landroid/telecom/Call$1;->val$callback:Landroid/telecom/Call$Callback;
 
     iget-object v1, p0, Landroid/telecom/Call$1;->val$call:Landroid/telecom/Call;
@@ -65,6 +63,5 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/telecom/Call$Callback;->onStateChanged(Landroid/telecom/Call;I)V
 
-    .line 1286
     return-void
 .end method

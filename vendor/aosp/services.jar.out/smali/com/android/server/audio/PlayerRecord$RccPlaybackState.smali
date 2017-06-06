@@ -30,19 +30,14 @@
     .param p4, "speed"    # F
 
     .prologue
-    .line 94
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 95
     iput p1, p0, Lcom/android/server/audio/PlayerRecord$RccPlaybackState;->mState:I
 
-    .line 96
     iput-wide p2, p0, Lcom/android/server/audio/PlayerRecord$RccPlaybackState;->mPositionMs:J
 
-    .line 97
     iput p4, p0, Lcom/android/server/audio/PlayerRecord$RccPlaybackState;->mSpeed:F
 
-    .line 94
     return-void
 .end method
 
@@ -50,7 +45,6 @@
     .locals 4
 
     .prologue
-    .line 112
     iget-wide v0, p0, Lcom/android/server/audio/PlayerRecord$RccPlaybackState;->mPositionMs:J
 
     const-wide/16 v2, -0x1
@@ -59,12 +53,10 @@
 
     if-nez v0, :cond_0
 
-    .line 113
-    const-string/jumbo v0, "PLAYBACK_POSITION_INVALID"
+    const-string v0, "PLAYBACK_POSITION_INVALID"
 
     return-object v0
 
-    .line 114
     :cond_0
     iget-wide v0, p0, Lcom/android/server/audio/PlayerRecord$RccPlaybackState;->mPositionMs:J
 
@@ -74,12 +66,10 @@
 
     if-nez v0, :cond_1
 
-    .line 115
-    const-string/jumbo v0, "PLAYBACK_POSITION_ALWAYS_UNKNOWN"
+    const-string v0, "PLAYBACK_POSITION_ALWAYS_UNKNOWN"
 
     return-object v0
 
-    .line 117
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -95,7 +85,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "ms"
+    const-string v1, "ms"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -112,77 +102,64 @@
     .locals 1
 
     .prologue
-    .line 122
     iget v0, p0, Lcom/android/server/audio/PlayerRecord$RccPlaybackState;->mState:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 144
-    const-string/jumbo v0, "[invalid playstate]"
+    const-string v0, "[invalid playstate]"
 
     return-object v0
 
-    .line 124
     :pswitch_0
-    const-string/jumbo v0, "PLAYSTATE_NONE"
+    const-string v0, "PLAYSTATE_NONE"
 
     return-object v0
 
-    .line 126
     :pswitch_1
-    const-string/jumbo v0, "PLAYSTATE_STOPPED"
+    const-string v0, "PLAYSTATE_STOPPED"
 
     return-object v0
 
-    .line 128
     :pswitch_2
-    const-string/jumbo v0, "PLAYSTATE_PAUSED"
+    const-string v0, "PLAYSTATE_PAUSED"
 
     return-object v0
 
-    .line 130
     :pswitch_3
-    const-string/jumbo v0, "PLAYSTATE_PLAYING"
+    const-string v0, "PLAYSTATE_PLAYING"
 
     return-object v0
 
-    .line 132
     :pswitch_4
-    const-string/jumbo v0, "PLAYSTATE_FAST_FORWARDING"
+    const-string v0, "PLAYSTATE_FAST_FORWARDING"
 
     return-object v0
 
-    .line 134
     :pswitch_5
-    const-string/jumbo v0, "PLAYSTATE_REWINDING"
+    const-string v0, "PLAYSTATE_REWINDING"
 
     return-object v0
 
-    .line 136
     :pswitch_6
-    const-string/jumbo v0, "PLAYSTATE_SKIPPING_FORWARDS"
+    const-string v0, "PLAYSTATE_SKIPPING_FORWARDS"
 
     return-object v0
 
-    .line 138
     :pswitch_7
-    const-string/jumbo v0, "PLAYSTATE_SKIPPING_BACKWARDS"
+    const-string v0, "PLAYSTATE_SKIPPING_BACKWARDS"
 
     return-object v0
 
-    .line 140
     :pswitch_8
-    const-string/jumbo v0, "PLAYSTATE_BUFFERING"
+    const-string v0, "PLAYSTATE_BUFFERING"
 
     return-object v0
 
-    .line 142
     :pswitch_9
-    const-string/jumbo v0, "PLAYSTATE_ERROR"
+    const-string v0, "PLAYSTATE_ERROR"
 
     return-object v0
 
-    .line 122
     nop
 
     :pswitch_data_0
@@ -206,22 +183,18 @@
     .locals 2
 
     .prologue
-    .line 101
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/server/audio/PlayerRecord$RccPlaybackState;->mState:I
 
-    .line 102
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lcom/android/server/audio/PlayerRecord$RccPlaybackState;->mPositionMs:J
 
-    .line 103
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Lcom/android/server/audio/PlayerRecord$RccPlaybackState;->mSpeed:F
 
-    .line 100
     return-void
 .end method
 
@@ -229,7 +202,6 @@
     .locals 2
 
     .prologue
-    .line 108
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -242,7 +214,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, ", "
+    const-string v1, ", "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -256,7 +228,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, ", "
+    const-string v1, ", "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -268,7 +240,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "X"
+    const-string v1, "X"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

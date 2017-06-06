@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcyanogenmod/app/BaseLiveLockManagerService;
 
     .prologue
-    .line 178
     iput-object p1, p0, Lcyanogenmod/app/BaseLiveLockManagerService$1;->this$0:Lcyanogenmod/app/BaseLiveLockManagerService;
 
     invoke-direct {p0}, Lcyanogenmod/app/ILiveLockScreenManagerProvider$Stub;-><init>()V
@@ -46,17 +45,14 @@
     .end annotation
 
     .prologue
-    .line 190
     iget-object v0, p0, Lcyanogenmod/app/BaseLiveLockManagerService$1;->this$0:Lcyanogenmod/app/BaseLiveLockManagerService;
 
     invoke-virtual {v0}, Lcyanogenmod/app/BaseLiveLockManagerService;->enforceAccessPermission()V
 
-    .line 191
     iget-object v0, p0, Lcyanogenmod/app/BaseLiveLockManagerService$1;->this$0:Lcyanogenmod/app/BaseLiveLockManagerService;
 
     invoke-virtual {v0, p1, p2, p3}, Lcyanogenmod/app/BaseLiveLockManagerService;->cancelLiveLockScreen(Ljava/lang/String;II)V
 
-    .line 189
     return-void
 .end method
 
@@ -74,17 +70,14 @@
     .end annotation
 
     .prologue
-    .line 182
     iget-object v0, p0, Lcyanogenmod/app/BaseLiveLockManagerService$1;->this$0:Lcyanogenmod/app/BaseLiveLockManagerService;
 
     invoke-virtual {v0}, Lcyanogenmod/app/BaseLiveLockManagerService;->enforceAccessPermission()V
 
-    .line 183
     iget-object v0, p0, Lcyanogenmod/app/BaseLiveLockManagerService$1;->this$0:Lcyanogenmod/app/BaseLiveLockManagerService;
 
     invoke-virtual {v0, p1, p3}, Lcyanogenmod/app/BaseLiveLockManagerService;->enforceSamePackageOrSystem(Ljava/lang/String;Lcyanogenmod/app/LiveLockScreenInfo;)V
 
-    .line 184
     iget-object v0, p0, Lcyanogenmod/app/BaseLiveLockManagerService$1;->this$0:Lcyanogenmod/app/BaseLiveLockManagerService;
 
     move-object v1, p1
@@ -99,7 +92,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lcyanogenmod/app/BaseLiveLockManagerService;->enqueueLiveLockScreen(Ljava/lang/String;ILcyanogenmod/app/LiveLockScreenInfo;[II)V
 
-    .line 181
     return-void
 .end method
 
@@ -112,12 +104,10 @@
     .end annotation
 
     .prologue
-    .line 196
     iget-object v0, p0, Lcyanogenmod/app/BaseLiveLockManagerService$1;->this$0:Lcyanogenmod/app/BaseLiveLockManagerService;
 
     invoke-virtual {v0}, Lcyanogenmod/app/BaseLiveLockManagerService;->enforceAccessPermission()V
 
-    .line 197
     iget-object v0, p0, Lcyanogenmod/app/BaseLiveLockManagerService$1;->this$0:Lcyanogenmod/app/BaseLiveLockManagerService;
 
     invoke-virtual {v0}, Lcyanogenmod/app/BaseLiveLockManagerService;->getCurrentLiveLockScreen()Lcyanogenmod/app/LiveLockScreenInfo;
@@ -136,12 +126,10 @@
     .end annotation
 
     .prologue
-    .line 208
     iget-object v0, p0, Lcyanogenmod/app/BaseLiveLockManagerService$1;->this$0:Lcyanogenmod/app/BaseLiveLockManagerService;
 
     invoke-virtual {v0}, Lcyanogenmod/app/BaseLiveLockManagerService;->enforceAccessPermission()V
 
-    .line 209
     iget-object v0, p0, Lcyanogenmod/app/BaseLiveLockManagerService$1;->this$0:Lcyanogenmod/app/BaseLiveLockManagerService;
 
     invoke-virtual {v0}, Lcyanogenmod/app/BaseLiveLockManagerService;->getLiveLockScreenEnabled()Z
@@ -161,12 +149,10 @@
     .end annotation
 
     .prologue
-    .line 215
     iget-object v0, p0, Lcyanogenmod/app/BaseLiveLockManagerService$1;->this$0:Lcyanogenmod/app/BaseLiveLockManagerService;
 
     invoke-virtual {v0}, Lcyanogenmod/app/BaseLiveLockManagerService;->enforcePrivateAccessPermission()V
 
-    .line 216
     iget-object v0, p0, Lcyanogenmod/app/BaseLiveLockManagerService$1;->this$0:Lcyanogenmod/app/BaseLiveLockManagerService;
 
     invoke-virtual {v0, p1}, Lcyanogenmod/app/BaseLiveLockManagerService;->registerChangeListener(Lcyanogenmod/app/ILiveLockScreenChangeListener;)Z
@@ -186,12 +172,10 @@
     .end annotation
 
     .prologue
-    .line 222
     iget-object v0, p0, Lcyanogenmod/app/BaseLiveLockManagerService$1;->this$0:Lcyanogenmod/app/BaseLiveLockManagerService;
 
     invoke-virtual {v0}, Lcyanogenmod/app/BaseLiveLockManagerService;->enforcePrivateAccessPermission()V
 
-    .line 223
     iget-object v0, p0, Lcyanogenmod/app/BaseLiveLockManagerService$1;->this$0:Lcyanogenmod/app/BaseLiveLockManagerService;
 
     invoke-virtual {v0, p1}, Lcyanogenmod/app/BaseLiveLockManagerService;->unregisterChangeListener(Lcyanogenmod/app/ILiveLockScreenChangeListener;)Z
@@ -211,16 +195,13 @@
     .end annotation
 
     .prologue
-    .line 202
     iget-object v0, p0, Lcyanogenmod/app/BaseLiveLockManagerService$1;->this$0:Lcyanogenmod/app/BaseLiveLockManagerService;
 
     invoke-virtual {v0}, Lcyanogenmod/app/BaseLiveLockManagerService;->enforcePrivateAccessPermission()V
 
-    .line 203
     iget-object v0, p0, Lcyanogenmod/app/BaseLiveLockManagerService$1;->this$0:Lcyanogenmod/app/BaseLiveLockManagerService;
 
     invoke-virtual {v0, p1}, Lcyanogenmod/app/BaseLiveLockManagerService;->updateDefaultLiveLockScreen(Lcyanogenmod/app/LiveLockScreenInfo;)V
 
-    .line 201
     return-void
 .end method

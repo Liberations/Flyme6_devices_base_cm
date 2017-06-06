@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 56
     new-instance v0, Lcyanogenmod/profiles/LockSettings;
 
     invoke-direct {v0, p1}, Lcyanogenmod/profiles/LockSettings;-><init>(Landroid/os/Parcel;)V
@@ -58,7 +56,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 55
     invoke-virtual {p0, p1}, Lcyanogenmod/profiles/LockSettings$1;->createFromParcel(Landroid/os/Parcel;)Lcyanogenmod/profiles/LockSettings;
 
     move-result-object v0
@@ -71,7 +68,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 61
     new-array v0, p1, [Lcyanogenmod/profiles/LockSettings;
 
     return-object v0
@@ -82,7 +78,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 60
     invoke-virtual {p0, p1}, Lcyanogenmod/profiles/LockSettings$1;->newArray(I)[Lcyanogenmod/profiles/LockSettings;
 
     move-result-object v0

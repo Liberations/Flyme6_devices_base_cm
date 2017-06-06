@@ -24,10 +24,8 @@
     .param p1, "service"    # Landroid/hardware/hdmi/IHdmiControlService;
 
     .prologue
-    .line 71
     invoke-direct {p0, p1}, Landroid/hardware/hdmi/HdmiClient;-><init>(Landroid/hardware/hdmi/IHdmiControlService;)V
 
-    .line 70
     return-void
 .end method
 
@@ -36,7 +34,6 @@
     .param p1, "callback"    # Landroid/hardware/hdmi/HdmiPlaybackClient$DisplayStatusCallback;
 
     .prologue
-    .line 130
     new-instance v0, Landroid/hardware/hdmi/HdmiPlaybackClient$2;
 
     invoke-direct {v0, p0, p1}, Landroid/hardware/hdmi/HdmiPlaybackClient$2;-><init>(Landroid/hardware/hdmi/HdmiPlaybackClient;Landroid/hardware/hdmi/HdmiPlaybackClient$DisplayStatusCallback;)V
@@ -49,7 +46,6 @@
     .param p1, "callback"    # Landroid/hardware/hdmi/HdmiPlaybackClient$OneTouchPlayCallback;
 
     .prologue
-    .line 121
     new-instance v0, Landroid/hardware/hdmi/HdmiPlaybackClient$1;
 
     invoke-direct {v0, p0, p1}, Landroid/hardware/hdmi/HdmiPlaybackClient$1;-><init>(Landroid/hardware/hdmi/HdmiPlaybackClient;Landroid/hardware/hdmi/HdmiPlaybackClient$OneTouchPlayCallback;)V
@@ -63,7 +59,6 @@
     .locals 1
 
     .prologue
-    .line 92
     const/4 v0, 0x4
 
     return v0
@@ -74,7 +69,6 @@
     .param p1, "callback"    # Landroid/hardware/hdmi/HdmiPlaybackClient$OneTouchPlayCallback;
 
     .prologue
-    .line 84
     :try_start_0
     iget-object v1, p0, Landroid/hardware/hdmi/HdmiPlaybackClient;->mService:Landroid/hardware/hdmi/IHdmiControlService;
 
@@ -86,19 +80,16 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 81
     :goto_0
     return-void
 
-    .line 85
     :catch_0
     move-exception v0
 
-    .line 86
     .local v0, "e":Landroid/os/RemoteException;
-    const-string/jumbo v1, "HdmiPlaybackClient"
+    const-string v1, "HdmiPlaybackClient"
 
-    const-string/jumbo v2, "oneTouchPlay threw exception "
+    const-string v2, "oneTouchPlay threw exception "
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -110,7 +101,6 @@
     .param p1, "callback"    # Landroid/hardware/hdmi/HdmiPlaybackClient$DisplayStatusCallback;
 
     .prologue
-    .line 103
     :try_start_0
     iget-object v1, p0, Landroid/hardware/hdmi/HdmiPlaybackClient;->mService:Landroid/hardware/hdmi/IHdmiControlService;
 
@@ -122,19 +112,16 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 101
     :goto_0
     return-void
 
-    .line 104
     :catch_0
     move-exception v0
 
-    .line 105
     .local v0, "e":Landroid/os/RemoteException;
-    const-string/jumbo v1, "HdmiPlaybackClient"
+    const-string v1, "HdmiPlaybackClient"
 
-    const-string/jumbo v2, "queryDisplayStatus threw exception "
+    const-string v2, "queryDisplayStatus threw exception "
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -145,7 +132,6 @@
     .locals 4
 
     .prologue
-    .line 114
     :try_start_0
     iget-object v1, p0, Landroid/hardware/hdmi/HdmiPlaybackClient;->mService:Landroid/hardware/hdmi/IHdmiControlService;
 
@@ -163,19 +149,16 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 112
     :goto_0
     return-void
 
-    .line 115
     :catch_0
     move-exception v0
 
-    .line 116
     .local v0, "e":Landroid/os/RemoteException;
-    const-string/jumbo v1, "HdmiPlaybackClient"
+    const-string v1, "HdmiPlaybackClient"
 
-    const-string/jumbo v2, "sendStandby threw exception "
+    const-string v2, "sendStandby threw exception "
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 

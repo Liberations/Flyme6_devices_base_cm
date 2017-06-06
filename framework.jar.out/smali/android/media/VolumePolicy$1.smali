@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 88
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,7 +48,6 @@
 
     const/4 v2, 0x0
 
-    .line 91
     new-instance v4, Landroid/media/VolumePolicy;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -60,7 +58,6 @@
 
     move v0, v1
 
-    .line 92
     :goto_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -70,7 +67,6 @@
 
     move v3, v1
 
-    .line 93
     :goto_1
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -78,13 +74,11 @@
 
     if-eqz v5, :cond_2
 
-    .line 94
     :goto_2
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 91
     invoke-direct {v4, v0, v3, v1, v2}, Landroid/media/VolumePolicy;-><init>(ZZZI)V
 
     return-object v4
@@ -97,13 +91,11 @@
     :cond_1
     move v3, v2
 
-    .line 92
     goto :goto_1
 
     :cond_2
     move v1, v2
 
-    .line 93
     goto :goto_2
 .end method
 
@@ -112,7 +104,6 @@
     .param p1, "p"    # Landroid/os/Parcel;
 
     .prologue
-    .line 90
     invoke-virtual {p0, p1}, Landroid/media/VolumePolicy$1;->createFromParcel(Landroid/os/Parcel;)Landroid/media/VolumePolicy;
 
     move-result-object v0
@@ -125,7 +116,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 99
     new-array v0, p1, [Landroid/media/VolumePolicy;
 
     return-object v0
@@ -136,7 +126,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 98
     invoke-virtual {p0, p1}, Landroid/media/VolumePolicy$1;->newArray(I)[Landroid/media/VolumePolicy;
 
     move-result-object v0

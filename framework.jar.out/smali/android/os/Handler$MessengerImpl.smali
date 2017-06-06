@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Landroid/os/Handler;
 
     .prologue
-    .line 718
     iput-object p1, p0, Landroid/os/Handler$MessengerImpl;->this$0:Landroid/os/Handler;
 
     invoke-direct {p0}, Landroid/os/IMessenger$Stub;-><init>()V
@@ -49,18 +48,15 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 720
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
     iput v0, p1, Landroid/os/Message;->sendingUid:I
 
-    .line 721
     iget-object v0, p0, Landroid/os/Handler$MessengerImpl;->this$0:Landroid/os/Handler;
 
     invoke-virtual {v0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 719
     return-void
 .end method

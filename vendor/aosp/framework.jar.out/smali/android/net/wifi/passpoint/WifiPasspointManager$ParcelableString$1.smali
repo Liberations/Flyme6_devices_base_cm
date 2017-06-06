@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 368
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,12 +44,10 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 371
     new-instance v0, Landroid/net/wifi/passpoint/WifiPasspointManager$ParcelableString;
 
     invoke-direct {v0}, Landroid/net/wifi/passpoint/WifiPasspointManager$ParcelableString;-><init>()V
 
-    .line 372
     .local v0, "ret":Landroid/net/wifi/passpoint/WifiPasspointManager$ParcelableString;
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -58,7 +55,6 @@
 
     iput-object v1, v0, Landroid/net/wifi/passpoint/WifiPasspointManager$ParcelableString;->string:Ljava/lang/String;
 
-    .line 373
     return-object v0
 .end method
 
@@ -67,7 +63,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 370
     invoke-virtual {p0, p1}, Landroid/net/wifi/passpoint/WifiPasspointManager$ParcelableString$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/wifi/passpoint/WifiPasspointManager$ParcelableString;
 
     move-result-object v0
@@ -80,7 +75,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 377
     new-array v0, p1, [Landroid/net/wifi/passpoint/WifiPasspointManager$ParcelableString;
 
     return-object v0
@@ -91,7 +85,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 376
     invoke-virtual {p0, p1}, Landroid/net/wifi/passpoint/WifiPasspointManager$ParcelableString$1;->newArray(I)[Landroid/net/wifi/passpoint/WifiPasspointManager$ParcelableString;
 
     move-result-object v0

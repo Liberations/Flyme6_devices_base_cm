@@ -20,7 +20,6 @@
     .locals 0
 
     .prologue
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,7 +30,6 @@
     .param p0, "parcel"    # Landroid/os/Parcel;
 
     .prologue
-    .line 90
     new-instance v0, Lcyanogenmod/os/Concierge$ParcelInfo;
 
     const/4 v1, 0x6
@@ -46,7 +44,6 @@
     .param p0, "parcel"    # Landroid/os/Parcel;
 
     .prologue
-    .line 78
     new-instance v0, Lcyanogenmod/os/Concierge$ParcelInfo;
 
     invoke-direct {v0, p0}, Lcyanogenmod/os/Concierge$ParcelInfo;-><init>(Landroid/os/Parcel;)V

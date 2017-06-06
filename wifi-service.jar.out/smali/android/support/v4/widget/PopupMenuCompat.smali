@@ -22,27 +22,22 @@
     .locals 2
 
     .prologue
-    .line 58
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .line 59
     .local v0, "version":I
     const/16 v1, 0x13
 
     if-lt v0, v1, :cond_0
 
-    .line 60
     new-instance v1, Landroid/support/v4/widget/PopupMenuCompat$KitKatPopupMenuImpl;
 
     invoke-direct {v1}, Landroid/support/v4/widget/PopupMenuCompat$KitKatPopupMenuImpl;-><init>()V
 
     sput-object v1, Landroid/support/v4/widget/PopupMenuCompat;->IMPL:Landroid/support/v4/widget/PopupMenuCompat$PopupMenuImpl;
 
-    .line 25
     :goto_0
     return-void
 
-    .line 62
     :cond_0
     new-instance v1, Landroid/support/v4/widget/PopupMenuCompat$BasePopupMenuImpl;
 
@@ -57,7 +52,6 @@
     .locals 0
 
     .prologue
-    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -68,7 +62,6 @@
     .param p0, "popupMenu"    # Ljava/lang/Object;
 
     .prologue
-    .line 90
     sget-object v0, Landroid/support/v4/widget/PopupMenuCompat;->IMPL:Landroid/support/v4/widget/PopupMenuCompat$PopupMenuImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/widget/PopupMenuCompat$PopupMenuImpl;->getDragToOpenListener(Ljava/lang/Object;)Landroid/view/View$OnTouchListener;

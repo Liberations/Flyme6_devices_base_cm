@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/widget/NumberPicker;
 
     .prologue
-    .line 725
     iput-object p1, p0, Landroid/widget/NumberPicker$3;->this$0:Landroid/widget/NumberPicker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,10 +44,8 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 727
     if-eqz p2, :cond_0
 
-    .line 728
     iget-object v0, p0, Landroid/widget/NumberPicker$3;->this$0:Landroid/widget/NumberPicker;
 
     invoke-static {v0}, Landroid/widget/NumberPicker;->-get7(Landroid/widget/NumberPicker;)Landroid/widget/EditText;
@@ -57,11 +54,9 @@
 
     invoke-virtual {v0}, Landroid/widget/EditText;->selectAll()V
 
-    .line 726
     :goto_0
     return-void
 
-    .line 730
     :cond_0
     iget-object v0, p0, Landroid/widget/NumberPicker$3;->this$0:Landroid/widget/NumberPicker;
 
@@ -71,7 +66,6 @@
 
     invoke-virtual {v0, v1, v1}, Landroid/widget/EditText;->setSelection(II)V
 
-    .line 731
     iget-object v0, p0, Landroid/widget/NumberPicker$3;->this$0:Landroid/widget/NumberPicker;
 
     invoke-static {v0, p1}, Landroid/widget/NumberPicker;->-wrap9(Landroid/widget/NumberPicker;Landroid/view/View;)V

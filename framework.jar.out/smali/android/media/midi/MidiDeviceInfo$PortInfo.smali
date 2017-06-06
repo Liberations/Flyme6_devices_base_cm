@@ -36,25 +36,20 @@
     .param p3, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 154
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 155
     iput p1, p0, Landroid/media/midi/MidiDeviceInfo$PortInfo;->mPortType:I
 
-    .line 156
     iput p2, p0, Landroid/media/midi/MidiDeviceInfo$PortInfo;->mPortNumber:I
 
-    .line 157
     if-nez p3, :cond_0
 
-    const-string/jumbo p3, ""
+    const-string p3, ""
 
     .end local p3    # "name":Ljava/lang/String;
     :cond_0
     iput-object p3, p0, Landroid/media/midi/MidiDeviceInfo$PortInfo;->mName:Ljava/lang/String;
 
-    .line 154
     return-void
 .end method
 
@@ -64,7 +59,6 @@
     .locals 1
 
     .prologue
-    .line 181
     iget-object v0, p0, Landroid/media/midi/MidiDeviceInfo$PortInfo;->mName:Ljava/lang/String;
 
     return-object v0
@@ -74,7 +68,6 @@
     .locals 1
 
     .prologue
-    .line 173
     iget v0, p0, Landroid/media/midi/MidiDeviceInfo$PortInfo;->mPortNumber:I
 
     return v0
@@ -84,7 +77,6 @@
     .locals 1
 
     .prologue
-    .line 165
     iget v0, p0, Landroid/media/midi/MidiDeviceInfo$PortInfo;->mPortType:I
 
     return v0

@@ -27,13 +27,10 @@
     .locals 0
 
     .prologue
-    .line 2357
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2358
     invoke-virtual {p0}, Landroid/widget/GridLayout$Bounds;->reset()V
 
-    .line 2357
     return-void
 .end method
 
@@ -57,7 +54,6 @@
     .param p5, "horizontal"    # Z
 
     .prologue
-    .line 2382
     iget v0, p0, Landroid/widget/GridLayout$Bounds;->before:I
 
     invoke-virtual {p1}, Landroid/widget/GridLayout;->getLayoutMode()I
@@ -79,7 +75,6 @@
     .param p2, "after"    # I
 
     .prologue
-    .line 2368
     iget v0, p0, Landroid/widget/GridLayout$Bounds;->before:I
 
     invoke-static {v0, p1}, Ljava/lang/Math;->max(II)I
@@ -88,7 +83,6 @@
 
     iput v0, p0, Landroid/widget/GridLayout$Bounds;->before:I
 
-    .line 2369
     iget v0, p0, Landroid/widget/GridLayout$Bounds;->after:I
 
     invoke-static {v0, p2}, Ljava/lang/Math;->max(II)I
@@ -97,7 +91,6 @@
 
     iput v0, p0, Landroid/widget/GridLayout$Bounds;->after:I
 
-    .line 2367
     return-void
 .end method
 
@@ -110,7 +103,6 @@
     .param p5, "size"    # I
 
     .prologue
-    .line 2386
     iget v3, p0, Landroid/widget/GridLayout$Bounds;->flexibility:I
 
     invoke-virtual {p3}, Landroid/widget/GridLayout$Spec;->getFlexibility()I
@@ -121,10 +113,8 @@
 
     iput v3, p0, Landroid/widget/GridLayout$Bounds;->flexibility:I
 
-    .line 2387
     iget-boolean v2, p4, Landroid/widget/GridLayout$Axis;->horizontal:Z
 
-    .line 2388
     .local v2, "horizontal":Z
     iget-boolean v3, p4, Landroid/widget/GridLayout$Axis;->horizontal:Z
 
@@ -132,7 +122,6 @@
 
     move-result-object v0
 
-    .line 2390
     .local v0, "alignment":Landroid/widget/GridLayout$Alignment;
     invoke-virtual {p1}, Landroid/widget/GridLayout;->getLayoutMode()I
 
@@ -142,13 +131,11 @@
 
     move-result v1
 
-    .line 2391
     .local v1, "before":I
     sub-int v3, p5, v1
 
     invoke-virtual {p0, v1, v3}, Landroid/widget/GridLayout$Bounds;->include(II)V
 
-    .line 2385
     return-void
 .end method
 
@@ -158,18 +145,14 @@
     .prologue
     const/high16 v0, -0x80000000
 
-    .line 2362
     iput v0, p0, Landroid/widget/GridLayout$Bounds;->before:I
 
-    .line 2363
     iput v0, p0, Landroid/widget/GridLayout$Bounds;->after:I
 
-    .line 2364
     const/4 v0, 0x2
 
     iput v0, p0, Landroid/widget/GridLayout$Bounds;->flexibility:I
 
-    .line 2361
     return-void
 .end method
 
@@ -178,10 +161,8 @@
     .param p1, "min"    # Z
 
     .prologue
-    .line 2373
     if-nez p1, :cond_0
 
-    .line 2374
     iget v0, p0, Landroid/widget/GridLayout$Bounds;->flexibility:I
 
     invoke-static {v0}, Landroid/widget/GridLayout;->canStretch(I)Z
@@ -190,12 +171,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 2375
     const v0, 0x186a0
 
     return v0
 
-    .line 2378
     :cond_0
     iget v0, p0, Landroid/widget/GridLayout$Bounds;->before:I
 
@@ -210,45 +189,36 @@
     .locals 2
 
     .prologue
-    .line 2396
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "Bounds{before="
+    const-string v1, "Bounds{before="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 2397
     iget v1, p0, Landroid/widget/GridLayout$Bounds;->before:I
 
-    .line 2396
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 2398
-    const-string/jumbo v1, ", after="
+    const-string v1, ", after="
 
-    .line 2396
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 2398
     iget v1, p0, Landroid/widget/GridLayout$Bounds;->after:I
 
-    .line 2396
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 2399
     const/16 v1, 0x7d
 
-    .line 2396
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     move-result-object v0

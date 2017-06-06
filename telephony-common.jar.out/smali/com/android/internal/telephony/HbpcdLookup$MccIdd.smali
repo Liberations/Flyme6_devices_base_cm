@@ -32,17 +32,14 @@
     .locals 1
 
     .prologue
-    .line 47
-    const-string/jumbo v0, "content://hbpcd_lookup/idd"
+    const-string v0, "content://hbpcd_lookup/idd"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 46
     sput-object v0, Lcom/android/internal/telephony/HbpcdLookup$MccIdd;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 45
     return-void
 .end method
 
@@ -50,7 +47,6 @@
     .locals 0
 
     .prologue
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/bluetooth/BluetoothHidDevice;
 
     .prologue
-    .line 178
     iput-object p1, p0, Landroid/bluetooth/BluetoothHidDevice$2;->this$0:Landroid/bluetooth/BluetoothHidDevice;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,16 +42,14 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 181
     invoke-static {}, Landroid/bluetooth/BluetoothHidDevice;->-get0()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string/jumbo v1, "onServiceConnected()"
+    const-string v1, "onServiceConnected()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 183
     iget-object v0, p0, Landroid/bluetooth/BluetoothHidDevice$2;->this$0:Landroid/bluetooth/BluetoothHidDevice;
 
     invoke-static {p2}, Landroid/bluetooth/IBluetoothHidDevice$Stub;->asInterface(Landroid/os/IBinder;)Landroid/bluetooth/IBluetoothHidDevice;
@@ -61,7 +58,6 @@
 
     invoke-static {v0, v1}, Landroid/bluetooth/BluetoothHidDevice;->-set0(Landroid/bluetooth/BluetoothHidDevice;Landroid/bluetooth/IBluetoothHidDevice;)Landroid/bluetooth/IBluetoothHidDevice;
 
-    .line 185
     iget-object v0, p0, Landroid/bluetooth/BluetoothHidDevice$2;->this$0:Landroid/bluetooth/BluetoothHidDevice;
 
     invoke-static {v0}, Landroid/bluetooth/BluetoothHidDevice;->-get4(Landroid/bluetooth/BluetoothHidDevice;)Landroid/bluetooth/BluetoothProfile$ServiceListener;
@@ -70,22 +66,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 186
     iget-object v0, p0, Landroid/bluetooth/BluetoothHidDevice$2;->this$0:Landroid/bluetooth/BluetoothHidDevice;
 
     invoke-static {v0}, Landroid/bluetooth/BluetoothHidDevice;->-get4(Landroid/bluetooth/BluetoothHidDevice;)Landroid/bluetooth/BluetoothProfile$ServiceListener;
 
     move-result-object v0
 
-    .line 187
     iget-object v1, p0, Landroid/bluetooth/BluetoothHidDevice$2;->this$0:Landroid/bluetooth/BluetoothHidDevice;
 
-    .line 186
     const/16 v2, 0x11
 
     invoke-interface {v0, v2, v1}, Landroid/bluetooth/BluetoothProfile$ServiceListener;->onServiceConnected(ILandroid/bluetooth/BluetoothProfile;)V
 
-    .line 180
     :cond_0
     return-void
 .end method
@@ -97,21 +89,18 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 192
     invoke-static {}, Landroid/bluetooth/BluetoothHidDevice;->-get0()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string/jumbo v1, "onServiceDisconnected()"
+    const-string v1, "onServiceDisconnected()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 194
     iget-object v0, p0, Landroid/bluetooth/BluetoothHidDevice$2;->this$0:Landroid/bluetooth/BluetoothHidDevice;
 
     invoke-static {v0, v2}, Landroid/bluetooth/BluetoothHidDevice;->-set0(Landroid/bluetooth/BluetoothHidDevice;Landroid/bluetooth/IBluetoothHidDevice;)Landroid/bluetooth/IBluetoothHidDevice;
 
-    .line 196
     iget-object v0, p0, Landroid/bluetooth/BluetoothHidDevice$2;->this$0:Landroid/bluetooth/BluetoothHidDevice;
 
     invoke-static {v0}, Landroid/bluetooth/BluetoothHidDevice;->-get4(Landroid/bluetooth/BluetoothHidDevice;)Landroid/bluetooth/BluetoothProfile$ServiceListener;
@@ -120,7 +109,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 197
     iget-object v0, p0, Landroid/bluetooth/BluetoothHidDevice$2;->this$0:Landroid/bluetooth/BluetoothHidDevice;
 
     invoke-static {v0}, Landroid/bluetooth/BluetoothHidDevice;->-get4(Landroid/bluetooth/BluetoothHidDevice;)Landroid/bluetooth/BluetoothProfile$ServiceListener;
@@ -131,7 +119,6 @@
 
     invoke-interface {v0, v1}, Landroid/bluetooth/BluetoothProfile$ServiceListener;->onServiceDisconnected(I)V
 
-    .line 191
     :cond_0
     return-void
 .end method

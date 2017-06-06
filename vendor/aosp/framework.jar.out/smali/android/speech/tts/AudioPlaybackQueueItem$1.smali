@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/speech/tts/AudioPlaybackQueueItem;
 
     .prologue
-    .line 67
     iput-object p1, p0, Landroid/speech/tts/AudioPlaybackQueueItem$1;->this$0:Landroid/speech/tts/AudioPlaybackQueueItem;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,14 +43,13 @@
     .param p3, "extra"    # I
 
     .prologue
-    .line 70
-    const-string/jumbo v0, "TTS.AudioQueueItem"
+    const-string v0, "TTS.AudioQueueItem"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Audio playback error: "
+    const-string v2, "Audio playback error: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -61,7 +59,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, ", "
+    const-string v2, ", "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -77,7 +75,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 71
     iget-object v0, p0, Landroid/speech/tts/AudioPlaybackQueueItem$1;->this$0:Landroid/speech/tts/AudioPlaybackQueueItem;
 
     invoke-static {v0}, Landroid/speech/tts/AudioPlaybackQueueItem;->-get0(Landroid/speech/tts/AudioPlaybackQueueItem;)Landroid/os/ConditionVariable;
@@ -86,7 +83,6 @@
 
     invoke-virtual {v0}, Landroid/os/ConditionVariable;->open()V
 
-    .line 72
     const/4 v0, 0x1
 
     return v0

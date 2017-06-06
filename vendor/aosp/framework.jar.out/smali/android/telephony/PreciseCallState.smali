@@ -64,15 +64,12 @@
     .locals 1
 
     .prologue
-    .line 255
     new-instance v0, Landroid/telephony/PreciseCallState$1;
 
     invoke-direct {v0}, Landroid/telephony/PreciseCallState$1;-><init>()V
 
-    .line 254
     sput-object v0, Landroid/telephony/PreciseCallState;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 40
     return-void
 .end method
 
@@ -82,25 +79,18 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 88
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 63
     iput v0, p0, Landroid/telephony/PreciseCallState;->mRingingCallState:I
 
-    .line 64
     iput v0, p0, Landroid/telephony/PreciseCallState;->mForegroundCallState:I
 
-    .line 65
     iput v0, p0, Landroid/telephony/PreciseCallState;->mBackgroundCallState:I
 
-    .line 66
     iput v0, p0, Landroid/telephony/PreciseCallState;->mDisconnectCause:I
 
-    .line 67
     iput v0, p0, Landroid/telephony/PreciseCallState;->mPreciseDisconnectCause:I
 
-    .line 88
     return-void
 .end method
 
@@ -115,40 +105,28 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 74
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 63
     iput v0, p0, Landroid/telephony/PreciseCallState;->mRingingCallState:I
 
-    .line 64
     iput v0, p0, Landroid/telephony/PreciseCallState;->mForegroundCallState:I
 
-    .line 65
     iput v0, p0, Landroid/telephony/PreciseCallState;->mBackgroundCallState:I
 
-    .line 66
     iput v0, p0, Landroid/telephony/PreciseCallState;->mDisconnectCause:I
 
-    .line 67
     iput v0, p0, Landroid/telephony/PreciseCallState;->mPreciseDisconnectCause:I
 
-    .line 76
     iput p1, p0, Landroid/telephony/PreciseCallState;->mRingingCallState:I
 
-    .line 77
     iput p2, p0, Landroid/telephony/PreciseCallState;->mForegroundCallState:I
 
-    .line 78
     iput p3, p0, Landroid/telephony/PreciseCallState;->mBackgroundCallState:I
 
-    .line 79
     iput p4, p0, Landroid/telephony/PreciseCallState;->mDisconnectCause:I
 
-    .line 80
     iput p5, p0, Landroid/telephony/PreciseCallState;->mPreciseDisconnectCause:I
 
-    .line 75
     return-void
 .end method
 
@@ -159,60 +137,48 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 94
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 63
     iput v0, p0, Landroid/telephony/PreciseCallState;->mRingingCallState:I
 
-    .line 64
     iput v0, p0, Landroid/telephony/PreciseCallState;->mForegroundCallState:I
 
-    .line 65
     iput v0, p0, Landroid/telephony/PreciseCallState;->mBackgroundCallState:I
 
-    .line 66
     iput v0, p0, Landroid/telephony/PreciseCallState;->mDisconnectCause:I
 
-    .line 67
     iput v0, p0, Landroid/telephony/PreciseCallState;->mPreciseDisconnectCause:I
 
-    .line 95
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/telephony/PreciseCallState;->mRingingCallState:I
 
-    .line 96
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/telephony/PreciseCallState;->mForegroundCallState:I
 
-    .line 97
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/telephony/PreciseCallState;->mBackgroundCallState:I
 
-    .line 98
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/telephony/PreciseCallState;->mDisconnectCause:I
 
-    .line 99
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/telephony/PreciseCallState;->mPreciseDisconnectCause:I
 
-    .line 94
     return-void
 .end method
 
@@ -232,7 +198,6 @@
     .locals 1
 
     .prologue
-    .line 242
     const/4 v0, 0x0
 
     return v0
@@ -247,20 +212,15 @@
 
     const/4 v2, 0x0
 
-    .line 280
     if-ne p0, p1, :cond_0
 
-    .line 281
     return v1
 
-    .line 283
     :cond_0
     if-nez p1, :cond_1
 
-    .line 284
     return v2
 
-    .line 286
     :cond_1
     invoke-virtual {p0}, Landroid/telephony/PreciseCallState;->getClass()Ljava/lang/Class;
 
@@ -272,16 +232,13 @@
 
     if-eq v3, v4, :cond_2
 
-    .line 287
     return v2
 
     :cond_2
     move-object v0, p1
 
-    .line 289
     check-cast v0, Landroid/telephony/PreciseCallState;
 
-    .line 290
     .local v0, "other":Landroid/telephony/PreciseCallState;
     iget v3, p0, Landroid/telephony/PreciseCallState;->mRingingCallState:I
 
@@ -289,48 +246,41 @@
 
     if-eq v3, v4, :cond_4
 
-    .line 291
     iget v3, p0, Landroid/telephony/PreciseCallState;->mForegroundCallState:I
 
     iget v4, v0, Landroid/telephony/PreciseCallState;->mForegroundCallState:I
 
     if-eq v3, v4, :cond_4
 
-    .line 292
     iget v3, p0, Landroid/telephony/PreciseCallState;->mBackgroundCallState:I
 
     iget v4, v0, Landroid/telephony/PreciseCallState;->mBackgroundCallState:I
 
     if-eq v3, v4, :cond_4
 
-    .line 293
     iget v3, p0, Landroid/telephony/PreciseCallState;->mDisconnectCause:I
 
     iget v4, v0, Landroid/telephony/PreciseCallState;->mDisconnectCause:I
 
     if-eq v3, v4, :cond_4
 
-    .line 294
     iget v3, p0, Landroid/telephony/PreciseCallState;->mPreciseDisconnectCause:I
 
     iget v4, v0, Landroid/telephony/PreciseCallState;->mPreciseDisconnectCause:I
 
     if-eq v3, v4, :cond_3
 
-    .line 290
     :goto_0
     return v1
 
     :cond_3
     move v1, v2
 
-    .line 294
     goto :goto_0
 
     :cond_4
     move v1, v2
 
-    .line 290
     goto :goto_0
 .end method
 
@@ -338,7 +288,6 @@
     .locals 1
 
     .prologue
-    .line 153
     iget v0, p0, Landroid/telephony/PreciseCallState;->mBackgroundCallState:I
 
     return v0
@@ -348,7 +297,6 @@
     .locals 1
 
     .prologue
-    .line 199
     iget v0, p0, Landroid/telephony/PreciseCallState;->mDisconnectCause:I
 
     return v0
@@ -358,7 +306,6 @@
     .locals 1
 
     .prologue
-    .line 135
     iget v0, p0, Landroid/telephony/PreciseCallState;->mForegroundCallState:I
 
     return v0
@@ -368,7 +315,6 @@
     .locals 1
 
     .prologue
-    .line 237
     iget v0, p0, Landroid/telephony/PreciseCallState;->mPreciseDisconnectCause:I
 
     return v0
@@ -378,7 +324,6 @@
     .locals 1
 
     .prologue
-    .line 117
     iget v0, p0, Landroid/telephony/PreciseCallState;->mRingingCallState:I
 
     return v0
@@ -388,16 +333,13 @@
     .locals 4
 
     .prologue
-    .line 268
     const/16 v0, 0x1f
 
-    .line 270
     .local v0, "prime":I
     iget v2, p0, Landroid/telephony/PreciseCallState;->mRingingCallState:I
 
     add-int/lit8 v1, v2, 0x1f
 
-    .line 271
     .local v1, "result":I
     mul-int/lit8 v2, v1, 0x1f
 
@@ -405,28 +347,24 @@
 
     add-int v1, v2, v3
 
-    .line 272
     mul-int/lit8 v2, v1, 0x1f
 
     iget v3, p0, Landroid/telephony/PreciseCallState;->mBackgroundCallState:I
 
     add-int v1, v2, v3
 
-    .line 273
     mul-int/lit8 v2, v1, 0x1f
 
     iget v3, p0, Landroid/telephony/PreciseCallState;->mDisconnectCause:I
 
     add-int v1, v2, v3
 
-    .line 274
     mul-int/lit8 v2, v1, 0x1f
 
     iget v3, p0, Landroid/telephony/PreciseCallState;->mPreciseDisconnectCause:I
 
     add-int v1, v2, v3
 
-    .line 275
     return v1
 .end method
 
@@ -434,18 +372,16 @@
     .locals 3
 
     .prologue
-    .line 299
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 301
     .local v0, "sb":Ljava/lang/StringBuffer;
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Ringing call state: "
+    const-string v2, "Ringing call state: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -463,12 +399,11 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 302
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, ", Foreground call state: "
+    const-string v2, ", Foreground call state: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -486,12 +421,11 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 303
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, ", Background call state: "
+    const-string v2, ", Background call state: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -509,12 +443,11 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 304
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, ", Disconnect cause: "
+    const-string v2, ", Disconnect cause: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -532,12 +465,11 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 305
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, ", Precise disconnect cause: "
+    const-string v2, ", Precise disconnect cause: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -555,7 +487,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 307
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -569,31 +500,25 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 247
     iget v0, p0, Landroid/telephony/PreciseCallState;->mRingingCallState:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 248
     iget v0, p0, Landroid/telephony/PreciseCallState;->mForegroundCallState:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 249
     iget v0, p0, Landroid/telephony/PreciseCallState;->mBackgroundCallState:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 250
     iget v0, p0, Landroid/telephony/PreciseCallState;->mDisconnectCause:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 251
     iget v0, p0, Landroid/telephony/PreciseCallState;->mPreciseDisconnectCause:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 246
     return-void
 .end method

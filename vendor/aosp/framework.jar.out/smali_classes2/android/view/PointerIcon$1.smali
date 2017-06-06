@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 310
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,47 +44,38 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 312
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 313
     .local v4, "style":I
     if-nez v4, :cond_0
 
-    .line 314
     invoke-static {}, Landroid/view/PointerIcon;->getNullIcon()Landroid/view/PointerIcon;
 
     move-result-object v6
 
     return-object v6
 
-    .line 317
     :cond_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 318
     .local v5, "systemIconResourceId":I
     if-eqz v5, :cond_1
 
-    .line 319
     new-instance v3, Landroid/view/PointerIcon;
 
     const/4 v6, 0x0
 
     invoke-direct {v3, v4, v6}, Landroid/view/PointerIcon;-><init>(ILandroid/view/PointerIcon;)V
 
-    .line 320
     .local v3, "icon":Landroid/view/PointerIcon;
     invoke-static {v3, v5}, Landroid/view/PointerIcon;->-set0(Landroid/view/PointerIcon;I)I
 
-    .line 321
     return-object v3
 
-    .line 324
     .end local v3    # "icon":Landroid/view/PointerIcon;
     :cond_1
     sget-object v6, Landroid/graphics/Bitmap;->CREATOR:Landroid/os/Parcelable$Creator;
@@ -96,19 +86,16 @@
 
     check-cast v0, Landroid/graphics/Bitmap;
 
-    .line 325
     .local v0, "bitmap":Landroid/graphics/Bitmap;
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v1
 
-    .line 326
     .local v1, "hotSpotX":F
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v2
 
-    .line 327
     .local v2, "hotSpotY":F
     invoke-static {v0, v1, v2}, Landroid/view/PointerIcon;->createCustomIcon(Landroid/graphics/Bitmap;FF)Landroid/view/PointerIcon;
 
@@ -122,7 +109,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 311
     invoke-virtual {p0, p1}, Landroid/view/PointerIcon$1;->createFromParcel(Landroid/os/Parcel;)Landroid/view/PointerIcon;
 
     move-result-object v0
@@ -135,7 +121,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 331
     new-array v0, p1, [Landroid/view/PointerIcon;
 
     return-object v0
@@ -146,7 +131,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 330
     invoke-virtual {p0, p1}, Landroid/view/PointerIcon$1;->newArray(I)[Landroid/view/PointerIcon;
 
     move-result-object v0

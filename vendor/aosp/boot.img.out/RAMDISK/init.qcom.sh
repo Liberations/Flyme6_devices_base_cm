@@ -1,5 +1,5 @@
 #!/system/bin/sh
-# Copyright (c) 2009-2015, The Linux Foundation. All rights reserved.
+# Copyright (c) 2009-2016, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -32,22 +32,6 @@ if [ -f /sys/devices/soc0/soc_id ]; then
 else
     platformid=`cat /sys/devices/system/soc/soc0/id`
 fi
-#
-# Function to start sensors for DSPS enabled platforms
-#
-#start_sensors()
-#{
-#    if [ -c /dev/msm_dsps -o -c /dev/sensors ]; then
-#        chmod -h 775 /persist/sensors
-#        chmod -h 664 /persist/sensors/sensors_settings
-#        chown -h system.root /persist/sensors/sensors_settings
-
-#        mkdir -p /data/misc/sensors
-#        chmod -h 775 /data/misc/sensors
-
-#        start sensors
-#    fi
-#}
 
 start_battery_monitor()
 {
@@ -98,7 +82,7 @@ start_msm_irqbalance_8939()
 {
 	if [ -f /system/bin/msm_irqbalance ]; then
 		case "$platformid" in
-		    "239")
+		    "239" | "293" | "294" | "295" | "304" | "313")
 			start msm_irqbalance;;
 		esac
 	fi
@@ -111,57 +95,22 @@ start_msm_irqbalance()
 	fi
 }
 
+start_copying_prebuilt_qcril_db()
+{
+    if [ -f /system/vendor/qcril.db -a ! -f /data/misc/radio/qcril.db ]; then
+        cp /system/vendor/qcril.db /data/misc/radio/qcril.db
+        chown -h radio.radio /data/misc/radio/qcril.db
+    fi
+}
+
 baseband=`getprop ro.baseband`
+echo 1 > /proc/sys/net/ipv6/conf/default/accept_ra_defrtr
 
 case "$baseband" in
         "svlte2a")
         start bridgemgrd
         ;;
 esac
-
-leftvalue=`getprop permanent.button.bl.leftvalue`
-rightvalue=`getprop permanent.button.bl.rightvalue`
-# update the brightness to meet the requirement from HW
-if [ $(getprop ro.boot.hwversion | grep -e 1.[0-9].[0-9]) ]; then
-if [ "$leftvalue" = "" ]; then
-       echo 15 > /sys/class/leds/button-backlight1/max_brightness
-else
-       echo $leftvalue > /sys/class/leds/button-backlight1/max_brightness
-fi
-if [ "$rightvalue" = "" ]; then
-       echo 30 > /sys/class/leds/button-backlight/max_brightness
-else
-       echo $rightvalue > /sys/class/leds/button-backlight/max_brightness
-fi
-fi
-
-if [ $(getprop ro.boot.hwversion | grep -e 2.[0-9].[0-9]) ]; then
-if [ "$leftvalue" = "" ]; then
-       echo 255 > /sys/class/leds/button-backlight1/max_brightness
-else
-       echo $leftvalue > /sys/class/leds/button-backlight1/max_brightness
-fi
-if [ "$rightvalue" = "" ]; then
-       echo 255 > /sys/class/leds/button-backlight/max_brightness
-else
-       echo $rightvalue > /sys/class/leds/button-backlight/max_brightness
-fi
-fi
-
-chown -h system.system /sys/class/leds/button-backlight/brightness
-chown -h system.system /sys/class/leds/button-backlight1/brightness
-
-if [ $(getprop ro.boot.hwversion | grep -e 2.[0-9].[0-9]) ]; then
-echo 48 > /sys/class/leds/red/max_brightness
-echo 48 > /sys/class/leds/green/max_brightness
-echo 48 > /sys/class/leds/blue/max_brightness
-else
-echo 48 > /sys/class/leds/red/max_brightness
-echo 48 > /sys/class/leds/green/max_brightness
-echo 96 > /sys/class/leds/blue/max_brightness
-fi
-
-#start_sensors
 
 case "$target" in
     "msm7630_surf" | "msm7630_1x" | "msm7630_fusion")
@@ -270,11 +219,90 @@ case "$target" in
                   ;;
         esac
         ;;
-    "msm8994" | "msm8992")
+    "msm8994" | "msm8992" | "msmcobalt")
         start_msm_irqbalance
+        ;;
+    "msm8996")
+        if [ -f /sys/devices/soc0/hw_platform ]; then
+             hw_platform=`cat /sys/devices/soc0/hw_platform`
+        fi
+        case "$hw_platform" in
+                "MTP" | "CDP")
+                #Loop through the sysfs nodes and determine the correct sysfs to change the permission and ownership.
+                        for count in 0 1 2 3 4 5 6 7 8 9 10
+                        do
+                                dir="/sys/devices/soc/75ba000.i2c/i2c-12/12-0020/input/input"$count
+                                if [ -d "$dir" ]; then
+                                     chmod 0660 $dir/secure_touch_enable
+                                     chmod 0440 $dir/secure_touch
+                                     chown system.drmrpc $dir/secure_touch_enable
+                                     chown system.drmrpc $dir/secure_touch
+                                     break
+                                fi
+                        done
+                        ;;
+        esac
         ;;
     "msm8909")
         start_vm_bms
+        ;;
+    "msm8937")
+        start_msm_irqbalance_8939
+        if [ -f /sys/devices/soc0/soc_id ]; then
+            soc_id=`cat /sys/devices/soc0/soc_id`
+        else
+            soc_id=`cat /sys/devices/system/soc/soc0/id`
+        fi
+
+        if [ -f /sys/devices/soc0/hw_platform ]; then
+             hw_platform=`cat /sys/devices/soc0/hw_platform`
+        else
+             hw_platform=`cat /sys/devices/system/soc/soc0/hw_platform`
+        fi
+        case "$soc_id" in
+             "294" | "295" | "303" | "307" | "308" | "309" | "313")
+                  case "$hw_platform" in
+                       "Surf")
+                                    setprop qemu.hw.mainkeys 0
+                                    ;;
+                       "MTP")
+                                    setprop qemu.hw.mainkeys 1
+                                    ;;
+                       "RCM")
+                                    setprop qemu.hw.mainkeys 0
+                                    ;;
+                  esac
+                  ;;
+       esac
+        ;;
+    "msm8953")
+	start_msm_irqbalance_8939
+        if [ -f /sys/devices/soc0/soc_id ]; then
+            soc_id=`cat /sys/devices/soc0/soc_id`
+        else
+            soc_id=`cat /sys/devices/system/soc/soc0/id`
+        fi
+
+        if [ -f /sys/devices/soc0/hw_platform ]; then
+             hw_platform=`cat /sys/devices/soc0/hw_platform`
+        else
+             hw_platform=`cat /sys/devices/system/soc/soc0/hw_platform`
+        fi
+        case "$soc_id" in
+             "293" | "304" )
+                  case "$hw_platform" in
+                       "Surf")
+                                    setprop qemu.hw.mainkeys 0
+                                    ;;
+                       "MTP")
+                                    setprop qemu.hw.mainkeys 1
+                                    ;;
+                       "RCM")
+                                    setprop qemu.hw.mainkeys 0
+                                    ;;
+                  esac
+                  ;;
+       esac
         ;;
 esac
 
@@ -290,11 +318,30 @@ case "$emmc_boot"
 esac
 
 #
-# Make modem config folder and copy firmware config to that folder
+# Copy qcril.db if needed for RIL
 #
-rm -rf /data/misc/radio/modem_config
-mkdir /data/misc/radio/modem_config
-chmod 660 /data/misc/radio/modem_config
-cp -r /firmware/image/modem_pr/mbn_ota/* /data/misc/radio/modem_config
-chown -hR radio.radio /data/misc/radio/modem_config
+start_copying_prebuilt_qcril_db
+echo 1 > /data/misc/radio/db_check_done
+
+#
+# Make modem config folder and copy firmware config to that folder for RIL
+#
+if [ -f /data/misc/radio/ver_info.txt ]; then
+    prev_version_info=`cat /data/misc/radio/ver_info.txt`
+else
+    prev_version_info=""
+fi
+
+cur_version_info=`cat /firmware/verinfo/ver_info.txt`
+if [ ! -f /firmware/verinfo/ver_info.txt -o "$prev_version_info" != "$cur_version_info" ]; then
+    rm -rf /data/misc/radio/modem_config
+    mkdir /data/misc/radio/modem_config
+    chmod 770 /data/misc/radio/modem_config
+    cp -r /firmware/image/modem_pr/mcfg/configs/* /data/misc/radio/modem_config
+    chown -hR radio.radio /data/misc/radio/modem_config
+    cp /firmware/verinfo/ver_info.txt /data/misc/radio/ver_info.txt
+    chown radio.radio /data/misc/radio/ver_info.txt
+fi
+cp -r /firmware/image/modem_pr/mbn_ota.txt /data/misc/radio/modem_config/mbn_ota.txt
+chown -hR radio.radio /data/misc/radio/modem_config/mbn_ota.txt
 echo 1 > /data/misc/radio/copy_complete

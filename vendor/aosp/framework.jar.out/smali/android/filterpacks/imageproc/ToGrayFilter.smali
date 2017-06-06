@@ -31,22 +31,18 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Landroid/filterpacks/imageproc/SimpleImageFilter;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 34
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/filterpacks/imageproc/ToGrayFilter;->mInvertSource:Z
 
-    .line 37
     const/16 v0, 0x280
 
     iput v0, p0, Landroid/filterpacks/imageproc/ToGrayFilter;->mTileSize:I
 
-    .line 51
     return-void
 .end method
 
@@ -57,10 +53,9 @@
     .param p1, "context"    # Landroid/filterfw/core/FilterContext;
 
     .prologue
-    .line 64
     new-instance v0, Ljava/lang/RuntimeException;
 
-    const-string/jumbo v1, "Native toGray not implemented yet!"
+    const-string v1, "Native toGray not implemented yet!"
 
     invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
@@ -74,8 +69,7 @@
     .prologue
     const/high16 v4, 0x3f800000    # 1.0f
 
-    .line 69
-    const-string/jumbo v2, "image"
+    const-string v2, "image"
 
     invoke-virtual {p0, v2}, Landroid/filterpacks/imageproc/ToGrayFilter;->getInputFormat(Ljava/lang/String;)Landroid/filterfw/core/FrameFormat;
 
@@ -85,20 +79,18 @@
 
     move-result v0
 
-    .line 70
     .local v0, "inputChannels":I
     const/4 v2, 0x4
 
     if-eq v0, v2, :cond_0
 
-    .line 71
     new-instance v2, Ljava/lang/RuntimeException;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "Unsupported GL input channels: "
+    const-string v4, "Unsupported GL input channels: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -108,10 +100,8 @@
 
     move-result-object v3
 
-    .line 72
-    const-string/jumbo v4, "! Channels must be 4!"
+    const-string v4, "! Channels must be 4!"
 
-    .line 71
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
@@ -124,33 +114,28 @@
 
     throw v2
 
-    .line 74
     :cond_0
     new-instance v1, Landroid/filterfw/core/ShaderProgram;
 
-    const-string/jumbo v2, "precision mediump float;\nuniform sampler2D tex_sampler_0;\nvarying vec2 v_texcoord;\nvoid main() {\n  vec4 color = texture2D(tex_sampler_0, v_texcoord);\n  float y = dot(color, vec4(0.299, 0.587, 0.114, 0));\n  gl_FragColor = vec4(y, y, y, color.a);\n}\n"
+    const-string v2, "precision mediump float;\nuniform sampler2D tex_sampler_0;\nvarying vec2 v_texcoord;\nvoid main() {\n  vec4 color = texture2D(tex_sampler_0, v_texcoord);\n  float y = dot(color, vec4(0.299, 0.587, 0.114, 0));\n  gl_FragColor = vec4(y, y, y, color.a);\n}\n"
 
     invoke-direct {v1, p1, v2}, Landroid/filterfw/core/ShaderProgram;-><init>(Landroid/filterfw/core/FilterContext;Ljava/lang/String;)V
 
-    .line 75
     .local v1, "program":Landroid/filterfw/core/ShaderProgram;
     iget v2, p0, Landroid/filterpacks/imageproc/ToGrayFilter;->mTileSize:I
 
     invoke-virtual {v1, v2}, Landroid/filterfw/core/ShaderProgram;->setMaximumTileSize(I)V
 
-    .line 76
     iget-boolean v2, p0, Landroid/filterpacks/imageproc/ToGrayFilter;->mInvertSource:Z
 
     if-eqz v2, :cond_1
 
-    .line 77
     const/4 v2, 0x0
 
     const/high16 v3, -0x40800000    # -1.0f
 
     invoke-virtual {v1, v2, v4, v4, v3}, Landroid/filterfw/core/ShaderProgram;->setSourceRect(FFFF)V
 
-    .line 78
     :cond_1
     return-object v1
 .end method
@@ -161,8 +146,7 @@
     .prologue
     const/4 v1, 0x3
 
-    .line 57
-    const-string/jumbo v0, "image"
+    const-string v0, "image"
 
     invoke-static {v1, v1}, Landroid/filterfw/format/ImageFormat;->create(II)Landroid/filterfw/core/MutableFrameFormat;
 
@@ -170,13 +154,11 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/filterpacks/imageproc/ToGrayFilter;->addMaskedInputPort(Ljava/lang/String;Landroid/filterfw/core/FrameFormat;)V
 
-    .line 59
-    const-string/jumbo v0, "image"
+    const-string v0, "image"
 
-    const-string/jumbo v1, "image"
+    const-string v1, "image"
 
     invoke-virtual {p0, v0, v1}, Landroid/filterpacks/imageproc/ToGrayFilter;->addOutputBasedOnInput(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 56
     return-void
 .end method

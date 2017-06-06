@@ -345,1812 +345,1517 @@
 
     const/4 v4, 0x0
 
-    .line 390
     new-array v1, v5, [I
 
     fill-array-data v1, :array_0
 
     sput-object v1, Landroid/app/AppOpsManager;->sOpToSwitch:[I
 
-    .line 466
     new-array v1, v5, [Ljava/lang/String;
 
-    .line 467
-    const-string/jumbo v2, "android:coarse_location"
+    const-string v2, "android:coarse_location"
 
     aput-object v2, v1, v6
 
-    .line 468
-    const-string/jumbo v2, "android:fine_location"
+    const-string v2, "android:fine_location"
 
     aput-object v2, v1, v7
 
-    .line 469
     aput-object v4, v1, v8
 
-    .line 470
     const/4 v2, 0x3
 
     aput-object v4, v1, v2
 
-    .line 471
-    const-string/jumbo v2, "android:read_contacts"
+    const-string v2, "android:read_contacts"
 
     const/4 v3, 0x4
 
     aput-object v2, v1, v3
 
-    .line 472
-    const-string/jumbo v2, "android:write_contacts"
+    const-string v2, "android:write_contacts"
 
     const/4 v3, 0x5
 
     aput-object v2, v1, v3
 
-    .line 473
-    const-string/jumbo v2, "android:read_call_log"
+    const-string v2, "android:read_call_log"
 
     const/4 v3, 0x6
 
     aput-object v2, v1, v3
 
-    .line 474
-    const-string/jumbo v2, "android:write_call_log"
+    const-string v2, "android:write_call_log"
 
     const/4 v3, 0x7
 
     aput-object v2, v1, v3
 
-    .line 475
-    const-string/jumbo v2, "android:read_calendar"
+    const-string v2, "android:read_calendar"
 
     const/16 v3, 0x8
 
     aput-object v2, v1, v3
 
-    .line 476
-    const-string/jumbo v2, "android:write_calendar"
+    const-string v2, "android:write_calendar"
 
     const/16 v3, 0x9
 
     aput-object v2, v1, v3
 
-    .line 477
     const/16 v2, 0xa
 
     aput-object v4, v1, v2
 
-    .line 478
     const/16 v2, 0xb
 
     aput-object v4, v1, v2
 
-    .line 479
     const/16 v2, 0xc
 
     aput-object v4, v1, v2
 
-    .line 480
-    const-string/jumbo v2, "android:call_phone"
+    const-string v2, "android:call_phone"
 
     const/16 v3, 0xd
 
     aput-object v2, v1, v3
 
-    .line 481
-    const-string/jumbo v2, "android:read_sms"
+    const-string v2, "android:read_sms"
 
     const/16 v3, 0xe
 
     aput-object v2, v1, v3
 
-    .line 482
     const/16 v2, 0xf
 
     aput-object v4, v1, v2
 
-    .line 483
-    const-string/jumbo v2, "android:receive_sms"
+    const-string v2, "android:receive_sms"
 
     const/16 v3, 0x10
 
     aput-object v2, v1, v3
 
-    .line 484
     const/16 v2, 0x11
 
     aput-object v4, v1, v2
 
-    .line 485
-    const-string/jumbo v2, "android:receive_mms"
+    const-string v2, "android:receive_mms"
 
     const/16 v3, 0x12
 
     aput-object v2, v1, v3
 
-    .line 486
-    const-string/jumbo v2, "android:receive_wap_push"
+    const-string v2, "android:receive_wap_push"
 
     const/16 v3, 0x13
 
     aput-object v2, v1, v3
 
-    .line 487
-    const-string/jumbo v2, "android:send_sms"
+    const-string v2, "android:send_sms"
 
     const/16 v3, 0x14
 
     aput-object v2, v1, v3
 
-    .line 488
     const/16 v2, 0x15
 
     aput-object v4, v1, v2
 
-    .line 489
     const/16 v2, 0x16
 
     aput-object v4, v1, v2
 
-    .line 490
-    const-string/jumbo v2, "android:write_settings"
+    const-string v2, "android:write_settings"
 
     const/16 v3, 0x17
 
     aput-object v2, v1, v3
 
-    .line 491
-    const-string/jumbo v2, "android:system_alert_window"
+    const-string v2, "android:system_alert_window"
 
     const/16 v3, 0x18
 
     aput-object v2, v1, v3
 
-    .line 492
     const/16 v2, 0x19
 
     aput-object v4, v1, v2
 
-    .line 493
-    const-string/jumbo v2, "android:camera"
+    const-string v2, "android:camera"
 
     const/16 v3, 0x1a
 
     aput-object v2, v1, v3
 
-    .line 494
-    const-string/jumbo v2, "android:record_audio"
+    const-string v2, "android:record_audio"
 
     const/16 v3, 0x1b
 
     aput-object v2, v1, v3
 
-    .line 495
     const/16 v2, 0x1c
 
     aput-object v4, v1, v2
 
-    .line 496
     const/16 v2, 0x1d
 
     aput-object v4, v1, v2
 
-    .line 497
     const/16 v2, 0x1e
 
     aput-object v4, v1, v2
 
-    .line 498
     const/16 v2, 0x1f
 
     aput-object v4, v1, v2
 
-    .line 499
     const/16 v2, 0x20
 
     aput-object v4, v1, v2
 
-    .line 500
     const/16 v2, 0x21
 
     aput-object v4, v1, v2
 
-    .line 501
     const/16 v2, 0x22
 
     aput-object v4, v1, v2
 
-    .line 502
     const/16 v2, 0x23
 
     aput-object v4, v1, v2
 
-    .line 503
     const/16 v2, 0x24
 
     aput-object v4, v1, v2
 
-    .line 504
     const/16 v2, 0x25
 
     aput-object v4, v1, v2
 
-    .line 505
     const/16 v2, 0x26
 
     aput-object v4, v1, v2
 
-    .line 506
     const/16 v2, 0x27
 
     aput-object v4, v1, v2
 
-    .line 507
     const/16 v2, 0x28
 
     aput-object v4, v1, v2
 
-    .line 508
-    const-string/jumbo v2, "android:monitor_location"
+    const-string v2, "android:monitor_location"
 
     const/16 v3, 0x29
 
     aput-object v2, v1, v3
 
-    .line 509
-    const-string/jumbo v2, "android:monitor_location_high_power"
+    const-string v2, "android:monitor_location_high_power"
 
     const/16 v3, 0x2a
 
     aput-object v2, v1, v3
 
-    .line 510
-    const-string/jumbo v2, "android:get_usage_stats"
+    const-string v2, "android:get_usage_stats"
 
     const/16 v3, 0x2b
 
     aput-object v2, v1, v3
 
-    .line 511
     const/16 v2, 0x2c
 
     aput-object v4, v1, v2
 
-    .line 512
     const/16 v2, 0x2d
 
     aput-object v4, v1, v2
 
-    .line 513
     const/16 v2, 0x2e
 
     aput-object v4, v1, v2
 
-    .line 514
-    const-string/jumbo v2, "android:activate_vpn"
+    const-string v2, "android:activate_vpn"
 
     const/16 v3, 0x2f
 
     aput-object v2, v1, v3
 
-    .line 515
     const/16 v2, 0x30
 
     aput-object v4, v1, v2
 
-    .line 516
     const/16 v2, 0x31
 
     aput-object v4, v1, v2
 
-    .line 517
     const/16 v2, 0x32
 
     aput-object v4, v1, v2
 
-    .line 518
-    const-string/jumbo v2, "android:read_phone_state"
+    const-string v2, "android:read_phone_state"
 
     const/16 v3, 0x33
 
     aput-object v2, v1, v3
 
-    .line 519
-    const-string/jumbo v2, "android:add_voicemail"
+    const-string v2, "android:add_voicemail"
 
     const/16 v3, 0x34
 
     aput-object v2, v1, v3
 
-    .line 520
-    const-string/jumbo v2, "android:use_sip"
+    const-string v2, "android:use_sip"
 
     const/16 v3, 0x35
 
     aput-object v2, v1, v3
 
-    .line 521
     const/16 v2, 0x36
 
     aput-object v4, v1, v2
 
-    .line 522
-    const-string/jumbo v2, "android:use_fingerprint"
+    const-string v2, "android:use_fingerprint"
 
     const/16 v3, 0x37
 
     aput-object v2, v1, v3
 
-    .line 523
-    const-string/jumbo v2, "android:body_sensors"
+    const-string v2, "android:body_sensors"
 
     const/16 v3, 0x38
 
     aput-object v2, v1, v3
 
-    .line 524
-    const-string/jumbo v2, "android:read_cell_broadcasts"
+    const-string v2, "android:read_cell_broadcasts"
 
     const/16 v3, 0x39
 
     aput-object v2, v1, v3
 
-    .line 525
-    const-string/jumbo v2, "android:mock_location"
+    const-string v2, "android:mock_location"
 
     const/16 v3, 0x3a
 
     aput-object v2, v1, v3
 
-    .line 526
-    const-string/jumbo v2, "android:read_external_storage"
+    const-string v2, "android:read_external_storage"
 
     const/16 v3, 0x3b
 
     aput-object v2, v1, v3
 
-    .line 527
-    const-string/jumbo v2, "android:write_external_storage"
+    const-string v2, "android:write_external_storage"
 
     const/16 v3, 0x3c
 
     aput-object v2, v1, v3
 
-    .line 528
     const/16 v2, 0x3d
 
     aput-object v4, v1, v2
 
-    .line 529
-    const-string/jumbo v2, "android:get_accounts"
+    const-string v2, "android:get_accounts"
 
     const/16 v3, 0x3e
 
     aput-object v2, v1, v3
 
-    .line 530
-    const-string/jumbo v2, "android:wifi_change"
+    const-string v2, "android:wifi_change"
 
     const/16 v3, 0x3f
 
     aput-object v2, v1, v3
 
-    .line 531
-    const-string/jumbo v2, "android:bluetooth_change"
+    const-string v2, "android:bluetooth_change"
 
     const/16 v3, 0x40
 
     aput-object v2, v1, v3
 
-    .line 532
-    const-string/jumbo v2, "android:boot_completed"
+    const-string v2, "android:boot_completed"
 
     const/16 v3, 0x41
 
     aput-object v2, v1, v3
 
-    .line 533
-    const-string/jumbo v2, "android:nfc_change"
+    const-string v2, "android:nfc_change"
 
     const/16 v3, 0x42
 
     aput-object v2, v1, v3
 
-    .line 534
-    const-string/jumbo v2, "android:data_connect_change"
+    const-string v2, "android:data_connect_change"
 
     const/16 v3, 0x43
 
     aput-object v2, v1, v3
 
-    .line 535
-    const-string/jumbo v2, "android:su"
+    const-string v2, "android:su"
 
     const/16 v3, 0x44
 
     aput-object v2, v1, v3
 
-    .line 466
     sput-object v1, Landroid/app/AppOpsManager;->sOpToString:[Ljava/lang/String;
 
-    .line 542
     new-array v1, v5, [Ljava/lang/String;
 
-    .line 543
-    const-string/jumbo v2, "COARSE_LOCATION"
+    const-string v2, "COARSE_LOCATION"
 
     aput-object v2, v1, v6
 
-    .line 544
-    const-string/jumbo v2, "FINE_LOCATION"
+    const-string v2, "FINE_LOCATION"
 
     aput-object v2, v1, v7
 
-    .line 545
-    const-string/jumbo v2, "GPS"
+    const-string v2, "GPS"
 
     aput-object v2, v1, v8
 
-    .line 546
-    const-string/jumbo v2, "VIBRATE"
+    const-string v2, "VIBRATE"
 
     const/4 v3, 0x3
 
     aput-object v2, v1, v3
 
-    .line 547
-    const-string/jumbo v2, "READ_CONTACTS"
+    const-string v2, "READ_CONTACTS"
 
     const/4 v3, 0x4
 
     aput-object v2, v1, v3
 
-    .line 548
-    const-string/jumbo v2, "WRITE_CONTACTS"
+    const-string v2, "WRITE_CONTACTS"
 
     const/4 v3, 0x5
 
     aput-object v2, v1, v3
 
-    .line 549
-    const-string/jumbo v2, "READ_CALL_LOG"
+    const-string v2, "READ_CALL_LOG"
 
     const/4 v3, 0x6
 
     aput-object v2, v1, v3
 
-    .line 550
-    const-string/jumbo v2, "WRITE_CALL_LOG"
+    const-string v2, "WRITE_CALL_LOG"
 
     const/4 v3, 0x7
 
     aput-object v2, v1, v3
 
-    .line 551
-    const-string/jumbo v2, "READ_CALENDAR"
+    const-string v2, "READ_CALENDAR"
 
     const/16 v3, 0x8
 
     aput-object v2, v1, v3
 
-    .line 552
-    const-string/jumbo v2, "WRITE_CALENDAR"
+    const-string v2, "WRITE_CALENDAR"
 
     const/16 v3, 0x9
 
     aput-object v2, v1, v3
 
-    .line 553
-    const-string/jumbo v2, "WIFI_SCAN"
+    const-string v2, "WIFI_SCAN"
 
     const/16 v3, 0xa
 
     aput-object v2, v1, v3
 
-    .line 554
-    const-string/jumbo v2, "POST_NOTIFICATION"
+    const-string v2, "POST_NOTIFICATION"
 
     const/16 v3, 0xb
 
     aput-object v2, v1, v3
 
-    .line 555
-    const-string/jumbo v2, "NEIGHBORING_CELLS"
+    const-string v2, "NEIGHBORING_CELLS"
 
     const/16 v3, 0xc
 
     aput-object v2, v1, v3
 
-    .line 556
-    const-string/jumbo v2, "CALL_PHONE"
+    const-string v2, "CALL_PHONE"
 
     const/16 v3, 0xd
 
     aput-object v2, v1, v3
 
-    .line 557
-    const-string/jumbo v2, "READ_SMS"
+    const-string v2, "READ_SMS"
 
     const/16 v3, 0xe
 
     aput-object v2, v1, v3
 
-    .line 558
-    const-string/jumbo v2, "WRITE_SMS"
+    const-string v2, "WRITE_SMS"
 
     const/16 v3, 0xf
 
     aput-object v2, v1, v3
 
-    .line 559
-    const-string/jumbo v2, "RECEIVE_SMS"
+    const-string v2, "RECEIVE_SMS"
 
     const/16 v3, 0x10
 
     aput-object v2, v1, v3
 
-    .line 560
-    const-string/jumbo v2, "RECEIVE_EMERGECY_SMS"
+    const-string v2, "RECEIVE_EMERGECY_SMS"
 
     const/16 v3, 0x11
 
     aput-object v2, v1, v3
 
-    .line 561
-    const-string/jumbo v2, "RECEIVE_MMS"
+    const-string v2, "RECEIVE_MMS"
 
     const/16 v3, 0x12
 
     aput-object v2, v1, v3
 
-    .line 562
-    const-string/jumbo v2, "RECEIVE_WAP_PUSH"
+    const-string v2, "RECEIVE_WAP_PUSH"
 
     const/16 v3, 0x13
 
     aput-object v2, v1, v3
 
-    .line 563
-    const-string/jumbo v2, "SEND_SMS"
+    const-string v2, "SEND_SMS"
 
     const/16 v3, 0x14
 
     aput-object v2, v1, v3
 
-    .line 564
-    const-string/jumbo v2, "READ_ICC_SMS"
+    const-string v2, "READ_ICC_SMS"
 
     const/16 v3, 0x15
 
     aput-object v2, v1, v3
 
-    .line 565
-    const-string/jumbo v2, "WRITE_ICC_SMS"
+    const-string v2, "WRITE_ICC_SMS"
 
     const/16 v3, 0x16
 
     aput-object v2, v1, v3
 
-    .line 566
-    const-string/jumbo v2, "WRITE_SETTINGS"
+    const-string v2, "WRITE_SETTINGS"
 
     const/16 v3, 0x17
 
     aput-object v2, v1, v3
 
-    .line 567
-    const-string/jumbo v2, "SYSTEM_ALERT_WINDOW"
+    const-string v2, "SYSTEM_ALERT_WINDOW"
 
     const/16 v3, 0x18
 
     aput-object v2, v1, v3
 
-    .line 568
-    const-string/jumbo v2, "ACCESS_NOTIFICATIONS"
+    const-string v2, "ACCESS_NOTIFICATIONS"
 
     const/16 v3, 0x19
 
     aput-object v2, v1, v3
 
-    .line 569
-    const-string/jumbo v2, "CAMERA"
+    const-string v2, "CAMERA"
 
     const/16 v3, 0x1a
 
     aput-object v2, v1, v3
 
-    .line 570
-    const-string/jumbo v2, "RECORD_AUDIO"
+    const-string v2, "RECORD_AUDIO"
 
     const/16 v3, 0x1b
 
     aput-object v2, v1, v3
 
-    .line 571
-    const-string/jumbo v2, "PLAY_AUDIO"
+    const-string v2, "PLAY_AUDIO"
 
     const/16 v3, 0x1c
 
     aput-object v2, v1, v3
 
-    .line 572
-    const-string/jumbo v2, "READ_CLIPBOARD"
+    const-string v2, "READ_CLIPBOARD"
 
     const/16 v3, 0x1d
 
     aput-object v2, v1, v3
 
-    .line 573
-    const-string/jumbo v2, "WRITE_CLIPBOARD"
+    const-string v2, "WRITE_CLIPBOARD"
 
     const/16 v3, 0x1e
 
     aput-object v2, v1, v3
 
-    .line 574
-    const-string/jumbo v2, "TAKE_MEDIA_BUTTONS"
+    const-string v2, "TAKE_MEDIA_BUTTONS"
 
     const/16 v3, 0x1f
 
     aput-object v2, v1, v3
 
-    .line 575
-    const-string/jumbo v2, "TAKE_AUDIO_FOCUS"
+    const-string v2, "TAKE_AUDIO_FOCUS"
 
     const/16 v3, 0x20
 
     aput-object v2, v1, v3
 
-    .line 576
-    const-string/jumbo v2, "AUDIO_MASTER_VOLUME"
+    const-string v2, "AUDIO_MASTER_VOLUME"
 
     const/16 v3, 0x21
 
     aput-object v2, v1, v3
 
-    .line 577
-    const-string/jumbo v2, "AUDIO_VOICE_VOLUME"
+    const-string v2, "AUDIO_VOICE_VOLUME"
 
     const/16 v3, 0x22
 
     aput-object v2, v1, v3
 
-    .line 578
-    const-string/jumbo v2, "AUDIO_RING_VOLUME"
+    const-string v2, "AUDIO_RING_VOLUME"
 
     const/16 v3, 0x23
 
     aput-object v2, v1, v3
 
-    .line 579
-    const-string/jumbo v2, "AUDIO_MEDIA_VOLUME"
+    const-string v2, "AUDIO_MEDIA_VOLUME"
 
     const/16 v3, 0x24
 
     aput-object v2, v1, v3
 
-    .line 580
-    const-string/jumbo v2, "AUDIO_ALARM_VOLUME"
+    const-string v2, "AUDIO_ALARM_VOLUME"
 
     const/16 v3, 0x25
 
     aput-object v2, v1, v3
 
-    .line 581
-    const-string/jumbo v2, "AUDIO_NOTIFICATION_VOLUME"
+    const-string v2, "AUDIO_NOTIFICATION_VOLUME"
 
     const/16 v3, 0x26
 
     aput-object v2, v1, v3
 
-    .line 582
-    const-string/jumbo v2, "AUDIO_BLUETOOTH_VOLUME"
+    const-string v2, "AUDIO_BLUETOOTH_VOLUME"
 
     const/16 v3, 0x27
 
     aput-object v2, v1, v3
 
-    .line 583
-    const-string/jumbo v2, "WAKE_LOCK"
+    const-string v2, "WAKE_LOCK"
 
     const/16 v3, 0x28
 
     aput-object v2, v1, v3
 
-    .line 584
-    const-string/jumbo v2, "MONITOR_LOCATION"
+    const-string v2, "MONITOR_LOCATION"
 
     const/16 v3, 0x29
 
     aput-object v2, v1, v3
 
-    .line 585
-    const-string/jumbo v2, "MONITOR_HIGH_POWER_LOCATION"
+    const-string v2, "MONITOR_HIGH_POWER_LOCATION"
 
     const/16 v3, 0x2a
 
     aput-object v2, v1, v3
 
-    .line 586
-    const-string/jumbo v2, "GET_USAGE_STATS"
+    const-string v2, "GET_USAGE_STATS"
 
     const/16 v3, 0x2b
 
     aput-object v2, v1, v3
 
-    .line 587
-    const-string/jumbo v2, "MUTE_MICROPHONE"
+    const-string v2, "MUTE_MICROPHONE"
 
     const/16 v3, 0x2c
 
     aput-object v2, v1, v3
 
-    .line 588
-    const-string/jumbo v2, "TOAST_WINDOW"
+    const-string v2, "TOAST_WINDOW"
 
     const/16 v3, 0x2d
 
     aput-object v2, v1, v3
 
-    .line 589
-    const-string/jumbo v2, "PROJECT_MEDIA"
+    const-string v2, "PROJECT_MEDIA"
 
     const/16 v3, 0x2e
 
     aput-object v2, v1, v3
 
-    .line 590
-    const-string/jumbo v2, "ACTIVATE_VPN"
+    const-string v2, "ACTIVATE_VPN"
 
     const/16 v3, 0x2f
 
     aput-object v2, v1, v3
 
-    .line 591
-    const-string/jumbo v2, "WRITE_WALLPAPER"
+    const-string v2, "WRITE_WALLPAPER"
 
     const/16 v3, 0x30
 
     aput-object v2, v1, v3
 
-    .line 592
-    const-string/jumbo v2, "ASSIST_STRUCTURE"
+    const-string v2, "ASSIST_STRUCTURE"
 
     const/16 v3, 0x31
 
     aput-object v2, v1, v3
 
-    .line 593
-    const-string/jumbo v2, "ASSIST_SCREENSHOT"
+    const-string v2, "ASSIST_SCREENSHOT"
 
     const/16 v3, 0x32
 
     aput-object v2, v1, v3
 
-    .line 594
-    const-string/jumbo v2, "OP_READ_PHONE_STATE"
+    const-string v2, "OP_READ_PHONE_STATE"
 
     const/16 v3, 0x33
 
     aput-object v2, v1, v3
 
-    .line 595
-    const-string/jumbo v2, "ADD_VOICEMAIL"
+    const-string v2, "ADD_VOICEMAIL"
 
     const/16 v3, 0x34
 
     aput-object v2, v1, v3
 
-    .line 596
-    const-string/jumbo v2, "USE_SIP"
+    const-string v2, "USE_SIP"
 
     const/16 v3, 0x35
 
     aput-object v2, v1, v3
 
-    .line 597
-    const-string/jumbo v2, "PROCESS_OUTGOING_CALLS"
+    const-string v2, "PROCESS_OUTGOING_CALLS"
 
     const/16 v3, 0x36
 
     aput-object v2, v1, v3
 
-    .line 598
-    const-string/jumbo v2, "USE_FINGERPRINT"
+    const-string v2, "USE_FINGERPRINT"
 
     const/16 v3, 0x37
 
     aput-object v2, v1, v3
 
-    .line 599
-    const-string/jumbo v2, "BODY_SENSORS"
+    const-string v2, "BODY_SENSORS"
 
     const/16 v3, 0x38
 
     aput-object v2, v1, v3
 
-    .line 600
-    const-string/jumbo v2, "READ_CELL_BROADCASTS"
+    const-string v2, "READ_CELL_BROADCASTS"
 
     const/16 v3, 0x39
 
     aput-object v2, v1, v3
 
-    .line 601
-    const-string/jumbo v2, "MOCK_LOCATION"
+    const-string v2, "MOCK_LOCATION"
 
     const/16 v3, 0x3a
 
     aput-object v2, v1, v3
 
-    .line 602
-    const-string/jumbo v2, "READ_EXTERNAL_STORAGE"
+    const-string v2, "READ_EXTERNAL_STORAGE"
 
     const/16 v3, 0x3b
 
     aput-object v2, v1, v3
 
-    .line 603
-    const-string/jumbo v2, "WRITE_EXTERNAL_STORAGE"
+    const-string v2, "WRITE_EXTERNAL_STORAGE"
 
     const/16 v3, 0x3c
 
     aput-object v2, v1, v3
 
-    .line 604
-    const-string/jumbo v2, "TURN_ON_SCREEN"
+    const-string v2, "TURN_ON_SCREEN"
 
     const/16 v3, 0x3d
 
     aput-object v2, v1, v3
 
-    .line 605
-    const-string/jumbo v2, "GET_ACCOUNTS"
+    const-string v2, "GET_ACCOUNTS"
 
     const/16 v3, 0x3e
 
     aput-object v2, v1, v3
 
-    .line 606
-    const-string/jumbo v2, "WIFI_CHANGE"
+    const-string v2, "WIFI_CHANGE"
 
     const/16 v3, 0x3f
 
     aput-object v2, v1, v3
 
-    .line 607
-    const-string/jumbo v2, "BLUETOOTH_CHANGE"
+    const-string v2, "BLUETOOTH_CHANGE"
 
     const/16 v3, 0x40
 
     aput-object v2, v1, v3
 
-    .line 608
-    const-string/jumbo v2, "BOOT_COMPLETED"
+    const-string v2, "BOOT_COMPLETED"
 
     const/16 v3, 0x41
 
     aput-object v2, v1, v3
 
-    .line 609
-    const-string/jumbo v2, "NFC_CHANGE"
+    const-string v2, "NFC_CHANGE"
 
     const/16 v3, 0x42
 
     aput-object v2, v1, v3
 
-    .line 610
-    const-string/jumbo v2, "DATA_CONNECT_CHANGE"
+    const-string v2, "DATA_CONNECT_CHANGE"
 
     const/16 v3, 0x43
 
     aput-object v2, v1, v3
 
-    .line 611
-    const-string/jumbo v2, "SU"
+    const-string v2, "SU"
 
     const/16 v3, 0x44
 
     aput-object v2, v1, v3
 
-    .line 542
     sput-object v1, Landroid/app/AppOpsManager;->sOpNames:[Ljava/lang/String;
 
-    .line 618
     new-array v1, v5, [Ljava/lang/String;
 
-    .line 619
-    const-string/jumbo v2, "android.permission.ACCESS_COARSE_LOCATION"
+    const-string v2, "android.permission.ACCESS_COARSE_LOCATION"
 
     aput-object v2, v1, v6
 
-    .line 620
-    const-string/jumbo v2, "android.permission.ACCESS_FINE_LOCATION"
+    const-string v2, "android.permission.ACCESS_FINE_LOCATION"
 
     aput-object v2, v1, v7
 
-    .line 621
     aput-object v4, v1, v8
 
-    .line 622
-    const-string/jumbo v2, "android.permission.VIBRATE"
+    const-string v2, "android.permission.VIBRATE"
 
     const/4 v3, 0x3
 
     aput-object v2, v1, v3
 
-    .line 623
-    const-string/jumbo v2, "android.permission.READ_CONTACTS"
+    const-string v2, "android.permission.READ_CONTACTS"
 
     const/4 v3, 0x4
 
     aput-object v2, v1, v3
 
-    .line 624
-    const-string/jumbo v2, "android.permission.WRITE_CONTACTS"
+    const-string v2, "android.permission.WRITE_CONTACTS"
 
     const/4 v3, 0x5
 
     aput-object v2, v1, v3
 
-    .line 625
-    const-string/jumbo v2, "android.permission.READ_CALL_LOG"
+    const-string v2, "android.permission.READ_CALL_LOG"
 
     const/4 v3, 0x6
 
     aput-object v2, v1, v3
 
-    .line 626
-    const-string/jumbo v2, "android.permission.WRITE_CALL_LOG"
+    const-string v2, "android.permission.WRITE_CALL_LOG"
 
     const/4 v3, 0x7
 
     aput-object v2, v1, v3
 
-    .line 627
-    const-string/jumbo v2, "android.permission.READ_CALENDAR"
+    const-string v2, "android.permission.READ_CALENDAR"
 
     const/16 v3, 0x8
 
     aput-object v2, v1, v3
 
-    .line 628
-    const-string/jumbo v2, "android.permission.WRITE_CALENDAR"
+    const-string v2, "android.permission.WRITE_CALENDAR"
 
     const/16 v3, 0x9
 
     aput-object v2, v1, v3
 
-    .line 629
     const/16 v2, 0xa
 
     aput-object v4, v1, v2
 
-    .line 630
     const/16 v2, 0xb
 
     aput-object v4, v1, v2
 
-    .line 631
     const/16 v2, 0xc
 
     aput-object v4, v1, v2
 
-    .line 632
-    const-string/jumbo v2, "android.permission.CALL_PHONE"
+    const-string v2, "android.permission.CALL_PHONE"
 
     const/16 v3, 0xd
 
     aput-object v2, v1, v3
 
-    .line 633
-    const-string/jumbo v2, "android.permission.READ_SMS"
+    const-string v2, "android.permission.READ_SMS"
 
     const/16 v3, 0xe
 
     aput-object v2, v1, v3
 
-    .line 634
     const/16 v2, 0xf
 
     aput-object v4, v1, v2
 
-    .line 635
-    const-string/jumbo v2, "android.permission.RECEIVE_SMS"
+    const-string v2, "android.permission.RECEIVE_SMS"
 
     const/16 v3, 0x10
 
     aput-object v2, v1, v3
 
-    .line 636
-    const-string/jumbo v2, "android.permission.RECEIVE_EMERGENCY_BROADCAST"
+    const-string v2, "android.permission.RECEIVE_EMERGENCY_BROADCAST"
 
     const/16 v3, 0x11
 
     aput-object v2, v1, v3
 
-    .line 637
-    const-string/jumbo v2, "android.permission.RECEIVE_MMS"
+    const-string v2, "android.permission.RECEIVE_MMS"
 
     const/16 v3, 0x12
 
     aput-object v2, v1, v3
 
-    .line 638
-    const-string/jumbo v2, "android.permission.RECEIVE_WAP_PUSH"
+    const-string v2, "android.permission.RECEIVE_WAP_PUSH"
 
     const/16 v3, 0x13
 
     aput-object v2, v1, v3
 
-    .line 639
-    const-string/jumbo v2, "android.permission.SEND_SMS"
+    const-string v2, "android.permission.SEND_SMS"
 
     const/16 v3, 0x14
 
     aput-object v2, v1, v3
 
-    .line 640
-    const-string/jumbo v2, "android.permission.READ_SMS"
+    const-string v2, "android.permission.READ_SMS"
 
     const/16 v3, 0x15
 
     aput-object v2, v1, v3
 
-    .line 641
     const/16 v2, 0x16
 
     aput-object v4, v1, v2
 
-    .line 642
-    const-string/jumbo v2, "android.permission.WRITE_SETTINGS"
+    const-string v2, "android.permission.WRITE_SETTINGS"
 
     const/16 v3, 0x17
 
     aput-object v2, v1, v3
 
-    .line 643
-    const-string/jumbo v2, "android.permission.SYSTEM_ALERT_WINDOW"
+    const-string v2, "android.permission.SYSTEM_ALERT_WINDOW"
 
     const/16 v3, 0x18
 
     aput-object v2, v1, v3
 
-    .line 644
-    const-string/jumbo v2, "android.permission.ACCESS_NOTIFICATIONS"
+    const-string v2, "android.permission.ACCESS_NOTIFICATIONS"
 
     const/16 v3, 0x19
 
     aput-object v2, v1, v3
 
-    .line 645
-    const-string/jumbo v2, "android.permission.CAMERA"
+    const-string v2, "android.permission.CAMERA"
 
     const/16 v3, 0x1a
 
     aput-object v2, v1, v3
 
-    .line 646
-    const-string/jumbo v2, "android.permission.RECORD_AUDIO"
+    const-string v2, "android.permission.RECORD_AUDIO"
 
     const/16 v3, 0x1b
 
     aput-object v2, v1, v3
 
-    .line 647
     const/16 v2, 0x1c
 
     aput-object v4, v1, v2
 
-    .line 648
     const/16 v2, 0x1d
 
     aput-object v4, v1, v2
 
-    .line 649
     const/16 v2, 0x1e
 
     aput-object v4, v1, v2
 
-    .line 650
     const/16 v2, 0x1f
 
     aput-object v4, v1, v2
 
-    .line 651
     const/16 v2, 0x20
 
     aput-object v4, v1, v2
 
-    .line 652
     const/16 v2, 0x21
 
     aput-object v4, v1, v2
 
-    .line 653
     const/16 v2, 0x22
 
     aput-object v4, v1, v2
 
-    .line 654
     const/16 v2, 0x23
 
     aput-object v4, v1, v2
 
-    .line 655
     const/16 v2, 0x24
 
     aput-object v4, v1, v2
 
-    .line 656
     const/16 v2, 0x25
 
     aput-object v4, v1, v2
 
-    .line 657
     const/16 v2, 0x26
 
     aput-object v4, v1, v2
 
-    .line 658
     const/16 v2, 0x27
 
     aput-object v4, v1, v2
 
-    .line 659
-    const-string/jumbo v2, "android.permission.WAKE_LOCK"
+    const-string v2, "android.permission.WAKE_LOCK"
 
     const/16 v3, 0x28
 
     aput-object v2, v1, v3
 
-    .line 660
     const/16 v2, 0x29
 
     aput-object v4, v1, v2
 
-    .line 661
     const/16 v2, 0x2a
 
     aput-object v4, v1, v2
 
-    .line 662
-    const-string/jumbo v2, "android.permission.PACKAGE_USAGE_STATS"
+    const-string v2, "android.permission.PACKAGE_USAGE_STATS"
 
     const/16 v3, 0x2b
 
     aput-object v2, v1, v3
 
-    .line 663
     const/16 v2, 0x2c
 
     aput-object v4, v1, v2
 
-    .line 664
     const/16 v2, 0x2d
 
     aput-object v4, v1, v2
 
-    .line 665
     const/16 v2, 0x2e
 
     aput-object v4, v1, v2
 
-    .line 666
     const/16 v2, 0x2f
 
     aput-object v4, v1, v2
 
-    .line 667
     const/16 v2, 0x30
 
     aput-object v4, v1, v2
 
-    .line 668
     const/16 v2, 0x31
 
     aput-object v4, v1, v2
 
-    .line 669
     const/16 v2, 0x32
 
     aput-object v4, v1, v2
 
-    .line 670
-    const-string/jumbo v2, "android.permission.READ_PHONE_STATE"
+    const-string v2, "android.permission.READ_PHONE_STATE"
 
     const/16 v3, 0x33
 
     aput-object v2, v1, v3
 
-    .line 671
-    const-string/jumbo v2, "com.android.voicemail.permission.ADD_VOICEMAIL"
+    const-string v2, "com.android.voicemail.permission.ADD_VOICEMAIL"
 
     const/16 v3, 0x34
 
     aput-object v2, v1, v3
 
-    .line 672
-    const-string/jumbo v2, "android.permission.USE_SIP"
+    const-string v2, "android.permission.USE_SIP"
 
     const/16 v3, 0x35
 
     aput-object v2, v1, v3
 
-    .line 673
-    const-string/jumbo v2, "android.permission.PROCESS_OUTGOING_CALLS"
+    const-string v2, "android.permission.PROCESS_OUTGOING_CALLS"
 
     const/16 v3, 0x36
 
     aput-object v2, v1, v3
 
-    .line 674
-    const-string/jumbo v2, "android.permission.USE_FINGERPRINT"
+    const-string v2, "android.permission.USE_FINGERPRINT"
 
     const/16 v3, 0x37
 
     aput-object v2, v1, v3
 
-    .line 675
-    const-string/jumbo v2, "android.permission.BODY_SENSORS"
+    const-string v2, "android.permission.BODY_SENSORS"
 
     const/16 v3, 0x38
 
     aput-object v2, v1, v3
 
-    .line 676
-    const-string/jumbo v2, "android.permission.READ_CELL_BROADCASTS"
+    const-string v2, "android.permission.READ_CELL_BROADCASTS"
 
     const/16 v3, 0x39
 
     aput-object v2, v1, v3
 
-    .line 677
     const/16 v2, 0x3a
 
     aput-object v4, v1, v2
 
-    .line 678
-    const-string/jumbo v2, "android.permission.READ_EXTERNAL_STORAGE"
+    const-string v2, "android.permission.READ_EXTERNAL_STORAGE"
 
     const/16 v3, 0x3b
 
     aput-object v2, v1, v3
 
-    .line 679
-    const-string/jumbo v2, "android.permission.WRITE_EXTERNAL_STORAGE"
+    const-string v2, "android.permission.WRITE_EXTERNAL_STORAGE"
 
     const/16 v3, 0x3c
 
     aput-object v2, v1, v3
 
-    .line 680
     const/16 v2, 0x3d
 
     aput-object v4, v1, v2
 
-    .line 681
-    const-string/jumbo v2, "android.permission.GET_ACCOUNTS"
+    const-string v2, "android.permission.GET_ACCOUNTS"
 
     const/16 v3, 0x3e
 
     aput-object v2, v1, v3
 
-    .line 682
-    const-string/jumbo v2, "android.permission.CHANGE_WIFI_STATE"
+    const-string v2, "android.permission.CHANGE_WIFI_STATE"
 
     const/16 v3, 0x3f
 
     aput-object v2, v1, v3
 
-    .line 683
     const/16 v2, 0x40
 
     aput-object v4, v1, v2
 
-    .line 684
-    const-string/jumbo v2, "android.permission.RECEIVE_BOOT_COMPLETED"
+    const-string v2, "android.permission.RECEIVE_BOOT_COMPLETED"
 
     const/16 v3, 0x41
 
     aput-object v2, v1, v3
 
-    .line 685
-    const-string/jumbo v2, "android.permission.NFC"
+    const-string v2, "android.permission.NFC"
 
     const/16 v3, 0x42
 
     aput-object v2, v1, v3
 
-    .line 686
-    const-string/jumbo v2, "android.permission.MODIFY_PHONE_STATE"
+    const-string v2, "android.permission.MODIFY_PHONE_STATE"
 
     const/16 v3, 0x43
 
     aput-object v2, v1, v3
 
-    .line 687
     const/16 v2, 0x44
 
     aput-object v4, v1, v2
 
-    .line 618
     sput-object v1, Landroid/app/AppOpsManager;->sOpPerms:[Ljava/lang/String;
 
-    .line 695
     new-array v1, v5, [Ljava/lang/String;
 
-    .line 696
-    const-string/jumbo v2, "no_share_location"
+    const-string v2, "no_share_location"
 
     aput-object v2, v1, v6
 
-    .line 697
-    const-string/jumbo v2, "no_share_location"
+    const-string v2, "no_share_location"
 
     aput-object v2, v1, v7
 
-    .line 698
-    const-string/jumbo v2, "no_share_location"
+    const-string v2, "no_share_location"
 
     aput-object v2, v1, v8
 
-    .line 699
     const/4 v2, 0x3
 
     aput-object v4, v1, v2
 
-    .line 700
     const/4 v2, 0x4
 
     aput-object v4, v1, v2
 
-    .line 701
     const/4 v2, 0x5
 
     aput-object v4, v1, v2
 
-    .line 702
-    const-string/jumbo v2, "no_outgoing_calls"
+    const-string v2, "no_outgoing_calls"
 
     const/4 v3, 0x6
 
     aput-object v2, v1, v3
 
-    .line 703
-    const-string/jumbo v2, "no_outgoing_calls"
+    const-string v2, "no_outgoing_calls"
 
     const/4 v3, 0x7
 
     aput-object v2, v1, v3
 
-    .line 704
     const/16 v2, 0x8
 
     aput-object v4, v1, v2
 
-    .line 705
     const/16 v2, 0x9
 
     aput-object v4, v1, v2
 
-    .line 706
-    const-string/jumbo v2, "no_share_location"
+    const-string v2, "no_share_location"
 
     const/16 v3, 0xa
 
     aput-object v2, v1, v3
 
-    .line 707
     const/16 v2, 0xb
 
     aput-object v4, v1, v2
 
-    .line 708
     const/16 v2, 0xc
 
     aput-object v4, v1, v2
 
-    .line 709
     const/16 v2, 0xd
 
     aput-object v4, v1, v2
 
-    .line 710
-    const-string/jumbo v2, "no_sms"
+    const-string v2, "no_sms"
 
     const/16 v3, 0xe
 
     aput-object v2, v1, v3
 
-    .line 711
-    const-string/jumbo v2, "no_sms"
+    const-string v2, "no_sms"
 
     const/16 v3, 0xf
 
     aput-object v2, v1, v3
 
-    .line 712
-    const-string/jumbo v2, "no_sms"
+    const-string v2, "no_sms"
 
     const/16 v3, 0x10
 
     aput-object v2, v1, v3
 
-    .line 713
     const/16 v2, 0x11
 
     aput-object v4, v1, v2
 
-    .line 714
-    const-string/jumbo v2, "no_sms"
+    const-string v2, "no_sms"
 
     const/16 v3, 0x12
 
     aput-object v2, v1, v3
 
-    .line 715
     const/16 v2, 0x13
 
     aput-object v4, v1, v2
 
-    .line 716
-    const-string/jumbo v2, "no_sms"
+    const-string v2, "no_sms"
 
     const/16 v3, 0x14
 
     aput-object v2, v1, v3
 
-    .line 717
-    const-string/jumbo v2, "no_sms"
+    const-string v2, "no_sms"
 
     const/16 v3, 0x15
 
     aput-object v2, v1, v3
 
-    .line 718
-    const-string/jumbo v2, "no_sms"
+    const-string v2, "no_sms"
 
     const/16 v3, 0x16
 
     aput-object v2, v1, v3
 
-    .line 719
     const/16 v2, 0x17
 
     aput-object v4, v1, v2
 
-    .line 720
-    const-string/jumbo v2, "no_create_windows"
+    const-string v2, "no_create_windows"
 
     const/16 v3, 0x18
 
     aput-object v2, v1, v3
 
-    .line 721
     const/16 v2, 0x19
 
     aput-object v4, v1, v2
 
-    .line 722
     const/16 v2, 0x1a
 
     aput-object v4, v1, v2
 
-    .line 723
-    const-string/jumbo v2, "no_record_audio"
+    const-string v2, "no_record_audio"
 
     const/16 v3, 0x1b
 
     aput-object v2, v1, v3
 
-    .line 724
     const/16 v2, 0x1c
 
     aput-object v4, v1, v2
 
-    .line 725
     const/16 v2, 0x1d
 
     aput-object v4, v1, v2
 
-    .line 726
     const/16 v2, 0x1e
 
     aput-object v4, v1, v2
 
-    .line 727
     const/16 v2, 0x1f
 
     aput-object v4, v1, v2
 
-    .line 728
     const/16 v2, 0x20
 
     aput-object v4, v1, v2
 
-    .line 729
-    const-string/jumbo v2, "no_adjust_volume"
+    const-string v2, "no_adjust_volume"
 
     const/16 v3, 0x21
 
     aput-object v2, v1, v3
 
-    .line 730
-    const-string/jumbo v2, "no_adjust_volume"
+    const-string v2, "no_adjust_volume"
 
     const/16 v3, 0x22
 
     aput-object v2, v1, v3
 
-    .line 731
-    const-string/jumbo v2, "no_adjust_volume"
+    const-string v2, "no_adjust_volume"
 
     const/16 v3, 0x23
 
     aput-object v2, v1, v3
 
-    .line 732
-    const-string/jumbo v2, "no_adjust_volume"
+    const-string v2, "no_adjust_volume"
 
     const/16 v3, 0x24
 
     aput-object v2, v1, v3
 
-    .line 733
-    const-string/jumbo v2, "no_adjust_volume"
+    const-string v2, "no_adjust_volume"
 
     const/16 v3, 0x25
 
     aput-object v2, v1, v3
 
-    .line 734
-    const-string/jumbo v2, "no_adjust_volume"
+    const-string v2, "no_adjust_volume"
 
     const/16 v3, 0x26
 
     aput-object v2, v1, v3
 
-    .line 735
-    const-string/jumbo v2, "no_adjust_volume"
+    const-string v2, "no_adjust_volume"
 
     const/16 v3, 0x27
 
     aput-object v2, v1, v3
 
-    .line 736
     const/16 v2, 0x28
 
     aput-object v4, v1, v2
 
-    .line 737
-    const-string/jumbo v2, "no_share_location"
+    const-string v2, "no_share_location"
 
     const/16 v3, 0x29
 
     aput-object v2, v1, v3
 
-    .line 738
-    const-string/jumbo v2, "no_share_location"
+    const-string v2, "no_share_location"
 
     const/16 v3, 0x2a
 
     aput-object v2, v1, v3
 
-    .line 739
     const/16 v2, 0x2b
 
     aput-object v4, v1, v2
 
-    .line 740
-    const-string/jumbo v2, "no_unmute_microphone"
+    const-string v2, "no_unmute_microphone"
 
     const/16 v3, 0x2c
 
     aput-object v2, v1, v3
 
-    .line 741
-    const-string/jumbo v2, "no_create_windows"
+    const-string v2, "no_create_windows"
 
     const/16 v3, 0x2d
 
     aput-object v2, v1, v3
 
-    .line 742
     const/16 v2, 0x2e
 
     aput-object v4, v1, v2
 
-    .line 743
-    const-string/jumbo v2, "no_config_vpn"
+    const-string v2, "no_config_vpn"
 
     const/16 v3, 0x2f
 
     aput-object v2, v1, v3
 
-    .line 744
-    const-string/jumbo v2, "no_wallpaper"
+    const-string v2, "no_wallpaper"
 
     const/16 v3, 0x30
 
     aput-object v2, v1, v3
 
-    .line 745
     const/16 v2, 0x31
 
     aput-object v4, v1, v2
 
-    .line 746
     const/16 v2, 0x32
 
     aput-object v4, v1, v2
 
-    .line 747
     const/16 v2, 0x33
 
     aput-object v4, v1, v2
 
-    .line 748
     const/16 v2, 0x34
 
     aput-object v4, v1, v2
 
-    .line 749
     const/16 v2, 0x35
 
     aput-object v4, v1, v2
 
-    .line 750
     const/16 v2, 0x36
 
     aput-object v4, v1, v2
 
-    .line 751
     const/16 v2, 0x37
 
     aput-object v4, v1, v2
 
-    .line 752
     const/16 v2, 0x38
 
     aput-object v4, v1, v2
 
-    .line 753
     const/16 v2, 0x39
 
     aput-object v4, v1, v2
 
-    .line 754
     const/16 v2, 0x3a
 
     aput-object v4, v1, v2
 
-    .line 755
     const/16 v2, 0x3b
 
     aput-object v4, v1, v2
 
-    .line 756
     const/16 v2, 0x3c
 
     aput-object v4, v1, v2
 
-    .line 757
     const/16 v2, 0x3d
 
     aput-object v4, v1, v2
 
-    .line 758
     const/16 v2, 0x3e
 
     aput-object v4, v1, v2
 
-    .line 759
     const/16 v2, 0x3f
 
     aput-object v4, v1, v2
 
-    .line 760
     const/16 v2, 0x40
 
     aput-object v4, v1, v2
 
-    .line 761
     const/16 v2, 0x41
 
     aput-object v4, v1, v2
 
-    .line 762
     const/16 v2, 0x42
 
     aput-object v4, v1, v2
 
-    .line 763
     const/16 v2, 0x43
 
     aput-object v4, v1, v2
 
-    .line 764
-    const-string/jumbo v2, "no_su"
+    const-string v2, "no_su"
 
     const/16 v3, 0x44
 
     aput-object v2, v1, v3
 
-    .line 695
     sput-object v1, Landroid/app/AppOpsManager;->sOpRestrictions:[Ljava/lang/String;
 
-    .line 771
     new-array v1, v5, [Z
 
     fill-array-data v1, :array_1
 
     sput-object v1, Landroid/app/AppOpsManager;->sOpAllowSystemRestrictionBypass:[Z
 
-    .line 846
     new-array v1, v5, [I
 
     fill-array-data v1, :array_2
 
     sput-object v1, Landroid/app/AppOpsManager;->sOpDefaultMode:[I
 
-    .line 922
     new-array v1, v5, [I
 
     fill-array-data v1, :array_3
 
     sput-object v1, Landroid/app/AppOpsManager;->sOpDefaultStrictMode:[I
 
-    .line 997
     new-array v1, v5, [Z
 
     fill-array-data v1, :array_4
 
     sput-object v1, Landroid/app/AppOpsManager;->sOpStrictMode:[Z
 
-    .line 1076
     new-array v1, v5, [Z
 
     fill-array-data v1, :array_5
 
     sput-object v1, Landroid/app/AppOpsManager;->sOpDisableReset:[Z
 
-    .line 1151
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     sput-object v1, Landroid/app/AppOpsManager;->sOpStrToOp:Ljava/util/HashMap;
 
-    .line 1156
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     sput-object v1, Landroid/app/AppOpsManager;->sPermToOp:Ljava/util/HashMap;
 
-    .line 1158
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     sput-object v1, Landroid/app/AppOpsManager;->sNameToOp:Ljava/util/HashMap;
 
-    .line 1161
     sget-object v1, Landroid/app/AppOpsManager;->sOpToSwitch:[I
 
     array-length v1, v1
 
     if-eq v1, v5, :cond_0
 
-    .line 1162
     new-instance v1, Ljava/lang/IllegalStateException;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "sOpToSwitch length "
+    const-string v3, "sOpToSwitch length "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2164,10 +1869,8 @@
 
     move-result-object v2
 
-    .line 1163
-    const-string/jumbo v3, " should be "
+    const-string v3, " should be "
 
-    .line 1162
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -2184,7 +1887,6 @@
 
     throw v1
 
-    .line 1165
     :cond_0
     sget-object v1, Landroid/app/AppOpsManager;->sOpToString:[Ljava/lang/String;
 
@@ -2192,14 +1894,13 @@
 
     if-eq v1, v5, :cond_1
 
-    .line 1166
     new-instance v1, Ljava/lang/IllegalStateException;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "sOpToString length "
+    const-string v3, "sOpToString length "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2213,10 +1914,8 @@
 
     move-result-object v2
 
-    .line 1167
-    const-string/jumbo v3, " should be "
+    const-string v3, " should be "
 
-    .line 1166
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -2233,7 +1932,6 @@
 
     throw v1
 
-    .line 1169
     :cond_1
     sget-object v1, Landroid/app/AppOpsManager;->sOpNames:[Ljava/lang/String;
 
@@ -2241,14 +1939,13 @@
 
     if-eq v1, v5, :cond_2
 
-    .line 1170
     new-instance v1, Ljava/lang/IllegalStateException;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "sOpNames length "
+    const-string v3, "sOpNames length "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2262,10 +1959,8 @@
 
     move-result-object v2
 
-    .line 1171
-    const-string/jumbo v3, " should be "
+    const-string v3, " should be "
 
-    .line 1170
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -2282,7 +1977,6 @@
 
     throw v1
 
-    .line 1173
     :cond_2
     sget-object v1, Landroid/app/AppOpsManager;->sOpPerms:[Ljava/lang/String;
 
@@ -2290,14 +1984,13 @@
 
     if-eq v1, v5, :cond_3
 
-    .line 1174
     new-instance v1, Ljava/lang/IllegalStateException;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "sOpPerms length "
+    const-string v3, "sOpPerms length "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2311,10 +2004,8 @@
 
     move-result-object v2
 
-    .line 1175
-    const-string/jumbo v3, " should be "
+    const-string v3, " should be "
 
-    .line 1174
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -2331,7 +2022,6 @@
 
     throw v1
 
-    .line 1177
     :cond_3
     sget-object v1, Landroid/app/AppOpsManager;->sOpDefaultMode:[I
 
@@ -2339,14 +2029,13 @@
 
     if-eq v1, v5, :cond_4
 
-    .line 1178
     new-instance v1, Ljava/lang/IllegalStateException;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "sOpDefaultMode length "
+    const-string v3, "sOpDefaultMode length "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2360,10 +2049,8 @@
 
     move-result-object v2
 
-    .line 1179
-    const-string/jumbo v3, " should be "
+    const-string v3, " should be "
 
-    .line 1178
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -2380,7 +2067,6 @@
 
     throw v1
 
-    .line 1181
     :cond_4
     sget-object v1, Landroid/app/AppOpsManager;->sOpDefaultStrictMode:[I
 
@@ -2388,14 +2074,13 @@
 
     if-eq v1, v5, :cond_5
 
-    .line 1182
     new-instance v1, Ljava/lang/IllegalStateException;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "sOpDefaultStrictMode length "
+    const-string v3, "sOpDefaultStrictMode length "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2409,10 +2094,8 @@
 
     move-result-object v2
 
-    .line 1183
-    const-string/jumbo v3, " should be "
+    const-string v3, " should be "
 
-    .line 1182
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -2429,7 +2112,6 @@
 
     throw v1
 
-    .line 1185
     :cond_5
     sget-object v1, Landroid/app/AppOpsManager;->sOpDisableReset:[Z
 
@@ -2437,14 +2119,13 @@
 
     if-eq v1, v5, :cond_6
 
-    .line 1186
     new-instance v1, Ljava/lang/IllegalStateException;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "sOpDisableReset length "
+    const-string v3, "sOpDisableReset length "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2458,10 +2139,8 @@
 
     move-result-object v2
 
-    .line 1187
-    const-string/jumbo v3, " should be "
+    const-string v3, " should be "
 
-    .line 1186
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -2478,7 +2157,6 @@
 
     throw v1
 
-    .line 1189
     :cond_6
     sget-object v1, Landroid/app/AppOpsManager;->sOpRestrictions:[Ljava/lang/String;
 
@@ -2486,14 +2164,13 @@
 
     if-eq v1, v5, :cond_7
 
-    .line 1190
     new-instance v1, Ljava/lang/IllegalStateException;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "sOpRestrictions length "
+    const-string v3, "sOpRestrictions length "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2507,10 +2184,8 @@
 
     move-result-object v2
 
-    .line 1191
-    const-string/jumbo v3, " should be "
+    const-string v3, " should be "
 
-    .line 1190
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -2527,7 +2202,6 @@
 
     throw v1
 
-    .line 1193
     :cond_7
     sget-object v1, Landroid/app/AppOpsManager;->sOpAllowSystemRestrictionBypass:[Z
 
@@ -2535,33 +2209,28 @@
 
     if-eq v1, v5, :cond_8
 
-    .line 1194
     new-instance v1, Ljava/lang/IllegalStateException;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "sOpAllowSYstemRestrictionsBypass length "
+    const-string v3, "sOpAllowSYstemRestrictionsBypass length "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 1195
     sget-object v3, Landroid/app/AppOpsManager;->sOpRestrictions:[Ljava/lang/String;
 
     array-length v3, v3
 
-    .line 1194
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 1195
-    const-string/jumbo v3, " should be "
+    const-string v3, " should be "
 
-    .line 1194
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -2578,7 +2247,6 @@
 
     throw v1
 
-    .line 1197
     :cond_8
     sget-object v1, Landroid/app/AppOpsManager;->sOpStrictMode:[Z
 
@@ -2586,33 +2254,28 @@
 
     if-eq v1, v5, :cond_9
 
-    .line 1198
     new-instance v1, Ljava/lang/IllegalStateException;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "sOpStrictMode length "
+    const-string v3, "sOpStrictMode length "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 1199
     sget-object v3, Landroid/app/AppOpsManager;->sOpStrictMode:[Z
 
     array-length v3, v3
 
-    .line 1198
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 1199
-    const-string/jumbo v3, " should be "
+    const-string v3, " should be "
 
-    .line 1198
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -2629,7 +2292,6 @@
 
     throw v1
 
-    .line 1201
     :cond_9
     const/4 v0, 0x0
 
@@ -2637,14 +2299,12 @@
     :goto_0
     if-ge v0, v5, :cond_b
 
-    .line 1202
     sget-object v1, Landroid/app/AppOpsManager;->sOpToString:[Ljava/lang/String;
 
     aget-object v1, v1, v0
 
     if-eqz v1, :cond_a
 
-    .line 1203
     sget-object v1, Landroid/app/AppOpsManager;->sOpStrToOp:Ljava/util/HashMap;
 
     sget-object v2, Landroid/app/AppOpsManager;->sOpToString:[Ljava/lang/String;
@@ -2657,27 +2317,23 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1201
     :cond_a
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1206
     :cond_b
     const/4 v0, 0x0
 
     :goto_1
     if-ge v0, v5, :cond_d
 
-    .line 1207
     sget-object v1, Landroid/app/AppOpsManager;->sOpPerms:[Ljava/lang/String;
 
     aget-object v1, v1, v0
 
     if-eqz v1, :cond_c
 
-    .line 1208
     sget-object v1, Landroid/app/AppOpsManager;->sPermToOp:Ljava/util/HashMap;
 
     sget-object v2, Landroid/app/AppOpsManager;->sOpPerms:[Ljava/lang/String;
@@ -2690,20 +2346,17 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1206
     :cond_c
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 1211
     :cond_d
     const/4 v0, 0x0
 
     :goto_2
     if-ge v0, v5, :cond_e
 
-    .line 1212
     sget-object v1, Landroid/app/AppOpsManager;->sNameToOp:Ljava/util/HashMap;
 
     sget-object v2, Landroid/app/AppOpsManager;->sOpNames:[Ljava/lang/String;
@@ -2716,16 +2369,13 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1211
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    .line 53
     :cond_e
     return-void
 
-    .line 390
     nop
 
     :array_0
@@ -2801,7 +2451,6 @@
         0x44
     .end array-data
 
-    .line 771
     :array_1
     .array-data 1
         0x0t
@@ -2875,7 +2524,6 @@
         0x0t
     .end array-data
 
-    .line 846
     nop
 
     :array_2
@@ -2951,7 +2599,6 @@
         0x4
     .end array-data
 
-    .line 922
     :array_3
     .array-data 4
         0x4
@@ -3025,7 +2672,6 @@
         0x4
     .end array-data
 
-    .line 997
     :array_4
     .array-data 1
         0x1t
@@ -3099,7 +2745,6 @@
         0x1t
     .end array-data
 
-    .line 1076
     nop
 
     :array_5
@@ -3182,24 +2827,18 @@
     .param p2, "service"    # Lcom/android/internal/app/IAppOpsService;
 
     .prologue
-    .line 1495
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 83
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 82
     iput-object v0, p0, Landroid/app/AppOpsManager;->mModeWatchers:Landroid/util/ArrayMap;
 
-    .line 1496
     iput-object p1, p0, Landroid/app/AppOpsManager;->mContext:Landroid/content/Context;
 
-    .line 1497
     iput-object p2, p0, Landroid/app/AppOpsManager;->mService:Lcom/android/internal/app/IAppOpsService;
 
-    .line 1495
     return-void
 .end method
 
@@ -3210,7 +2849,6 @@
     .param p3, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1648
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3219,7 +2857,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, " from uid "
+    const-string v1, " from uid "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3229,7 +2867,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, " not allowed to perform "
+    const-string v1, " not allowed to perform "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3255,18 +2893,15 @@
     .param p0, "service"    # Lcom/android/internal/app/IAppOpsService;
 
     .prologue
-    .line 1959
     const-class v2, Landroid/app/AppOpsManager;
 
     monitor-enter v2
 
-    .line 1960
     :try_start_0
     sget-object v1, Landroid/app/AppOpsManager;->sToken:Landroid/os/IBinder;
 
     if-eqz v1, :cond_0
 
-    .line 1961
     sget-object v1, Landroid/app/AppOpsManager;->sToken:Landroid/os/IBinder;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -3275,7 +2910,6 @@
 
     return-object v1
 
-    .line 1964
     :cond_0
     :try_start_1
     new-instance v1, Landroid/os/Binder;
@@ -3291,7 +2925,6 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1968
     :goto_0
     :try_start_2
     sget-object v1, Landroid/app/AppOpsManager;->sToken:Landroid/os/IBinder;
@@ -3302,7 +2935,6 @@
 
     return-object v1
 
-    .line 1959
     :catchall_0
     move-exception v1
 
@@ -3310,7 +2942,6 @@
 
     throw v1
 
-    .line 1965
     :catch_0
     move-exception v0
 
@@ -3322,8 +2953,7 @@
     .locals 2
 
     .prologue
-    .line 2040
-    const-string/jumbo v0, "persist.sys.strict_op_enable"
+    const-string v0, "persist.sys.strict_op_enable"
 
     const/4 v1, 0x0
 
@@ -3339,7 +2969,6 @@
     .param p0, "code"    # I
 
     .prologue
-    .line 2048
     sget-object v0, Landroid/app/AppOpsManager;->sOpStrictMode:[Z
 
     aget-boolean v0, v0, p0
@@ -3352,7 +2981,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 1250
     sget-object v1, Landroid/app/AppOpsManager;->sNameToOp:Ljava/util/HashMap;
 
     invoke-virtual {v1, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -3361,7 +2989,6 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 1251
     .local v0, "val":Ljava/lang/Integer;
     if-eqz v0, :cond_0
 
@@ -3383,7 +3010,6 @@
     .param p0, "op"    # I
 
     .prologue
-    .line 1285
     sget-object v0, Landroid/app/AppOpsManager;->sOpAllowSystemRestrictionBypass:[Z
 
     aget-boolean v0, v0, p0
@@ -3396,7 +3022,6 @@
     .param p0, "op"    # I
 
     .prologue
-    .line 1303
     sget-object v0, Landroid/app/AppOpsManager;->sOpDisableReset:[Z
 
     aget-boolean v0, v0, p0
@@ -3420,17 +3045,14 @@
     .param p1, "isStrict"    # Z
 
     .prologue
-    .line 1293
     if-eqz p1, :cond_0
 
-    .line 1294
     sget-object v0, Landroid/app/AppOpsManager;->sOpDefaultStrictMode:[I
 
     aget v0, v0, p0
 
     return v0
 
-    .line 1295
     :cond_0
     sget-object v0, Landroid/app/AppOpsManager;->sOpDefaultMode:[I
 
@@ -3444,16 +3066,14 @@
     .param p0, "op"    # I
 
     .prologue
-    .line 1229
     const/4 v0, -0x1
 
     if-ne p0, v0, :cond_0
 
-    const-string/jumbo v0, "NONE"
+    const-string v0, "NONE"
 
     return-object v0
 
-    .line 1230
     :cond_0
     sget-object v0, Landroid/app/AppOpsManager;->sOpNames:[Ljava/lang/String;
 
@@ -3473,7 +3093,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "Unknown("
+    const-string v1, "Unknown("
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3483,7 +3103,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, ")"
+    const-string v1, ")"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3501,7 +3121,6 @@
     .param p0, "op"    # I
 
     .prologue
-    .line 1259
     sget-object v0, Landroid/app/AppOpsManager;->sOpPerms:[Ljava/lang/String;
 
     aget-object v0, v0, p0
@@ -3514,7 +3133,6 @@
     .param p0, "op"    # I
 
     .prologue
-    .line 1267
     sget-object v0, Landroid/app/AppOpsManager;->sOpRestrictions:[Ljava/lang/String;
 
     aget-object v0, v0, p0
@@ -3527,7 +3145,6 @@
     .param p0, "op"    # I
 
     .prologue
-    .line 1221
     sget-object v0, Landroid/app/AppOpsManager;->sOpToSwitch:[I
 
     aget v0, v0, p0
@@ -3542,7 +3159,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1583
     sget-object v1, Landroid/app/AppOpsManager;->sPermToOp:Ljava/util/HashMap;
 
     invoke-virtual {v1, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -3551,14 +3167,11 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 1584
     .local v0, "opCode":Ljava/lang/Integer;
     if-nez v0, :cond_0
 
-    .line 1585
     return-object v2
 
-    .line 1587
     :cond_0
     sget-object v1, Landroid/app/AppOpsManager;->sOpToString:[Ljava/lang/String;
 
@@ -3576,7 +3189,6 @@
     .param p0, "permission"    # Ljava/lang/String;
 
     .prologue
-    .line 1275
     sget-object v1, Landroid/app/AppOpsManager;->sPermToOp:Ljava/util/HashMap;
 
     invoke-virtual {v1, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -3585,7 +3197,6 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 1276
     .local v0, "boxedOpCode":Ljava/lang/Integer;
     if-eqz v0, :cond_0
 
@@ -3607,7 +3218,6 @@
     .param p0, "op"    # Ljava/lang/String;
 
     .prologue
-    .line 1237
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -3618,7 +3228,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 1238
     sget-object v1, Landroid/app/AppOpsManager;->sOpNames:[Ljava/lang/String;
 
     aget-object v1, v1, v0
@@ -3629,16 +3238,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 1239
     return v0
 
-    .line 1237
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1242
     :cond_1
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -3646,7 +3252,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "Unknown operation string: "
+    const-string v3, "Unknown operation string: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3670,7 +3276,6 @@
     .param p0, "op"    # Ljava/lang/String;
 
     .prologue
-    .line 1655
     sget-object v1, Landroid/app/AppOpsManager;->sOpStrToOp:Ljava/util/HashMap;
 
     invoke-virtual {v1, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -3679,18 +3284,16 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 1656
     .local v0, "val":Ljava/lang/Integer;
     if-nez v0, :cond_0
 
-    .line 1657
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "Unknown operation string: "
+    const-string v3, "Unknown operation string: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3708,7 +3311,6 @@
 
     throw v1
 
-    .line 1659
     :cond_0
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
@@ -3722,7 +3324,6 @@
     .param p0, "op"    # Ljava/lang/String;
 
     .prologue
-    .line 2066
     sget-object v1, Landroid/app/AppOpsManager;->sOpStrToOp:Ljava/util/HashMap;
 
     invoke-virtual {v1, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -3731,18 +3332,15 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 2067
     .local v0, "val":Ljava/lang/Integer;
     if-nez v0, :cond_0
 
-    .line 2068
     const/4 v1, -0x1
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    .line 2070
     :cond_0
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
@@ -3756,8 +3354,7 @@
     .param p0, "permission"    # Ljava/lang/String;
 
     .prologue
-    .line 2054
-    const-string/jumbo v0, "allowed"
+    const-string v0, "allowed"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -3765,14 +3362,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 2055
     const/4 v0, 0x0
 
     return v0
 
-    .line 2056
     :cond_0
-    const-string/jumbo v0, "ignored"
+    const-string v0, "ignored"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -3780,14 +3375,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 2057
     const/4 v0, 0x1
 
     return v0
 
-    .line 2058
     :cond_1
-    const-string/jumbo v0, "ask"
+    const-string v0, "ask"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -3795,12 +3388,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 2059
     const/4 v0, 0x4
 
     return v0
 
-    .line 2061
     :cond_2
     const/4 v0, 0x2
 
@@ -3817,7 +3408,6 @@
     .param p4, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1846
     :try_start_0
     iget-object v2, p0, Landroid/app/AppOpsManager;->mService:Lcom/android/internal/app/IAppOpsService;
 
@@ -3825,13 +3415,11 @@
 
     move-result v1
 
-    .line 1847
     .local v1, "mode":I
     const/4 v2, 0x2
 
     if-ne v1, v2, :cond_0
 
-    .line 1848
     new-instance v2, Ljava/lang/SecurityException;
 
     invoke-direct {p0, p1, p3, p4}, Landroid/app/AppOpsManager;->buildSecurityExceptionMsg(IILjava/lang/String;)Ljava/lang/String;
@@ -3844,18 +3432,15 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1851
     .end local v1    # "mode":I
     :catch_0
     move-exception v0
 
-    .line 1853
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v2, 0x1
 
     return v2
 
-    .line 1850
     .end local v0    # "e":Landroid/os/RemoteException;
     .restart local v1    # "mode":I
     :cond_0
@@ -3870,7 +3455,6 @@
     .param p4, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1863
     :try_start_0
     iget-object v1, p0, Landroid/app/AppOpsManager;->mService:Lcom/android/internal/app/IAppOpsService;
 
@@ -3882,11 +3466,9 @@
 
     return v1
 
-    .line 1864
     :catch_0
     move-exception v0
 
-    .line 1866
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x2
 
@@ -3900,7 +3482,6 @@
     .param p3, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1800
     :try_start_0
     iget-object v2, p0, Landroid/app/AppOpsManager;->mService:Lcom/android/internal/app/IAppOpsService;
 
@@ -3908,13 +3489,11 @@
 
     move-result v1
 
-    .line 1801
     .local v1, "mode":I
     const/4 v2, 0x2
 
     if-ne v1, v2, :cond_0
 
-    .line 1802
     new-instance v2, Ljava/lang/SecurityException;
 
     invoke-direct {p0, p1, p2, p3}, Landroid/app/AppOpsManager;->buildSecurityExceptionMsg(IILjava/lang/String;)Ljava/lang/String;
@@ -3927,18 +3506,15 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1805
     .end local v1    # "mode":I
     :catch_0
     move-exception v0
 
-    .line 1807
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v2, 0x1
 
     return v2
 
-    .line 1804
     .end local v0    # "e":Landroid/os/RemoteException;
     .restart local v1    # "mode":I
     :cond_0
@@ -3952,7 +3528,6 @@
     .param p3, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1679
     invoke-static {p1}, Landroid/app/AppOpsManager;->strOpToOp(Ljava/lang/String;)I
 
     move-result v0
@@ -3971,7 +3546,6 @@
     .param p3, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1817
     :try_start_0
     iget-object v1, p0, Landroid/app/AppOpsManager;->mService:Lcom/android/internal/app/IAppOpsService;
 
@@ -3983,11 +3557,9 @@
 
     return v1
 
-    .line 1818
     :catch_0
     move-exception v0
 
-    .line 1820
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x2
 
@@ -4001,7 +3573,6 @@
     .param p3, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1687
     invoke-static {p1}, Landroid/app/AppOpsManager;->strOpToOp(Ljava/lang/String;)I
 
     move-result v0
@@ -4019,7 +3590,6 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1831
     :try_start_0
     iget-object v1, p0, Landroid/app/AppOpsManager;->mService:Lcom/android/internal/app/IAppOpsService;
 
@@ -4029,15 +3599,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 1832
     new-instance v1, Ljava/lang/SecurityException;
 
-    .line 1833
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "Package "
+    const-string v3, "Package "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4047,7 +3615,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, " does not belong to "
+    const-string v3, " does not belong to "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4061,28 +3629,24 @@
 
     move-result-object v2
 
-    .line 1832
     invoke-direct {v1, v2}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
 
     throw v1
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1835
     :catch_0
     move-exception v0
 
-    .line 1836
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/SecurityException;
 
-    const-string/jumbo v2, "Unable to verify package ownership"
+    const-string v2, "Unable to verify package ownership"
 
     invoke-direct {v1, v2, v0}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     throw v1
 
-    .line 1829
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     return-void
@@ -4093,7 +3657,6 @@
     .param p1, "op"    # I
 
     .prologue
-    .line 2035
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v0
@@ -4106,7 +3669,6 @@
 
     invoke-virtual {p0, p1, v0, v1}, Landroid/app/AppOpsManager;->finishOp(IILjava/lang/String;)V
 
-    .line 2034
     return-void
 .end method
 
@@ -4117,7 +3679,6 @@
     .param p3, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 2028
     :try_start_0
     iget-object v1, p0, Landroid/app/AppOpsManager;->mService:Lcom/android/internal/app/IAppOpsService;
 
@@ -4131,11 +3692,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2026
     :goto_0
     return-void
 
-    .line 2029
     :catch_0
     move-exception v0
 
@@ -4150,14 +3709,12 @@
     .param p3, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1778
     invoke-static {p1}, Landroid/app/AppOpsManager;->strOpToOp(Ljava/lang/String;)I
 
     move-result v0
 
     invoke-virtual {p0, v0, p2, p3}, Landroid/app/AppOpsManager;->finishOp(IILjava/lang/String;)V
 
-    .line 1777
     return-void
 .end method
 
@@ -4179,7 +3736,6 @@
     .end annotation
 
     .prologue
-    .line 1524
     :try_start_0
     iget-object v1, p0, Landroid/app/AppOpsManager;->mService:Lcom/android/internal/app/IAppOpsService;
 
@@ -4191,11 +3747,9 @@
 
     return-object v1
 
-    .line 1525
     :catch_0
     move-exception v0
 
-    .line 1527
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -4216,7 +3770,6 @@
     .end annotation
 
     .prologue
-    .line 1508
     :try_start_0
     iget-object v1, p0, Landroid/app/AppOpsManager;->mService:Lcom/android/internal/app/IAppOpsService;
 
@@ -4228,11 +3781,9 @@
 
     return-object v1
 
-    .line 1509
     :catch_0
     move-exception v0
 
-    .line 1511
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -4245,7 +3796,6 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 2086
     :try_start_0
     iget-object v1, p0, Landroid/app/AppOpsManager;->mService:Lcom/android/internal/app/IAppOpsService;
 
@@ -4257,11 +3807,9 @@
 
     return v1
 
-    .line 2087
     :catch_0
     move-exception v0
 
-    .line 2089
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x0
 
@@ -4274,10 +3822,8 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 2075
     const/4 v1, 0x1
 
-    .line 2077
     .local v1, "isShow":Z
     :try_start_0
     iget-object v2, p0, Landroid/app/AppOpsManager;->mService:Lcom/android/internal/app/IAppOpsService;
@@ -4288,12 +3834,10 @@
 
     move-result v1
 
-    .line 2080
     .end local v1    # "isShow":Z
     :goto_0
     return v1
 
-    .line 2078
     .restart local v1    # "isShow":Z
     :catch_0
     move-exception v0
@@ -4307,7 +3851,6 @@
     .param p1, "op"    # I
 
     .prologue
-    .line 1954
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v0
@@ -4332,7 +3875,6 @@
     .param p3, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1886
     :try_start_0
     iget-object v2, p0, Landroid/app/AppOpsManager;->mService:Lcom/android/internal/app/IAppOpsService;
 
@@ -4340,13 +3882,11 @@
 
     move-result v1
 
-    .line 1887
     .local v1, "mode":I
     const/4 v2, 0x2
 
     if-ne v1, v2, :cond_0
 
-    .line 1888
     new-instance v2, Ljava/lang/SecurityException;
 
     invoke-direct {p0, p1, p2, p3}, Landroid/app/AppOpsManager;->buildSecurityExceptionMsg(IILjava/lang/String;)Ljava/lang/String;
@@ -4359,18 +3899,15 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1891
     .end local v1    # "mode":I
     :catch_0
     move-exception v0
 
-    .line 1893
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v2, 0x1
 
     return v2
 
-    .line 1890
     .end local v0    # "e":Landroid/os/RemoteException;
     .restart local v1    # "mode":I
     :cond_0
@@ -4384,7 +3921,6 @@
     .param p3, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1705
     invoke-static {p1}, Landroid/app/AppOpsManager;->strOpToOp(Ljava/lang/String;)I
 
     move-result v0
@@ -4403,7 +3939,6 @@
     .param p3, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1946
     :try_start_0
     iget-object v1, p0, Landroid/app/AppOpsManager;->mService:Lcom/android/internal/app/IAppOpsService;
 
@@ -4415,11 +3950,9 @@
 
     return v1
 
-    .line 1947
     :catch_0
     move-exception v0
 
-    .line 1949
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x2
 
@@ -4433,7 +3966,6 @@
     .param p3, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1713
     invoke-static {p1}, Landroid/app/AppOpsManager;->strOpToOp(Ljava/lang/String;)I
 
     move-result v0
@@ -4451,25 +3983,22 @@
     .param p2, "proxiedPackageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1915
     invoke-virtual {p0, p1, p2}, Landroid/app/AppOpsManager;->noteProxyOpNoThrow(ILjava/lang/String;)I
 
     move-result v0
 
-    .line 1916
     .local v0, "mode":I
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_0
 
-    .line 1917
     new-instance v1, Ljava/lang/SecurityException;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "Proxy package "
+    const-string v3, "Proxy package "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4485,28 +4014,22 @@
 
     move-result-object v2
 
-    .line 1918
-    const-string/jumbo v3, " from uid "
+    const-string v3, " from uid "
 
-    .line 1917
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 1918
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v3
 
-    .line 1917
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 1918
-    const-string/jumbo v3, " or calling package "
+    const-string v3, " or calling package "
 
-    .line 1917
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -4515,38 +4038,30 @@
 
     move-result-object v2
 
-    .line 1919
-    const-string/jumbo v3, " from uid "
+    const-string v3, " from uid "
 
-    .line 1917
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 1919
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v3
 
-    .line 1917
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 1920
-    const-string/jumbo v3, " not allowed to perform "
+    const-string v3, " not allowed to perform "
 
-    .line 1917
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 1920
     sget-object v3, Landroid/app/AppOpsManager;->sOpNames:[Ljava/lang/String;
 
     aget-object v3, v3, p1
 
-    .line 1917
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -4559,7 +4074,6 @@
 
     throw v1
 
-    .line 1922
     :cond_0
     return v0
 .end method
@@ -4570,7 +4084,6 @@
     .param p2, "proxiedPackageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1732
     invoke-static {p1}, Landroid/app/AppOpsManager;->strOpToOp(Ljava/lang/String;)I
 
     move-result v0
@@ -4588,7 +4101,6 @@
     .param p2, "proxiedPackageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1932
     :try_start_0
     iget-object v1, p0, Landroid/app/AppOpsManager;->mService:Lcom/android/internal/app/IAppOpsService;
 
@@ -4598,12 +4110,10 @@
 
     move-result-object v2
 
-    .line 1933
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v3
 
-    .line 1932
     invoke-interface {v1, p1, v2, v3, p2}, Lcom/android/internal/app/IAppOpsService;->noteProxyOperation(ILjava/lang/String;ILjava/lang/String;)I
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -4612,11 +4122,9 @@
 
     return v1
 
-    .line 1934
     :catch_0
     move-exception v0
 
-    .line 1936
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x2
 
@@ -4629,7 +4137,6 @@
     .param p2, "proxiedPackageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1740
     invoke-static {p1}, Landroid/app/AppOpsManager;->strOpToOp(Ljava/lang/String;)I
 
     move-result v0
@@ -4645,7 +4152,6 @@
     .locals 4
 
     .prologue
-    .line 1569
     :try_start_0
     iget-object v1, p0, Landroid/app/AppOpsManager;->mService:Lcom/android/internal/app/IAppOpsService;
 
@@ -4659,11 +4165,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1567
     :goto_0
     return-void
 
-    .line 1570
     :catch_0
     move-exception v0
 
@@ -4675,7 +4179,6 @@
     .locals 2
 
     .prologue
-    .line 2104
     :try_start_0
     iget-object v1, p0, Landroid/app/AppOpsManager;->mService:Lcom/android/internal/app/IAppOpsService;
 
@@ -4683,11 +4186,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2102
     :goto_0
     return-void
 
-    .line 2105
     :catch_0
     move-exception v0
 
@@ -4703,7 +4204,6 @@
     .param p4, "mode"    # I
 
     .prologue
-    .line 1541
     :try_start_0
     iget-object v1, p0, Landroid/app/AppOpsManager;->mService:Lcom/android/internal/app/IAppOpsService;
 
@@ -4711,11 +4211,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1539
     :goto_0
     return-void
 
-    .line 1542
     :catch_0
     move-exception v0
 
@@ -4730,7 +4228,6 @@
     .param p3, "state"    # Z
 
     .prologue
-    .line 2096
     :try_start_0
     iget-object v1, p0, Landroid/app/AppOpsManager;->mService:Lcom/android/internal/app/IAppOpsService;
 
@@ -4738,11 +4235,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2094
     :goto_0
     return-void
 
-    .line 2097
     :catch_0
     move-exception v0
 
@@ -4758,13 +4253,11 @@
     .param p4, "exceptionPackages"    # [Ljava/lang/String;
 
     .prologue
-    .line 1560
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v3
 
-    .line 1561
     .local v3, "uid":I
     iget-object v0, p0, Landroid/app/AppOpsManager;->mService:Lcom/android/internal/app/IAppOpsService;
 
@@ -4780,12 +4273,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1558
     .end local v3    # "uid":I
     :goto_0
     return-void
 
-    .line 1562
     :catch_0
     move-exception v6
 
@@ -4800,7 +4291,6 @@
     .param p3, "mode"    # I
 
     .prologue
-    .line 1533
     :try_start_0
     iget-object v1, p0, Landroid/app/AppOpsManager;->mService:Lcom/android/internal/app/IAppOpsService;
 
@@ -4808,11 +4298,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1531
     :goto_0
     return-void
 
-    .line 1534
     :catch_0
     move-exception v0
 
@@ -4825,7 +4313,6 @@
     .param p1, "op"    # I
 
     .prologue
-    .line 2016
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v0
@@ -4850,7 +4337,6 @@
     .param p3, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1991
     :try_start_0
     iget-object v2, p0, Landroid/app/AppOpsManager;->mService:Lcom/android/internal/app/IAppOpsService;
 
@@ -4864,13 +4350,11 @@
 
     move-result v1
 
-    .line 1992
     .local v1, "mode":I
     const/4 v2, 0x2
 
     if-ne v1, v2, :cond_0
 
-    .line 1993
     new-instance v2, Ljava/lang/SecurityException;
 
     invoke-direct {p0, p1, p2, p3}, Landroid/app/AppOpsManager;->buildSecurityExceptionMsg(IILjava/lang/String;)Ljava/lang/String;
@@ -4883,18 +4367,15 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1996
     .end local v1    # "mode":I
     :catch_0
     move-exception v0
 
-    .line 1998
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v2, 0x1
 
     return v2
 
-    .line 1995
     .end local v0    # "e":Landroid/os/RemoteException;
     .restart local v1    # "mode":I
     :cond_0
@@ -4908,7 +4389,6 @@
     .param p3, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1760
     invoke-static {p1}, Landroid/app/AppOpsManager;->strOpToOp(Ljava/lang/String;)I
 
     move-result v0
@@ -4927,7 +4407,6 @@
     .param p3, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 2008
     :try_start_0
     iget-object v1, p0, Landroid/app/AppOpsManager;->mService:Lcom/android/internal/app/IAppOpsService;
 
@@ -4945,11 +4424,9 @@
 
     return v1
 
-    .line 2009
     :catch_0
     move-exception v0
 
-    .line 2011
     .local v0, "e":Landroid/os/RemoteException;
     const/4 v1, 0x2
 
@@ -4963,7 +4440,6 @@
     .param p3, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1768
     invoke-static {p1}, Landroid/app/AppOpsManager;->strOpToOp(Ljava/lang/String;)I
 
     move-result v0
@@ -4982,12 +4458,10 @@
     .param p3, "callback"    # Landroid/app/AppOpsManager$OnOpChangedListener;
 
     .prologue
-    .line 1609
     iget-object v3, p0, Landroid/app/AppOpsManager;->mModeWatchers:Landroid/util/ArrayMap;
 
     monitor-enter v3
 
-    .line 1610
     :try_start_0
     iget-object v2, p0, Landroid/app/AppOpsManager;->mModeWatchers:Landroid/util/ArrayMap;
 
@@ -4997,17 +4471,14 @@
 
     check-cast v0, Lcom/android/internal/app/IAppOpsCallback;
 
-    .line 1611
     .local v0, "cb":Lcom/android/internal/app/IAppOpsCallback;
     if-nez v0, :cond_0
 
-    .line 1612
     new-instance v0, Landroid/app/AppOpsManager$1;
 
     .end local v0    # "cb":Lcom/android/internal/app/IAppOpsCallback;
     invoke-direct {v0, p0, p3}, Landroid/app/AppOpsManager$1;-><init>(Landroid/app/AppOpsManager;Landroid/app/AppOpsManager$OnOpChangedListener;)V
 
-    .line 1622
     .restart local v0    # "cb":Lcom/android/internal/app/IAppOpsCallback;
     iget-object v2, p0, Landroid/app/AppOpsManager;->mModeWatchers:Landroid/util/ArrayMap;
 
@@ -5015,7 +4486,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1625
     :cond_0
     :try_start_1
     iget-object v2, p0, Landroid/app/AppOpsManager;->mService:Lcom/android/internal/app/IAppOpsService;
@@ -5028,10 +4498,8 @@
     :goto_0
     monitor-exit v3
 
-    .line 1608
     return-void
 
-    .line 1609
     .end local v0    # "cb":Lcom/android/internal/app/IAppOpsCallback;
     :catchall_0
     move-exception v2
@@ -5040,7 +4508,6 @@
 
     throw v2
 
-    .line 1626
     .restart local v0    # "cb":Lcom/android/internal/app/IAppOpsCallback;
     :catch_0
     move-exception v1
@@ -5056,14 +4523,12 @@
     .param p3, "callback"    # Landroid/app/AppOpsManager$OnOpChangedListener;
 
     .prologue
-    .line 1598
     invoke-static {p1}, Landroid/app/AppOpsManager;->strOpToOp(Ljava/lang/String;)I
 
     move-result v0
 
     invoke-virtual {p0, v0, p2, p3}, Landroid/app/AppOpsManager;->startWatchingMode(ILjava/lang/String;Landroid/app/AppOpsManager$OnOpChangedListener;)V
 
-    .line 1597
     return-void
 .end method
 
@@ -5072,12 +4537,10 @@
     .param p1, "callback"    # Landroid/app/AppOpsManager$OnOpChangedListener;
 
     .prologue
-    .line 1636
     iget-object v3, p0, Landroid/app/AppOpsManager;->mModeWatchers:Landroid/util/ArrayMap;
 
     monitor-enter v3
 
-    .line 1637
     :try_start_0
     iget-object v2, p0, Landroid/app/AppOpsManager;->mModeWatchers:Landroid/util/ArrayMap;
 
@@ -5089,11 +4552,9 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1638
     .local v0, "cb":Lcom/android/internal/app/IAppOpsCallback;
     if-eqz v0, :cond_0
 
-    .line 1640
     :try_start_1
     iget-object v2, p0, Landroid/app/AppOpsManager;->mService:Lcom/android/internal/app/IAppOpsService;
 
@@ -5106,10 +4567,8 @@
     :goto_0
     monitor-exit v3
 
-    .line 1635
     return-void
 
-    .line 1636
     .end local v0    # "cb":Lcom/android/internal/app/IAppOpsCallback;
     :catchall_0
     move-exception v2
@@ -5118,7 +4577,6 @@
 
     throw v2
 
-    .line 1641
     .restart local v0    # "cb":Lcom/android/internal/app/IAppOpsCallback;
     :catch_0
     move-exception v1

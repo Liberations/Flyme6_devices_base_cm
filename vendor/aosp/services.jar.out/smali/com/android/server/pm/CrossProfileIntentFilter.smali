@@ -32,19 +32,14 @@
     .param p4, "flags"    # I
 
     .prologue
-    .line 48
     invoke-direct {p0, p1}, Landroid/content/IntentFilter;-><init>(Landroid/content/IntentFilter;)V
 
-    .line 49
     iput p3, p0, Lcom/android/server/pm/CrossProfileIntentFilter;->mTargetUserId:I
 
-    .line 50
     iput-object p2, p0, Lcom/android/server/pm/CrossProfileIntentFilter;->mOwnerPackage:Ljava/lang/String;
 
-    .line 51
     iput p4, p0, Lcom/android/server/pm/CrossProfileIntentFilter;->mFlags:I
 
-    .line 47
     return-void
 .end method
 
@@ -63,11 +58,9 @@
 
     const/4 v6, 0x3
 
-    .line 66
     invoke-direct {p0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 67
-    const-string/jumbo v4, "targetUserId"
+    const-string v4, "targetUserId"
 
     const/16 v5, -0x2710
 
@@ -77,10 +70,9 @@
 
     iput v4, p0, Lcom/android/server/pm/CrossProfileIntentFilter;->mTargetUserId:I
 
-    .line 68
-    const-string/jumbo v4, "ownerPackage"
+    const-string v4, "ownerPackage"
 
-    const-string/jumbo v5, ""
+    const-string v5, ""
 
     invoke-virtual {p0, p1, v4, v5}, Lcom/android/server/pm/CrossProfileIntentFilter;->getStringFromXml(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -88,8 +80,7 @@
 
     iput-object v4, p0, Lcom/android/server/pm/CrossProfileIntentFilter;->mOwnerPackage:Ljava/lang/String;
 
-    .line 69
-    const-string/jumbo v4, "flags"
+    const-string v4, "flags"
 
     const/4 v5, 0x0
 
@@ -99,18 +90,15 @@
 
     iput v4, p0, Lcom/android/server/pm/CrossProfileIntentFilter;->mFlags:I
 
-    .line 71
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v1
 
-    .line 72
     .local v1, "outerDepth":I
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 74
     .local v2, "tagName":Ljava/lang/String;
     :cond_0
     :goto_0
@@ -123,7 +111,6 @@
 
     if-eq v3, v4, :cond_2
 
-    .line 75
     if-ne v3, v6, :cond_1
 
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
@@ -132,26 +119,22 @@
 
     if-le v4, v1, :cond_2
 
-    .line 76
     :cond_1
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 77
     if-eq v3, v6, :cond_0
 
     const/4 v4, 0x4
 
     if-eq v3, v4, :cond_0
 
-    .line 79
     const/4 v4, 0x2
 
     if-ne v3, v4, :cond_0
 
-    .line 80
-    const-string/jumbo v4, "filter"
+    const-string v4, "filter"
 
     invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -159,9 +142,8 @@
 
     if-eqz v4, :cond_3
 
-    .line 91
     :cond_2
-    const-string/jumbo v4, "filter"
+    const-string v4, "filter"
 
     invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -169,20 +151,17 @@
 
     if-eqz v4, :cond_4
 
-    .line 92
     invoke-virtual {p0, p1}, Lcom/android/server/pm/CrossProfileIntentFilter;->readFromXml(Lorg/xmlpull/v1/XmlPullParser;)V
 
-    .line 66
     :goto_1
     return-void
 
-    .line 83
     :cond_3
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "Unknown element under crossProfile-intent-filters: "
+    const-string v5, "Unknown element under crossProfile-intent-filters: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -192,20 +171,16 @@
 
     move-result-object v4
 
-    .line 84
-    const-string/jumbo v5, " at "
+    const-string v5, " at "
 
-    .line 83
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v4
 
-    .line 85
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getPositionDescription()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 83
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v4
@@ -214,34 +189,29 @@
 
     move-result-object v0
 
-    .line 86
     .local v0, "msg":Ljava/lang/String;
     invoke-static {v7, v0}, Lcom/android/server/pm/PackageManagerService;->reportSettingsProblem(ILjava/lang/String;)V
 
-    .line 87
     invoke-static {p1}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_0
 
-    .line 94
     .end local v0    # "msg":Ljava/lang/String;
     :cond_4
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "Missing element under CrossProfileIntentFilter: filter at "
+    const-string v5, "Missing element under CrossProfileIntentFilter: filter at "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v4
 
-    .line 95
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getPositionDescription()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 94
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v4
@@ -250,11 +220,9 @@
 
     move-result-object v0
 
-    .line 96
     .restart local v0    # "msg":Ljava/lang/String;
     invoke-static {v7, v0}, Lcom/android/server/pm/PackageManagerService;->reportSettingsProblem(ILjava/lang/String;)V
 
-    .line 97
     invoke-static {p1}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_1
@@ -269,14 +237,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 137
     iget v1, p0, Lcom/android/server/pm/CrossProfileIntentFilter;->mTargetUserId:I
 
     iget v2, p1, Lcom/android/server/pm/CrossProfileIntentFilter;->mTargetUserId:I
 
     if-ne v1, v2, :cond_0
 
-    .line 138
     iget-object v1, p0, Lcom/android/server/pm/CrossProfileIntentFilter;->mOwnerPackage:Ljava/lang/String;
 
     iget-object v2, p1, Lcom/android/server/pm/CrossProfileIntentFilter;->mOwnerPackage:Ljava/lang/String;
@@ -285,10 +251,8 @@
 
     move-result v1
 
-    .line 137
     if-eqz v1, :cond_0
 
-    .line 139
     iget v1, p0, Lcom/android/server/pm/CrossProfileIntentFilter;->mFlags:I
 
     iget v2, p1, Lcom/android/server/pm/CrossProfileIntentFilter;->mFlags:I
@@ -297,7 +261,6 @@
 
     const/4 v0, 0x1
 
-    .line 137
     :cond_0
     return v0
 .end method
@@ -306,7 +269,6 @@
     .locals 1
 
     .prologue
-    .line 59
     iget v0, p0, Lcom/android/server/pm/CrossProfileIntentFilter;->mFlags:I
 
     return v0
@@ -321,23 +283,19 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 114
     invoke-virtual {p0, p1, p2, v1}, Lcom/android/server/pm/CrossProfileIntentFilter;->getStringFromXml(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 115
     .local v0, "stringValue":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 116
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v1
 
     return v1
 
-    .line 118
     :cond_0
     return p3
 .end method
@@ -346,7 +304,6 @@
     .locals 1
 
     .prologue
-    .line 63
     iget-object v0, p0, Lcom/android/server/pm/CrossProfileIntentFilter;->mOwnerPackage:Ljava/lang/String;
 
     return-object v0
@@ -361,21 +318,18 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 102
     invoke-interface {p1, v2, p2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 103
     .local v1, "value":Ljava/lang/String;
     if-nez v1, :cond_0
 
-    .line 104
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "Missing element under CrossProfileIntentFilter: "
+    const-string v3, "Missing element under CrossProfileIntentFilter: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -385,18 +339,16 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, " at "
+    const-string v3, " at "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 105
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getPositionDescription()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 104
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -405,16 +357,13 @@
 
     move-result-object v0
 
-    .line 106
     .local v0, "msg":Ljava/lang/String;
     const/4 v2, 0x5
 
     invoke-static {v2, v0}, Lcom/android/server/pm/PackageManagerService;->reportSettingsProblem(ILjava/lang/String;)V
 
-    .line 107
     return-object p3
 
-    .line 109
     .end local v0    # "msg":Ljava/lang/String;
     :cond_0
     return-object v1
@@ -424,7 +373,6 @@
     .locals 1
 
     .prologue
-    .line 55
     iget v0, p0, Lcom/android/server/pm/CrossProfileIntentFilter;->mTargetUserId:I
 
     return v0
@@ -434,12 +382,11 @@
     .locals 2
 
     .prologue
-    .line 132
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "CrossProfileIntentFilter{0x"
+    const-string v1, "CrossProfileIntentFilter{0x"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -457,30 +404,24 @@
 
     move-result-object v0
 
-    .line 133
-    const-string/jumbo v1, " "
+    const-string v1, " "
 
-    .line 132
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 133
     iget v1, p0, Lcom/android/server/pm/CrossProfileIntentFilter;->mTargetUserId:I
 
     invoke-static {v1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 132
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 133
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
-    .line 132
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -504,8 +445,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 122
-    const-string/jumbo v0, "targetUserId"
+    const-string v0, "targetUserId"
 
     iget v1, p0, Lcom/android/server/pm/CrossProfileIntentFilter;->mTargetUserId:I
 
@@ -515,8 +455,7 @@
 
     invoke-interface {p1, v2, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 123
-    const-string/jumbo v0, "flags"
+    const-string v0, "flags"
 
     iget v1, p0, Lcom/android/server/pm/CrossProfileIntentFilter;->mFlags:I
 
@@ -526,26 +465,21 @@
 
     invoke-interface {p1, v2, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 124
-    const-string/jumbo v0, "ownerPackage"
+    const-string v0, "ownerPackage"
 
     iget-object v1, p0, Lcom/android/server/pm/CrossProfileIntentFilter;->mOwnerPackage:Ljava/lang/String;
 
     invoke-interface {p1, v2, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 125
-    const-string/jumbo v0, "filter"
+    const-string v0, "filter"
 
     invoke-interface {p1, v2, v0}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 126
     invoke-super {p0, p1}, Landroid/content/IntentFilter;->writeToXml(Lorg/xmlpull/v1/XmlSerializer;)V
 
-    .line 127
-    const-string/jumbo v0, "filter"
+    const-string v0, "filter"
 
     invoke-interface {p1, v2, v0}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 121
     return-void
 .end method

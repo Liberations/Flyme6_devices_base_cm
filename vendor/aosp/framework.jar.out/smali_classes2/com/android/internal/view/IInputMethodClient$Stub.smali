@@ -42,15 +42,12 @@
     .locals 1
 
     .prologue
-    .line 17
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 19
-    const-string/jumbo v0, "com.android.internal.view.IInputMethodClient"
+    const-string v0, "com.android.internal.view.IInputMethodClient"
 
     invoke-virtual {p0, p0, v0}, Lcom/android/internal/view/IInputMethodClient$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 17
     return-void
 .end method
 
@@ -61,21 +58,17 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 27
     if-nez p0, :cond_0
 
-    .line 28
     return-object v1
 
-    .line 30
     :cond_0
-    const-string/jumbo v1, "com.android.internal.view.IInputMethodClient"
+    const-string v1, "com.android.internal.view.IInputMethodClient"
 
     invoke-interface {p0, v1}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v0
 
-    .line 31
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -83,13 +76,11 @@
 
     if-eqz v1, :cond_1
 
-    .line 32
     check-cast v0, Lcom/android/internal/view/IInputMethodClient;
 
     .end local v0    # "iin":Landroid/os/IInterface;
     return-object v0
 
-    .line 34
     .restart local v0    # "iin":Landroid/os/IInterface;
     :cond_1
     new-instance v1, Lcom/android/internal/view/IInputMethodClient$Stub$Proxy;
@@ -105,7 +96,6 @@
     .locals 0
 
     .prologue
-    .line 38
     return-object p0
 .end method
 
@@ -124,32 +114,26 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 42
     sparse-switch p1, :sswitch_data_0
 
-    .line 95
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v3
 
     return v3
 
-    .line 46
     :sswitch_0
-    const-string/jumbo v3, "com.android.internal.view.IInputMethodClient"
+    const-string v3, "com.android.internal.view.IInputMethodClient"
 
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 47
     return v4
 
-    .line 51
     :sswitch_1
-    const-string/jumbo v3, "com.android.internal.view.IInputMethodClient"
+    const-string v3, "com.android.internal.view.IInputMethodClient"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 53
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
@@ -158,15 +142,12 @@
 
     const/4 v2, 0x1
 
-    .line 54
     .local v2, "_arg0":Z
     :goto_0
     invoke-virtual {p0, v2}, Lcom/android/internal/view/IInputMethodClient$Stub;->setUsingInputMethod(Z)V
 
-    .line 55
     return v4
 
-    .line 53
     .end local v2    # "_arg0":Z
     :cond_0
     const/4 v2, 0x0
@@ -174,21 +155,18 @@
     .restart local v2    # "_arg0":Z
     goto :goto_0
 
-    .line 59
     .end local v2    # "_arg0":Z
     :sswitch_2
-    const-string/jumbo v3, "com.android.internal.view.IInputMethodClient"
+    const-string v3, "com.android.internal.view.IInputMethodClient"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 61
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 62
     sget-object v3, Lcom/android/internal/view/InputBindResult;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v3, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -197,47 +175,38 @@
 
     check-cast v1, Lcom/android/internal/view/InputBindResult;
 
-    .line 67
     :goto_1
     invoke-virtual {p0, v1}, Lcom/android/internal/view/IInputMethodClient$Stub;->onBindMethod(Lcom/android/internal/view/InputBindResult;)V
 
-    .line 68
     return v4
 
-    .line 65
     :cond_1
     const/4 v1, 0x0
 
     .local v1, "_arg0":Lcom/android/internal/view/InputBindResult;
     goto :goto_1
 
-    .line 72
     .end local v1    # "_arg0":Lcom/android/internal/view/InputBindResult;
     :sswitch_3
-    const-string/jumbo v3, "com.android.internal.view.IInputMethodClient"
+    const-string v3, "com.android.internal.view.IInputMethodClient"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 74
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 75
     .local v0, "_arg0":I
     invoke-virtual {p0, v0}, Lcom/android/internal/view/IInputMethodClient$Stub;->onUnbindMethod(I)V
 
-    .line 76
     return v4
 
-    .line 80
     .end local v0    # "_arg0":I
     :sswitch_4
-    const-string/jumbo v3, "com.android.internal.view.IInputMethodClient"
+    const-string v3, "com.android.internal.view.IInputMethodClient"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 82
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
@@ -246,15 +215,12 @@
 
     const/4 v2, 0x1
 
-    .line 83
     .restart local v2    # "_arg0":Z
     :goto_2
     invoke-virtual {p0, v2}, Lcom/android/internal/view/IInputMethodClient$Stub;->setActive(Z)V
 
-    .line 84
     return v4
 
-    .line 82
     .end local v2    # "_arg0":Z
     :cond_2
     const/4 v2, 0x0
@@ -262,26 +228,21 @@
     .restart local v2    # "_arg0":Z
     goto :goto_2
 
-    .line 88
     .end local v2    # "_arg0":Z
     :sswitch_5
-    const-string/jumbo v3, "com.android.internal.view.IInputMethodClient"
+    const-string v3, "com.android.internal.view.IInputMethodClient"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 90
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 91
     .restart local v0    # "_arg0":I
     invoke-virtual {p0, v0}, Lcom/android/internal/view/IInputMethodClient$Stub;->setUserActionNotificationSequenceNumber(I)V
 
-    .line 92
     return v4
 
-    .line 42
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

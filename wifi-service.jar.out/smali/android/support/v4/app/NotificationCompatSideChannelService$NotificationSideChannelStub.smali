@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Landroid/support/v4/app/NotificationCompatSideChannelService;
 
     .prologue
-    .line 73
     iput-object p1, p0, Landroid/support/v4/app/NotificationCompatSideChannelService$NotificationSideChannelStub;->this$0:Landroid/support/v4/app/NotificationCompatSideChannelService;
 
     invoke-direct {p0}, Landroid/support/v4/app/INotificationSideChannel$Stub;-><init>()V
@@ -56,7 +55,6 @@
     .end annotation
 
     .prologue
-    .line 88
     iget-object v2, p0, Landroid/support/v4/app/NotificationCompatSideChannelService$NotificationSideChannelStub;->this$0:Landroid/support/v4/app/NotificationCompatSideChannelService;
 
     invoke-static {}, Landroid/support/v4/app/NotificationCompatSideChannelService$NotificationSideChannelStub;->getCallingUid()I
@@ -65,12 +63,10 @@
 
     invoke-static {v2, v3, p1}, Landroid/support/v4/app/NotificationCompatSideChannelService;->-wrap0(Landroid/support/v4/app/NotificationCompatSideChannelService;ILjava/lang/String;)V
 
-    .line 89
     invoke-static {}, Landroid/support/v4/app/NotificationCompatSideChannelService$NotificationSideChannelStub;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 91
     .local v0, "idToken":J
     :try_start_0
     iget-object v2, p0, Landroid/support/v4/app/NotificationCompatSideChannelService$NotificationSideChannelStub;->this$0:Landroid/support/v4/app/NotificationCompatSideChannelService;
@@ -79,20 +75,15 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 93
     invoke-static {v0, v1}, Landroid/support/v4/app/NotificationCompatSideChannelService$NotificationSideChannelStub;->restoreCallingIdentity(J)V
 
-    .line 87
     return-void
 
-    .line 92
     :catchall_0
     move-exception v2
 
-    .line 93
     invoke-static {v0, v1}, Landroid/support/v4/app/NotificationCompatSideChannelService$NotificationSideChannelStub;->restoreCallingIdentity(J)V
 
-    .line 92
     throw v2
 .end method
 
@@ -101,7 +92,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 99
     iget-object v2, p0, Landroid/support/v4/app/NotificationCompatSideChannelService$NotificationSideChannelStub;->this$0:Landroid/support/v4/app/NotificationCompatSideChannelService;
 
     invoke-static {}, Landroid/support/v4/app/NotificationCompatSideChannelService$NotificationSideChannelStub;->getCallingUid()I
@@ -110,12 +100,10 @@
 
     invoke-static {v2, v3, p1}, Landroid/support/v4/app/NotificationCompatSideChannelService;->-wrap0(Landroid/support/v4/app/NotificationCompatSideChannelService;ILjava/lang/String;)V
 
-    .line 100
     invoke-static {}, Landroid/support/v4/app/NotificationCompatSideChannelService$NotificationSideChannelStub;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 102
     .local v0, "idToken":J
     :try_start_0
     iget-object v2, p0, Landroid/support/v4/app/NotificationCompatSideChannelService$NotificationSideChannelStub;->this$0:Landroid/support/v4/app/NotificationCompatSideChannelService;
@@ -124,20 +112,15 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 104
     invoke-static {v0, v1}, Landroid/support/v4/app/NotificationCompatSideChannelService$NotificationSideChannelStub;->restoreCallingIdentity(J)V
 
-    .line 98
     return-void
 
-    .line 103
     :catchall_0
     move-exception v2
 
-    .line 104
     invoke-static {v0, v1}, Landroid/support/v4/app/NotificationCompatSideChannelService$NotificationSideChannelStub;->restoreCallingIdentity(J)V
 
-    .line 103
     throw v2
 .end method
 
@@ -154,7 +137,6 @@
     .end annotation
 
     .prologue
-    .line 77
     iget-object v2, p0, Landroid/support/v4/app/NotificationCompatSideChannelService$NotificationSideChannelStub;->this$0:Landroid/support/v4/app/NotificationCompatSideChannelService;
 
     invoke-static {}, Landroid/support/v4/app/NotificationCompatSideChannelService$NotificationSideChannelStub;->getCallingUid()I
@@ -163,12 +145,10 @@
 
     invoke-static {v2, v3, p1}, Landroid/support/v4/app/NotificationCompatSideChannelService;->-wrap0(Landroid/support/v4/app/NotificationCompatSideChannelService;ILjava/lang/String;)V
 
-    .line 78
     invoke-static {}, Landroid/support/v4/app/NotificationCompatSideChannelService$NotificationSideChannelStub;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 80
     .local v0, "idToken":J
     :try_start_0
     iget-object v2, p0, Landroid/support/v4/app/NotificationCompatSideChannelService$NotificationSideChannelStub;->this$0:Landroid/support/v4/app/NotificationCompatSideChannelService;
@@ -177,19 +157,14 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 82
     invoke-static {v0, v1}, Landroid/support/v4/app/NotificationCompatSideChannelService$NotificationSideChannelStub;->restoreCallingIdentity(J)V
 
-    .line 76
     return-void
 
-    .line 81
     :catchall_0
     move-exception v2
 
-    .line 82
     invoke-static {v0, v1}, Landroid/support/v4/app/NotificationCompatSideChannelService$NotificationSideChannelStub;->restoreCallingIdentity(J)V
 
-    .line 81
     throw v2
 .end method

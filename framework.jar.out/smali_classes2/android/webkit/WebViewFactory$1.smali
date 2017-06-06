@@ -30,7 +30,6 @@
     .param p2, "val$is64Bit"    # Z
 
     .prologue
-    .line 438
     iput-object p1, p0, Landroid/webkit/WebViewFactory$1;->val$abi:Ljava/lang/String;
 
     iput-boolean p2, p0, Landroid/webkit/WebViewFactory$1;->val$is64Bit:Z
@@ -46,15 +45,14 @@
     .locals 4
 
     .prologue
-    .line 442
     :try_start_0
-    const-string/jumbo v1, "WebViewFactory"
+    const-string v1, "WebViewFactory"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "relro file creator for "
+    const-string v3, "relro file creator for "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -66,7 +64,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, " crashed. Proceeding without"
+    const-string v3, " crashed. Proceeding without"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -78,7 +76,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 443
     invoke-static {}, Landroid/webkit/WebViewFactory;->-wrap0()Landroid/webkit/IWebViewUpdateService;
 
     move-result-object v1
@@ -91,23 +88,20 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 440
     :goto_0
     return-void
 
-    .line 444
     :catch_0
     move-exception v0
 
-    .line 445
     .local v0, "e":Landroid/os/RemoteException;
-    const-string/jumbo v1, "WebViewFactory"
+    const-string v1, "WebViewFactory"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "Cannot reach WebViewUpdateService. "
+    const-string v3, "Cannot reach WebViewUpdateService. "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

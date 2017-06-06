@@ -581,77 +581,62 @@
 
     const/4 v3, 0x0
 
-    .line 18
     const/4 v0, 0x7
 
     new-array v0, v0, [Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
-    .line 19
     sget-object v1, Lcom/android/server/wifi/anqp/Constants$ANQPElementType;->ANQPVenueName:Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
     aput-object v1, v0, v3
 
-    .line 20
     sget-object v1, Lcom/android/server/wifi/anqp/Constants$ANQPElementType;->ANQPNwkAuthType:Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
     aput-object v1, v0, v4
 
-    .line 21
     sget-object v1, Lcom/android/server/wifi/anqp/Constants$ANQPElementType;->ANQPRoamingConsortium:Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
     aput-object v1, v0, v5
 
-    .line 22
     sget-object v1, Lcom/android/server/wifi/anqp/Constants$ANQPElementType;->ANQPIPAddrAvailability:Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
     aput-object v1, v0, v6
 
-    .line 23
     sget-object v1, Lcom/android/server/wifi/anqp/Constants$ANQPElementType;->ANQPNAIRealm:Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
     const/4 v2, 0x4
 
     aput-object v1, v0, v2
 
-    .line 24
     sget-object v1, Lcom/android/server/wifi/anqp/Constants$ANQPElementType;->ANQP3GPPNetwork:Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
     const/4 v2, 0x5
 
     aput-object v1, v0, v2
 
-    .line 25
     sget-object v1, Lcom/android/server/wifi/anqp/Constants$ANQPElementType;->ANQPDomName:Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
     const/4 v2, 0x6
 
     aput-object v1, v0, v2
 
-    .line 18
     sput-object v0, Lcom/android/server/wifi/anqp/ANQPFactory;->BaseANQPSet:[Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
-    .line 28
     new-array v0, v6, [Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
-    .line 29
     sget-object v1, Lcom/android/server/wifi/anqp/Constants$ANQPElementType;->HSFriendlyName:Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
     aput-object v1, v0, v3
 
-    .line 30
     sget-object v1, Lcom/android/server/wifi/anqp/Constants$ANQPElementType;->HSWANMetrics:Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
     aput-object v1, v0, v4
 
-    .line 31
     sget-object v1, Lcom/android/server/wifi/anqp/Constants$ANQPElementType;->HSConnCapability:Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
     aput-object v1, v0, v5
 
-    .line 28
     sput-object v0, Lcom/android/server/wifi/anqp/ANQPFactory;->HS20ANQPSet:[Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
-    .line 16
     return-void
 .end method
 
@@ -659,7 +644,6 @@
     .locals 0
 
     .prologue
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -677,7 +661,6 @@
     .prologue
     const v5, 0xffff
 
-    .line 142
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v3
@@ -686,14 +669,13 @@
 
     if-ge v3, v4, :cond_0
 
-    .line 143
     new-instance v3, Ljava/net/ProtocolException;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "Runt payload: "
+    const-string v5, "Runt payload: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -715,7 +697,6 @@
 
     throw v3
 
-    .line 145
     :cond_0
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getShort()S
 
@@ -723,24 +704,21 @@
 
     and-int v1, v3, v5
 
-    .line 146
     .local v1, "infoIDNumber":I
     invoke-static {v1}, Lcom/android/server/wifi/anqp/Constants;->mapANQPElement(I)Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
     move-result-object v0
 
-    .line 147
     .local v0, "infoID":Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
     if-nez v0, :cond_1
 
-    .line 148
     new-instance v3, Ljava/net/ProtocolException;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "Bad info ID: "
+    const-string v5, "Bad info ID: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -758,7 +736,6 @@
 
     throw v3
 
-    .line 150
     :cond_1
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getShort()S
 
@@ -766,7 +743,6 @@
 
     and-int v2, v3, v5
 
-    .line 152
     .local v2, "length":I
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->remaining()I
 
@@ -774,33 +750,28 @@
 
     if-ge v3, v2, :cond_2
 
-    .line 153
     new-instance v3, Ljava/net/ProtocolException;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "Truncated payload: "
+    const-string v5, "Truncated payload: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v4
 
-    .line 154
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v5
 
-    .line 153
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v4
 
-    .line 154
-    const-string/jumbo v5, " vs "
+    const-string v5, " vs "
 
-    .line 153
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v4
@@ -817,7 +788,6 @@
 
     throw v3
 
-    .line 156
     :cond_2
     invoke-static {p0, v0, v2}, Lcom/android/server/wifi/anqp/ANQPFactory;->buildElement(Ljava/nio/ByteBuffer;Lcom/android/server/wifi/anqp/Constants$ANQPElementType;I)Lcom/android/server/wifi/anqp/ANQPElement;
 
@@ -827,7 +797,7 @@
 .end method
 
 .method public static buildElement(Ljava/nio/ByteBuffer;Lcom/android/server/wifi/anqp/Constants$ANQPElementType;I)Lcom/android/server/wifi/anqp/ANQPElement;
-    .locals 7
+    .locals 9
     .param p0, "payload"    # Ljava/nio/ByteBuffer;
     .param p1, "infoID"    # Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
     .param p2, "length"    # I
@@ -838,294 +808,303 @@
     .end annotation
 
     .prologue
-    const/4 v6, 0x0
+    const/4 v8, 0x0
 
-    .line 161
+    :try_start_0
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
 
-    move-result-object v4
+    move-result-object v6
 
-    sget-object v5, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
+    sget-object v7, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
 
-    invoke-virtual {v4, v5}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+    invoke-virtual {v6, v7}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    move-result-object v0
+    move-result-object v2
 
-    .line 162
-    .local v0, "elementPayload":Ljava/nio/ByteBuffer;
+    .local v2, "elementPayload":Ljava/nio/ByteBuffer;
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->position()I
 
-    move-result v4
+    move-result v6
 
-    add-int/2addr v4, p2
+    add-int/2addr v6, p2
 
-    invoke-virtual {p0, v4}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {p0, v6}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 163
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->position()I
+    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->position()I
 
-    move-result v4
+    move-result v6
 
-    add-int/2addr v4, p2
+    add-int/2addr v6, p2
 
-    invoke-virtual {v0, v4}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
+    invoke-virtual {v2, v6}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 165
     invoke-static {}, Lcom/android/server/wifi/anqp/ANQPFactory;->-getcom_android_server_wifi_anqp_Constants$ANQPElementTypeSwitchesValues()[I
 
-    move-result-object v4
+    move-result-object v6
 
     invoke-virtual {p1}, Lcom/android/server/wifi/anqp/Constants$ANQPElementType;->ordinal()I
 
-    move-result v5
+    move-result v7
 
-    aget v4, v4, v5
+    aget v6, v6, v7
 
-    packed-switch v4, :pswitch_data_0
+    packed-switch v6, :pswitch_data_0
 
-    .line 215
-    new-instance v4, Ljava/net/ProtocolException;
+    new-instance v6, Ljava/net/ProtocolException;
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "Unknown element ID: "
+    const-string v8, "Unknown element ID: "
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v5
+    move-result-object v7
 
-    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v5
+    move-result-object v7
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v7
 
-    invoke-direct {v4, v5}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v6, v7}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
 
-    throw v4
+    throw v6
+    :try_end_0
+    .catch Ljava/net/ProtocolException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 167
+    .end local v2    # "elementPayload":Ljava/nio/ByteBuffer;
+    :catch_0
+    move-exception v1
+
+    .local v1, "e":Ljava/net/ProtocolException;
+    throw v1
+
+    .end local v1    # "e":Ljava/net/ProtocolException;
+    .restart local v2    # "elementPayload":Ljava/nio/ByteBuffer;
     :pswitch_0
-    new-instance v4, Lcom/android/server/wifi/anqp/CapabilityListElement;
+    :try_start_1
+    new-instance v6, Lcom/android/server/wifi/anqp/CapabilityListElement;
 
-    invoke-direct {v4, p1, v0}, Lcom/android/server/wifi/anqp/CapabilityListElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
+    invoke-direct {v6, p1, v2}, Lcom/android/server/wifi/anqp/CapabilityListElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
 
-    return-object v4
-
-    .line 169
-    :pswitch_1
-    new-instance v4, Lcom/android/server/wifi/anqp/VenueNameElement;
-
-    invoke-direct {v4, p1, v0}, Lcom/android/server/wifi/anqp/VenueNameElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
-
-    return-object v4
-
-    .line 171
-    :pswitch_2
-    new-instance v4, Lcom/android/server/wifi/anqp/EmergencyNumberElement;
-
-    invoke-direct {v4, p1, v0}, Lcom/android/server/wifi/anqp/EmergencyNumberElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
-
-    return-object v4
-
-    .line 173
-    :pswitch_3
-    new-instance v4, Lcom/android/server/wifi/anqp/NetworkAuthenticationTypeElement;
-
-    invoke-direct {v4, p1, v0}, Lcom/android/server/wifi/anqp/NetworkAuthenticationTypeElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
-
-    return-object v4
-
-    .line 175
-    :pswitch_4
-    new-instance v4, Lcom/android/server/wifi/anqp/RoamingConsortiumElement;
-
-    invoke-direct {v4, p1, v0}, Lcom/android/server/wifi/anqp/RoamingConsortiumElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
-
-    return-object v4
-
-    .line 177
-    :pswitch_5
-    new-instance v4, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement;
-
-    invoke-direct {v4, p1, v0}, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
-
-    return-object v4
-
-    .line 179
-    :pswitch_6
-    new-instance v4, Lcom/android/server/wifi/anqp/NAIRealmElement;
-
-    invoke-direct {v4, p1, v0}, Lcom/android/server/wifi/anqp/NAIRealmElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
-
-    return-object v4
-
-    .line 181
-    :pswitch_7
-    new-instance v4, Lcom/android/server/wifi/anqp/ThreeGPPNetworkElement;
-
-    invoke-direct {v4, p1, v0}, Lcom/android/server/wifi/anqp/ThreeGPPNetworkElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
-
-    return-object v4
-
-    .line 183
-    :pswitch_8
-    new-instance v4, Lcom/android/server/wifi/anqp/GEOLocationElement;
-
-    invoke-direct {v4, p1, v0}, Lcom/android/server/wifi/anqp/GEOLocationElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
-
-    return-object v4
-
-    .line 185
-    :pswitch_9
-    new-instance v4, Lcom/android/server/wifi/anqp/CivicLocationElement;
-
-    invoke-direct {v4, p1, v0}, Lcom/android/server/wifi/anqp/CivicLocationElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
-
-    return-object v4
-
-    .line 187
-    :pswitch_a
-    new-instance v4, Lcom/android/server/wifi/anqp/GenericStringElement;
-
-    invoke-direct {v4, p1, v0}, Lcom/android/server/wifi/anqp/GenericStringElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
-
-    return-object v4
-
-    .line 189
-    :pswitch_b
-    new-instance v4, Lcom/android/server/wifi/anqp/DomainNameElement;
-
-    invoke-direct {v4, p1, v0}, Lcom/android/server/wifi/anqp/DomainNameElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
-
-    return-object v4
-
-    .line 191
-    :pswitch_c
-    new-instance v4, Lcom/android/server/wifi/anqp/GenericStringElement;
-
-    invoke-direct {v4, p1, v0}, Lcom/android/server/wifi/anqp/GenericStringElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
-
-    return-object v4
-
-    .line 193
-    :pswitch_d
-    new-instance v4, Lcom/android/server/wifi/anqp/GenericBlobElement;
-
-    invoke-direct {v4, p1, v0}, Lcom/android/server/wifi/anqp/GenericBlobElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
-
-    return-object v4
-
-    .line 195
-    :pswitch_e
-    new-instance v4, Lcom/android/server/wifi/anqp/GenericStringElement;
-
-    invoke-direct {v4, p1, v0}, Lcom/android/server/wifi/anqp/GenericStringElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
-
-    return-object v4
-
-    .line 197
-    :pswitch_f
-    new-instance v4, Lcom/android/server/wifi/anqp/GenericBlobElement;
-
-    invoke-direct {v4, p1, v0}, Lcom/android/server/wifi/anqp/GenericBlobElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
-
-    return-object v4
-
-    .line 199
-    :pswitch_10
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->remaining()I
-
-    move-result v4
-
-    const/4 v5, 0x5
-
-    if-le v4, v5, :cond_2
-
-    .line 200
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getInt()I
-
-    move-result v2
-
-    .line 201
-    .local v2, "oi":I
-    const v4, 0x119a6f50
-
-    if-eq v2, v4, :cond_0
-
-    .line 202
     return-object v6
 
-    .line 204
-    :cond_0
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->get()B
+    :pswitch_1
+    new-instance v6, Lcom/android/server/wifi/anqp/VenueNameElement;
+
+    invoke-direct {v6, p1, v2}, Lcom/android/server/wifi/anqp/VenueNameElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
+
+    return-object v6
+
+    :pswitch_2
+    new-instance v6, Lcom/android/server/wifi/anqp/EmergencyNumberElement;
+
+    invoke-direct {v6, p1, v2}, Lcom/android/server/wifi/anqp/EmergencyNumberElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
+
+    return-object v6
+
+    :pswitch_3
+    new-instance v6, Lcom/android/server/wifi/anqp/NetworkAuthenticationTypeElement;
+
+    invoke-direct {v6, p1, v2}, Lcom/android/server/wifi/anqp/NetworkAuthenticationTypeElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
+
+    return-object v6
+
+    :pswitch_4
+    new-instance v6, Lcom/android/server/wifi/anqp/RoamingConsortiumElement;
+
+    invoke-direct {v6, p1, v2}, Lcom/android/server/wifi/anqp/RoamingConsortiumElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
+
+    return-object v6
+
+    :pswitch_5
+    new-instance v6, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement;
+
+    invoke-direct {v6, p1, v2}, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
+
+    return-object v6
+
+    :pswitch_6
+    new-instance v6, Lcom/android/server/wifi/anqp/NAIRealmElement;
+
+    invoke-direct {v6, p1, v2}, Lcom/android/server/wifi/anqp/NAIRealmElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
+
+    return-object v6
+
+    :pswitch_7
+    new-instance v6, Lcom/android/server/wifi/anqp/ThreeGPPNetworkElement;
+
+    invoke-direct {v6, p1, v2}, Lcom/android/server/wifi/anqp/ThreeGPPNetworkElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
+
+    return-object v6
+
+    :pswitch_8
+    new-instance v6, Lcom/android/server/wifi/anqp/GEOLocationElement;
+
+    invoke-direct {v6, p1, v2}, Lcom/android/server/wifi/anqp/GEOLocationElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
+
+    return-object v6
+
+    :pswitch_9
+    new-instance v6, Lcom/android/server/wifi/anqp/CivicLocationElement;
+
+    invoke-direct {v6, p1, v2}, Lcom/android/server/wifi/anqp/CivicLocationElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
+
+    return-object v6
+
+    :pswitch_a
+    new-instance v6, Lcom/android/server/wifi/anqp/GenericStringElement;
+
+    invoke-direct {v6, p1, v2}, Lcom/android/server/wifi/anqp/GenericStringElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
+
+    return-object v6
+
+    :pswitch_b
+    new-instance v6, Lcom/android/server/wifi/anqp/DomainNameElement;
+
+    invoke-direct {v6, p1, v2}, Lcom/android/server/wifi/anqp/DomainNameElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
+
+    return-object v6
+
+    :pswitch_c
+    new-instance v6, Lcom/android/server/wifi/anqp/GenericStringElement;
+
+    invoke-direct {v6, p1, v2}, Lcom/android/server/wifi/anqp/GenericStringElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
+
+    return-object v6
+
+    :pswitch_d
+    new-instance v6, Lcom/android/server/wifi/anqp/GenericBlobElement;
+
+    invoke-direct {v6, p1, v2}, Lcom/android/server/wifi/anqp/GenericBlobElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
+
+    return-object v6
+
+    :pswitch_e
+    new-instance v6, Lcom/android/server/wifi/anqp/GenericStringElement;
+
+    invoke-direct {v6, p1, v2}, Lcom/android/server/wifi/anqp/GenericStringElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
+
+    return-object v6
+
+    :pswitch_f
+    new-instance v6, Lcom/android/server/wifi/anqp/GenericBlobElement;
+
+    invoke-direct {v6, p1, v2}, Lcom/android/server/wifi/anqp/GenericBlobElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
+
+    return-object v6
+
+    :pswitch_10
+    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->remaining()I
+
+    move-result v6
+
+    const/4 v7, 0x5
+
+    if-le v6, v7, :cond_2
+
+    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v4
 
-    and-int/lit16 v3, v4, 0xff
+    .local v4, "oi":I
+    const v6, 0x119a6f50
 
-    .line 205
-    .local v3, "subType":I
-    invoke-static {v3}, Lcom/android/server/wifi/anqp/Constants;->mapHS20Element(I)Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
+    if-eq v4, v6, :cond_0
 
-    move-result-object v1
+    return-object v8
 
-    .line 206
-    .local v1, "hs20ID":Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
-    if-nez v1, :cond_1
+    :cond_0
+    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->get()B
 
-    .line 207
-    new-instance v4, Ljava/net/ProtocolException;
+    move-result v6
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    and-int/lit16 v5, v6, 0xff
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+    .local v5, "subType":I
+    invoke-static {v5}, Lcom/android/server/wifi/anqp/Constants;->mapHS20Element(I)Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
-    const-string/jumbo v6, "Bad HS20 info ID: "
+    move-result-object v3
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .local v3, "hs20ID":Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
+    if-nez v3, :cond_1
 
-    move-result-object v5
+    new-instance v6, Ljava/net/ProtocolException;
 
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    move-result-object v5
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v8, "Bad HS20 info ID: "
 
-    move-result-object v5
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v4, v5}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
+    move-result-object v7
 
-    throw v4
+    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 209
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-direct {v6, v7}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
+
+    throw v6
+    :try_end_1
+    .catch Ljava/net/ProtocolException; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+
+    .end local v2    # "elementPayload":Ljava/nio/ByteBuffer;
+    .end local v3    # "hs20ID":Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
+    .end local v4    # "oi":I
+    .end local v5    # "subType":I
+    :catch_1
+    move-exception v0
+
+    .local v0, "e":Ljava/lang/Exception;
+    new-instance v6, Ljava/net/ProtocolException;
+
+    const-string v7, "Unknown parsing error"
+
+    invoke-direct {v6, v7, v0}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v6
+
+    .end local v0    # "e":Ljava/lang/Exception;
+    .restart local v2    # "elementPayload":Ljava/nio/ByteBuffer;
+    .restart local v3    # "hs20ID":Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
+    .restart local v4    # "oi":I
+    .restart local v5    # "subType":I
     :cond_1
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->get()B
+    :try_start_2
+    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->get()B
 
-    .line 210
-    invoke-static {v1, v0}, Lcom/android/server/wifi/anqp/ANQPFactory;->buildHS20Element(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)Lcom/android/server/wifi/anqp/ANQPElement;
+    invoke-static {v3, v2}, Lcom/android/server/wifi/anqp/ANQPFactory;->buildHS20Element(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)Lcom/android/server/wifi/anqp/ANQPElement;
 
-    move-result-object v4
+    move-result-object v6
 
-    return-object v4
+    return-object v6
 
-    .line 212
-    .end local v1    # "hs20ID":Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
-    .end local v2    # "oi":I
-    .end local v3    # "subType":I
+    .end local v3    # "hs20ID":Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
+    .end local v4    # "oi":I
+    .end local v5    # "subType":I
     :cond_2
-    new-instance v4, Lcom/android/server/wifi/anqp/GenericBlobElement;
+    new-instance v6, Lcom/android/server/wifi/anqp/GenericBlobElement;
 
-    invoke-direct {v4, p1, v0}, Lcom/android/server/wifi/anqp/GenericBlobElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
+    invoke-direct {v6, p1, v2}, Lcom/android/server/wifi/anqp/GenericBlobElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
+    :try_end_2
+    .catch Ljava/net/ProtocolException; {:try_start_2 .. :try_end_2} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    return-object v4
+    return-object v6
 
-    .line 165
     nop
 
     :pswitch_data_0
@@ -1151,7 +1130,7 @@
 .end method
 
 .method public static buildHS20Element(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)Lcom/android/server/wifi/anqp/ANQPElement;
-    .locals 2
+    .locals 4
     .param p0, "infoID"    # Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
     .param p1, "payload"    # Ljava/nio/ByteBuffer;
     .annotation system Ldalvik/annotation/Throws;
@@ -1161,81 +1140,94 @@
     .end annotation
 
     .prologue
-    .line 221
+    :try_start_0
     invoke-static {}, Lcom/android/server/wifi/anqp/ANQPFactory;->-getcom_android_server_wifi_anqp_Constants$ANQPElementTypeSwitchesValues()[I
 
-    move-result-object v0
+    move-result-object v2
 
     invoke-virtual {p0}, Lcom/android/server/wifi/anqp/Constants$ANQPElementType;->ordinal()I
 
-    move-result v1
+    move-result v3
 
-    aget v0, v0, v1
+    aget v2, v2, v3
 
-    packed-switch v0, :pswitch_data_0
+    packed-switch v2, :pswitch_data_0
 
-    .line 237
-    const/4 v0, 0x0
+    const/4 v2, 0x0
 
-    return-object v0
+    return-object v2
 
-    .line 223
     :pswitch_0
-    new-instance v0, Lcom/android/server/wifi/anqp/HSCapabilityListElement;
+    new-instance v2, Lcom/android/server/wifi/anqp/HSCapabilityListElement;
 
-    invoke-direct {v0, p0, p1}, Lcom/android/server/wifi/anqp/HSCapabilityListElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
+    invoke-direct {v2, p0, p1}, Lcom/android/server/wifi/anqp/HSCapabilityListElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
 
-    return-object v0
+    return-object v2
 
-    .line 225
     :pswitch_1
-    new-instance v0, Lcom/android/server/wifi/anqp/HSFriendlyNameElement;
+    new-instance v2, Lcom/android/server/wifi/anqp/HSFriendlyNameElement;
 
-    invoke-direct {v0, p0, p1}, Lcom/android/server/wifi/anqp/HSFriendlyNameElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
+    invoke-direct {v2, p0, p1}, Lcom/android/server/wifi/anqp/HSFriendlyNameElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
 
-    return-object v0
+    return-object v2
 
-    .line 227
     :pswitch_2
-    new-instance v0, Lcom/android/server/wifi/anqp/HSWanMetricsElement;
+    new-instance v2, Lcom/android/server/wifi/anqp/HSWanMetricsElement;
 
-    invoke-direct {v0, p0, p1}, Lcom/android/server/wifi/anqp/HSWanMetricsElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
+    invoke-direct {v2, p0, p1}, Lcom/android/server/wifi/anqp/HSWanMetricsElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
 
-    return-object v0
+    return-object v2
 
-    .line 229
     :pswitch_3
-    new-instance v0, Lcom/android/server/wifi/anqp/HSConnectionCapabilityElement;
+    new-instance v2, Lcom/android/server/wifi/anqp/HSConnectionCapabilityElement;
 
-    invoke-direct {v0, p0, p1}, Lcom/android/server/wifi/anqp/HSConnectionCapabilityElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
+    invoke-direct {v2, p0, p1}, Lcom/android/server/wifi/anqp/HSConnectionCapabilityElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
 
-    return-object v0
+    return-object v2
 
-    .line 231
     :pswitch_4
-    new-instance v0, Lcom/android/server/wifi/anqp/GenericBlobElement;
+    new-instance v2, Lcom/android/server/wifi/anqp/GenericBlobElement;
 
-    invoke-direct {v0, p0, p1}, Lcom/android/server/wifi/anqp/GenericBlobElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
+    invoke-direct {v2, p0, p1}, Lcom/android/server/wifi/anqp/GenericBlobElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
 
-    return-object v0
+    return-object v2
 
-    .line 233
     :pswitch_5
-    new-instance v0, Lcom/android/server/wifi/anqp/HSOsuProvidersElement;
+    new-instance v2, Lcom/android/server/wifi/anqp/HSOsuProvidersElement;
 
-    invoke-direct {v0, p0, p1}, Lcom/android/server/wifi/anqp/HSOsuProvidersElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
+    invoke-direct {v2, p0, p1}, Lcom/android/server/wifi/anqp/HSOsuProvidersElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
 
-    return-object v0
+    return-object v2
 
-    .line 235
     :pswitch_6
-    new-instance v0, Lcom/android/server/wifi/anqp/HSIconFileElement;
+    new-instance v2, Lcom/android/server/wifi/anqp/HSIconFileElement;
 
-    invoke-direct {v0, p0, p1}, Lcom/android/server/wifi/anqp/HSIconFileElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
+    invoke-direct {v2, p0, p1}, Lcom/android/server/wifi/anqp/HSIconFileElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Ljava/nio/ByteBuffer;)V
+    :try_end_0
+    .catch Ljava/net/ProtocolException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-object v0
+    return-object v2
 
-    .line 221
+    :catch_0
+    move-exception v0
+
+    .local v0, "e":Ljava/lang/Exception;
+    new-instance v2, Ljava/net/ProtocolException;
+
+    const-string v3, "Unknown parsing error"
+
+    invoke-direct {v2, v3, v0}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v2
+
+    .end local v0    # "e":Ljava/lang/Exception;
+    :catch_1
+    move-exception v1
+
+    .local v1, "e":Ljava/net/ProtocolException;
+    throw v1
+
     nop
 
     :pswitch_data_0
@@ -1270,39 +1262,31 @@
     .local p0, "realmNames":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v5, 0x0
 
-    .line 93
     sget-object v4, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
 
     invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    .line 94
     const/16 v4, -0x2223
 
     invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 95
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v0
 
-    .line 96
     .local v0, "lenPos":I
     invoke-virtual {p1, v5}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 98
     const v4, 0x119a6f50
 
     invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 99
     const/4 v4, 0x6
 
     invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 100
     invoke-virtual {p1, v5}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 102
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v4
@@ -1311,7 +1295,6 @@
 
     invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 103
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -1330,20 +1313,17 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 104
     .local v2, "realmName":Ljava/lang/String;
     const/4 v4, 0x1
 
     invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 105
     sget-object v4, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
     invoke-virtual {v2, v4}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
     move-result-object v1
 
-    .line 106
     .local v1, "octets":[B
     array-length v4, v1
 
@@ -1351,12 +1331,10 @@
 
     invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 107
     invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
     goto :goto_0
 
-    .line 109
     .end local v1    # "octets":[B
     .end local v2    # "realmName":Ljava/lang/String;
     :cond_0
@@ -1372,10 +1350,8 @@
 
     invoke-virtual {p1, v0, v4}, Ljava/nio/ByteBuffer;->putShort(IS)Ljava/nio/ByteBuffer;
 
-    .line 111
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
 
-    .line 112
     return-object p1
 .end method
 
@@ -1387,39 +1363,31 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 116
     sget-object v1, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
 
     invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    .line 117
     const/16 v1, -0x2223
 
     invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 118
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v0
 
-    .line 119
     .local v0, "lenPos":I
     invoke-virtual {p1, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 121
     const v1, 0x119a6f50
 
     invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 122
     const/16 v1, 0xa
 
     invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 123
     invoke-virtual {p1, v2}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 125
     sget-object v1, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
@@ -1428,7 +1396,6 @@
 
     invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 126
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v1
@@ -1441,10 +1408,8 @@
 
     invoke-virtual {p1, v0, v1}, Ljava/nio/ByteBuffer;->putShort(IS)Ljava/nio/ByteBuffer;
 
-    .line 128
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
 
-    .line 129
     return-object p1
 .end method
 
@@ -1468,41 +1433,33 @@
     .local p0, "elements":Ljava/util/Set;, "Ljava/util/Set<Lcom/android/server/wifi/anqp/Constants$ANQPElementType;>;"
     const/4 v7, 0x0
 
-    .line 44
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 45
     .local v4, "list":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/wifi/anqp/Constants$ANQPElementType;>;"
     invoke-static {v4}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
-    .line 47
     invoke-interface {v4}, Ljava/util/List;->listIterator()Ljava/util/ListIterator;
 
     move-result-object v0
 
-    .line 49
     .local v0, "elementIterator":Ljava/util/ListIterator;, "Ljava/util/ListIterator<Lcom/android/server/wifi/anqp/Constants$ANQPElementType;>;"
     sget-object v6, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
 
     invoke-virtual {p1, v6}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    .line 50
     const/16 v6, 0x100
 
     invoke-virtual {p1, v6}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 51
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v3
 
-    .line 52
     .local v3, "lenPos":I
     invoke-virtual {p1, v7}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 54
     :goto_0
     invoke-interface {v0}, Ljava/util/ListIterator;->hasNext()Z
 
@@ -1510,7 +1467,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 55
     invoke-interface {v0}, Ljava/util/ListIterator;->next()Ljava/lang/Object;
 
     move-result-object v6
@@ -1521,11 +1477,9 @@
 
     move-result-object v2
 
-    .line 56
     .local v2, "id":Ljava/lang/Integer;
     if-eqz v2, :cond_0
 
-    .line 57
     invoke-virtual {v2}, Ljava/lang/Integer;->shortValue()S
 
     move-result v6
@@ -1534,11 +1488,9 @@
 
     goto :goto_0
 
-    .line 59
     :cond_0
     invoke-interface {v0}, Ljava/util/ListIterator;->previous()Ljava/lang/Object;
 
-    .line 63
     .end local v2    # "id":Ljava/lang/Integer;
     :cond_1
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->position()I
@@ -1553,41 +1505,33 @@
 
     invoke-virtual {p1, v3, v6}, Ljava/nio/ByteBuffer;->putShort(IS)Ljava/nio/ByteBuffer;
 
-    .line 66
     invoke-interface {v0}, Ljava/util/ListIterator;->hasNext()Z
 
     move-result v6
 
     if-eqz v6, :cond_4
 
-    .line 67
     const/16 v6, -0x2223
 
     invoke-virtual {p1, v6}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 68
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v5
 
-    .line 69
     .local v5, "vsLenPos":I
     invoke-virtual {p1, v7}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 71
     const v6, 0x119a6f50
 
     invoke-virtual {p1, v6}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 72
     const/4 v6, 0x1
 
     invoke-virtual {p1, v6}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 73
     invoke-virtual {p1, v7}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 75
     :goto_1
     invoke-interface {v0}, Ljava/util/ListIterator;->hasNext()Z
 
@@ -1595,31 +1539,27 @@
 
     if-eqz v6, :cond_3
 
-    .line 76
     invoke-interface {v0}, Ljava/util/ListIterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
-    .line 77
     .local v1, "elementType":Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
     invoke-static {v1}, Lcom/android/server/wifi/anqp/Constants;->getHS20ElementID(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;)Ljava/lang/Integer;
 
     move-result-object v2
 
-    .line 78
     .restart local v2    # "id":Ljava/lang/Integer;
     if-nez v2, :cond_2
 
-    .line 79
     new-instance v6, Ljava/lang/RuntimeException;
 
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "Unmapped ANQPElementType: "
+    const-string v8, "Unmapped ANQPElementType: "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1637,7 +1577,6 @@
 
     throw v6
 
-    .line 81
     :cond_2
     invoke-virtual {v2}, Ljava/lang/Integer;->byteValue()B
 
@@ -1647,7 +1586,6 @@
 
     goto :goto_1
 
-    .line 85
     .end local v1    # "elementType":Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
     .end local v2    # "id":Ljava/lang/Integer;
     :cond_3
@@ -1661,15 +1599,12 @@
 
     int-to-short v6, v6
 
-    .line 84
     invoke-virtual {p1, v5, v6}, Ljava/nio/ByteBuffer;->putShort(IS)Ljava/nio/ByteBuffer;
 
-    .line 88
     .end local v5    # "vsLenPos":I
     :cond_4
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
 
-    .line 89
     return-object p1
 .end method
 
@@ -1677,7 +1612,6 @@
     .locals 1
 
     .prologue
-    .line 35
     sget-object v0, Lcom/android/server/wifi/anqp/ANQPFactory;->BaseANQPSet:[Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
     return-object v0
@@ -1687,7 +1621,6 @@
     .locals 1
 
     .prologue
-    .line 39
     sget-object v0, Lcom/android/server/wifi/anqp/ANQPFactory;->HS20ANQPSet:[Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
     return-object v0
@@ -1715,17 +1648,14 @@
     .end annotation
 
     .prologue
-    .line 133
     sget-object v1, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
 
     invoke-virtual {p0, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    .line 134
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 135
     .local v0, "elements":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/wifi/anqp/ANQPElement;>;"
     :goto_0
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->hasRemaining()Z
@@ -1734,7 +1664,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 136
     invoke-static {p0}, Lcom/android/server/wifi/anqp/ANQPFactory;->buildElement(Ljava/nio/ByteBuffer;)Lcom/android/server/wifi/anqp/ANQPElement;
 
     move-result-object v1
@@ -1743,7 +1672,6 @@
 
     goto :goto_0
 
-    .line 138
     :cond_0
     return-object v0
 .end method

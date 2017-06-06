@@ -31,7 +31,7 @@
     .end annotation
 .end method
 
-.method public abstract onAuthenticationSucceeded(JLandroid/hardware/fingerprint/Fingerprint;)V
+.method public abstract onAuthenticationSucceeded(JLandroid/hardware/fingerprint/Fingerprint;I)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

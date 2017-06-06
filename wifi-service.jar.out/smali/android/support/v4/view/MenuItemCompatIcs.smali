@@ -17,7 +17,6 @@
     .locals 0
 
     .prologue
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,7 +27,6 @@
     .param p0, "item"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 28
     invoke-interface {p0}, Landroid/view/MenuItem;->collapseActionView()Z
 
     move-result v0
@@ -41,7 +39,6 @@
     .param p0, "item"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 24
     invoke-interface {p0}, Landroid/view/MenuItem;->expandActionView()Z
 
     move-result v0
@@ -54,7 +51,6 @@
     .param p0, "item"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 32
     invoke-interface {p0}, Landroid/view/MenuItem;->isActionViewExpanded()Z
 
     move-result v0
@@ -68,7 +64,6 @@
     .param p1, "listener"    # Landroid/support/v4/view/MenuItemCompatIcs$SupportActionExpandProxy;
 
     .prologue
-    .line 37
     new-instance v0, Landroid/support/v4/view/MenuItemCompatIcs$OnActionExpandListenerWrapper;
 
     invoke-direct {v0, p1}, Landroid/support/v4/view/MenuItemCompatIcs$OnActionExpandListenerWrapper;-><init>(Landroid/support/v4/view/MenuItemCompatIcs$SupportActionExpandProxy;)V

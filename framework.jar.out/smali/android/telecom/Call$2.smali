@@ -36,7 +36,6 @@
     .param p4, "val$newParent"    # Landroid/telecom/Call;
 
     .prologue
-    .line 1297
     iput-object p1, p0, Landroid/telecom/Call$2;->this$0:Landroid/telecom/Call;
 
     iput-object p2, p0, Landroid/telecom/Call$2;->val$callback:Landroid/telecom/Call$Callback;
@@ -56,7 +55,6 @@
     .locals 3
 
     .prologue
-    .line 1300
     iget-object v0, p0, Landroid/telecom/Call$2;->val$callback:Landroid/telecom/Call$Callback;
 
     iget-object v1, p0, Landroid/telecom/Call$2;->val$call:Landroid/telecom/Call;
@@ -65,6 +63,5 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/telecom/Call$Callback;->onParentChanged(Landroid/telecom/Call;Landroid/telecom/Call;)V
 
-    .line 1299
     return-void
 .end method

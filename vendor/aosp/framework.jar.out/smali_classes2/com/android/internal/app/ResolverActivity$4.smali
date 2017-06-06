@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/internal/app/ResolverActivity;
 
     .prologue
-    .line 330
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$4;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 333
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$4;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-static {v1}, Lcom/android/internal/app/ResolverActivity;->-get0(Lcom/android/internal/app/ResolverActivity;)Lcom/android/internal/app/ResolverActivity$ResolveListAdapter;
@@ -53,14 +51,11 @@
 
     move-result-object v0
 
-    .line 334
     .local v0, "dri":Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
     if-nez v0, :cond_0
 
-    .line 335
     return-void
 
-    .line 339
     :cond_0
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$4;->this$0:Lcom/android/internal/app/ResolverActivity;
 
@@ -68,18 +63,15 @@
 
     invoke-static {v1, v2}, Lcom/android/internal/app/ResolverActivity;->-set2(Lcom/android/internal/app/ResolverActivity;I)I
 
-    .line 341
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$4;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v0, v2}, Lcom/android/internal/app/ResolverActivity;->onTargetSelected(Lcom/android/internal/app/ResolverActivity$TargetInfo;Z)Z
 
-    .line 342
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$4;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-virtual {v1}, Lcom/android/internal/app/ResolverActivity;->finish()V
 
-    .line 332
     return-void
 .end method

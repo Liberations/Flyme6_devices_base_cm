@@ -60,10 +60,9 @@
 
     const/4 v3, 0x0
 
-    .line 35
     new-instance v0, Lcom/android/internal/telephony/Call$State;
 
-    const-string/jumbo v1, "IDLE"
+    const-string v1, "IDLE"
 
     invoke-direct {v0, v1, v3}, Lcom/android/internal/telephony/Call$State;-><init>(Ljava/lang/String;I)V
 
@@ -71,7 +70,7 @@
 
     new-instance v0, Lcom/android/internal/telephony/Call$State;
 
-    const-string/jumbo v1, "ACTIVE"
+    const-string v1, "ACTIVE"
 
     invoke-direct {v0, v1, v4}, Lcom/android/internal/telephony/Call$State;-><init>(Ljava/lang/String;I)V
 
@@ -79,7 +78,7 @@
 
     new-instance v0, Lcom/android/internal/telephony/Call$State;
 
-    const-string/jumbo v1, "HOLDING"
+    const-string v1, "HOLDING"
 
     invoke-direct {v0, v1, v5}, Lcom/android/internal/telephony/Call$State;-><init>(Ljava/lang/String;I)V
 
@@ -87,7 +86,7 @@
 
     new-instance v0, Lcom/android/internal/telephony/Call$State;
 
-    const-string/jumbo v1, "DIALING"
+    const-string v1, "DIALING"
 
     invoke-direct {v0, v1, v6}, Lcom/android/internal/telephony/Call$State;-><init>(Ljava/lang/String;I)V
 
@@ -95,7 +94,7 @@
 
     new-instance v0, Lcom/android/internal/telephony/Call$State;
 
-    const-string/jumbo v1, "ALERTING"
+    const-string v1, "ALERTING"
 
     invoke-direct {v0, v1, v7}, Lcom/android/internal/telephony/Call$State;-><init>(Ljava/lang/String;I)V
 
@@ -103,7 +102,7 @@
 
     new-instance v0, Lcom/android/internal/telephony/Call$State;
 
-    const-string/jumbo v1, "INCOMING"
+    const-string v1, "INCOMING"
 
     const/4 v2, 0x5
 
@@ -113,7 +112,7 @@
 
     new-instance v0, Lcom/android/internal/telephony/Call$State;
 
-    const-string/jumbo v1, "WAITING"
+    const-string v1, "WAITING"
 
     const/4 v2, 0x6
 
@@ -123,7 +122,7 @@
 
     new-instance v0, Lcom/android/internal/telephony/Call$State;
 
-    const-string/jumbo v1, "DISCONNECTED"
+    const-string v1, "DISCONNECTED"
 
     const/4 v2, 0x7
 
@@ -133,7 +132,7 @@
 
     new-instance v0, Lcom/android/internal/telephony/Call$State;
 
-    const-string/jumbo v1, "DISCONNECTING"
+    const-string v1, "DISCONNECTING"
 
     const/16 v2, 0x8
 
@@ -141,7 +140,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/Call$State;->DISCONNECTING:Lcom/android/internal/telephony/Call$State;
 
-    .line 34
     const/16 v0, 0x9
 
     new-array v0, v0, [Lcom/android/internal/telephony/Call$State;
@@ -199,7 +197,6 @@
     .locals 0
 
     .prologue
-    .line 34
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -210,7 +207,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 34
     const-class v0, Lcom/android/internal/telephony/Call$State;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -226,7 +222,6 @@
     .locals 1
 
     .prologue
-    .line 34
     sget-object v0, Lcom/android/internal/telephony/Call$State;->$VALUES:[Lcom/android/internal/telephony/Call$State;
 
     return-object v0
@@ -240,7 +235,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 38
     sget-object v1, Lcom/android/internal/telephony/Call$State;->IDLE:Lcom/android/internal/telephony/Call$State;
 
     if-eq p0, v1, :cond_0
@@ -265,7 +259,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 46
     sget-object v1, Lcom/android/internal/telephony/Call$State;->DIALING:Lcom/android/internal/telephony/Call$State;
 
     if-eq p0, v1, :cond_0
@@ -290,7 +283,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 42
     sget-object v1, Lcom/android/internal/telephony/Call$State;->INCOMING:Lcom/android/internal/telephony/Call$State;
 
     if-eq p0, v1, :cond_0

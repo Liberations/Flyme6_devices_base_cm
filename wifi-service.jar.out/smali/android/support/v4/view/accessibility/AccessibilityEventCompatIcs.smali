@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,13 +19,11 @@
     .param p1, "record"    # Ljava/lang/Object;
 
     .prologue
-    .line 32
     check-cast p1, Landroid/view/accessibility/AccessibilityRecord;
 
     .end local p1    # "record":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityEvent;->appendRecord(Landroid/view/accessibility/AccessibilityRecord;)V
 
-    .line 31
     return-void
 .end method
 
@@ -36,7 +33,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 36
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityEvent;->getRecord(I)Landroid/view/accessibility/AccessibilityRecord;
 
     move-result-object v0
@@ -49,7 +45,6 @@
     .param p0, "event"    # Landroid/view/accessibility/AccessibilityEvent;
 
     .prologue
-    .line 28
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityEvent;->getRecordCount()I
 
     move-result v0
@@ -63,9 +58,7 @@
     .param p1, "scrollable"    # Z
 
     .prologue
-    .line 40
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityEvent;->setScrollable(Z)V
 
-    .line 39
     return-void
 .end method

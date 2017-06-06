@@ -33,7 +33,6 @@
     .param p3, "val$sharedElementBundle"    # Landroid/os/Bundle;
 
     .prologue
-    .line 426
     iput-object p1, p0, Landroid/app/ExitTransitionCoordinator$11;->this$0:Landroid/app/ExitTransitionCoordinator;
 
     iput-object p2, p0, Landroid/app/ExitTransitionCoordinator$11;->val$resultReceiver:Landroid/os/ResultReceiver;
@@ -51,22 +50,17 @@
     .locals 3
 
     .prologue
-    .line 429
     iget-object v0, p0, Landroid/app/ExitTransitionCoordinator$11;->val$resultReceiver:Landroid/os/ResultReceiver;
 
-    .line 430
     iget-object v1, p0, Landroid/app/ExitTransitionCoordinator$11;->val$sharedElementBundle:Landroid/os/Bundle;
 
-    .line 429
     const/16 v2, 0x67
 
     invoke-virtual {v0, v2, v1}, Landroid/os/ResultReceiver;->send(ILandroid/os/Bundle;)V
 
-    .line 431
     iget-object v0, p0, Landroid/app/ExitTransitionCoordinator$11;->this$0:Landroid/app/ExitTransitionCoordinator;
 
     invoke-static {v0}, Landroid/app/ExitTransitionCoordinator;->-wrap4(Landroid/app/ExitTransitionCoordinator;)V
 
-    .line 428
     return-void
 .end method

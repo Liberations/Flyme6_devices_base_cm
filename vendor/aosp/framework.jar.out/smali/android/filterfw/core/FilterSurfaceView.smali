@@ -35,22 +35,18 @@
     .locals 1
 
     .prologue
-    .line 30
     const/4 v0, 0x0
 
     sput v0, Landroid/filterfw/core/FilterSurfaceView;->STATE_ALLOCATED:I
 
-    .line 31
     const/4 v0, 0x1
 
     sput v0, Landroid/filterfw/core/FilterSurfaceView;->STATE_CREATED:I
 
-    .line 32
     const/4 v0, 0x2
 
     sput v0, Landroid/filterfw/core/FilterSurfaceView;->STATE_INITIALIZED:I
 
-    .line 28
     return-void
 .end method
 
@@ -59,27 +55,22 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 43
     invoke-direct {p0, p1}, Landroid/view/SurfaceView;-><init>(Landroid/content/Context;)V
 
-    .line 34
     sget v0, Landroid/filterfw/core/FilterSurfaceView;->STATE_ALLOCATED:I
 
     iput v0, p0, Landroid/filterfw/core/FilterSurfaceView;->mState:I
 
-    .line 40
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/filterfw/core/FilterSurfaceView;->mSurfaceId:I
 
-    .line 44
     invoke-virtual {p0}, Landroid/filterfw/core/FilterSurfaceView;->getHolder()Landroid/view/SurfaceHolder;
 
     move-result-object v0
 
     invoke-interface {v0, p0}, Landroid/view/SurfaceHolder;->addCallback(Landroid/view/SurfaceHolder$Callback;)V
 
-    .line 42
     return-void
 .end method
 
@@ -89,27 +80,22 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 48
     invoke-direct {p0, p1, p2}, Landroid/view/SurfaceView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 34
     sget v0, Landroid/filterfw/core/FilterSurfaceView;->STATE_ALLOCATED:I
 
     iput v0, p0, Landroid/filterfw/core/FilterSurfaceView;->mState:I
 
-    .line 40
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/filterfw/core/FilterSurfaceView;->mSurfaceId:I
 
-    .line 49
     invoke-virtual {p0}, Landroid/filterfw/core/FilterSurfaceView;->getHolder()Landroid/view/SurfaceHolder;
 
     move-result-object v0
 
     invoke-interface {v0, p0}, Landroid/view/SurfaceHolder;->addCallback(Landroid/view/SurfaceHolder$Callback;)V
 
-    .line 47
     return-void
 .end method
 
@@ -117,7 +103,6 @@
     .locals 3
 
     .prologue
-    .line 145
     iget-object v0, p0, Landroid/filterfw/core/FilterSurfaceView;->mGLEnv:Landroid/filterfw/core/GLEnvironment;
 
     invoke-virtual {p0}, Landroid/filterfw/core/FilterSurfaceView;->getHolder()Landroid/view/SurfaceHolder;
@@ -134,19 +119,17 @@
 
     iput v0, p0, Landroid/filterfw/core/FilterSurfaceView;->mSurfaceId:I
 
-    .line 146
     iget v0, p0, Landroid/filterfw/core/FilterSurfaceView;->mSurfaceId:I
 
     if-gez v0, :cond_0
 
-    .line 147
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Could not register Surface: "
+    const-string v2, "Could not register Surface: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -164,10 +147,8 @@
 
     move-result-object v1
 
-    .line 148
-    const-string/jumbo v2, " in FilterSurfaceView!"
+    const-string v2, " in FilterSurfaceView!"
 
-    .line 147
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -180,7 +161,6 @@
 
     throw v0
 
-    .line 144
     :cond_0
     return-void
 .end method
@@ -189,7 +169,6 @@
     .locals 2
 
     .prologue
-    .line 152
     iget-object v0, p0, Landroid/filterfw/core/FilterSurfaceView;->mGLEnv:Landroid/filterfw/core/GLEnvironment;
 
     if-eqz v0, :cond_0
@@ -198,14 +177,12 @@
 
     if-lez v0, :cond_0
 
-    .line 153
     iget-object v0, p0, Landroid/filterfw/core/FilterSurfaceView;->mGLEnv:Landroid/filterfw/core/GLEnvironment;
 
     iget v1, p0, Landroid/filterfw/core/FilterSurfaceView;->mSurfaceId:I
 
     invoke-virtual {v0, v1}, Landroid/filterfw/core/GLEnvironment;->unregisterSurfaceId(I)V
 
-    .line 151
     :cond_0
     return-void
 .end method
@@ -220,14 +197,12 @@
     .prologue
     monitor-enter p0
 
-    .line 54
     if-nez p1, :cond_0
 
-    .line 55
     :try_start_0
     new-instance v0, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v1, "Attempting to bind null filter to SurfaceView!"
+    const-string v1, "Attempting to bind null filter to SurfaceView!"
 
     invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
@@ -242,7 +217,6 @@
 
     throw v0
 
-    .line 56
     :cond_0
     :try_start_1
     iget-object v0, p0, Landroid/filterfw/core/FilterSurfaceView;->mListener:Landroid/view/SurfaceHolder$Callback;
@@ -253,15 +227,13 @@
 
     if-eq v0, p1, :cond_1
 
-    .line 57
     new-instance v0, Ljava/lang/RuntimeException;
 
-    .line 58
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Attempting to bind filter "
+    const-string v2, "Attempting to bind filter "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -271,32 +243,26 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, " to SurfaceView with another open "
+    const-string v2, " to SurfaceView with another open "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 59
-    const-string/jumbo v2, "filter "
+    const-string v2, "filter "
 
-    .line 58
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 59
     iget-object v2, p0, Landroid/filterfw/core/FilterSurfaceView;->mListener:Landroid/view/SurfaceHolder$Callback;
 
-    .line 58
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 59
-    const-string/jumbo v2, " attached already!"
+    const-string v2, " attached already!"
 
-    .line 58
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -305,16 +271,13 @@
 
     move-result-object v1
 
-    .line 57
     invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 63
     :cond_1
     iput-object p1, p0, Landroid/filterfw/core/FilterSurfaceView;->mListener:Landroid/view/SurfaceHolder$Callback;
 
-    .line 66
     iget-object v0, p0, Landroid/filterfw/core/FilterSurfaceView;->mGLEnv:Landroid/filterfw/core/GLEnvironment;
 
     if-eqz v0, :cond_2
@@ -323,28 +286,23 @@
 
     if-eq v0, p2, :cond_2
 
-    .line 67
     iget-object v0, p0, Landroid/filterfw/core/FilterSurfaceView;->mGLEnv:Landroid/filterfw/core/GLEnvironment;
 
     iget v1, p0, Landroid/filterfw/core/FilterSurfaceView;->mSurfaceId:I
 
     invoke-virtual {v0, v1}, Landroid/filterfw/core/GLEnvironment;->unregisterSurfaceId(I)V
 
-    .line 69
     :cond_2
     iput-object p2, p0, Landroid/filterfw/core/FilterSurfaceView;->mGLEnv:Landroid/filterfw/core/GLEnvironment;
 
-    .line 72
     iget v0, p0, Landroid/filterfw/core/FilterSurfaceView;->mState:I
 
     sget v1, Landroid/filterfw/core/FilterSurfaceView;->STATE_CREATED:I
 
     if-lt v0, v1, :cond_3
 
-    .line 75
     invoke-direct {p0}, Landroid/filterfw/core/FilterSurfaceView;->registerSurface()V
 
-    .line 78
     iget-object v0, p0, Landroid/filterfw/core/FilterSurfaceView;->mListener:Landroid/view/SurfaceHolder$Callback;
 
     invoke-virtual {p0}, Landroid/filterfw/core/FilterSurfaceView;->getHolder()Landroid/view/SurfaceHolder;
@@ -353,14 +311,12 @@
 
     invoke-interface {v0, v1}, Landroid/view/SurfaceHolder$Callback;->surfaceCreated(Landroid/view/SurfaceHolder;)V
 
-    .line 81
     iget v0, p0, Landroid/filterfw/core/FilterSurfaceView;->mState:I
 
     sget v1, Landroid/filterfw/core/FilterSurfaceView;->STATE_INITIALIZED:I
 
     if-ne v0, v1, :cond_3
 
-    .line 82
     iget-object v0, p0, Landroid/filterfw/core/FilterSurfaceView;->mListener:Landroid/view/SurfaceHolder$Callback;
 
     invoke-virtual {p0}, Landroid/filterfw/core/FilterSurfaceView;->getHolder()Landroid/view/SurfaceHolder;
@@ -380,7 +336,6 @@
     :cond_3
     monitor-exit p0
 
-    .line 52
     return-void
 .end method
 
@@ -390,7 +345,6 @@
     .prologue
     monitor-enter p0
 
-    .line 96
     :try_start_0
     iget-object v0, p0, Landroid/filterfw/core/FilterSurfaceView;->mGLEnv:Landroid/filterfw/core/GLEnvironment;
     :try_end_0
@@ -414,7 +368,6 @@
     .prologue
     monitor-enter p0
 
-    .line 92
     :try_start_0
     iget v0, p0, Landroid/filterfw/core/FilterSurfaceView;->mSurfaceId:I
     :try_end_0
@@ -442,27 +395,21 @@
     .prologue
     monitor-enter p0
 
-    .line 120
     :try_start_0
     iput p2, p0, Landroid/filterfw/core/FilterSurfaceView;->mFormat:I
 
-    .line 121
     iput p3, p0, Landroid/filterfw/core/FilterSurfaceView;->mWidth:I
 
-    .line 122
     iput p4, p0, Landroid/filterfw/core/FilterSurfaceView;->mHeight:I
 
-    .line 123
     sget v0, Landroid/filterfw/core/FilterSurfaceView;->STATE_INITIALIZED:I
 
     iput v0, p0, Landroid/filterfw/core/FilterSurfaceView;->mState:I
 
-    .line 126
     iget-object v0, p0, Landroid/filterfw/core/FilterSurfaceView;->mListener:Landroid/view/SurfaceHolder$Callback;
 
     if-eqz v0, :cond_0
 
-    .line 127
     iget-object v0, p0, Landroid/filterfw/core/FilterSurfaceView;->mListener:Landroid/view/SurfaceHolder$Callback;
 
     invoke-interface {v0, p1, p2, p3, p4}, Landroid/view/SurfaceHolder$Callback;->surfaceChanged(Landroid/view/SurfaceHolder;III)V
@@ -472,7 +419,6 @@
     :cond_0
     monitor-exit p0
 
-    .line 118
     return-void
 
     :catchall_0
@@ -490,27 +436,22 @@
     .prologue
     monitor-enter p0
 
-    .line 101
     :try_start_0
     sget v0, Landroid/filterfw/core/FilterSurfaceView;->STATE_CREATED:I
 
     iput v0, p0, Landroid/filterfw/core/FilterSurfaceView;->mState:I
 
-    .line 104
     iget-object v0, p0, Landroid/filterfw/core/FilterSurfaceView;->mGLEnv:Landroid/filterfw/core/GLEnvironment;
 
     if-eqz v0, :cond_0
 
-    .line 105
     invoke-direct {p0}, Landroid/filterfw/core/FilterSurfaceView;->registerSurface()V
 
-    .line 109
     :cond_0
     iget-object v0, p0, Landroid/filterfw/core/FilterSurfaceView;->mListener:Landroid/view/SurfaceHolder$Callback;
 
     if-eqz v0, :cond_1
 
-    .line 110
     iget-object v0, p0, Landroid/filterfw/core/FilterSurfaceView;->mListener:Landroid/view/SurfaceHolder$Callback;
 
     invoke-interface {v0, p1}, Landroid/view/SurfaceHolder$Callback;->surfaceCreated(Landroid/view/SurfaceHolder;)V
@@ -520,7 +461,6 @@
     :cond_1
     monitor-exit p0
 
-    .line 100
     return-void
 
     :catchall_0
@@ -538,23 +478,19 @@
     .prologue
     monitor-enter p0
 
-    .line 133
     :try_start_0
     sget v0, Landroid/filterfw/core/FilterSurfaceView;->STATE_ALLOCATED:I
 
     iput v0, p0, Landroid/filterfw/core/FilterSurfaceView;->mState:I
 
-    .line 136
     iget-object v0, p0, Landroid/filterfw/core/FilterSurfaceView;->mListener:Landroid/view/SurfaceHolder$Callback;
 
     if-eqz v0, :cond_0
 
-    .line 137
     iget-object v0, p0, Landroid/filterfw/core/FilterSurfaceView;->mListener:Landroid/view/SurfaceHolder$Callback;
 
     invoke-interface {v0, p1}, Landroid/view/SurfaceHolder$Callback;->surfaceDestroyed(Landroid/view/SurfaceHolder;)V
 
-    .line 141
     :cond_0
     invoke-direct {p0}, Landroid/filterfw/core/FilterSurfaceView;->unregisterSurface()V
     :try_end_0
@@ -562,7 +498,6 @@
 
     monitor-exit p0
 
-    .line 132
     return-void
 
     :catchall_0
@@ -579,7 +514,6 @@
     .prologue
     monitor-enter p0
 
-    .line 88
     const/4 v0, 0x0
 
     :try_start_0
@@ -589,7 +523,6 @@
 
     monitor-exit p0
 
-    .line 87
     return-void
 
     :catchall_0

@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,10 +34,9 @@
     .param p1, "r"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 68
     new-instance v0, Ljava/lang/Thread;
 
-    const-string/jumbo v1, "SamplingProfilerIntegration"
+    const-string v1, "SamplingProfilerIntegration"
 
     invoke-direct {v0, p1, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 

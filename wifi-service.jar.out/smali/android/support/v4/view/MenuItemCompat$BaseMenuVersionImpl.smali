@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 114
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,7 +34,6 @@
     .param p1, "item"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 141
     const/4 v0, 0x0
 
     return v0
@@ -46,7 +44,6 @@
     .param p1, "item"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 136
     const/4 v0, 0x0
 
     return v0
@@ -57,7 +54,6 @@
     .param p1, "item"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 131
     const/4 v0, 0x0
 
     return-object v0
@@ -68,7 +64,6 @@
     .param p1, "item"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 146
     const/4 v0, 0x0
 
     return v0
@@ -80,7 +75,6 @@
     .param p2, "resId"    # I
 
     .prologue
-    .line 126
     return-object p1
 .end method
 
@@ -90,7 +84,6 @@
     .param p2, "view"    # Landroid/view/View;
 
     .prologue
-    .line 121
     return-object p1
 .end method
 
@@ -100,7 +93,6 @@
     .param p2, "listener"    # Landroid/support/v4/view/MenuItemCompat$OnActionExpandListener;
 
     .prologue
-    .line 151
     return-object p1
 .end method
 
@@ -110,6 +102,5 @@
     .param p2, "actionEnum"    # I
 
     .prologue
-    .line 116
     return-void
 .end method

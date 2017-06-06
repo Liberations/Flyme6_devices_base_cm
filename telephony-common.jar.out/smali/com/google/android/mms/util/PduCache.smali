@@ -119,7 +119,6 @@
 
     const/4 v4, 0x2
 
-    .line 53
     new-instance v0, Landroid/content/UriMatcher;
 
     const/4 v1, -0x1
@@ -128,10 +127,9 @@
 
     sput-object v0, Lcom/google/android/mms/util/PduCache;->URI_MATCHER:Landroid/content/UriMatcher;
 
-    .line 54
     sget-object v0, Lcom/google/android/mms/util/PduCache;->URI_MATCHER:Landroid/content/UriMatcher;
 
-    const-string/jumbo v1, "mms"
+    const-string v1, "mms"
 
     const/4 v2, 0x0
 
@@ -139,125 +137,112 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 55
     sget-object v0, Lcom/google/android/mms/util/PduCache;->URI_MATCHER:Landroid/content/UriMatcher;
 
-    const-string/jumbo v1, "mms"
+    const-string v1, "mms"
 
-    const-string/jumbo v2, "#"
+    const-string v2, "#"
 
     invoke-virtual {v0, v1, v2, v6}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 56
     sget-object v0, Lcom/google/android/mms/util/PduCache;->URI_MATCHER:Landroid/content/UriMatcher;
 
-    const-string/jumbo v1, "mms"
+    const-string v1, "mms"
 
-    const-string/jumbo v2, "inbox"
+    const-string v2, "inbox"
 
     invoke-virtual {v0, v1, v2, v4}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 57
     sget-object v0, Lcom/google/android/mms/util/PduCache;->URI_MATCHER:Landroid/content/UriMatcher;
 
-    const-string/jumbo v1, "mms"
+    const-string v1, "mms"
 
-    const-string/jumbo v2, "inbox/#"
+    const-string v2, "inbox/#"
 
     invoke-virtual {v0, v1, v2, v7}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 58
     sget-object v0, Lcom/google/android/mms/util/PduCache;->URI_MATCHER:Landroid/content/UriMatcher;
 
-    const-string/jumbo v1, "mms"
+    const-string v1, "mms"
 
-    const-string/jumbo v2, "sent"
+    const-string v2, "sent"
 
     invoke-virtual {v0, v1, v2, v5}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 59
     sget-object v0, Lcom/google/android/mms/util/PduCache;->URI_MATCHER:Landroid/content/UriMatcher;
 
-    const-string/jumbo v1, "mms"
+    const-string v1, "mms"
 
-    const-string/jumbo v2, "sent/#"
+    const-string v2, "sent/#"
 
     const/4 v3, 0x5
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 60
     sget-object v0, Lcom/google/android/mms/util/PduCache;->URI_MATCHER:Landroid/content/UriMatcher;
 
-    const-string/jumbo v1, "mms"
+    const-string v1, "mms"
 
-    const-string/jumbo v2, "drafts"
+    const-string v2, "drafts"
 
     invoke-virtual {v0, v1, v2, v8}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 61
     sget-object v0, Lcom/google/android/mms/util/PduCache;->URI_MATCHER:Landroid/content/UriMatcher;
 
-    const-string/jumbo v1, "mms"
+    const-string v1, "mms"
 
-    const-string/jumbo v2, "drafts/#"
+    const-string v2, "drafts/#"
 
     const/4 v3, 0x7
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 62
     sget-object v0, Lcom/google/android/mms/util/PduCache;->URI_MATCHER:Landroid/content/UriMatcher;
 
-    const-string/jumbo v1, "mms"
+    const-string v1, "mms"
 
-    const-string/jumbo v2, "outbox"
+    const-string v2, "outbox"
 
     const/16 v3, 0x8
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 63
     sget-object v0, Lcom/google/android/mms/util/PduCache;->URI_MATCHER:Landroid/content/UriMatcher;
 
-    const-string/jumbo v1, "mms"
+    const-string v1, "mms"
 
-    const-string/jumbo v2, "outbox/#"
+    const-string v2, "outbox/#"
 
     const/16 v3, 0x9
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 64
     sget-object v0, Lcom/google/android/mms/util/PduCache;->URI_MATCHER:Landroid/content/UriMatcher;
 
-    const-string/jumbo v1, "mms-sms"
+    const-string v1, "mms-sms"
 
-    const-string/jumbo v2, "conversations"
+    const-string v2, "conversations"
 
     const/16 v3, 0xa
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 65
     sget-object v0, Lcom/google/android/mms/util/PduCache;->URI_MATCHER:Landroid/content/UriMatcher;
 
-    const-string/jumbo v1, "mms-sms"
+    const-string v1, "mms-sms"
 
-    const-string/jumbo v2, "conversations/#"
+    const-string v2, "conversations/#"
 
     const/16 v3, 0xb
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 67
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/google/android/mms/util/PduCache;->MATCH_TO_MSGBOX_ID_MAP:Ljava/util/HashMap;
 
-    .line 68
     sget-object v0, Lcom/google/android/mms/util/PduCache;->MATCH_TO_MSGBOX_ID_MAP:Ljava/util/HashMap;
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -270,7 +255,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 69
     sget-object v0, Lcom/google/android/mms/util/PduCache;->MATCH_TO_MSGBOX_ID_MAP:Ljava/util/HashMap;
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -283,7 +267,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 70
     sget-object v0, Lcom/google/android/mms/util/PduCache;->MATCH_TO_MSGBOX_ID_MAP:Ljava/util/HashMap;
 
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -296,7 +279,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 71
     sget-object v0, Lcom/google/android/mms/util/PduCache;->MATCH_TO_MSGBOX_ID_MAP:Ljava/util/HashMap;
 
     const/16 v1, 0x8
@@ -311,7 +293,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 29
     return-void
 .end method
 
@@ -319,31 +300,26 @@
     .locals 1
 
     .prologue
-    .line 78
     invoke-direct {p0}, Lcom/google/android/mms/util/AbstractCache;-><init>()V
 
-    .line 79
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/mms/util/PduCache;->mMessageBoxes:Ljava/util/HashMap;
 
-    .line 80
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/mms/util/PduCache;->mThreads:Ljava/util/HashMap;
 
-    .line 81
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/mms/util/PduCache;->mUpdating:Ljava/util/HashSet;
 
-    .line 78
     return-void
 .end method
 
@@ -355,20 +331,17 @@
 
     monitor-enter v1
 
-    .line 85
     :try_start_0
     sget-object v0, Lcom/google/android/mms/util/PduCache;->sInstance:Lcom/google/android/mms/util/PduCache;
 
     if-nez v0, :cond_0
 
-    .line 89
     new-instance v0, Lcom/google/android/mms/util/PduCache;
 
     invoke-direct {v0}, Lcom/google/android/mms/util/PduCache;-><init>()V
 
     sput-object v0, Lcom/google/android/mms/util/PduCache;->sInstance:Lcom/google/android/mms/util/PduCache;
 
-    .line 91
     :cond_0
     sget-object v0, Lcom/google/android/mms/util/PduCache;->sInstance:Lcom/google/android/mms/util/PduCache;
     :try_end_0
@@ -391,44 +364,36 @@
     .param p1, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 188
     sget-object v3, Lcom/google/android/mms/util/PduCache;->URI_MATCHER:Landroid/content/UriMatcher;
 
     invoke-virtual {v3, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
 
     move-result v0
 
-    .line 189
     .local v0, "match":I
     const/4 v2, 0x0
 
-    .line 191
     .local v2, "normalizedKey":Landroid/net/Uri;
     packed-switch v0, :pswitch_data_0
 
-    .line 203
     :pswitch_0
     const/4 v3, 0x0
 
     return-object v3
 
-    .line 193
     :pswitch_1
     move-object v2, p1
 
-    .line 209
     .local v2, "normalizedKey":Landroid/net/Uri;
     :goto_0
     return-object v2
 
-    .line 199
     .local v2, "normalizedKey":Landroid/net/Uri;
     :pswitch_2
     invoke-virtual {p1}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 200
     .local v1, "msgId":Ljava/lang/String;
     sget-object v3, Landroid/provider/Telephony$Mms;->CONTENT_URI:Landroid/net/Uri;
 
@@ -439,7 +404,6 @@
     .local v2, "normalizedKey":Landroid/net/Uri;
     goto :goto_0
 
-    .line 191
     nop
 
     :pswitch_data_0
@@ -461,10 +425,8 @@
     .param p1, "msgBoxId"    # Ljava/lang/Integer;
 
     .prologue
-    .line 217
     if-eqz p1, :cond_1
 
-    .line 218
     iget-object v4, p0, Lcom/google/android/mms/util/PduCache;->mMessageBoxes:Ljava/util/HashMap;
 
     invoke-virtual {v4, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -473,11 +435,9 @@
 
     check-cast v3, Ljava/util/HashSet;
 
-    .line 219
     .local v3, "msgBox":Ljava/util/HashSet;, "Ljava/util/HashSet<Landroid/net/Uri;>;"
     if-eqz v3, :cond_1
 
-    .line 220
     invoke-interface {v3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -497,29 +457,24 @@
 
     check-cast v1, Landroid/net/Uri;
 
-    .line 221
     .local v1, "key":Landroid/net/Uri;
     iget-object v4, p0, Lcom/google/android/mms/util/PduCache;->mUpdating:Ljava/util/HashSet;
 
     invoke-virtual {v4, v1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 222
     invoke-super {p0, v1}, Lcom/google/android/mms/util/AbstractCache;->purge(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/google/android/mms/util/PduCacheEntry;
 
-    .line 223
     .local v0, "entry":Lcom/google/android/mms/util/PduCacheEntry;
     if-eqz v0, :cond_0
 
-    .line 224
     invoke-direct {p0, v1, v0}, Lcom/google/android/mms/util/PduCache;->removeFromThreads(Landroid/net/Uri;Lcom/google/android/mms/util/PduCacheEntry;)V
 
     goto :goto_0
 
-    .line 212
     .end local v0    # "entry":Lcom/google/android/mms/util/PduCacheEntry;
     .end local v1    # "key":Landroid/net/Uri;
     .end local v2    # "key$iterator":Ljava/util/Iterator;
@@ -533,7 +488,6 @@
     .param p1, "threadId"    # J
 
     .prologue
-    .line 243
     iget-object v4, p0, Lcom/google/android/mms/util/PduCache;->mThreads:Ljava/util/HashMap;
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -546,11 +500,9 @@
 
     check-cast v3, Ljava/util/HashSet;
 
-    .line 244
     .local v3, "thread":Ljava/util/HashSet;, "Ljava/util/HashSet<Landroid/net/Uri;>;"
     if-eqz v3, :cond_1
 
-    .line 245
     invoke-interface {v3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -570,29 +522,24 @@
 
     check-cast v1, Landroid/net/Uri;
 
-    .line 246
     .local v1, "key":Landroid/net/Uri;
     iget-object v4, p0, Lcom/google/android/mms/util/PduCache;->mUpdating:Ljava/util/HashSet;
 
     invoke-virtual {v4, v1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 247
     invoke-super {p0, v1}, Lcom/google/android/mms/util/AbstractCache;->purge(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/google/android/mms/util/PduCacheEntry;
 
-    .line 248
     .local v0, "entry":Lcom/google/android/mms/util/PduCacheEntry;
     if-eqz v0, :cond_0
 
-    .line 249
     invoke-direct {p0, v1, v0}, Lcom/google/android/mms/util/PduCache;->removeFromMessageBoxes(Landroid/net/Uri;Lcom/google/android/mms/util/PduCacheEntry;)V
 
     goto :goto_0
 
-    .line 238
     .end local v0    # "entry":Lcom/google/android/mms/util/PduCacheEntry;
     .end local v1    # "key":Landroid/net/Uri;
     .end local v2    # "key$iterator":Ljava/util/Iterator;
@@ -607,32 +554,25 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 164
     iget-object v1, p0, Lcom/google/android/mms/util/PduCache;->mUpdating:Ljava/util/HashSet;
 
     invoke-virtual {v1, p1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 165
     invoke-super {p0, p1}, Lcom/google/android/mms/util/AbstractCache;->purge(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/google/android/mms/util/PduCacheEntry;
 
-    .line 166
     .local v0, "entry":Lcom/google/android/mms/util/PduCacheEntry;
     if-eqz v0, :cond_0
 
-    .line 167
     invoke-direct {p0, p1, v0}, Lcom/google/android/mms/util/PduCache;->removeFromThreads(Landroid/net/Uri;Lcom/google/android/mms/util/PduCacheEntry;)V
 
-    .line 168
     invoke-direct {p0, p1, v0}, Lcom/google/android/mms/util/PduCache;->removeFromMessageBoxes(Landroid/net/Uri;Lcom/google/android/mms/util/PduCacheEntry;)V
 
-    .line 169
     return-object v0
 
-    .line 171
     :cond_0
     return-object v2
 .end method
@@ -643,7 +583,6 @@
     .param p2, "entry"    # Lcom/google/android/mms/util/PduCacheEntry;
 
     .prologue
-    .line 256
     iget-object v1, p0, Lcom/google/android/mms/util/PduCache;->mThreads:Ljava/util/HashMap;
 
     invoke-virtual {p2}, Lcom/google/android/mms/util/PduCacheEntry;->getMessageBox()I
@@ -662,14 +601,11 @@
 
     check-cast v0, Ljava/util/HashSet;
 
-    .line 257
     .local v0, "msgBox":Ljava/util/HashSet;, "Ljava/util/HashSet<Landroid/net/Uri;>;"
     if-eqz v0, :cond_0
 
-    .line 258
     invoke-virtual {v0, p1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 255
     :cond_0
     return-void
 .end method
@@ -680,7 +616,6 @@
     .param p2, "entry"    # Lcom/google/android/mms/util/PduCacheEntry;
 
     .prologue
-    .line 232
     iget-object v1, p0, Lcom/google/android/mms/util/PduCache;->mThreads:Ljava/util/HashMap;
 
     invoke-virtual {p2}, Lcom/google/android/mms/util/PduCacheEntry;->getThreadId()J
@@ -697,14 +632,11 @@
 
     check-cast v0, Ljava/util/HashSet;
 
-    .line 233
     .local v0, "thread":Ljava/util/HashSet;, "Ljava/util/HashSet<Landroid/net/Uri;>;"
     if-eqz v0, :cond_0
 
-    .line 234
     invoke-virtual {v0, p1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 231
     :cond_0
     return-void
 .end method
@@ -718,7 +650,6 @@
     .prologue
     monitor-enter p0
 
-    .line 129
     :try_start_0
     iget-object v0, p0, Lcom/google/android/mms/util/PduCache;->mUpdating:Ljava/util/HashSet;
 
@@ -749,7 +680,6 @@
 
     monitor-enter p0
 
-    .line 134
     :try_start_0
     sget-object v2, Lcom/google/android/mms/util/PduCache;->URI_MATCHER:Landroid/content/UriMatcher;
 
@@ -759,16 +689,13 @@
 
     move-result v0
 
-    .line 135
     .local v0, "match":I
     packed-switch v0, :pswitch_data_0
 
     monitor-exit p0
 
-    .line 159
     return-object v4
 
-    .line 137
     :pswitch_0
     :try_start_1
     invoke-direct {p0, p1}, Lcom/google/android/mms/util/PduCache;->purgeSingleEntry(Landroid/net/Uri;)Lcom/google/android/mms/util/PduCacheEntry;
@@ -781,14 +708,12 @@
 
     return-object v2
 
-    .line 142
     :pswitch_1
     :try_start_2
     invoke-virtual {p1}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 143
     .local v1, "msgId":Ljava/lang/String;
     sget-object v2, Landroid/provider/Telephony$Mms;->CONTENT_URI:Landroid/net/Uri;
 
@@ -806,7 +731,6 @@
 
     return-object v2
 
-    .line 147
     .end local v1    # "msgId":Ljava/lang/String;
     :pswitch_2
     :try_start_3
@@ -816,10 +740,8 @@
 
     monitor-exit p0
 
-    .line 148
     return-object v4
 
-    .line 153
     :pswitch_3
     :try_start_4
     sget-object v2, Lcom/google/android/mms/util/PduCache;->MATCH_TO_MSGBOX_ID_MAP:Ljava/util/HashMap;
@@ -840,10 +762,8 @@
 
     monitor-exit p0
 
-    .line 154
     return-object v4
 
-    .line 156
     :pswitch_4
     :try_start_5
     invoke-static {p1}, Landroid/content/ContentUris;->parseId(Landroid/net/Uri;)J
@@ -856,7 +776,6 @@
 
     monitor-exit p0
 
-    .line 157
     return-object v4
 
     .end local v0    # "match":I
@@ -867,7 +786,6 @@
 
     throw v2
 
-    .line 135
     nop
 
     :pswitch_data_0
@@ -892,7 +810,6 @@
     .param p1, "uri"    # Ljava/lang/Object;
 
     .prologue
-    .line 133
     check-cast p1, Landroid/net/Uri;
 
     .end local p1    # "uri":Ljava/lang/Object;
@@ -909,21 +826,17 @@
     .prologue
     monitor-enter p0
 
-    .line 176
     :try_start_0
     invoke-super {p0}, Lcom/google/android/mms/util/AbstractCache;->purgeAll()V
 
-    .line 178
     iget-object v0, p0, Lcom/google/android/mms/util/PduCache;->mMessageBoxes:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 179
     iget-object v0, p0, Lcom/google/android/mms/util/PduCache;->mThreads:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 180
     iget-object v0, p0, Lcom/google/android/mms/util/PduCache;->mUpdating:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
@@ -932,7 +845,6 @@
 
     monitor-exit p0
 
-    .line 175
     return-void
 
     :catchall_0
@@ -951,13 +863,11 @@
     .prologue
     monitor-enter p0
 
-    .line 96
     :try_start_0
     invoke-virtual {p2}, Lcom/google/android/mms/util/PduCacheEntry;->getMessageBox()I
 
     move-result v2
 
-    .line 97
     .local v2, "msgBoxId":I
     iget-object v5, p0, Lcom/google/android/mms/util/PduCache;->mMessageBoxes:Ljava/util/HashMap;
 
@@ -971,17 +881,14 @@
 
     check-cast v1, Ljava/util/HashSet;
 
-    .line 98
     .local v1, "msgBox":Ljava/util/HashSet;, "Ljava/util/HashSet<Landroid/net/Uri;>;"
     if-nez v1, :cond_0
 
-    .line 99
     new-instance v1, Ljava/util/HashSet;
 
     .end local v1    # "msgBox":Ljava/util/HashSet;, "Ljava/util/HashSet<Landroid/net/Uri;>;"
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
-    .line 100
     .restart local v1    # "msgBox":Ljava/util/HashSet;, "Ljava/util/HashSet<Landroid/net/Uri;>;"
     iget-object v5, p0, Lcom/google/android/mms/util/PduCache;->mMessageBoxes:Ljava/util/HashMap;
 
@@ -991,13 +898,11 @@
 
     invoke-virtual {v5, v8, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 103
     :cond_0
     invoke-virtual {p2}, Lcom/google/android/mms/util/PduCacheEntry;->getThreadId()J
 
     move-result-wide v6
 
-    .line 104
     .local v6, "threadId":J
     iget-object v5, p0, Lcom/google/android/mms/util/PduCache;->mThreads:Ljava/util/HashMap;
 
@@ -1011,17 +916,14 @@
 
     check-cast v4, Ljava/util/HashSet;
 
-    .line 105
     .local v4, "thread":Ljava/util/HashSet;, "Ljava/util/HashSet<Landroid/net/Uri;>;"
     if-nez v4, :cond_1
 
-    .line 106
     new-instance v4, Ljava/util/HashSet;
 
     .end local v4    # "thread":Ljava/util/HashSet;, "Ljava/util/HashSet<Landroid/net/Uri;>;"
     invoke-direct {v4}, Ljava/util/HashSet;-><init>()V
 
-    .line 107
     .restart local v4    # "thread":Ljava/util/HashSet;, "Ljava/util/HashSet<Landroid/net/Uri;>;"
     iget-object v5, p0, Lcom/google/android/mms/util/PduCache;->mThreads:Ljava/util/HashMap;
 
@@ -1031,29 +933,23 @@
 
     invoke-virtual {v5, v8, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 110
     :cond_1
     invoke-direct {p0, p1}, Lcom/google/android/mms/util/PduCache;->normalizeKey(Landroid/net/Uri;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 111
     .local v0, "finalKey":Landroid/net/Uri;
     invoke-super {p0, v0, p2}, Lcom/google/android/mms/util/AbstractCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
-    .line 112
     .local v3, "result":Z
     if-eqz v3, :cond_2
 
-    .line 113
     invoke-virtual {v1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 114
     invoke-virtual {v4, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 116
     :cond_2
     const/4 v5, 0x0
 
@@ -1063,7 +959,6 @@
 
     monitor-exit p0
 
-    .line 117
     return v3
 
     .end local v0    # "finalKey":Landroid/net/Uri;
@@ -1086,7 +981,6 @@
     .param p2, "entry"    # Ljava/lang/Object;
 
     .prologue
-    .line 95
     check-cast p1, Landroid/net/Uri;
 
     .end local p1    # "uri":Ljava/lang/Object;
@@ -1108,10 +1002,8 @@
     .prologue
     monitor-enter p0
 
-    .line 121
     if-eqz p2, :cond_0
 
-    .line 122
     :try_start_0
     iget-object v0, p0, Lcom/google/android/mms/util/PduCache;->mUpdating:Ljava/util/HashSet;
 
@@ -1122,10 +1014,8 @@
     :goto_0
     monitor-exit p0
 
-    .line 120
     return-void
 
-    .line 124
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/google/android/mms/util/PduCache;->mUpdating:Ljava/util/HashSet;

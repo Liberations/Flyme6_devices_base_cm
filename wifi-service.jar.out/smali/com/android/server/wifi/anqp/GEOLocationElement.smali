@@ -54,7 +54,6 @@
     .locals 4
 
     .prologue
-    .line 272
     const-wide/high16 v0, 0x4000000000000000L    # 2.0
 
     invoke-static {v0, v1}, Ljava/lang/Math;->log(D)D
@@ -67,7 +66,6 @@
 
     sput-wide v0, Lcom/android/server/wifi/anqp/GEOLocationElement;->LOG2_FACTOR:D
 
-    .line 38
     return-void
 .end method
 
@@ -82,13 +80,10 @@
     .end annotation
 
     .prologue
-    .line 102
     invoke-direct/range {p0 .. p1}, Lcom/android/server/wifi/anqp/ANQPElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;)V
 
-    .line 104
     invoke-virtual/range {p2 .. p2}, Ljava/nio/ByteBuffer;->get()B
 
-    .line 105
     invoke-virtual/range {p2 .. p2}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v17
@@ -97,7 +92,6 @@
 
     and-int/lit16 v10, v0, 0xff
 
-    .line 107
     .local v10, "locLength":I
     const/16 v17, 0x10
 
@@ -105,14 +99,13 @@
 
     if-eq v10, v0, :cond_0
 
-    .line 108
     new-instance v17, Ljava/net/ProtocolException;
 
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v19, "GeoLocation length field value "
+    const-string v19, "GeoLocation length field value "
 
     invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -124,10 +117,8 @@
 
     move-result-object v18
 
-    .line 109
-    const-string/jumbo v19, " incorrect, expected 16"
+    const-string v19, " incorrect, expected 16"
 
-    .line 108
     invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v18
@@ -140,7 +131,6 @@
 
     throw v17
 
-    .line 111
     :cond_0
     invoke-virtual/range {p2 .. p2}, Ljava/nio/ByteBuffer;->remaining()I
 
@@ -154,14 +144,13 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 112
     new-instance v17, Ljava/net/ProtocolException;
 
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v19, "Bad buffer length "
+    const-string v19, "Bad buffer length "
 
     invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -175,10 +164,8 @@
 
     move-result-object v18
 
-    .line 113
-    const-string/jumbo v19, ", expected 16"
+    const-string v19, ", expected 16"
 
-    .line 112
     invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v18
@@ -191,7 +178,6 @@
 
     throw v17
 
-    .line 116
     :cond_1
     new-instance v16, Lcom/android/server/wifi/anqp/GEOLocationElement$ReverseBitStream;
 
@@ -205,7 +191,6 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/wifi/anqp/GEOLocationElement$ReverseBitStream;-><init>(Ljava/nio/ByteBuffer;Lcom/android/server/wifi/anqp/GEOLocationElement$ReverseBitStream;)V
 
-    .line 118
     .local v16, "reverseBitStream":Lcom/android/server/wifi/anqp/GEOLocationElement$ReverseBitStream;
     const/16 v17, 0x6
 
@@ -217,7 +202,6 @@
 
     long-to-int v14, v0
 
-    .line 120
     .local v14, "rawLatRes":I
     const/16 v17, 0x22
 
@@ -239,11 +223,9 @@
 
     move-result-wide v8
 
-    .line 122
     .local v8, "latitude":D
     if-eqz v14, :cond_2
 
-    .line 123
     new-instance v17, Lcom/android/server/wifi/anqp/GEOLocationElement$RealValue;
 
     int-to-long v0, v14
@@ -252,10 +234,8 @@
 
     const/16 v20, 0x22
 
-    .line 124
     const/16 v21, 0x19
 
-    .line 123
     invoke-static/range {v18 .. v21}, Lcom/android/server/wifi/anqp/GEOLocationElement;->bitsToAbsResolution(JII)I
 
     move-result v18
@@ -266,7 +246,6 @@
 
     invoke-direct {v0, v8, v9, v1}, Lcom/android/server/wifi/anqp/GEOLocationElement$RealValue;-><init>(DI)V
 
-    .line 122
     :goto_0
     move-object/from16 v0, v17
 
@@ -274,7 +253,6 @@
 
     iput-object v0, v1, Lcom/android/server/wifi/anqp/GEOLocationElement;->mLatitude:Lcom/android/server/wifi/anqp/GEOLocationElement$RealValue;
 
-    .line 127
     const/16 v17, 0x6
 
     invoke-static/range {v16 .. v17}, Lcom/android/server/wifi/anqp/GEOLocationElement$ReverseBitStream;->-wrap0(Lcom/android/server/wifi/anqp/GEOLocationElement$ReverseBitStream;I)J
@@ -285,7 +263,6 @@
 
     long-to-int v15, v0
 
-    .line 129
     .local v15, "rawLonRes":I
     const/16 v17, 0x22
 
@@ -307,11 +284,9 @@
 
     move-result-wide v12
 
-    .line 131
     .local v12, "longitude":D
     if-eqz v15, :cond_3
 
-    .line 132
     new-instance v17, Lcom/android/server/wifi/anqp/GEOLocationElement$RealValue;
 
     int-to-long v0, v15
@@ -320,10 +295,8 @@
 
     const/16 v20, 0x22
 
-    .line 133
     const/16 v21, 0x19
 
-    .line 132
     invoke-static/range {v18 .. v21}, Lcom/android/server/wifi/anqp/GEOLocationElement;->bitsToAbsResolution(JII)I
 
     move-result v18
@@ -334,7 +307,6 @@
 
     invoke-direct {v0, v12, v13, v1}, Lcom/android/server/wifi/anqp/GEOLocationElement$RealValue;-><init>(DI)V
 
-    .line 131
     :goto_1
     move-object/from16 v0, v17
 
@@ -342,7 +314,6 @@
 
     iput-object v0, v1, Lcom/android/server/wifi/anqp/GEOLocationElement;->mLongitude:Lcom/android/server/wifi/anqp/GEOLocationElement$RealValue;
 
-    .line 136
     const/16 v17, 0x4
 
     invoke-static/range {v16 .. v17}, Lcom/android/server/wifi/anqp/GEOLocationElement$ReverseBitStream;->-wrap0(Lcom/android/server/wifi/anqp/GEOLocationElement$ReverseBitStream;I)J
@@ -353,7 +324,6 @@
 
     long-to-int v4, v0
 
-    .line 137
     .local v4, "altType":I
     invoke-static {}, Lcom/android/server/wifi/anqp/GEOLocationElement$AltitudeType;->values()[Lcom/android/server/wifi/anqp/GEOLocationElement$AltitudeType;
 
@@ -369,14 +339,12 @@
 
     if-ge v4, v0, :cond_4
 
-    .line 138
     invoke-static {}, Lcom/android/server/wifi/anqp/GEOLocationElement$AltitudeType;->values()[Lcom/android/server/wifi/anqp/GEOLocationElement$AltitudeType;
 
     move-result-object v17
 
     aget-object v17, v17, v4
 
-    .line 137
     :goto_2
     move-object/from16 v0, v17
 
@@ -384,7 +352,6 @@
 
     iput-object v0, v1, Lcom/android/server/wifi/anqp/GEOLocationElement;->mAltitudeType:Lcom/android/server/wifi/anqp/GEOLocationElement$AltitudeType;
 
-    .line 141
     const/16 v17, 0x6
 
     invoke-static/range {v16 .. v17}, Lcom/android/server/wifi/anqp/GEOLocationElement$ReverseBitStream;->-wrap0(Lcom/android/server/wifi/anqp/GEOLocationElement$ReverseBitStream;I)J
@@ -395,7 +362,6 @@
 
     long-to-int v11, v0
 
-    .line 142
     .local v11, "rawAltRes":I
     const/16 v17, 0x1e
 
@@ -405,10 +371,8 @@
 
     const/16 v17, 0x8
 
-    .line 143
     const/16 v20, 0x1e
 
-    .line 142
     move-wide/from16 v0, v18
 
     move/from16 v2, v17
@@ -419,11 +383,9 @@
 
     move-result-wide v6
 
-    .line 145
     .local v6, "altitude":D
     if-eqz v11, :cond_5
 
-    .line 146
     new-instance v17, Lcom/android/server/wifi/anqp/GEOLocationElement$RealValue;
 
     int-to-long v0, v11
@@ -432,10 +394,8 @@
 
     const/16 v20, 0x1e
 
-    .line 147
     const/16 v21, 0x8
 
-    .line 146
     invoke-static/range {v18 .. v21}, Lcom/android/server/wifi/anqp/GEOLocationElement;->bitsToAbsResolution(JII)I
 
     move-result v18
@@ -446,7 +406,6 @@
 
     invoke-direct {v0, v6, v7, v1}, Lcom/android/server/wifi/anqp/GEOLocationElement$RealValue;-><init>(DI)V
 
-    .line 145
     :goto_3
     move-object/from16 v0, v17
 
@@ -454,7 +413,6 @@
 
     iput-object v0, v1, Lcom/android/server/wifi/anqp/GEOLocationElement;->mAltitude:Lcom/android/server/wifi/anqp/GEOLocationElement$RealValue;
 
-    .line 150
     const/16 v17, 0x8
 
     invoke-static/range {v16 .. v17}, Lcom/android/server/wifi/anqp/GEOLocationElement$ReverseBitStream;->-wrap0(Lcom/android/server/wifi/anqp/GEOLocationElement$ReverseBitStream;I)J
@@ -465,7 +423,6 @@
 
     long-to-int v5, v0
 
-    .line 151
     .local v5, "datumValue":I
     invoke-static {}, Lcom/android/server/wifi/anqp/GEOLocationElement$Datum;->values()[Lcom/android/server/wifi/anqp/GEOLocationElement$Datum;
 
@@ -494,10 +451,8 @@
 
     iput-object v0, v1, Lcom/android/server/wifi/anqp/GEOLocationElement;->mDatum:Lcom/android/server/wifi/anqp/GEOLocationElement$Datum;
 
-    .line 101
     return-void
 
-    .line 125
     .end local v4    # "altType":I
     .end local v5    # "datumValue":I
     .end local v6    # "altitude":D
@@ -513,7 +468,6 @@
 
     goto/16 :goto_0
 
-    .line 134
     .restart local v12    # "longitude":D
     .restart local v15    # "rawLonRes":I
     :cond_3
@@ -525,14 +479,12 @@
 
     goto/16 :goto_1
 
-    .line 139
     .restart local v4    # "altType":I
     :cond_4
     sget-object v17, Lcom/android/server/wifi/anqp/GEOLocationElement$AltitudeType;->Unknown:Lcom/android/server/wifi/anqp/GEOLocationElement$AltitudeType;
 
     goto :goto_2
 
-    .line 148
     .restart local v6    # "altitude":D
     .restart local v11    # "rawAltRes":I
     :cond_5
@@ -544,7 +496,6 @@
 
     goto :goto_3
 
-    .line 151
     .restart local v5    # "datumValue":I
     :cond_6
     sget-object v17, Lcom/android/server/wifi/anqp/GEOLocationElement$Datum;->Unknown:Lcom/android/server/wifi/anqp/GEOLocationElement$Datum;
@@ -559,7 +510,6 @@
     .param p2, "fractionBits"    # I
 
     .prologue
-    .line 296
     sub-int v0, p1, p2
 
     add-int/lit8 v0, v0, -0x1
@@ -576,7 +526,6 @@
     .param p3, "fractionBits"    # I
 
     .prologue
-    .line 309
     sub-int v0, p2, p3
 
     add-int/lit8 v0, v0, -0x1
@@ -597,12 +546,10 @@
     .prologue
     const-wide/16 v6, 0x1
 
-    .line 259
     add-int/lit8 v2, p3, -0x1
 
     shl-long v0, v6, v2
 
-    .line 260
     .local v0, "sign":J
     and-long v2, p0, v0
 
@@ -612,10 +559,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 261
     neg-long p0, p0
 
-    .line 262
     sub-long v2, v0, v6
 
     and-long/2addr v2, p0
@@ -632,7 +577,6 @@
 
     return-wide v2
 
-    .line 264
     :cond_0
     sub-long v2, v0, v6
 
@@ -658,7 +602,6 @@
     .prologue
     const-wide/16 v4, 0x1
 
-    .line 269
     shl-long v0, v4, p2
 
     long-to-double v0, v0
@@ -683,7 +626,6 @@
     .param p0, "variance"    # D
 
     .prologue
-    .line 282
     invoke-static {p0, p1}, Ljava/lang/Math;->log(D)D
 
     move-result-wide v0
@@ -707,7 +649,6 @@
     .locals 1
 
     .prologue
-    .line 163
     iget-object v0, p0, Lcom/android/server/wifi/anqp/GEOLocationElement;->mAltitude:Lcom/android/server/wifi/anqp/GEOLocationElement$RealValue;
 
     return-object v0
@@ -717,7 +658,6 @@
     .locals 1
 
     .prologue
-    .line 167
     iget-object v0, p0, Lcom/android/server/wifi/anqp/GEOLocationElement;->mAltitudeType:Lcom/android/server/wifi/anqp/GEOLocationElement$AltitudeType;
 
     return-object v0
@@ -727,7 +667,6 @@
     .locals 1
 
     .prologue
-    .line 171
     iget-object v0, p0, Lcom/android/server/wifi/anqp/GEOLocationElement;->mDatum:Lcom/android/server/wifi/anqp/GEOLocationElement$Datum;
 
     return-object v0
@@ -737,7 +676,6 @@
     .locals 1
 
     .prologue
-    .line 155
     iget-object v0, p0, Lcom/android/server/wifi/anqp/GEOLocationElement;->mLatitude:Lcom/android/server/wifi/anqp/GEOLocationElement$RealValue;
 
     return-object v0
@@ -747,7 +685,6 @@
     .locals 1
 
     .prologue
-    .line 159
     iget-object v0, p0, Lcom/android/server/wifi/anqp/GEOLocationElement;->mLongitude:Lcom/android/server/wifi/anqp/GEOLocationElement$RealValue;
 
     return-object v0
@@ -757,93 +694,72 @@
     .locals 2
 
     .prologue
-    .line 176
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "GEOLocation{mLatitude="
+    const-string v1, "GEOLocation{mLatitude="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 177
     iget-object v1, p0, Lcom/android/server/wifi/anqp/GEOLocationElement;->mLatitude:Lcom/android/server/wifi/anqp/GEOLocationElement$RealValue;
 
-    .line 176
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 178
-    const-string/jumbo v1, ", mLongitude="
+    const-string v1, ", mLongitude="
 
-    .line 176
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 178
     iget-object v1, p0, Lcom/android/server/wifi/anqp/GEOLocationElement;->mLongitude:Lcom/android/server/wifi/anqp/GEOLocationElement$RealValue;
 
-    .line 176
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 179
-    const-string/jumbo v1, ", mAltitude="
+    const-string v1, ", mAltitude="
 
-    .line 176
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 179
     iget-object v1, p0, Lcom/android/server/wifi/anqp/GEOLocationElement;->mAltitude:Lcom/android/server/wifi/anqp/GEOLocationElement$RealValue;
 
-    .line 176
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 180
-    const-string/jumbo v1, ", mAltitudeType="
+    const-string v1, ", mAltitudeType="
 
-    .line 176
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 180
     iget-object v1, p0, Lcom/android/server/wifi/anqp/GEOLocationElement;->mAltitudeType:Lcom/android/server/wifi/anqp/GEOLocationElement$AltitudeType;
 
-    .line 176
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 181
-    const-string/jumbo v1, ", mDatum="
+    const-string v1, ", mDatum="
 
-    .line 176
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 181
     iget-object v1, p0, Lcom/android/server/wifi/anqp/GEOLocationElement;->mDatum:Lcom/android/server/wifi/anqp/GEOLocationElement$Datum;
 
-    .line 176
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 182
     const/16 v1, 0x7d
 
-    .line 176
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     move-result-object v0

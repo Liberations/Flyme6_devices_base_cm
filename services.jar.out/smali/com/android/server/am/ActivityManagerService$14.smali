@@ -32,7 +32,6 @@
     .param p3, "val$goingCallback"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 12124
     .local p2, "val$doneReceivers":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/ComponentName;>;"
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$14;->this$0:Lcom/android/server/am/ActivityManagerService;
 
@@ -72,7 +71,7 @@
 
     iget-object v1, v1, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
 
-    sget v2, Lcom/android/internal/R$string;->android_upgrading_complete:I
+    const v2, #android:string@android_upgrading_complete#t
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 

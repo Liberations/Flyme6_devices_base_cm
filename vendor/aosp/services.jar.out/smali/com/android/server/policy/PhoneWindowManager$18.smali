@@ -3,12 +3,12 @@
 .source "PhoneWindowManager.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/WindowManagerPolicy$OnKeyguardExitResult;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/policy/PhoneWindowManager;->finishPostLayoutPolicyLw()I
+    value = Lcom/android/server/policy/PhoneWindowManager;->launchHomeFromHotKey(ZZ)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,15 +20,19 @@
 # instance fields
 .field final synthetic this$0:Lcom/android/server/policy/PhoneWindowManager;
 
+.field final synthetic val$awakenFromDreams:Z
+
 
 # direct methods
-.method constructor <init>(Lcom/android/server/policy/PhoneWindowManager;)V
+.method constructor <init>(Lcom/android/server/policy/PhoneWindowManager;Z)V
     .locals 0
     .param p1, "this$0"    # Lcom/android/server/policy/PhoneWindowManager;
+    .param p2, "val$awakenFromDreams"    # Z
 
     .prologue
-    .line 5294
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$18;->this$0:Lcom/android/server/policy/PhoneWindowManager;
+
+    iput-boolean p2, p0, Lcom/android/server/policy/PhoneWindowManager$18;->val$awakenFromDreams:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,19 +41,43 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method public onKeyguardExitResult(Z)V
+    .locals 4
+    .param p1, "success"    # Z
 
     .prologue
-    const/4 v1, 0x0
+    if-eqz p1, :cond_0
 
-    .line 5297
-    iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$18;->this$0:Lcom/android/server/policy/PhoneWindowManager;
+    :try_start_0
+    invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
-    iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager;->mKeyguardDelegate:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;
+    move-result-object v1
 
-    invoke-virtual {v0, v1, v1}, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->keyguardDone(ZZ)V
+    invoke-interface {v1}, Landroid/app/IActivityManager;->stopAppSwitches()V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5296
+    :goto_0
+    iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager$18;->this$0:Lcom/android/server/policy/PhoneWindowManager;
+
+    const-string v2, "homekey"
+
+    invoke-virtual {v1, v2}, Lcom/android/server/policy/PhoneWindowManager;->sendCloseSystemWindows(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager$18;->this$0:Lcom/android/server/policy/PhoneWindowManager;
+
+    iget-boolean v2, p0, Lcom/android/server/policy/PhoneWindowManager$18;->val$awakenFromDreams:Z
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v1, v3, v2}, Lcom/android/server/policy/PhoneWindowManager;->startDockOrHome(ZZ)V
+
+    :cond_0
     return-void
+
+    :catch_0
+    move-exception v0
+
+    .local v0, "e":Landroid/os/RemoteException;
+    goto :goto_0
 .end method

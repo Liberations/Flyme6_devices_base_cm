@@ -36,7 +36,6 @@
     .param p4, "val$moveId"    # I
 
     .prologue
-    .line 17064
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$24;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$24;->val$packageName:Ljava/lang/String;
@@ -56,7 +55,6 @@
     .locals 5
 
     .prologue
-    .line 17068
     :try_start_0
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$24;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -66,27 +64,24 @@
 
     iget v4, p0, Lcom/android/server/pm/PackageManagerService$24;->val$moveId:I
 
-    invoke-static {v1, v2, v3, v4}, Lcom/android/server/pm/PackageManagerService;->-wrap32(Lcom/android/server/pm/PackageManagerService;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-static {v1, v2, v3, v4}, Lcom/android/server/pm/PackageManagerService;->-wrap33(Lcom/android/server/pm/PackageManagerService;Ljava/lang/String;Ljava/lang/String;I)V
     :try_end_0
     .catch Lcom/android/server/pm/PackageManagerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 17066
     :goto_0
     return-void
 
-    .line 17069
     :catch_0
     move-exception v0
 
-    .line 17070
     .local v0, "e":Lcom/android/server/pm/PackageManagerException;
-    const-string/jumbo v1, "PackageManager"
+    const-string v1, "PackageManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "Failed to move "
+    const-string v3, "Failed to move "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -104,7 +99,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 17071
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$24;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     invoke-static {v1}, Lcom/android/server/pm/PackageManagerService;->-get5(Lcom/android/server/pm/PackageManagerService;)Lcom/android/server/pm/PackageManagerService$MoveCallbacks;
@@ -113,10 +107,8 @@
 
     iget v2, p0, Lcom/android/server/pm/PackageManagerService$24;->val$moveId:I
 
-    .line 17072
     const/4 v3, -0x6
 
-    .line 17071
     invoke-static {v1, v2, v3}, Lcom/android/server/pm/PackageManagerService$MoveCallbacks;->-wrap1(Lcom/android/server/pm/PackageManagerService$MoveCallbacks;II)V
 
     goto :goto_0

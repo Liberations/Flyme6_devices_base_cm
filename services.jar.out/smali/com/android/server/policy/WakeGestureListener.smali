@@ -71,32 +71,27 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/policy/WakeGestureListener;->mLock:Ljava/lang/Object;
 
-    .line 84
     new-instance v0, Lcom/android/server/policy/WakeGestureListener$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/policy/WakeGestureListener$1;-><init>(Lcom/android/server/policy/WakeGestureListener;)V
 
     iput-object v0, p0, Lcom/android/server/policy/WakeGestureListener;->mListener:Landroid/hardware/TriggerEventListener;
 
-    .line 94
     new-instance v0, Lcom/android/server/policy/WakeGestureListener$2;
 
     invoke-direct {v0, p0}, Lcom/android/server/policy/WakeGestureListener$2;-><init>(Lcom/android/server/policy/WakeGestureListener;)V
 
     iput-object v0, p0, Lcom/android/server/policy/WakeGestureListener;->mWakeUpRunnable:Ljava/lang/Runnable;
 
-    .line 43
-    const-string/jumbo v0, "sensor"
+    const-string v0, "sensor"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -106,10 +101,8 @@
 
     iput-object v0, p0, Lcom/android/server/policy/WakeGestureListener;->mSensorManager:Landroid/hardware/SensorManager;
 
-    .line 44
     iput-object p2, p0, Lcom/android/server/policy/WakeGestureListener;->mHandler:Landroid/os/Handler;
 
-    .line 46
     iget-object v0, p0, Lcom/android/server/policy/WakeGestureListener;->mSensorManager:Landroid/hardware/SensorManager;
 
     const/16 v1, 0x17
@@ -120,7 +113,6 @@
 
     iput-object v0, p0, Lcom/android/server/policy/WakeGestureListener;->mSensor:Landroid/hardware/Sensor;
 
-    .line 42
     return-void
 .end method
 
@@ -130,12 +122,10 @@
     .locals 4
 
     .prologue
-    .line 67
     iget-object v1, p0, Lcom/android/server/policy/WakeGestureListener;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 68
     :try_start_0
     iget-object v0, p0, Lcom/android/server/policy/WakeGestureListener;->mSensor:Landroid/hardware/Sensor;
 
@@ -145,12 +135,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 69
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/policy/WakeGestureListener;->mTriggerRequested:Z
 
-    .line 70
     iget-object v0, p0, Lcom/android/server/policy/WakeGestureListener;->mSensorManager:Landroid/hardware/SensorManager;
 
     iget-object v2, p0, Lcom/android/server/policy/WakeGestureListener;->mListener:Landroid/hardware/TriggerEventListener;
@@ -164,10 +152,8 @@
     :cond_0
     monitor-exit v1
 
-    .line 66
     return-void
 
-    .line 67
     :catchall_0
     move-exception v0
 
@@ -182,12 +168,10 @@
     .param p2, "prefix"    # Ljava/lang/String;
 
     .prologue
-    .line 76
     iget-object v1, p0, Lcom/android/server/policy/WakeGestureListener;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 77
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -197,7 +181,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v2, "WakeGestureListener"
+    const-string v2, "WakeGestureListener"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -209,7 +193,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 78
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -218,7 +201,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v2, "  "
+    const-string v2, "  "
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -228,7 +211,6 @@
 
     move-result-object p2
 
-    .line 79
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -237,7 +219,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v2, "mTriggerRequested="
+    const-string v2, "mTriggerRequested="
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -255,7 +237,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 80
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -264,7 +245,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v2, "mSensor="
+    const-string v2, "mSensor="
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -286,10 +267,8 @@
 
     monitor-exit v1
 
-    .line 75
     return-void
 
-    .line 76
     :catchall_0
     move-exception v0
 
@@ -302,12 +281,10 @@
     .locals 2
 
     .prologue
-    .line 52
     iget-object v1, p0, Lcom/android/server/policy/WakeGestureListener;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 53
     :try_start_0
     iget-object v0, p0, Lcom/android/server/policy/WakeGestureListener;->mSensor:Landroid/hardware/Sensor;
     :try_end_0
@@ -327,7 +304,6 @@
 
     goto :goto_0
 
-    .line 52
     :catchall_0
     move-exception v0
 
@@ -343,12 +319,10 @@
     .locals 4
 
     .prologue
-    .line 58
     iget-object v1, p0, Lcom/android/server/policy/WakeGestureListener;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 59
     :try_start_0
     iget-object v0, p0, Lcom/android/server/policy/WakeGestureListener;->mSensor:Landroid/hardware/Sensor;
 
@@ -364,17 +338,14 @@
     :goto_0
     monitor-exit v1
 
-    .line 57
     return-void
 
-    .line 60
     :cond_1
     const/4 v0, 0x1
 
     :try_start_1
     iput-boolean v0, p0, Lcom/android/server/policy/WakeGestureListener;->mTriggerRequested:Z
 
-    .line 61
     iget-object v0, p0, Lcom/android/server/policy/WakeGestureListener;->mSensorManager:Landroid/hardware/SensorManager;
 
     iget-object v2, p0, Lcom/android/server/policy/WakeGestureListener;->mListener:Landroid/hardware/TriggerEventListener;
@@ -387,7 +358,6 @@
 
     goto :goto_0
 
-    .line 58
     :catchall_0
     move-exception v0
 

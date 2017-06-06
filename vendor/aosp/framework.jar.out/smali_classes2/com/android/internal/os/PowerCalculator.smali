@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,7 +27,6 @@
     .param p7, "statsType"    # I
 
     .prologue
-    .line 48
     return-void
 .end method
 
@@ -36,6 +34,5 @@
     .locals 0
 
     .prologue
-    .line 54
     return-void
 .end method

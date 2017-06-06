@@ -14,19 +14,16 @@
     .locals 6
 
     .prologue
-    .line 34
     :try_start_0
-    const-string/jumbo v2, "libcore.icu.ICU"
+    const-string v2, "libcore.icu.ICU"
 
     invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 35
     .local v0, "clazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
-    const-string/jumbo v2, "addLikelySubtags"
+    const-string v2, "addLikelySubtags"
 
-    .line 36
     const/4 v3, 0x1
 
     new-array v3, v3, [Ljava/lang/Class;
@@ -37,7 +34,6 @@
 
     aput-object v4, v3, v5
 
-    .line 35
     invoke-virtual {v0, v2, v3}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v2
@@ -46,14 +42,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 25
     return-void
 
-    .line 37
     :catch_0
     move-exception v1
 
-    .line 38
     .local v1, "e":Ljava/lang/Exception;
     new-instance v2, Ljava/lang/IllegalStateException;
 
@@ -66,7 +59,6 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -77,7 +69,6 @@
     .param p0, "locale"    # Ljava/util/Locale;
 
     .prologue
-    .line 45
     const/4 v3, 0x1
 
     :try_start_0
@@ -87,7 +78,6 @@
 
     aput-object p0, v0, v3
 
-    .line 46
     .local v0, "args":[Ljava/lang/Object;
     sget-object v3, Landroid/support/v4/text/ICUCompatApi23;->sAddLikelySubtagsMethod:Ljava/lang/reflect/Method;
 
@@ -108,18 +98,15 @@
 
     return-object v3
 
-    .line 49
     .end local v0    # "args":[Ljava/lang/Object;
     :catch_0
     move-exception v1
 
-    .line 50
     .local v1, "e":Ljava/lang/IllegalAccessException;
-    const-string/jumbo v3, "ICUCompatIcs"
+    const-string v3, "ICUCompatIcs"
 
     invoke-static {v3, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 53
     .end local v1    # "e":Ljava/lang/IllegalAccessException;
     :goto_0
     invoke-virtual {p0}, Ljava/util/Locale;->getScript()Ljava/lang/String;
@@ -128,13 +115,11 @@
 
     return-object v3
 
-    .line 47
     :catch_1
     move-exception v2
 
-    .line 48
     .local v2, "e":Ljava/lang/reflect/InvocationTargetException;
-    const-string/jumbo v3, "ICUCompatIcs"
+    const-string v3, "ICUCompatIcs"
 
     invoke-static {v3, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 

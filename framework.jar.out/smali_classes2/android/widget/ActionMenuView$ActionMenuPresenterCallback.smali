@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/widget/ActionMenuView;
 
     .prologue
-    .line 772
     iput-object p1, p0, Landroid/widget/ActionMenuView$ActionMenuPresenterCallback;->this$0:Landroid/widget/ActionMenuView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +52,6 @@
     .param p2, "allMenusAreClosing"    # Z
 
     .prologue
-    .line 774
     return-void
 .end method
 
@@ -62,7 +60,6 @@
     .param p1, "subMenu"    # Lcom/android/internal/view/menu/MenuBuilder;
 
     .prologue
-    .line 779
     const/4 v0, 0x0
 
     return v0

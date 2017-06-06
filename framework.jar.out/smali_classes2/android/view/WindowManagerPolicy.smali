@@ -323,6 +323,9 @@
 .method public abstract setUserRotationMode(II)V
 .end method
 
+.method public abstract showBootMessage(Ljava/lang/CharSequence;Z)V
+.end method
+
 .method public abstract showGlobalActions()V
 .end method
 
@@ -354,7 +357,4 @@
 .end method
 
 .method public abstract windowTypeToLayerLw(I)I
-.end method
-
-.method public abstract showBootMessage(Ljava/lang/CharSequence;Z)V
 .end method

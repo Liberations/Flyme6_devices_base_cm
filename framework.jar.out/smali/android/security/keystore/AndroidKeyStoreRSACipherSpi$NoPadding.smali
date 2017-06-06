@@ -19,12 +19,10 @@
     .locals 1
 
     .prologue
-    .line 54
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Landroid/security/keystore/AndroidKeyStoreRSACipherSpi;-><init>(I)V
 
-    .line 53
     return-void
 .end method
 
@@ -34,12 +32,10 @@
     .locals 1
 
     .prologue
-    .line 61
     const/4 v0, 0x2
 
     invoke-virtual {p0, v0}, Landroid/security/keystore/AndroidKeyStoreRSACipherSpi$NoPadding;->setKeymasterPurposeOverride(I)V
 
-    .line 62
     const/4 v0, 0x1
 
     return v0
@@ -49,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 89
     const/4 v0, 0x0
 
     return-object v0
@@ -68,7 +63,6 @@
     .locals 1
 
     .prologue
-    .line 94
     const/4 v0, 0x0
 
     return v0
@@ -78,7 +72,6 @@
     .locals 1
 
     .prologue
-    .line 99
     const/4 v0, 0x0
 
     return v0
@@ -93,7 +86,6 @@
     .end annotation
 
     .prologue
-    .line 66
     return-void
 .end method
 
@@ -107,18 +99,15 @@
     .end annotation
 
     .prologue
-    .line 81
     if-eqz p1, :cond_0
 
-    .line 82
     new-instance v0, Ljava/security/InvalidAlgorithmParameterException;
 
-    .line 83
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Unexpected parameters: "
+    const-string v2, "Unexpected parameters: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -128,7 +117,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, ". No parameters supported"
+    const-string v2, ". No parameters supported"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -138,12 +127,10 @@
 
     move-result-object v1
 
-    .line 82
     invoke-direct {v0, v1}, Ljava/security/InvalidAlgorithmParameterException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 79
     :cond_0
     return-void
 .end method
@@ -158,18 +145,15 @@
     .end annotation
 
     .prologue
-    .line 71
     if-eqz p1, :cond_0
 
-    .line 72
     new-instance v0, Ljava/security/InvalidAlgorithmParameterException;
 
-    .line 73
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Unexpected parameters: "
+    const-string v2, "Unexpected parameters: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -179,7 +163,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, ". No parameters supported"
+    const-string v2, ". No parameters supported"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -189,12 +173,10 @@
 
     move-result-object v1
 
-    .line 72
     invoke-direct {v0, v1}, Ljava/security/InvalidAlgorithmParameterException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 70
     :cond_0
     return-void
 .end method

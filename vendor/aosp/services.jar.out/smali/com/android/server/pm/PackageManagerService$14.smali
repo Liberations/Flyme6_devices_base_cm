@@ -33,7 +33,6 @@
     .param p3, "val$userId"    # I
 
     .prologue
-    .line 14610
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$14;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput p2, p0, Lcom/android/server/pm/PackageManagerService$14;->val$appId:I
@@ -51,17 +50,15 @@
     .locals 4
 
     .prologue
-    .line 14613
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$14;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget v1, p0, Lcom/android/server/pm/PackageManagerService$14;->val$appId:I
 
     iget v2, p0, Lcom/android/server/pm/PackageManagerService$14;->val$userId:I
 
-    const-string/jumbo v3, "permission grant or revoke changed gids"
+    const-string v3, "permission grant or revoke changed gids"
 
-    invoke-static {v0, v1, v2, v3}, Lcom/android/server/pm/PackageManagerService;->-wrap29(Lcom/android/server/pm/PackageManagerService;IILjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/android/server/pm/PackageManagerService;->-wrap30(Lcom/android/server/pm/PackageManagerService;IILjava/lang/String;)V
 
-    .line 14612
     return-void
 .end method

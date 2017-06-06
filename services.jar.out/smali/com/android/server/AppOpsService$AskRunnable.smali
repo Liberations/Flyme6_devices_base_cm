@@ -42,28 +42,20 @@
     .param p6, "request"    # Lcom/android/server/PermissionDialogReqQueue$PermissionDialogReq;
 
     .prologue
-    .line 2024
     iput-object p1, p0, Lcom/android/server/AppOpsService$AskRunnable;->this$0:Lcom/android/server/AppOpsService;
 
-    .line 2026
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2027
     iput p2, p0, Lcom/android/server/AppOpsService$AskRunnable;->code:I
 
-    .line 2028
     iput p3, p0, Lcom/android/server/AppOpsService$AskRunnable;->uid:I
 
-    .line 2029
     iput-object p4, p0, Lcom/android/server/AppOpsService$AskRunnable;->packageName:Ljava/lang/String;
 
-    .line 2030
     iput-object p5, p0, Lcom/android/server/AppOpsService$AskRunnable;->op:Lcom/android/server/AppOpsService$Op;
 
-    .line 2031
     iput-object p6, p0, Lcom/android/server/AppOpsService$AskRunnable;->request:Lcom/android/server/PermissionDialogReqQueue$PermissionDialogReq;
 
-    .line 2025
     return-void
 .end method
 
@@ -73,24 +65,20 @@
     .locals 8
 
     .prologue
-    .line 2036
     const/4 v6, 0x0
 
-    .line 2037
     .local v6, "permDialog":Lcom/android/server/PermissionDialog;
     iget-object v7, p0, Lcom/android/server/AppOpsService$AskRunnable;->this$0:Lcom/android/server/AppOpsService;
 
     monitor-enter v7
 
-    .line 2038
     :try_start_0
-    const-string/jumbo v1, "AppOps"
+    const-string v1, "AppOps"
 
-    const-string/jumbo v2, "Creating dialog box"
+    const-string v2, "Creating dialog box"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2039
     iget-object v1, p0, Lcom/android/server/AppOpsService$AskRunnable;->op:Lcom/android/server/AppOpsService$Op;
 
     iget-object v1, v1, Lcom/android/server/AppOpsService$Op;->dialogReqQueue:Lcom/android/server/PermissionDialogReqQueue;
@@ -99,7 +87,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/PermissionDialogReqQueue;->register(Lcom/android/server/PermissionDialogReqQueue$PermissionDialogReq;)V
 
-    .line 2040
     iget-object v1, p0, Lcom/android/server/AppOpsService$AskRunnable;->op:Lcom/android/server/AppOpsService$Op;
 
     iget-object v1, v1, Lcom/android/server/AppOpsService$Op;->dialogReqQueue:Lcom/android/server/PermissionDialogReqQueue;
@@ -110,14 +97,12 @@
 
     if-nez v1, :cond_1
 
-    .line 2041
     new-instance v0, Lcom/android/server/PermissionDialog;
 
     iget-object v1, p0, Lcom/android/server/AppOpsService$AskRunnable;->this$0:Lcom/android/server/AppOpsService;
 
     iget-object v1, v1, Lcom/android/server/AppOpsService;->mContext:Landroid/content/Context;
 
-    .line 2042
     iget-object v2, p0, Lcom/android/server/AppOpsService$AskRunnable;->this$0:Lcom/android/server/AppOpsService;
 
     iget v3, p0, Lcom/android/server/AppOpsService$AskRunnable;->code:I
@@ -126,12 +111,10 @@
 
     iget-object v5, p0, Lcom/android/server/AppOpsService$AskRunnable;->packageName:Ljava/lang/String;
 
-    .line 2041
     invoke-direct/range {v0 .. v5}, Lcom/android/server/PermissionDialog;-><init>(Landroid/content/Context;Lcom/android/server/AppOpsService;IILjava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2043
     .end local v6    # "permDialog":Lcom/android/server/PermissionDialog;
     .local v0, "permDialog":Lcom/android/server/PermissionDialog;
     :try_start_1
@@ -146,17 +129,13 @@
     :goto_0
     monitor-exit v7
 
-    .line 2046
     if-eqz v0, :cond_0
 
-    .line 2047
     invoke-virtual {v0}, Lcom/android/server/PermissionDialog;->show()V
 
-    .line 2035
     :cond_0
     return-void
 
-    .line 2037
     .end local v0    # "permDialog":Lcom/android/server/PermissionDialog;
     .restart local v6    # "permDialog":Lcom/android/server/PermissionDialog;
     :catchall_0

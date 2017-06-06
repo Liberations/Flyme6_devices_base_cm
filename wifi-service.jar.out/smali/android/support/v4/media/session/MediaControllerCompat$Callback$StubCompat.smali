@@ -24,7 +24,6 @@
     .param p1, "this$1"    # Landroid/support/v4/media/session/MediaControllerCompat$Callback;
 
     .prologue
-    .line 464
     iput-object p1, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback$StubCompat;->this$1:Landroid/support/v4/media/session/MediaControllerCompat$Callback;
 
     invoke-direct {p0}, Landroid/support/v4/media/session/IMediaControllerCallback$Stub;-><init>()V
@@ -55,7 +54,6 @@
     .end annotation
 
     .prologue
-    .line 468
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback$StubCompat;->this$1:Landroid/support/v4/media/session/MediaControllerCompat$Callback;
 
     invoke-static {v0}, Landroid/support/v4/media/session/MediaControllerCompat$Callback;->-get1(Landroid/support/v4/media/session/MediaControllerCompat$Callback;)Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;
@@ -66,7 +64,6 @@
 
     invoke-virtual {v0, v1, p1, p2}, Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;->post(ILjava/lang/Object;Landroid/os/Bundle;)V
 
-    .line 467
     return-void
 .end method
 
@@ -80,7 +77,6 @@
     .end annotation
 
     .prologue
-    .line 498
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback$StubCompat;->this$1:Landroid/support/v4/media/session/MediaControllerCompat$Callback;
 
     invoke-static {v0}, Landroid/support/v4/media/session/MediaControllerCompat$Callback;->-get1(Landroid/support/v4/media/session/MediaControllerCompat$Callback;)Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;
@@ -93,7 +89,6 @@
 
     invoke-virtual {v0, v1, p1, v2}, Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;->post(ILjava/lang/Object;Landroid/os/Bundle;)V
 
-    .line 497
     return-void
 .end method
 
@@ -107,7 +102,6 @@
     .end annotation
 
     .prologue
-    .line 483
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback$StubCompat;->this$1:Landroid/support/v4/media/session/MediaControllerCompat$Callback;
 
     invoke-static {v0}, Landroid/support/v4/media/session/MediaControllerCompat$Callback;->-get1(Landroid/support/v4/media/session/MediaControllerCompat$Callback;)Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;
@@ -120,7 +114,6 @@
 
     invoke-virtual {v0, v1, p1, v2}, Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;->post(ILjava/lang/Object;Landroid/os/Bundle;)V
 
-    .line 482
     return-void
 .end method
 
@@ -134,7 +127,6 @@
     .end annotation
 
     .prologue
-    .line 478
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback$StubCompat;->this$1:Landroid/support/v4/media/session/MediaControllerCompat$Callback;
 
     invoke-static {v0}, Landroid/support/v4/media/session/MediaControllerCompat$Callback;->-get1(Landroid/support/v4/media/session/MediaControllerCompat$Callback;)Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;
@@ -147,7 +139,6 @@
 
     invoke-virtual {v0, v1, p1, v2}, Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;->post(ILjava/lang/Object;Landroid/os/Bundle;)V
 
-    .line 477
     return-void
 .end method
 
@@ -170,7 +161,6 @@
     .end annotation
 
     .prologue
-    .line 488
     .local p1, "queue":Ljava/util/List;, "Ljava/util/List<Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;>;"
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback$StubCompat;->this$1:Landroid/support/v4/media/session/MediaControllerCompat$Callback;
 
@@ -184,7 +174,6 @@
 
     invoke-virtual {v0, v1, p1, v2}, Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;->post(ILjava/lang/Object;Landroid/os/Bundle;)V
 
-    .line 487
     return-void
 .end method
 
@@ -198,7 +187,6 @@
     .end annotation
 
     .prologue
-    .line 493
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback$StubCompat;->this$1:Landroid/support/v4/media/session/MediaControllerCompat$Callback;
 
     invoke-static {v0}, Landroid/support/v4/media/session/MediaControllerCompat$Callback;->-get1(Landroid/support/v4/media/session/MediaControllerCompat$Callback;)Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;
@@ -211,7 +199,6 @@
 
     invoke-virtual {v0, v1, p1, v2}, Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;->post(ILjava/lang/Object;Landroid/os/Bundle;)V
 
-    .line 492
     return-void
 .end method
 
@@ -226,7 +213,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 473
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback$StubCompat;->this$1:Landroid/support/v4/media/session/MediaControllerCompat$Callback;
 
     invoke-static {v0}, Landroid/support/v4/media/session/MediaControllerCompat$Callback;->-get1(Landroid/support/v4/media/session/MediaControllerCompat$Callback;)Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;
@@ -237,7 +223,6 @@
 
     invoke-virtual {v0, v1, v2, v2}, Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;->post(ILjava/lang/Object;Landroid/os/Bundle;)V
 
-    .line 472
     return-void
 .end method
 
@@ -253,14 +238,11 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 503
     const/4 v0, 0x0
 
-    .line 504
     .local v0, "pi":Landroid/support/v4/media/session/MediaControllerCompat$PlaybackInfo;
     if-eqz p1, :cond_0
 
-    .line 505
     new-instance v0, Landroid/support/v4/media/session/MediaControllerCompat$PlaybackInfo;
 
     .end local v0    # "pi":Landroid/support/v4/media/session/MediaControllerCompat$PlaybackInfo;
@@ -270,15 +252,12 @@
 
     iget v3, p1, Landroid/support/v4/media/session/ParcelableVolumeInfo;->controlType:I
 
-    .line 506
     iget v4, p1, Landroid/support/v4/media/session/ParcelableVolumeInfo;->maxVolume:I
 
     iget v5, p1, Landroid/support/v4/media/session/ParcelableVolumeInfo;->currentVolume:I
 
-    .line 505
     invoke-direct/range {v0 .. v5}, Landroid/support/v4/media/session/MediaControllerCompat$PlaybackInfo;-><init>(IIIII)V
 
-    .line 508
     :cond_0
     iget-object v1, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback$StubCompat;->this$1:Landroid/support/v4/media/session/MediaControllerCompat$Callback;
 
@@ -290,6 +269,5 @@
 
     invoke-virtual {v1, v2, v0, v6}, Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;->post(ILjava/lang/Object;Landroid/os/Bundle;)V
 
-    .line 502
     return-void
 .end method

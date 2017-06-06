@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-direct {p0}, Landroid/media/IMediaHTTPService$Stub;-><init>()V
 
     return-void
@@ -23,8 +22,7 @@
     .param p0, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 34
-    const-string/jumbo v0, "http://"
+    const-string v0, "http://"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -32,27 +30,22 @@
 
     if-nez v0, :cond_0
 
-    .line 35
-    const-string/jumbo v0, "https://"
+    const-string v0, "https://"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
 
-    .line 34
     if-nez v0, :cond_0
 
-    .line 36
-    const-string/jumbo v0, "widevine://"
+    const-string v0, "widevine://"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
 
-    .line 34
     if-eqz v0, :cond_1
 
-    .line 37
     :cond_0
     new-instance v0, Landroid/media/MediaHTTPService;
 
@@ -64,7 +57,6 @@
 
     return-object v0
 
-    .line 40
     :cond_1
     const/4 v0, 0x0
 
@@ -77,7 +69,6 @@
     .locals 1
 
     .prologue
-    .line 29
     new-instance v0, Landroid/media/MediaHTTPConnection;
 
     invoke-direct {v0}, Landroid/media/MediaHTTPConnection;-><init>()V

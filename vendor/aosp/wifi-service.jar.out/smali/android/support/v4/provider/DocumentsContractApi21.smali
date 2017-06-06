@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,34 +22,28 @@
     .param p0, "closeable"    # Ljava/lang/AutoCloseable;
 
     .prologue
-    .line 76
     if-eqz p0, :cond_0
 
-    .line 78
     :try_start_0
     invoke-interface {p0}, Ljava/lang/AutoCloseable;->close()V
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 75
     :cond_0
     :goto_0
     return-void
 
-    .line 81
     :catch_0
     move-exception v0
 
     .local v0, "ignored":Ljava/lang/Exception;
     goto :goto_0
 
-    .line 79
     .end local v0    # "ignored":Ljava/lang/Exception;
     :catch_1
     move-exception v1
 
-    .line 80
     .local v1, "rethrown":Ljava/lang/RuntimeException;
     throw v1
 .end method
@@ -62,8 +55,7 @@
     .param p2, "displayName"    # Ljava/lang/String;
 
     .prologue
-    .line 38
-    const-string/jumbo v0, "vnd.android.document/directory"
+    const-string v0, "vnd.android.document/directory"
 
     invoke-static {p0, p1, v0, p2}, Landroid/support/v4/provider/DocumentsContractApi21;->createFile(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -80,7 +72,6 @@
     .param p3, "displayName"    # Ljava/lang/String;
 
     .prologue
-    .line 33
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -98,41 +89,34 @@
     .param p1, "self"    # Landroid/net/Uri;
 
     .prologue
-    .line 47
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 49
     .local v0, "resolver":Landroid/content/ContentResolver;
     invoke-static {p1}, Landroid/provider/DocumentsContract;->getDocumentId(Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 48
     invoke-static {p1, v2}, Landroid/provider/DocumentsContract;->buildChildDocumentsUriUsingTree(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 50
     .local v1, "childrenUri":Landroid/net/Uri;
     new-instance v10, Ljava/util/ArrayList;
 
     invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
 
-    .line 52
     .local v10, "results":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/net/Uri;>;"
     const/4 v6, 0x0
 
-    .line 54
     .local v6, "c":Landroid/database/Cursor;
     const/4 v2, 0x1
 
     :try_start_0
     new-array v2, v2, [Ljava/lang/String;
 
-    .line 55
-    const-string/jumbo v3, "document_id"
+    const-string v3, "document_id"
 
     const/4 v4, 0x0
 
@@ -144,12 +128,10 @@
 
     const/4 v5, 0x0
 
-    .line 54
     invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v6
 
-    .line 56
     .local v6, "c":Landroid/database/Cursor;
     :goto_0
     invoke-interface {v6}, Landroid/database/Cursor;->moveToNext()Z
@@ -158,20 +140,17 @@
 
     if-eqz v2, :cond_0
 
-    .line 57
     const/4 v2, 0x0
 
     invoke-interface {v6, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 58
     .local v7, "documentId":Ljava/lang/String;
     invoke-static {p1, v7}, Landroid/provider/DocumentsContract;->buildDocumentUriUsingTree(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v8
 
-    .line 60
     .local v8, "documentUri":Landroid/net/Uri;
     invoke-virtual {v10, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_0
@@ -180,23 +159,21 @@
 
     goto :goto_0
 
-    .line 62
     .end local v6    # "c":Landroid/database/Cursor;
     .end local v7    # "documentId":Ljava/lang/String;
     .end local v8    # "documentUri":Landroid/net/Uri;
     :catch_0
     move-exception v9
 
-    .line 63
     .local v9, "e":Ljava/lang/Exception;
     :try_start_1
-    const-string/jumbo v2, "DocumentFile"
+    const-string v2, "DocumentFile"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "Failed query: "
+    const-string v4, "Failed query: "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -214,10 +191,8 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 65
     invoke-static {v6}, Landroid/support/v4/provider/DocumentsContractApi21;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 68
     .end local v9    # "e":Ljava/lang/Exception;
     :goto_1
     invoke-virtual {v10}, Ljava/util/ArrayList;->size()I
@@ -234,22 +209,18 @@
 
     return-object v2
 
-    .line 65
     .restart local v6    # "c":Landroid/database/Cursor;
     :cond_0
     invoke-static {v6}, Landroid/support/v4/provider/DocumentsContractApi21;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
     goto :goto_1
 
-    .line 64
     .end local v6    # "c":Landroid/database/Cursor;
     :catchall_0
     move-exception v2
 
-    .line 65
     invoke-static {v6}, Landroid/support/v4/provider/DocumentsContractApi21;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 64
     throw v2
 .end method
 
@@ -258,12 +229,10 @@
     .param p0, "treeUri"    # Landroid/net/Uri;
 
     .prologue
-    .line 43
     invoke-static {p0}, Landroid/provider/DocumentsContract;->getTreeDocumentId(Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 42
     invoke-static {p0, v0}, Landroid/provider/DocumentsContract;->buildDocumentUriUsingTree(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -278,7 +247,6 @@
     .param p2, "displayName"    # Ljava/lang/String;
 
     .prologue
-    .line 72
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0

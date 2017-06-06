@@ -73,22 +73,18 @@
     .param p2, "provider"    # Lcyanogenmod/externalviews/ExternalViewProviderService$Provider;
 
     .prologue
-    .line 97
     iput-object p1, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;->this$1:Lcyanogenmod/externalviews/ExternalViewProviderService$Provider;
 
     invoke-direct {p0}, Lcyanogenmod/externalviews/IExternalViewProvider$Stub;-><init>()V
 
-    .line 94
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;->mShouldShow:Z
 
-    .line 95
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;->mAskedShow:Z
 
-    .line 98
     new-instance v0, Lcom/android/internal/policy/PhoneWindow;
 
     iget-object v1, p1, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider;->this$0:Lcyanogenmod/externalviews/ExternalViewProviderService;
@@ -97,7 +93,6 @@
 
     iput-object v0, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;->mWindow:Landroid/view/Window;
 
-    .line 99
     iget-object v0, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;->mWindow:Landroid/view/Window;
 
     invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
@@ -112,14 +107,12 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    .line 101
     new-instance v0, Landroid/view/WindowManager$LayoutParams;
 
     invoke-direct {v0}, Landroid/view/WindowManager$LayoutParams;-><init>()V
 
     iput-object v0, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;->mParams:Landroid/view/WindowManager$LayoutParams;
 
-    .line 102
     iget-object v0, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;->mParams:Landroid/view/WindowManager$LayoutParams;
 
     invoke-virtual {p2}, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider;->getWindowType()I
@@ -128,7 +121,6 @@
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->type:I
 
-    .line 103
     iget-object v0, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;->mParams:Landroid/view/WindowManager$LayoutParams;
 
     invoke-virtual {p2}, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider;->getWindowFlags()I
@@ -137,21 +129,18 @@
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 104
     iget-object v0, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;->mParams:Landroid/view/WindowManager$LayoutParams;
 
     const/16 v1, 0x33
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    .line 105
     iget-object v0, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;->mParams:Landroid/view/WindowManager$LayoutParams;
 
     const/4 v1, -0x2
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->format:I
 
-    .line 97
     return-void
 .end method
 
@@ -159,7 +148,6 @@
     .locals 2
 
     .prologue
-    .line 204
     iget-object v0, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;->mWindow:Landroid/view/Window;
 
     invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
@@ -174,17 +162,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 205
     const/4 v0, 0x0
 
-    .line 204
     :goto_0
     invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 202
     return-void
 
-    .line 205
     :cond_0
     const/16 v0, 0x8
 
@@ -203,7 +187,6 @@
     .param p6, "clipRect"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 177
     iget-object v0, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;->this$1:Lcyanogenmod/externalviews/ExternalViewProviderService$Provider;
 
     iget-object v0, v0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider;->this$0:Lcyanogenmod/externalviews/ExternalViewProviderService;
@@ -232,7 +215,6 @@
 
     invoke-virtual {v8, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 176
     return-void
 .end method
 
@@ -246,7 +228,6 @@
     .end annotation
 
     .prologue
-    .line 110
     iget-object v0, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;->this$1:Lcyanogenmod/externalviews/ExternalViewProviderService$Provider;
 
     iget-object v0, v0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider;->this$0:Lcyanogenmod/externalviews/ExternalViewProviderService;
@@ -261,7 +242,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 109
     return-void
 .end method
 
@@ -274,7 +254,6 @@
     .end annotation
 
     .prologue
-    .line 165
     iget-object v0, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;->this$1:Lcyanogenmod/externalviews/ExternalViewProviderService$Provider;
 
     iget-object v0, v0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider;->this$0:Lcyanogenmod/externalviews/ExternalViewProviderService;
@@ -289,7 +268,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 164
     return-void
 .end method
 
@@ -302,7 +280,6 @@
     .end annotation
 
     .prologue
-    .line 143
     iget-object v0, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;->this$1:Lcyanogenmod/externalviews/ExternalViewProviderService$Provider;
 
     iget-object v0, v0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider;->this$0:Lcyanogenmod/externalviews/ExternalViewProviderService;
@@ -317,7 +294,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 142
     return-void
 .end method
 
@@ -330,7 +306,6 @@
     .end annotation
 
     .prologue
-    .line 131
     iget-object v0, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;->this$1:Lcyanogenmod/externalviews/ExternalViewProviderService$Provider;
 
     iget-object v0, v0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider;->this$0:Lcyanogenmod/externalviews/ExternalViewProviderService;
@@ -345,7 +320,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 130
     return-void
 .end method
 
@@ -358,7 +332,6 @@
     .end annotation
 
     .prologue
-    .line 121
     iget-object v0, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;->this$1:Lcyanogenmod/externalviews/ExternalViewProviderService$Provider;
 
     iget-object v0, v0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider;->this$0:Lcyanogenmod/externalviews/ExternalViewProviderService;
@@ -373,7 +346,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 120
     return-void
 .end method
 
@@ -386,7 +358,6 @@
     .end annotation
 
     .prologue
-    .line 155
     iget-object v0, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;->this$1:Lcyanogenmod/externalviews/ExternalViewProviderService$Provider;
 
     iget-object v0, v0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider;->this$0:Lcyanogenmod/externalviews/ExternalViewProviderService;
@@ -401,6 +372,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 154
     return-void
 .end method

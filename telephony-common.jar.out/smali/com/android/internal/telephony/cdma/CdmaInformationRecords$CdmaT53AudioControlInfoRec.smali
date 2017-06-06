@@ -27,20 +27,16 @@
     .param p2, "downlink"    # I
 
     .prologue
-    .line 250
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 251
     int-to-byte v0, p1
 
     iput-byte v0, p0, Lcom/android/internal/telephony/cdma/CdmaInformationRecords$CdmaT53AudioControlInfoRec;->uplink:B
 
-    .line 252
     int-to-byte v0, p2
 
     iput-byte v0, p0, Lcom/android/internal/telephony/cdma/CdmaInformationRecords$CdmaT53AudioControlInfoRec;->downlink:B
 
-    .line 250
     return-void
 .end method
 
@@ -50,45 +46,36 @@
     .locals 2
 
     .prologue
-    .line 257
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "CdmaT53AudioControlInfoRec: { uplink: "
+    const-string v1, "CdmaT53AudioControlInfoRec: { uplink: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 258
     iget-byte v1, p0, Lcom/android/internal/telephony/cdma/CdmaInformationRecords$CdmaT53AudioControlInfoRec;->uplink:B
 
-    .line 257
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 259
-    const-string/jumbo v1, " downlink: "
+    const-string v1, " downlink: "
 
-    .line 257
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 259
     iget-byte v1, p0, Lcom/android/internal/telephony/cdma/CdmaInformationRecords$CdmaT53AudioControlInfoRec;->downlink:B
 
-    .line 257
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 260
-    const-string/jumbo v1, " }"
+    const-string v1, " }"
 
-    .line 257
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0

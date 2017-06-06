@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 33
     new-instance v0, Landroid/security/keymaster/ExportResult;
 
     invoke-direct {v0, p1}, Landroid/security/keymaster/ExportResult;-><init>(Landroid/os/Parcel;)V
@@ -58,7 +56,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 32
     invoke-virtual {p0, p1}, Landroid/security/keymaster/ExportResult$1;->createFromParcel(Landroid/os/Parcel;)Landroid/security/keymaster/ExportResult;
 
     move-result-object v0
@@ -71,7 +68,6 @@
     .param p1, "length"    # I
 
     .prologue
-    .line 37
     new-array v0, p1, [Landroid/security/keymaster/ExportResult;
 
     return-object v0
@@ -82,7 +78,6 @@
     .param p1, "length"    # I
 
     .prologue
-    .line 36
     invoke-virtual {p0, p1}, Landroid/security/keymaster/ExportResult$1;->newArray(I)[Landroid/security/keymaster/ExportResult;
 
     move-result-object v0

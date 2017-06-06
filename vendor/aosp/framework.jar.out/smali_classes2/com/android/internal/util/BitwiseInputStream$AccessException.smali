@@ -20,12 +20,11 @@
     .param p1, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 43
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "BitwiseInputStream access failed: "
+    const-string v1, "BitwiseInputStream access failed: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -41,6 +40,5 @@
 
     invoke-direct {p0, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 42
     return-void
 .end method

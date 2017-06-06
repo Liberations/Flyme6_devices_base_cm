@@ -193,7 +193,7 @@ com.qualcomm.qti.seemp.health                  u:object_r:seemp_health_daemon_se
 com.qualcomm.qti.auth.securesampleauthdaemon   u:object_r:fidotest_service:s0
 com.qualcomm.qti.qseeproxysample               u:object_r:qseeproxysample_service:s0
 
-#line 1 "vendor/cm/sepolicy/service_contexts"
+#line 1 "vendor/sm/sepolicy/service_contexts"
 edgegestureservice                        u:object_r:edge_gesture_service:s0
 themes                                    u:object_r:themes_service:s0
 torch                                     u:object_r:torch_service:s0

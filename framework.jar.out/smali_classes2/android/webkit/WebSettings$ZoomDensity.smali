@@ -48,10 +48,9 @@
 
     const/4 v3, 0x0
 
-    .line 99
     new-instance v0, Landroid/webkit/WebSettings$ZoomDensity;
 
-    const-string/jumbo v1, "FAR"
+    const-string v1, "FAR"
 
     const/16 v2, 0x96
 
@@ -61,31 +60,24 @@
 
     new-instance v0, Landroid/webkit/WebSettings$ZoomDensity;
 
-    const-string/jumbo v1, "MEDIUM"
+    const-string v1, "MEDIUM"
 
-    .line 100
     const/16 v2, 0x64
 
-    .line 99
     invoke-direct {v0, v1, v4, v2}, Landroid/webkit/WebSettings$ZoomDensity;-><init>(Ljava/lang/String;II)V
 
-    .line 100
     sput-object v0, Landroid/webkit/WebSettings$ZoomDensity;->MEDIUM:Landroid/webkit/WebSettings$ZoomDensity;
 
     new-instance v0, Landroid/webkit/WebSettings$ZoomDensity;
 
-    const-string/jumbo v1, "CLOSE"
+    const-string v1, "CLOSE"
 
-    .line 101
     const/16 v2, 0x4b
 
-    .line 100
     invoke-direct {v0, v1, v5, v2}, Landroid/webkit/WebSettings$ZoomDensity;-><init>(Ljava/lang/String;II)V
 
-    .line 101
     sput-object v0, Landroid/webkit/WebSettings$ZoomDensity;->CLOSE:Landroid/webkit/WebSettings$ZoomDensity;
 
-    .line 98
     const/4 v0, 0x3
 
     new-array v0, v0, [Landroid/webkit/WebSettings$ZoomDensity;
@@ -112,13 +104,10 @@
     .param p3, "size"    # I
 
     .prologue
-    .line 102
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 103
     iput p3, p0, Landroid/webkit/WebSettings$ZoomDensity;->value:I
 
-    .line 102
     return-void
 .end method
 
@@ -127,7 +116,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 98
     const-class v0, Landroid/webkit/WebSettings$ZoomDensity;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -143,7 +131,6 @@
     .locals 1
 
     .prologue
-    .line 98
     sget-object v0, Landroid/webkit/WebSettings$ZoomDensity;->$VALUES:[Landroid/webkit/WebSettings$ZoomDensity;
 
     return-object v0
@@ -155,7 +142,6 @@
     .locals 1
 
     .prologue
-    .line 110
     iget v0, p0, Landroid/webkit/WebSettings$ZoomDensity;->value:I
 
     return v0

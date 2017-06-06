@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/media/WebVttParser;
 
     .prologue
-    .line 697
     iput-object p1, p0, Landroid/media/WebVttParser$2;->this$0:Landroid/media/WebVttParser;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,8 +41,7 @@
     .param p1, "line"    # Ljava/lang/String;
 
     .prologue
-    .line 700
-    const-string/jumbo v0, "\ufeff"
+    const-string v0, "\ufeff"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -51,16 +49,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 701
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 703
     :cond_0
-    const-string/jumbo v0, "WEBVTT"
+    const-string v0, "WEBVTT"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -68,8 +64,7 @@
 
     if-nez v0, :cond_1
 
-    .line 704
-    const-string/jumbo v0, "WEBVTT "
+    const-string v0, "WEBVTT "
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -77,7 +72,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 709
     :cond_1
     iget-object v0, p0, Landroid/media/WebVttParser$2;->this$0:Landroid/media/WebVttParser;
 
@@ -89,13 +83,11 @@
 
     invoke-static {v0, v1}, Landroid/media/WebVttParser;->-set1(Landroid/media/WebVttParser;Landroid/media/WebVttParser$Phase;)Landroid/media/WebVttParser$Phase;
 
-    .line 699
     :goto_0
     return-void
 
-    .line 705
     :cond_2
-    const-string/jumbo v0, "WEBVTT\t"
+    const-string v0, "WEBVTT\t"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -103,14 +95,12 @@
 
     if-nez v0, :cond_1
 
-    .line 706
     iget-object v0, p0, Landroid/media/WebVttParser$2;->this$0:Landroid/media/WebVttParser;
 
-    const-string/jumbo v1, "Not a WEBVTT header"
+    const-string v1, "Not a WEBVTT header"
 
     invoke-static {v0, v1, p1}, Landroid/media/WebVttParser;->-wrap0(Landroid/media/WebVttParser;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 707
     iget-object v0, p0, Landroid/media/WebVttParser$2;->this$0:Landroid/media/WebVttParser;
 
     iget-object v1, p0, Landroid/media/WebVttParser$2;->this$0:Landroid/media/WebVttParser;

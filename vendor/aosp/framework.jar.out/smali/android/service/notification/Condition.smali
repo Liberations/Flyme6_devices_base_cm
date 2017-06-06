@@ -62,15 +62,12 @@
     .locals 1
 
     .prologue
-    .line 167
     new-instance v0, Landroid/service/notification/Condition$1;
 
     invoke-direct {v0}, Landroid/service/notification/Condition$1;-><init>()V
 
-    .line 166
     sput-object v0, Landroid/service/notification/Condition;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 33
     return-void
 .end method
 
@@ -85,57 +82,51 @@
     .param p7, "flags"    # I
 
     .prologue
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
     if-nez p1, :cond_0
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "id is required"
+    const-string v1, "id is required"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 56
     :cond_0
     if-nez p2, :cond_1
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "summary is required"
+    const-string v1, "summary is required"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 57
     :cond_1
     if-nez p3, :cond_2
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "line1 is required"
+    const-string v1, "line1 is required"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 58
     :cond_2
     if-nez p4, :cond_3
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "line2 is required"
+    const-string v1, "line2 is required"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 59
     :cond_3
     invoke-static {p6}, Landroid/service/notification/Condition;->isValidState(I)Z
 
@@ -149,7 +140,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "state is invalid: "
+    const-string v2, "state is invalid: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -167,29 +158,21 @@
 
     throw v0
 
-    .line 60
     :cond_4
     iput-object p1, p0, Landroid/service/notification/Condition;->id:Landroid/net/Uri;
 
-    .line 61
     iput-object p2, p0, Landroid/service/notification/Condition;->summary:Ljava/lang/String;
 
-    .line 62
     iput-object p3, p0, Landroid/service/notification/Condition;->line1:Ljava/lang/String;
 
-    .line 63
     iput-object p4, p0, Landroid/service/notification/Condition;->line2:Ljava/lang/String;
 
-    .line 64
     iput p5, p0, Landroid/service/notification/Condition;->icon:I
 
-    .line 65
     iput p6, p0, Landroid/service/notification/Condition;->state:I
 
-    .line 66
     iput p7, p0, Landroid/service/notification/Condition;->flags:I
 
-    .line 54
     return-void
 .end method
 
@@ -198,7 +181,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 70
     const-class v0, Landroid/service/notification/Condition;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -211,42 +193,34 @@
 
     check-cast v1, Landroid/net/Uri;
 
-    .line 71
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 72
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 73
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 74
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 75
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 76
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v7
 
     move-object v0, p0
 
-    .line 70
     invoke-direct/range {v0 .. v7}, Landroid/service/notification/Condition;-><init>(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;III)V
 
-    .line 69
     return-void
 .end method
 
@@ -266,10 +240,9 @@
     .param p1, "pkg"    # Ljava/lang/String;
 
     .prologue
-    .line 163
     if-eqz p0, :cond_0
 
-    const-string/jumbo v0, "condition"
+    const-string v0, "condition"
 
     invoke-virtual {p0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
@@ -305,7 +278,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 80
     if-ltz p0, :cond_0
 
     const/4 v1, 0x3
@@ -323,12 +295,11 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 159
     new-instance v0, Landroid/net/Uri$Builder;
 
     invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
 
-    const-string/jumbo v1, "condition"
+    const-string v1, "condition"
 
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
@@ -350,14 +321,12 @@
     .param p0, "flags"    # I
 
     .prologue
-    .line 116
     and-int/lit8 v2, p0, 0x1
 
     if-eqz v2, :cond_1
 
     const/4 v1, 0x1
 
-    .line 117
     .local v1, "now":Z
     :goto_0
     and-int/lit8 v2, p0, 0x2
@@ -366,24 +335,21 @@
 
     const/4 v0, 0x1
 
-    .line 118
     .local v0, "always":Z
     :goto_1
     if-nez v1, :cond_0
 
     if-eqz v0, :cond_3
 
-    .line 119
     :cond_0
     if-eqz v1, :cond_4
 
     if-eqz v0, :cond_4
 
-    const-string/jumbo v2, "NOW, ALWAYS"
+    const-string v2, "NOW, ALWAYS"
 
     return-object v2
 
-    .line 116
     .end local v0    # "always":Z
     .end local v1    # "now":Z
     :cond_1
@@ -392,30 +358,27 @@
     .restart local v1    # "now":Z
     goto :goto_0
 
-    .line 117
     :cond_2
     const/4 v0, 0x0
 
     .restart local v0    # "always":Z
     goto :goto_1
 
-    .line 118
     :cond_3
-    const-string/jumbo v2, "NONE"
+    const-string v2, "NONE"
 
     return-object v2
 
-    .line 120
     :cond_4
     if-eqz v1, :cond_5
 
-    const-string/jumbo v2, "NOW"
+    const-string v2, "NOW"
 
     :goto_2
     return-object v2
 
     :cond_5
-    const-string/jumbo v2, "ALWAYS"
+    const-string v2, "ALWAYS"
 
     goto :goto_2
 .end method
@@ -425,44 +388,39 @@
     .param p0, "state"    # I
 
     .prologue
-    .line 108
     if-nez p0, :cond_0
 
-    const-string/jumbo v0, "STATE_FALSE"
+    const-string v0, "STATE_FALSE"
 
     return-object v0
 
-    .line 109
     :cond_0
     const/4 v0, 0x1
 
     if-ne p0, v0, :cond_1
 
-    const-string/jumbo v0, "STATE_TRUE"
+    const-string v0, "STATE_TRUE"
 
     return-object v0
 
-    .line 110
     :cond_1
     const/4 v0, 0x2
 
     if-ne p0, v0, :cond_2
 
-    const-string/jumbo v0, "STATE_UNKNOWN"
+    const-string v0, "STATE_UNKNOWN"
 
     return-object v0
 
-    .line 111
     :cond_2
     const/4 v0, 0x3
 
     if-ne p0, v0, :cond_3
 
-    const-string/jumbo v0, "STATE_ERROR"
+    const-string v0, "STATE_ERROR"
 
     return-object v0
 
-    .line 112
     :cond_3
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -470,7 +428,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "state is invalid: "
+    const-string v2, "state is invalid: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -495,44 +453,35 @@
     .locals 2
 
     .prologue
-    .line 148
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 150
     .local v0, "parcel":Landroid/os/Parcel;
     const/4 v1, 0x0
 
     :try_start_0
     invoke-virtual {p0, v0, v1}, Landroid/service/notification/Condition;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 151
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    .line 152
     new-instance v1, Landroid/service/notification/Condition;
 
     invoke-direct {v1, v0}, Landroid/service/notification/Condition;-><init>(Landroid/os/Parcel;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 154
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 152
     return-object v1
 
-    .line 153
     :catchall_0
     move-exception v1
 
-    .line 154
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 153
     throw v1
 .end method
 
@@ -540,7 +489,6 @@
     .locals 1
 
     .prologue
-    .line 144
     const/4 v0, 0x0
 
     return v0
@@ -555,14 +503,12 @@
 
     const/4 v2, 0x0
 
-    .line 125
     instance-of v3, p1, Landroid/service/notification/Condition;
 
     if-nez v3, :cond_0
 
     return v2
 
-    .line 126
     :cond_0
     if-ne p1, p0, :cond_1
 
@@ -571,10 +517,8 @@
     :cond_1
     move-object v0, p1
 
-    .line 127
     check-cast v0, Landroid/service/notification/Condition;
 
-    .line 128
     .local v0, "other":Landroid/service/notification/Condition;
     iget-object v3, v0, Landroid/service/notification/Condition;->id:Landroid/net/Uri;
 
@@ -586,7 +530,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 129
     iget-object v3, v0, Landroid/service/notification/Condition;->summary:Ljava/lang/String;
 
     iget-object v4, p0, Landroid/service/notification/Condition;->summary:Ljava/lang/String;
@@ -595,10 +538,8 @@
 
     move-result v3
 
-    .line 128
     if-eqz v3, :cond_3
 
-    .line 130
     iget-object v3, v0, Landroid/service/notification/Condition;->line1:Ljava/lang/String;
 
     iget-object v4, p0, Landroid/service/notification/Condition;->line1:Ljava/lang/String;
@@ -607,10 +548,8 @@
 
     move-result v3
 
-    .line 128
     if-eqz v3, :cond_3
 
-    .line 131
     iget-object v3, v0, Landroid/service/notification/Condition;->line2:Ljava/lang/String;
 
     iget-object v4, p0, Landroid/service/notification/Condition;->line2:Ljava/lang/String;
@@ -619,44 +558,37 @@
 
     move-result v3
 
-    .line 128
     if-eqz v3, :cond_3
 
-    .line 132
     iget v3, v0, Landroid/service/notification/Condition;->icon:I
 
     iget v4, p0, Landroid/service/notification/Condition;->icon:I
 
     if-ne v3, v4, :cond_3
 
-    .line 133
     iget v3, v0, Landroid/service/notification/Condition;->state:I
 
     iget v4, p0, Landroid/service/notification/Condition;->state:I
 
     if-ne v3, v4, :cond_3
 
-    .line 134
     iget v3, v0, Landroid/service/notification/Condition;->flags:I
 
     iget v4, p0, Landroid/service/notification/Condition;->flags:I
 
     if-ne v3, v4, :cond_2
 
-    .line 128
     :goto_0
     return v1
 
     :cond_2
     move v1, v2
 
-    .line 134
     goto :goto_0
 
     :cond_3
     move v1, v2
 
-    .line 128
     goto :goto_0
 .end method
 
@@ -664,7 +596,6 @@
     .locals 3
 
     .prologue
-    .line 139
     const/4 v0, 0x7
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -734,7 +665,6 @@
     .locals 2
 
     .prologue
-    .line 96
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-class v1, Landroid/service/notification/Condition;
@@ -751,126 +681,96 @@
 
     move-result-object v0
 
-    .line 97
-    const-string/jumbo v1, "id="
+    const-string v1, "id="
 
-    .line 96
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 97
     iget-object v1, p0, Landroid/service/notification/Condition;->id:Landroid/net/Uri;
 
-    .line 96
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 98
-    const-string/jumbo v1, ",summary="
+    const-string v1, ",summary="
 
-    .line 96
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 98
     iget-object v1, p0, Landroid/service/notification/Condition;->summary:Ljava/lang/String;
 
-    .line 96
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 99
-    const-string/jumbo v1, ",line1="
+    const-string v1, ",line1="
 
-    .line 96
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 99
     iget-object v1, p0, Landroid/service/notification/Condition;->line1:Ljava/lang/String;
 
-    .line 96
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 100
-    const-string/jumbo v1, ",line2="
+    const-string v1, ",line2="
 
-    .line 96
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 100
     iget-object v1, p0, Landroid/service/notification/Condition;->line2:Ljava/lang/String;
 
-    .line 96
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 101
-    const-string/jumbo v1, ",icon="
+    const-string v1, ",icon="
 
-    .line 96
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 101
     iget v1, p0, Landroid/service/notification/Condition;->icon:I
 
-    .line 96
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 102
-    const-string/jumbo v1, ",state="
+    const-string v1, ",state="
 
-    .line 96
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 102
     iget v1, p0, Landroid/service/notification/Condition;->state:I
 
     invoke-static {v1}, Landroid/service/notification/Condition;->stateToString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 96
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 103
-    const-string/jumbo v1, ",flags="
+    const-string v1, ",flags="
 
-    .line 96
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 103
     iget v1, p0, Landroid/service/notification/Condition;->flags:I
 
-    .line 96
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 104
     const/16 v1, 0x5d
 
-    .line 96
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -888,43 +788,35 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 85
     iget-object v0, p0, Landroid/service/notification/Condition;->id:Landroid/net/Uri;
 
     const/4 v1, 0x0
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 86
     iget-object v0, p0, Landroid/service/notification/Condition;->summary:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 87
     iget-object v0, p0, Landroid/service/notification/Condition;->line1:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 88
     iget-object v0, p0, Landroid/service/notification/Condition;->line2:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 89
     iget v0, p0, Landroid/service/notification/Condition;->icon:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 90
     iget v0, p0, Landroid/service/notification/Condition;->state:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 91
     iget v0, p0, Landroid/service/notification/Condition;->flags:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 84
     return-void
 .end method

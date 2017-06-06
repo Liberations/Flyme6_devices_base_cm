@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/widget/DayPickerView;
 
     .prologue
-    .line 390
     iput-object p1, p0, Landroid/widget/DayPickerView$1;->this$0:Landroid/widget/DayPickerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 399
     return-void
 .end method
 
@@ -53,7 +51,6 @@
     .param p3, "positionOffsetPixels"    # I
 
     .prologue
-    .line 393
     const/high16 v1, 0x3f000000    # 0.5f
 
     sub-float/2addr v1, p2
@@ -66,7 +63,6 @@
 
     mul-float v0, v1, v2
 
-    .line 394
     .local v0, "alpha":F
     iget-object v1, p0, Landroid/widget/DayPickerView$1;->this$0:Landroid/widget/DayPickerView;
 
@@ -76,7 +72,6 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageButton;->setAlpha(F)V
 
-    .line 395
     iget-object v1, p0, Landroid/widget/DayPickerView$1;->this$0:Landroid/widget/DayPickerView;
 
     invoke-static {v1}, Landroid/widget/DayPickerView;->-get1(Landroid/widget/DayPickerView;)Landroid/widget/ImageButton;
@@ -85,7 +80,6 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageButton;->setAlpha(F)V
 
-    .line 392
     return-void
 .end method
 
@@ -94,11 +88,9 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 403
     iget-object v0, p0, Landroid/widget/DayPickerView$1;->this$0:Landroid/widget/DayPickerView;
 
     invoke-static {v0, p1}, Landroid/widget/DayPickerView;->-wrap0(Landroid/widget/DayPickerView;I)V
 
-    .line 402
     return-void
 .end method

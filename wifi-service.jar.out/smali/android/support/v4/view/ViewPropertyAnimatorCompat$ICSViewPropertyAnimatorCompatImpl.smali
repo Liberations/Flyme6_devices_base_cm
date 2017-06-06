@@ -39,15 +39,12 @@
     .locals 1
 
     .prologue
-    .line 362
     invoke-direct {p0}, Landroid/support/v4/view/ViewPropertyAnimatorCompat$BaseViewPropertyAnimatorCompatImpl;-><init>()V
 
-    .line 363
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/support/v4/view/ViewPropertyAnimatorCompat$ICSViewPropertyAnimatorCompatImpl;->mLayerMap:Ljava/util/WeakHashMap;
 
-    .line 362
     return-void
 .end method
 
@@ -60,10 +57,8 @@
     .param p3, "value"    # F
 
     .prologue
-    .line 372
     invoke-static {p2, p3}, Landroid/support/v4/view/ViewPropertyAnimatorCompatICS;->alpha(Landroid/view/View;F)V
 
-    .line 371
     return-void
 .end method
 
@@ -74,10 +69,8 @@
     .param p3, "value"    # F
 
     .prologue
-    .line 407
     invoke-static {p2, p3}, Landroid/support/v4/view/ViewPropertyAnimatorCompatICS;->alphaBy(Landroid/view/View;F)V
 
-    .line 406
     return-void
 .end method
 
@@ -87,10 +80,8 @@
     .param p2, "view"    # Landroid/view/View;
 
     .prologue
-    .line 462
     invoke-static {p2}, Landroid/support/v4/view/ViewPropertyAnimatorCompatICS;->cancel(Landroid/view/View;)V
 
-    .line 461
     return-void
 .end method
 
@@ -100,7 +91,6 @@
     .param p2, "view"    # Landroid/view/View;
 
     .prologue
-    .line 387
     invoke-static {p2}, Landroid/support/v4/view/ViewPropertyAnimatorCompatICS;->getDuration(Landroid/view/View;)J
 
     move-result-wide v0
@@ -114,7 +104,6 @@
     .param p2, "view"    # Landroid/view/View;
 
     .prologue
-    .line 402
     invoke-static {p2}, Landroid/support/v4/view/ViewPropertyAnimatorCompatICS;->getStartDelay(Landroid/view/View;)J
 
     move-result-wide v0
@@ -129,10 +118,8 @@
     .param p3, "value"    # F
 
     .prologue
-    .line 412
     invoke-static {p2, p3}, Landroid/support/v4/view/ViewPropertyAnimatorCompatICS;->rotation(Landroid/view/View;F)V
 
-    .line 411
     return-void
 .end method
 
@@ -143,10 +130,8 @@
     .param p3, "value"    # F
 
     .prologue
-    .line 417
     invoke-static {p2, p3}, Landroid/support/v4/view/ViewPropertyAnimatorCompatICS;->rotationBy(Landroid/view/View;F)V
 
-    .line 416
     return-void
 .end method
 
@@ -157,10 +142,8 @@
     .param p3, "value"    # F
 
     .prologue
-    .line 422
     invoke-static {p2, p3}, Landroid/support/v4/view/ViewPropertyAnimatorCompatICS;->rotationX(Landroid/view/View;F)V
 
-    .line 421
     return-void
 .end method
 
@@ -171,10 +154,8 @@
     .param p3, "value"    # F
 
     .prologue
-    .line 427
     invoke-static {p2, p3}, Landroid/support/v4/view/ViewPropertyAnimatorCompatICS;->rotationXBy(Landroid/view/View;F)V
 
-    .line 426
     return-void
 .end method
 
@@ -185,10 +166,8 @@
     .param p3, "value"    # F
 
     .prologue
-    .line 432
     invoke-static {p2, p3}, Landroid/support/v4/view/ViewPropertyAnimatorCompatICS;->rotationY(Landroid/view/View;F)V
 
-    .line 431
     return-void
 .end method
 
@@ -199,10 +178,8 @@
     .param p3, "value"    # F
 
     .prologue
-    .line 437
     invoke-static {p2, p3}, Landroid/support/v4/view/ViewPropertyAnimatorCompatICS;->rotationYBy(Landroid/view/View;F)V
 
-    .line 436
     return-void
 .end method
 
@@ -213,10 +190,8 @@
     .param p3, "value"    # F
 
     .prologue
-    .line 442
     invoke-static {p2, p3}, Landroid/support/v4/view/ViewPropertyAnimatorCompatICS;->scaleX(Landroid/view/View;F)V
 
-    .line 441
     return-void
 .end method
 
@@ -227,10 +202,8 @@
     .param p3, "value"    # F
 
     .prologue
-    .line 447
     invoke-static {p2, p3}, Landroid/support/v4/view/ViewPropertyAnimatorCompatICS;->scaleXBy(Landroid/view/View;F)V
 
-    .line 446
     return-void
 .end method
 
@@ -241,10 +214,8 @@
     .param p3, "value"    # F
 
     .prologue
-    .line 452
     invoke-static {p2, p3}, Landroid/support/v4/view/ViewPropertyAnimatorCompatICS;->scaleY(Landroid/view/View;F)V
 
-    .line 451
     return-void
 .end method
 
@@ -255,10 +226,8 @@
     .param p3, "value"    # F
 
     .prologue
-    .line 457
     invoke-static {p2, p3}, Landroid/support/v4/view/ViewPropertyAnimatorCompatICS;->scaleYBy(Landroid/view/View;F)V
 
-    .line 456
     return-void
 .end method
 
@@ -269,10 +238,8 @@
     .param p3, "value"    # J
 
     .prologue
-    .line 367
     invoke-static {p2, p3, p4}, Landroid/support/v4/view/ViewPropertyAnimatorCompatICS;->setDuration(Landroid/view/View;J)V
 
-    .line 366
     return-void
 .end method
 
@@ -283,10 +250,8 @@
     .param p3, "value"    # Landroid/view/animation/Interpolator;
 
     .prologue
-    .line 392
     invoke-static {p2, p3}, Landroid/support/v4/view/ViewPropertyAnimatorCompatICS;->setInterpolator(Landroid/view/View;Landroid/view/animation/Interpolator;)V
 
-    .line 391
     return-void
 .end method
 
@@ -297,19 +262,16 @@
     .param p3, "listener"    # Landroid/support/v4/view/ViewPropertyAnimatorListener;
 
     .prologue
-    .line 502
     const/high16 v0, 0x7e000000
 
     invoke-virtual {p2, v0, p3}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
-    .line 503
     new-instance v0, Landroid/support/v4/view/ViewPropertyAnimatorCompat$ICSViewPropertyAnimatorCompatImpl$MyVpaListener;
 
     invoke-direct {v0, p1}, Landroid/support/v4/view/ViewPropertyAnimatorCompat$ICSViewPropertyAnimatorCompatImpl$MyVpaListener;-><init>(Landroid/support/v4/view/ViewPropertyAnimatorCompat;)V
 
     invoke-static {p2, v0}, Landroid/support/v4/view/ViewPropertyAnimatorCompatICS;->setListener(Landroid/view/View;Landroid/support/v4/view/ViewPropertyAnimatorListener;)V
 
-    .line 501
     return-void
 .end method
 
@@ -320,10 +282,8 @@
     .param p3, "value"    # J
 
     .prologue
-    .line 397
     invoke-static {p2, p3, p4}, Landroid/support/v4/view/ViewPropertyAnimatorCompatICS;->setStartDelay(Landroid/view/View;J)V
 
-    .line 396
     return-void
 .end method
 
@@ -333,10 +293,8 @@
     .param p2, "view"    # Landroid/view/View;
 
     .prologue
-    .line 497
     invoke-static {p2}, Landroid/support/v4/view/ViewPropertyAnimatorCompatICS;->start(Landroid/view/View;)V
 
-    .line 496
     return-void
 .end method
 
@@ -347,10 +305,8 @@
     .param p3, "value"    # F
 
     .prologue
-    .line 377
     invoke-static {p2, p3}, Landroid/support/v4/view/ViewPropertyAnimatorCompatICS;->translationX(Landroid/view/View;F)V
 
-    .line 376
     return-void
 .end method
 
@@ -361,10 +317,8 @@
     .param p3, "value"    # F
 
     .prologue
-    .line 487
     invoke-static {p2, p3}, Landroid/support/v4/view/ViewPropertyAnimatorCompatICS;->translationXBy(Landroid/view/View;F)V
 
-    .line 486
     return-void
 .end method
 
@@ -375,10 +329,8 @@
     .param p3, "value"    # F
 
     .prologue
-    .line 382
     invoke-static {p2, p3}, Landroid/support/v4/view/ViewPropertyAnimatorCompatICS;->translationY(Landroid/view/View;F)V
 
-    .line 381
     return-void
 .end method
 
@@ -389,10 +341,8 @@
     .param p3, "value"    # F
 
     .prologue
-    .line 492
     invoke-static {p2, p3}, Landroid/support/v4/view/ViewPropertyAnimatorCompatICS;->translationYBy(Landroid/view/View;F)V
 
-    .line 491
     return-void
 .end method
 
@@ -403,17 +353,14 @@
     .param p3, "runnable"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 508
     new-instance v0, Landroid/support/v4/view/ViewPropertyAnimatorCompat$ICSViewPropertyAnimatorCompatImpl$MyVpaListener;
 
     invoke-direct {v0, p1}, Landroid/support/v4/view/ViewPropertyAnimatorCompat$ICSViewPropertyAnimatorCompatImpl$MyVpaListener;-><init>(Landroid/support/v4/view/ViewPropertyAnimatorCompat;)V
 
     invoke-static {p2, v0}, Landroid/support/v4/view/ViewPropertyAnimatorCompatICS;->setListener(Landroid/view/View;Landroid/support/v4/view/ViewPropertyAnimatorListener;)V
 
-    .line 509
     invoke-static {p1, p3}, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->-set0(Landroid/support/v4/view/ViewPropertyAnimatorCompat;Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
-    .line 507
     return-void
 .end method
 
@@ -423,21 +370,18 @@
     .param p2, "view"    # Landroid/view/View;
 
     .prologue
-    .line 520
     invoke-static {p2}, Landroid/support/v4/view/ViewCompat;->getLayerType(Landroid/view/View;)I
 
     move-result v0
 
     invoke-static {p1, v0}, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->-set1(Landroid/support/v4/view/ViewPropertyAnimatorCompat;I)I
 
-    .line 521
     new-instance v0, Landroid/support/v4/view/ViewPropertyAnimatorCompat$ICSViewPropertyAnimatorCompatImpl$MyVpaListener;
 
     invoke-direct {v0, p1}, Landroid/support/v4/view/ViewPropertyAnimatorCompat$ICSViewPropertyAnimatorCompatImpl$MyVpaListener;-><init>(Landroid/support/v4/view/ViewPropertyAnimatorCompat;)V
 
     invoke-static {p2, v0}, Landroid/support/v4/view/ViewPropertyAnimatorCompatICS;->setListener(Landroid/view/View;Landroid/support/v4/view/ViewPropertyAnimatorListener;)V
 
-    .line 519
     return-void
 .end method
 
@@ -448,17 +392,14 @@
     .param p3, "runnable"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 514
     new-instance v0, Landroid/support/v4/view/ViewPropertyAnimatorCompat$ICSViewPropertyAnimatorCompatImpl$MyVpaListener;
 
     invoke-direct {v0, p1}, Landroid/support/v4/view/ViewPropertyAnimatorCompat$ICSViewPropertyAnimatorCompatImpl$MyVpaListener;-><init>(Landroid/support/v4/view/ViewPropertyAnimatorCompat;)V
 
     invoke-static {p2, v0}, Landroid/support/v4/view/ViewPropertyAnimatorCompatICS;->setListener(Landroid/view/View;Landroid/support/v4/view/ViewPropertyAnimatorListener;)V
 
-    .line 515
     invoke-static {p1, p3}, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->-set2(Landroid/support/v4/view/ViewPropertyAnimatorCompat;Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
-    .line 513
     return-void
 .end method
 
@@ -469,10 +410,8 @@
     .param p3, "value"    # F
 
     .prologue
-    .line 467
     invoke-static {p2, p3}, Landroid/support/v4/view/ViewPropertyAnimatorCompatICS;->x(Landroid/view/View;F)V
 
-    .line 466
     return-void
 .end method
 
@@ -483,10 +422,8 @@
     .param p3, "value"    # F
 
     .prologue
-    .line 472
     invoke-static {p2, p3}, Landroid/support/v4/view/ViewPropertyAnimatorCompatICS;->xBy(Landroid/view/View;F)V
 
-    .line 471
     return-void
 .end method
 
@@ -497,10 +434,8 @@
     .param p3, "value"    # F
 
     .prologue
-    .line 477
     invoke-static {p2, p3}, Landroid/support/v4/view/ViewPropertyAnimatorCompatICS;->y(Landroid/view/View;F)V
 
-    .line 476
     return-void
 .end method
 
@@ -511,9 +446,7 @@
     .param p3, "value"    # F
 
     .prologue
-    .line 482
     invoke-static {p2, p3}, Landroid/support/v4/view/ViewPropertyAnimatorCompatICS;->yBy(Landroid/view/View;F)V
 
-    .line 481
     return-void
 .end method

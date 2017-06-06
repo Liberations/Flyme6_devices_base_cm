@@ -30,7 +30,6 @@
     .param p2, "val$position"    # I
 
     .prologue
-    .line 7028
     iput-object p1, p0, Landroid/widget/AbsListView$PositionScroller$1;->this$1:Landroid/widget/AbsListView$PositionScroller;
 
     iput p2, p0, Landroid/widget/AbsListView$PositionScroller$1;->val$position:I
@@ -46,13 +45,11 @@
     .locals 2
 
     .prologue
-    .line 7030
     iget-object v0, p0, Landroid/widget/AbsListView$PositionScroller$1;->this$1:Landroid/widget/AbsListView$PositionScroller;
 
     iget v1, p0, Landroid/widget/AbsListView$PositionScroller$1;->val$position:I
 
     invoke-virtual {v0, v1}, Landroid/widget/AbsListView$PositionScroller;->start(I)V
 
-    .line 7029
     return-void
 .end method

@@ -24,13 +24,11 @@
     .end annotation
 
     .prologue
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     new-instance v0, Ljava/net/URL;
 
-    const-string/jumbo v1, "https"
+    const-string v1, "https"
 
     invoke-direct {v0, v1, p1, p2, p3}, Ljava/net/URL;-><init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
 
@@ -42,10 +40,8 @@
 
     iput-object v0, p0, Lorg/ksoap2/transport/HttpsServiceConnectionSE;->connection:Ljavax/net/ssl/HttpsURLConnection;
 
-    .line 56
     invoke-direct {p0, p4}, Lorg/ksoap2/transport/HttpsServiceConnectionSE;->updateConnectionParameters(I)V
 
-    .line 53
     return-void
 .end method
 
@@ -56,34 +52,28 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 60
     iget-object v0, p0, Lorg/ksoap2/transport/HttpsServiceConnectionSE;->connection:Ljavax/net/ssl/HttpsURLConnection;
 
     invoke-virtual {v0, p1}, Ljavax/net/ssl/HttpsURLConnection;->setConnectTimeout(I)V
 
-    .line 61
     iget-object v0, p0, Lorg/ksoap2/transport/HttpsServiceConnectionSE;->connection:Ljavax/net/ssl/HttpsURLConnection;
 
     invoke-virtual {v0, p1}, Ljavax/net/ssl/HttpsURLConnection;->setReadTimeout(I)V
 
-    .line 62
     iget-object v0, p0, Lorg/ksoap2/transport/HttpsServiceConnectionSE;->connection:Ljavax/net/ssl/HttpsURLConnection;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Ljavax/net/ssl/HttpsURLConnection;->setUseCaches(Z)V
 
-    .line 63
     iget-object v0, p0, Lorg/ksoap2/transport/HttpsServiceConnectionSE;->connection:Ljavax/net/ssl/HttpsURLConnection;
 
     invoke-virtual {v0, v2}, Ljavax/net/ssl/HttpsURLConnection;->setDoOutput(Z)V
 
-    .line 64
     iget-object v0, p0, Lorg/ksoap2/transport/HttpsServiceConnectionSE;->connection:Ljavax/net/ssl/HttpsURLConnection;
 
     invoke-virtual {v0, v2}, Ljavax/net/ssl/HttpsURLConnection;->setDoInput(Z)V
 
-    .line 59
     return-void
 .end method
 
@@ -98,12 +88,10 @@
     .end annotation
 
     .prologue
-    .line 68
     iget-object v0, p0, Lorg/ksoap2/transport/HttpsServiceConnectionSE;->connection:Ljavax/net/ssl/HttpsURLConnection;
 
     invoke-virtual {v0}, Ljavax/net/ssl/HttpsURLConnection;->connect()V
 
-    .line 67
     return-void
 .end method
 
@@ -111,12 +99,10 @@
     .locals 1
 
     .prologue
-    .line 72
     iget-object v0, p0, Lorg/ksoap2/transport/HttpsServiceConnectionSE;->connection:Ljavax/net/ssl/HttpsURLConnection;
 
     invoke-virtual {v0}, Ljavax/net/ssl/HttpsURLConnection;->disconnect()V
 
-    .line 71
     return-void
 .end method
 
@@ -124,7 +110,6 @@
     .locals 1
 
     .prologue
-    .line 113
     iget-object v0, p0, Lorg/ksoap2/transport/HttpsServiceConnectionSE;->connection:Ljavax/net/ssl/HttpsURLConnection;
 
     invoke-virtual {v0}, Ljavax/net/ssl/HttpsURLConnection;->getErrorStream()Ljava/io/InputStream;
@@ -138,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 117
     iget-object v0, p0, Lorg/ksoap2/transport/HttpsServiceConnectionSE;->connection:Ljavax/net/ssl/HttpsURLConnection;
 
     invoke-virtual {v0}, Ljavax/net/ssl/HttpsURLConnection;->getURL()Ljava/net/URL;
@@ -156,7 +140,6 @@
     .locals 1
 
     .prologue
-    .line 125
     iget-object v0, p0, Lorg/ksoap2/transport/HttpsServiceConnectionSE;->connection:Ljavax/net/ssl/HttpsURLConnection;
 
     invoke-virtual {v0}, Ljavax/net/ssl/HttpsURLConnection;->getURL()Ljava/net/URL;
@@ -174,7 +157,6 @@
     .locals 1
 
     .prologue
-    .line 121
     iget-object v0, p0, Lorg/ksoap2/transport/HttpsServiceConnectionSE;->connection:Ljavax/net/ssl/HttpsURLConnection;
 
     invoke-virtual {v0}, Ljavax/net/ssl/HttpsURLConnection;->getURL()Ljava/net/URL;
@@ -192,26 +174,22 @@
     .locals 9
 
     .prologue
-    .line 76
     iget-object v7, p0, Lorg/ksoap2/transport/HttpsServiceConnectionSE;->connection:Ljavax/net/ssl/HttpsURLConnection;
 
     invoke-virtual {v7}, Ljavax/net/ssl/HttpsURLConnection;->getHeaderFields()Ljava/util/Map;
 
     move-result-object v4
 
-    .line 77
     .local v4, "properties":Ljava/util/Map;
     invoke-interface {v4}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v3
 
-    .line 78
     .local v3, "keys":Ljava/util/Set;
     new-instance v5, Ljava/util/LinkedList;
 
     invoke-direct {v5}, Ljava/util/LinkedList;-><init>()V
 
-    .line 80
     .local v5, "retList":Ljava/util/List;
     invoke-interface {v3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -225,14 +203,12 @@
 
     if-eqz v7, :cond_1
 
-    .line 81
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
-    .line 82
     .local v2, "key":Ljava/lang/String;
     invoke-interface {v4, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -240,7 +216,6 @@
 
     check-cast v6, Ljava/util/List;
 
-    .line 84
     .local v6, "values":Ljava/util/List;
     const/4 v1, 0x0
 
@@ -252,7 +227,6 @@
 
     if-ge v1, v7, :cond_0
 
-    .line 85
     new-instance v8, Lorg/ksoap2/HeaderProperty;
 
     invoke-interface {v6, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -265,12 +239,10 @@
 
     invoke-interface {v5, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 84
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 89
     .end local v1    # "j":I
     .end local v2    # "key":Ljava/lang/String;
     .end local v6    # "values":Ljava/util/List;
@@ -287,7 +259,6 @@
     .end annotation
 
     .prologue
-    .line 109
     iget-object v0, p0, Lorg/ksoap2/transport/HttpsServiceConnectionSE;->connection:Ljavax/net/ssl/HttpsURLConnection;
 
     invoke-virtual {v0}, Ljavax/net/ssl/HttpsURLConnection;->getInputStream()Ljava/io/InputStream;
@@ -306,7 +277,6 @@
     .end annotation
 
     .prologue
-    .line 105
     iget-object v0, p0, Lorg/ksoap2/transport/HttpsServiceConnectionSE;->connection:Ljavax/net/ssl/HttpsURLConnection;
 
     invoke-virtual {v0}, Ljavax/net/ssl/HttpsURLConnection;->getOutputStream()Ljava/io/OutputStream;
@@ -321,12 +291,10 @@
     .param p1, "contentLength"    # I
 
     .prologue
-    .line 101
     iget-object v0, p0, Lorg/ksoap2/transport/HttpsServiceConnectionSE;->connection:Ljavax/net/ssl/HttpsURLConnection;
 
     invoke-virtual {v0, p1}, Ljavax/net/ssl/HttpsURLConnection;->setFixedLengthStreamingMode(I)V
 
-    .line 100
     return-void
 .end method
 
@@ -335,12 +303,10 @@
     .param p1, "v"    # Ljavax/net/ssl/HostnameVerifier;
 
     .prologue
-    .line 133
     iget-object v0, p0, Lorg/ksoap2/transport/HttpsServiceConnectionSE;->connection:Ljavax/net/ssl/HttpsURLConnection;
 
     invoke-virtual {v0, p1}, Ljavax/net/ssl/HttpsURLConnection;->setHostnameVerifier(Ljavax/net/ssl/HostnameVerifier;)V
 
-    .line 132
     return-void
 .end method
 
@@ -354,12 +320,10 @@
     .end annotation
 
     .prologue
-    .line 97
     iget-object v0, p0, Lorg/ksoap2/transport/HttpsServiceConnectionSE;->connection:Ljavax/net/ssl/HttpsURLConnection;
 
     invoke-virtual {v0, p1}, Ljavax/net/ssl/HttpsURLConnection;->setRequestMethod(Ljava/lang/String;)V
 
-    .line 96
     return-void
 .end method
 
@@ -369,12 +333,10 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 93
     iget-object v0, p0, Lorg/ksoap2/transport/HttpsServiceConnectionSE;->connection:Ljavax/net/ssl/HttpsURLConnection;
 
     invoke-virtual {v0, p1, p2}, Ljavax/net/ssl/HttpsURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 92
     return-void
 .end method
 
@@ -383,11 +345,9 @@
     .param p1, "sf"    # Ljavax/net/ssl/SSLSocketFactory;
 
     .prologue
-    .line 129
     iget-object v0, p0, Lorg/ksoap2/transport/HttpsServiceConnectionSE;->connection:Ljavax/net/ssl/HttpsURLConnection;
 
     invoke-virtual {v0, p1}, Ljavax/net/ssl/HttpsURLConnection;->setSSLSocketFactory(Ljavax/net/ssl/SSLSocketFactory;)V
 
-    .line 128
     return-void
 .end method

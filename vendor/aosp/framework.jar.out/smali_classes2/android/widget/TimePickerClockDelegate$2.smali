@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/widget/TimePickerClockDelegate;
 
     .prologue
-    .line 1354
     iput-object p1, p0, Landroid/widget/TimePickerClockDelegate$2;->this$0:Landroid/widget/TimePickerClockDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .param p3, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 1357
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v0
@@ -53,7 +51,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 1358
     iget-object v0, p0, Landroid/widget/TimePickerClockDelegate$2;->this$0:Landroid/widget/TimePickerClockDelegate;
 
     invoke-static {v0, p2}, Landroid/widget/TimePickerClockDelegate;->-wrap1(Landroid/widget/TimePickerClockDelegate;I)Z
@@ -62,7 +59,6 @@
 
     return v0
 
-    .line 1360
     :cond_0
     const/4 v0, 0x0
 

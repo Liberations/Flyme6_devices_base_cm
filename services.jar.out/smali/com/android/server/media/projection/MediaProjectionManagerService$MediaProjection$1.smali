@@ -30,7 +30,6 @@
     .param p2, "val$callback"    # Landroid/media/projection/IMediaProjectionCallback;
 
     .prologue
-    .line 412
     iput-object p1, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection$1;->this$1:Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;
 
     iput-object p2, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection$1;->val$callback:Landroid/media/projection/IMediaProjectionCallback;
@@ -46,7 +45,6 @@
     .locals 2
 
     .prologue
-    .line 415
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection$1;->this$1:Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;
 
     iget-object v0, v0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;->this$0:Lcom/android/server/media/projection/MediaProjectionManagerService;
@@ -59,11 +57,9 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/media/projection/MediaProjectionManagerService$CallbackDelegate;->remove(Landroid/media/projection/IMediaProjectionCallback;)V
 
-    .line 416
     iget-object v0, p0, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection$1;->this$1:Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;
 
     invoke-virtual {v0}, Lcom/android/server/media/projection/MediaProjectionManagerService$MediaProjection;->stop()V
 
-    .line 414
     return-void
 .end method

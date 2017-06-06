@@ -31,17 +31,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 443
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 444
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x17
 
     if-lt v0, v1, :cond_0
 
-    .line 445
     new-instance v0, Landroid/support/v4/media/MediaBrowserCompat$ItemCallback$StubApi23;
 
     invoke-direct {v0, p0, v2}, Landroid/support/v4/media/MediaBrowserCompat$ItemCallback$StubApi23;-><init>(Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;Landroid/support/v4/media/MediaBrowserCompat$ItemCallback$StubApi23;)V
@@ -52,11 +49,9 @@
 
     iput-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;->mItemCallbackObj:Ljava/lang/Object;
 
-    .line 443
     :goto_0
     return-void
 
-    .line 447
     :cond_0
     iput-object v2, p0, Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;->mItemCallbackObj:Ljava/lang/Object;
 
@@ -73,7 +68,6 @@
     .end param
 
     .prologue
-    .line 464
     return-void
 .end method
 
@@ -82,6 +76,5 @@
     .param p1, "item"    # Landroid/support/v4/media/MediaBrowserCompat$MediaItem;
 
     .prologue
-    .line 456
     return-void
 .end method

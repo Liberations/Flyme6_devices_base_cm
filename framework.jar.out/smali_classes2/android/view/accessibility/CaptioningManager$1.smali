@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/view/accessibility/CaptioningManager;
 
     .prologue
-    .line 257
     iput-object p1, p0, Landroid/view/accessibility/CaptioningManager$1;->this$0:Landroid/view/accessibility/CaptioningManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +40,9 @@
     .locals 1
 
     .prologue
-    .line 260
     iget-object v0, p0, Landroid/view/accessibility/CaptioningManager$1;->this$0:Landroid/view/accessibility/CaptioningManager;
 
     invoke-static {v0}, Landroid/view/accessibility/CaptioningManager;->-wrap3(Landroid/view/accessibility/CaptioningManager;)V
 
-    .line 259
     return-void
 .end method

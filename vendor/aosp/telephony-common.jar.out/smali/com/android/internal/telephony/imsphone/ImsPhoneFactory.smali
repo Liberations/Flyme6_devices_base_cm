@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,7 +20,6 @@
     .param p2, "defaultPhone"    # Lcom/android/internal/telephony/Phone;
 
     .prologue
-    .line 41
     :try_start_0
     new-instance v1, Lcom/android/internal/telephony/imsphone/ImsPhone;
 
@@ -31,19 +29,16 @@
 
     return-object v1
 
-    .line 42
     :catch_0
     move-exception v0
 
-    .line 43
     .local v0, "e":Ljava/lang/Exception;
-    const-string/jumbo v1, "VoltePhoneFactory"
+    const-string v1, "VoltePhoneFactory"
 
-    const-string/jumbo v2, "makePhone"
+    const-string v2, "makePhone"
 
     invoke-static {v1, v2, v0}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 44
     const/4 v1, 0x0
 
     return-object v1

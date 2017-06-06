@@ -25,10 +25,8 @@
     .param p2, "sensorManager"    # Landroid/hardware/SensorManager;
 
     .prologue
-    .line 29
     invoke-direct {p0}, Lcom/android/internal/os/PowerCalculator;-><init>()V
 
-    .line 30
     const/4 v0, -0x1
 
     invoke-virtual {p2, v0}, Landroid/hardware/SensorManager;->getSensorList(I)Ljava/util/List;
@@ -37,8 +35,7 @@
 
     iput-object v0, p0, Lcom/android/internal/os/SensorPowerCalculator;->mSensors:Ljava/util/List;
 
-    .line 31
-    const-string/jumbo v0, "gps.on"
+    const-string v0, "gps.on"
 
     invoke-virtual {p1, v0}, Lcom/android/internal/os/PowerProfile;->getAveragePower(Ljava/lang/String;)D
 
@@ -46,7 +43,6 @@
 
     iput-wide v0, p0, Lcom/android/internal/os/SensorPowerCalculator;->mGpsPowerOn:D
 
-    .line 29
     return-void
 .end method
 
@@ -61,18 +57,15 @@
     .param p7, "statsType"    # I
 
     .prologue
-    .line 38
     invoke-virtual/range {p2 .. p2}, Landroid/os/BatteryStats$Uid;->getSensorStats()Landroid/util/SparseArray;
 
     move-result-object v10
 
-    .line 39
     .local v10, "sensorStats":Landroid/util/SparseArray;, "Landroid/util/SparseArray<+Landroid/os/BatteryStats$Uid$Sensor;>;"
     invoke-virtual {v10}, Landroid/util/SparseArray;->size()I
 
     move-result v4
 
-    .line 40
     .local v4, "NSE":I
     const/4 v6, 0x0
 
@@ -80,26 +73,22 @@
     :goto_0
     if-ge v6, v4, :cond_2
 
-    .line 41
     invoke-virtual {v10, v6}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v8
 
     check-cast v8, Landroid/os/BatteryStats$Uid$Sensor;
 
-    .line 42
     .local v8, "sensor":Landroid/os/BatteryStats$Uid$Sensor;
     invoke-virtual {v10, v6}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v9
 
-    .line 43
     .local v9, "sensorHandle":I
     invoke-virtual {v8}, Landroid/os/BatteryStats$Uid$Sensor;->getSensorTime()Landroid/os/BatteryStats$Timer;
 
     move-result-object v14
 
-    .line 44
     .local v14, "timer":Landroid/os/BatteryStats$Timer;
     move-wide/from16 v0, p3
 
@@ -113,11 +102,9 @@
 
     div-long v12, v16, v18
 
-    .line 45
     .local v12, "sensorTime":J
     packed-switch v9, :pswitch_data_0
 
-    .line 51
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/internal/os/SensorPowerCalculator;->mSensors:Ljava/util/List;
@@ -126,7 +113,6 @@
 
     move-result v11
 
-    .line 52
     .local v11, "sensorsCount":I
     const/4 v5, 0x0
 
@@ -134,7 +120,6 @@
     :goto_1
     if-ge v5, v11, :cond_0
 
-    .line 53
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/internal/os/SensorPowerCalculator;->mSensors:Ljava/util/List;
@@ -145,7 +130,6 @@
 
     check-cast v7, Landroid/hardware/Sensor;
 
-    .line 54
     .local v7, "s":Landroid/hardware/Sensor;
     invoke-virtual {v7}, Landroid/hardware/Sensor;->getHandle()I
 
@@ -153,7 +137,6 @@
 
     if-ne v15, v9, :cond_1
 
-    .line 55
     move-object/from16 v0, p1
 
     iget-wide v0, v0, Lcom/android/internal/os/BatterySipper;->sensorPowerMah:D
@@ -184,7 +167,6 @@
 
     iput-wide v0, v2, Lcom/android/internal/os/BatterySipper;->sensorPowerMah:D
 
-    .line 40
     .end local v5    # "i":I
     .end local v7    # "s":Landroid/hardware/Sensor;
     .end local v11    # "sensorsCount":I
@@ -194,13 +176,11 @@
 
     goto :goto_0
 
-    .line 47
     :pswitch_0
     move-object/from16 v0, p1
 
     iput-wide v12, v0, Lcom/android/internal/os/BatterySipper;->gpsTimeMs:J
 
-    .line 48
     move-object/from16 v0, p1
 
     iget-wide v0, v0, Lcom/android/internal/os/BatterySipper;->gpsTimeMs:J
@@ -233,7 +213,6 @@
 
     goto :goto_2
 
-    .line 52
     .restart local v5    # "i":I
     .restart local v7    # "s":Landroid/hardware/Sensor;
     .restart local v11    # "sensorsCount":I
@@ -242,7 +221,6 @@
 
     goto :goto_1
 
-    .line 36
     .end local v5    # "i":I
     .end local v7    # "s":Landroid/hardware/Sensor;
     .end local v8    # "sensor":Landroid/os/BatteryStats$Uid$Sensor;
@@ -253,7 +231,6 @@
     :cond_2
     return-void
 
-    .line 45
     :pswitch_data_0
     .packed-switch -0x2710
         :pswitch_0

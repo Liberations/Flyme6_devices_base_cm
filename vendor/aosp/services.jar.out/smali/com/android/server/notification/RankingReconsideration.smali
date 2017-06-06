@@ -32,12 +32,10 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 38
     const-wide/16 v0, 0x0
 
     invoke-direct {p0, p1, v0, v1}, Lcom/android/server/notification/RankingReconsideration;-><init>(Ljava/lang/String;J)V
 
-    .line 37
     return-void
 .end method
 
@@ -47,21 +45,16 @@
     .param p2, "delay"    # J
 
     .prologue
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     iput-wide p2, p0, Lcom/android/server/notification/RankingReconsideration;->mDelay:J
 
-    .line 43
     iput-object p1, p0, Lcom/android/server/notification/RankingReconsideration;->mKey:Ljava/lang/String;
 
-    .line 44
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/notification/RankingReconsideration;->mState:I
 
-    .line 41
     return-void
 .end method
 
@@ -77,22 +70,18 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 69
     iget v0, p0, Lcom/android/server/notification/RankingReconsideration;->mState:I
 
     if-nez v0, :cond_0
 
-    .line 70
     const/4 v0, 0x3
 
     iput v0, p0, Lcom/android/server/notification/RankingReconsideration;->mState:I
 
-    .line 71
     const/4 v0, 0x1
 
     return v0
 
-    .line 73
     :cond_0
     return v1
 .end method
@@ -102,7 +91,6 @@
     .param p1, "unit"    # Ljava/util/concurrent/TimeUnit;
 
     .prologue
-    .line 65
     iget-wide v0, p0, Lcom/android/server/notification/RankingReconsideration;->mDelay:J
 
     sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
@@ -118,7 +106,6 @@
     .locals 1
 
     .prologue
-    .line 48
     iget-object v0, p0, Lcom/android/server/notification/RankingReconsideration;->mKey:Ljava/lang/String;
 
     return-object v0
@@ -128,7 +115,6 @@
     .locals 2
 
     .prologue
-    .line 77
     iget v0, p0, Lcom/android/server/notification/RankingReconsideration;->mState:I
 
     const/4 v1, 0x3
@@ -150,7 +136,6 @@
     .locals 2
 
     .prologue
-    .line 81
     iget v0, p0, Lcom/android/server/notification/RankingReconsideration;->mState:I
 
     const/4 v1, 0x2
@@ -172,28 +157,22 @@
     .locals 1
 
     .prologue
-    .line 52
     iget v0, p0, Lcom/android/server/notification/RankingReconsideration;->mState:I
 
     if-nez v0, :cond_0
 
-    .line 53
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/server/notification/RankingReconsideration;->mState:I
 
-    .line 55
     invoke-virtual {p0}, Lcom/android/server/notification/RankingReconsideration;->work()V
 
-    .line 57
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/android/server/notification/RankingReconsideration;->mState:I
 
-    .line 58
     monitor-enter p0
 
-    .line 59
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/notification/RankingReconsideration;->notifyAll()V
     :try_end_0
@@ -201,11 +180,9 @@
 
     monitor-exit p0
 
-    .line 51
     :cond_0
     return-void
 
-    .line 58
     :catchall_0
     move-exception v0
 

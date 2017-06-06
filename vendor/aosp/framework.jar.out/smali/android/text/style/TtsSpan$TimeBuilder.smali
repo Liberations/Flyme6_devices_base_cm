@@ -28,12 +28,10 @@
     .locals 1
 
     .prologue
-    .line 1102
-    const-string/jumbo v0, "android.type.time"
+    const-string v0, "android.type.time"
 
     invoke-direct {p0, v0}, Landroid/text/style/TtsSpan$SemioticClassBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 1101
     return-void
 .end method
 
@@ -43,16 +41,12 @@
     .param p2, "minutes"    # I
 
     .prologue
-    .line 1110
     invoke-direct {p0}, Landroid/text/style/TtsSpan$TimeBuilder;-><init>()V
 
-    .line 1111
     invoke-virtual {p0, p1}, Landroid/text/style/TtsSpan$TimeBuilder;->setHours(I)Landroid/text/style/TtsSpan$TimeBuilder;
 
-    .line 1112
     invoke-virtual {p0, p2}, Landroid/text/style/TtsSpan$TimeBuilder;->setMinutes(I)Landroid/text/style/TtsSpan$TimeBuilder;
 
-    .line 1109
     return-void
 .end method
 
@@ -63,8 +57,7 @@
     .param p1, "hours"    # I
 
     .prologue
-    .line 1122
-    const-string/jumbo v0, "android.arg.hours"
+    const-string v0, "android.arg.hours"
 
     invoke-virtual {p0, v0, p1}, Landroid/text/style/TtsSpan$TimeBuilder;->setIntArgument(Ljava/lang/String;I)Landroid/text/style/TtsSpan$Builder;
 
@@ -80,8 +73,7 @@
     .param p1, "minutes"    # I
 
     .prologue
-    .line 1133
-    const-string/jumbo v0, "android.arg.minutes"
+    const-string v0, "android.arg.minutes"
 
     invoke-virtual {p0, v0, p1}, Landroid/text/style/TtsSpan$TimeBuilder;->setIntArgument(Ljava/lang/String;I)Landroid/text/style/TtsSpan$Builder;
 

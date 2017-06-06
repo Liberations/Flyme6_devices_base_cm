@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/location/GpsStatusListenerHelper;
 
     .prologue
-    .line 55
     iput-object p1, p0, Lcom/android/server/location/GpsStatusListenerHelper$2;->this$0:Lcom/android/server/location/GpsStatusListenerHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,10 +46,8 @@
     .end annotation
 
     .prologue
-    .line 58
     invoke-interface {p1}, Landroid/location/IGpsStatusListener;->onGpsStopped()V
 
-    .line 57
     return-void
 .end method
 
@@ -64,7 +61,6 @@
     .end annotation
 
     .prologue
-    .line 57
     check-cast p1, Landroid/location/IGpsStatusListener;
 
     .end local p1    # "listener":Landroid/os/IInterface;

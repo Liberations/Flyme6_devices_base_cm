@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/hdmi/SystemAudioStatusAction;
 
     .prologue
-    .line 56
     iput-object p1, p0, Lcom/android/server/hdmi/SystemAudioStatusAction$1;->this$0:Lcom/android/server/hdmi/SystemAudioStatusAction;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,15 +41,12 @@
     .param p1, "error"    # I
 
     .prologue
-    .line 59
     if-eqz p1, :cond_0
 
-    .line 60
     iget-object v0, p0, Lcom/android/server/hdmi/SystemAudioStatusAction$1;->this$0:Lcom/android/server/hdmi/SystemAudioStatusAction;
 
     invoke-static {v0}, Lcom/android/server/hdmi/SystemAudioStatusAction;->-wrap0(Lcom/android/server/hdmi/SystemAudioStatusAction;)V
 
-    .line 58
     :cond_0
     return-void
 .end method

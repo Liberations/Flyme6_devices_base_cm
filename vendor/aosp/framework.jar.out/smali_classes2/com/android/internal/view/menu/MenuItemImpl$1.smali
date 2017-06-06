@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/internal/view/menu/MenuItemImpl;
 
     .prologue
-    .line 602
     iput-object p1, p0, Lcom/android/internal/view/menu/MenuItemImpl$1;->this$0:Lcom/android/internal/view/menu/MenuItemImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "isVisible"    # Z
 
     .prologue
-    .line 604
     iget-object v0, p0, Lcom/android/internal/view/menu/MenuItemImpl$1;->this$0:Lcom/android/internal/view/menu/MenuItemImpl;
 
     invoke-static {v0}, Lcom/android/internal/view/menu/MenuItemImpl;->-get0(Lcom/android/internal/view/menu/MenuItemImpl;)Lcom/android/internal/view/menu/MenuBuilder;
@@ -53,6 +51,5 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/view/menu/MenuBuilder;->onItemVisibleChanged(Lcom/android/internal/view/menu/MenuItemImpl;)V
 
-    .line 603
     return-void
 .end method

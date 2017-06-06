@@ -49,7 +49,6 @@
     .locals 5
 
     .prologue
-    .line 17
     new-instance v2, Ljava/util/EnumMap;
 
     const-class v3, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth$NonEAPType;
@@ -58,50 +57,44 @@
 
     sput-object v2, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth;->sOmaMap:Ljava/util/Map;
 
-    .line 18
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
     sput-object v2, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth;->sRevOmaMap:Ljava/util/Map;
 
-    .line 23
     sget-object v2, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth;->sOmaMap:Ljava/util/Map;
 
     sget-object v3, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth$NonEAPType;->PAP:Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth$NonEAPType;
 
-    const-string/jumbo v4, "PAP"
+    const-string v4, "PAP"
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 24
     sget-object v2, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth;->sOmaMap:Ljava/util/Map;
 
     sget-object v3, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth$NonEAPType;->CHAP:Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth$NonEAPType;
 
-    const-string/jumbo v4, "CHAP"
+    const-string v4, "CHAP"
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 25
     sget-object v2, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth;->sOmaMap:Ljava/util/Map;
 
     sget-object v3, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth$NonEAPType;->MSCHAP:Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth$NonEAPType;
 
-    const-string/jumbo v4, "MS-CHAP"
+    const-string v4, "MS-CHAP"
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 26
     sget-object v2, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth;->sOmaMap:Ljava/util/Map;
 
     sget-object v3, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth$NonEAPType;->MSCHAPv2:Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth$NonEAPType;
 
-    const-string/jumbo v4, "MS-CHAP-V2"
+    const-string v4, "MS-CHAP-V2"
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 28
     sget-object v2, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth;->sOmaMap:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -126,7 +119,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 29
     .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth$NonEAPType;Ljava/lang/String;>;"
     sget-object v4, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth;->sRevOmaMap:Ljava/util/Map;
 
@@ -146,7 +138,6 @@
 
     goto :goto_0
 
-    .line 14
     .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth$NonEAPType;Ljava/lang/String;>;"
     :cond_0
     return-void
@@ -163,22 +154,19 @@
     .end annotation
 
     .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     const/4 v1, 0x1
 
     if-eq p1, v1, :cond_0
 
-    .line 35
     new-instance v1, Ljava/net/ProtocolException;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "Bad length: "
+    const-string v3, "Bad length: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -200,7 +188,6 @@
 
     throw v1
 
-    .line 38
     :cond_0
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->get()B
 
@@ -208,7 +195,6 @@
 
     and-int/lit16 v0, v1, 0xff
 
-    .line 39
     .local v0, "typeID":I
     invoke-static {}, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth$NonEAPType;->values()[Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth$NonEAPType;
 
@@ -218,21 +204,17 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 40
     invoke-static {}, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth$NonEAPType;->values()[Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth$NonEAPType;
 
     move-result-object v1
 
     aget-object v1, v1, v0
 
-    .line 39
     :goto_0
     iput-object v1, p0, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth;->mType:Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth$NonEAPType;
 
-    .line 33
     return-void
 
-    .line 41
     :cond_1
     sget-object v1, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth$NonEAPType;->Reserved:Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth$NonEAPType;
 
@@ -244,13 +226,10 @@
     .param p1, "type"    # Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth$NonEAPType;
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     iput-object p1, p0, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth;->mType:Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth$NonEAPType;
 
-    .line 44
     return-void
 .end method
 
@@ -259,10 +238,8 @@
     .param p1, "eapType"    # Ljava/lang/String;
 
     .prologue
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     sget-object v0, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth;->sRevOmaMap:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -273,7 +250,6 @@
 
     iput-object v0, p0, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth;->mType:Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth$NonEAPType;
 
-    .line 52
     return-void
 .end method
 
@@ -288,13 +264,10 @@
 
     const/4 v1, 0x0
 
-    .line 76
     if-ne p1, p0, :cond_0
 
-    .line 77
     return v0
 
-    .line 78
     :cond_0
     if-eqz p1, :cond_1
 
@@ -306,11 +279,9 @@
 
     if-eq v2, v3, :cond_2
 
-    .line 79
     :cond_1
     return v1
 
-    .line 81
     :cond_2
     check-cast p1, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth;
 
@@ -338,7 +309,6 @@
     .locals 1
 
     .prologue
-    .line 58
     sget-object v0, Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;->NonEAPInnerAuthType:Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
 
     return-object v0
@@ -348,7 +318,6 @@
     .locals 2
 
     .prologue
-    .line 66
     sget-object v0, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth;->sOmaMap:Ljava/util/Map;
 
     iget-object v1, p0, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth;->mType:Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth$NonEAPType;
@@ -366,7 +335,6 @@
     .locals 1
 
     .prologue
-    .line 62
     iget-object v0, p0, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth;->mType:Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth$NonEAPType;
 
     return-object v0
@@ -376,7 +344,6 @@
     .locals 1
 
     .prologue
-    .line 71
     iget-object v0, p0, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth;->mType:Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth$NonEAPType;
 
     invoke-virtual {v0}, Lcom/android/server/wifi/anqp/eap/NonEAPInnerAuth$NonEAPType;->hashCode()I
@@ -390,12 +357,11 @@
     .locals 2
 
     .prologue
-    .line 87
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "Auth method NonEAPInnerAuthEAP, inner = "
+    const-string v1, "Auth method NonEAPInnerAuthEAP, inner = "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

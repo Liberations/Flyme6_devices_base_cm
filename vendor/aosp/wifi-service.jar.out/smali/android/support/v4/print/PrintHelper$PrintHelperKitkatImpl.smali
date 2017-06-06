@@ -27,17 +27,14 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 159
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 160
     new-instance v0, Landroid/support/v4/print/PrintHelperKitkat;
 
     invoke-direct {v0, p1}, Landroid/support/v4/print/PrintHelperKitkat;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Landroid/support/v4/print/PrintHelper$PrintHelperKitkatImpl;->mPrintHelper:Landroid/support/v4/print/PrintHelperKitkat;
 
-    .line 159
     return-void
 .end method
 
@@ -47,7 +44,6 @@
     .locals 1
 
     .prologue
-    .line 180
     iget-object v0, p0, Landroid/support/v4/print/PrintHelper$PrintHelperKitkatImpl;->mPrintHelper:Landroid/support/v4/print/PrintHelperKitkat;
 
     invoke-virtual {v0}, Landroid/support/v4/print/PrintHelperKitkat;->getColorMode()I
@@ -61,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 190
     iget-object v0, p0, Landroid/support/v4/print/PrintHelper$PrintHelperKitkatImpl;->mPrintHelper:Landroid/support/v4/print/PrintHelperKitkat;
 
     invoke-virtual {v0}, Landroid/support/v4/print/PrintHelperKitkat;->getOrientation()I
@@ -75,7 +70,6 @@
     .locals 1
 
     .prologue
-    .line 170
     iget-object v0, p0, Landroid/support/v4/print/PrintHelper$PrintHelperKitkatImpl;->mPrintHelper:Landroid/support/v4/print/PrintHelperKitkat;
 
     invoke-virtual {v0}, Landroid/support/v4/print/PrintHelperKitkat;->getScaleMode()I
@@ -92,26 +86,21 @@
     .param p3, "callback"    # Landroid/support/v4/print/PrintHelper$OnPrintFinishCallback;
 
     .prologue
-    .line 196
     const/4 v0, 0x0
 
-    .line 197
     .local v0, "delegateCallback":Landroid/support/v4/print/PrintHelperKitkat$OnPrintFinishCallback;
     if-eqz p3, :cond_0
 
-    .line 198
     new-instance v0, Landroid/support/v4/print/PrintHelper$PrintHelperKitkatImpl$1;
 
     .end local v0    # "delegateCallback":Landroid/support/v4/print/PrintHelperKitkat$OnPrintFinishCallback;
     invoke-direct {v0, p0, p3}, Landroid/support/v4/print/PrintHelper$PrintHelperKitkatImpl$1;-><init>(Landroid/support/v4/print/PrintHelper$PrintHelperKitkatImpl;Landroid/support/v4/print/PrintHelper$OnPrintFinishCallback;)V
 
-    .line 205
     :cond_0
     iget-object v1, p0, Landroid/support/v4/print/PrintHelper$PrintHelperKitkatImpl;->mPrintHelper:Landroid/support/v4/print/PrintHelperKitkat;
 
     invoke-virtual {v1, p1, p2, v0}, Landroid/support/v4/print/PrintHelperKitkat;->printBitmap(Ljava/lang/String;Landroid/graphics/Bitmap;Landroid/support/v4/print/PrintHelperKitkat$OnPrintFinishCallback;)V
 
-    .line 195
     return-void
 .end method
 
@@ -127,26 +116,21 @@
     .end annotation
 
     .prologue
-    .line 211
     const/4 v0, 0x0
 
-    .line 212
     .local v0, "delegateCallback":Landroid/support/v4/print/PrintHelperKitkat$OnPrintFinishCallback;
     if-eqz p3, :cond_0
 
-    .line 213
     new-instance v0, Landroid/support/v4/print/PrintHelper$PrintHelperKitkatImpl$2;
 
     .end local v0    # "delegateCallback":Landroid/support/v4/print/PrintHelperKitkat$OnPrintFinishCallback;
     invoke-direct {v0, p0, p3}, Landroid/support/v4/print/PrintHelper$PrintHelperKitkatImpl$2;-><init>(Landroid/support/v4/print/PrintHelper$PrintHelperKitkatImpl;Landroid/support/v4/print/PrintHelper$OnPrintFinishCallback;)V
 
-    .line 220
     :cond_0
     iget-object v1, p0, Landroid/support/v4/print/PrintHelper$PrintHelperKitkatImpl;->mPrintHelper:Landroid/support/v4/print/PrintHelperKitkat;
 
     invoke-virtual {v1, p1, p2, v0}, Landroid/support/v4/print/PrintHelperKitkat;->printBitmap(Ljava/lang/String;Landroid/net/Uri;Landroid/support/v4/print/PrintHelperKitkat$OnPrintFinishCallback;)V
 
-    .line 210
     return-void
 .end method
 
@@ -155,12 +139,10 @@
     .param p1, "colorMode"    # I
 
     .prologue
-    .line 175
     iget-object v0, p0, Landroid/support/v4/print/PrintHelper$PrintHelperKitkatImpl;->mPrintHelper:Landroid/support/v4/print/PrintHelperKitkat;
 
     invoke-virtual {v0, p1}, Landroid/support/v4/print/PrintHelperKitkat;->setColorMode(I)V
 
-    .line 174
     return-void
 .end method
 
@@ -169,12 +151,10 @@
     .param p1, "orientation"    # I
 
     .prologue
-    .line 185
     iget-object v0, p0, Landroid/support/v4/print/PrintHelper$PrintHelperKitkatImpl;->mPrintHelper:Landroid/support/v4/print/PrintHelperKitkat;
 
     invoke-virtual {v0, p1}, Landroid/support/v4/print/PrintHelperKitkat;->setOrientation(I)V
 
-    .line 184
     return-void
 .end method
 
@@ -183,11 +163,9 @@
     .param p1, "scaleMode"    # I
 
     .prologue
-    .line 165
     iget-object v0, p0, Landroid/support/v4/print/PrintHelper$PrintHelperKitkatImpl;->mPrintHelper:Landroid/support/v4/print/PrintHelperKitkat;
 
     invoke-virtual {v0, p1}, Landroid/support/v4/print/PrintHelperKitkat;->setScaleMode(I)V
 
-    .line 164
     return-void
 .end method

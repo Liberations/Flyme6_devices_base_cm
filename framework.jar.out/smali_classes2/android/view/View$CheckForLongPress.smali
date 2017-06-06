@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Landroid/view/View;
 
     .prologue
-    .line 21125
     iput-object p1, p0, Landroid/view/View$CheckForLongPress;->this$0:Landroid/view/View;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,14 +52,12 @@
     .locals 1
 
     .prologue
-    .line 21139
     iget-object v0, p0, Landroid/view/View$CheckForLongPress;->this$0:Landroid/view/View;
 
     iget v0, v0, Landroid/view/View;->mWindowAttachCount:I
 
     iput v0, p0, Landroid/view/View$CheckForLongPress;->mOriginalWindowAttachCount:I
 
-    .line 21138
     return-void
 .end method
 
@@ -68,7 +65,6 @@
     .locals 2
 
     .prologue
-    .line 21130
     iget-object v0, p0, Landroid/view/View$CheckForLongPress;->this$0:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->isPressed()Z
@@ -83,7 +79,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 21131
     iget v0, p0, Landroid/view/View$CheckForLongPress;->mOriginalWindowAttachCount:I
 
     iget-object v1, p0, Landroid/view/View$CheckForLongPress;->this$0:Landroid/view/View;
@@ -92,7 +87,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 21132
     iget-object v0, p0, Landroid/view/View$CheckForLongPress;->this$0:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->performLongClick()Z
@@ -101,14 +95,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 21133
     iget-object v0, p0, Landroid/view/View$CheckForLongPress;->this$0:Landroid/view/View;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Landroid/view/View;->-set0(Landroid/view/View;Z)Z
 
-    .line 21129
     :cond_0
     return-void
 .end method

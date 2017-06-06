@@ -48,15 +48,12 @@
     .locals 1
 
     .prologue
-    .line 111
     new-instance v0, Lcom/android/internal/statusbar/StatusBarIcon$1;
 
     invoke-direct {v0}, Lcom/android/internal/statusbar/StatusBarIcon$1;-><init>()V
 
-    .line 110
     sput-object v0, Lcom/android/internal/statusbar/StatusBarIcon;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 25
     return-void
 .end method
 
@@ -65,18 +62,14 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 79
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/statusbar/StatusBarIcon;->visible:Z
 
-    .line 80
     invoke-virtual {p0, p1}, Lcom/android/internal/statusbar/StatusBarIcon;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 79
     return-void
 .end method
 
@@ -90,15 +83,12 @@
     .param p6, "contentDescription"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/statusbar/StatusBarIcon;->visible:Z
 
-    .line 36
     invoke-virtual {p3}, Landroid/graphics/drawable/Icon;->getType()I
 
     move-result v0
@@ -107,7 +97,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 37
     invoke-virtual {p3}, Landroid/graphics/drawable/Icon;->getResPackage()Ljava/lang/String;
 
     move-result-object v0
@@ -116,10 +105,8 @@
 
     move-result v0
 
-    .line 36
     if-eqz v0, :cond_0
 
-    .line 41
     invoke-virtual {p3}, Landroid/graphics/drawable/Icon;->getResId()I
 
     move-result v0
@@ -128,26 +115,19 @@
 
     move-result-object p3
 
-    .line 43
     :cond_0
     iput-object p2, p0, Lcom/android/internal/statusbar/StatusBarIcon;->pkg:Ljava/lang/String;
 
-    .line 44
     iput-object p1, p0, Lcom/android/internal/statusbar/StatusBarIcon;->user:Landroid/os/UserHandle;
 
-    .line 45
     iput-object p3, p0, Lcom/android/internal/statusbar/StatusBarIcon;->icon:Landroid/graphics/drawable/Icon;
 
-    .line 46
     iput p4, p0, Lcom/android/internal/statusbar/StatusBarIcon;->iconLevel:I
 
-    .line 47
     iput p5, p0, Lcom/android/internal/statusbar/StatusBarIcon;->number:I
 
-    .line 48
     iput-object p6, p0, Lcom/android/internal/statusbar/StatusBarIcon;->contentDescription:Ljava/lang/CharSequence;
 
-    .line 35
     return-void
 .end method
 
@@ -161,7 +141,6 @@
     .param p6, "contentDescription"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 54
     invoke-static {p1, p3}, Landroid/graphics/drawable/Icon;->createWithResource(Ljava/lang/String;I)Landroid/graphics/drawable/Icon;
 
     move-result-object v3
@@ -180,7 +159,6 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/internal/statusbar/StatusBarIcon;-><init>(Landroid/os/UserHandle;Ljava/lang/String;Landroid/graphics/drawable/Icon;IILjava/lang/CharSequence;)V
 
-    .line 53
     return-void
 .end method
 
@@ -190,7 +168,6 @@
     .locals 7
 
     .prologue
-    .line 70
     new-instance v0, Lcom/android/internal/statusbar/StatusBarIcon;
 
     iget-object v1, p0, Lcom/android/internal/statusbar/StatusBarIcon;->user:Landroid/os/UserHandle;
@@ -199,23 +176,19 @@
 
     iget-object v3, p0, Lcom/android/internal/statusbar/StatusBarIcon;->icon:Landroid/graphics/drawable/Icon;
 
-    .line 71
     iget v4, p0, Lcom/android/internal/statusbar/StatusBarIcon;->iconLevel:I
 
     iget v5, p0, Lcom/android/internal/statusbar/StatusBarIcon;->number:I
 
     iget-object v6, p0, Lcom/android/internal/statusbar/StatusBarIcon;->contentDescription:Ljava/lang/CharSequence;
 
-    .line 70
     invoke-direct/range {v0 .. v6}, Lcom/android/internal/statusbar/StatusBarIcon;-><init>(Landroid/os/UserHandle;Ljava/lang/String;Landroid/graphics/drawable/Icon;IILjava/lang/CharSequence;)V
 
-    .line 72
     .local v0, "that":Lcom/android/internal/statusbar/StatusBarIcon;
     iget-boolean v1, p0, Lcom/android/internal/statusbar/StatusBarIcon;->visible:Z
 
     iput-boolean v1, v0, Lcom/android/internal/statusbar/StatusBarIcon;->visible:Z
 
-    .line 73
     return-object v0
 .end method
 
@@ -228,7 +201,6 @@
     .end annotation
 
     .prologue
-    .line 69
     invoke-virtual {p0}, Lcom/android/internal/statusbar/StatusBarIcon;->clone()Lcom/android/internal/statusbar/StatusBarIcon;
 
     move-result-object v0
@@ -240,7 +212,6 @@
     .locals 1
 
     .prologue
-    .line 104
     const/4 v0, 0x0
 
     return v0
@@ -255,7 +226,6 @@
 
     const/4 v1, 0x0
 
-    .line 84
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
     move-result-object v0
@@ -264,14 +234,12 @@
 
     iput-object v0, p0, Lcom/android/internal/statusbar/StatusBarIcon;->icon:Landroid/graphics/drawable/Icon;
 
-    .line 85
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/statusbar/StatusBarIcon;->pkg:Ljava/lang/String;
 
-    .line 86
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
     move-result-object v0
@@ -280,14 +248,12 @@
 
     iput-object v0, p0, Lcom/android/internal/statusbar/StatusBarIcon;->user:Landroid/os/UserHandle;
 
-    .line 87
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/statusbar/StatusBarIcon;->iconLevel:I
 
-    .line 88
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -299,27 +265,23 @@
     :goto_0
     iput-boolean v0, p0, Lcom/android/internal/statusbar/StatusBarIcon;->visible:Z
 
-    .line 89
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/statusbar/StatusBarIcon;->number:I
 
-    .line 90
     invoke-virtual {p1}, Landroid/os/Parcel;->readCharSequence()Ljava/lang/CharSequence;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/statusbar/StatusBarIcon;->contentDescription:Ljava/lang/CharSequence;
 
-    .line 83
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 88
     goto :goto_0
 .end method
 
@@ -327,12 +289,11 @@
     .locals 3
 
     .prologue
-    .line 60
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "StatusBarIcon(icon="
+    const-string v1, "StatusBarIcon(icon="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -344,7 +305,6 @@
 
     move-result-object v1
 
-    .line 61
     iget v0, p0, Lcom/android/internal/statusbar/StatusBarIcon;->iconLevel:I
 
     if-eqz v0, :cond_0
@@ -353,7 +313,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, " level="
+    const-string v2, " level="
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -369,46 +329,38 @@
 
     move-result-object v0
 
-    .line 60
     :goto_0
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 62
     iget-boolean v0, p0, Lcom/android/internal/statusbar/StatusBarIcon;->visible:Z
 
     if-eqz v0, :cond_1
 
-    const-string/jumbo v0, " visible"
+    const-string v0, " visible"
 
-    .line 60
     :goto_1
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 63
-    const-string/jumbo v1, " user="
+    const-string v1, " user="
 
-    .line 60
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 63
     iget-object v1, p0, Lcom/android/internal/statusbar/StatusBarIcon;->user:Landroid/os/UserHandle;
 
     invoke-virtual {v1}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result v1
 
-    .line 60
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 64
     iget v0, p0, Lcom/android/internal/statusbar/StatusBarIcon;->number:I
 
     if-eqz v0, :cond_2
@@ -417,7 +369,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, " num="
+    const-string v2, " num="
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -433,16 +385,13 @@
 
     move-result-object v0
 
-    .line 60
     :goto_2
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 65
-    const-string/jumbo v1, " )"
+    const-string v1, " )"
 
-    .line 60
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -453,21 +402,18 @@
 
     return-object v0
 
-    .line 61
     :cond_0
-    const-string/jumbo v0, ""
+    const-string v0, ""
 
     goto :goto_0
 
-    .line 62
     :cond_1
-    const-string/jumbo v0, ""
+    const-string v0, ""
 
     goto :goto_1
 
-    .line 64
     :cond_2
-    const-string/jumbo v0, ""
+    const-string v0, ""
 
     goto :goto_2
 .end method
@@ -480,27 +426,22 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 94
     iget-object v1, p0, Lcom/android/internal/statusbar/StatusBarIcon;->icon:Landroid/graphics/drawable/Icon;
 
     invoke-virtual {p1, v1, v0}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 95
     iget-object v1, p0, Lcom/android/internal/statusbar/StatusBarIcon;->pkg:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 96
     iget-object v1, p0, Lcom/android/internal/statusbar/StatusBarIcon;->user:Landroid/os/UserHandle;
 
     invoke-virtual {p1, v1, v0}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 97
     iget v1, p0, Lcom/android/internal/statusbar/StatusBarIcon;->iconLevel:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 98
     iget-boolean v1, p0, Lcom/android/internal/statusbar/StatusBarIcon;->visible:Z
 
     if-eqz v1, :cond_0
@@ -510,16 +451,13 @@
     :cond_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 99
     iget v0, p0, Lcom/android/internal/statusbar/StatusBarIcon;->number:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 100
     iget-object v0, p0, Lcom/android/internal/statusbar/StatusBarIcon;->contentDescription:Ljava/lang/CharSequence;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeCharSequence(Ljava/lang/CharSequence;)V
 
-    .line 93
     return-void
 .end method

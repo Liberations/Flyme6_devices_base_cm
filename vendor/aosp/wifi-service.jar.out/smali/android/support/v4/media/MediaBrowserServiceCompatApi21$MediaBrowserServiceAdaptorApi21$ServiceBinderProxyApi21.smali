@@ -24,13 +24,10 @@
     .param p1, "serviceImpl"    # Landroid/support/v4/media/MediaBrowserServiceCompatApi21$ServiceImplApi21;
 
     .prologue
-    .line 131
     invoke-direct {p0}, Landroid/service/media/IMediaBrowserService$Stub;-><init>()V
 
-    .line 132
     iput-object p1, p0, Landroid/support/v4/media/MediaBrowserServiceCompatApi21$MediaBrowserServiceAdaptorApi21$ServiceBinderProxyApi21;->mServiceImpl:Landroid/support/v4/media/MediaBrowserServiceCompatApi21$ServiceImplApi21;
 
-    .line 131
     return-void
 .end method
 
@@ -42,7 +39,6 @@
     .param p2, "callbacks"    # Landroid/service/media/IMediaBrowserServiceCallbacks;
 
     .prologue
-    .line 150
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserServiceCompatApi21$MediaBrowserServiceAdaptorApi21$ServiceBinderProxyApi21;->mServiceImpl:Landroid/support/v4/media/MediaBrowserServiceCompatApi21$ServiceImplApi21;
 
     new-instance v1, Landroid/support/v4/media/MediaBrowserServiceCompatApi21$ServiceCallbacksApi21;
@@ -51,7 +47,6 @@
 
     invoke-interface {v0, p1, v1}, Landroid/support/v4/media/MediaBrowserServiceCompatApi21$ServiceImplApi21;->addSubscription(Ljava/lang/String;Landroid/support/v4/media/MediaBrowserServiceCompatApi21$ServiceCallbacks;)V
 
-    .line 149
     return-void
 .end method
 
@@ -62,7 +57,6 @@
     .param p3, "callbacks"    # Landroid/service/media/IMediaBrowserServiceCallbacks;
 
     .prologue
-    .line 138
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserServiceCompatApi21$MediaBrowserServiceAdaptorApi21$ServiceBinderProxyApi21;->mServiceImpl:Landroid/support/v4/media/MediaBrowserServiceCompatApi21$ServiceImplApi21;
 
     new-instance v1, Landroid/support/v4/media/MediaBrowserServiceCompatApi21$ServiceCallbacksApi21;
@@ -71,7 +65,6 @@
 
     invoke-interface {v0, p1, p2, v1}, Landroid/support/v4/media/MediaBrowserServiceCompatApi21$ServiceImplApi21;->connect(Ljava/lang/String;Landroid/os/Bundle;Landroid/support/v4/media/MediaBrowserServiceCompatApi21$ServiceCallbacks;)V
 
-    .line 137
     return-void
 .end method
 
@@ -80,7 +73,6 @@
     .param p1, "callbacks"    # Landroid/service/media/IMediaBrowserServiceCallbacks;
 
     .prologue
-    .line 143
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserServiceCompatApi21$MediaBrowserServiceAdaptorApi21$ServiceBinderProxyApi21;->mServiceImpl:Landroid/support/v4/media/MediaBrowserServiceCompatApi21$ServiceImplApi21;
 
     new-instance v1, Landroid/support/v4/media/MediaBrowserServiceCompatApi21$ServiceCallbacksApi21;
@@ -89,7 +81,6 @@
 
     invoke-interface {v0, v1}, Landroid/support/v4/media/MediaBrowserServiceCompatApi21$ServiceImplApi21;->disconnect(Landroid/support/v4/media/MediaBrowserServiceCompatApi21$ServiceCallbacks;)V
 
-    .line 142
     return-void
 .end method
 
@@ -99,7 +90,6 @@
     .param p2, "receiver"    # Landroid/os/ResultReceiver;
 
     .prologue
-    .line 160
     return-void
 .end method
 
@@ -109,7 +99,6 @@
     .param p2, "callbacks"    # Landroid/service/media/IMediaBrowserServiceCallbacks;
 
     .prologue
-    .line 156
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserServiceCompatApi21$MediaBrowserServiceAdaptorApi21$ServiceBinderProxyApi21;->mServiceImpl:Landroid/support/v4/media/MediaBrowserServiceCompatApi21$ServiceImplApi21;
 
     new-instance v1, Landroid/support/v4/media/MediaBrowserServiceCompatApi21$ServiceCallbacksApi21;
@@ -118,6 +107,5 @@
 
     invoke-interface {v0, p1, v1}, Landroid/support/v4/media/MediaBrowserServiceCompatApi21$ServiceImplApi21;->removeSubscription(Ljava/lang/String;Landroid/support/v4/media/MediaBrowserServiceCompatApi21$ServiceCallbacks;)V
 
-    .line 155
     return-void
 .end method

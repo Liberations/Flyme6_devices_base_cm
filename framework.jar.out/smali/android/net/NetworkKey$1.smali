@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 119
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 122
     new-instance v0, Landroid/net/NetworkKey;
 
     const/4 v1, 0x0
@@ -60,7 +58,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 121
     invoke-virtual {p0, p1}, Landroid/net/NetworkKey$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/NetworkKey;
 
     move-result-object v0
@@ -73,7 +70,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 127
     new-array v0, p1, [Landroid/net/NetworkKey;
 
     return-object v0
@@ -84,7 +80,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 126
     invoke-virtual {p0, p1}, Landroid/net/NetworkKey$1;->newArray(I)[Landroid/net/NetworkKey;
 
     move-result-object v0

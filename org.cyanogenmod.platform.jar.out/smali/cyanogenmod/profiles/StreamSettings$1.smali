@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 55
     new-instance v0, Lcyanogenmod/profiles/StreamSettings;
 
     invoke-direct {v0, p1}, Lcyanogenmod/profiles/StreamSettings;-><init>(Landroid/os/Parcel;)V
@@ -58,7 +56,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Lcyanogenmod/profiles/StreamSettings$1;->createFromParcel(Landroid/os/Parcel;)Lcyanogenmod/profiles/StreamSettings;
 
     move-result-object v0
@@ -71,7 +68,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 60
     new-array v0, p1, [Lcyanogenmod/profiles/StreamSettings;
 
     return-object v0
@@ -82,7 +78,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 59
     invoke-virtual {p0, p1}, Lcyanogenmod/profiles/StreamSettings$1;->newArray(I)[Lcyanogenmod/profiles/StreamSettings;
 
     move-result-object v0

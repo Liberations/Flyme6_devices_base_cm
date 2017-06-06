@@ -38,12 +38,10 @@
     .locals 1
 
     .prologue
-    .line 65
     sget-object v0, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
     sput-object v0, Lcyanogenmod/alarmclock/ClockContract$AlarmSettingColumns;->NO_RINGTONE_URI:Landroid/net/Uri;
 
-    .line 70
     sget-object v0, Lcyanogenmod/alarmclock/ClockContract$AlarmSettingColumns;->NO_RINGTONE_URI:Landroid/net/Uri;
 
     invoke-virtual {v0}, Landroid/net/Uri;->toString()Ljava/lang/String;
@@ -52,6 +50,5 @@
 
     sput-object v0, Lcyanogenmod/alarmclock/ClockContract$AlarmSettingColumns;->NO_RINGTONE:Ljava/lang/String;
 
-    .line 61
     return-void
 .end method

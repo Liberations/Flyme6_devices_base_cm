@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 453
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,7 +45,6 @@
     .param p2, "rhs"    # Lcom/android/internal/util/cm/palette/ColorCutQuantizer$Vbox;
 
     .prologue
-    .line 456
     invoke-virtual {p2}, Lcom/android/internal/util/cm/palette/ColorCutQuantizer$Vbox;->getVolume()I
 
     move-result v0
@@ -66,7 +64,6 @@
     .param p2, "rhs"    # Ljava/lang/Object;
 
     .prologue
-    .line 455
     check-cast p1, Lcom/android/internal/util/cm/palette/ColorCutQuantizer$Vbox;
 
     .end local p1    # "lhs":Ljava/lang/Object;

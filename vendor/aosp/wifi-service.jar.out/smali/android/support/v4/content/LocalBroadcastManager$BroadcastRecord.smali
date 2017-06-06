@@ -45,16 +45,12 @@
     .end annotation
 
     .prologue
-    .line 73
     .local p2, "_receivers":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/support/v4/content/LocalBroadcastManager$ReceiverRecord;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 74
     iput-object p1, p0, Landroid/support/v4/content/LocalBroadcastManager$BroadcastRecord;->intent:Landroid/content/Intent;
 
-    .line 75
     iput-object p2, p0, Landroid/support/v4/content/LocalBroadcastManager$BroadcastRecord;->receivers:Ljava/util/ArrayList;
 
-    .line 73
     return-void
 .end method

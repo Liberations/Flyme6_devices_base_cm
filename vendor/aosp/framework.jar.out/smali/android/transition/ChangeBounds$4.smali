@@ -30,7 +30,6 @@
     .param p2, "$anonymous1"    # Ljava/lang/String;
 
     .prologue
-    .line 113
     .local p1, "$anonymous0":Ljava/lang/Class;, "Ljava/lang/Class<Landroid/graphics/PointF;>;"
     invoke-direct {p0, p1, p2}, Landroid/util/Property;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
@@ -44,7 +43,6 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 125
     const/4 v0, 0x0
 
     return-object v0
@@ -55,7 +53,6 @@
     .param p1, "view"    # Ljava/lang/Object;
 
     .prologue
-    .line 124
     check-cast p1, Landroid/view/View;
 
     .end local p1    # "view":Ljava/lang/Object;
@@ -72,18 +69,15 @@
     .param p2, "bottomRight"    # Landroid/graphics/PointF;
 
     .prologue
-    .line 116
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
     move-result v1
 
-    .line 117
     .local v1, "left":I
     invoke-virtual {p1}, Landroid/view/View;->getTop()I
 
     move-result v3
 
-    .line 118
     .local v3, "top":I
     iget v4, p2, Landroid/graphics/PointF;->x:F
 
@@ -91,7 +85,6 @@
 
     move-result v2
 
-    .line 119
     .local v2, "right":I
     iget v4, p2, Landroid/graphics/PointF;->y:F
 
@@ -99,11 +92,9 @@
 
     move-result v0
 
-    .line 120
     .local v0, "bottom":I
     invoke-virtual {p1, v1, v3, v2, v0}, Landroid/view/View;->setLeftTopRightBottom(IIII)V
 
-    .line 115
     return-void
 .end method
 
@@ -113,7 +104,6 @@
     .param p2, "bottomRight"    # Ljava/lang/Object;
 
     .prologue
-    .line 115
     check-cast p1, Landroid/view/View;
 
     .end local p1    # "view":Ljava/lang/Object;

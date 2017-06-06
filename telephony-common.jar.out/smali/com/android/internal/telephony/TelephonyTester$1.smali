@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/internal/telephony/TelephonyTester;
 
     .prologue
-    .line 59
     iput-object p1, p0, Lcom/android/internal/telephony/TelephonyTester$1;->this$0:Lcom/android/internal/telephony/TelephonyTester;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,18 +39,16 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 62
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 63
     .local v0, "action":Ljava/lang/String;
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "sIntentReceiver.onReceive: action="
+    const-string v2, "sIntentReceiver.onReceive: action="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -67,7 +64,6 @@
 
     invoke-static {v1}, Lcom/android/internal/telephony/TelephonyTester;->-wrap1(Ljava/lang/String;)V
 
-    .line 64
     iget-object v1, p0, Lcom/android/internal/telephony/TelephonyTester$1;->this$0:Lcom/android/internal/telephony/TelephonyTester;
 
     invoke-static {v1}, Lcom/android/internal/telephony/TelephonyTester;->-get0(Lcom/android/internal/telephony/TelephonyTester;)Lcom/android/internal/telephony/PhoneBase;
@@ -84,12 +80,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 65
-    const-string/jumbo v1, "simulate detaching"
+    const-string v1, "simulate detaching"
 
     invoke-static {v1}, Lcom/android/internal/telephony/TelephonyTester;->-wrap1(Ljava/lang/String;)V
 
-    .line 66
     iget-object v1, p0, Lcom/android/internal/telephony/TelephonyTester$1;->this$0:Lcom/android/internal/telephony/TelephonyTester;
 
     invoke-static {v1}, Lcom/android/internal/telephony/TelephonyTester;->-get0(Lcom/android/internal/telephony/TelephonyTester;)Lcom/android/internal/telephony/PhoneBase;
@@ -104,11 +98,9 @@
 
     invoke-virtual {v1}, Landroid/os/RegistrantList;->notifyRegistrants()V
 
-    .line 61
     :goto_0
     return-void
 
-    .line 67
     :cond_0
     iget-object v1, p0, Lcom/android/internal/telephony/TelephonyTester$1;->this$0:Lcom/android/internal/telephony/TelephonyTester;
 
@@ -126,12 +118,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 68
-    const-string/jumbo v1, "simulate attaching"
+    const-string v1, "simulate attaching"
 
     invoke-static {v1}, Lcom/android/internal/telephony/TelephonyTester;->-wrap1(Ljava/lang/String;)V
 
-    .line 69
     iget-object v1, p0, Lcom/android/internal/telephony/TelephonyTester$1;->this$0:Lcom/android/internal/telephony/TelephonyTester;
 
     invoke-static {v1}, Lcom/android/internal/telephony/TelephonyTester;->-get0(Lcom/android/internal/telephony/TelephonyTester;)Lcom/android/internal/telephony/PhoneBase;
@@ -148,9 +138,8 @@
 
     goto :goto_0
 
-    .line 70
     :cond_1
-    const-string/jumbo v1, "com.android.internal.telephony.TestConferenceEventPackage"
+    const-string v1, "com.android.internal.telephony.TestConferenceEventPackage"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -158,15 +147,13 @@
 
     if-eqz v1, :cond_2
 
-    .line 71
-    const-string/jumbo v1, "inject simulated conference event package"
+    const-string v1, "inject simulated conference event package"
 
     invoke-static {v1}, Lcom/android/internal/telephony/TelephonyTester;->-wrap1(Ljava/lang/String;)V
 
-    .line 72
     iget-object v1, p0, Lcom/android/internal/telephony/TelephonyTester$1;->this$0:Lcom/android/internal/telephony/TelephonyTester;
 
-    const-string/jumbo v2, "filename"
+    const-string v2, "filename"
 
     invoke-virtual {p2, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
@@ -176,13 +163,12 @@
 
     goto :goto_0
 
-    .line 74
     :cond_2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onReceive: unknown action="
+    const-string v2, "onReceive: unknown action="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

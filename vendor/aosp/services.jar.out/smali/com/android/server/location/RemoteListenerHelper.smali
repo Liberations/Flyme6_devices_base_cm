@@ -81,32 +81,25 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 54
     .local p0, "this":Lcom/android/server/location/RemoteListenerHelper;, "Lcom/android/server/location/RemoteListenerHelper<TTListener;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/location/RemoteListenerHelper;->mListenerMap:Ljava/util/Map;
 
-    .line 52
     const/4 v0, 0x5
 
     iput v0, p0, Lcom/android/server/location/RemoteListenerHelper;->mLastReportedResult:I
 
-    .line 55
     invoke-static {p2}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 56
     iput-object p1, p0, Lcom/android/server/location/RemoteListenerHelper;->mHandler:Landroid/os/Handler;
 
-    .line 57
     iput-object p2, p0, Lcom/android/server/location/RemoteListenerHelper;->mTag:Ljava/lang/String;
 
-    .line 54
     return-void
 .end method
 
@@ -114,7 +107,6 @@
     .locals 1
 
     .prologue
-    .line 200
     .local p0, "this":Lcom/android/server/location/RemoteListenerHelper;, "Lcom/android/server/location/RemoteListenerHelper<TTListener;>;"
     invoke-virtual {p0}, Lcom/android/server/location/RemoteListenerHelper;->isAvailableInPlatform()Z
 
@@ -122,12 +114,10 @@
 
     if-nez v0, :cond_0
 
-    .line 201
     const/4 v0, 0x1
 
     return v0
 
-    .line 203
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/location/RemoteListenerHelper;->mHasIsSupported:Z
 
@@ -141,24 +131,20 @@
 
     if-eqz v0, :cond_2
 
-    .line 205
     :cond_1
     const/4 v0, 0x5
 
     return v0
 
-    .line 207
     :cond_2
     iget-boolean v0, p0, Lcom/android/server/location/RemoteListenerHelper;->mIsSupported:Z
 
     if-nez v0, :cond_3
 
-    .line 208
     const/4 v0, 0x2
 
     return v0
 
-    .line 210
     :cond_3
     invoke-virtual {p0}, Lcom/android/server/location/RemoteListenerHelper;->isGpsEnabled()Z
 
@@ -166,12 +152,10 @@
 
     if-nez v0, :cond_4
 
-    .line 211
     const/4 v0, 0x3
 
     return v0
 
-    .line 213
     :cond_4
     const/4 v0, 0x0
 
@@ -191,7 +175,6 @@
     .end annotation
 
     .prologue
-    .line 172
     .local p0, "this":Lcom/android/server/location/RemoteListenerHelper;, "Lcom/android/server/location/RemoteListenerHelper<TTListener;>;"
     .local p1, "operation":Lcom/android/server/location/RemoteListenerHelper$ListenerOperation;, "Lcom/android/server/location/RemoteListenerHelper$ListenerOperation<TTListener;>;"
     iget-object v2, p0, Lcom/android/server/location/RemoteListenerHelper;->mListenerMap:Ljava/util/Map;
@@ -218,7 +201,6 @@
 
     check-cast v0, Lcom/android/server/location/RemoteListenerHelper$LinkedListener;
 
-    .line 173
     .local v0, "linkedListener":Lcom/android/server/location/RemoteListenerHelper$LinkedListener;, "Lcom/android/server/location/RemoteListenerHelper<TTListener;>.LinkedListener;"
     invoke-virtual {v0}, Lcom/android/server/location/RemoteListenerHelper$LinkedListener;->getUnderlyingListener()Landroid/os/IInterface;
 
@@ -228,7 +210,6 @@
 
     goto :goto_0
 
-    .line 171
     .end local v0    # "linkedListener":Lcom/android/server/location/RemoteListenerHelper$LinkedListener;, "Lcom/android/server/location/RemoteListenerHelper<TTListener;>.LinkedListener;"
     :cond_0
     return-void
@@ -248,13 +229,11 @@
     .end annotation
 
     .prologue
-    .line 178
     .local p0, "this":Lcom/android/server/location/RemoteListenerHelper;, "Lcom/android/server/location/RemoteListenerHelper<TTListener;>;"
     .local p1, "listener":Landroid/os/IInterface;, "TTListener;"
     .local p2, "operation":Lcom/android/server/location/RemoteListenerHelper$ListenerOperation;, "Lcom/android/server/location/RemoteListenerHelper$ListenerOperation<TTListener;>;"
     if-eqz p2, :cond_0
 
-    .line 179
     iget-object v0, p0, Lcom/android/server/location/RemoteListenerHelper;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/android/server/location/RemoteListenerHelper$HandlerRunnable;
@@ -263,7 +242,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 177
     :cond_0
     return-void
 .end method
@@ -272,20 +250,17 @@
     .locals 1
 
     .prologue
-    .line 184
     .local p0, "this":Lcom/android/server/location/RemoteListenerHelper;, "Lcom/android/server/location/RemoteListenerHelper<TTListener;>;"
     iget-boolean v0, p0, Lcom/android/server/location/RemoteListenerHelper;->mIsRegistered:Z
 
     if-nez v0, :cond_0
 
-    .line 185
     invoke-virtual {p0}, Lcom/android/server/location/RemoteListenerHelper;->registerWithService()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/server/location/RemoteListenerHelper;->mIsRegistered:Z
 
-    .line 187
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/location/RemoteListenerHelper;->mIsRegistered:Z
 
@@ -296,25 +271,20 @@
     .locals 1
 
     .prologue
-    .line 191
     .local p0, "this":Lcom/android/server/location/RemoteListenerHelper;, "Lcom/android/server/location/RemoteListenerHelper<TTListener;>;"
     iget-boolean v0, p0, Lcom/android/server/location/RemoteListenerHelper;->mIsRegistered:Z
 
     if-nez v0, :cond_0
 
-    .line 192
     return-void
 
-    .line 194
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/location/RemoteListenerHelper;->unregisterFromService()V
 
-    .line 195
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/location/RemoteListenerHelper;->mIsRegistered:Z
 
-    .line 190
     return-void
 .end method
 
@@ -337,29 +307,24 @@
 
     const/4 v6, 0x1
 
-    .line 61
-    const-string/jumbo v4, "Attempted to register a \'null\' listener."
+    const-string v4, "Attempted to register a \'null\' listener."
 
     invoke-static {p1, v4}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 62
     invoke-interface {p1}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 63
     .local v0, "binder":Landroid/os/IBinder;
     new-instance v1, Lcom/android/server/location/RemoteListenerHelper$LinkedListener;
 
     invoke-direct {v1, p0, p1}, Lcom/android/server/location/RemoteListenerHelper$LinkedListener;-><init>(Lcom/android/server/location/RemoteListenerHelper;Landroid/os/IInterface;)V
 
-    .line 64
     .local v1, "deathListener":Lcom/android/server/location/RemoteListenerHelper$LinkedListener;, "Lcom/android/server/location/RemoteListenerHelper<TTListener;>.LinkedListener;"
     iget-object v5, p0, Lcom/android/server/location/RemoteListenerHelper;->mListenerMap:Ljava/util/Map;
 
     monitor-enter v5
 
-    .line 65
     :try_start_0
     iget-object v4, p0, Lcom/android/server/location/RemoteListenerHelper;->mListenerMap:Ljava/util/Map;
 
@@ -373,10 +338,8 @@
 
     monitor-exit v5
 
-    .line 67
     return v6
 
-    .line 70
     :cond_0
     const/4 v4, 0x0
 
@@ -386,23 +349,19 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 77
     :try_start_2
     iget-object v4, p0, Lcom/android/server/location/RemoteListenerHelper;->mListenerMap:Ljava/util/Map;
 
     invoke-interface {v4, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 81
     invoke-virtual {p0}, Lcom/android/server/location/RemoteListenerHelper;->isAvailableInPlatform()Z
 
     move-result v4
 
     if-nez v4, :cond_1
 
-    .line 82
     const/4 v3, 0x1
 
-    .line 98
     .local v3, "result":I
     :goto_0
     invoke-virtual {p0, v3}, Lcom/android/server/location/RemoteListenerHelper;->getHandlerOperation(I)Lcom/android/server/location/RemoteListenerHelper$ListenerOperation;
@@ -415,20 +374,17 @@
 
     monitor-exit v5
 
-    .line 100
     return v6
 
-    .line 71
     .end local v3    # "result":I
     :catch_0
     move-exception v2
 
-    .line 74
     .local v2, "e":Landroid/os/RemoteException;
     :try_start_3
     iget-object v4, p0, Lcom/android/server/location/RemoteListenerHelper;->mTag:Ljava/lang/String;
 
-    const-string/jumbo v6, "Remote listener already died."
+    const-string v6, "Remote listener already died."
 
     invoke-static {v4, v6, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_3
@@ -436,10 +392,8 @@
 
     monitor-exit v5
 
-    .line 75
     return v7
 
-    .line 83
     .end local v2    # "e":Landroid/os/RemoteException;
     :cond_1
     :try_start_4
@@ -451,7 +405,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 85
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/location/RemoteListenerHelper;->isGpsEnabled()Z
 
@@ -459,22 +412,18 @@
 
     if-nez v4, :cond_4
 
-    .line 86
     const/4 v3, 0x3
 
     .restart local v3    # "result":I
     goto :goto_0
 
-    .line 84
     .end local v3    # "result":I
     :cond_3
     const/4 v3, 0x2
 
-    .line 83
     .restart local v3    # "result":I
     goto :goto_0
 
-    .line 87
     .end local v3    # "result":I
     :cond_4
     invoke-direct {p0}, Lcom/android/server/location/RemoteListenerHelper;->tryRegister()Z
@@ -483,13 +432,11 @@
 
     if-nez v4, :cond_5
 
-    .line 90
     const/4 v3, 0x4
 
     .restart local v3    # "result":I
     goto :goto_0
 
-    .line 91
     .end local v3    # "result":I
     :cond_5
     iget-boolean v4, p0, Lcom/android/server/location/RemoteListenerHelper;->mHasIsSupported:Z
@@ -502,7 +449,6 @@
 
     if-eqz v4, :cond_6
 
-    .line 92
     const/4 v3, 0x0
 
     .restart local v3    # "result":I
@@ -512,10 +458,8 @@
     :cond_6
     monitor-exit v5
 
-    .line 96
     return v6
 
-    .line 64
     :catchall_0
     move-exception v4
 
@@ -537,14 +481,12 @@
     .end annotation
 
     .prologue
-    .line 129
     .local p0, "this":Lcom/android/server/location/RemoteListenerHelper;, "Lcom/android/server/location/RemoteListenerHelper<TTListener;>;"
     .local p1, "operation":Lcom/android/server/location/RemoteListenerHelper$ListenerOperation;, "Lcom/android/server/location/RemoteListenerHelper$ListenerOperation<TTListener;>;"
     iget-object v0, p0, Lcom/android/server/location/RemoteListenerHelper;->mListenerMap:Ljava/util/Map;
 
     monitor-enter v0
 
-    .line 130
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/location/RemoteListenerHelper;->foreachUnsafe(Lcom/android/server/location/RemoteListenerHelper$ListenerOperation;)V
     :try_end_0
@@ -552,10 +494,8 @@
 
     monitor-exit v0
 
-    .line 128
     return-void
 
-    .line 129
     :catchall_0
     move-exception v1
 
@@ -596,25 +536,21 @@
     .end annotation
 
     .prologue
-    .line 104
     .local p0, "this":Lcom/android/server/location/RemoteListenerHelper;, "Lcom/android/server/location/RemoteListenerHelper<TTListener;>;"
     .local p1, "listener":Landroid/os/IInterface;, "TTListener;"
-    const-string/jumbo v2, "Attempted to remove a \'null\' listener."
+    const-string v2, "Attempted to remove a \'null\' listener."
 
     invoke-static {p1, v2}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 105
     invoke-interface {p1}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 107
     .local v0, "binder":Landroid/os/IBinder;
     iget-object v3, p0, Lcom/android/server/location/RemoteListenerHelper;->mListenerMap:Ljava/util/Map;
 
     monitor-enter v3
 
-    .line 108
     :try_start_0
     iget-object v2, p0, Lcom/android/server/location/RemoteListenerHelper;->mListenerMap:Ljava/util/Map;
 
@@ -624,7 +560,6 @@
 
     check-cast v1, Lcom/android/server/location/RemoteListenerHelper$LinkedListener;
 
-    .line 109
     .local v1, "linkedListener":Lcom/android/server/location/RemoteListenerHelper$LinkedListener;, "Lcom/android/server/location/RemoteListenerHelper<TTListener;>.LinkedListener;"
     iget-object v2, p0, Lcom/android/server/location/RemoteListenerHelper;->mListenerMap:Ljava/util/Map;
 
@@ -634,7 +569,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 110
     invoke-direct {p0}, Lcom/android/server/location/RemoteListenerHelper;->tryUnregister()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -642,19 +576,15 @@
     :cond_0
     monitor-exit v3
 
-    .line 113
     if-eqz v1, :cond_1
 
-    .line 114
     const/4 v2, 0x0
 
     invoke-interface {v0, v1, v2}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 103
     :cond_1
     return-void
 
-    .line 107
     .end local v1    # "linkedListener":Lcom/android/server/location/RemoteListenerHelper$LinkedListener;, "Lcom/android/server/location/RemoteListenerHelper<TTListener;>.LinkedListener;"
     :catchall_0
     move-exception v2
@@ -669,29 +599,24 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 135
     .local p0, "this":Lcom/android/server/location/RemoteListenerHelper;, "Lcom/android/server/location/RemoteListenerHelper<TTListener;>;"
     iget-object v1, p0, Lcom/android/server/location/RemoteListenerHelper;->mListenerMap:Ljava/util/Map;
 
     monitor-enter v1
 
-    .line 136
     const/4 v0, 0x1
 
     :try_start_0
     iput-boolean v0, p0, Lcom/android/server/location/RemoteListenerHelper;->mHasIsSupported:Z
 
-    .line 137
     iput-boolean p1, p0, Lcom/android/server/location/RemoteListenerHelper;->mIsSupported:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     monitor-exit v1
 
-    .line 134
     return-void
 
-    .line 135
     :catchall_0
     move-exception v0
 
@@ -707,12 +632,10 @@
     .local p0, "this":Lcom/android/server/location/RemoteListenerHelper;, "Lcom/android/server/location/RemoteListenerHelper<TTListener;>;"
     const/4 v3, 0x1
 
-    .line 142
     iget-object v2, p0, Lcom/android/server/location/RemoteListenerHelper;->mListenerMap:Ljava/util/Map;
 
     monitor-enter v2
 
-    .line 143
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/location/RemoteListenerHelper;->isGpsEnabled()Z
 
@@ -720,17 +643,14 @@
 
     if-nez v1, :cond_0
 
-    .line 144
     invoke-direct {p0}, Lcom/android/server/location/RemoteListenerHelper;->tryUnregister()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     monitor-exit v2
 
-    .line 145
     return v3
 
-    .line 147
     :cond_0
     :try_start_1
     iget-object v1, p0, Lcom/android/server/location/RemoteListenerHelper;->mListenerMap:Ljava/util/Map;
@@ -745,10 +665,8 @@
 
     monitor-exit v2
 
-    .line 148
     return v3
 
-    .line 150
     :cond_1
     :try_start_2
     invoke-direct {p0}, Lcom/android/server/location/RemoteListenerHelper;->tryRegister()Z
@@ -761,10 +679,8 @@
 
     monitor-exit v2
 
-    .line 152
     return v3
 
-    .line 154
     :cond_2
     const/4 v1, 0x4
 
@@ -773,20 +689,17 @@
 
     move-result-object v0
 
-    .line 155
     .local v0, "operation":Lcom/android/server/location/RemoteListenerHelper$ListenerOperation;, "Lcom/android/server/location/RemoteListenerHelper$ListenerOperation<TTListener;>;"
     invoke-direct {p0, v0}, Lcom/android/server/location/RemoteListenerHelper;->foreachUnsafe(Lcom/android/server/location/RemoteListenerHelper$ListenerOperation;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 156
     const/4 v1, 0x0
 
     monitor-exit v2
 
     return v1
 
-    .line 142
     .end local v0    # "operation":Lcom/android/server/location/RemoteListenerHelper$ListenerOperation;, "Lcom/android/server/location/RemoteListenerHelper$ListenerOperation<TTListener;>;"
     :catchall_0
     move-exception v1
@@ -803,19 +716,16 @@
     .locals 3
 
     .prologue
-    .line 161
     .local p0, "this":Lcom/android/server/location/RemoteListenerHelper;, "Lcom/android/server/location/RemoteListenerHelper<TTListener;>;"
     iget-object v2, p0, Lcom/android/server/location/RemoteListenerHelper;->mListenerMap:Ljava/util/Map;
 
     monitor-enter v2
 
-    .line 162
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/location/RemoteListenerHelper;->calculateCurrentResultUnsafe()I
 
     move-result v0
 
-    .line 163
     .local v0, "newResult":I
     iget v1, p0, Lcom/android/server/location/RemoteListenerHelper;->mLastReportedResult:I
     :try_end_0
@@ -825,10 +735,8 @@
 
     monitor-exit v2
 
-    .line 164
     return-void
 
-    .line 166
     :cond_0
     :try_start_1
     invoke-virtual {p0, v0}, Lcom/android/server/location/RemoteListenerHelper;->getHandlerOperation(I)Lcom/android/server/location/RemoteListenerHelper$ListenerOperation;
@@ -837,17 +745,14 @@
 
     invoke-direct {p0, v1}, Lcom/android/server/location/RemoteListenerHelper;->foreachUnsafe(Lcom/android/server/location/RemoteListenerHelper$ListenerOperation;)V
 
-    .line 167
     iput v0, p0, Lcom/android/server/location/RemoteListenerHelper;->mLastReportedResult:I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     monitor-exit v2
 
-    .line 160
     return-void
 
-    .line 161
     .end local v0    # "newResult":I
     :catchall_0
     move-exception v1

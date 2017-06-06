@@ -46,15 +46,12 @@
     .locals 1
 
     .prologue
-    .line 71
     new-instance v0, Landroid/nfc/TransceiveResult$1;
 
     invoke-direct {v0}, Landroid/nfc/TransceiveResult$1;-><init>()V
 
-    .line 70
     sput-object v0, Landroid/nfc/TransceiveResult;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 29
     return-void
 .end method
 
@@ -64,16 +61,12 @@
     .param p2, "data"    # [B
 
     .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     iput p1, p0, Landroid/nfc/TransceiveResult;->mResult:I
 
-    .line 40
     iput-object p2, p0, Landroid/nfc/TransceiveResult;->mResponseData:[B
 
-    .line 38
     return-void
 .end method
 
@@ -83,7 +76,6 @@
     .locals 1
 
     .prologue
-    .line 58
     const/4 v0, 0x0
 
     return v0
@@ -98,48 +90,42 @@
     .end annotation
 
     .prologue
-    .line 44
     iget v0, p0, Landroid/nfc/TransceiveResult;->mResult:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 52
     :pswitch_0
     new-instance v0, Ljava/io/IOException;
 
-    const-string/jumbo v1, "Transceive failed"
+    const-string v1, "Transceive failed"
 
     invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 46
     :pswitch_1
     iget-object v0, p0, Landroid/nfc/TransceiveResult;->mResponseData:[B
 
     return-object v0
 
-    .line 48
     :pswitch_2
     new-instance v0, Landroid/nfc/TagLostException;
 
-    const-string/jumbo v1, "Tag was lost."
+    const-string v1, "Tag was lost."
 
     invoke-direct {v0, v1}, Landroid/nfc/TagLostException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 50
     :pswitch_3
     new-instance v0, Ljava/io/IOException;
 
-    const-string/jumbo v1, "Transceive length exceeds supported maximum"
+    const-string v1, "Transceive length exceeds supported maximum"
 
     invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 44
     nop
 
     :pswitch_data_0
@@ -157,29 +143,24 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 63
     iget v0, p0, Landroid/nfc/TransceiveResult;->mResult:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 64
     iget v0, p0, Landroid/nfc/TransceiveResult;->mResult:I
 
     if-nez v0, :cond_0
 
-    .line 65
     iget-object v0, p0, Landroid/nfc/TransceiveResult;->mResponseData:[B
 
     array-length v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 66
     iget-object v0, p0, Landroid/nfc/TransceiveResult;->mResponseData:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 62
     :cond_0
     return-void
 .end method

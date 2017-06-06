@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 359
     iput-object p1, p0, Landroid/view/animation/Animation$1;->this$0:Landroid/view/animation/Animation;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,14 +40,12 @@
     .locals 2
 
     .prologue
-    .line 361
     iget-object v0, p0, Landroid/view/animation/Animation$1;->this$0:Landroid/view/animation/Animation;
 
     iget-object v0, v0, Landroid/view/animation/Animation;->mListener:Landroid/view/animation/Animation$AnimationListener;
 
     if-eqz v0, :cond_0
 
-    .line 362
     iget-object v0, p0, Landroid/view/animation/Animation$1;->this$0:Landroid/view/animation/Animation;
 
     iget-object v0, v0, Landroid/view/animation/Animation;->mListener:Landroid/view/animation/Animation$AnimationListener;
@@ -57,7 +54,6 @@
 
     invoke-interface {v0, v1}, Landroid/view/animation/Animation$AnimationListener;->onAnimationStart(Landroid/view/animation/Animation;)V
 
-    .line 360
     :cond_0
     return-void
 .end method

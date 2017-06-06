@@ -39,7 +39,6 @@
     .param p9, "val$optionsIn"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1456
     .local p5, "$anonymous2":Landroid/accounts/AccountManagerCallback;, "Landroid/accounts/AccountManagerCallback<Landroid/os/Bundle;>;"
     iput-object p2, p0, Landroid/accounts/AccountManager$11;->this$0:Landroid/accounts/AccountManager;
 
@@ -67,12 +66,10 @@
     .end annotation
 
     .prologue
-    .line 1458
     const/16 v0, 0x1f
 
     invoke-static {v0}, Landroid/util/SeempLog;->record(I)I
 
-    .line 1459
     iget-object v0, p0, Landroid/accounts/AccountManager$11;->this$0:Landroid/accounts/AccountManager;
 
     invoke-static {v0}, Landroid/accounts/AccountManager;->-get3(Landroid/accounts/AccountManager;)Landroid/accounts/IAccountManager;
@@ -85,16 +82,13 @@
 
     iget-object v3, p0, Landroid/accounts/AccountManager$11;->val$authTokenType:Ljava/lang/String;
 
-    .line 1460
     iget-boolean v4, p0, Landroid/accounts/AccountManager$11;->val$notifyAuthFailure:Z
 
     iget-object v6, p0, Landroid/accounts/AccountManager$11;->val$optionsIn:Landroid/os/Bundle;
 
     const/4 v5, 0x0
 
-    .line 1459
     invoke-interface/range {v0 .. v6}, Landroid/accounts/IAccountManager;->getAuthToken(Landroid/accounts/IAccountManagerResponse;Landroid/accounts/Account;Ljava/lang/String;ZZLandroid/os/Bundle;)V
 
-    .line 1457
     return-void
 .end method

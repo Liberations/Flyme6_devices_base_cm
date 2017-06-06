@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/telecom/TelecomLoaderService;
 
     .prologue
-    .line 227
     iput-object p1, p0, Lcom/android/server/telecom/TelecomLoaderService$2;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 230
     iget-object v1, p0, Lcom/android/server/telecom/TelecomLoaderService$2;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
     invoke-static {v1}, Lcom/android/server/telecom/TelecomLoaderService;->-get4(Lcom/android/server/telecom/TelecomLoaderService;)Ljava/lang/Object;
@@ -53,7 +51,6 @@
 
     monitor-enter v2
 
-    .line 231
     :try_start_0
     iget-object v1, p0, Lcom/android/server/telecom/TelecomLoaderService$2;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
@@ -63,7 +60,6 @@
 
     if-nez v1, :cond_1
 
-    .line 232
     iget-object v1, p0, Lcom/android/server/telecom/TelecomLoaderService$2;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
     invoke-static {v1}, Lcom/android/server/telecom/TelecomLoaderService;->-get1(Lcom/android/server/telecom/TelecomLoaderService;)Landroid/util/IntArray;
@@ -72,7 +68,6 @@
 
     if-nez v1, :cond_0
 
-    .line 233
     iget-object v1, p0, Lcom/android/server/telecom/TelecomLoaderService$2;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
     new-instance v3, Landroid/util/IntArray;
@@ -81,7 +76,6 @@
 
     invoke-static {v1, v3}, Lcom/android/server/telecom/TelecomLoaderService;->-set0(Lcom/android/server/telecom/TelecomLoaderService;Landroid/util/IntArray;)Landroid/util/IntArray;
 
-    .line 235
     :cond_0
     iget-object v1, p0, Lcom/android/server/telecom/TelecomLoaderService$2;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
@@ -95,13 +89,11 @@
 
     monitor-exit v2
 
-    .line 236
     return-object v4
 
     :cond_1
     monitor-exit v2
 
-    .line 239
     iget-object v1, p0, Lcom/android/server/telecom/TelecomLoaderService$2;->this$0:Lcom/android/server/telecom/TelecomLoaderService;
 
     invoke-static {v1}, Lcom/android/server/telecom/TelecomLoaderService;->-get0(Lcom/android/server/telecom/TelecomLoaderService;)Landroid/content/Context;
@@ -112,11 +104,9 @@
 
     move-result-object v0
 
-    .line 240
     .local v0, "packageName":Ljava/lang/String;
     if-eqz v0, :cond_2
 
-    .line 241
     const/4 v1, 0x1
 
     new-array v1, v1, [Ljava/lang/String;
@@ -127,7 +117,6 @@
 
     return-object v1
 
-    .line 230
     .end local v0    # "packageName":Ljava/lang/String;
     :catchall_0
     move-exception v1
@@ -136,7 +125,6 @@
 
     throw v1
 
-    .line 243
     .restart local v0    # "packageName":Ljava/lang/String;
     :cond_2
     return-object v4

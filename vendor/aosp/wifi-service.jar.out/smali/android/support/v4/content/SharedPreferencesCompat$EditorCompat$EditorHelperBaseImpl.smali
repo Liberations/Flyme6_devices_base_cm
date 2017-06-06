@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,9 +46,7 @@
     .end param
 
     .prologue
-    .line 37
     invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 36
     return-void
 .end method

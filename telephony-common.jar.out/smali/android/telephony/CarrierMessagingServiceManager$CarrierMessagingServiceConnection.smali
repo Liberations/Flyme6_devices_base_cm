@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/telephony/CarrierMessagingServiceManager;
 
     .prologue
-    .line 89
     iput-object p1, p0, Landroid/telephony/CarrierMessagingServiceManager$CarrierMessagingServiceConnection;->this$0:Landroid/telephony/CarrierMessagingServiceManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +52,6 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 92
     iget-object v0, p0, Landroid/telephony/CarrierMessagingServiceManager$CarrierMessagingServiceConnection;->this$0:Landroid/telephony/CarrierMessagingServiceManager;
 
     invoke-static {p2}, Landroid/service/carrier/ICarrierMessagingService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/service/carrier/ICarrierMessagingService;
@@ -62,7 +60,6 @@
 
     invoke-virtual {v0, v1}, Landroid/telephony/CarrierMessagingServiceManager;->onServiceReady(Landroid/service/carrier/ICarrierMessagingService;)V
 
-    .line 91
     return-void
 .end method
 
@@ -71,6 +68,5 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 96
     return-void
 .end method

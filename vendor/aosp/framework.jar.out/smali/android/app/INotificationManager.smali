@@ -71,6 +71,14 @@
     .end annotation
 .end method
 
+.method public abstract deviceLightsCan(I)Z
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract enqueueNotificationWithTag(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILandroid/app/Notification;[II)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -159,6 +167,14 @@
     .end annotation
 .end method
 
+.method public abstract getPackageNotificationSoundTimeout(Ljava/lang/String;I)J
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract getPackagePeekable(Ljava/lang/String;I)Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -239,7 +255,7 @@
     .end annotation
 .end method
 
-.method public abstract matchesCallFilter(Landroid/os/Bundle;)Z
+.method public abstract matchesCallFilter(Landroid/os/Bundle;)[Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -328,6 +344,14 @@
 .end method
 
 .method public abstract setOnNotificationPostedTrimFromListener(Landroid/service/notification/INotificationListener;I)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract setPackageNotificationSoundTimeout(Ljava/lang/String;IJ)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

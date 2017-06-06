@@ -50,25 +50,18 @@
     .param p5, "recordingSequence"    # I
 
     .prologue
-    .line 337
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 339
     iput p1, p0, Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerInfo;->mDayOfMonth:I
 
-    .line 340
     iput p2, p0, Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerInfo;->mMonthOfYear:I
 
-    .line 341
     iput-object p3, p0, Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerInfo;->mStartTime:Landroid/hardware/hdmi/HdmiTimerRecordSources$Time;
 
-    .line 342
     iput-object p4, p0, Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerInfo;->mDuration:Landroid/hardware/hdmi/HdmiTimerRecordSources$Duration;
 
-    .line 343
     iput p5, p0, Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerInfo;->mRecordingSequence:I
 
-    .line 338
     return-void
 .end method
 
@@ -92,7 +85,6 @@
     .locals 1
 
     .prologue
-    .line 363
     const/4 v0, 0x7
 
     return v0
@@ -104,27 +96,22 @@
     .param p2, "index"    # I
 
     .prologue
-    .line 348
     iget v0, p0, Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerInfo;->mDayOfMonth:I
 
     int-to-byte v0, v0
 
     aput-byte v0, p1, p2
 
-    .line 349
     add-int/lit8 p2, p2, 0x1
 
-    .line 351
     iget v0, p0, Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerInfo;->mMonthOfYear:I
 
     int-to-byte v0, v0
 
     aput-byte v0, p1, p2
 
-    .line 352
     add-int/lit8 p2, p2, 0x1
 
-    .line 354
     iget-object v0, p0, Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerInfo;->mStartTime:Landroid/hardware/hdmi/HdmiTimerRecordSources$Time;
 
     invoke-virtual {v0, p1, p2}, Landroid/hardware/hdmi/HdmiTimerRecordSources$Time;->toByteArray([BI)I
@@ -133,7 +120,6 @@
 
     add-int/2addr p2, v0
 
-    .line 355
     iget-object v0, p0, Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerInfo;->mDuration:Landroid/hardware/hdmi/HdmiTimerRecordSources$Duration;
 
     invoke-virtual {v0, p1, p2}, Landroid/hardware/hdmi/HdmiTimerRecordSources$Duration;->toByteArray([BI)I
@@ -142,14 +128,12 @@
 
     add-int/2addr p2, v0
 
-    .line 358
     iget v0, p0, Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerInfo;->mRecordingSequence:I
 
     int-to-byte v0, v0
 
     aput-byte v0, p1, p2
 
-    .line 359
     invoke-virtual {p0}, Landroid/hardware/hdmi/HdmiTimerRecordSources$TimerInfo;->getDataSize()I
 
     move-result v0

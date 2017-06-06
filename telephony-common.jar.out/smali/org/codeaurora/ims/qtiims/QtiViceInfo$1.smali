@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 175
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 177
     invoke-virtual {p0, p1}, Lorg/codeaurora/ims/qtiims/QtiViceInfo$1;->createFromParcel(Landroid/os/Parcel;)Lorg/codeaurora/ims/qtiims/QtiViceInfo;
 
     move-result-object v0
@@ -58,7 +56,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 178
     new-instance v0, Lorg/codeaurora/ims/qtiims/QtiViceInfo;
 
     invoke-direct {v0, p1}, Lorg/codeaurora/ims/qtiims/QtiViceInfo;-><init>(Landroid/os/Parcel;)V
@@ -71,7 +68,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 182
     invoke-virtual {p0, p1}, Lorg/codeaurora/ims/qtiims/QtiViceInfo$1;->newArray(I)[Lorg/codeaurora/ims/qtiims/QtiViceInfo;
 
     move-result-object v0
@@ -84,7 +80,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 183
     new-array v0, p1, [Lorg/codeaurora/ims/qtiims/QtiViceInfo;
 
     return-object v0

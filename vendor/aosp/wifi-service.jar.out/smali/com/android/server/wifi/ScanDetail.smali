@@ -42,25 +42,19 @@
     .end annotation
 
     .prologue
-    .line 53
     .local p3, "matches":Ljava/util/Map;, "Ljava/util/Map<Lcom/android/server/wifi/hotspot2/pps/HomeSP;Lcom/android/server/wifi/hotspot2/PasspointMatch;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/server/wifi/ScanDetail;->mSeen:J
 
-    .line 55
     iput-object p1, p0, Lcom/android/server/wifi/ScanDetail;->mScanResult:Landroid/net/wifi/ScanResult;
 
-    .line 56
     iput-object p2, p0, Lcom/android/server/wifi/ScanDetail;->mNetworkDetail:Lcom/android/server/wifi/hotspot2/NetworkDetail;
 
-    .line 57
     iput-object p3, p0, Lcom/android/server/wifi/ScanDetail;->mMatches:Ljava/util/Map;
 
-    .line 54
     return-void
 .end method
 
@@ -75,20 +69,16 @@
     .param p8, "seen"    # J
 
     .prologue
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
     const-wide/16 v2, 0x0
 
     iput-wide v2, p0, Lcom/android/server/wifi/ScanDetail;->mSeen:J
 
-    .line 42
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/android/server/wifi/ScanDetail;->mNetworkDetail:Lcom/android/server/wifi/hotspot2/NetworkDetail;
 
-    .line 43
     new-instance v2, Landroid/net/wifi/ScanResult;
 
     move-object v3, p1
@@ -107,45 +97,38 @@
 
     iput-object v2, p0, Lcom/android/server/wifi/ScanDetail;->mScanResult:Landroid/net/wifi/ScanResult;
 
-    .line 44
     move-wide/from16 v0, p8
 
     iput-wide v0, p0, Lcom/android/server/wifi/ScanDetail;->mSeen:J
 
-    .line 46
     iget-object v2, p0, Lcom/android/server/wifi/ScanDetail;->mScanResult:Landroid/net/wifi/ScanResult;
 
     const/4 v3, 0x0
 
     iput v3, v2, Landroid/net/wifi/ScanResult;->channelWidth:I
 
-    .line 47
     iget-object v2, p0, Lcom/android/server/wifi/ScanDetail;->mScanResult:Landroid/net/wifi/ScanResult;
 
     const/4 v3, 0x0
 
     iput v3, v2, Landroid/net/wifi/ScanResult;->centerFreq0:I
 
-    .line 48
     iget-object v2, p0, Lcom/android/server/wifi/ScanDetail;->mScanResult:Landroid/net/wifi/ScanResult;
 
     const/4 v3, 0x0
 
     iput v3, v2, Landroid/net/wifi/ScanResult;->centerFreq1:I
 
-    .line 49
     iget-object v2, p0, Lcom/android/server/wifi/ScanDetail;->mScanResult:Landroid/net/wifi/ScanResult;
 
     const-wide/16 v4, 0x0
 
     iput-wide v4, v2, Landroid/net/wifi/ScanResult;->flags:J
 
-    .line 50
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/android/server/wifi/ScanDetail;->mMatches:Ljava/util/Map;
 
-    .line 41
     return-void
 .end method
 
@@ -160,18 +143,14 @@
     .param p7, "tsf"    # J
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/server/wifi/ScanDetail;->mSeen:J
 
-    .line 28
     iput-object p1, p0, Lcom/android/server/wifi/ScanDetail;->mNetworkDetail:Lcom/android/server/wifi/hotspot2/NetworkDetail;
 
-    .line 29
     new-instance v0, Landroid/net/wifi/ScanResult;
 
     move-object v1, p2
@@ -190,14 +169,12 @@
 
     iput-object v0, p0, Lcom/android/server/wifi/ScanDetail;->mScanResult:Landroid/net/wifi/ScanResult;
 
-    .line 30
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/wifi/ScanDetail;->mSeen:J
 
-    .line 32
     iget-object v0, p0, Lcom/android/server/wifi/ScanDetail;->mScanResult:Landroid/net/wifi/ScanResult;
 
     invoke-virtual {p1}, Lcom/android/server/wifi/hotspot2/NetworkDetail;->getChannelWidth()I
@@ -206,7 +183,6 @@
 
     iput v1, v0, Landroid/net/wifi/ScanResult;->channelWidth:I
 
-    .line 33
     iget-object v0, p0, Lcom/android/server/wifi/ScanDetail;->mScanResult:Landroid/net/wifi/ScanResult;
 
     invoke-virtual {p1}, Lcom/android/server/wifi/hotspot2/NetworkDetail;->getCenterfreq0()I
@@ -215,7 +191,6 @@
 
     iput v1, v0, Landroid/net/wifi/ScanResult;->centerFreq0:I
 
-    .line 34
     iget-object v0, p0, Lcom/android/server/wifi/ScanDetail;->mScanResult:Landroid/net/wifi/ScanResult;
 
     invoke-virtual {p1}, Lcom/android/server/wifi/hotspot2/NetworkDetail;->getCenterfreq1()I
@@ -224,27 +199,23 @@
 
     iput v1, v0, Landroid/net/wifi/ScanResult;->centerFreq1:I
 
-    .line 35
     invoke-virtual {p1}, Lcom/android/server/wifi/hotspot2/NetworkDetail;->is80211McResponderSupport()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 36
     iget-object v0, p0, Lcom/android/server/wifi/ScanDetail;->mScanResult:Landroid/net/wifi/ScanResult;
 
     const-wide/16 v2, 0x2
 
     invoke-virtual {v0, v2, v3}, Landroid/net/wifi/ScanResult;->setFlag(J)V
 
-    .line 37
     :cond_0
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/wifi/ScanDetail;->mMatches:Ljava/util/Map;
 
-    .line 27
     return-void
 .end method
 
@@ -254,7 +225,6 @@
     .locals 1
 
     .prologue
-    .line 112
     iget-object v0, p0, Lcom/android/server/wifi/ScanDetail;->mNetworkDetail:Lcom/android/server/wifi/hotspot2/NetworkDetail;
 
     if-nez v0, :cond_0
@@ -291,7 +261,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 136
     iget-object v3, p0, Lcom/android/server/wifi/ScanDetail;->mMatches:Ljava/util/Map;
 
     if-eqz v3, :cond_0
@@ -304,17 +273,14 @@
 
     if-eqz v3, :cond_1
 
-    .line 137
     :cond_0
     return-object v4
 
-    .line 140
     :cond_1
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 141
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;>;"
     iget-object v3, p0, Lcom/android/server/wifi/ScanDetail;->mMatches:Ljava/util/Map;
 
@@ -340,7 +306,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 142
     .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/android/server/wifi/hotspot2/pps/HomeSP;Lcom/android/server/wifi/hotspot2/PasspointMatch;>;"
     new-instance v5, Lcom/android/server/wifi/hotspot2/PasspointMatchInfo;
 
@@ -360,7 +325,6 @@
 
     goto :goto_0
 
-    .line 144
     .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/android/server/wifi/hotspot2/pps/HomeSP;Lcom/android/server/wifi/hotspot2/PasspointMatch;>;"
     :cond_2
     return-object v2
@@ -370,7 +334,6 @@
     .locals 1
 
     .prologue
-    .line 104
     iget-object v0, p0, Lcom/android/server/wifi/ScanDetail;->mNetworkDetail:Lcom/android/server/wifi/hotspot2/NetworkDetail;
 
     return-object v0
@@ -380,7 +343,6 @@
     .locals 1
 
     .prologue
-    .line 108
     iget-object v0, p0, Lcom/android/server/wifi/ScanDetail;->mNetworkDetail:Lcom/android/server/wifi/hotspot2/NetworkDetail;
 
     if-nez v0, :cond_0
@@ -406,7 +368,6 @@
     .locals 1
 
     .prologue
-    .line 100
     iget-object v0, p0, Lcom/android/server/wifi/ScanDetail;->mScanResult:Landroid/net/wifi/ScanResult;
 
     return-object v0
@@ -416,7 +377,6 @@
     .locals 2
 
     .prologue
-    .line 126
     iget-wide v0, p0, Lcom/android/server/wifi/ScanDetail;->mSeen:J
 
     return-wide v0
@@ -439,17 +399,14 @@
     .local p1, "anqpElements":Ljava/util/Map;, "Ljava/util/Map<Lcom/android/server/wifi/anqp/Constants$ANQPElementType;Lcom/android/server/wifi/anqp/ANQPElement;>;"
     const/4 v4, 0x0
 
-    .line 81
     invoke-interface {p1}, Ljava/util/Map;->isEmpty()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 82
     return-void
 
-    .line 84
     :cond_0
     iget-object v2, p0, Lcom/android/server/wifi/ScanDetail;->mNetworkDetail:Lcom/android/server/wifi/hotspot2/NetworkDetail;
 
@@ -459,17 +416,14 @@
 
     iput-object v2, p0, Lcom/android/server/wifi/ScanDetail;->mNetworkDetail:Lcom/android/server/wifi/hotspot2/NetworkDetail;
 
-    .line 86
     sget-object v2, Lcom/android/server/wifi/anqp/Constants$ANQPElementType;->HSFriendlyName:Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
-    .line 85
     invoke-interface {p1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/server/wifi/anqp/HSFriendlyNameElement;
 
-    .line 88
     .local v0, "fne":Lcom/android/server/wifi/anqp/HSFriendlyNameElement;
     if-eqz v0, :cond_1
 
@@ -483,7 +437,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 92
     :cond_1
     sget-object v2, Lcom/android/server/wifi/anqp/Constants$ANQPElementType;->ANQPVenueName:Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
@@ -493,7 +446,6 @@
 
     check-cast v1, Lcom/android/server/wifi/anqp/VenueNameElement;
 
-    .line 93
     .local v1, "vne":Lcom/android/server/wifi/anqp/VenueNameElement;
     if-eqz v1, :cond_2
 
@@ -507,13 +459,11 @@
 
     if-eqz v2, :cond_4
 
-    .line 80
     .end local v1    # "vne":Lcom/android/server/wifi/anqp/VenueNameElement;
     :cond_2
     :goto_0
     return-void
 
-    .line 89
     :cond_3
     iget-object v3, p0, Lcom/android/server/wifi/ScanDetail;->mScanResult:Landroid/net/wifi/ScanResult;
 
@@ -535,7 +485,6 @@
 
     goto :goto_0
 
-    .line 94
     .restart local v1    # "vne":Lcom/android/server/wifi/anqp/VenueNameElement;
     :cond_4
     iget-object v3, p0, Lcom/android/server/wifi/ScanDetail;->mScanResult:Landroid/net/wifi/ScanResult;
@@ -563,21 +512,18 @@
     .locals 4
 
     .prologue
-    .line 130
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/wifi/ScanDetail;->mSeen:J
 
-    .line 131
     iget-object v0, p0, Lcom/android/server/wifi/ScanDetail;->mScanResult:Landroid/net/wifi/ScanResult;
 
     iget-wide v2, p0, Lcom/android/server/wifi/ScanDetail;->mSeen:J
 
     iput-wide v2, v0, Landroid/net/wifi/ScanResult;->seen:J
 
-    .line 132
     iget-wide v0, p0, Lcom/android/server/wifi/ScanDetail;->mSeen:J
 
     return-wide v0
@@ -587,23 +533,19 @@
     .locals 6
 
     .prologue
-    .line 116
     iget-object v0, p0, Lcom/android/server/wifi/ScanDetail;->mNetworkDetail:Lcom/android/server/wifi/hotspot2/NetworkDetail;
 
-    .line 117
     .local v0, "networkDetail":Lcom/android/server/wifi/hotspot2/NetworkDetail;
     if-eqz v0, :cond_0
 
-    .line 118
     invoke-virtual {v0}, Lcom/android/server/wifi/hotspot2/NetworkDetail;->toKeyString()Ljava/lang/String;
 
     move-result-object v1
 
     return-object v1
 
-    .line 121
     :cond_0
-    const-string/jumbo v1, "\'%s\':%012x"
+    const-string v1, "\'%s\':%012x"
 
     const/4 v2, 0x2
 
@@ -648,15 +590,13 @@
 
     const/4 v6, 0x0
 
-    .line 150
     :try_start_0
-    const-string/jumbo v1, "\'%s\'/%012x"
+    const-string v1, "\'%s\'/%012x"
 
     const/4 v2, 0x2
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    .line 151
     iget-object v3, p0, Lcom/android/server/wifi/ScanDetail;->mScanResult:Landroid/net/wifi/ScanResult;
 
     iget-object v3, v3, Landroid/net/wifi/ScanResult;->SSID:Ljava/lang/String;
@@ -681,7 +621,6 @@
 
     aput-object v3, v2, v4
 
-    .line 150
     invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
@@ -690,13 +629,11 @@
 
     return-object v1
 
-    .line 153
     :catch_0
     move-exception v0
 
-    .line 154
     .local v0, "iae":Ljava/lang/IllegalArgumentException;
-    const-string/jumbo v1, "\'%s\'/----"
+    const-string v1, "\'%s\'/----"
 
     new-array v2, v7, [Ljava/lang/Object;
 
@@ -724,44 +661,36 @@
     .param p7, "tsf"    # J
 
     .prologue
-    .line 62
     iget-object v0, p0, Lcom/android/server/wifi/ScanDetail;->mScanResult:Landroid/net/wifi/ScanResult;
 
     iput p2, v0, Landroid/net/wifi/ScanResult;->level:I
 
-    .line 63
     iget-object v0, p0, Lcom/android/server/wifi/ScanDetail;->mScanResult:Landroid/net/wifi/ScanResult;
 
     iput-object p3, v0, Landroid/net/wifi/ScanResult;->wifiSsid:Landroid/net/wifi/WifiSsid;
 
-    .line 65
     iget-object v0, p0, Lcom/android/server/wifi/ScanDetail;->mScanResult:Landroid/net/wifi/ScanResult;
 
     iput-object p4, v0, Landroid/net/wifi/ScanResult;->SSID:Ljava/lang/String;
 
-    .line 66
     iget-object v0, p0, Lcom/android/server/wifi/ScanDetail;->mScanResult:Landroid/net/wifi/ScanResult;
 
     iput-object p5, v0, Landroid/net/wifi/ScanResult;->capabilities:Ljava/lang/String;
 
-    .line 67
     iget-object v0, p0, Lcom/android/server/wifi/ScanDetail;->mScanResult:Landroid/net/wifi/ScanResult;
 
     iput p6, v0, Landroid/net/wifi/ScanResult;->frequency:I
 
-    .line 68
     iget-object v0, p0, Lcom/android/server/wifi/ScanDetail;->mScanResult:Landroid/net/wifi/ScanResult;
 
     iput-wide p7, v0, Landroid/net/wifi/ScanResult;->timestamp:J
 
-    .line 69
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/wifi/ScanDetail;->mSeen:J
 
-    .line 71
     iget-object v0, p0, Lcom/android/server/wifi/ScanDetail;->mScanResult:Landroid/net/wifi/ScanResult;
 
     invoke-virtual {p1}, Lcom/android/server/wifi/hotspot2/NetworkDetail;->getChannelWidth()I
@@ -770,7 +699,6 @@
 
     iput v1, v0, Landroid/net/wifi/ScanResult;->channelWidth:I
 
-    .line 72
     iget-object v0, p0, Lcom/android/server/wifi/ScanDetail;->mScanResult:Landroid/net/wifi/ScanResult;
 
     invoke-virtual {p1}, Lcom/android/server/wifi/hotspot2/NetworkDetail;->getCenterfreq0()I
@@ -779,7 +707,6 @@
 
     iput v1, v0, Landroid/net/wifi/ScanResult;->centerFreq0:I
 
-    .line 73
     iget-object v0, p0, Lcom/android/server/wifi/ScanDetail;->mScanResult:Landroid/net/wifi/ScanResult;
 
     invoke-virtual {p1}, Lcom/android/server/wifi/hotspot2/NetworkDetail;->getCenterfreq1()I
@@ -788,21 +715,18 @@
 
     iput v1, v0, Landroid/net/wifi/ScanResult;->centerFreq1:I
 
-    .line 74
     invoke-virtual {p1}, Lcom/android/server/wifi/hotspot2/NetworkDetail;->is80211McResponderSupport()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 75
     iget-object v0, p0, Lcom/android/server/wifi/ScanDetail;->mScanResult:Landroid/net/wifi/ScanResult;
 
     const-wide/16 v2, 0x2
 
     invoke-virtual {v0, v2, v3}, Landroid/net/wifi/ScanResult;->setFlag(J)V
 
-    .line 76
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/wifi/hotspot2/NetworkDetail;->isInterworking()Z
 
@@ -810,14 +734,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 77
     iget-object v0, p0, Lcom/android/server/wifi/ScanDetail;->mScanResult:Landroid/net/wifi/ScanResult;
 
     const-wide/16 v2, 0x1
 
     invoke-virtual {v0, v2, v3}, Landroid/net/wifi/ScanResult;->setFlag(J)V
 
-    .line 61
     :cond_1
     return-void
 .end method

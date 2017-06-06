@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 200
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,9 +42,7 @@
     .locals 0
 
     .prologue
-    .line 203
     invoke-static {}, Landroid/os/Binder;->blockUntilThreadAvailable()V
 
-    .line 202
     return-void
 .end method

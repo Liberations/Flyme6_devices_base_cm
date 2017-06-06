@@ -55,45 +55,38 @@
 
     const/4 v2, 0x0
 
-    .line 419
     new-array v0, v5, [Ljava/lang/String;
 
-    .line 420
-    const-string/jumbo v1, "Foreground"
+    const-string v1, "Foreground"
 
     aput-object v1, v0, v2
 
-    const-string/jumbo v1, "Active"
+    const-string v1, "Active"
 
     aput-object v1, v0, v3
 
-    const-string/jumbo v1, "Running"
+    const-string v1, "Running"
 
     aput-object v1, v0, v4
 
-    .line 419
     sput-object v0, Landroid/os/BatteryStats$Uid;->PROCESS_STATE_NAMES:[Ljava/lang/String;
 
-    .line 434
     new-array v0, v5, [Ljava/lang/String;
 
-    .line 435
-    const-string/jumbo v1, "other"
+    const-string v1, "other"
 
     aput-object v1, v0, v2
 
-    const-string/jumbo v1, "button"
+    const-string v1, "button"
 
     aput-object v1, v0, v3
 
-    const-string/jumbo v1, "touch"
+    const-string v1, "touch"
 
     aput-object v1, v0, v4
 
-    .line 434
     sput-object v0, Landroid/os/BatteryStats$Uid;->USER_ACTIVITY_TYPES:[Ljava/lang/String;
 
-    .line 314
     return-void
 .end method
 
@@ -101,7 +94,6 @@
     .locals 0
 
     .prologue
-    .line 314
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

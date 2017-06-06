@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,15 +20,12 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 52
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    .line 53
-    const-string/jumbo v2, "qti.settings.cs_retry"
+    const-string v2, "qti.settings.cs_retry"
 
-    .line 51
     invoke-static {v1, v2, v0}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v1

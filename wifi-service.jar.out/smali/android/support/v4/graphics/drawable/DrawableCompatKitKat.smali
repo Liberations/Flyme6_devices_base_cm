@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,7 +18,6 @@
     .param p0, "drawable"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 32
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->isAutoMirrored()Z
 
     move-result v0
@@ -33,10 +31,8 @@
     .param p1, "mirrored"    # Z
 
     .prologue
-    .line 28
     invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setAutoMirrored(Z)V
 
-    .line 27
     return-void
 .end method
 
@@ -45,19 +41,16 @@
     .param p0, "drawable"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 36
     instance-of v0, p0, Landroid/support/v4/graphics/drawable/DrawableWrapperKitKat;
 
     if-nez v0, :cond_0
 
-    .line 37
     new-instance v0, Landroid/support/v4/graphics/drawable/DrawableWrapperKitKat;
 
     invoke-direct {v0, p0}, Landroid/support/v4/graphics/drawable/DrawableWrapperKitKat;-><init>(Landroid/graphics/drawable/Drawable;)V
 
     return-object v0
 
-    .line 39
     :cond_0
     return-object p0
 .end method

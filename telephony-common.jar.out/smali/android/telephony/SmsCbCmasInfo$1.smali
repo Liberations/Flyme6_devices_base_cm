@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 299
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 302
     new-instance v0, Landroid/telephony/SmsCbCmasInfo;
 
     invoke-direct {v0, p1}, Landroid/telephony/SmsCbCmasInfo;-><init>(Landroid/os/Parcel;)V
@@ -58,7 +56,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 301
     invoke-virtual {p0, p1}, Landroid/telephony/SmsCbCmasInfo$1;->createFromParcel(Landroid/os/Parcel;)Landroid/telephony/SmsCbCmasInfo;
 
     move-result-object v0
@@ -71,7 +68,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 307
     new-array v0, p1, [Landroid/telephony/SmsCbCmasInfo;
 
     return-object v0
@@ -82,7 +78,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 306
     invoke-virtual {p0, p1}, Landroid/telephony/SmsCbCmasInfo$1;->newArray(I)[Landroid/telephony/SmsCbCmasInfo;
 
     move-result-object v0

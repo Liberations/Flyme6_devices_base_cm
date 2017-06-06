@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/internal/telephony/SmsUsageMonitor;
 
     .prologue
-    .line 582
     iput-object p1, p0, Lcom/android/internal/telephony/SmsUsageMonitor$1;->this$0:Lcom/android/internal/telephony/SmsUsageMonitor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +40,9 @@
     .locals 1
 
     .prologue
-    .line 585
     iget-object v0, p0, Lcom/android/internal/telephony/SmsUsageMonitor$1;->this$0:Lcom/android/internal/telephony/SmsUsageMonitor;
 
     invoke-static {v0}, Lcom/android/internal/telephony/SmsUsageMonitor;->-wrap0(Lcom/android/internal/telephony/SmsUsageMonitor;)V
 
-    .line 584
     return-void
 .end method

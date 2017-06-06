@@ -32,12 +32,9 @@
     .param p1, "rule"    # Lcom/android/server/firewall/IntentFirewall$Rule;
 
     .prologue
-    .line 489
     invoke-direct {p0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 490
     iput-object p1, p0, Lcom/android/server/firewall/IntentFirewall$FirewallIntentFilter;->rule:Lcom/android/server/firewall/IntentFirewall$Rule;
 
-    .line 489
     return-void
 .end method

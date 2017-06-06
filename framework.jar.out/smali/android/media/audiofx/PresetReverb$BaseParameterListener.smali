@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/media/audiofx/PresetReverb;
 
     .prologue
-    .line 183
     iput-object p1, p0, Landroid/media/audiofx/PresetReverb$BaseParameterListener;->this$0:Landroid/media/audiofx/PresetReverb;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -59,10 +58,8 @@
 
     const/4 v5, -0x1
 
-    .line 187
     const/4 v0, 0x0
 
-    .line 189
     .local v0, "l":Landroid/media/audiofx/PresetReverb$OnParameterChangeListener;
     iget-object v3, p0, Landroid/media/audiofx/PresetReverb$BaseParameterListener;->this$0:Landroid/media/audiofx/PresetReverb;
 
@@ -72,7 +69,6 @@
 
     monitor-enter v4
 
-    .line 190
     :try_start_0
     iget-object v3, p0, Landroid/media/audiofx/PresetReverb$BaseParameterListener;->this$0:Landroid/media/audiofx/PresetReverb;
 
@@ -82,7 +78,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 191
     iget-object v3, p0, Landroid/media/audiofx/PresetReverb$BaseParameterListener;->this$0:Landroid/media/audiofx/PresetReverb;
 
     invoke-static {v3}, Landroid/media/audiofx/PresetReverb;->-get0(Landroid/media/audiofx/PresetReverb;)Landroid/media/audiofx/PresetReverb$OnParameterChangeListener;
@@ -95,17 +90,13 @@
     :cond_0
     monitor-exit v4
 
-    .line 194
     if-eqz v0, :cond_3
 
-    .line 195
     const/4 v1, -0x1
 
-    .line 196
     .local v1, "p":I
     const/4 v2, -0x1
 
-    .line 198
     .local v2, "v":S
     array-length v3, p3
 
@@ -113,12 +104,10 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 199
     invoke-static {p3, v6}, Landroid/media/audiofx/PresetReverb;->byteArrayToInt([BI)I
 
     move-result v1
 
-    .line 201
     :cond_1
     array-length v3, p4
 
@@ -126,29 +115,24 @@
 
     if-ne v3, v4, :cond_2
 
-    .line 202
     invoke-static {p4, v6}, Landroid/media/audiofx/PresetReverb;->byteArrayToShort([BI)S
 
     move-result v2
 
-    .line 204
     .end local v2    # "v":S
     :cond_2
     if-eq v1, v5, :cond_3
 
     if-eq v2, v5, :cond_3
 
-    .line 205
     iget-object v3, p0, Landroid/media/audiofx/PresetReverb$BaseParameterListener;->this$0:Landroid/media/audiofx/PresetReverb;
 
     invoke-interface {v0, v3, p2, v1, v2}, Landroid/media/audiofx/PresetReverb$OnParameterChangeListener;->onParameterChange(Landroid/media/audiofx/PresetReverb;IIS)V
 
-    .line 186
     .end local v1    # "p":I
     :cond_3
     return-void
 
-    .line 189
     .restart local v0    # "l":Landroid/media/audiofx/PresetReverb$OnParameterChangeListener;
     :catchall_0
     move-exception v3

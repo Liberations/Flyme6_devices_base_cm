@@ -25,15 +25,12 @@
     .param p1, "textView"    # Landroid/widget/TextView;
 
     .prologue
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     const/4 v0, 0x1
 
     new-array v0, v0, [Landroid/text/InputFilter;
 
-    .line 32
     new-instance v1, Lcom/android/internal/widget/TextViewInputDisabler$1;
 
     invoke-direct {v1, p0}, Lcom/android/internal/widget/TextViewInputDisabler$1;-><init>(Lcom/android/internal/widget/TextViewInputDisabler;)V
@@ -42,13 +39,10 @@
 
     aput-object v1, v0, v2
 
-    .line 31
     iput-object v0, p0, Lcom/android/internal/widget/TextViewInputDisabler;->mNoInputFilters:[Landroid/text/InputFilter;
 
-    .line 42
     iput-object p1, p0, Lcom/android/internal/widget/TextViewInputDisabler;->mTextView:Landroid/widget/TextView;
 
-    .line 43
     iget-object v0, p0, Lcom/android/internal/widget/TextViewInputDisabler;->mTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getFilters()[Landroid/text/InputFilter;
@@ -57,7 +51,6 @@
 
     iput-object v0, p0, Lcom/android/internal/widget/TextViewInputDisabler;->mDefaultFilters:[Landroid/text/InputFilter;
 
-    .line 41
     return-void
 .end method
 
@@ -68,7 +61,6 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 47
     iget-object v1, p0, Lcom/android/internal/widget/TextViewInputDisabler;->mTextView:Landroid/widget/TextView;
 
     if-eqz p1, :cond_0
@@ -78,10 +70,8 @@
     :goto_0
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setFilters([Landroid/text/InputFilter;)V
 
-    .line 46
     return-void
 
-    .line 47
     :cond_0
     iget-object v0, p0, Lcom/android/internal/widget/TextViewInputDisabler;->mNoInputFilters:[Landroid/text/InputFilter;
 

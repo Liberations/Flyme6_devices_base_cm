@@ -35,7 +35,6 @@
     .param p3, "val$call"    # Landroid/telecom/Call;
 
     .prologue
-    .line 1336
     .local p4, "val$cannedTextResponses":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iput-object p1, p0, Landroid/telecom/Call$5;->this$0:Landroid/telecom/Call;
 
@@ -56,7 +55,6 @@
     .locals 3
 
     .prologue
-    .line 1339
     iget-object v0, p0, Landroid/telecom/Call$5;->val$callback:Landroid/telecom/Call$Callback;
 
     iget-object v1, p0, Landroid/telecom/Call$5;->val$call:Landroid/telecom/Call;
@@ -65,6 +63,5 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/telecom/Call$Callback;->onCannedTextResponsesLoaded(Landroid/telecom/Call;Ljava/util/List;)V
 
-    .line 1338
     return-void
 .end method

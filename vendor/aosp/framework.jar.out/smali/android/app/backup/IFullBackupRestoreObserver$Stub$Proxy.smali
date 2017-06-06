@@ -27,13 +27,10 @@
     .param p1, "remote"    # Landroid/os/IBinder;
 
     .prologue
-    .line 103
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 105
     iput-object p1, p0, Landroid/app/backup/IFullBackupRestoreObserver$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    .line 103
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 109
     iget-object v0, p0, Landroid/app/backup/IFullBackupRestoreObserver$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object v0
@@ -53,8 +49,7 @@
     .locals 1
 
     .prologue
-    .line 113
-    const-string/jumbo v0, "android.app.backup.IFullBackupRestoreObserver"
+    const-string v0, "android.app.backup.IFullBackupRestoreObserver"
 
     return-object v0
 .end method
@@ -69,22 +64,18 @@
     .end annotation
 
     .prologue
-    .line 138
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 140
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
-    const-string/jumbo v1, "android.app.backup.IFullBackupRestoreObserver"
+    const-string v1, "android.app.backup.IFullBackupRestoreObserver"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 141
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 142
     iget-object v1, p0, Landroid/app/backup/IFullBackupRestoreObserver$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x2
@@ -97,20 +88,15 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 145
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 136
     return-void
 
-    .line 144
     :catchall_0
     move-exception v1
 
-    .line 145
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 144
     throw v1
 .end method
 
@@ -123,19 +109,16 @@
     .end annotation
 
     .prologue
-    .line 153
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 155
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
-    const-string/jumbo v1, "android.app.backup.IFullBackupRestoreObserver"
+    const-string v1, "android.app.backup.IFullBackupRestoreObserver"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 156
     iget-object v1, p0, Landroid/app/backup/IFullBackupRestoreObserver$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x3
@@ -148,20 +131,15 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 159
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 151
     return-void
 
-    .line 158
     :catchall_0
     move-exception v1
 
-    .line 159
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 158
     throw v1
 .end method
 
@@ -174,19 +152,16 @@
     .end annotation
 
     .prologue
-    .line 200
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 202
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
-    const-string/jumbo v1, "android.app.backup.IFullBackupRestoreObserver"
+    const-string v1, "android.app.backup.IFullBackupRestoreObserver"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 203
     iget-object v1, p0, Landroid/app/backup/IFullBackupRestoreObserver$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x6
@@ -199,20 +174,15 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 206
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 198
     return-void
 
-    .line 205
     :catchall_0
     move-exception v1
 
-    .line 206
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 205
     throw v1
 .end method
 
@@ -226,22 +196,18 @@
     .end annotation
 
     .prologue
-    .line 185
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 187
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
-    const-string/jumbo v1, "android.app.backup.IFullBackupRestoreObserver"
+    const-string v1, "android.app.backup.IFullBackupRestoreObserver"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 188
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 189
     iget-object v1, p0, Landroid/app/backup/IFullBackupRestoreObserver$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x5
@@ -254,20 +220,15 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 192
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 183
     return-void
 
-    .line 191
     :catchall_0
     move-exception v1
 
-    .line 192
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 191
     throw v1
 .end method
 
@@ -280,19 +241,16 @@
     .end annotation
 
     .prologue
-    .line 120
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 122
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
-    const-string/jumbo v1, "android.app.backup.IFullBackupRestoreObserver"
+    const-string v1, "android.app.backup.IFullBackupRestoreObserver"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 123
     iget-object v1, p0, Landroid/app/backup/IFullBackupRestoreObserver$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x1
@@ -305,20 +263,15 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 126
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 118
     return-void
 
-    .line 125
     :catchall_0
     move-exception v1
 
-    .line 126
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 125
     throw v1
 .end method
 
@@ -331,19 +284,16 @@
     .end annotation
 
     .prologue
-    .line 167
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 169
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
-    const-string/jumbo v1, "android.app.backup.IFullBackupRestoreObserver"
+    const-string v1, "android.app.backup.IFullBackupRestoreObserver"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 170
     iget-object v1, p0, Landroid/app/backup/IFullBackupRestoreObserver$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x4
@@ -356,20 +306,15 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 173
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 165
     return-void
 
-    .line 172
     :catchall_0
     move-exception v1
 
-    .line 173
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 172
     throw v1
 .end method
 
@@ -382,19 +327,16 @@
     .end annotation
 
     .prologue
-    .line 214
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 216
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
-    const-string/jumbo v1, "android.app.backup.IFullBackupRestoreObserver"
+    const-string v1, "android.app.backup.IFullBackupRestoreObserver"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 217
     iget-object v1, p0, Landroid/app/backup/IFullBackupRestoreObserver$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x7
@@ -407,19 +349,14 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 220
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 212
     return-void
 
-    .line 219
     :catchall_0
     move-exception v1
 
-    .line 220
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 219
     throw v1
 .end method

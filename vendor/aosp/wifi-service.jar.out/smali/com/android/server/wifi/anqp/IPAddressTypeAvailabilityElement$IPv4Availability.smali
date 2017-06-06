@@ -58,10 +58,9 @@
 
     const/4 v3, 0x0
 
-    .line 11
     new-instance v0, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;
 
-    const-string/jumbo v1, "NotAvailable"
+    const-string v1, "NotAvailable"
 
     invoke-direct {v0, v1, v3}, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;-><init>(Ljava/lang/String;I)V
 
@@ -69,7 +68,7 @@
 
     new-instance v0, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;
 
-    const-string/jumbo v1, "Public"
+    const-string v1, "Public"
 
     invoke-direct {v0, v1, v4}, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;-><init>(Ljava/lang/String;I)V
 
@@ -77,7 +76,7 @@
 
     new-instance v0, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;
 
-    const-string/jumbo v1, "PortRestricted"
+    const-string v1, "PortRestricted"
 
     invoke-direct {v0, v1, v5}, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;-><init>(Ljava/lang/String;I)V
 
@@ -85,7 +84,7 @@
 
     new-instance v0, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;
 
-    const-string/jumbo v1, "SingleNAT"
+    const-string v1, "SingleNAT"
 
     invoke-direct {v0, v1, v6}, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;-><init>(Ljava/lang/String;I)V
 
@@ -93,16 +92,15 @@
 
     new-instance v0, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;
 
-    const-string/jumbo v1, "DoubleNAT"
+    const-string v1, "DoubleNAT"
 
     invoke-direct {v0, v1, v7}, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;->DoubleNAT:Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;
 
-    .line 12
     new-instance v0, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;
 
-    const-string/jumbo v1, "PortRestrictedAndSingleNAT"
+    const-string v1, "PortRestrictedAndSingleNAT"
 
     const/4 v2, 0x5
 
@@ -112,7 +110,7 @@
 
     new-instance v0, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;
 
-    const-string/jumbo v1, "PortRestrictedAndDoubleNAT"
+    const-string v1, "PortRestrictedAndDoubleNAT"
 
     const/4 v2, 0x6
 
@@ -122,7 +120,7 @@
 
     new-instance v0, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;
 
-    const-string/jumbo v1, "Unknown"
+    const-string v1, "Unknown"
 
     const/4 v2, 0x7
 
@@ -130,7 +128,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;->Unknown:Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;
 
-    .line 10
     const/16 v0, 0x8
 
     new-array v0, v0, [Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;
@@ -182,7 +179,6 @@
     .locals 0
 
     .prologue
-    .line 10
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -193,7 +189,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 10
     const-class v0, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -209,7 +204,6 @@
     .locals 1
 
     .prologue
-    .line 10
     sget-object v0, Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;->$VALUES:[Lcom/android/server/wifi/anqp/IPAddressTypeAvailabilityElement$IPv4Availability;
 
     return-object v0

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/accounts/ChooseAccountActivity;
 
     .prologue
-    .line 84
     iput-object p1, p0, Landroid/accounts/ChooseAccountActivity$1;->this$0:Landroid/accounts/ChooseAccountActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +52,6 @@
     .end annotation
 
     .prologue
-    .line 86
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     iget-object v0, p0, Landroid/accounts/ChooseAccountActivity$1;->this$0:Landroid/accounts/ChooseAccountActivity;
 
@@ -69,6 +67,5 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/accounts/ChooseAccountActivity;->onListItemClick(Landroid/widget/ListView;Landroid/view/View;IJ)V
 
-    .line 85
     return-void
 .end method

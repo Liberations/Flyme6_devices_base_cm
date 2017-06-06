@@ -24,11 +24,9 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 108
     invoke-direct {p0}, Landroid/support/v4/hardware/display/DisplayManagerCompat;-><init>()V
 
-    .line 109
-    const-string/jumbo v0, "window"
+    const-string v0, "window"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -38,7 +36,6 @@
 
     iput-object v0, p0, Landroid/support/v4/hardware/display/DisplayManagerCompat$LegacyImpl;->mWindowManager:Landroid/view/WindowManager;
 
-    .line 108
     return-void
 .end method
 
@@ -49,14 +46,12 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 114
     iget-object v1, p0, Landroid/support/v4/hardware/display/DisplayManagerCompat$LegacyImpl;->mWindowManager:Landroid/view/WindowManager;
 
     invoke-interface {v1}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object v0
 
-    .line 115
     .local v0, "display":Landroid/view/Display;
     invoke-virtual {v0}, Landroid/view/Display;->getDisplayId()I
 
@@ -64,10 +59,8 @@
 
     if-ne v1, p1, :cond_0
 
-    .line 116
     return-object v0
 
-    .line 118
     :cond_0
     const/4 v1, 0x0
 
@@ -78,7 +71,6 @@
     .locals 3
 
     .prologue
-    .line 123
     const/4 v0, 0x1
 
     new-array v0, v0, [Landroid/view/Display;
@@ -101,7 +93,6 @@
     .param p1, "category"    # Ljava/lang/String;
 
     .prologue
-    .line 128
     if-nez p1, :cond_0
 
     invoke-virtual {p0}, Landroid/support/v4/hardware/display/DisplayManagerCompat$LegacyImpl;->getDisplays()[Landroid/view/Display;

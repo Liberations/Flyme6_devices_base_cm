@@ -19,10 +19,8 @@
     .end annotation
 
     .prologue
-    .line 17
     invoke-direct {p0, p1}, Lcom/android/server/wifi/anqp/ANQPElement;-><init>(Lcom/android/server/wifi/anqp/Constants$ANQPElementType;)V
 
-    .line 19
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v4
@@ -31,10 +29,8 @@
 
     iput-object v4, p0, Lcom/android/server/wifi/anqp/HSCapabilityListElement;->mCapabilities:[Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
-    .line 21
     const/4 v2, 0x0
 
-    .line 22
     .local v2, "index":I
     :goto_0
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->hasRemaining()Z
@@ -43,31 +39,27 @@
 
     if-eqz v4, :cond_1
 
-    .line 23
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v4
 
     and-int/lit16 v0, v4, 0xff
 
-    .line 24
     .local v0, "capID":I
     invoke-static {v0}, Lcom/android/server/wifi/anqp/Constants;->mapHS20Element(I)Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
     move-result-object v1
 
-    .line 25
     .local v1, "capability":Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
     if-nez v1, :cond_0
 
-    .line 26
     new-instance v4, Ljava/net/ProtocolException;
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "Unknown capability: "
+    const-string v6, "Unknown capability: "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -85,7 +77,6 @@
 
     throw v4
 
-    .line 28
     :cond_0
     iget-object v4, p0, Lcom/android/server/wifi/anqp/HSCapabilityListElement;->mCapabilities:[Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
@@ -101,7 +92,6 @@
     .restart local v2    # "index":I
     goto :goto_0
 
-    .line 16
     .end local v0    # "capID":I
     .end local v1    # "capability":Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
     :cond_1
@@ -114,7 +104,6 @@
     .locals 1
 
     .prologue
-    .line 33
     iget-object v0, p0, Lcom/android/server/wifi/anqp/HSCapabilityListElement;->mCapabilities:[Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
     return-object v0
@@ -124,33 +113,28 @@
     .locals 2
 
     .prologue
-    .line 38
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "HSCapabilityList{mCapabilities="
+    const-string v1, "HSCapabilityList{mCapabilities="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 39
     iget-object v1, p0, Lcom/android/server/wifi/anqp/HSCapabilityListElement;->mCapabilities:[Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
     invoke-static {v1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 38
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 40
     const/16 v1, 0x7d
 
-    .line 38
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     move-result-object v0

@@ -66,23 +66,21 @@
 
     const/4 v4, 0x0
 
-    .line 657
     new-instance v0, Lcom/google/android/util/AbstractMessageParser$Token$Type;
 
-    const-string/jumbo v1, "HTML"
+    const-string v1, "HTML"
 
-    const-string/jumbo v2, "html"
+    const-string v2, "html"
 
     invoke-direct {v0, v1, v4, v2}, Lcom/google/android/util/AbstractMessageParser$Token$Type;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/google/android/util/AbstractMessageParser$Token$Type;->HTML:Lcom/google/android/util/AbstractMessageParser$Token$Type;
 
-    .line 658
     new-instance v0, Lcom/google/android/util/AbstractMessageParser$Token$Type;
 
-    const-string/jumbo v1, "FORMAT"
+    const-string v1, "FORMAT"
 
-    const-string/jumbo v2, "format"
+    const-string v2, "format"
 
     invoke-direct {v0, v1, v5, v2}, Lcom/google/android/util/AbstractMessageParser$Token$Type;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
@@ -90,45 +88,39 @@
 
     new-instance v0, Lcom/google/android/util/AbstractMessageParser$Token$Type;
 
-    const-string/jumbo v1, "LINK"
+    const-string v1, "LINK"
 
-    .line 659
-    const-string/jumbo v2, "l"
+    const-string v2, "l"
 
-    .line 658
     invoke-direct {v0, v1, v6, v2}, Lcom/google/android/util/AbstractMessageParser$Token$Type;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 659
     sput-object v0, Lcom/google/android/util/AbstractMessageParser$Token$Type;->LINK:Lcom/google/android/util/AbstractMessageParser$Token$Type;
 
-    .line 660
     new-instance v0, Lcom/google/android/util/AbstractMessageParser$Token$Type;
 
-    const-string/jumbo v1, "SMILEY"
+    const-string v1, "SMILEY"
 
-    const-string/jumbo v2, "e"
+    const-string v2, "e"
 
     invoke-direct {v0, v1, v7, v2}, Lcom/google/android/util/AbstractMessageParser$Token$Type;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/google/android/util/AbstractMessageParser$Token$Type;->SMILEY:Lcom/google/android/util/AbstractMessageParser$Token$Type;
 
-    .line 661
     new-instance v0, Lcom/google/android/util/AbstractMessageParser$Token$Type;
 
-    const-string/jumbo v1, "ACRONYM"
+    const-string v1, "ACRONYM"
 
-    const-string/jumbo v2, "a"
+    const-string v2, "a"
 
     invoke-direct {v0, v1, v8, v2}, Lcom/google/android/util/AbstractMessageParser$Token$Type;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/google/android/util/AbstractMessageParser$Token$Type;->ACRONYM:Lcom/google/android/util/AbstractMessageParser$Token$Type;
 
-    .line 662
     new-instance v0, Lcom/google/android/util/AbstractMessageParser$Token$Type;
 
-    const-string/jumbo v1, "MUSIC"
+    const-string v1, "MUSIC"
 
-    const-string/jumbo v2, "m"
+    const-string v2, "m"
 
     const/4 v3, 0x5
 
@@ -136,12 +128,11 @@
 
     sput-object v0, Lcom/google/android/util/AbstractMessageParser$Token$Type;->MUSIC:Lcom/google/android/util/AbstractMessageParser$Token$Type;
 
-    .line 663
     new-instance v0, Lcom/google/android/util/AbstractMessageParser$Token$Type;
 
-    const-string/jumbo v1, "GOOGLE_VIDEO"
+    const-string v1, "GOOGLE_VIDEO"
 
-    const-string/jumbo v2, "v"
+    const-string v2, "v"
 
     const/4 v3, 0x6
 
@@ -149,12 +140,11 @@
 
     sput-object v0, Lcom/google/android/util/AbstractMessageParser$Token$Type;->GOOGLE_VIDEO:Lcom/google/android/util/AbstractMessageParser$Token$Type;
 
-    .line 664
     new-instance v0, Lcom/google/android/util/AbstractMessageParser$Token$Type;
 
-    const-string/jumbo v1, "YOUTUBE_VIDEO"
+    const-string v1, "YOUTUBE_VIDEO"
 
-    const-string/jumbo v2, "yt"
+    const-string v2, "yt"
 
     const/4 v3, 0x7
 
@@ -162,12 +152,11 @@
 
     sput-object v0, Lcom/google/android/util/AbstractMessageParser$Token$Type;->YOUTUBE_VIDEO:Lcom/google/android/util/AbstractMessageParser$Token$Type;
 
-    .line 665
     new-instance v0, Lcom/google/android/util/AbstractMessageParser$Token$Type;
 
-    const-string/jumbo v1, "PHOTO"
+    const-string v1, "PHOTO"
 
-    const-string/jumbo v2, "p"
+    const-string v2, "p"
 
     const/16 v3, 0x8
 
@@ -175,12 +164,11 @@
 
     sput-object v0, Lcom/google/android/util/AbstractMessageParser$Token$Type;->PHOTO:Lcom/google/android/util/AbstractMessageParser$Token$Type;
 
-    .line 666
     new-instance v0, Lcom/google/android/util/AbstractMessageParser$Token$Type;
 
-    const-string/jumbo v1, "FLICKR"
+    const-string v1, "FLICKR"
 
-    const-string/jumbo v2, "f"
+    const-string v2, "f"
 
     const/16 v3, 0x9
 
@@ -188,7 +176,6 @@
 
     sput-object v0, Lcom/google/android/util/AbstractMessageParser$Token$Type;->FLICKR:Lcom/google/android/util/AbstractMessageParser$Token$Type;
 
-    .line 655
     const/16 v0, 0xa
 
     new-array v0, v0, [Lcom/google/android/util/AbstractMessageParser$Token$Type;
@@ -253,13 +240,10 @@
     .param p3, "stringRep"    # Ljava/lang/String;
 
     .prologue
-    .line 673
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 674
     iput-object p3, p0, Lcom/google/android/util/AbstractMessageParser$Token$Type;->stringRep:Ljava/lang/String;
 
-    .line 673
     return-void
 .end method
 
@@ -268,7 +252,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 655
     const-class v0, Lcom/google/android/util/AbstractMessageParser$Token$Type;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -284,7 +267,6 @@
     .locals 1
 
     .prologue
-    .line 655
     sget-object v0, Lcom/google/android/util/AbstractMessageParser$Token$Type;->$VALUES:[Lcom/google/android/util/AbstractMessageParser$Token$Type;
 
     return-object v0
@@ -296,7 +278,6 @@
     .locals 1
 
     .prologue
-    .line 679
     iget-object v0, p0, Lcom/google/android/util/AbstractMessageParser$Token$Type;->stringRep:Ljava/lang/String;
 
     return-object v0

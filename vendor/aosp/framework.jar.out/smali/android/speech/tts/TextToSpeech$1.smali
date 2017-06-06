@@ -37,7 +37,6 @@
     .param p1, "this$0"    # Landroid/speech/tts/TextToSpeech;
 
     .prologue
-    .line 840
     iput-object p1, p0, Landroid/speech/tts/TextToSpeech$1;->this$0:Landroid/speech/tts/TextToSpeech;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -57,7 +56,6 @@
     .end annotation
 
     .prologue
-    .line 842
     invoke-virtual {p0, p1}, Landroid/speech/tts/TextToSpeech$1;->run(Landroid/speech/tts/ITextToSpeechService;)Ljava/lang/Void;
 
     move-result-object v0
@@ -77,7 +75,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 843
     iget-object v0, p0, Landroid/speech/tts/TextToSpeech$1;->this$0:Landroid/speech/tts/TextToSpeech;
 
     invoke-static {v0}, Landroid/speech/tts/TextToSpeech;->-wrap1(Landroid/speech/tts/TextToSpeech;)Landroid/os/IBinder;
@@ -86,7 +83,6 @@
 
     invoke-interface {p1, v0, v1}, Landroid/speech/tts/ITextToSpeechService;->setCallback(Landroid/os/IBinder;Landroid/speech/tts/ITextToSpeechCallback;)V
 
-    .line 844
     iget-object v0, p0, Landroid/speech/tts/TextToSpeech$1;->this$0:Landroid/speech/tts/TextToSpeech;
 
     invoke-static {v0}, Landroid/speech/tts/TextToSpeech;->-wrap1(Landroid/speech/tts/TextToSpeech;)Landroid/os/IBinder;
@@ -95,7 +91,6 @@
 
     invoke-interface {p1, v0}, Landroid/speech/tts/ITextToSpeechService;->stop(Landroid/os/IBinder;)I
 
-    .line 845
     iget-object v0, p0, Landroid/speech/tts/TextToSpeech$1;->this$0:Landroid/speech/tts/TextToSpeech;
 
     invoke-static {v0}, Landroid/speech/tts/TextToSpeech;->-get3(Landroid/speech/tts/TextToSpeech;)Landroid/speech/tts/TextToSpeech$Connection;
@@ -104,16 +99,13 @@
 
     invoke-virtual {v0}, Landroid/speech/tts/TextToSpeech$Connection;->disconnect()V
 
-    .line 853
     iget-object v0, p0, Landroid/speech/tts/TextToSpeech$1;->this$0:Landroid/speech/tts/TextToSpeech;
 
     invoke-static {v0, v1}, Landroid/speech/tts/TextToSpeech;->-set2(Landroid/speech/tts/TextToSpeech;Landroid/speech/tts/TextToSpeech$Connection;)Landroid/speech/tts/TextToSpeech$Connection;
 
-    .line 854
     iget-object v0, p0, Landroid/speech/tts/TextToSpeech$1;->this$0:Landroid/speech/tts/TextToSpeech;
 
     invoke-static {v0, v1}, Landroid/speech/tts/TextToSpeech;->-set1(Landroid/speech/tts/TextToSpeech;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 855
     return-object v1
 .end method

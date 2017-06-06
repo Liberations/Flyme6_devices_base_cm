@@ -43,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 36
     const/16 v0, 0x400
 
     new-array v0, v0, [I
@@ -52,10 +51,8 @@
 
     sput-object v0, Landroid/filterpacks/imageproc/AutoFixFilter;->normal_cdf:[I
 
-    .line 28
     return-void
 
-    .line 36
     :array_0
     .array-data 4
         0x9
@@ -1092,30 +1089,22 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 159
     invoke-direct {p0, p1}, Landroid/filterfw/core/Filter;-><init>(Ljava/lang/String;)V
 
-    .line 31
     const/16 v0, 0x280
 
     iput v0, p0, Landroid/filterpacks/imageproc/AutoFixFilter;->mTileSize:I
 
-    .line 108
-    const-string/jumbo v0, "precision mediump float;\nuniform sampler2D tex_sampler_0;\nuniform sampler2D tex_sampler_1;\nuniform sampler2D tex_sampler_2;\nuniform float scale;\nuniform float shift_scale;\nuniform float hist_offset;\nuniform float hist_scale;\nuniform float density_offset;\nuniform float density_scale;\nvarying vec2 v_texcoord;\nvoid main() {\n  const vec3 weights = vec3(0.33333, 0.33333, 0.33333);\n  vec4 color = texture2D(tex_sampler_0, v_texcoord);\n  float energy = dot(color.rgb, weights);\n  float mask_value = energy - 0.5;\n  float alpha;\n  if (mask_value > 0.0) {\n    alpha = (pow(2.0 * mask_value, 1.5) - 1.0) * scale + 1.0;\n  } else { \n    alpha = (pow(2.0 * mask_value, 2.0) - 1.0) * scale + 1.0;\n  }\n  float index = energy * hist_scale + hist_offset;\n  vec4 temp = texture2D(tex_sampler_1, vec2(index, 0.5));\n  float value = temp.g + temp.r * shift_scale;\n  index = value * density_scale + density_offset;\n  temp = texture2D(tex_sampler_2, vec2(index, 0.5));\n  value = temp.g + temp.r * shift_scale;\n  float dst_energy = energy * alpha + value * (1.0 - alpha);\n  float max_energy = energy / max(color.r, max(color.g, color.b));\n  if (dst_energy > max_energy) {\n    dst_energy = max_energy;\n  }\n  if (energy == 0.0) {\n    gl_FragColor = color;\n  } else {\n    gl_FragColor = vec4(color.rgb * dst_energy / energy, color.a);\n  }\n}\n"
+    const-string v0, "precision mediump float;\nuniform sampler2D tex_sampler_0;\nuniform sampler2D tex_sampler_1;\nuniform sampler2D tex_sampler_2;\nuniform float scale;\nuniform float shift_scale;\nuniform float hist_offset;\nuniform float hist_scale;\nuniform float density_offset;\nuniform float density_scale;\nvarying vec2 v_texcoord;\nvoid main() {\n  const vec3 weights = vec3(0.33333, 0.33333, 0.33333);\n  vec4 color = texture2D(tex_sampler_0, v_texcoord);\n  float energy = dot(color.rgb, weights);\n  float mask_value = energy - 0.5;\n  float alpha;\n  if (mask_value > 0.0) {\n    alpha = (pow(2.0 * mask_value, 1.5) - 1.0) * scale + 1.0;\n  } else { \n    alpha = (pow(2.0 * mask_value, 2.0) - 1.0) * scale + 1.0;\n  }\n  float index = energy * hist_scale + hist_offset;\n  vec4 temp = texture2D(tex_sampler_1, vec2(index, 0.5));\n  float value = temp.g + temp.r * shift_scale;\n  index = value * density_scale + density_offset;\n  temp = texture2D(tex_sampler_2, vec2(index, 0.5));\n  value = temp.g + temp.r * shift_scale;\n  float dst_energy = energy * alpha + value * (1.0 - alpha);\n  float max_energy = energy / max(color.r, max(color.g, color.b));\n  if (dst_energy > max_energy) {\n    dst_energy = max_energy;\n  }\n  if (energy == 0.0) {\n    gl_FragColor = color;\n  } else {\n    gl_FragColor = vec4(color.rgb * dst_energy / energy, color.a);\n  }\n}\n"
 
-    .line 107
     iput-object v0, p0, Landroid/filterpacks/imageproc/AutoFixFilter;->mAutoFixShader:Ljava/lang/String;
 
-    .line 151
     iput v1, p0, Landroid/filterpacks/imageproc/AutoFixFilter;->mWidth:I
 
-    .line 152
     iput v1, p0, Landroid/filterpacks/imageproc/AutoFixFilter;->mHeight:I
 
-    .line 153
     iput v1, p0, Landroid/filterpacks/imageproc/AutoFixFilter;->mTarget:I
 
-    .line 158
     return-void
 .end method
 
@@ -1127,14 +1116,11 @@
     .param p4, "data"    # [I
 
     .prologue
-    .line 270
     const/16 v7, 0x2fe
 
-    .line 271
     .local v7, "histDims":I
     new-array v6, v7, [I
 
-    .line 274
     .local v6, "histArray":[I
     move/from16 v0, p3
 
@@ -1142,10 +1128,8 @@
 
     move/from16 v18, v0
 
-    .line 273
     const v19, 0x3d4ccccd    # 0.05f
 
-    .line 274
     mul-float v18, v18, v19
 
     move/from16 v0, v18
@@ -1154,7 +1138,6 @@
 
     move/from16 v17, v0
 
-    .line 275
     .local v17, "y_border_thickness":I
     move/from16 v0, p2
 
@@ -1162,17 +1145,14 @@
 
     move/from16 v18, v0
 
-    .line 273
     const v19, 0x3d4ccccd    # 0.05f
 
-    .line 275
     mul-float v18, v18, v19
 
     move/from16 v0, v18
 
     float-to-int v15, v0
 
-    .line 276
     .local v15, "x_border_thickness":I
     mul-int/lit8 v18, v15, 0x2
 
@@ -1184,11 +1164,9 @@
 
     mul-int v10, v18, v19
 
-    .line 278
     .local v10, "pixels":I
     const/4 v4, 0x0
 
-    .line 279
     .local v4, "count":F
     move/from16 v16, v17
 
@@ -1202,7 +1180,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 280
     move v14, v15
 
     .local v14, "x":I
@@ -1213,12 +1190,10 @@
 
     if-ge v14, v0, :cond_0
 
-    .line 281
     mul-int v18, v16, p2
 
     add-int v9, v18, v14
 
-    .line 282
     .local v9, "index":I
     aget v18, p4, v9
 
@@ -1240,7 +1215,6 @@
 
     add-int v18, v18, v19
 
-    .line 283
     aget v19, p4, v9
 
     shr-int/lit8 v19, v19, 0x10
@@ -1251,10 +1225,8 @@
 
     move/from16 v19, v0
 
-    .line 282
     add-int v5, v18, v19
 
-    .line 284
     .local v5, "energy":I
     aget v18, v6, v5
 
@@ -1262,12 +1234,10 @@
 
     aput v18, v6, v5
 
-    .line 280
     add-int/lit8 v14, v14, 0x1
 
     goto :goto_1
 
-    .line 279
     .end local v5    # "energy":I
     .end local v9    # "index":I
     :cond_0
@@ -1275,22 +1245,18 @@
 
     goto :goto_0
 
-    .line 288
     .end local v14    # "x":I
     :cond_1
     const/4 v8, 0x1
 
-    .line 270
     .local v8, "i":I
     :goto_2
     const/16 v18, 0x2fe
 
-    .line 288
     move/from16 v0, v18
 
     if-ge v8, v0, :cond_2
 
-    .line 289
     aget v18, v6, v8
 
     add-int/lit8 v19, v8, -0x1
@@ -1301,25 +1267,20 @@
 
     aput v18, v6, v8
 
-    .line 288
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_2
 
-    .line 292
     :cond_2
     const/4 v8, 0x0
 
-    .line 270
     :goto_3
     const/16 v18, 0x2fe
 
-    .line 292
     move/from16 v0, v18
 
     if-ge v8, v0, :cond_3
 
-    .line 293
     aget v18, v6, v8
 
     move/from16 v0, v18
@@ -1338,7 +1299,6 @@
 
     div-long v12, v18, v20
 
-    .line 294
     .local v12, "temp":J
     long-to-int v0, v12
 
@@ -1346,23 +1306,18 @@
 
     aput v18, v6, v8
 
-    .line 292
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_3
 
-    .line 297
     .end local v12    # "temp":J
     :cond_3
     const/16 v18, 0x1
 
-    .line 298
     const/16 v19, 0x3
 
-    .line 299
     const/16 v20, 0x3
 
-    .line 297
     move/from16 v0, v18
 
     move/from16 v1, v19
@@ -1373,7 +1328,6 @@
 
     move-result-object v11
 
-    .line 300
     .local v11, "shaderHistFormat":Landroid/filterfw/core/FrameFormat;
     move-object/from16 v0, p0
 
@@ -1383,7 +1337,6 @@
 
     if-eqz v18, :cond_4
 
-    .line 301
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/filterpacks/imageproc/AutoFixFilter;->mHistFrame:Landroid/filterfw/core/Frame;
@@ -1392,7 +1345,6 @@
 
     invoke-virtual/range {v18 .. v18}, Landroid/filterfw/core/Frame;->release()Landroid/filterfw/core/Frame;
 
-    .line 303
     :cond_4
     invoke-virtual/range {p1 .. p1}, Landroid/filterfw/core/FilterContext;->getFrameManager()Landroid/filterfw/core/FrameManager;
 
@@ -1410,7 +1362,6 @@
 
     iput-object v0, v1, Landroid/filterpacks/imageproc/AutoFixFilter;->mHistFrame:Landroid/filterfw/core/Frame;
 
-    .line 304
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/filterpacks/imageproc/AutoFixFilter;->mHistFrame:Landroid/filterfw/core/Frame;
@@ -1421,7 +1372,6 @@
 
     invoke-virtual {v0, v6}, Landroid/filterfw/core/Frame;->setInts([I)V
 
-    .line 269
     return-void
 .end method
 
@@ -1429,10 +1379,9 @@
     .locals 3
 
     .prologue
-    .line 189
     iget-object v0, p0, Landroid/filterpacks/imageproc/AutoFixFilter;->mShaderProgram:Landroid/filterfw/core/Program;
 
-    const-string/jumbo v1, "shift_scale"
+    const-string v1, "shift_scale"
 
     const/high16 v2, 0x3b800000    # 0.00390625f
 
@@ -1442,10 +1391,9 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/filterfw/core/Program;->setHostValue(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 190
     iget-object v0, p0, Landroid/filterpacks/imageproc/AutoFixFilter;->mShaderProgram:Landroid/filterfw/core/Program;
 
-    const-string/jumbo v1, "hist_offset"
+    const-string v1, "hist_offset"
 
     const v2, 0x3a2b1cbe
 
@@ -1455,10 +1403,9 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/filterfw/core/Program;->setHostValue(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 191
     iget-object v0, p0, Landroid/filterpacks/imageproc/AutoFixFilter;->mShaderProgram:Landroid/filterfw/core/Program;
 
-    const-string/jumbo v1, "hist_scale"
+    const-string v1, "hist_scale"
 
     const v2, 0x3f7faa72
 
@@ -1468,10 +1415,9 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/filterfw/core/Program;->setHostValue(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 192
     iget-object v0, p0, Landroid/filterpacks/imageproc/AutoFixFilter;->mShaderProgram:Landroid/filterfw/core/Program;
 
-    const-string/jumbo v1, "density_offset"
+    const-string v1, "density_offset"
 
     const/high16 v2, 0x3a000000
 
@@ -1481,10 +1427,9 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/filterfw/core/Program;->setHostValue(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 193
     iget-object v0, p0, Landroid/filterpacks/imageproc/AutoFixFilter;->mShaderProgram:Landroid/filterfw/core/Program;
 
-    const-string/jumbo v1, "density_scale"
+    const-string v1, "density_scale"
 
     const v2, 0x3f7fc000
 
@@ -1494,10 +1439,9 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/filterfw/core/Program;->setHostValue(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 194
     iget-object v0, p0, Landroid/filterpacks/imageproc/AutoFixFilter;->mShaderProgram:Landroid/filterfw/core/Program;
 
-    const-string/jumbo v1, "scale"
+    const-string v1, "scale"
 
     iget v2, p0, Landroid/filterpacks/imageproc/AutoFixFilter;->mScale:F
 
@@ -1507,7 +1451,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/filterfw/core/Program;->setHostValue(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 188
     return-void
 .end method
 
@@ -1519,15 +1462,13 @@
     .param p2, "context"    # Landroid/filterfw/core/FilterContext;
 
     .prologue
-    .line 231
     iget-object v0, p0, Landroid/filterpacks/imageproc/AutoFixFilter;->mShaderProgram:Landroid/filterfw/core/Program;
 
     if-eqz v0, :cond_0
 
-    .line 232
     iget-object v0, p0, Landroid/filterpacks/imageproc/AutoFixFilter;->mShaderProgram:Landroid/filterfw/core/Program;
 
-    const-string/jumbo v1, "scale"
+    const-string v1, "scale"
 
     iget v2, p0, Landroid/filterpacks/imageproc/AutoFixFilter;->mScale:F
 
@@ -1537,7 +1478,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/filterfw/core/Program;->setHostValue(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 230
     :cond_0
     return-void
 .end method
@@ -1548,7 +1488,6 @@
     .param p2, "inputFormat"    # Landroid/filterfw/core/FrameFormat;
 
     .prologue
-    .line 170
     return-object p2
 .end method
 
@@ -1558,17 +1497,15 @@
     .param p2, "target"    # I
 
     .prologue
-    .line 174
     packed-switch p2, :pswitch_data_0
 
-    .line 182
     new-instance v1, Ljava/lang/RuntimeException;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "Filter Sharpen does not support frames of target "
+    const-string v3, "Filter Sharpen does not support frames of target "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1578,10 +1515,8 @@
 
     move-result-object v2
 
-    .line 183
-    const-string/jumbo v3, "!"
+    const-string v3, "!"
 
-    .line 182
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -1594,30 +1529,24 @@
 
     throw v1
 
-    .line 176
     :pswitch_0
     new-instance v0, Landroid/filterfw/core/ShaderProgram;
 
-    const-string/jumbo v1, "precision mediump float;\nuniform sampler2D tex_sampler_0;\nuniform sampler2D tex_sampler_1;\nuniform sampler2D tex_sampler_2;\nuniform float scale;\nuniform float shift_scale;\nuniform float hist_offset;\nuniform float hist_scale;\nuniform float density_offset;\nuniform float density_scale;\nvarying vec2 v_texcoord;\nvoid main() {\n  const vec3 weights = vec3(0.33333, 0.33333, 0.33333);\n  vec4 color = texture2D(tex_sampler_0, v_texcoord);\n  float energy = dot(color.rgb, weights);\n  float mask_value = energy - 0.5;\n  float alpha;\n  if (mask_value > 0.0) {\n    alpha = (pow(2.0 * mask_value, 1.5) - 1.0) * scale + 1.0;\n  } else { \n    alpha = (pow(2.0 * mask_value, 2.0) - 1.0) * scale + 1.0;\n  }\n  float index = energy * hist_scale + hist_offset;\n  vec4 temp = texture2D(tex_sampler_1, vec2(index, 0.5));\n  float value = temp.g + temp.r * shift_scale;\n  index = value * density_scale + density_offset;\n  temp = texture2D(tex_sampler_2, vec2(index, 0.5));\n  value = temp.g + temp.r * shift_scale;\n  float dst_energy = energy * alpha + value * (1.0 - alpha);\n  float max_energy = energy / max(color.r, max(color.g, color.b));\n  if (dst_energy > max_energy) {\n    dst_energy = max_energy;\n  }\n  if (energy == 0.0) {\n    gl_FragColor = color;\n  } else {\n    gl_FragColor = vec4(color.rgb * dst_energy / energy, color.a);\n  }\n}\n"
+    const-string v1, "precision mediump float;\nuniform sampler2D tex_sampler_0;\nuniform sampler2D tex_sampler_1;\nuniform sampler2D tex_sampler_2;\nuniform float scale;\nuniform float shift_scale;\nuniform float hist_offset;\nuniform float hist_scale;\nuniform float density_offset;\nuniform float density_scale;\nvarying vec2 v_texcoord;\nvoid main() {\n  const vec3 weights = vec3(0.33333, 0.33333, 0.33333);\n  vec4 color = texture2D(tex_sampler_0, v_texcoord);\n  float energy = dot(color.rgb, weights);\n  float mask_value = energy - 0.5;\n  float alpha;\n  if (mask_value > 0.0) {\n    alpha = (pow(2.0 * mask_value, 1.5) - 1.0) * scale + 1.0;\n  } else { \n    alpha = (pow(2.0 * mask_value, 2.0) - 1.0) * scale + 1.0;\n  }\n  float index = energy * hist_scale + hist_offset;\n  vec4 temp = texture2D(tex_sampler_1, vec2(index, 0.5));\n  float value = temp.g + temp.r * shift_scale;\n  index = value * density_scale + density_offset;\n  temp = texture2D(tex_sampler_2, vec2(index, 0.5));\n  value = temp.g + temp.r * shift_scale;\n  float dst_energy = energy * alpha + value * (1.0 - alpha);\n  float max_energy = energy / max(color.r, max(color.g, color.b));\n  if (dst_energy > max_energy) {\n    dst_energy = max_energy;\n  }\n  if (energy == 0.0) {\n    gl_FragColor = color;\n  } else {\n    gl_FragColor = vec4(color.rgb * dst_energy / energy, color.a);\n  }\n}\n"
 
     invoke-direct {v0, p1, v1}, Landroid/filterfw/core/ShaderProgram;-><init>(Landroid/filterfw/core/FilterContext;Ljava/lang/String;)V
 
-    .line 177
     .local v0, "shaderProgram":Landroid/filterfw/core/ShaderProgram;
     iget v1, p0, Landroid/filterpacks/imageproc/AutoFixFilter;->mTileSize:I
 
     invoke-virtual {v0, v1}, Landroid/filterfw/core/ShaderProgram;->setMaximumTileSize(I)V
 
-    .line 178
     iput-object v0, p0, Landroid/filterpacks/imageproc/AutoFixFilter;->mShaderProgram:Landroid/filterfw/core/Program;
 
-    .line 185
     iput p2, p0, Landroid/filterpacks/imageproc/AutoFixFilter;->mTarget:I
 
-    .line 173
     return-void
 
-    .line 174
     :pswitch_data_0
     .packed-switch 0x3
         :pswitch_0
@@ -1631,54 +1560,43 @@
     .prologue
     const/4 v10, 0x3
 
-    .line 199
     const/16 v0, 0x400
 
-    .line 203
     .local v0, "densityDim":I
     new-array v2, v0, [I
 
-    .line 204
     .local v2, "densityTable":[I
     const/4 v3, 0x0
 
-    .line 199
     .local v3, "i":I
     :goto_0
     const/16 v6, 0x400
 
-    .line 204
     if-ge v3, v6, :cond_0
 
-    .line 205
     sget-object v6, Landroid/filterpacks/imageproc/AutoFixFilter;->normal_cdf:[I
 
     aget v6, v6, v3
 
     int-to-long v6, v6
 
-    .line 201
     const-wide/32 v8, 0xffff
 
-    .line 205
     mul-long/2addr v6, v8
 
     const-wide/16 v8, 0x2fe
 
     div-long v4, v6, v8
 
-    .line 206
     .local v4, "temp":J
     long-to-int v6, v4
 
     aput v6, v2, v3
 
-    .line 204
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 209
     .end local v4    # "temp":J
     :cond_0
     const/4 v6, 0x1
@@ -1687,7 +1605,6 @@
 
     move-result-object v1
 
-    .line 212
     .local v1, "densityFormat":Landroid/filterfw/core/FrameFormat;
     invoke-virtual {p1}, Landroid/filterfw/core/FilterContext;->getFrameManager()Landroid/filterfw/core/FrameManager;
 
@@ -1699,12 +1616,10 @@
 
     iput-object v6, p0, Landroid/filterpacks/imageproc/AutoFixFilter;->mDensityFrame:Landroid/filterfw/core/Frame;
 
-    .line 213
     iget-object v6, p0, Landroid/filterpacks/imageproc/AutoFixFilter;->mDensityFrame:Landroid/filterfw/core/Frame;
 
     invoke-virtual {v6, v2}, Landroid/filterfw/core/Frame;->setInts([I)V
 
-    .line 198
     return-void
 .end method
 
@@ -1713,20 +1628,17 @@
     .param p1, "context"    # Landroid/filterfw/core/FilterContext;
 
     .prologue
-    .line 239
-    const-string/jumbo v4, "image"
+    const-string v4, "image"
 
     invoke-virtual {p0, v4}, Landroid/filterpacks/imageproc/AutoFixFilter;->pullInput(Ljava/lang/String;)Landroid/filterfw/core/Frame;
 
     move-result-object v0
 
-    .line 240
     .local v0, "input":Landroid/filterfw/core/Frame;
     invoke-virtual {v0}, Landroid/filterfw/core/Frame;->getFormat()Landroid/filterfw/core/FrameFormat;
 
     move-result-object v1
 
-    .line 243
     .local v1, "inputFormat":Landroid/filterfw/core/FrameFormat;
     iget-object v4, p0, Landroid/filterpacks/imageproc/AutoFixFilter;->mShaderProgram:Landroid/filterfw/core/Program;
 
@@ -1740,7 +1652,6 @@
 
     if-eq v4, v5, :cond_1
 
-    .line 244
     :cond_0
     invoke-virtual {v1}, Landroid/filterfw/core/FrameFormat;->getTarget()I
 
@@ -1748,10 +1659,8 @@
 
     invoke-virtual {p0, p1, v4}, Landroid/filterpacks/imageproc/AutoFixFilter;->initProgram(Landroid/filterfw/core/FilterContext;I)V
 
-    .line 245
     invoke-direct {p0}, Landroid/filterpacks/imageproc/AutoFixFilter;->initParameters()V
 
-    .line 249
     :cond_1
     invoke-virtual {v1}, Landroid/filterfw/core/FrameFormat;->getWidth()I
 
@@ -1769,7 +1678,6 @@
 
     if-eq v4, v5, :cond_3
 
-    .line 250
     :cond_2
     invoke-virtual {v1}, Landroid/filterfw/core/FrameFormat;->getWidth()I
 
@@ -1777,14 +1685,12 @@
 
     iput v4, p0, Landroid/filterpacks/imageproc/AutoFixFilter;->mWidth:I
 
-    .line 251
     invoke-virtual {v1}, Landroid/filterfw/core/FrameFormat;->getHeight()I
 
     move-result v4
 
     iput v4, p0, Landroid/filterpacks/imageproc/AutoFixFilter;->mHeight:I
 
-    .line 252
     iget v4, p0, Landroid/filterpacks/imageproc/AutoFixFilter;->mWidth:I
 
     iget v5, p0, Landroid/filterpacks/imageproc/AutoFixFilter;->mHeight:I
@@ -1795,7 +1701,6 @@
 
     invoke-direct {p0, p1, v4, v5, v6}, Landroid/filterpacks/imageproc/AutoFixFilter;->createHistogramFrame(Landroid/filterfw/core/FilterContext;II[I)V
 
-    .line 256
     :cond_3
     invoke-virtual {p1}, Landroid/filterfw/core/FilterContext;->getFrameManager()Landroid/filterfw/core/FrameManager;
 
@@ -1805,7 +1710,6 @@
 
     move-result-object v3
 
-    .line 259
     .local v3, "output":Landroid/filterfw/core/Frame;
     const/4 v4, 0x3
 
@@ -1827,21 +1731,17 @@
 
     aput-object v4, v2, v5
 
-    .line 260
     .local v2, "inputs":[Landroid/filterfw/core/Frame;
     iget-object v4, p0, Landroid/filterpacks/imageproc/AutoFixFilter;->mShaderProgram:Landroid/filterfw/core/Program;
 
     invoke-virtual {v4, v2, v3}, Landroid/filterfw/core/Program;->process([Landroid/filterfw/core/Frame;Landroid/filterfw/core/Frame;)V
 
-    .line 263
-    const-string/jumbo v4, "image"
+    const-string v4, "image"
 
     invoke-virtual {p0, v4, v3}, Landroid/filterpacks/imageproc/AutoFixFilter;->pushOutput(Ljava/lang/String;Landroid/filterfw/core/Frame;)V
 
-    .line 266
     invoke-virtual {v3}, Landroid/filterfw/core/Frame;->release()Landroid/filterfw/core/Frame;
 
-    .line 237
     return-void
 .end method
 
@@ -1849,8 +1749,7 @@
     .locals 2
 
     .prologue
-    .line 164
-    const-string/jumbo v0, "image"
+    const-string v0, "image"
 
     const/4 v1, 0x3
 
@@ -1860,14 +1759,12 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/filterpacks/imageproc/AutoFixFilter;->addMaskedInputPort(Ljava/lang/String;Landroid/filterfw/core/FrameFormat;)V
 
-    .line 165
-    const-string/jumbo v0, "image"
+    const-string v0, "image"
 
-    const-string/jumbo v1, "image"
+    const-string v1, "image"
 
     invoke-virtual {p0, v0, v1}, Landroid/filterpacks/imageproc/AutoFixFilter;->addOutputBasedOnInput(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 163
     return-void
 .end method
 
@@ -1878,34 +1775,27 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 218
     iget-object v0, p0, Landroid/filterpacks/imageproc/AutoFixFilter;->mDensityFrame:Landroid/filterfw/core/Frame;
 
     if-eqz v0, :cond_0
 
-    .line 219
     iget-object v0, p0, Landroid/filterpacks/imageproc/AutoFixFilter;->mDensityFrame:Landroid/filterfw/core/Frame;
 
     invoke-virtual {v0}, Landroid/filterfw/core/Frame;->release()Landroid/filterfw/core/Frame;
 
-    .line 220
     iput-object v1, p0, Landroid/filterpacks/imageproc/AutoFixFilter;->mDensityFrame:Landroid/filterfw/core/Frame;
 
-    .line 223
     :cond_0
     iget-object v0, p0, Landroid/filterpacks/imageproc/AutoFixFilter;->mHistFrame:Landroid/filterfw/core/Frame;
 
     if-eqz v0, :cond_1
 
-    .line 224
     iget-object v0, p0, Landroid/filterpacks/imageproc/AutoFixFilter;->mHistFrame:Landroid/filterfw/core/Frame;
 
     invoke-virtual {v0}, Landroid/filterfw/core/Frame;->release()Landroid/filterfw/core/Frame;
 
-    .line 225
     iput-object v1, p0, Landroid/filterpacks/imageproc/AutoFixFilter;->mHistFrame:Landroid/filterfw/core/Frame;
 
-    .line 217
     :cond_1
     return-void
 .end method

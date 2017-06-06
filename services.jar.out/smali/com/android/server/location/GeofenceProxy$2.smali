@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/location/GeofenceProxy;
 
     .prologue
-    .line 100
     iput-object p1, p0, Lcom/android/server/location/GeofenceProxy$2;->this$0:Lcom/android/server/location/GeofenceProxy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 103
     iget-object v0, p0, Lcom/android/server/location/GeofenceProxy$2;->this$0:Lcom/android/server/location/GeofenceProxy;
 
     invoke-static {v0}, Lcom/android/server/location/GeofenceProxy;->-get2(Lcom/android/server/location/GeofenceProxy;)Ljava/lang/Object;
@@ -52,7 +50,6 @@
 
     monitor-enter v1
 
-    .line 104
     :try_start_0
     iget-object v0, p0, Lcom/android/server/location/GeofenceProxy$2;->this$0:Lcom/android/server/location/GeofenceProxy;
 
@@ -62,7 +59,6 @@
 
     invoke-static {v0, v2}, Lcom/android/server/location/GeofenceProxy;->-set0(Lcom/android/server/location/GeofenceProxy;Landroid/hardware/location/IGeofenceHardware;)Landroid/hardware/location/IGeofenceHardware;
 
-    .line 105
     iget-object v0, p0, Lcom/android/server/location/GeofenceProxy$2;->this$0:Lcom/android/server/location/GeofenceProxy;
 
     invoke-static {v0}, Lcom/android/server/location/GeofenceProxy;->-get1(Lcom/android/server/location/GeofenceProxy;)Landroid/os/Handler;
@@ -77,10 +73,8 @@
 
     monitor-exit v1
 
-    .line 102
     return-void
 
-    .line 103
     :catchall_0
     move-exception v0
 
@@ -94,7 +88,6 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 111
     iget-object v0, p0, Lcom/android/server/location/GeofenceProxy$2;->this$0:Lcom/android/server/location/GeofenceProxy;
 
     invoke-static {v0}, Lcom/android/server/location/GeofenceProxy;->-get2(Lcom/android/server/location/GeofenceProxy;)Ljava/lang/Object;
@@ -103,7 +96,6 @@
 
     monitor-enter v1
 
-    .line 112
     :try_start_0
     iget-object v0, p0, Lcom/android/server/location/GeofenceProxy$2;->this$0:Lcom/android/server/location/GeofenceProxy;
 
@@ -111,7 +103,6 @@
 
     invoke-static {v0, v2}, Lcom/android/server/location/GeofenceProxy;->-set0(Lcom/android/server/location/GeofenceProxy;Landroid/hardware/location/IGeofenceHardware;)Landroid/hardware/location/IGeofenceHardware;
 
-    .line 113
     iget-object v0, p0, Lcom/android/server/location/GeofenceProxy$2;->this$0:Lcom/android/server/location/GeofenceProxy;
 
     invoke-static {v0}, Lcom/android/server/location/GeofenceProxy;->-get1(Lcom/android/server/location/GeofenceProxy;)Landroid/os/Handler;
@@ -126,10 +117,8 @@
 
     monitor-exit v1
 
-    .line 110
     return-void
 
-    .line 111
     :catchall_0
     move-exception v0
 

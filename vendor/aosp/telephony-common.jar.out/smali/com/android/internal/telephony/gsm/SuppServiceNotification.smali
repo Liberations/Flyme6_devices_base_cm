@@ -68,7 +68,6 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -80,7 +79,6 @@
     .locals 3
 
     .prologue
-    .line 69
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -93,82 +91,65 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, " mobile"
+    const-string v1, " mobile"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 70
     iget v0, p0, Lcom/android/internal/telephony/gsm/SuppServiceNotification;->notificationType:I
 
     if-nez v0, :cond_0
 
-    const-string/jumbo v0, " originated "
+    const-string v0, " originated "
 
-    .line 69
     :goto_0
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 71
-    const-string/jumbo v1, " code: "
+    const-string v1, " code: "
 
-    .line 69
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 71
     iget v1, p0, Lcom/android/internal/telephony/gsm/SuppServiceNotification;->code:I
 
-    .line 69
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 72
-    const-string/jumbo v1, " index: "
+    const-string v1, " index: "
 
-    .line 69
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 72
     iget v1, p0, Lcom/android/internal/telephony/gsm/SuppServiceNotification;->index:I
 
-    .line 69
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 73
-    const-string/jumbo v1, " history: "
+    const-string v1, " history: "
 
-    .line 69
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 73
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/SuppServiceNotification;->history:[Ljava/lang/String;
 
-    .line 69
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 74
-    const-string/jumbo v1, " \""
+    const-string v1, " \""
 
-    .line 69
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 75
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/SuppServiceNotification;->number:Ljava/lang/String;
 
     iget v2, p0, Lcom/android/internal/telephony/gsm/SuppServiceNotification;->type:I
@@ -177,15 +158,12 @@
 
     move-result-object v1
 
-    .line 69
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 75
-    const-string/jumbo v1, "\" "
+    const-string v1, "\" "
 
-    .line 69
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -196,9 +174,8 @@
 
     return-object v0
 
-    .line 70
     :cond_0
-    const-string/jumbo v0, " terminated "
+    const-string v0, " terminated "
 
     goto :goto_0
 .end method

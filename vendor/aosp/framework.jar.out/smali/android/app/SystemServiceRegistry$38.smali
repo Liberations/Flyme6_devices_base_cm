@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 447
     invoke-direct {p0}, Landroid/app/SystemServiceRegistry$CachedServiceFetcher;-><init>()V
 
     return-void
@@ -41,14 +40,12 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 450
-    const-string/jumbo v1, "usb"
+    const-string v1, "usb"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 451
     .local v0, "b":Landroid/os/IBinder;
     new-instance v1, Landroid/hardware/usb/UsbManager;
 
@@ -66,7 +63,6 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 449
     invoke-virtual {p0, p1}, Landroid/app/SystemServiceRegistry$38;->createService(Landroid/app/ContextImpl;)Landroid/hardware/usb/UsbManager;
 
     move-result-object v0

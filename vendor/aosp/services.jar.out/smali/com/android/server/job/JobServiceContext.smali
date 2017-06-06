@@ -209,7 +209,6 @@
 
     const/4 v1, 0x1
 
-    .line 69
     invoke-static {}, Landroid/app/ActivityManager;->isLowRamDeviceStatic()Z
 
     move-result v0
@@ -218,46 +217,40 @@
 
     move v0, v1
 
-    .line 68
     :goto_0
     sput v0, Lcom/android/server/job/JobServiceContext;->defaultMaxActiveJobsPerService:I
 
-    .line 75
     const/4 v0, 0x4
 
     new-array v0, v0, [Ljava/lang/String;
 
-    .line 76
-    const-string/jumbo v3, "VERB_BINDING"
+    const-string v3, "VERB_BINDING"
 
     const/4 v4, 0x0
 
     aput-object v3, v0, v4
 
-    const-string/jumbo v3, "VERB_STARTING"
+    const-string v3, "VERB_STARTING"
 
     aput-object v3, v0, v1
 
-    const-string/jumbo v1, "VERB_EXECUTING"
+    const-string v1, "VERB_EXECUTING"
 
     const/4 v3, 0x2
 
     aput-object v1, v0, v3
 
-    const-string/jumbo v1, "VERB_STOPPING"
+    const-string v1, "VERB_STOPPING"
 
     aput-object v1, v0, v2
 
-    .line 75
     sput-object v0, Lcom/android/server/job/JobServiceContext;->VERB_STRINGS:[Ljava/lang/String;
 
-    .line 64
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 69
     goto :goto_0
 .end method
 
@@ -269,45 +262,36 @@
     .param p4, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 139
     invoke-direct {p0}, Landroid/app/job/IJobCallback$Stub;-><init>()V
 
-    .line 109
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/job/JobServiceContext;->mCancelled:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 122
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/job/JobServiceContext;->mLock:Ljava/lang/Object;
 
-    .line 141
     iput-object p1, p0, Lcom/android/server/job/JobServiceContext;->mContext:Landroid/content/Context;
 
-    .line 142
     iput-object p2, p0, Lcom/android/server/job/JobServiceContext;->mBatteryStats:Lcom/android/internal/app/IBatteryStats;
 
-    .line 143
     new-instance v0, Lcom/android/server/job/JobServiceContext$JobServiceHandler;
 
     invoke-direct {v0, p0, p4}, Lcom/android/server/job/JobServiceContext$JobServiceHandler;-><init>(Lcom/android/server/job/JobServiceContext;Landroid/os/Looper;)V
 
     iput-object v0, p0, Lcom/android/server/job/JobServiceContext;->mCallbackHandler:Landroid/os/Handler;
 
-    .line 144
     iput-object p3, p0, Lcom/android/server/job/JobServiceContext;->mCompletedListener:Lcom/android/server/job/JobCompletedListener;
 
-    .line 145
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/job/JobServiceContext;->mAvailable:Z
 
-    .line 140
     return-void
 .end method
 
@@ -318,14 +302,12 @@
     .param p3, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 135
     invoke-virtual {p1}, Lcom/android/server/job/JobSchedulerService;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     invoke-direct {p0, v0, p2, p1, p3}, Lcom/android/server/job/JobServiceContext;-><init>(Landroid/content/Context;Lcom/android/internal/app/IBatteryStats;Lcom/android/server/job/JobCompletedListener;Landroid/os/Looper;)V
 
-    .line 134
     return-void
 .end method
 
@@ -333,14 +315,12 @@
     .locals 2
 
     .prologue
-    .line 593
     iget-object v0, p0, Lcom/android/server/job/JobServiceContext;->mCallbackHandler:Landroid/os/Handler;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 592
     return-void
 .end method
 
@@ -348,20 +328,16 @@
     .locals 6
 
     .prologue
-    .line 577
     invoke-direct {p0}, Lcom/android/server/job/JobServiceContext;->removeOpTimeOut()V
 
-    .line 579
     iget v1, p0, Lcom/android/server/job/JobServiceContext;->mVerb:I
 
     const/4 v4, 0x2
 
     if-ne v1, v4, :cond_0
 
-    .line 580
     const-wide/32 v2, 0x927c0
 
-    .line 586
     .local v2, "timeoutMillis":J
     :goto_0
     iget-object v1, p0, Lcom/android/server/job/JobServiceContext;->mCallbackHandler:Landroid/os/Handler;
@@ -372,13 +348,11 @@
 
     move-result-object v0
 
-    .line 587
     .local v0, "m":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/job/JobServiceContext;->mCallbackHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 588
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v4
@@ -387,10 +361,8 @@
 
     iput-wide v4, p0, Lcom/android/server/job/JobServiceContext;->mTimeoutElapsed:J
 
-    .line 576
     return-void
 
-    .line 580
     .end local v0    # "m":Landroid/os/Message;
     .end local v2    # "timeoutMillis":J
     :cond_0
@@ -404,12 +376,10 @@
     .locals 3
 
     .prologue
-    .line 296
     iget-object v1, p0, Lcom/android/server/job/JobServiceContext;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 297
     :try_start_0
     iget-object v0, p0, Lcom/android/server/job/JobServiceContext;->mRunningJob:Lcom/android/server/job/controllers/JobStatus;
 
@@ -429,7 +399,6 @@
 
     if-eq v0, v2, :cond_1
 
-    .line 301
     :cond_0
     const/4 v0, 0x0
 
@@ -437,7 +406,6 @@
 
     return v0
 
-    .line 303
     :cond_1
     const/4 v0, 0x1
 
@@ -445,7 +413,6 @@
 
     return v0
 
-    .line 296
     :catchall_0
     move-exception v0
 
@@ -464,17 +431,14 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 248
     invoke-direct {p0}, Lcom/android/server/job/JobServiceContext;->verifyCallingUid()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 249
     return-void
 
-    .line 251
     :cond_0
     iget-object v2, p0, Lcom/android/server/job/JobServiceContext;->mCallbackHandler:Landroid/os/Handler;
 
@@ -489,10 +453,8 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 247
     return-void
 
-    .line 251
     :cond_1
     const/4 v0, 0x0
 
@@ -507,17 +469,14 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 239
     invoke-direct {p0}, Lcom/android/server/job/JobServiceContext;->verifyCallingUid()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 240
     return-void
 
-    .line 242
     :cond_0
     iget-object v2, p0, Lcom/android/server/job/JobServiceContext;->mCallbackHandler:Landroid/os/Handler;
 
@@ -532,10 +491,8 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 238
     return-void
 
-    .line 242
     :cond_1
     const/4 v0, 0x0
 
@@ -546,7 +503,6 @@
     .locals 2
 
     .prologue
-    .line 208
     iget-object v0, p0, Lcom/android/server/job/JobServiceContext;->mCallbackHandler:Landroid/os/Handler;
 
     const/4 v1, 0x3
@@ -557,7 +513,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 207
     return-void
 .end method
 
@@ -568,21 +523,18 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 155
     iget-object v5, p0, Lcom/android/server/job/JobServiceContext;->mLock:Ljava/lang/Object;
 
     monitor-enter v5
 
-    .line 156
     :try_start_0
     iget-boolean v4, p0, Lcom/android/server/job/JobServiceContext;->mAvailable:Z
 
     if-nez v4, :cond_0
 
-    .line 157
-    const-string/jumbo v4, "JobServiceContext"
+    const-string v4, "JobServiceContext"
 
-    const-string/jumbo v6, "Starting new runnable but context is unavailable > Error."
+    const-string v6, "Starting new runnable but context is unavailable > Error."
 
     invoke-static {v4, v6}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
@@ -590,22 +542,18 @@
 
     monitor-exit v5
 
-    .line 158
     return v10
 
-    .line 161
     :cond_0
     :try_start_1
     iput-object p1, p0, Lcom/android/server/job/JobServiceContext;->mRunningJob:Lcom/android/server/job/controllers/JobStatus;
 
-    .line 163
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->hasDeadlineConstraint()Z
 
     move-result v4
 
     if-eqz v4, :cond_2
 
-    .line 164
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getLatestRunTimeElapsed()J
 
     move-result-wide v6
@@ -620,7 +568,6 @@
 
     const/4 v3, 0x1
 
-    .line 165
     .local v3, "isDeadlineExpired":Z
     :goto_0
     new-instance v4, Landroid/app/job/JobParameters;
@@ -637,22 +584,18 @@
 
     iput-object v4, p0, Lcom/android/server/job/JobServiceContext;->mParams:Landroid/app/job/JobParameters;
 
-    .line 166
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v6
 
     iput-wide v6, p0, Lcom/android/server/job/JobServiceContext;->mExecutionStartTimeElapsed:J
 
-    .line 168
     const/4 v4, 0x0
 
     iput v4, p0, Lcom/android/server/job/JobServiceContext;->mVerb:I
 
-    .line 169
     invoke-direct {p0}, Lcom/android/server/job/JobServiceContext;->scheduleOpTimeOut()V
 
-    .line 170
     new-instance v4, Landroid/content/Intent;
 
     invoke-direct {v4}, Landroid/content/Intent;-><init>()V
@@ -665,11 +608,9 @@
 
     move-result-object v2
 
-    .line 171
     .local v2, "intent":Landroid/content/Intent;
     iget-object v4, p0, Lcom/android/server/job/JobServiceContext;->mContext:Landroid/content/Context;
 
-    .line 173
     new-instance v6, Landroid/os/UserHandle;
 
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getUserId()I
@@ -678,44 +619,35 @@
 
     invoke-direct {v6, v7}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 172
     const/4 v7, 0x5
 
-    .line 171
     invoke-virtual {v4, v2, p0, v7, v6}, Landroid/content/Context;->bindServiceAsUser(Landroid/content/Intent;Landroid/content/ServiceConnection;ILandroid/os/UserHandle;)Z
 
     move-result v0
 
-    .line 174
     .local v0, "binding":Z
     if-nez v0, :cond_3
 
-    .line 178
     const/4 v4, 0x0
 
     iput-object v4, p0, Lcom/android/server/job/JobServiceContext;->mRunningJob:Lcom/android/server/job/controllers/JobStatus;
 
-    .line 179
     const/4 v4, 0x0
 
     iput-object v4, p0, Lcom/android/server/job/JobServiceContext;->mParams:Landroid/app/job/JobParameters;
 
-    .line 180
     const-wide/16 v6, 0x0
 
     iput-wide v6, p0, Lcom/android/server/job/JobServiceContext;->mExecutionStartTimeElapsed:J
 
-    .line 181
     invoke-direct {p0}, Lcom/android/server/job/JobServiceContext;->removeOpTimeOut()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     monitor-exit v5
 
-    .line 182
     return v10
 
-    .line 164
     .end local v0    # "binding":Z
     .end local v2    # "intent":Landroid/content/Intent;
     .end local v3    # "isDeadlineExpired":Z
@@ -725,7 +657,6 @@
     .restart local v3    # "isDeadlineExpired":Z
     goto :goto_0
 
-    .line 163
     .end local v3    # "isDeadlineExpired":Z
     :cond_2
     const/4 v3, 0x0
@@ -733,7 +664,6 @@
     .restart local v3    # "isDeadlineExpired":Z
     goto :goto_0
 
-    .line 185
     .restart local v0    # "binding":Z
     .restart local v2    # "intent":Landroid/content/Intent;
     :cond_3
@@ -753,7 +683,6 @@
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 189
     :goto_1
     const/4 v4, 0x0
 
@@ -762,14 +691,12 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 190
     const/4 v4, 0x1
 
     monitor-exit v5
 
     return v4
 
-    .line 155
     .end local v0    # "binding":Z
     .end local v2    # "intent":Landroid/content/Intent;
     .end local v3    # "isDeadlineExpired":Z
@@ -780,7 +707,6 @@
 
     throw v4
 
-    .line 186
     .restart local v0    # "binding":Z
     .restart local v2    # "intent":Landroid/content/Intent;
     .restart local v3    # "isDeadlineExpired":Z
@@ -795,7 +721,6 @@
     .locals 2
 
     .prologue
-    .line 221
     iget-wide v0, p0, Lcom/android/server/job/JobServiceContext;->mExecutionStartTimeElapsed:J
 
     return-wide v0
@@ -807,12 +732,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 200
     iget-object v1, p0, Lcom/android/server/job/JobServiceContext;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 201
     :try_start_0
     iget-object v2, p0, Lcom/android/server/job/JobServiceContext;->mRunningJob:Lcom/android/server/job/controllers/JobStatus;
     :try_end_0
@@ -825,7 +748,6 @@
 
     return-object v0
 
-    .line 202
     :cond_0
     :try_start_1
     new-instance v0, Lcom/android/server/job/controllers/JobStatus;
@@ -838,7 +760,6 @@
 
     goto :goto_0
 
-    .line 200
     :catchall_0
     move-exception v0
 
@@ -851,7 +772,6 @@
     .locals 2
 
     .prologue
-    .line 225
     iget-wide v0, p0, Lcom/android/server/job/JobServiceContext;->mTimeoutElapsed:J
 
     return-wide v0
@@ -861,12 +781,10 @@
     .locals 2
 
     .prologue
-    .line 215
     iget-object v0, p0, Lcom/android/server/job/JobServiceContext;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 216
     :try_start_0
     iget-boolean v1, p0, Lcom/android/server/job/JobServiceContext;->mAvailable:Z
     :try_end_0
@@ -876,7 +794,6 @@
 
     return v1
 
-    .line 215
     :catchall_0
     move-exception v1
 
@@ -893,17 +810,14 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 230
     invoke-direct {p0}, Lcom/android/server/job/JobServiceContext;->verifyCallingUid()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 231
     return-void
 
-    .line 233
     :cond_0
     iget-object v2, p0, Lcom/android/server/job/JobServiceContext;->mCallbackHandler:Landroid/os/Handler;
 
@@ -918,10 +832,8 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 229
     return-void
 
-    .line 233
     :cond_1
     const/4 v0, 0x0
 
@@ -934,12 +846,10 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 264
     iget-object v2, p0, Lcom/android/server/job/JobServiceContext;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 268
     :try_start_0
     iget-object v1, p0, Lcom/android/server/job/JobServiceContext;->mRunningJob:Lcom/android/server/job/controllers/JobStatus;
     :try_end_0
@@ -948,7 +858,6 @@
     .local v1, "runningJob":Lcom/android/server/job/controllers/JobStatus;
     monitor-exit v2
 
-    .line 270
     if-eqz v1, :cond_0
 
     invoke-virtual {v1}, Lcom/android/server/job/controllers/JobStatus;->getServiceComponent()Landroid/content/ComponentName;
@@ -961,17 +870,15 @@
 
     if-eqz v2, :cond_0
 
-    .line 274
     invoke-static {p2}, Landroid/app/job/IJobService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/app/job/IJobService;
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/android/server/job/JobServiceContext;->service:Landroid/app/job/IJobService;
 
-    .line 276
     iget-object v2, p0, Lcom/android/server/job/JobServiceContext;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v3, "power"
+    const-string v3, "power"
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -979,7 +886,6 @@
 
     check-cast v0, Landroid/os/PowerManager;
 
-    .line 277
     .local v0, "pm":Landroid/os/PowerManager;
     invoke-virtual {v1}, Lcom/android/server/job/controllers/JobStatus;->getTag()Ljava/lang/String;
 
@@ -993,7 +899,6 @@
 
     iput-object v2, p0, Lcom/android/server/job/JobServiceContext;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 278
     iget-object v2, p0, Lcom/android/server/job/JobServiceContext;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     new-instance v3, Landroid/os/WorkSource;
@@ -1006,19 +911,16 @@
 
     invoke-virtual {v2, v3}, Landroid/os/PowerManager$WakeLock;->setWorkSource(Landroid/os/WorkSource;)V
 
-    .line 279
     iget-object v2, p0, Lcom/android/server/job/JobServiceContext;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Landroid/os/PowerManager$WakeLock;->setReferenceCounted(Z)V
 
-    .line 280
     iget-object v2, p0, Lcom/android/server/job/JobServiceContext;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v2}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 281
     iget-object v2, p0, Lcom/android/server/job/JobServiceContext;->mCallbackHandler:Landroid/os/Handler;
 
     const/4 v3, 0x2
@@ -1029,10 +931,8 @@
 
     invoke-virtual {v2}, Landroid/os/Message;->sendToTarget()V
 
-    .line 262
     return-void
 
-    .line 264
     .end local v0    # "pm":Landroid/os/PowerManager;
     .end local v1    # "runningJob":Lcom/android/server/job/controllers/JobStatus;
     :catchall_0
@@ -1042,7 +942,6 @@
 
     throw v3
 
-    .line 271
     .restart local v1    # "runningJob":Lcom/android/server/job/controllers/JobStatus;
     :cond_0
     iget-object v2, p0, Lcom/android/server/job/JobServiceContext;->mCallbackHandler:Landroid/os/Handler;
@@ -1055,7 +954,6 @@
 
     invoke-virtual {v2}, Landroid/os/Message;->sendToTarget()V
 
-    .line 272
     return-void
 .end method
 
@@ -1064,7 +962,6 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 287
     iget-object v0, p0, Lcom/android/server/job/JobServiceContext;->mCallbackHandler:Landroid/os/Handler;
 
     const/4 v1, 0x4
@@ -1075,6 +972,5 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 286
     return-void
 .end method

@@ -246,22 +246,16 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 479
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 488
     iput-boolean v0, p0, Landroid/content/res/XmlBlock;->mOpen:Z
 
-    .line 489
     iput v0, p0, Landroid/content/res/XmlBlock;->mOpenCount:I
 
-    .line 480
     iput-object p1, p0, Landroid/content/res/XmlBlock;->mAssets:Landroid/content/res/AssetManager;
 
-    .line 481
     iput-wide p2, p0, Landroid/content/res/XmlBlock;->mNative:J
 
-    .line 482
     new-instance v0, Landroid/content/res/StringBlock;
 
     invoke-static {p2, p3}, Landroid/content/res/XmlBlock;->nativeGetStringBlock(J)J
@@ -274,7 +268,6 @@
 
     iput-object v0, p0, Landroid/content/res/XmlBlock;->mStrings:Landroid/content/res/StringBlock;
 
-    .line 479
     return-void
 .end method
 
@@ -287,21 +280,16 @@
 
     const/4 v4, 0x0
 
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 488
     iput-boolean v0, p0, Landroid/content/res/XmlBlock;->mOpen:Z
 
-    .line 489
     iput v0, p0, Landroid/content/res/XmlBlock;->mOpenCount:I
 
-    .line 38
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/content/res/XmlBlock;->mAssets:Landroid/content/res/AssetManager;
 
-    .line 39
     array-length v0, p1
 
     invoke-static {p1, v4, v0}, Landroid/content/res/XmlBlock;->nativeCreate([BII)J
@@ -310,7 +298,6 @@
 
     iput-wide v0, p0, Landroid/content/res/XmlBlock;->mNative:J
 
-    .line 40
     new-instance v0, Landroid/content/res/StringBlock;
 
     iget-wide v2, p0, Landroid/content/res/XmlBlock;->mNative:J
@@ -323,7 +310,6 @@
 
     iput-object v0, p0, Landroid/content/res/XmlBlock;->mStrings:Landroid/content/res/StringBlock;
 
-    .line 37
     return-void
 .end method
 
@@ -336,28 +322,22 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 488
     iput-boolean v0, p0, Landroid/content/res/XmlBlock;->mOpen:Z
 
-    .line 489
     iput v0, p0, Landroid/content/res/XmlBlock;->mOpenCount:I
 
-    .line 44
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/content/res/XmlBlock;->mAssets:Landroid/content/res/AssetManager;
 
-    .line 45
     invoke-static {p1, p2, p3}, Landroid/content/res/XmlBlock;->nativeCreate([BII)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/content/res/XmlBlock;->mNative:J
 
-    .line 46
     new-instance v0, Landroid/content/res/StringBlock;
 
     iget-wide v2, p0, Landroid/content/res/XmlBlock;->mNative:J
@@ -372,7 +352,6 @@
 
     iput-object v0, p0, Landroid/content/res/XmlBlock;->mStrings:Landroid/content/res/StringBlock;
 
-    .line 43
     return-void
 .end method
 
@@ -380,29 +359,24 @@
     .locals 2
 
     .prologue
-    .line 59
     iget v0, p0, Landroid/content/res/XmlBlock;->mOpenCount:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Landroid/content/res/XmlBlock;->mOpenCount:I
 
-    .line 60
     iget v0, p0, Landroid/content/res/XmlBlock;->mOpenCount:I
 
     if-nez v0, :cond_0
 
-    .line 61
     iget-wide v0, p0, Landroid/content/res/XmlBlock;->mNative:J
 
     invoke-static {v0, v1}, Landroid/content/res/XmlBlock;->nativeDestroy(J)V
 
-    .line 62
     iget-object v0, p0, Landroid/content/res/XmlBlock;->mAssets:Landroid/content/res/AssetManager;
 
     if-eqz v0, :cond_0
 
-    .line 63
     iget-object v0, p0, Landroid/content/res/XmlBlock;->mAssets:Landroid/content/res/AssetManager;
 
     invoke-virtual {p0}, Landroid/content/res/XmlBlock;->hashCode()I
@@ -411,7 +385,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/res/AssetManager;->xmlBlockGone(I)V
 
-    .line 58
     :cond_0
     return-void
 .end method
@@ -485,21 +458,17 @@
     .locals 1
 
     .prologue
-    .line 50
     monitor-enter p0
 
-    .line 51
     :try_start_0
     iget-boolean v0, p0, Landroid/content/res/XmlBlock;->mOpen:Z
 
     if-eqz v0, :cond_0
 
-    .line 52
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/content/res/XmlBlock;->mOpen:Z
 
-    .line 53
     invoke-direct {p0}, Landroid/content/res/XmlBlock;->decOpenCountLocked()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -507,10 +476,8 @@
     :cond_0
     monitor-exit p0
 
-    .line 49
     return-void
 
-    .line 50
     :catchall_0
     move-exception v0
 
@@ -528,10 +495,8 @@
     .end annotation
 
     .prologue
-    .line 470
     invoke-virtual {p0}, Landroid/content/res/XmlBlock;->close()V
 
-    .line 469
     return-void
 .end method
 
@@ -539,10 +504,8 @@
     .locals 4
 
     .prologue
-    .line 69
     monitor-enter p0
 
-    .line 70
     :try_start_0
     iget-wide v0, p0, Landroid/content/res/XmlBlock;->mNative:J
 
@@ -552,7 +515,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 71
     new-instance v0, Landroid/content/res/XmlBlock$Parser;
 
     iget-wide v2, p0, Landroid/content/res/XmlBlock;->mNative:J
@@ -569,7 +531,6 @@
 
     return-object v0
 
-    .line 73
     :cond_0
     const/4 v0, 0x0
 
@@ -577,7 +538,6 @@
 
     return-object v0
 
-    .line 69
     :catchall_0
     move-exception v0
 

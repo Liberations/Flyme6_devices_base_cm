@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,9 +35,7 @@
     .param p2, "factory"    # Landroid/support/v4/view/LayoutInflaterFactory;
 
     .prologue
-    .line 35
     invoke-static {p1, p2}, Landroid/support/v4/view/LayoutInflaterCompatBase;->setFactory(Landroid/view/LayoutInflater;Landroid/support/v4/view/LayoutInflaterFactory;)V
 
-    .line 34
     return-void
 .end method

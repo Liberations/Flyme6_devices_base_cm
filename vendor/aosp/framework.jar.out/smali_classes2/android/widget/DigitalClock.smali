@@ -66,18 +66,14 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 50
     invoke-direct {p0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    .line 45
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/widget/DigitalClock;->mTickerStopped:Z
 
-    .line 51
     invoke-direct {p0}, Landroid/widget/DigitalClock;->initClock()V
 
-    .line 49
     return-void
 .end method
 
@@ -87,18 +83,14 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 55
     invoke-direct {p0, p1, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 45
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/widget/DigitalClock;->mTickerStopped:Z
 
-    .line 56
     invoke-direct {p0}, Landroid/widget/DigitalClock;->initClock()V
 
-    .line 54
     return-void
 .end method
 
@@ -106,19 +98,16 @@
     .locals 4
 
     .prologue
-    .line 60
     iget-object v0, p0, Landroid/widget/DigitalClock;->mCalendar:Ljava/util/Calendar;
 
     if-nez v0, :cond_0
 
-    .line 61
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/widget/DigitalClock;->mCalendar:Ljava/util/Calendar;
 
-    .line 64
     :cond_0
     new-instance v0, Landroid/widget/DigitalClock$FormatChangeObserver;
 
@@ -126,7 +115,6 @@
 
     iput-object v0, p0, Landroid/widget/DigitalClock;->mFormatChangeObserver:Landroid/widget/DigitalClock$FormatChangeObserver;
 
-    .line 65
     invoke-virtual {p0}, Landroid/widget/DigitalClock;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -135,20 +123,16 @@
 
     move-result-object v0
 
-    .line 66
     sget-object v1, Landroid/provider/Settings$System;->CONTENT_URI:Landroid/net/Uri;
 
     iget-object v2, p0, Landroid/widget/DigitalClock;->mFormatChangeObserver:Landroid/widget/DigitalClock$FormatChangeObserver;
 
     const/4 v3, 0x1
 
-    .line 65
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 68
     invoke-direct {p0}, Landroid/widget/DigitalClock;->setFormat()V
 
-    .line 59
     return-void
 .end method
 
@@ -156,7 +140,6 @@
     .locals 1
 
     .prologue
-    .line 101
     invoke-virtual {p0}, Landroid/widget/DigitalClock;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -167,7 +150,6 @@
 
     iput-object v0, p0, Landroid/widget/DigitalClock;->mFormat:Ljava/lang/String;
 
-    .line 100
     return-void
 .end method
 
@@ -177,7 +159,6 @@
     .locals 1
 
     .prologue
-    .line 118
     const-class v0, Landroid/widget/DigitalClock;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -191,34 +172,28 @@
     .locals 1
 
     .prologue
-    .line 73
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/widget/DigitalClock;->mTickerStopped:Z
 
-    .line 74
     invoke-super {p0}, Landroid/widget/TextView;->onAttachedToWindow()V
 
-    .line 75
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Landroid/widget/DigitalClock;->mHandler:Landroid/os/Handler;
 
-    .line 80
     new-instance v0, Landroid/widget/DigitalClock$1;
 
     invoke-direct {v0, p0}, Landroid/widget/DigitalClock$1;-><init>(Landroid/widget/DigitalClock;)V
 
     iput-object v0, p0, Landroid/widget/DigitalClock;->mTicker:Ljava/lang/Runnable;
 
-    .line 91
     iget-object v0, p0, Landroid/widget/DigitalClock;->mTicker:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 72
     return-void
 .end method
 
@@ -226,14 +201,11 @@
     .locals 1
 
     .prologue
-    .line 96
     invoke-super {p0}, Landroid/widget/TextView;->onDetachedFromWindow()V
 
-    .line 97
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/widget/DigitalClock;->mTickerStopped:Z
 
-    .line 95
     return-void
 .end method

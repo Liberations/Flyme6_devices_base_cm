@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 1417
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,29 +45,24 @@
     .param p2, "b"    # Landroid/net/wifi/WifiConfiguration;
 
     .prologue
-    .line 1419
     invoke-static {p1}, Lcom/android/server/wifi/WifiConfigStore;->-wrap0(Landroid/net/wifi/WifiConfiguration;)I
 
     move-result v0
 
-    .line 1420
     .local v0, "configAScore":I
     invoke-static {p2}, Lcom/android/server/wifi/WifiConfigStore;->-wrap0(Landroid/net/wifi/WifiConfiguration;)I
 
     move-result v1
 
-    .line 1421
     .local v1, "configBScore":I
     if-ne v0, v1, :cond_1
 
-    .line 1424
     iget v2, p1, Landroid/net/wifi/WifiConfiguration;->numAssociation:I
 
     iget v3, p2, Landroid/net/wifi/WifiConfiguration;->numAssociation:I
 
     if-eq v2, v3, :cond_0
 
-    .line 1425
     iget v2, p2, Landroid/net/wifi/WifiConfiguration;->numAssociation:I
 
     int-to-long v2, v2
@@ -83,7 +77,6 @@
 
     return v2
 
-    .line 1427
     :cond_0
     iget v2, p2, Landroid/net/wifi/WifiConfiguration;->priority:I
 
@@ -95,7 +88,6 @@
 
     return v2
 
-    .line 1430
     :cond_1
     invoke-static {v1, v0}, Ljava/lang/Integer;->compare(II)I
 
@@ -110,7 +102,6 @@
     .param p2, "b"    # Ljava/lang/Object;
 
     .prologue
-    .line 1418
     check-cast p1, Landroid/net/wifi/WifiConfiguration;
 
     .end local p1    # "a":Ljava/lang/Object;

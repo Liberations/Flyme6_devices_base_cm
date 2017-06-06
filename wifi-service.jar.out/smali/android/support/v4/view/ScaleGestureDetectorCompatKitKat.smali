@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,7 +18,6 @@
     .param p0, "scaleGestureDetector"    # Ljava/lang/Object;
 
     .prologue
-    .line 37
     check-cast p0, Landroid/view/ScaleGestureDetector;
 
     .end local p0    # "scaleGestureDetector":Ljava/lang/Object;
@@ -36,12 +34,10 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 33
     check-cast p0, Landroid/view/ScaleGestureDetector;
 
     .end local p0    # "scaleGestureDetector":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Landroid/view/ScaleGestureDetector;->setQuickScaleEnabled(Z)V
 
-    .line 32
     return-void
 .end method

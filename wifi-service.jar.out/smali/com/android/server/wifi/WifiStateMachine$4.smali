@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/wifi/WifiStateMachine;
 
     .prologue
-    .line 1283
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$4;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,36 +39,30 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1286
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$4;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
-    .line 1287
     sget v1, Lcom/android/server/wifi/WifiStateMachine;->mRestartAutoJoinOffloadCounter:I
 
-    const-string/jumbo v2, "pno alarm"
+    const-string v2, "pno alarm"
 
-    .line 1286
     const v3, 0x2009a
 
     const/4 v4, 0x0
 
     invoke-virtual {v0, v3, v4, v1, v2}, Lcom/android/server/wifi/WifiStateMachine;->sendMessage(IIILjava/lang/Object;)V
 
-    .line 1288
     invoke-static {}, Lcom/android/server/wifi/WifiStateMachine;->-get0()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1289
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$4;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
-    const-string/jumbo v1, "PNO START ALARM sent"
+    const-string v1, "PNO START ALARM sent"
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiStateMachine;->logd(Ljava/lang/String;)V
 
-    .line 1285
     :cond_0
     return-void
 .end method

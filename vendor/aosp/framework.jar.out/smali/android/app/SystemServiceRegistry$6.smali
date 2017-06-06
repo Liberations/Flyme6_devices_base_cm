@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 181
     invoke-direct {p0}, Landroid/app/SystemServiceRegistry$CachedServiceFetcher;-><init>()V
 
     return-void
@@ -41,7 +40,6 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 184
     new-instance v0, Landroid/media/AudioManager;
 
     invoke-direct {v0, p1}, Landroid/media/AudioManager;-><init>(Landroid/content/Context;)V
@@ -54,7 +52,6 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 183
     invoke-virtual {p0, p1}, Landroid/app/SystemServiceRegistry$6;->createService(Landroid/app/ContextImpl;)Landroid/media/AudioManager;
 
     move-result-object v0

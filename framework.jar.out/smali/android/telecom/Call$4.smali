@@ -36,7 +36,6 @@
     .param p4, "val$details"    # Landroid/telecom/Call$Details;
 
     .prologue
-    .line 1323
     iput-object p1, p0, Landroid/telecom/Call$4;->this$0:Landroid/telecom/Call;
 
     iput-object p2, p0, Landroid/telecom/Call$4;->val$callback:Landroid/telecom/Call$Callback;
@@ -56,7 +55,6 @@
     .locals 3
 
     .prologue
-    .line 1326
     iget-object v0, p0, Landroid/telecom/Call$4;->val$callback:Landroid/telecom/Call$Callback;
 
     iget-object v1, p0, Landroid/telecom/Call$4;->val$call:Landroid/telecom/Call;
@@ -65,6 +63,5 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/telecom/Call$Callback;->onDetailsChanged(Landroid/telecom/Call;Landroid/telecom/Call$Details;)V
 
-    .line 1325
     return-void
 .end method

@@ -26,17 +26,14 @@
     .locals 1
 
     .prologue
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/location/GeoFencerBase;->mGeoFences:Ljava/util/HashMap;
 
-    .line 46
     return-void
 .end method
 
@@ -52,7 +49,6 @@
     .param p9, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 53
     new-instance v1, Landroid/location/GeoFenceParams;
 
     move-wide v2, p1
@@ -71,7 +67,6 @@
 
     invoke-virtual {p0, v1}, Lcom/android/server/location/GeoFencerBase;->add(Landroid/location/GeoFenceParams;)V
 
-    .line 52
     return-void
 .end method
 
@@ -80,12 +75,10 @@
     .param p1, "geoFence"    # Landroid/location/GeoFenceParams;
 
     .prologue
-    .line 58
     iget-object v1, p0, Lcom/android/server/location/GeoFencerBase;->mGeoFences:Ljava/util/HashMap;
 
     monitor-enter v1
 
-    .line 59
     :try_start_0
     iget-object v0, p0, Lcom/android/server/location/GeoFencerBase;->mGeoFences:Ljava/util/HashMap;
 
@@ -97,19 +90,16 @@
 
     monitor-exit v1
 
-    .line 61
     invoke-virtual {p0, p1}, Lcom/android/server/location/GeoFencerBase;->start(Landroid/location/GeoFenceParams;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 62
     iget-object v1, p0, Lcom/android/server/location/GeoFencerBase;->mGeoFences:Ljava/util/HashMap;
 
     monitor-enter v1
 
-    .line 63
     :try_start_1
     iget-object v0, p0, Lcom/android/server/location/GeoFencerBase;->mGeoFences:Ljava/util/HashMap;
 
@@ -121,11 +111,9 @@
 
     monitor-exit v1
 
-    .line 57
     :cond_0
     return-void
 
-    .line 58
     :catchall_0
     move-exception v0
 
@@ -133,7 +121,6 @@
 
     throw v0
 
-    .line 62
     :catchall_1
     move-exception v0
 
@@ -148,7 +135,6 @@
     .param p2, "prefix"    # Ljava/lang/String;
 
     .prologue
-    .line 134
     iget-object v2, p0, Lcom/android/server/location/GeoFencerBase;->mGeoFences:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->size()I
@@ -157,7 +143,6 @@
 
     if-lez v2, :cond_0
 
-    .line 135
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -166,7 +151,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "  GeoFences:"
+    const-string v3, "  GeoFences:"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -178,7 +163,6 @@
 
     invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 136
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -187,7 +171,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "    "
+    const-string v3, "    "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -197,14 +181,12 @@
 
     move-result-object p2
 
-    .line 138
     iget-object v2, p0, Lcom/android/server/location/GeoFencerBase;->mGeoFences:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object v2
 
-    .line 137
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -223,7 +205,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 139
     .local v0, "i":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Landroid/app/PendingIntent;Landroid/location/GeoFenceParams;>;"
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -241,7 +222,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, ":"
+    const-string v3, ":"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -253,7 +234,6 @@
 
     invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 140
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
@@ -264,7 +244,6 @@
 
     goto :goto_0
 
-    .line 133
     .end local v0    # "i":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Landroid/app/PendingIntent;Landroid/location/GeoFenceParams;>;"
     .end local v1    # "i$iterator":Ljava/util/Iterator;
     :cond_0
@@ -284,7 +263,6 @@
     .end annotation
 
     .prologue
-    .line 93
     iget-object v0, p0, Lcom/android/server/location/GeoFencerBase;->mGeoFences:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -299,7 +277,6 @@
     .param p1, "intent"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 97
     iget-object v0, p0, Lcom/android/server/location/GeoFencerBase;->mGeoFences:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -315,7 +292,6 @@
     .locals 1
 
     .prologue
-    .line 89
     iget-object v0, p0, Lcom/android/server/location/GeoFencerBase;->mGeoFences:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->size()I
@@ -330,7 +306,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 101
     iget-object v2, p0, Lcom/android/server/location/GeoFencerBase;->mGeoFences:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -355,18 +330,15 @@
 
     check-cast v0, Landroid/location/GeoFenceParams;
 
-    .line 102
     .local v0, "alert":Landroid/location/GeoFenceParams;
     iget v2, v0, Landroid/location/GeoFenceParams;->mUid:I
 
     if-ne v2, p1, :cond_0
 
-    .line 103
     const/4 v2, 0x1
 
     return v2
 
-    .line 106
     .end local v0    # "alert":Landroid/location/GeoFenceParams;
     :cond_1
     const/4 v2, 0x0
@@ -379,12 +351,10 @@
     .param p1, "intent"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 69
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lcom/android/server/location/GeoFencerBase;->remove(Landroid/app/PendingIntent;Z)V
 
-    .line 68
     return-void
 .end method
 
@@ -394,16 +364,13 @@
     .param p2, "localOnly"    # Z
 
     .prologue
-    .line 73
     const/4 v0, 0x0
 
-    .line 75
     .local v0, "geoFence":Landroid/location/GeoFenceParams;
     iget-object v2, p0, Lcom/android/server/location/GeoFencerBase;->mGeoFences:Ljava/util/HashMap;
 
     monitor-enter v2
 
-    .line 76
     :try_start_0
     iget-object v1, p0, Lcom/android/server/location/GeoFencerBase;->mGeoFences:Ljava/util/HashMap;
 
@@ -419,10 +386,8 @@
     .local v0, "geoFence":Landroid/location/GeoFenceParams;
     monitor-exit v2
 
-    .line 79
     if-eqz v0, :cond_0
 
-    .line 80
     if-nez p2, :cond_0
 
     invoke-virtual {p0, p1}, Lcom/android/server/location/GeoFencerBase;->stop(Landroid/app/PendingIntent;)Z
@@ -431,12 +396,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 72
     :cond_0
     :goto_0
     return-void
 
-    .line 75
     .end local v0    # "geoFence":Landroid/location/GeoFenceParams;
     :catchall_0
     move-exception v1
@@ -445,14 +408,12 @@
 
     throw v1
 
-    .line 81
     .restart local v0    # "geoFence":Landroid/location/GeoFenceParams;
     :cond_1
     iget-object v2, p0, Lcom/android/server/location/GeoFencerBase;->mGeoFences:Ljava/util/HashMap;
 
     monitor-enter v2
 
-    .line 82
     :try_start_1
     iget-object v1, p0, Lcom/android/server/location/GeoFencerBase;->mGeoFences:Ljava/util/HashMap;
 
@@ -466,7 +427,6 @@
 
     goto :goto_0
 
-    .line 81
     :catchall_1
     move-exception v1
 
@@ -480,10 +440,8 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 110
     const/4 v3, 0x0
 
-    .line 111
     .local v3, "removedFences":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/app/PendingIntent;>;"
     iget-object v4, p0, Lcom/android/server/location/GeoFencerBase;->mGeoFences:Ljava/util/HashMap;
 
@@ -511,21 +469,17 @@
 
     check-cast v0, Landroid/location/GeoFenceParams;
 
-    .line 112
     .local v0, "alert":Landroid/location/GeoFenceParams;
     iget v4, v0, Landroid/location/GeoFenceParams;->mUid:I
 
     if-ne v4, p1, :cond_0
 
-    .line 113
     if-nez v3, :cond_1
 
-    .line 114
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 116
     :cond_1
     iget-object v4, v0, Landroid/location/GeoFenceParams;->mIntent:Landroid/app/PendingIntent;
 
@@ -533,12 +487,10 @@
 
     goto :goto_0
 
-    .line 119
     .end local v0    # "alert":Landroid/location/GeoFenceParams;
     :cond_2
     if-eqz v3, :cond_3
 
-    .line 120
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v4
@@ -549,7 +501,6 @@
     :goto_1
     if-ltz v2, :cond_3
 
-    .line 121
     iget-object v4, p0, Lcom/android/server/location/GeoFencerBase;->mGeoFences:Ljava/util/HashMap;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -558,12 +509,10 @@
 
     invoke-virtual {v4, v5}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 120
     add-int/lit8 v2, v2, -0x1
 
     goto :goto_1
 
-    .line 109
     .end local v2    # "i":I
     :cond_3
     return-void
@@ -580,7 +529,6 @@
     .param p1, "geofencer"    # Lcom/android/server/location/GeoFencerBase;
 
     .prologue
-    .line 127
     iget-object v2, p1, Lcom/android/server/location/GeoFencerBase;->mGeoFences:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -605,18 +553,15 @@
 
     check-cast v0, Landroid/location/GeoFenceParams;
 
-    .line 128
     .local v0, "alert":Landroid/location/GeoFenceParams;
     iget-object v2, v0, Landroid/location/GeoFenceParams;->mIntent:Landroid/app/PendingIntent;
 
     invoke-virtual {p1, v2}, Lcom/android/server/location/GeoFencerBase;->stop(Landroid/app/PendingIntent;)Z
 
-    .line 129
     invoke-virtual {p0, v0}, Lcom/android/server/location/GeoFencerBase;->add(Landroid/location/GeoFenceParams;)V
 
     goto :goto_0
 
-    .line 126
     .end local v0    # "alert":Landroid/location/GeoFenceParams;
     :cond_0
     return-void

@@ -32,7 +32,6 @@
     .param p2, "val$packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 8535
     .local p3, "val$targets":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     iput-object p1, p0, Lcom/android/server/backup/BackupManagerService$5;->this$0:Lcom/android/server/backup/BackupManagerService;
 
@@ -51,7 +50,6 @@
     .locals 3
 
     .prologue
-    .line 8537
     iget-object v0, p0, Lcom/android/server/backup/BackupManagerService$5;->this$0:Lcom/android/server/backup/BackupManagerService;
 
     iget-object v1, p0, Lcom/android/server/backup/BackupManagerService$5;->val$packageName:Ljava/lang/String;
@@ -60,6 +58,5 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/server/backup/BackupManagerService;->-wrap8(Lcom/android/server/backup/BackupManagerService;Ljava/lang/String;Ljava/util/HashSet;)V
 
-    .line 8536
     return-void
 .end method

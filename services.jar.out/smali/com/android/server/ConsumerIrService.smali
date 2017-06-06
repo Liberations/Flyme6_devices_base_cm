@@ -29,32 +29,26 @@
 
     const/4 v2, 0x1
 
-    .line 41
     invoke-direct {p0}, Landroid/hardware/IConsumerIrService$Stub;-><init>()V
 
-    .line 39
     new-instance v1, Ljava/lang/Object;
 
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/ConsumerIrService;->mHalLock:Ljava/lang/Object;
 
-    .line 42
     iput-object p1, p0, Lcom/android/server/ConsumerIrService;->mContext:Landroid/content/Context;
 
-    .line 44
-    const-string/jumbo v1, "power"
+    const-string v1, "power"
 
-    .line 43
     invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/os/PowerManager;
 
-    .line 45
     .local v0, "pm":Landroid/os/PowerManager;
-    const-string/jumbo v1, "ConsumerIrService"
+    const-string v1, "ConsumerIrService"
 
     invoke-virtual {v0, v2, v1}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
 
@@ -62,26 +56,23 @@
 
     iput-object v1, p0, Lcom/android/server/ConsumerIrService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 46
     iget-object v1, p0, Lcom/android/server/ConsumerIrService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v1, v2}, Landroid/os/PowerManager$WakeLock;->setReferenceCounted(Z)V
 
-    .line 48
     invoke-static {}, Lcom/android/server/ConsumerIrService;->halOpen()J
 
     move-result-wide v2
 
     iput-wide v2, p0, Lcom/android/server/ConsumerIrService;->mNativeHal:J
 
-    .line 49
     iget-object v1, p0, Lcom/android/server/ConsumerIrService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
-    const-string/jumbo v2, "android.hardware.consumerir"
+    const-string v2, "android.hardware.consumerir"
 
     invoke-virtual {v1, v2}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
 
@@ -89,23 +80,20 @@
 
     if-eqz v1, :cond_0
 
-    .line 50
     iget-wide v2, p0, Lcom/android/server/ConsumerIrService;->mNativeHal:J
 
     cmp-long v1, v2, v4
 
     if-nez v1, :cond_1
 
-    .line 51
     new-instance v1, Ljava/lang/RuntimeException;
 
-    const-string/jumbo v2, "FEATURE_CONSUMER_IR present, but no IR HAL loaded!"
+    const-string v2, "FEATURE_CONSUMER_IR present, but no IR HAL loaded!"
 
     invoke-direct {v1, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 53
     :cond_0
     iget-wide v2, p0, Lcom/android/server/ConsumerIrService;->mNativeHal:J
 
@@ -113,16 +101,14 @@
 
     if-eqz v1, :cond_1
 
-    .line 54
     new-instance v1, Ljava/lang/RuntimeException;
 
-    const-string/jumbo v2, "IR HAL present, but FEATURE_CONSUMER_IR is not set!"
+    const-string v2, "IR HAL present, but FEATURE_CONSUMER_IR is not set!"
 
     invoke-direct {v1, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 41
     :cond_1
     return-void
 .end method
@@ -140,7 +126,6 @@
     .locals 4
 
     .prologue
-    .line 64
     iget-wide v0, p0, Lcom/android/server/ConsumerIrService;->mNativeHal:J
 
     const-wide/16 v2, 0x0
@@ -149,16 +134,14 @@
 
     if-nez v0, :cond_0
 
-    .line 65
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    const-string/jumbo v1, "IR emitter not available"
+    const-string v1, "IR emitter not available"
 
     invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 63
     :cond_0
     return-void
 .end method
@@ -169,10 +152,9 @@
     .locals 4
 
     .prologue
-    .line 104
     iget-object v0, p0, Lcom/android/server/ConsumerIrService;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v1, "android.permission.TRANSMIT_IR"
+    const-string v1, "android.permission.TRANSMIT_IR"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
 
@@ -180,25 +162,21 @@
 
     if-eqz v0, :cond_0
 
-    .line 106
     new-instance v0, Ljava/lang/SecurityException;
 
-    const-string/jumbo v1, "Requires TRANSMIT_IR permission"
+    const-string v1, "Requires TRANSMIT_IR permission"
 
     invoke-direct {v0, v1}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 109
     :cond_0
     invoke-direct {p0}, Lcom/android/server/ConsumerIrService;->throwIfNoIrEmitter()V
 
-    .line 111
     iget-object v1, p0, Lcom/android/server/ConsumerIrService;->mHalLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 112
     :try_start_0
     iget-wide v2, p0, Lcom/android/server/ConsumerIrService;->mNativeHal:J
 
@@ -212,7 +190,6 @@
 
     return-object v0
 
-    .line 111
     :catchall_0
     move-exception v0
 
@@ -225,7 +202,6 @@
     .locals 4
 
     .prologue
-    .line 60
     iget-wide v0, p0, Lcom/android/server/ConsumerIrService;->mNativeHal:J
 
     const-wide/16 v2, 0x0
@@ -254,10 +230,9 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 72
     iget-object v5, p0, Lcom/android/server/ConsumerIrService;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v6, "android.permission.TRANSMIT_IR"
+    const-string v6, "android.permission.TRANSMIT_IR"
 
     invoke-virtual {v5, v6}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
 
@@ -265,20 +240,17 @@
 
     if-eqz v5, :cond_0
 
-    .line 74
     new-instance v4, Ljava/lang/SecurityException;
 
-    const-string/jumbo v5, "Requires TRANSMIT_IR permission"
+    const-string v5, "Requires TRANSMIT_IR permission"
 
     invoke-direct {v4, v5}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
 
     throw v4
 
-    .line 77
     :cond_0
     const-wide/16 v2, 0x0
 
-    .line 79
     .local v2, "totalXmitTime":J
     array-length v5, p3
 
@@ -287,31 +259,26 @@
 
     aget v1, p3, v4
 
-    .line 80
     .local v1, "slice":I
     if-gtz v1, :cond_1
 
-    .line 81
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v5, "Non-positive IR slice"
+    const-string v5, "Non-positive IR slice"
 
     invoke-direct {v4, v5}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v4
 
-    .line 83
     :cond_1
     int-to-long v6, v1
 
     add-long/2addr v2, v6
 
-    .line 79
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 86
     .end local v1    # "slice":I
     :cond_2
     const-wide/32 v4, 0x1e8480
@@ -320,25 +287,21 @@
 
     if-lez v4, :cond_3
 
-    .line 87
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v5, "IR pattern too long"
+    const-string v5, "IR pattern too long"
 
     invoke-direct {v4, v5}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v4
 
-    .line 90
     :cond_3
     invoke-direct {p0}, Lcom/android/server/ConsumerIrService;->throwIfNoIrEmitter()V
 
-    .line 93
     iget-object v5, p0, Lcom/android/server/ConsumerIrService;->mHalLock:Ljava/lang/Object;
 
     monitor-enter v5
 
-    .line 94
     :try_start_0
     iget-wide v6, p0, Lcom/android/server/ConsumerIrService;->mNativeHal:J
 
@@ -346,18 +309,16 @@
 
     move-result v0
 
-    .line 96
     .local v0, "err":I
     if-gez v0, :cond_4
 
-    .line 97
-    const-string/jumbo v4, "ConsumerIrService"
+    const-string v4, "ConsumerIrService"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "Error transmitting: "
+    const-string v7, "Error transmitting: "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -378,10 +339,8 @@
     :cond_4
     monitor-exit v5
 
-    .line 71
     return-void
 
-    .line 93
     .end local v0    # "err":I
     :catchall_0
     move-exception v4

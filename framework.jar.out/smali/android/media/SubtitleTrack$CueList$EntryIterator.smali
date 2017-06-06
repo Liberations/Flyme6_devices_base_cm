@@ -104,18 +104,16 @@
     .end annotation
 
     .prologue
-    .line 533
     .local p2, "cues":Ljava/util/SortedMap;, "Ljava/util/SortedMap<Ljava/lang/Long;Ljava/util/Vector<Landroid/media/SubtitleTrack$Cue;>;>;"
     iput-object p1, p0, Landroid/media/SubtitleTrack$CueList$EntryIterator;->this$1:Landroid/media/SubtitleTrack$CueList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 534
     iget-boolean v0, p1, Landroid/media/SubtitleTrack$CueList;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    const-string/jumbo v0, "CueList"
+    const-string v0, "CueList"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -125,7 +123,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, ""
+    const-string v2, ""
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -137,19 +135,15 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 535
     :cond_0
     iput-object p2, p0, Landroid/media/SubtitleTrack$CueList$EntryIterator;->mRemainingCues:Ljava/util/SortedMap;
 
-    .line 536
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/media/SubtitleTrack$CueList$EntryIterator;->mLastListIterator:Ljava/util/Iterator;
 
-    .line 537
     invoke-direct {p0}, Landroid/media/SubtitleTrack$CueList$EntryIterator;->nextKey()V
 
-    .line 533
     return-void
 .end method
 
@@ -159,17 +153,15 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 543
     :cond_0
     :try_start_0
     iget-object v2, p0, Landroid/media/SubtitleTrack$CueList$EntryIterator;->mRemainingCues:Ljava/util/SortedMap;
 
     if-nez v2, :cond_1
 
-    .line 544
     new-instance v2, Ljava/util/NoSuchElementException;
 
-    const-string/jumbo v3, ""
+    const-string v3, ""
 
     invoke-direct {v2, v3}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
 
@@ -177,26 +169,20 @@
     :try_end_0
     .catch Ljava/util/NoSuchElementException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 556
     :catch_0
     move-exception v1
 
-    .line 557
     .local v1, "e":Ljava/util/NoSuchElementException;
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Landroid/media/SubtitleTrack$CueList$EntryIterator;->mDone:Z
 
-    .line 558
     iput-object v8, p0, Landroid/media/SubtitleTrack$CueList$EntryIterator;->mRemainingCues:Ljava/util/SortedMap;
 
-    .line 559
     iput-object v8, p0, Landroid/media/SubtitleTrack$CueList$EntryIterator;->mListIterator:Ljava/util/Iterator;
 
-    .line 560
     return-void
 
-    .line 546
     .end local v1    # "e":Ljava/util/NoSuchElementException;
     :cond_1
     :try_start_1
@@ -214,7 +200,6 @@
 
     iput-wide v2, p0, Landroid/media/SubtitleTrack$CueList$EntryIterator;->mCurrentTimeMs:J
 
-    .line 548
     iget-object v2, p0, Landroid/media/SubtitleTrack$CueList$EntryIterator;->mRemainingCues:Ljava/util/SortedMap;
 
     iget-wide v4, p0, Landroid/media/SubtitleTrack$CueList$EntryIterator;->mCurrentTimeMs:J
@@ -233,12 +218,10 @@
 
     move-result-object v2
 
-    .line 547
     iput-object v2, p0, Landroid/media/SubtitleTrack$CueList$EntryIterator;->mListIterator:Ljava/util/Iterator;
     :try_end_1
     .catch Ljava/util/NoSuchElementException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 551
     :try_start_2
     iget-object v2, p0, Landroid/media/SubtitleTrack$CueList$EntryIterator;->mRemainingCues:Ljava/util/SortedMap;
 
@@ -256,13 +239,11 @@
 
     move-result-object v2
 
-    .line 550
     iput-object v2, p0, Landroid/media/SubtitleTrack$CueList$EntryIterator;->mRemainingCues:Ljava/util/SortedMap;
     :try_end_2
     .catch Ljava/lang/IllegalArgumentException; {:try_start_2 .. :try_end_2} :catch_1
     .catch Ljava/util/NoSuchElementException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 555
     :goto_0
     const/4 v2, 0x0
 
@@ -271,7 +252,6 @@
     :try_end_3
     .catch Ljava/util/NoSuchElementException; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 562
     iget-object v2, p0, Landroid/media/SubtitleTrack$CueList$EntryIterator;->mListIterator:Ljava/util/Iterator;
 
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
@@ -280,14 +260,11 @@
 
     if-eqz v2, :cond_0
 
-    .line 540
     return-void
 
-    .line 552
     :catch_1
     move-exception v0
 
-    .line 553
     .local v0, "e":Ljava/lang/IllegalArgumentException;
     const/4 v2, 0x0
 
@@ -305,7 +282,6 @@
     .locals 1
 
     .prologue
-    .line 491
     iget-boolean v0, p0, Landroid/media/SubtitleTrack$CueList$EntryIterator;->mDone:Z
 
     if-eqz v0, :cond_0
@@ -335,25 +311,21 @@
     .end annotation
 
     .prologue
-    .line 496
     iget-boolean v0, p0, Landroid/media/SubtitleTrack$CueList$EntryIterator;->mDone:Z
 
     if-eqz v0, :cond_0
 
-    .line 497
     new-instance v0, Ljava/util/NoSuchElementException;
 
-    const-string/jumbo v1, ""
+    const-string v1, ""
 
     invoke-direct {v0, v1}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 499
     :cond_0
     new-instance v1, Landroid/util/Pair;
 
-    .line 500
     iget-wide v2, p0, Landroid/media/SubtitleTrack$CueList$EntryIterator;->mCurrentTimeMs:J
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -368,17 +340,14 @@
 
     check-cast v0, Landroid/media/SubtitleTrack$Cue;
 
-    .line 499
     invoke-direct {v1, v2, v0}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     iput-object v1, p0, Landroid/media/SubtitleTrack$CueList$EntryIterator;->mLastEntry:Landroid/util/Pair;
 
-    .line 501
     iget-object v0, p0, Landroid/media/SubtitleTrack$CueList$EntryIterator;->mListIterator:Ljava/util/Iterator;
 
     iput-object v0, p0, Landroid/media/SubtitleTrack$CueList$EntryIterator;->mLastListIterator:Ljava/util/Iterator;
 
-    .line 502
     iget-object v0, p0, Landroid/media/SubtitleTrack$CueList$EntryIterator;->mListIterator:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -387,10 +356,8 @@
 
     if-nez v0, :cond_1
 
-    .line 503
     invoke-direct {p0}, Landroid/media/SubtitleTrack$CueList$EntryIterator;->nextKey()V
 
-    .line 505
     :cond_1
     iget-object v0, p0, Landroid/media/SubtitleTrack$CueList$EntryIterator;->mLastEntry:Landroid/util/Pair;
 
@@ -401,7 +368,6 @@
     .locals 1
 
     .prologue
-    .line 495
     invoke-virtual {p0}, Landroid/media/SubtitleTrack$CueList$EntryIterator;->next()Landroid/util/Pair;
 
     move-result-object v0
@@ -417,12 +383,10 @@
 
     const/4 v5, 0x0
 
-    .line 511
     iget-object v1, p0, Landroid/media/SubtitleTrack$CueList$EntryIterator;->mLastListIterator:Ljava/util/Iterator;
 
     if-eqz v1, :cond_0
 
-    .line 512
     iget-object v1, p0, Landroid/media/SubtitleTrack$CueList$EntryIterator;->mLastEntry:Landroid/util/Pair;
 
     iget-object v1, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
@@ -445,26 +409,22 @@
 
     if-eqz v1, :cond_1
 
-    .line 513
     :cond_0
     new-instance v1, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v4, ""
+    const-string v4, ""
 
     invoke-direct {v1, v4}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 517
     :cond_1
     iget-object v1, p0, Landroid/media/SubtitleTrack$CueList$EntryIterator;->mLastListIterator:Ljava/util/Iterator;
 
     invoke-interface {v1}, Ljava/util/Iterator;->remove()V
 
-    .line 518
     iput-object v5, p0, Landroid/media/SubtitleTrack$CueList$EntryIterator;->mLastListIterator:Ljava/util/Iterator;
 
-    .line 519
     iget-object v1, p0, Landroid/media/SubtitleTrack$CueList$EntryIterator;->this$1:Landroid/media/SubtitleTrack$CueList;
 
     invoke-static {v1}, Landroid/media/SubtitleTrack$CueList;->-get0(Landroid/media/SubtitleTrack$CueList;)Ljava/util/SortedMap;
@@ -487,7 +447,6 @@
 
     if-nez v1, :cond_2
 
-    .line 520
     iget-object v1, p0, Landroid/media/SubtitleTrack$CueList$EntryIterator;->this$1:Landroid/media/SubtitleTrack$CueList;
 
     invoke-static {v1}, Landroid/media/SubtitleTrack$CueList;->-get0(Landroid/media/SubtitleTrack$CueList;)Ljava/util/SortedMap;
@@ -500,7 +459,6 @@
 
     invoke-interface {v1, v5}, Ljava/util/SortedMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 524
     :cond_2
     iget-object v1, p0, Landroid/media/SubtitleTrack$CueList$EntryIterator;->mLastEntry:Landroid/util/Pair;
 
@@ -508,7 +466,6 @@
 
     check-cast v0, Landroid/media/SubtitleTrack$Cue;
 
-    .line 525
     .local v0, "cue":Landroid/media/SubtitleTrack$Cue;
     iget-object v1, p0, Landroid/media/SubtitleTrack$CueList$EntryIterator;->this$1:Landroid/media/SubtitleTrack$CueList;
 
@@ -516,12 +473,10 @@
 
     invoke-static {v1, v0, v6, v7}, Landroid/media/SubtitleTrack$CueList;->-wrap0(Landroid/media/SubtitleTrack$CueList;Landroid/media/SubtitleTrack$Cue;J)V
 
-    .line 526
     iget-object v1, v0, Landroid/media/SubtitleTrack$Cue;->mInnerTimesMs:[J
 
     if-eqz v1, :cond_3
 
-    .line 527
     iget-object v5, v0, Landroid/media/SubtitleTrack$Cue;->mInnerTimesMs:[J
 
     array-length v6, v5
@@ -533,18 +488,15 @@
 
     aget-wide v2, v5, v1
 
-    .line 528
     .local v2, "timeMs":J
     iget-object v4, p0, Landroid/media/SubtitleTrack$CueList$EntryIterator;->this$1:Landroid/media/SubtitleTrack$CueList;
 
     invoke-static {v4, v0, v2, v3}, Landroid/media/SubtitleTrack$CueList;->-wrap0(Landroid/media/SubtitleTrack$CueList;Landroid/media/SubtitleTrack$Cue;J)V
 
-    .line 527
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 509
     .end local v2    # "timeMs":J
     :cond_3
     return-void

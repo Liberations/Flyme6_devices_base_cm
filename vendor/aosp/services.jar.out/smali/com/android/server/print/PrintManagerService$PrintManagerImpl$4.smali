@@ -30,7 +30,6 @@
     .param p2, "val$userId"    # I
 
     .prologue
-    .line 652
     iput-object p1, p0, Lcom/android/server/print/PrintManagerService$PrintManagerImpl$4;->this$1:Lcom/android/server/print/PrintManagerService$PrintManagerImpl;
 
     iput p2, p0, Lcom/android/server/print/PrintManagerService$PrintManagerImpl$4;->val$userId:I
@@ -46,7 +45,6 @@
     .locals 4
 
     .prologue
-    .line 655
     iget-object v1, p0, Lcom/android/server/print/PrintManagerService$PrintManagerImpl$4;->this$1:Lcom/android/server/print/PrintManagerService$PrintManagerImpl;
 
     invoke-static {v1}, Lcom/android/server/print/PrintManagerService$PrintManagerImpl;->-get1(Lcom/android/server/print/PrintManagerService$PrintManagerImpl;)Ljava/lang/Object;
@@ -55,7 +53,6 @@
 
     monitor-enter v2
 
-    .line 656
     :try_start_0
     iget-object v1, p0, Lcom/android/server/print/PrintManagerService$PrintManagerImpl$4;->this$1:Lcom/android/server/print/PrintManagerService$PrintManagerImpl;
 
@@ -71,14 +68,11 @@
 
     check-cast v0, Lcom/android/server/print/UserState;
 
-    .line 657
     .local v0, "userState":Lcom/android/server/print/UserState;
     if-eqz v0, :cond_0
 
-    .line 658
     invoke-virtual {v0}, Lcom/android/server/print/UserState;->destroyLocked()V
 
-    .line 659
     iget-object v1, p0, Lcom/android/server/print/PrintManagerService$PrintManagerImpl$4;->this$1:Lcom/android/server/print/PrintManagerService$PrintManagerImpl;
 
     invoke-static {v1}, Lcom/android/server/print/PrintManagerService$PrintManagerImpl;->-get2(Lcom/android/server/print/PrintManagerService$PrintManagerImpl;)Landroid/util/SparseArray;
@@ -94,10 +88,8 @@
     :cond_0
     monitor-exit v2
 
-    .line 654
     return-void
 
-    .line 655
     .end local v0    # "userState":Lcom/android/server/print/UserState;
     :catchall_0
     move-exception v1

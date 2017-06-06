@@ -58,55 +58,49 @@
 
     const/4 v3, 0x0
 
-    .line 89
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
 
-    const-string/jumbo v1, "Undefined"
+    const-string v1, "Undefined"
 
     invoke-direct {v0, v1, v3}, Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;->Undefined:Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
 
-    .line 90
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
 
-    const-string/jumbo v1, "ExpandedEAPMethod"
+    const-string v1, "ExpandedEAPMethod"
 
     invoke-direct {v0, v1, v4}, Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;->ExpandedEAPMethod:Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
 
-    .line 91
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
 
-    const-string/jumbo v1, "NonEAPInnerAuthType"
+    const-string v1, "NonEAPInnerAuthType"
 
     invoke-direct {v0, v1, v5}, Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;->NonEAPInnerAuthType:Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
 
-    .line 92
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
 
-    const-string/jumbo v1, "InnerAuthEAPMethodType"
+    const-string v1, "InnerAuthEAPMethodType"
 
     invoke-direct {v0, v1, v6}, Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;->InnerAuthEAPMethodType:Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
 
-    .line 93
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
 
-    const-string/jumbo v1, "ExpandedInnerEAPMethod"
+    const-string v1, "ExpandedInnerEAPMethod"
 
     invoke-direct {v0, v1, v7}, Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;->ExpandedInnerEAPMethod:Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
 
-    .line 94
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
 
-    const-string/jumbo v1, "CredentialType"
+    const-string v1, "CredentialType"
 
     const/4 v2, 0x5
 
@@ -114,10 +108,9 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;->CredentialType:Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
 
-    .line 95
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
 
-    const-string/jumbo v1, "TunneledEAPMethodCredType"
+    const-string v1, "TunneledEAPMethodCredType"
 
     const/4 v2, 0x6
 
@@ -125,10 +118,9 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;->TunneledEAPMethodCredType:Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
 
-    .line 96
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
 
-    const-string/jumbo v1, "VendorSpecific"
+    const-string v1, "VendorSpecific"
 
     const/4 v2, 0x7
 
@@ -136,7 +128,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;->VendorSpecific:Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
 
-    .line 88
     const/16 v0, 0x8
 
     new-array v0, v0, [Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
@@ -188,7 +179,6 @@
     .locals 0
 
     .prologue
-    .line 88
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -199,7 +189,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 88
     const-class v0, Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -215,7 +204,6 @@
     .locals 1
 
     .prologue
-    .line 88
     sget-object v0, Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;->$VALUES:[Lcom/android/server/wifi/anqp/eap/EAP$AuthInfoID;
 
     return-object v0

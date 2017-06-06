@@ -24,7 +24,6 @@
     .param p1, "this$1"    # Lcom/android/internal/util/StateMachine$SmHandler;
 
     .prologue
-    .line 755
     iput-object p1, p0, Lcom/android/internal/util/StateMachine$SmHandler$HaltingState;->this$1:Lcom/android/internal/util/StateMachine$SmHandler;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -49,7 +48,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 758
     iget-object v0, p0, Lcom/android/internal/util/StateMachine$SmHandler$HaltingState;->this$1:Lcom/android/internal/util/StateMachine$SmHandler;
 
     invoke-static {v0}, Lcom/android/internal/util/StateMachine$SmHandler;->-get5(Lcom/android/internal/util/StateMachine$SmHandler;)Lcom/android/internal/util/StateMachine;
@@ -58,7 +56,6 @@
 
     invoke-virtual {v0, p1}, Lcom/android/internal/util/StateMachine;->haltedProcessMessage(Landroid/os/Message;)V
 
-    .line 759
     const/4 v0, 0x1
 
     return v0

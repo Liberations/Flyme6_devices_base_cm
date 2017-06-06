@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 115
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,14 +44,12 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 117
     const-class v4, Landroid/media/midi/MidiDeviceInfo;
 
     invoke-virtual {v4}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v0
 
-    .line 118
     .local v0, "classLoader":Ljava/lang/ClassLoader;
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
@@ -60,19 +57,16 @@
 
     check-cast v1, Landroid/media/midi/MidiDeviceInfo;
 
-    .line 119
     .local v1, "deviceInfo":Landroid/media/midi/MidiDeviceInfo;
     invoke-virtual {p1}, Landroid/os/Parcel;->createBooleanArray()[Z
 
     move-result-object v2
 
-    .line 120
     .local v2, "inputPortOpen":[Z
     invoke-virtual {p1}, Landroid/os/Parcel;->createIntArray()[I
 
     move-result-object v3
 
-    .line 121
     .local v3, "outputPortOpenCount":[I
     new-instance v4, Landroid/media/midi/MidiDeviceStatus;
 
@@ -86,7 +80,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 116
     invoke-virtual {p0, p1}, Landroid/media/midi/MidiDeviceStatus$1;->createFromParcel(Landroid/os/Parcel;)Landroid/media/midi/MidiDeviceStatus;
 
     move-result-object v0
@@ -99,7 +92,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 125
     new-array v0, p1, [Landroid/media/midi/MidiDeviceStatus;
 
     return-object v0
@@ -110,7 +102,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 124
     invoke-virtual {p0, p1}, Landroid/media/midi/MidiDeviceStatus$1;->newArray(I)[Landroid/media/midi/MidiDeviceStatus;
 
     move-result-object v0

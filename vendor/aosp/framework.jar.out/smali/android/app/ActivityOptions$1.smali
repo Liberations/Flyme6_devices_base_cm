@@ -30,7 +30,6 @@
     .param p3, "val$finalListener"    # Landroid/app/ActivityOptions$OnAnimationStartedListener;
 
     .prologue
-    .line 261
     iput-object p1, p0, Landroid/app/ActivityOptions$1;->this$0:Landroid/app/ActivityOptions;
 
     iput-object p2, p0, Landroid/app/ActivityOptions$1;->val$h:Landroid/os/Handler;
@@ -54,7 +53,6 @@
     .end annotation
 
     .prologue
-    .line 263
     iget-object v0, p0, Landroid/app/ActivityOptions$1;->val$h:Landroid/os/Handler;
 
     new-instance v1, Landroid/app/ActivityOptions$1$1;
@@ -65,6 +63,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 262
     return-void
 .end method

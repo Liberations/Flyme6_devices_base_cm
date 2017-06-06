@@ -24,7 +24,6 @@
     .param p1, "this$1"    # Landroid/net/ConnectivityManager$LegacyRequest;
 
     .prologue
-    .line 1133
     iput-object p1, p0, Landroid/net/ConnectivityManager$LegacyRequest$1;->this$1:Landroid/net/ConnectivityManager$LegacyRequest;
 
     invoke-direct {p0}, Landroid/net/ConnectivityManager$NetworkCallback;-><init>()V
@@ -39,19 +38,17 @@
     .param p1, "network"    # Landroid/net/Network;
 
     .prologue
-    .line 1136
     iget-object v0, p0, Landroid/net/ConnectivityManager$LegacyRequest$1;->this$1:Landroid/net/ConnectivityManager$LegacyRequest;
 
     iput-object p1, v0, Landroid/net/ConnectivityManager$LegacyRequest;->currentNetwork:Landroid/net/Network;
 
-    .line 1137
-    const-string/jumbo v0, "ConnectivityManager"
+    const-string v0, "ConnectivityManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "startUsingNetworkFeature got Network:"
+    const-string v2, "startUsingNetworkFeature got Network:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -67,10 +64,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1138
     invoke-static {p1}, Landroid/net/ConnectivityManager;->setProcessDefaultNetworkForHostResolution(Landroid/net/Network;)Z
 
-    .line 1135
     return-void
 .end method
 
@@ -79,7 +74,6 @@
     .param p1, "network"    # Landroid/net/Network;
 
     .prologue
-    .line 1142
     iget-object v0, p0, Landroid/net/ConnectivityManager$LegacyRequest$1;->this$1:Landroid/net/ConnectivityManager$LegacyRequest;
 
     iget-object v0, v0, Landroid/net/ConnectivityManager$LegacyRequest;->currentNetwork:Landroid/net/Network;
@@ -94,15 +88,14 @@
 
     invoke-static {v0}, Landroid/net/ConnectivityManager$LegacyRequest;->-wrap0(Landroid/net/ConnectivityManager$LegacyRequest;)V
 
-    .line 1143
     :cond_0
-    const-string/jumbo v0, "ConnectivityManager"
+    const-string v0, "ConnectivityManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "startUsingNetworkFeature lost Network:"
+    const-string v2, "startUsingNetworkFeature lost Network:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -118,6 +111,5 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1141
     return-void
 .end method

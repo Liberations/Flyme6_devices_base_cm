@@ -30,7 +30,6 @@
     .param p4, "subend"    # I
 
     .prologue
-    .line 62
     const/4 v5, 0x0
 
     move-object v0, p0
@@ -45,13 +44,11 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/text/AlteredCharSequence;-><init>(Ljava/lang/CharSequence;[CIILandroid/text/AlteredCharSequence;)V
 
-    .line 63
     check-cast p1, Landroid/text/Spanned;
 
     .end local p1    # "source":Ljava/lang/CharSequence;
     iput-object p1, p0, Landroid/text/AlteredCharSequence$AlteredSpanned;->mSpanned:Landroid/text/Spanned;
 
-    .line 61
     return-void
 .end method
 
@@ -75,7 +72,6 @@
     .param p1, "span"    # Ljava/lang/Object;
 
     .prologue
-    .line 75
     iget-object v0, p0, Landroid/text/AlteredCharSequence$AlteredSpanned;->mSpanned:Landroid/text/Spanned;
 
     invoke-interface {v0, p1}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
@@ -90,7 +86,6 @@
     .param p1, "span"    # Ljava/lang/Object;
 
     .prologue
-    .line 79
     iget-object v0, p0, Landroid/text/AlteredCharSequence$AlteredSpanned;->mSpanned:Landroid/text/Spanned;
 
     invoke-interface {v0, p1}, Landroid/text/Spanned;->getSpanFlags(Ljava/lang/Object;)I
@@ -105,7 +100,6 @@
     .param p1, "span"    # Ljava/lang/Object;
 
     .prologue
-    .line 71
     iget-object v0, p0, Landroid/text/AlteredCharSequence$AlteredSpanned;->mSpanned:Landroid/text/Spanned;
 
     invoke-interface {v0, p1}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
@@ -130,7 +124,6 @@
     .end annotation
 
     .prologue
-    .line 67
     .local p3, "kind":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     iget-object v0, p0, Landroid/text/AlteredCharSequence$AlteredSpanned;->mSpanned:Landroid/text/Spanned;
 
@@ -148,7 +141,6 @@
     .param p3, "kind"    # Ljava/lang/Class;
 
     .prologue
-    .line 83
     iget-object v0, p0, Landroid/text/AlteredCharSequence$AlteredSpanned;->mSpanned:Landroid/text/Spanned;
 
     invoke-interface {v0, p1, p2, p3}, Landroid/text/Spanned;->nextSpanTransition(IILjava/lang/Class;)I

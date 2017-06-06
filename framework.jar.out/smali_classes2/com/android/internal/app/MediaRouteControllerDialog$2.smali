@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/internal/app/MediaRouteControllerDialog;
 
     .prologue
-    .line 180
     iput-object p1, p0, Lcom/android/internal/app/MediaRouteControllerDialog$2;->this$0:Lcom/android/internal/app/MediaRouteControllerDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 183
     iget-object v0, p0, Lcom/android/internal/app/MediaRouteControllerDialog$2;->this$0:Lcom/android/internal/app/MediaRouteControllerDialog;
 
     invoke-static {v0}, Lcom/android/internal/app/MediaRouteControllerDialog;->-get0(Lcom/android/internal/app/MediaRouteControllerDialog;)Landroid/media/MediaRouter$RouteInfo;
@@ -55,7 +53,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 184
     iget-object v0, p0, Lcom/android/internal/app/MediaRouteControllerDialog$2;->this$0:Lcom/android/internal/app/MediaRouteControllerDialog;
 
     invoke-static {v0}, Lcom/android/internal/app/MediaRouteControllerDialog;->-get1(Lcom/android/internal/app/MediaRouteControllerDialog;)Landroid/media/MediaRouter;
@@ -68,12 +65,10 @@
 
     invoke-virtual {v0}, Landroid/media/MediaRouter$RouteInfo;->select()V
 
-    .line 186
     :cond_0
     iget-object v0, p0, Lcom/android/internal/app/MediaRouteControllerDialog$2;->this$0:Lcom/android/internal/app/MediaRouteControllerDialog;
 
     invoke-virtual {v0}, Lcom/android/internal/app/MediaRouteControllerDialog;->dismiss()V
 
-    .line 182
     return-void
 .end method

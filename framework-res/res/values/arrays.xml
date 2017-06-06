@@ -549,6 +549,7 @@
         <item>nfc</item>
         <item>tty</item>
         <item>speakerphone</item>
+        <item>headset</item>
         <item>zen</item>
         <item>mute</item>
         <item>volume</item>
@@ -565,7 +566,7 @@
     <string-array name="networkAttributes">
         <item>wifi,1,1,1,-1,true</item>
         <item>mobile,0,0,0,-1,true</item>
-        <item>mobile_mms,2,0,2,300000,true</item>
+        <item>mobile_mms,2,0,4,300000,true</item>
         <item>mobile_supl,3,0,2,300000,true</item>
         <item>mobile_dun,4,0,2,300000,true</item>
         <item>mobile_hipri,5,0,3,300000,true</item>
@@ -684,33 +685,29 @@
         <item>21</item>
     </integer-array>
     <integer-array name="config_autoBrightnessLevels">
-        <item>20</item>
+        <item>8</item>
+        <item>35</item>
         <item>100</item>
-        <item>200</item>
-        <item>500</item>
-        <item>800</item>
-        <item>1000</item>
-        <item>1200</item>
-        <item>1800</item>
-        <item>2500</item>
+        <item>300</item>
+        <item>1500</item>
+        <item>3500</item>
+        <item>7000</item>
     </integer-array>
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>6</item>
+        <item>10</item>
         <item>20</item>
-        <item>50</item>
-        <item>90</item>
-        <item>100</item>
+        <item>40</item>
+        <item>70</item>
         <item>110</item>
-        <item>140</item>
-        <item>180</item>
-        <item>220</item>
+        <item>160</item>
+        <item>200</item>
         <item>255</item>
     </integer-array>
     <array name="config_autoBrightnessButtonBacklightValues" />
     <array name="config_autoBrightnessKeyboardBacklightValues" />
     <string-array name="config_locationProviderPackageNames">
-        <item>com.google.android.gms</item>
         <item>com.android.location.fused</item>
+        <item>com.amap.android.location</item>
     </string-array>
     <array name="config_testLocationProviders" />
     <array name="config_twoDigitNumberPattern" />
@@ -719,16 +716,15 @@
     <array name="config_oemUsbModeOverride" />
     <string-array name="config_mobile_tcp_buffers">
         <item>lte:2097152,4194304,8388608,262144,524288,1048576</item>
-        <item>lte_ca:2097152,4194304,8388608,262144,524288,1048576</item>
+        <item>lte_ca:2097152,4194304,8388608,4096,1048576,2097152</item>
         <item>umts:4094,87380,1220608,4096,16384,1220608</item>
         <item>hspa:4094,87380,1220608,4096,16384,1220608</item>
         <item>hsupa:4094,87380,1220608,4096,16384,1220608</item>
-        <item>hsdpa:4094,87380,2441216,4096,16384,2441216</item>
+        <item>hsdpa:4094,87380,1220608,4096,16384,1220608</item>
         <item>hspap:4094,87380,1220608,4096,16384,1220608</item>
         <item>edge:4093,26280,35040,4096,16384,35040</item>
         <item>gprs:4092,8760,11680,4096,8760,11680</item>
-        <item>evdo:4094,87380,1048576,4096,16384,262144</item>
-        <item>ehrpd:4094,87380,1048576,4096,16384,262144</item>
+        <item>evdo:4094,87380,524288,4096,16384,262144</item>
     </string-array>
     <integer-array name="config_colorTransforms">
         <item>-1</item>
@@ -801,7 +797,7 @@
     <string-array name="config_gpsParameters">
         <item>SUPL_HOST=supl.google.com</item>
         <item>SUPL_PORT=7275</item>
-        <item>NTP_SERVER=time.gpsonextra.net</item>
+        <item>NTP_SERVER=north-america.pool.ntp.org</item>
         <item>SUPL_VER=0x20000</item>
         <item>SUPL_MODE=1</item>
     </string-array>
@@ -845,6 +841,10 @@
         <item>-108</item>
         <item>-98</item>
         <item>-44</item>
+    </integer-array>
+    <integer-array name="config_deviceLightCapabilities">
+        <item>0</item>
+        <item>1</item>
     </integer-array>
     <integer-array name="maps_starting_lat_lng">
         <item>36149777</item>

@@ -42,7 +42,6 @@
     .locals 0
 
     .prologue
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -59,7 +58,6 @@
     .end annotation
 
     .prologue
-    .line 166
     .local p0, "obj":Ljava/lang/Object;, "TT;"
     new-instance v0, Landroid/hardware/camera2/utils/CameraBinderDecorator$CameraBinderDecoratorListener;
 
@@ -85,17 +83,13 @@
 
     const/4 v4, 0x3
 
-    .line 104
     sparse-switch p0, :sswitch_data_0
 
-    .line 140
     if-gez p0, :cond_0
 
-    .line 141
     new-instance v0, Landroid/hardware/camera2/utils/CameraRuntimeException;
 
-    .line 142
-    const-string/jumbo v1, "Unknown camera device error %d"
+    const-string v1, "Unknown camera device error %d"
 
     new-array v2, v2, [Ljava/lang/Object;
 
@@ -109,40 +103,34 @@
 
     move-result-object v1
 
-    .line 141
     invoke-direct {v0, v4, v1}, Landroid/hardware/camera2/utils/CameraRuntimeException;-><init>(ILjava/lang/String;)V
 
     throw v0
 
-    .line 106
     :sswitch_0
     return-void
 
-    .line 108
     :sswitch_1
     new-instance v0, Ljava/lang/SecurityException;
 
-    const-string/jumbo v1, "Lacking privileges to access camera service"
+    const-string v1, "Lacking privileges to access camera service"
 
     invoke-direct {v0, v1}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 112
     :sswitch_2
     return-void
 
-    .line 114
     :sswitch_3
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "Bad argument passed to camera service"
+    const-string v1, "Bad argument passed to camera service"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 116
     :sswitch_4
     new-instance v0, Landroid/hardware/camera2/utils/CameraRuntimeException;
 
@@ -150,19 +138,15 @@
 
     throw v0
 
-    .line 118
     :sswitch_5
     new-instance v0, Landroid/hardware/camera2/utils/CameraRuntimeException;
 
-    .line 119
-    const-string/jumbo v1, "Operation timed out in camera service"
+    const-string v1, "Operation timed out in camera service"
 
-    .line 118
     invoke-direct {v0, v4, v1}, Landroid/hardware/camera2/utils/CameraRuntimeException;-><init>(ILjava/lang/String;)V
 
     throw v0
 
-    .line 121
     :sswitch_6
     new-instance v0, Landroid/hardware/camera2/utils/CameraRuntimeException;
 
@@ -170,7 +154,6 @@
 
     throw v0
 
-    .line 123
     :sswitch_7
     new-instance v0, Landroid/hardware/camera2/utils/CameraRuntimeException;
 
@@ -180,7 +163,6 @@
 
     throw v0
 
-    .line 125
     :sswitch_8
     new-instance v0, Landroid/hardware/camera2/utils/CameraRuntimeException;
 
@@ -190,7 +172,6 @@
 
     throw v0
 
-    .line 127
     :sswitch_9
     new-instance v0, Landroid/hardware/camera2/utils/CameraRuntimeException;
 
@@ -198,7 +179,6 @@
 
     throw v0
 
-    .line 129
     :sswitch_a
     new-instance v0, Landroid/hardware/camera2/utils/CameraRuntimeException;
 
@@ -208,23 +188,18 @@
 
     throw v0
 
-    .line 131
     :sswitch_b
     new-instance v0, Landroid/hardware/camera2/utils/CameraRuntimeException;
 
-    .line 132
-    const-string/jumbo v1, "Illegal state encountered in camera service."
+    const-string v1, "Illegal state encountered in camera service."
 
-    .line 131
     invoke-direct {v0, v4, v1}, Landroid/hardware/camera2/utils/CameraRuntimeException;-><init>(ILjava/lang/String;)V
 
     throw v0
 
-    .line 103
     :cond_0
     return-void
 
-    .line 104
     nop
 
     :sswitch_data_0

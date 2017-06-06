@@ -32,7 +32,6 @@
 baseband=`getprop ro.baseband`
 sgltecsfb=`getprop persist.radio.sglte_csfb`
 datamode=`getprop persist.data.mode`
-netmgr=`getprop ro.use_data_netmgrd`
 
 case "$baseband" in
     "apq")
@@ -76,14 +75,23 @@ case "$baseband" in
             ;;
         "concurrent")
             start qti
-            if [ "$netmgr" = "true" ]; then
-                start netmgrd
-            fi
+            start netmgrd
+            start port-bridge
             ;;
         *)
-            if [ "$netmgr" = "true" ]; then
-                start netmgrd
-            fi
+            start netmgrd
             ;;
     esac
+esac
+
+#
+# Allow persistent faking of bms
+# User needs to set fake bms charge in persist.bms.fake_batt_capacity
+#
+fake_batt_capacity=`getprop persist.bms.fake_batt_capacity`
+case "$fake_batt_capacity" in
+    "") ;; #Do nothing here
+    * )
+    echo "$fake_batt_capacity" > /sys/class/power_supply/battery/capacity
+    ;;
 esac

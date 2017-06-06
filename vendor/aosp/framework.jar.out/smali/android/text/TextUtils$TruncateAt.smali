@@ -52,53 +52,46 @@
 
     const/4 v2, 0x0
 
-    .line 1047
     new-instance v0, Landroid/text/TextUtils$TruncateAt;
 
-    const-string/jumbo v1, "START"
+    const-string v1, "START"
 
     invoke-direct {v0, v1, v2}, Landroid/text/TextUtils$TruncateAt;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Landroid/text/TextUtils$TruncateAt;->START:Landroid/text/TextUtils$TruncateAt;
 
-    .line 1048
     new-instance v0, Landroid/text/TextUtils$TruncateAt;
 
-    const-string/jumbo v1, "MIDDLE"
+    const-string v1, "MIDDLE"
 
     invoke-direct {v0, v1, v3}, Landroid/text/TextUtils$TruncateAt;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Landroid/text/TextUtils$TruncateAt;->MIDDLE:Landroid/text/TextUtils$TruncateAt;
 
-    .line 1049
     new-instance v0, Landroid/text/TextUtils$TruncateAt;
 
-    const-string/jumbo v1, "END"
+    const-string v1, "END"
 
     invoke-direct {v0, v1, v4}, Landroid/text/TextUtils$TruncateAt;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
-    .line 1050
     new-instance v0, Landroid/text/TextUtils$TruncateAt;
 
-    const-string/jumbo v1, "MARQUEE"
+    const-string v1, "MARQUEE"
 
     invoke-direct {v0, v1, v5}, Landroid/text/TextUtils$TruncateAt;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Landroid/text/TextUtils$TruncateAt;->MARQUEE:Landroid/text/TextUtils$TruncateAt;
 
-    .line 1051
     new-instance v0, Landroid/text/TextUtils$TruncateAt;
 
-    const-string/jumbo v1, "END_SMALL"
+    const-string v1, "END_SMALL"
 
     invoke-direct {v0, v1, v6}, Landroid/text/TextUtils$TruncateAt;-><init>(Ljava/lang/String;I)V
 
-    .line 1054
     sput-object v0, Landroid/text/TextUtils$TruncateAt;->END_SMALL:Landroid/text/TextUtils$TruncateAt;
 
-    .line 1046
     const/4 v0, 0x5
 
     new-array v0, v0, [Landroid/text/TextUtils$TruncateAt;
@@ -132,7 +125,6 @@
     .locals 0
 
     .prologue
-    .line 1046
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -143,7 +135,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 1046
     const-class v0, Landroid/text/TextUtils$TruncateAt;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -159,7 +150,6 @@
     .locals 1
 
     .prologue
-    .line 1046
     sget-object v0, Landroid/text/TextUtils$TruncateAt;->$VALUES:[Landroid/text/TextUtils$TruncateAt;
 
     return-object v0

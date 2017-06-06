@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,7 +36,6 @@
     .param p3, "event"    # Landroid/view/accessibility/AccessibilityEvent;
 
     .prologue
-    .line 68
     const/4 v0, 0x0
 
     return v0
@@ -49,7 +47,6 @@
     .param p2, "host"    # Landroid/view/View;
 
     .prologue
-    .line 109
     const/4 v0, 0x0
 
     return-object v0
@@ -60,7 +57,6 @@
     .param p1, "listener"    # Landroid/support/v4/view/AccessibilityDelegateCompat;
 
     .prologue
-    .line 62
     const/4 v0, 0x0
 
     return-object v0
@@ -70,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 57
     const/4 v0, 0x0
 
     return-object v0
@@ -83,7 +78,6 @@
     .param p3, "event"    # Landroid/view/accessibility/AccessibilityEvent;
 
     .prologue
-    .line 73
     return-void
 .end method
 
@@ -94,7 +88,6 @@
     .param p3, "info"    # Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;
 
     .prologue
-    .line 79
     return-void
 .end method
 
@@ -105,7 +98,6 @@
     .param p3, "event"    # Landroid/view/accessibility/AccessibilityEvent;
 
     .prologue
-    .line 85
     return-void
 .end method
 
@@ -117,7 +109,6 @@
     .param p4, "event"    # Landroid/view/accessibility/AccessibilityEvent;
 
     .prologue
-    .line 92
     const/4 v0, 0x1
 
     return v0
@@ -131,7 +122,6 @@
     .param p4, "args"    # Landroid/os/Bundle;
 
     .prologue
-    .line 115
     const/4 v0, 0x0
 
     return v0
@@ -144,7 +134,6 @@
     .param p3, "eventType"    # I
 
     .prologue
-    .line 96
     return-void
 .end method
 
@@ -155,6 +144,5 @@
     .param p3, "event"    # Landroid/view/accessibility/AccessibilityEvent;
 
     .prologue
-    .line 102
     return-void
 .end method

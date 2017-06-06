@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/internal/widget/TextViewInputDisabler;
 
     .prologue
-    .line 32
     iput-object p1, p0, Lcom/android/internal/widget/TextViewInputDisabler$1;->this$0:Lcom/android/internal/widget/TextViewInputDisabler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,8 +46,7 @@
     .param p6, "dend"    # I
 
     .prologue
-    .line 36
-    const-string/jumbo v0, ""
+    const-string v0, ""
 
     return-object v0
 .end method

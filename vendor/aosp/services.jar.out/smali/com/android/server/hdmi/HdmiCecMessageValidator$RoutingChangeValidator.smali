@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/hdmi/HdmiCecMessageValidator;
 
     .prologue
-    .line 327
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecMessageValidator$RoutingChangeValidator;->this$0:Lcom/android/server/hdmi/HdmiCecMessageValidator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -56,15 +55,12 @@
 
     const/4 v0, 0x0
 
-    .line 330
     array-length v1, p1
 
     if-ge v1, v2, :cond_0
 
-    .line 331
     return v2
 
-    .line 334
     :cond_0
     iget-object v1, p0, Lcom/android/server/hdmi/HdmiCecMessageValidator$RoutingChangeValidator;->this$0:Lcom/android/server/hdmi/HdmiCecMessageValidator;
 
@@ -82,7 +78,6 @@
 
     move-result v0
 
-    .line 333
     :cond_1
     invoke-static {v0}, Lcom/android/server/hdmi/HdmiCecMessageValidator;->-wrap1(Z)I
 

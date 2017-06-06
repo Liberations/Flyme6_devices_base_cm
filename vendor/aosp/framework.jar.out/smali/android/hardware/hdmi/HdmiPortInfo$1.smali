@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 130
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,24 +46,20 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 133
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 134
     .local v1, "id":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 135
     .local v2, "type":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 136
     .local v3, "address":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -74,7 +69,6 @@
 
     const/4 v4, 0x1
 
-    .line 137
     .local v4, "cec":Z
     :goto_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -85,7 +79,6 @@
 
     const/4 v6, 0x1
 
-    .line 138
     .local v6, "arc":Z
     :goto_1
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -96,7 +89,6 @@
 
     const/4 v5, 0x1
 
-    .line 139
     .local v5, "mhl":Z
     :goto_2
     new-instance v0, Landroid/hardware/hdmi/HdmiPortInfo;
@@ -105,7 +97,6 @@
 
     return-object v0
 
-    .line 136
     .end local v4    # "cec":Z
     .end local v5    # "mhl":Z
     .end local v6    # "arc":Z
@@ -115,14 +106,12 @@
     .restart local v4    # "cec":Z
     goto :goto_0
 
-    .line 137
     :cond_1
     const/4 v6, 0x0
 
     .restart local v6    # "arc":Z
     goto :goto_1
 
-    .line 138
     :cond_2
     const/4 v5, 0x0
 
@@ -135,7 +124,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 132
     invoke-virtual {p0, p1}, Landroid/hardware/hdmi/HdmiPortInfo$1;->createFromParcel(Landroid/os/Parcel;)Landroid/hardware/hdmi/HdmiPortInfo;
 
     move-result-object v0
@@ -148,7 +136,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 144
     new-array v0, p1, [Landroid/hardware/hdmi/HdmiPortInfo;
 
     return-object v0
@@ -159,7 +146,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 143
     invoke-virtual {p0, p1}, Landroid/hardware/hdmi/HdmiPortInfo$1;->newArray(I)[Landroid/hardware/hdmi/HdmiPortInfo;
 
     move-result-object v0

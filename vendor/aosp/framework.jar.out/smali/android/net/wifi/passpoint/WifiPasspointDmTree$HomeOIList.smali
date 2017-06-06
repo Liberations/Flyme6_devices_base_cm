@@ -49,14 +49,12 @@
     .locals 1
 
     .prologue
-    .line 1029
     new-instance v0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$HomeOIList$1;
 
     invoke-direct {v0}, Landroid/net/wifi/passpoint/WifiPasspointDmTree$HomeOIList$1;-><init>()V
 
     sput-object v0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$HomeOIList;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 991
     return-void
 .end method
 
@@ -64,7 +62,6 @@
     .locals 0
 
     .prologue
-    .line 1002
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -75,13 +72,10 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 1005
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1006
     invoke-virtual {p0, p1}, Landroid/net/wifi/passpoint/WifiPasspointDmTree$HomeOIList;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 1005
     return-void
 .end method
 
@@ -92,19 +86,14 @@
     .param p3, "r"    # Z
 
     .prologue
-    .line 996
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 997
     iput-object p1, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$HomeOIList;->nodeName:Ljava/lang/String;
 
-    .line 998
     iput-object p2, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$HomeOIList;->HomeOI:Ljava/lang/String;
 
-    .line 999
     iput-boolean p3, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$HomeOIList;->HomeOIRequired:Z
 
-    .line 996
     return-void
 .end method
 
@@ -114,7 +103,6 @@
     .locals 1
 
     .prologue
-    .line 1010
     const/4 v0, 0x0
 
     return v0
@@ -127,14 +115,11 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 1020
     if-nez p1, :cond_0
 
-    .line 1019
     :goto_0
     return-void
 
-    .line 1023
     :cond_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -142,14 +127,12 @@
 
     iput-object v1, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$HomeOIList;->nodeName:Ljava/lang/String;
 
-    .line 1024
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$HomeOIList;->HomeOI:Ljava/lang/String;
 
-    .line 1025
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -173,17 +156,14 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 1014
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$HomeOIList;->nodeName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 1015
     iget-object v0, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$HomeOIList;->HomeOI:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 1016
     iget-boolean v0, p0, Landroid/net/wifi/passpoint/WifiPasspointDmTree$HomeOIList;->HomeOIRequired:Z
 
     if-eqz v0, :cond_0
@@ -193,10 +173,8 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1013
     return-void
 
-    .line 1016
     :cond_0
     const/4 v0, 0x0
 

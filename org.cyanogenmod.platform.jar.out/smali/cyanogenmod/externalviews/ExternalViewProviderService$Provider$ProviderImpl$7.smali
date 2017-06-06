@@ -45,7 +45,6 @@
     .param p7, "val$clipRect"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 177
     iput-object p1, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl$7;->this$2:Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;
 
     iput p2, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl$7;->val$x:I
@@ -71,7 +70,6 @@
     .locals 4
 
     .prologue
-    .line 180
     iget-object v1, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl$7;->this$2:Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;
 
     invoke-static {v1}, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;->-get0(Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;)Landroid/view/WindowManager$LayoutParams;
@@ -82,7 +80,6 @@
 
     iput v2, v1, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    .line 181
     iget-object v1, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl$7;->this$2:Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;
 
     invoke-static {v1}, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;->-get0(Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;)Landroid/view/WindowManager$LayoutParams;
@@ -93,7 +90,6 @@
 
     iput v2, v1, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    .line 182
     iget-object v1, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl$7;->this$2:Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;
 
     invoke-static {v1}, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;->-get0(Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;)Landroid/view/WindowManager$LayoutParams;
@@ -104,7 +100,6 @@
 
     iput v2, v1, Landroid/view/WindowManager$LayoutParams;->width:I
 
-    .line 183
     iget-object v1, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl$7;->this$2:Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;
 
     invoke-static {v1}, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;->-get0(Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;)Landroid/view/WindowManager$LayoutParams;
@@ -115,19 +110,16 @@
 
     iput v2, v1, Landroid/view/WindowManager$LayoutParams;->height:I
 
-    .line 187
     iget-object v1, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl$7;->this$2:Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;
 
     iget-boolean v2, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl$7;->val$visible:Z
 
     invoke-static {v1, v2}, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;->-set0(Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;Z)Z
 
-    .line 189
     iget-object v1, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl$7;->this$2:Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;
 
     invoke-static {v1}, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;->-wrap0(Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;)V
 
-    .line 191
     iget-object v1, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl$7;->this$2:Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;
 
     invoke-static {v1}, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;->-get1(Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;)Landroid/view/Window;
@@ -138,7 +130,6 @@
 
     move-result-object v0
 
-    .line 192
     .local v0, "decorView":Landroid/view/View;
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
 
@@ -146,12 +137,10 @@
 
     if-nez v1, :cond_0
 
-    .line 193
     iget-object v1, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl$7;->val$clipRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setClipBounds(Landroid/graphics/Rect;)V
 
-    .line 196
     :cond_0
     iget-object v1, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl$7;->this$2:Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;
 
@@ -171,7 +160,6 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 197
     iget-object v1, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl$7;->this$2:Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;
 
     iget-object v1, v1, Lcyanogenmod/externalviews/ExternalViewProviderService$Provider$ProviderImpl;->this$1:Lcyanogenmod/externalviews/ExternalViewProviderService$Provider;
@@ -200,7 +188,6 @@
 
     invoke-interface {v1, v2, v3}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 179
     :cond_1
     return-void
 .end method

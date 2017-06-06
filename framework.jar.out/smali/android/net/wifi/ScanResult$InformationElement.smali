@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 315
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,15 +35,12 @@
     .param p1, "rhs"    # Landroid/net/wifi/ScanResult$InformationElement;
 
     .prologue
-    .line 318
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 319
     iget v0, p1, Landroid/net/wifi/ScanResult$InformationElement;->id:I
 
     iput v0, p0, Landroid/net/wifi/ScanResult$InformationElement;->id:I
 
-    .line 320
     iget-object v0, p1, Landroid/net/wifi/ScanResult$InformationElement;->bytes:[B
 
     invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
@@ -55,6 +51,5 @@
 
     iput-object v0, p0, Landroid/net/wifi/ScanResult$InformationElement;->bytes:[B
 
-    .line 318
     return-void
 .end method

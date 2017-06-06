@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 757
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 760
     new-instance v0, Lcyanogenmod/app/CustomTile$ExpandedItem;
 
     invoke-direct {v0, p1}, Lcyanogenmod/app/CustomTile$ExpandedItem;-><init>(Landroid/os/Parcel;)V
@@ -58,7 +56,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 759
     invoke-virtual {p0, p1}, Lcyanogenmod/app/CustomTile$ExpandedItem$1;->createFromParcel(Landroid/os/Parcel;)Lcyanogenmod/app/CustomTile$ExpandedItem;
 
     move-result-object v0
@@ -71,7 +68,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 765
     new-array v0, p1, [Lcyanogenmod/app/CustomTile$ExpandedItem;
 
     return-object v0
@@ -82,7 +78,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 764
     invoke-virtual {p0, p1}, Lcyanogenmod/app/CustomTile$ExpandedItem$1;->newArray(I)[Lcyanogenmod/app/CustomTile$ExpandedItem;
 
     move-result-object v0

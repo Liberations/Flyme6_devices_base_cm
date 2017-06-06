@@ -42,7 +42,6 @@
     .param p8, "val$thread"    # Landroid/os/HandlerThread;
 
     .prologue
-    .line 2484
     iput-object p1, p0, Landroid/media/MediaPlayer$4;->this$0:Landroid/media/MediaPlayer;
 
     iput-object p2, p0, Landroid/media/MediaPlayer$4;->val$fd3:Ljava/io/FileDescriptor;
@@ -64,16 +63,13 @@
     .locals 13
 
     .prologue
-    .line 2486
     const/4 v5, 0x0
 
-    .line 2487
     .local v5, "is":Ljava/io/InputStream;
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 2489
     .local v0, "bos":Ljava/io/ByteArrayOutputStream;
     :try_start_0
     sget-object v8, Llibcore/io/Libcore;->os:Llibcore/io/Os;
@@ -86,12 +82,10 @@
 
     invoke-interface {v8, v9, v10, v11, v12}, Llibcore/io/Os;->lseek(Ljava/io/FileDescriptor;JI)J
 
-    .line 2490
     const/16 v8, 0x1000
 
     new-array v1, v8, [B
 
-    .line 2491
     .local v1, "buffer":[B
     const-wide/16 v6, 0x0
 
@@ -103,7 +97,6 @@
 
     if-gez v8, :cond_0
 
-    .line 2492
     array-length v8, v1
 
     int-to-long v8, v8
@@ -118,7 +111,6 @@
 
     long-to-int v3, v8
 
-    .line 2493
     .local v3, "bytesToRead":I
     iget-object v8, p0, Landroid/media/MediaPlayer$4;->val$fd3:Ljava/io/FileDescriptor;
 
@@ -128,11 +120,9 @@
 
     move-result v2
 
-    .line 2494
     .local v2, "bytes":I
     if-gez v2, :cond_1
 
-    .line 2501
     .end local v2    # "bytes":I
     .end local v3    # "bytesToRead":I
     :cond_0
@@ -148,12 +138,10 @@
 
     invoke-virtual {v8, v9, v12, v10, v11}, Landroid/media/SubtitleTrack;->onData([BZJ)V
 
-    .line 2502
     const/16 v8, 0x323
 
     return v8
 
-    .line 2497
     .restart local v2    # "bytes":I
     .restart local v3    # "bytesToRead":I
     :cond_1
@@ -164,14 +152,12 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2498
     int-to-long v8, v2
 
     add-long/2addr v6, v8
 
     goto :goto_0
 
-    .line 2503
     .end local v1    # "buffer":[B
     .end local v2    # "bytes":I
     .end local v3    # "bytesToRead":I
@@ -179,10 +165,9 @@
     :catch_0
     move-exception v4
 
-    .line 2504
     .local v4, "e":Ljava/lang/Exception;
     :try_start_1
-    const-string/jumbo v8, "MediaPlayer"
+    const-string v8, "MediaPlayer"
 
     invoke-virtual {v4}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
@@ -192,12 +177,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2505
     const/16 v8, 0x384
 
     return v8
 
-    .line 2506
     .end local v4    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v8
@@ -213,12 +196,10 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 2518
     invoke-direct {p0}, Landroid/media/MediaPlayer$4;->addTrack()I
 
     move-result v1
 
-    .line 2519
     .local v1, "res":I
     iget-object v2, p0, Landroid/media/MediaPlayer$4;->this$0:Landroid/media/MediaPlayer;
 
@@ -228,7 +209,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 2520
     iget-object v2, p0, Landroid/media/MediaPlayer$4;->this$0:Landroid/media/MediaPlayer;
 
     invoke-static {v2}, Landroid/media/MediaPlayer;->-get0(Landroid/media/MediaPlayer;)Landroid/media/MediaPlayer$EventHandler;
@@ -243,7 +223,6 @@
 
     move-result-object v0
 
-    .line 2521
     .local v0, "m":Landroid/os/Message;
     iget-object v2, p0, Landroid/media/MediaPlayer$4;->this$0:Landroid/media/MediaPlayer;
 
@@ -253,7 +232,6 @@
 
     invoke-virtual {v2, v0}, Landroid/media/MediaPlayer$EventHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 2523
     .end local v0    # "m":Landroid/os/Message;
     :cond_0
     iget-object v2, p0, Landroid/media/MediaPlayer$4;->val$thread:Landroid/os/HandlerThread;
@@ -264,6 +242,5 @@
 
     invoke-virtual {v2}, Landroid/os/Looper;->quitSafely()V
 
-    .line 2517
     return-void
 .end method

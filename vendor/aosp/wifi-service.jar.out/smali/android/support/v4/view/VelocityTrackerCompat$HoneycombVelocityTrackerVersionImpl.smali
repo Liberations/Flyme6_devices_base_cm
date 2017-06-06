@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +35,6 @@
     .param p2, "pointerId"    # I
 
     .prologue
-    .line 54
     invoke-static {p1, p2}, Landroid/support/v4/view/VelocityTrackerCompatHoneycomb;->getXVelocity(Landroid/view/VelocityTracker;I)F
 
     move-result v0
@@ -50,7 +48,6 @@
     .param p2, "pointerId"    # I
 
     .prologue
-    .line 58
     invoke-static {p1, p2}, Landroid/support/v4/view/VelocityTrackerCompatHoneycomb;->getYVelocity(Landroid/view/VelocityTracker;I)F
 
     move-result v0

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 212
     .local p1, "this$0":Landroid/content/pm/RegisteredServicesCache;, "Landroid/content/pm/RegisteredServicesCache<TV;>;"
     iput-object p1, p0, Landroid/content/pm/RegisteredServicesCache$2;->this$0:Landroid/content/pm/RegisteredServicesCache;
 
@@ -40,13 +39,11 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 216
     iget-object v0, p0, Landroid/content/pm/RegisteredServicesCache$2;->this$0:Landroid/content/pm/RegisteredServicesCache;
 
     const/4 v1, 0x0
 
     invoke-static {v0, p2, v1}, Landroid/content/pm/RegisteredServicesCache;->-wrap0(Landroid/content/pm/RegisteredServicesCache;Landroid/content/Intent;I)V
 
-    .line 214
     return-void
 .end method

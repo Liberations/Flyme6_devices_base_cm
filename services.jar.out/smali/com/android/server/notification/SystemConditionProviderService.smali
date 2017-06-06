@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 31
     invoke-direct {p0}, Landroid/service/notification/ConditionProviderService;-><init>()V
 
     return-void
@@ -22,8 +21,7 @@
     .param p4, "now"    # J
 
     .prologue
-    .line 51
-    const-string/jumbo v0, "      "
+    const-string v0, "      "
 
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -33,15 +31,13 @@
 
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->print(C)V
 
-    .line 52
     const-wide/16 v0, 0x0
 
     cmp-long v0, p2, v0
 
     if-lez v0, :cond_0
 
-    .line 53
-    const-string/jumbo v0, "%s, in %s, now=%s"
+    const-string v0, "%s, in %s, now=%s"
 
     const/4 v1, 0x3
 
@@ -75,14 +71,11 @@
 
     invoke-virtual {p0, v0, v1}, Ljava/io/PrintWriter;->printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintWriter;
 
-    .line 57
     :goto_0
     invoke-virtual {p0}, Ljava/io/PrintWriter;->println()V
 
-    .line 50
     return-void
 
-    .line 55
     :cond_0
     invoke-virtual {p0, p2, p3}, Ljava/io/PrintWriter;->print(J)V
 
@@ -94,16 +87,13 @@
     .param p0, "millis"    # J
 
     .prologue
-    .line 45
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 46
     .local v0, "sb":Ljava/lang/StringBuilder;
     invoke-static {p0, p1, v0}, Landroid/util/TimeUtils;->formatDuration(JLjava/lang/StringBuilder;)V
 
-    .line 47
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -116,7 +106,6 @@
     .param p0, "time"    # J
 
     .prologue
-    .line 41
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -129,7 +118,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, " ("
+    const-string v1, " ("
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -139,7 +128,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, ")"
+    const-string v1, ")"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

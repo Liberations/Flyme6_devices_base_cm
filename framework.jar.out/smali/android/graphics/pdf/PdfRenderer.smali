@@ -105,36 +105,30 @@
     .end annotation
 
     .prologue
-    .line 139
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 102
     invoke-static {}, Ldalvik/system/CloseGuard;->get()Ldalvik/system/CloseGuard;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/graphics/pdf/PdfRenderer;->mCloseGuard:Ldalvik/system/CloseGuard;
 
-    .line 104
     new-instance v1, Landroid/graphics/Point;
 
     invoke-direct {v1}, Landroid/graphics/Point;-><init>()V
 
     iput-object v1, p0, Landroid/graphics/pdf/PdfRenderer;->mTempPoint:Landroid/graphics/Point;
 
-    .line 140
     if-nez p1, :cond_0
 
-    .line 141
     new-instance v1, Ljava/lang/NullPointerException;
 
-    const-string/jumbo v4, "input cannot be null"
+    const-string v4, "input cannot be null"
 
     invoke-direct {v1, v4}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 146
     :cond_0
     :try_start_0
     sget-object v1, Llibcore/io/Libcore;->os:Llibcore/io/Os;
@@ -149,7 +143,6 @@
 
     invoke-interface {v1, v4, v6, v7, v5}, Llibcore/io/Os;->lseek(Ljava/io/FileDescriptor;JI)J
 
-    .line 147
     sget-object v1, Llibcore/io/Libcore;->os:Llibcore/io/Os;
 
     invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
@@ -164,11 +157,9 @@
     :try_end_0
     .catch Landroid/system/ErrnoException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 152
     .local v2, "size":J
     iput-object p1, p0, Landroid/graphics/pdf/PdfRenderer;->mInput:Landroid/os/ParcelFileDescriptor;
 
-    .line 153
     iget-object v1, p0, Landroid/graphics/pdf/PdfRenderer;->mInput:Landroid/os/ParcelFileDescriptor;
 
     invoke-virtual {v1}, Landroid/os/ParcelFileDescriptor;->getFd()I
@@ -181,7 +172,6 @@
 
     iput-wide v4, p0, Landroid/graphics/pdf/PdfRenderer;->mNativeDocument:J
 
-    .line 154
     iget-wide v4, p0, Landroid/graphics/pdf/PdfRenderer;->mNativeDocument:J
 
     invoke-static {v4, v5}, Landroid/graphics/pdf/PdfRenderer;->nativeGetPageCount(J)I
@@ -190,26 +180,22 @@
 
     iput v1, p0, Landroid/graphics/pdf/PdfRenderer;->mPageCount:I
 
-    .line 155
     iget-object v1, p0, Landroid/graphics/pdf/PdfRenderer;->mCloseGuard:Ldalvik/system/CloseGuard;
 
-    const-string/jumbo v4, "close"
+    const-string v4, "close"
 
     invoke-virtual {v1, v4}, Ldalvik/system/CloseGuard;->open(Ljava/lang/String;)V
 
-    .line 139
     return-void
 
-    .line 148
     .end local v2    # "size":J
     :catch_0
     move-exception v0
 
-    .line 149
     .local v0, "ee":Landroid/system/ErrnoException;
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v4, "file descriptor not seekable"
+    const-string v4, "file descriptor not seekable"
 
     invoke-direct {v1, v4}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
@@ -222,23 +208,19 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 220
     iget-object v1, p0, Landroid/graphics/pdf/PdfRenderer;->mCurrentPage:Landroid/graphics/pdf/PdfRenderer$Page;
 
     if-eqz v1, :cond_0
 
-    .line 221
     iget-object v1, p0, Landroid/graphics/pdf/PdfRenderer;->mCurrentPage:Landroid/graphics/pdf/PdfRenderer$Page;
 
     invoke-virtual {v1}, Landroid/graphics/pdf/PdfRenderer$Page;->close()V
 
-    .line 223
     :cond_0
     iget-wide v2, p0, Landroid/graphics/pdf/PdfRenderer;->mNativeDocument:J
 
     invoke-static {v2, v3}, Landroid/graphics/pdf/PdfRenderer;->nativeClose(J)V
 
-    .line 225
     :try_start_0
     iget-object v1, p0, Landroid/graphics/pdf/PdfRenderer;->mInput:Landroid/os/ParcelFileDescriptor;
 
@@ -246,19 +228,15 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 229
     :goto_0
     iput-object v4, p0, Landroid/graphics/pdf/PdfRenderer;->mInput:Landroid/os/ParcelFileDescriptor;
 
-    .line 230
     iget-object v1, p0, Landroid/graphics/pdf/PdfRenderer;->mCloseGuard:Ldalvik/system/CloseGuard;
 
     invoke-virtual {v1}, Ldalvik/system/CloseGuard;->close()V
 
-    .line 219
     return-void
 
-    .line 226
     :catch_0
     move-exception v0
 
@@ -291,21 +269,18 @@
     .locals 2
 
     .prologue
-    .line 234
     iget-object v0, p0, Landroid/graphics/pdf/PdfRenderer;->mInput:Landroid/os/ParcelFileDescriptor;
 
     if-nez v0, :cond_0
 
-    .line 235
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v1, "Already closed"
+    const-string v1, "Already closed"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 233
     :cond_0
     return-void
 .end method
@@ -315,24 +290,21 @@
     .param p1, "pageIndex"    # I
 
     .prologue
-    .line 246
     if-ltz p1, :cond_0
 
     iget v0, p0, Landroid/graphics/pdf/PdfRenderer;->mPageCount:I
 
     if-lt p1, v0, :cond_1
 
-    .line 247
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "Invalid page index"
+    const-string v1, "Invalid page index"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 245
     :cond_1
     return-void
 .end method
@@ -341,21 +313,18 @@
     .locals 2
 
     .prologue
-    .line 240
     iget-object v0, p0, Landroid/graphics/pdf/PdfRenderer;->mCurrentPage:Landroid/graphics/pdf/PdfRenderer$Page;
 
     if-eqz v0, :cond_0
 
-    .line 241
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v1, "Current page not closed"
+    const-string v1, "Current page not closed"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 239
     :cond_0
     return-void
 .end method
@@ -366,16 +335,12 @@
     .locals 0
 
     .prologue
-    .line 163
     invoke-direct {p0}, Landroid/graphics/pdf/PdfRenderer;->throwIfClosed()V
 
-    .line 164
     invoke-direct {p0}, Landroid/graphics/pdf/PdfRenderer;->throwIfPageOpened()V
 
-    .line 165
     invoke-direct {p0}, Landroid/graphics/pdf/PdfRenderer;->doClose()V
 
-    .line 162
     return-void
 .end method
 
@@ -388,37 +353,29 @@
     .end annotation
 
     .prologue
-    .line 210
     :try_start_0
     iget-object v0, p0, Landroid/graphics/pdf/PdfRenderer;->mCloseGuard:Ldalvik/system/CloseGuard;
 
     invoke-virtual {v0}, Ldalvik/system/CloseGuard;->warnIfOpen()V
 
-    .line 211
     iget-object v0, p0, Landroid/graphics/pdf/PdfRenderer;->mInput:Landroid/os/ParcelFileDescriptor;
 
     if-eqz v0, :cond_0
 
-    .line 212
     invoke-direct {p0}, Landroid/graphics/pdf/PdfRenderer;->doClose()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 215
     :cond_0
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 208
     return-void
 
-    .line 214
     :catchall_0
     move-exception v0
 
-    .line 215
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 214
     throw v0
 .end method
 
@@ -426,10 +383,8 @@
     .locals 1
 
     .prologue
-    .line 174
     invoke-direct {p0}, Landroid/graphics/pdf/PdfRenderer;->throwIfClosed()V
 
-    .line 175
     iget v0, p0, Landroid/graphics/pdf/PdfRenderer;->mPageCount:I
 
     return v0
@@ -440,16 +395,12 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 200
     invoke-direct {p0}, Landroid/graphics/pdf/PdfRenderer;->throwIfClosed()V
 
-    .line 201
     invoke-direct {p0}, Landroid/graphics/pdf/PdfRenderer;->throwIfPageOpened()V
 
-    .line 202
     invoke-direct {p0, p1}, Landroid/graphics/pdf/PdfRenderer;->throwIfPageNotInDocument(I)V
 
-    .line 203
     new-instance v0, Landroid/graphics/pdf/PdfRenderer$Page;
 
     const/4 v1, 0x0
@@ -458,7 +409,6 @@
 
     iput-object v0, p0, Landroid/graphics/pdf/PdfRenderer;->mCurrentPage:Landroid/graphics/pdf/PdfRenderer$Page;
 
-    .line 204
     iget-object v0, p0, Landroid/graphics/pdf/PdfRenderer;->mCurrentPage:Landroid/graphics/pdf/PdfRenderer$Page;
 
     return-object v0
@@ -468,10 +418,8 @@
     .locals 2
 
     .prologue
-    .line 187
     invoke-direct {p0}, Landroid/graphics/pdf/PdfRenderer;->throwIfClosed()V
 
-    .line 188
     iget-wide v0, p0, Landroid/graphics/pdf/PdfRenderer;->mNativeDocument:J
 
     invoke-static {v0, v1}, Landroid/graphics/pdf/PdfRenderer;->nativeScaleForPrinting(J)Z

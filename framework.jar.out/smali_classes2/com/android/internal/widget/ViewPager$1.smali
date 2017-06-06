@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 123
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,7 +45,6 @@
     .param p2, "rhs"    # Lcom/android/internal/widget/ViewPager$ItemInfo;
 
     .prologue
-    .line 126
     iget v0, p1, Lcom/android/internal/widget/ViewPager$ItemInfo;->position:I
 
     iget v1, p2, Lcom/android/internal/widget/ViewPager$ItemInfo;->position:I
@@ -62,7 +60,6 @@
     .param p2, "rhs"    # Ljava/lang/Object;
 
     .prologue
-    .line 125
     check-cast p1, Lcom/android/internal/widget/ViewPager$ItemInfo;
 
     .end local p1    # "lhs":Ljava/lang/Object;

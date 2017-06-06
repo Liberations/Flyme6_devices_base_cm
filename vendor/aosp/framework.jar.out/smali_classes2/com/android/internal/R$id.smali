@@ -75,11 +75,11 @@
 
 .field public static final alwaysUse:I = 0x1020307
 
-.field public static final amPm:I = 0x1020401
+.field public static final amPm:I = 0x1020403
 
-.field public static final am_label:I = 0x10203fc
+.field public static final am_label:I = 0x10203fe
 
-.field public static final ampm_layout:I = 0x10203fb
+.field public static final ampm_layout:I = 0x10203fd
 
 .field public static final animator:I = 0x102032a
 
@@ -91,7 +91,7 @@
 
 .field public static final background:I = 0x1020000
 
-.field public static final banner:I = 0x1020410
+.field public static final banner:I = 0x1020412
 
 .field public static final big_picture:I = 0x1020379
 
@@ -125,11 +125,11 @@
 
 .field public static final button_once:I = 0x10203ad
 
-.field public static final by_common:I = 0x10203e3
+.field public static final by_common:I = 0x10203e5
 
-.field public static final by_org:I = 0x10203e5
+.field public static final by_org:I = 0x10203e7
 
-.field public static final by_org_unit:I = 0x10203e7
+.field public static final by_org_unit:I = 0x10203e9
 
 .field public static final calendar_view:I = 0x1020328
 
@@ -195,7 +195,7 @@
 
 .field public static final description:I = 0x102030c
 
-.field public static final divider:I = 0x1020402
+.field public static final divider:I = 0x1020404
 
 .field public static final edit:I = 0x1020003
 
@@ -203,15 +203,15 @@
 
 .field public static final edittext_container:I = 0x1020399
 
-.field public static final eight:I = 0x102040c
+.field public static final eight:I = 0x102040e
 
 .field public static final empty:I = 0x1020004
 
-.field public static final enter_pin_section:I = 0x1020416
+.field public static final enter_pin_section:I = 0x1020418
 
 .field public static final expand_activities_button:I = 0x10202f2
 
-.field public static final expires_on:I = 0x10203ec
+.field public static final expires_on:I = 0x10203ee
 
 .field public static final extractArea:I = 0x102001c
 
@@ -221,17 +221,17 @@
 
 .field public static final filtered_item_container:I = 0x10203af
 
-.field public static final find:I = 0x1020427
+.field public static final find:I = 0x1020429
 
-.field public static final find_next:I = 0x102042a
+.field public static final find_next:I = 0x102042c
 
-.field public static final find_prev:I = 0x1020429
+.field public static final find_prev:I = 0x102042b
 
-.field public static final five:I = 0x1020409
+.field public static final five:I = 0x102040b
 
 .field public static final floating_toolbar_menu_item_image_button:I = 0x1020054
 
-.field public static final four:I = 0x1020408
+.field public static final four:I = 0x102040a
 
 .field public static final fullscreenArea:I = 0x1020351
 
@@ -245,9 +245,9 @@
 
 .field public static final home:I = 0x102002c
 
-.field public static final hour:I = 0x10203ff
+.field public static final hour:I = 0x1020401
 
-.field public static final hours:I = 0x10203f8
+.field public static final hours:I = 0x10203fa
 
 .field public static final icon:I = 0x1020006
 
@@ -295,7 +295,7 @@
 
 .field public static final internalEmpty:I = 0x102035f
 
-.field public static final issued_on:I = 0x10203ea
+.field public static final issued_on:I = 0x10203ec
 
 .field public static final keyboard:I = 0x10202b9
 
@@ -325,7 +325,7 @@
 
 .field public static final mask:I = 0x102002e
 
-.field public static final matches:I = 0x1020415
+.field public static final matches:I = 0x1020417
 
 .field public static final media_actions:I = 0x1020378
 
@@ -345,11 +345,11 @@
 
 .field public static final message:I = 0x102000b
 
-.field public static final minute:I = 0x1020400
+.field public static final minute:I = 0x1020402
 
-.field public static final minutes:I = 0x10203fa
+.field public static final minutes:I = 0x10203fc
 
-.field public static final mode_normal:I = 0x102041f
+.field public static final mode_normal:I = 0x1020421
 
 .field public static final month:I = 0x1020325
 
@@ -357,9 +357,9 @@
 
 .field public static final month_view:I = 0x1020329
 
-.field public static final mount_button:I = 0x1020411
+.field public static final mount_button:I = 0x1020413
 
-.field public static final name:I = 0x1020418
+.field public static final name:I = 0x102041a
 
 .field public static final navigationBarBackground:I = 0x1020030
 
@@ -373,7 +373,7 @@
 
 .field public static final next_button:I = 0x10203a2
 
-.field public static final nine:I = 0x102040d
+.field public static final nine:I = 0x102040f
 
 .field public static final no_applications_message:I = 0x10203a5
 
@@ -391,7 +391,7 @@
 
 .field public static final old_app_icon:I = 0x1020343
 
-.field public static final one:I = 0x1020405
+.field public static final one:I = 0x1020407
 
 .field public static final option1:I = 0x1020334
 
@@ -457,9 +457,9 @@
 
 .field public static final pin_text:I = 0x10203b0
 
-.field public static final placeholder:I = 0x10203d7
+.field public static final placeholder:I = 0x10203d9
 
-.field public static final pm_label:I = 0x10203fd
+.field public static final pm_label:I = 0x10203ff
 
 .field public static final prefs:I = 0x102039e
 
@@ -489,7 +489,7 @@
 
 .field public static final progress_percent:I = 0x1020305
 
-.field public static final radial_picker:I = 0x1020403
+.field public static final radial_picker:I = 0x1020405
 
 .field public static final radio:I = 0x1020356
 
@@ -549,39 +549,43 @@
 
 .field public static final selectTextMode:I = 0x102002d
 
-.field public static final select_all:I = 0x1020425
+.field public static final select_all:I = 0x1020427
 
 .field public static final selectedIcon:I = 0x102000e
 
-.field public static final separator:I = 0x10203f9
+.field public static final separator:I = 0x10203fb
 
-.field public static final serial_number:I = 0x10203e1
+.field public static final serial_number:I = 0x10203e3
 
-.field public static final seven:I = 0x102040b
+.field public static final seven:I = 0x102040d
 
-.field public static final sha1_fingerprint:I = 0x10203f1
+.field public static final sha1_fingerprint:I = 0x10203f3
 
-.field public static final sha256_fingerprint:I = 0x10203ef
+.field public static final sha256_fingerprint:I = 0x10203f1
 
-.field public static final share:I = 0x1020426
+.field public static final share:I = 0x1020428
 
 .field public static final shareText:I = 0x1020035
 
 .field public static final shortcut:I = 0x1020360
 
-.field public static final six:I = 0x102040a
+.field public static final six:I = 0x102040c
 
 .field public static final skip_button:I = 0x10203a1
 
-.field public static final sms_short_code_confirm_message:I = 0x10203d0
+.field public static final sm_color_layout:I = 0x10203d0
 
-.field public static final sms_short_code_detail_layout:I = 0x10203d1
+.field public static final sm_dlg_title:I = 0x10203d1
 
-.field public static final sms_short_code_detail_message:I = 0x10203d3
+.field public static final sms_short_code_confirm_message:I = 0x10203d2
 
-.field public static final sms_short_code_remember_choice_checkbox:I = 0x10203d4
+.field public static final sms_short_code_detail_layout:I = 0x10203d3
 
-.field public static final sms_short_code_remember_undo_instruction:I = 0x10203d6
+.field public static final sms_short_code_detail_message:I = 0x10203d5
+
+.field public static final sms_short_code_remember_choice_checkbox:I = 0x10203d6
+
+.field public static final sms_short_code_remember_undo_instruction:I = 0x10203d8
 
 .field public static final spacer:I = 0x1020301
 
@@ -625,17 +629,17 @@
 
 .field public static final textSpacerNoButtons:I = 0x1020304
 
-.field public static final three:I = 0x1020407
+.field public static final three:I = 0x1020409
 
 .field public static final time:I = 0x102008c
 
-.field public static final timePicker:I = 0x10203f6
+.field public static final timePicker:I = 0x10203f8
 
-.field public static final timePickerLayout:I = 0x10203fe
+.field public static final timePickerLayout:I = 0x1020400
 
 .field public static final time_current:I = 0x1020364
 
-.field public static final time_header:I = 0x10203f7
+.field public static final time_header:I = 0x10203f9
 
 .field public static final title:I = 0x1020016
 
@@ -649,11 +653,11 @@
 
 .field public static final title_template:I = 0x10202f8
 
-.field public static final to_common:I = 0x10203db
+.field public static final to_common:I = 0x10203dd
 
-.field public static final to_org:I = 0x10203dd
+.field public static final to_org:I = 0x10203df
 
-.field public static final to_org_unit:I = 0x10203df
+.field public static final to_org_unit:I = 0x10203e1
 
 .field public static final toggle:I = 0x1020017
 
@@ -663,33 +667,33 @@
 
 .field public static final transitionTransform:I = 0x1020052
 
-.field public static final two:I = 0x1020406
+.field public static final two:I = 0x1020408
 
 .field public static final undo:I = 0x1020032
 
-.field public static final unmount_button:I = 0x1020412
+.field public static final unmount_button:I = 0x1020414
 
 .field public static final up:I = 0x1020047
 
 .field public static final value:I = 0x1020357
 
-.field public static final websearch:I = 0x1020428
+.field public static final websearch:I = 0x102042a
 
 .field public static final widget_frame:I = 0x1020018
 
-.field public static final wifi_p2p_wps_pin:I = 0x1020417
+.field public static final wifi_p2p_wps_pin:I = 0x1020419
 
 .field public static final year:I = 0x1020327
 
-.field public static final zero:I = 0x102040e
+.field public static final zero:I = 0x1020410
 
-.field public static final zoomControls:I = 0x102041b
+.field public static final zoomControls:I = 0x102041d
 
-.field public static final zoomIn:I = 0x102041d
+.field public static final zoomIn:I = 0x102041f
 
-.field public static final zoomMagnify:I = 0x102041e
+.field public static final zoomMagnify:I = 0x1020420
 
-.field public static final zoomOut:I = 0x102041c
+.field public static final zoomOut:I = 0x102041e
 
 
 # direct methods
@@ -697,7 +701,6 @@
     .locals 0
 
     .prologue
-    .line 16406
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

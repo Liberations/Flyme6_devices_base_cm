@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcyanogenmod/externalviews/ExternalViewProviderService;
 
     .prologue
-    .line 62
     iput-object p1, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$1;->this$0:Lcyanogenmod/externalviews/ExternalViewProviderService;
 
     invoke-direct {p0}, Lcyanogenmod/externalviews/IExternalViewProviderFactory$Stub;-><init>()V
@@ -39,7 +38,6 @@
     .param p1, "options"    # Landroid/os/Bundle;
 
     .prologue
-    .line 64
     new-instance v0, Ljava/util/concurrent/FutureTask;
 
     new-instance v2, Lcyanogenmod/externalviews/ExternalViewProviderService$1$1;
@@ -48,7 +46,6 @@
 
     invoke-direct {v0, v2}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/util/concurrent/Callable;)V
 
-    .line 70
     .local v0, "c":Ljava/util/concurrent/FutureTask;, "Ljava/util/concurrent/FutureTask<Landroid/os/IBinder;>;"
     iget-object v2, p0, Lcyanogenmod/externalviews/ExternalViewProviderService$1;->this$0:Lcyanogenmod/externalviews/ExternalViewProviderService;
 
@@ -58,7 +55,6 @@
 
     invoke-virtual {v2, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 72
     :try_start_0
     invoke-virtual {v0}, Ljava/util/concurrent/FutureTask;->get()Ljava/lang/Object;
 
@@ -71,19 +67,16 @@
 
     return-object v2
 
-    .line 73
     :catch_0
     move-exception v1
 
-    .line 74
     .local v1, "e":Ljava/lang/Exception;
-    const-string/jumbo v2, "ExternalViewProvider"
+    const-string v2, "ExternalViewProvider"
 
-    const-string/jumbo v3, "error: "
+    const-string v3, "error: "
 
     invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 75
     const/4 v2, 0x0
 
     return-object v2

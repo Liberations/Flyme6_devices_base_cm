@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/internal/telephony/SubscriptionInfoUpdater;
 
     .prologue
-    .line 151
     iput-object p1, p0, Lcom/android/internal/telephony/SubscriptionInfoUpdater$2;->this$0:Lcom/android/internal/telephony/SubscriptionInfoUpdater;
 
     invoke-direct {p0}, Landroid/app/IUserSwitchObserver$Stub;-><init>()V
@@ -44,7 +43,6 @@
     .end annotation
 
     .prologue
-    .line 173
     return-void
 .end method
 
@@ -53,7 +51,6 @@
     .param p1, "newUserId"    # I
 
     .prologue
-    .line 168
     return-void
 .end method
 
@@ -68,12 +65,10 @@
     .end annotation
 
     .prologue
-    .line 155
     iget-object v1, p0, Lcom/android/internal/telephony/SubscriptionInfoUpdater$2;->this$0:Lcom/android/internal/telephony/SubscriptionInfoUpdater;
 
     invoke-static {v1, p1}, Lcom/android/internal/telephony/SubscriptionInfoUpdater;->-set0(Lcom/android/internal/telephony/SubscriptionInfoUpdater;I)I
 
-    .line 156
     invoke-static {}, Lcom/android/internal/telephony/SubscriptionInfoUpdater;->-get0()Landroid/content/Context;
 
     move-result-object v1
@@ -82,7 +77,6 @@
 
     move-result-object v1
 
-    .line 157
     iget-object v2, p0, Lcom/android/internal/telephony/SubscriptionInfoUpdater$2;->this$0:Lcom/android/internal/telephony/SubscriptionInfoUpdater;
 
     invoke-static {v2}, Lcom/android/internal/telephony/SubscriptionInfoUpdater;->-get3(Lcom/android/internal/telephony/SubscriptionInfoUpdater;)Landroid/content/pm/IPackageManager;
@@ -99,13 +93,10 @@
 
     move-result v4
 
-    .line 156
     invoke-static {v1, v2, v3, v4}, Lcom/android/internal/telephony/CarrierAppUtils;->disableCarrierAppsUntilPrivileged(Ljava/lang/String;Landroid/content/pm/IPackageManager;Landroid/telephony/TelephonyManager;I)V
 
-    .line 159
     if-eqz p2, :cond_0
 
-    .line 161
     const/4 v1, 0x0
 
     :try_start_0
@@ -113,12 +104,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 154
     :cond_0
     :goto_0
     return-void
 
-    .line 162
     :catch_0
     move-exception v0
 

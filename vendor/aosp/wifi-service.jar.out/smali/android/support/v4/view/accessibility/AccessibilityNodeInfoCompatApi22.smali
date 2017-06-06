@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,7 +18,6 @@
     .param p0, "info"    # Ljava/lang/Object;
 
     .prologue
-    .line 40
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     .end local p0    # "info":Ljava/lang/Object;
@@ -35,7 +33,6 @@
     .param p0, "info"    # Ljava/lang/Object;
 
     .prologue
-    .line 28
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     .end local p0    # "info":Ljava/lang/Object;
@@ -52,13 +49,11 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 44
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     .end local p0    # "info":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setTraversalAfter(Landroid/view/View;)V
 
-    .line 43
     return-void
 .end method
 
@@ -69,13 +64,11 @@
     .param p2, "virtualDescendantId"    # I
 
     .prologue
-    .line 48
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     .end local p0    # "info":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2}, Landroid/view/accessibility/AccessibilityNodeInfo;->setTraversalAfter(Landroid/view/View;I)V
 
-    .line 47
     return-void
 .end method
 
@@ -85,13 +78,11 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 32
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     .end local p0    # "info":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setTraversalBefore(Landroid/view/View;)V
 
-    .line 31
     return-void
 .end method
 
@@ -102,12 +93,10 @@
     .param p2, "virtualDescendantId"    # I
 
     .prologue
-    .line 36
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     .end local p0    # "info":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2}, Landroid/view/accessibility/AccessibilityNodeInfo;->setTraversalBefore(Landroid/view/View;I)V
 
-    .line 35
     return-void
 .end method

@@ -151,6 +151,7 @@
     <string name="time_of_day" formatted="false">%p %I:%M:%S</string>
     <string name="date_and_time" formatted="false">%Y 年 %-m 月 %-e 日%p %I:%M:%S</string>
     <string name="date_time">%1$s %2$s</string>
+    <string name="android_installing_apk_complete">SudaMod升级完成，祝您玩机愉快，天天好心情！</string>
     <string name="byteShort">B</string>
     <string name="kilobyteShort">KB</string>
     <string name="megabyteShort">MB</string>

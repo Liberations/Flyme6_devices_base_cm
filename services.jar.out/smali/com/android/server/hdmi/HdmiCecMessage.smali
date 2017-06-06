@@ -22,12 +22,10 @@
     .locals 1
 
     .prologue
-    .line 29
     sget-object v0, Llibcore/util/EmptyArray;->BYTE:[B
 
     sput-object v0, Lcom/android/server/hdmi/HdmiCecMessage;->EMPTY_PARAM:[B
 
-    .line 28
     return-void
 .end method
 
@@ -39,21 +37,16 @@
     .param p4, "params"    # [B
 
     .prologue
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     iput p1, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mSource:I
 
-    .line 42
     iput p2, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mDestination:I
 
-    .line 43
     and-int/lit16 v0, p3, 0xff
 
     iput v0, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mOpcode:I
 
-    .line 44
     array-length v0, p4
 
     invoke-static {p4, v0}, Ljava/util/Arrays;->copyOf([BI)[B
@@ -62,7 +55,6 @@
 
     iput-object v0, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mParams:[B
 
-    .line 40
     return-void
 .end method
 
@@ -71,11 +63,9 @@
     .param p0, "opcode"    # I
 
     .prologue
-    .line 103
     sparse-switch p0, :sswitch_data_0
 
-    .line 247
-    const-string/jumbo v0, "Opcode: %02X"
+    const-string v0, "Opcode: %02X"
 
     const/4 v1, 0x1
 
@@ -95,433 +85,361 @@
 
     return-object v0
 
-    .line 105
     :sswitch_0
-    const-string/jumbo v0, "Feature Abort"
+    const-string v0, "Feature Abort"
 
     return-object v0
 
-    .line 107
     :sswitch_1
-    const-string/jumbo v0, "Image View On"
+    const-string v0, "Image View On"
 
     return-object v0
 
-    .line 109
     :sswitch_2
-    const-string/jumbo v0, "Tuner Step Increment"
+    const-string v0, "Tuner Step Increment"
 
     return-object v0
 
-    .line 111
     :sswitch_3
-    const-string/jumbo v0, "Tuner Step Decrement"
+    const-string v0, "Tuner Step Decrement"
 
     return-object v0
 
-    .line 113
     :sswitch_4
-    const-string/jumbo v0, "Tuner Device Staus"
+    const-string v0, "Tuner Device Staus"
 
     return-object v0
 
-    .line 115
     :sswitch_5
-    const-string/jumbo v0, "Give Tuner Device Status"
+    const-string v0, "Give Tuner Device Status"
 
     return-object v0
 
-    .line 117
     :sswitch_6
-    const-string/jumbo v0, "Record On"
+    const-string v0, "Record On"
 
     return-object v0
 
-    .line 119
     :sswitch_7
-    const-string/jumbo v0, "Record Status"
+    const-string v0, "Record Status"
 
     return-object v0
 
-    .line 121
     :sswitch_8
-    const-string/jumbo v0, "Record Off"
+    const-string v0, "Record Off"
 
     return-object v0
 
-    .line 123
     :sswitch_9
-    const-string/jumbo v0, "Text View On"
+    const-string v0, "Text View On"
 
     return-object v0
 
-    .line 125
     :sswitch_a
-    const-string/jumbo v0, "Record Tv Screen"
+    const-string v0, "Record Tv Screen"
 
     return-object v0
 
-    .line 127
     :sswitch_b
-    const-string/jumbo v0, "Give Deck Status"
+    const-string v0, "Give Deck Status"
 
     return-object v0
 
-    .line 129
     :sswitch_c
-    const-string/jumbo v0, "Deck Status"
+    const-string v0, "Deck Status"
 
     return-object v0
 
-    .line 131
     :sswitch_d
-    const-string/jumbo v0, "Set Menu Language"
+    const-string v0, "Set Menu Language"
 
     return-object v0
 
-    .line 133
     :sswitch_e
-    const-string/jumbo v0, "Clear Analog Timer"
+    const-string v0, "Clear Analog Timer"
 
     return-object v0
 
-    .line 135
     :sswitch_f
-    const-string/jumbo v0, "Set Analog Timer"
+    const-string v0, "Set Analog Timer"
 
     return-object v0
 
-    .line 137
     :sswitch_10
-    const-string/jumbo v0, "Timer Status"
+    const-string v0, "Timer Status"
 
     return-object v0
 
-    .line 139
     :sswitch_11
-    const-string/jumbo v0, "Standby"
+    const-string v0, "Standby"
 
     return-object v0
 
-    .line 141
     :sswitch_12
-    const-string/jumbo v0, "Play"
+    const-string v0, "Play"
 
     return-object v0
 
-    .line 143
     :sswitch_13
-    const-string/jumbo v0, "Deck Control"
+    const-string v0, "Deck Control"
 
     return-object v0
 
-    .line 145
     :sswitch_14
-    const-string/jumbo v0, "Timer Cleared Status"
+    const-string v0, "Timer Cleared Status"
 
     return-object v0
 
-    .line 147
     :sswitch_15
-    const-string/jumbo v0, "User Control Pressed"
+    const-string v0, "User Control Pressed"
 
     return-object v0
 
-    .line 149
     :sswitch_16
-    const-string/jumbo v0, "User Control Release"
+    const-string v0, "User Control Release"
 
     return-object v0
 
-    .line 151
     :sswitch_17
-    const-string/jumbo v0, "Give Osd Name"
+    const-string v0, "Give Osd Name"
 
     return-object v0
 
-    .line 153
     :sswitch_18
-    const-string/jumbo v0, "Set Osd Name"
+    const-string v0, "Set Osd Name"
 
     return-object v0
 
-    .line 155
     :sswitch_19
-    const-string/jumbo v0, "Set Osd String"
+    const-string v0, "Set Osd String"
 
     return-object v0
 
-    .line 157
     :sswitch_1a
-    const-string/jumbo v0, "Set Timer Program Title"
+    const-string v0, "Set Timer Program Title"
 
     return-object v0
 
-    .line 159
     :sswitch_1b
-    const-string/jumbo v0, "System Audio Mode Request"
+    const-string v0, "System Audio Mode Request"
 
     return-object v0
 
-    .line 161
     :sswitch_1c
-    const-string/jumbo v0, "Give Audio Status"
+    const-string v0, "Give Audio Status"
 
     return-object v0
 
-    .line 163
     :sswitch_1d
-    const-string/jumbo v0, "Set System Audio Mode"
+    const-string v0, "Set System Audio Mode"
 
     return-object v0
 
-    .line 165
     :sswitch_1e
-    const-string/jumbo v0, "Report Audio Status"
+    const-string v0, "Report Audio Status"
 
     return-object v0
 
-    .line 167
     :sswitch_1f
-    const-string/jumbo v0, "Give System Audio Mode Status"
+    const-string v0, "Give System Audio Mode Status"
 
     return-object v0
 
-    .line 169
     :sswitch_20
-    const-string/jumbo v0, "System Audio Mode Status"
+    const-string v0, "System Audio Mode Status"
 
     return-object v0
 
-    .line 171
     :sswitch_21
-    const-string/jumbo v0, "Routing Change"
+    const-string v0, "Routing Change"
 
     return-object v0
 
-    .line 173
     :sswitch_22
-    const-string/jumbo v0, "Routing Information"
+    const-string v0, "Routing Information"
 
     return-object v0
 
-    .line 175
     :sswitch_23
-    const-string/jumbo v0, "Active Source"
+    const-string v0, "Active Source"
 
     return-object v0
 
-    .line 177
     :sswitch_24
-    const-string/jumbo v0, "Give Physical Address"
+    const-string v0, "Give Physical Address"
 
     return-object v0
 
-    .line 179
     :sswitch_25
-    const-string/jumbo v0, "Report Physical Address"
+    const-string v0, "Report Physical Address"
 
     return-object v0
 
-    .line 181
     :sswitch_26
-    const-string/jumbo v0, "Request Active Source"
+    const-string v0, "Request Active Source"
 
     return-object v0
 
-    .line 183
     :sswitch_27
-    const-string/jumbo v0, "Set Stream Path"
+    const-string v0, "Set Stream Path"
 
     return-object v0
 
-    .line 185
     :sswitch_28
-    const-string/jumbo v0, "Device Vendor Id"
+    const-string v0, "Device Vendor Id"
 
     return-object v0
 
-    .line 187
     :sswitch_29
-    const-string/jumbo v0, "Vendor Commandn"
+    const-string v0, "Vendor Commandn"
 
     return-object v0
 
-    .line 189
     :sswitch_2a
-    const-string/jumbo v0, "Vendor Remote Button Down"
+    const-string v0, "Vendor Remote Button Down"
 
     return-object v0
 
-    .line 191
     :sswitch_2b
-    const-string/jumbo v0, "Vendor Remote Button Up"
+    const-string v0, "Vendor Remote Button Up"
 
     return-object v0
 
-    .line 193
     :sswitch_2c
-    const-string/jumbo v0, "Give Device Vendor Id"
+    const-string v0, "Give Device Vendor Id"
 
     return-object v0
 
-    .line 195
     :sswitch_2d
-    const-string/jumbo v0, "Menu REquest"
+    const-string v0, "Menu REquest"
 
     return-object v0
 
-    .line 197
     :sswitch_2e
-    const-string/jumbo v0, "Menu Status"
+    const-string v0, "Menu Status"
 
     return-object v0
 
-    .line 199
     :sswitch_2f
-    const-string/jumbo v0, "Give Device Power Status"
+    const-string v0, "Give Device Power Status"
 
     return-object v0
 
-    .line 201
     :sswitch_30
-    const-string/jumbo v0, "Report Power Status"
+    const-string v0, "Report Power Status"
 
     return-object v0
 
-    .line 203
     :sswitch_31
-    const-string/jumbo v0, "Get Menu Language"
+    const-string v0, "Get Menu Language"
 
     return-object v0
 
-    .line 205
     :sswitch_32
-    const-string/jumbo v0, "Select Analog Service"
+    const-string v0, "Select Analog Service"
 
     return-object v0
 
-    .line 207
     :sswitch_33
-    const-string/jumbo v0, "Select Digital Service"
+    const-string v0, "Select Digital Service"
 
     return-object v0
 
-    .line 209
     :sswitch_34
-    const-string/jumbo v0, "Set Digital Timer"
+    const-string v0, "Set Digital Timer"
 
     return-object v0
 
-    .line 211
     :sswitch_35
-    const-string/jumbo v0, "Clear Digital Timer"
+    const-string v0, "Clear Digital Timer"
 
     return-object v0
 
-    .line 213
     :sswitch_36
-    const-string/jumbo v0, "Set Audio Rate"
+    const-string v0, "Set Audio Rate"
 
     return-object v0
 
-    .line 215
     :sswitch_37
-    const-string/jumbo v0, "InActive Source"
+    const-string v0, "InActive Source"
 
     return-object v0
 
-    .line 217
     :sswitch_38
-    const-string/jumbo v0, "Cec Version"
+    const-string v0, "Cec Version"
 
     return-object v0
 
-    .line 219
     :sswitch_39
-    const-string/jumbo v0, "Get Cec Version"
+    const-string v0, "Get Cec Version"
 
     return-object v0
 
-    .line 221
     :sswitch_3a
-    const-string/jumbo v0, "Vendor Command With Id"
+    const-string v0, "Vendor Command With Id"
 
     return-object v0
 
-    .line 223
     :sswitch_3b
-    const-string/jumbo v0, "Clear External Timer"
+    const-string v0, "Clear External Timer"
 
     return-object v0
 
-    .line 225
     :sswitch_3c
-    const-string/jumbo v0, "Set External Timer"
+    const-string v0, "Set External Timer"
 
     return-object v0
 
-    .line 227
     :sswitch_3d
-    const-string/jumbo v0, "Repot Short Audio Descriptor"
+    const-string v0, "Repot Short Audio Descriptor"
 
     return-object v0
 
-    .line 229
     :sswitch_3e
-    const-string/jumbo v0, "Request Short Audio Descriptor"
+    const-string v0, "Request Short Audio Descriptor"
 
     return-object v0
 
-    .line 231
     :sswitch_3f
-    const-string/jumbo v0, "Initiate ARC"
+    const-string v0, "Initiate ARC"
 
     return-object v0
 
-    .line 233
     :sswitch_40
-    const-string/jumbo v0, "Report ARC Initiated"
+    const-string v0, "Report ARC Initiated"
 
     return-object v0
 
-    .line 235
     :sswitch_41
-    const-string/jumbo v0, "Report ARC Terminated"
+    const-string v0, "Report ARC Terminated"
 
     return-object v0
 
-    .line 237
     :sswitch_42
-    const-string/jumbo v0, "Request ARC Initiation"
+    const-string v0, "Request ARC Initiation"
 
     return-object v0
 
-    .line 239
     :sswitch_43
-    const-string/jumbo v0, "Request ARC Termination"
+    const-string v0, "Request ARC Termination"
 
     return-object v0
 
-    .line 241
     :sswitch_44
-    const-string/jumbo v0, "Terminate ARC"
+    const-string v0, "Terminate ARC"
 
     return-object v0
 
-    .line 243
     :sswitch_45
-    const-string/jumbo v0, "Cdc Message"
+    const-string v0, "Cdc Message"
 
     return-object v0
 
-    .line 245
     :sswitch_46
-    const-string/jumbo v0, "Abort"
+    const-string v0, "Abort"
 
     return-object v0
 
-    .line 103
     nop
 
     :sswitch_data_0
@@ -606,7 +524,6 @@
     .locals 1
 
     .prologue
-    .line 64
     iget v0, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mDestination:I
 
     return v0
@@ -616,7 +533,6 @@
     .locals 1
 
     .prologue
-    .line 74
     iget v0, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mOpcode:I
 
     return v0
@@ -626,7 +542,6 @@
     .locals 1
 
     .prologue
-    .line 85
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mParams:[B
 
     return-object v0
@@ -636,7 +551,6 @@
     .locals 1
 
     .prologue
-    .line 54
     iget v0, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mSource:I
 
     return v0
@@ -650,20 +564,17 @@
 
     const/4 v3, 0x0
 
-    .line 90
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 91
     .local v1, "s":Ljava/lang/StringBuffer;
-    const-string/jumbo v2, "<%s> src: %d, dst: %d"
+    const-string v2, "<%s> src: %d, dst: %d"
 
     const/4 v4, 0x3
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    .line 92
     iget v5, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mOpcode:I
 
     invoke-static {v5}, Lcom/android/server/hdmi/HdmiCecMessage;->opcodeToString(I)Ljava/lang/String;
@@ -690,26 +601,22 @@
 
     aput-object v5, v4, v6
 
-    .line 91
     invoke-static {v2, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 93
     iget-object v2, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mParams:[B
 
     array-length v2, v2
 
     if-lez v2, :cond_0
 
-    .line 94
-    const-string/jumbo v2, ", params:"
+    const-string v2, ", params:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 95
     iget-object v4, p0, Lcom/android/server/hdmi/HdmiCecMessage;->mParams:[B
 
     array-length v5, v4
@@ -721,9 +628,8 @@
 
     aget-byte v0, v4, v2
 
-    .line 96
     .local v0, "data":B
-    const-string/jumbo v6, " %02X"
+    const-string v6, " %02X"
 
     new-array v7, v9, [Ljava/lang/Object;
 
@@ -739,12 +645,10 @@
 
     invoke-virtual {v1, v6}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 95
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 99
     .end local v0    # "data":B
     :cond_0
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;

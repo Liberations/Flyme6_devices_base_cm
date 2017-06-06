@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 806
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 808
     new-instance v0, Landroid/widget/AdapterViewAnimator$SavedState;
 
     const/4 v1, 0x0
@@ -60,7 +58,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 807
     invoke-virtual {p0, p1}, Landroid/widget/AdapterViewAnimator$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Landroid/widget/AdapterViewAnimator$SavedState;
 
     move-result-object v0
@@ -73,7 +70,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 812
     new-array v0, p1, [Landroid/widget/AdapterViewAnimator$SavedState;
 
     return-object v0
@@ -84,7 +80,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 811
     invoke-virtual {p0, p1}, Landroid/widget/AdapterViewAnimator$SavedState$1;->newArray(I)[Landroid/widget/AdapterViewAnimator$SavedState;
 
     move-result-object v0

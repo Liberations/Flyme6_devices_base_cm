@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,7 +34,6 @@
     .param p1, "textView"    # Landroid/widget/TextView;
 
     .prologue
-    .line 72
     invoke-static {p1}, Landroid/support/v4/widget/TextViewCompatDonut;->getMaxLines(Landroid/widget/TextView;)I
 
     move-result v0
@@ -48,7 +46,6 @@
     .param p1, "textView"    # Landroid/widget/TextView;
 
     .prologue
-    .line 77
     invoke-static {p1}, Landroid/support/v4/widget/TextViewCompatDonut;->getMinLines(Landroid/widget/TextView;)I
 
     move-result v0
@@ -80,10 +77,8 @@
     .end param
 
     .prologue
-    .line 54
     invoke-virtual {p1, p2, p3, p4, p5}, Landroid/widget/TextView;->setCompoundDrawables(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 53
     return-void
 .end method
 
@@ -99,10 +94,8 @@
     .param p5, "bottom"    # I
 
     .prologue
-    .line 67
     invoke-virtual {p1, p2, p3, p4, p5}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(IIII)V
 
-    .line 66
     return-void
 .end method
 
@@ -130,10 +123,8 @@
     .end param
 
     .prologue
-    .line 61
     invoke-virtual {p1, p2, p3, p4, p5}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 60
     return-void
 .end method
 
@@ -143,9 +134,7 @@
     .param p2, "resId"    # I
 
     .prologue
-    .line 82
     invoke-static {p1, p2}, Landroid/support/v4/widget/TextViewCompatDonut;->setTextAppearance(Landroid/widget/TextView;I)V
 
-    .line 81
     return-void
 .end method

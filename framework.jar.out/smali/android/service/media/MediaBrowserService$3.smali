@@ -43,7 +43,6 @@
     .param p5, "val$connection"    # Landroid/service/media/MediaBrowserService$ConnectionRecord;
 
     .prologue
-    .line 469
     iput-object p2, p0, Landroid/service/media/MediaBrowserService$3;->this$0:Landroid/service/media/MediaBrowserService;
 
     iput-object p4, p0, Landroid/service/media/MediaBrowserService$3;->val$parentId:Ljava/lang/String;
@@ -62,7 +61,6 @@
     .param p1, "list"    # Ljava/lang/Object;
 
     .prologue
-    .line 471
     check-cast p1, Ljava/util/List;
 
     .end local p1    # "list":Ljava/lang/Object;
@@ -84,27 +82,23 @@
     .end annotation
 
     .prologue
-    .line 472
     .local p1, "list":Ljava/util/List;, "Ljava/util/List<Landroid/media/browse/MediaBrowser$MediaItem;>;"
     if-nez p1, :cond_0
 
-    .line 473
     new-instance v2, Ljava/lang/IllegalStateException;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "onLoadChildren sent null list for id "
+    const-string v4, "onLoadChildren sent null list for id "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 474
     iget-object v4, p0, Landroid/service/media/MediaBrowserService$3;->val$parentId:Ljava/lang/String;
 
-    .line 473
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
@@ -117,7 +111,6 @@
 
     throw v2
 
-    .line 476
     :cond_0
     iget-object v2, p0, Landroid/service/media/MediaBrowserService$3;->this$0:Landroid/service/media/MediaBrowserService;
 
@@ -141,16 +134,13 @@
 
     if-eq v2, v3, :cond_1
 
-    .line 481
     return-void
 
-    .line 484
     :cond_1
     new-instance v1, Landroid/content/pm/ParceledListSlice;
 
     invoke-direct {v1, p1}, Landroid/content/pm/ParceledListSlice;-><init>(Ljava/util/List;)V
 
-    .line 486
     .local v1, "pls":Landroid/content/pm/ParceledListSlice;, "Landroid/content/pm/ParceledListSlice<Landroid/media/browse/MediaBrowser$MediaItem;>;"
     :try_start_0
     iget-object v2, p0, Landroid/service/media/MediaBrowserService$3;->val$connection:Landroid/service/media/MediaBrowserService$ConnectionRecord;
@@ -163,23 +153,20 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 471
     :goto_0
     return-void
 
-    .line 487
     :catch_0
     move-exception v0
 
-    .line 489
     .local v0, "ex":Landroid/os/RemoteException;
-    const-string/jumbo v2, "MediaBrowserService"
+    const-string v2, "MediaBrowserService"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "Calling onLoadChildren() failed for id="
+    const-string v4, "Calling onLoadChildren() failed for id="
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -191,20 +178,16 @@
 
     move-result-object v3
 
-    .line 490
-    const-string/jumbo v4, " package="
+    const-string v4, " package="
 
-    .line 489
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    .line 490
     iget-object v4, p0, Landroid/service/media/MediaBrowserService$3;->val$connection:Landroid/service/media/MediaBrowserService$ConnectionRecord;
 
     iget-object v4, v4, Landroid/service/media/MediaBrowserService$ConnectionRecord;->pkg:Ljava/lang/String;
 
-    .line 489
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3

@@ -87,10 +87,9 @@
 
     const/4 v4, 0x1
 
-    .line 26
     new-instance v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    const-string/jumbo v1, "COMMAND_DETAILS"
+    const-string v1, "COMMAND_DETAILS"
 
     const/4 v2, 0x0
 
@@ -98,46 +97,41 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;->COMMAND_DETAILS:Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    .line 27
     new-instance v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    const-string/jumbo v1, "DEVICE_IDENTITIES"
+    const-string v1, "DEVICE_IDENTITIES"
 
     invoke-direct {v0, v1, v4, v5}, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;->DEVICE_IDENTITIES:Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    .line 28
     new-instance v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    const-string/jumbo v1, "RESULT"
+    const-string v1, "RESULT"
 
     invoke-direct {v0, v1, v5, v6}, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;->RESULT:Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    .line 29
     new-instance v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    const-string/jumbo v1, "DURATION"
+    const-string v1, "DURATION"
 
     invoke-direct {v0, v1, v6, v7}, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;->DURATION:Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    .line 30
     new-instance v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    const-string/jumbo v1, "ALPHA_ID"
+    const-string v1, "ALPHA_ID"
 
     invoke-direct {v0, v1, v7, v8}, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;->ALPHA_ID:Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    .line 31
     new-instance v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    const-string/jumbo v1, "ADDRESS"
+    const-string v1, "ADDRESS"
 
     const/4 v2, 0x6
 
@@ -145,10 +139,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;->ADDRESS:Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    .line 32
     new-instance v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    const-string/jumbo v1, "USSD_STRING"
+    const-string v1, "USSD_STRING"
 
     const/4 v2, 0x6
 
@@ -158,10 +151,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;->USSD_STRING:Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    .line 33
     new-instance v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    const-string/jumbo v1, "SMS_TPDU"
+    const-string v1, "SMS_TPDU"
 
     const/4 v2, 0x7
 
@@ -171,10 +163,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;->SMS_TPDU:Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    .line 34
     new-instance v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    const-string/jumbo v1, "TEXT_STRING"
+    const-string v1, "TEXT_STRING"
 
     const/16 v2, 0x8
 
@@ -184,10 +175,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;->TEXT_STRING:Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    .line 35
     new-instance v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    const-string/jumbo v1, "TONE"
+    const-string v1, "TONE"
 
     const/16 v2, 0x9
 
@@ -197,10 +187,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;->TONE:Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    .line 36
     new-instance v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    const-string/jumbo v1, "ITEM"
+    const-string v1, "ITEM"
 
     const/16 v2, 0xa
 
@@ -210,10 +199,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;->ITEM:Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    .line 37
     new-instance v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    const-string/jumbo v1, "ITEM_ID"
+    const-string v1, "ITEM_ID"
 
     const/16 v2, 0xb
 
@@ -223,10 +211,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;->ITEM_ID:Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    .line 38
     new-instance v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    const-string/jumbo v1, "RESPONSE_LENGTH"
+    const-string v1, "RESPONSE_LENGTH"
 
     const/16 v2, 0xc
 
@@ -236,10 +223,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;->RESPONSE_LENGTH:Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    .line 39
     new-instance v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    const-string/jumbo v1, "FILE_LIST"
+    const-string v1, "FILE_LIST"
 
     const/16 v2, 0xd
 
@@ -249,10 +235,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;->FILE_LIST:Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    .line 40
     new-instance v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    const-string/jumbo v1, "HELP_REQUEST"
+    const-string v1, "HELP_REQUEST"
 
     const/16 v2, 0xe
 
@@ -262,10 +247,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;->HELP_REQUEST:Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    .line 41
     new-instance v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    const-string/jumbo v1, "DEFAULT_TEXT"
+    const-string v1, "DEFAULT_TEXT"
 
     const/16 v2, 0xf
 
@@ -275,10 +259,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;->DEFAULT_TEXT:Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    .line 42
     new-instance v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    const-string/jumbo v1, "EVENT_LIST"
+    const-string v1, "EVENT_LIST"
 
     const/16 v2, 0x10
 
@@ -288,10 +271,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;->EVENT_LIST:Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    .line 43
     new-instance v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    const-string/jumbo v1, "ICON_ID"
+    const-string v1, "ICON_ID"
 
     const/16 v2, 0x11
 
@@ -301,10 +283,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;->ICON_ID:Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    .line 44
     new-instance v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    const-string/jumbo v1, "ITEM_ICON_ID_LIST"
+    const-string v1, "ITEM_ICON_ID_LIST"
 
     const/16 v2, 0x12
 
@@ -314,10 +295,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;->ITEM_ICON_ID_LIST:Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    .line 45
     new-instance v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    const-string/jumbo v1, "IMMEDIATE_RESPONSE"
+    const-string v1, "IMMEDIATE_RESPONSE"
 
     const/16 v2, 0x13
 
@@ -327,10 +307,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;->IMMEDIATE_RESPONSE:Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    .line 46
     new-instance v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    const-string/jumbo v1, "LANGUAGE"
+    const-string v1, "LANGUAGE"
 
     const/16 v2, 0x14
 
@@ -340,10 +319,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;->LANGUAGE:Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    .line 47
     new-instance v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    const-string/jumbo v1, "URL"
+    const-string v1, "URL"
 
     const/16 v2, 0x15
 
@@ -353,10 +331,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;->URL:Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    .line 48
     new-instance v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    const-string/jumbo v1, "BROWSER_TERMINATION_CAUSE"
+    const-string v1, "BROWSER_TERMINATION_CAUSE"
 
     const/16 v2, 0x16
 
@@ -366,10 +343,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;->BROWSER_TERMINATION_CAUSE:Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    .line 49
     new-instance v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    const-string/jumbo v1, "TEXT_ATTRIBUTE"
+    const-string v1, "TEXT_ATTRIBUTE"
 
     const/16 v2, 0x17
 
@@ -379,10 +355,9 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;->TEXT_ATTRIBUTE:Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    .line 50
     new-instance v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    const-string/jumbo v1, "ACTIVATE_DESCRIPTOR"
+    const-string v1, "ACTIVATE_DESCRIPTOR"
 
     const/16 v2, 0x18
 
@@ -392,7 +367,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;->ACTIVATE_DESCRIPTOR:Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
-    .line 25
     const/16 v0, 0x19
 
     new-array v0, v0, [Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
@@ -547,13 +521,10 @@
     .param p3, "value"    # I
 
     .prologue
-    .line 54
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 55
     iput p3, p0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;->mValue:I
 
-    .line 54
     return-void
 .end method
 
@@ -562,7 +533,6 @@
     .param p0, "value"    # I
 
     .prologue
-    .line 68
     invoke-static {}, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;->values()[Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
     move-result-object v2
@@ -576,22 +546,18 @@
 
     aget-object v0, v2, v1
 
-    .line 69
     .local v0, "e":Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
     iget v4, v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;->mValue:I
 
     if-ne v4, p0, :cond_0
 
-    .line 70
     return-object v0
 
-    .line 68
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 73
     .end local v0    # "e":Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
     :cond_1
     const/4 v1, 0x0
@@ -604,7 +570,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 25
     const-class v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -620,7 +585,6 @@
     .locals 1
 
     .prologue
-    .line 25
     sget-object v0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;->$VALUES:[Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
     return-object v0
@@ -632,7 +596,6 @@
     .locals 1
 
     .prologue
-    .line 64
     iget v0, p0, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;->mValue:I
 
     return v0

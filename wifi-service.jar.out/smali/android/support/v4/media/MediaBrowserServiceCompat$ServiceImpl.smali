@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Landroid/support/v4/media/MediaBrowserServiceCompat;
 
     .prologue
-    .line 260
     iput-object p1, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,7 +49,6 @@
     .param p2, "callbacks"    # Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;
 
     .prologue
-    .line 330
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
     invoke-static {v0}, Landroid/support/v4/media/MediaBrowserServiceCompat;->-get1(Landroid/support/v4/media/MediaBrowserServiceCompat;)Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;
@@ -63,7 +61,6 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->postOrRun(Ljava/lang/Runnable;)V
 
-    .line 329
     return-void
 .end method
 
@@ -74,12 +71,10 @@
     .param p3, "callbacks"    # Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;
 
     .prologue
-    .line 264
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v5
 
-    .line 265
     .local v5, "uid":I
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
@@ -89,14 +84,13 @@
 
     if-nez v0, :cond_0
 
-    .line 266
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Package/uid mismatch: uid="
+    const-string v2, "Package/uid mismatch: uid="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -106,10 +100,8 @@
 
     move-result-object v1
 
-    .line 267
-    const-string/jumbo v2, " package="
+    const-string v2, " package="
 
-    .line 266
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -126,7 +118,6 @@
 
     throw v0
 
-    .line 270
     :cond_0
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
@@ -148,7 +139,6 @@
 
     invoke-virtual {v6, v0}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->postOrRun(Ljava/lang/Runnable;)V
 
-    .line 262
     return-void
 .end method
 
@@ -157,7 +147,6 @@
     .param p1, "callbacks"    # Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;
 
     .prologue
-    .line 314
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
     invoke-static {v0}, Landroid/support/v4/media/MediaBrowserServiceCompat;->-get1(Landroid/support/v4/media/MediaBrowserServiceCompat;)Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;
@@ -170,7 +159,6 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->postOrRun(Ljava/lang/Runnable;)V
 
-    .line 313
     return-void
 .end method
 
@@ -180,7 +168,6 @@
     .param p2, "receiver"    # Landroid/support/v4/os/ResultReceiver;
 
     .prologue
-    .line 369
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -189,11 +176,9 @@
 
     if-nez p2, :cond_1
 
-    .line 370
     :cond_0
     return-void
 
-    .line 373
     :cond_1
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
@@ -207,7 +192,6 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->postOrRun(Ljava/lang/Runnable;)V
 
-    .line 368
     return-void
 .end method
 
@@ -217,7 +201,6 @@
     .param p2, "callbacks"    # Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;
 
     .prologue
-    .line 349
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
     invoke-static {v0}, Landroid/support/v4/media/MediaBrowserServiceCompat;->-get1(Landroid/support/v4/media/MediaBrowserServiceCompat;)Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;
@@ -230,6 +213,5 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->postOrRun(Ljava/lang/Runnable;)V
 
-    .line 348
     return-void
 .end method

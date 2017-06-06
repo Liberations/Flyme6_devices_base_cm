@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/widget/DayPickerView;
 
     .prologue
-    .line 171
     iput-object p1, p0, Landroid/widget/DayPickerView$3;->this$0:Landroid/widget/DayPickerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "day"    # Ljava/util/Calendar;
 
     .prologue
-    .line 174
     iget-object v0, p0, Landroid/widget/DayPickerView$3;->this$0:Landroid/widget/DayPickerView;
 
     invoke-static {v0}, Landroid/widget/DayPickerView;->-get2(Landroid/widget/DayPickerView;)Landroid/widget/DayPickerView$OnDaySelectedListener;
@@ -52,7 +50,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 175
     iget-object v0, p0, Landroid/widget/DayPickerView$3;->this$0:Landroid/widget/DayPickerView;
 
     invoke-static {v0}, Landroid/widget/DayPickerView;->-get2(Landroid/widget/DayPickerView;)Landroid/widget/DayPickerView$OnDaySelectedListener;
@@ -63,7 +60,6 @@
 
     invoke-interface {v0, v1, p2}, Landroid/widget/DayPickerView$OnDaySelectedListener;->onDaySelected(Landroid/widget/DayPickerView;Ljava/util/Calendar;)V
 
-    .line 173
     :cond_0
     return-void
 .end method

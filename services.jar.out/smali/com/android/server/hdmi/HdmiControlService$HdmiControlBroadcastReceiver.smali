@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/hdmi/HdmiControlService;
 
     .prologue
-    .line 144
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -46,12 +45,10 @@
     .locals 2
 
     .prologue
-    .line 175
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
 
-    .line 176
     .local v0, "locale":Ljava/util/Locale;
     sget-object v1, Ljava/util/Locale;->TAIWAN:Ljava/util/Locale;
 
@@ -85,13 +82,11 @@
 
     if-eqz v1, :cond_1
 
-    .line 180
     :cond_0
-    const-string/jumbo v1, "chi"
+    const-string v1, "chi"
 
     return-object v1
 
-    .line 182
     :cond_1
     invoke-virtual {v0}, Ljava/util/Locale;->getISO3Language()Ljava/lang/String;
 
@@ -110,17 +105,15 @@
     .end annotation
 
     .prologue
-    .line 148
     iget-object v1, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-static {v1}, Lcom/android/server/hdmi/HdmiControlService;->-wrap9(Lcom/android/server/hdmi/HdmiControlService;)V
 
-    .line 149
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
 
-    const-string/jumbo v2, "android.intent.action.SCREEN_OFF"
+    const-string v2, "android.intent.action.SCREEN_OFF"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -128,7 +121,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 151
     iget-object v1, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-virtual {v1}, Lcom/android/server/hdmi/HdmiControlService;->isPowerOnOrTransient()Z
@@ -137,21 +129,18 @@
 
     if-eqz v1, :cond_0
 
-    .line 152
     iget-object v1, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     const/4 v2, 0x0
 
     invoke-static {v1, v2}, Lcom/android/server/hdmi/HdmiControlService;->-wrap19(Lcom/android/server/hdmi/HdmiControlService;I)V
 
-    .line 147
     :cond_0
     :goto_0
     return-void
 
-    .line 149
     :cond_1
-    const-string/jumbo v2, "android.intent.action.SCREEN_ON"
+    const-string v2, "android.intent.action.SCREEN_ON"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -159,7 +148,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 156
     iget-object v1, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-virtual {v1}, Lcom/android/server/hdmi/HdmiControlService;->isPowerStandbyOrTransient()Z
@@ -168,16 +156,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 157
     iget-object v1, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-static {v1}, Lcom/android/server/hdmi/HdmiControlService;->-wrap20(Lcom/android/server/hdmi/HdmiControlService;)V
 
     goto :goto_0
 
-    .line 149
     :cond_2
-    const-string/jumbo v2, "android.intent.action.CONFIGURATION_CHANGED"
+    const-string v2, "android.intent.action.CONFIGURATION_CHANGED"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -185,12 +171,10 @@
 
     if-eqz v2, :cond_3
 
-    .line 161
     invoke-direct {p0}, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;->getMenuLanguage()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 162
     .local v0, "language":Ljava/lang/String;
     iget-object v1, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
@@ -204,17 +188,15 @@
 
     if-nez v1, :cond_0
 
-    .line 163
     iget-object v1, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-static {v1, v0}, Lcom/android/server/hdmi/HdmiControlService;->-wrap17(Lcom/android/server/hdmi/HdmiControlService;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 149
     .end local v0    # "language":Ljava/lang/String;
     :cond_3
-    const-string/jumbo v2, "android.intent.action.ACTION_SHUTDOWN"
+    const-string v2, "android.intent.action.ACTION_SHUTDOWN"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -222,7 +204,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 167
     iget-object v1, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-virtual {v1}, Lcom/android/server/hdmi/HdmiControlService;->isPowerOnOrTransient()Z
@@ -231,7 +212,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 168
     iget-object v1, p0, Lcom/android/server/hdmi/HdmiControlService$HdmiControlBroadcastReceiver;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     const/4 v2, 0x1

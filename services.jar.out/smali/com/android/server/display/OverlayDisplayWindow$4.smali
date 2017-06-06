@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/display/OverlayDisplayWindow;
 
     .prologue
-    .line 363
     iput-object p1, p0, Lcom/android/server/display/OverlayDisplayWindow$4;->this$0:Lcom/android/server/display/OverlayDisplayWindow;
 
     invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
@@ -42,7 +41,6 @@
     .param p4, "distanceY"    # F
 
     .prologue
-    .line 367
     iget-object v0, p0, Lcom/android/server/display/OverlayDisplayWindow$4;->this$0:Lcom/android/server/display/OverlayDisplayWindow;
 
     invoke-static {v0}, Lcom/android/server/display/OverlayDisplayWindow;->-get5(Lcom/android/server/display/OverlayDisplayWindow;)F
@@ -53,7 +51,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/display/OverlayDisplayWindow;->-set1(Lcom/android/server/display/OverlayDisplayWindow;F)F
 
-    .line 368
     iget-object v0, p0, Lcom/android/server/display/OverlayDisplayWindow$4;->this$0:Lcom/android/server/display/OverlayDisplayWindow;
 
     invoke-static {v0}, Lcom/android/server/display/OverlayDisplayWindow;->-get6(Lcom/android/server/display/OverlayDisplayWindow;)F
@@ -64,12 +61,10 @@
 
     invoke-static {v0, v1}, Lcom/android/server/display/OverlayDisplayWindow;->-set2(Lcom/android/server/display/OverlayDisplayWindow;F)F
 
-    .line 369
     iget-object v0, p0, Lcom/android/server/display/OverlayDisplayWindow$4;->this$0:Lcom/android/server/display/OverlayDisplayWindow;
 
     invoke-virtual {v0}, Lcom/android/server/display/OverlayDisplayWindow;->relayout()V
 
-    .line 370
     const/4 v0, 0x1
 
     return v0

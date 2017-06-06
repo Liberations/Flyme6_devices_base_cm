@@ -24,13 +24,10 @@
     .param p1, "timeoutMs"    # I
 
     .prologue
-    .line 153
     invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
 
-    .line 154
     iput p1, p0, Lcom/android/internal/widget/LockPatternUtils$RequestThrottledException;->mTimeoutMs:I
 
-    .line 153
     return-void
 .end method
 
@@ -40,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 162
     iget v0, p0, Lcom/android/internal/widget/LockPatternUtils$RequestThrottledException;->mTimeoutMs:I
 
     return v0

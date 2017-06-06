@@ -19,12 +19,10 @@
     .locals 1
 
     .prologue
-    .line 51
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Landroid/security/keystore/AndroidKeyStoreUnauthenticatedAESCipherSpi$ECB;-><init>(I)V
 
-    .line 50
     return-void
 .end method
 

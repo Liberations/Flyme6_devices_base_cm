@@ -24,20 +24,16 @@
     .param p1, "device"    # Lcom/android/server/hdmi/HdmiCecLocalDevice;
 
     .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/hdmi/DelayedMessageBuffer;->mBuffer:Ljava/util/ArrayList;
 
-    .line 33
     iput-object p1, p0, Lcom/android/server/hdmi/DelayedMessageBuffer;->mDevice:Lcom/android/server/hdmi/HdmiCecLocalDevice;
 
-    .line 32
     return-void
 .end method
 
@@ -45,7 +41,6 @@
     .locals 4
 
     .prologue
-    .line 69
     iget-object v2, p0, Lcom/android/server/hdmi/DelayedMessageBuffer;->mBuffer:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -61,14 +56,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 70
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/server/hdmi/HdmiCecMessage;
 
-    .line 71
     .local v1, "message":Lcom/android/server/hdmi/HdmiCecMessage;
     invoke-virtual {v1}, Lcom/android/server/hdmi/HdmiCecMessage;->getOpcode()I
 
@@ -78,12 +71,10 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 72
     invoke-interface {v0}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
-    .line 67
     .end local v1    # "message":Lcom/android/server/hdmi/HdmiCecMessage;
     :cond_1
     return-void
@@ -96,10 +87,8 @@
     .param p1, "message"    # Lcom/android/server/hdmi/HdmiCecMessage;
 
     .prologue
-    .line 43
     const/4 v0, 0x1
 
-    .line 49
     .local v0, "buffered":Z
     invoke-virtual {p1}, Lcom/android/server/hdmi/HdmiCecMessage;->getOpcode()I
 
@@ -107,19 +96,16 @@
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 59
     const/4 v0, 0x0
 
-    .line 62
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 63
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Buffering message:"
+    const-string v2, "Buffering message:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -139,22 +125,18 @@
 
     invoke-static {v1, v2}, Lcom/android/server/hdmi/HdmiLogger;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 42
     :cond_0
     return-void
 
-    .line 51
     :sswitch_0
     invoke-direct {p0}, Lcom/android/server/hdmi/DelayedMessageBuffer;->removeActiveSource()V
 
-    .line 52
     iget-object v1, p0, Lcom/android/server/hdmi/DelayedMessageBuffer;->mBuffer:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 56
     :sswitch_1
     iget-object v1, p0, Lcom/android/server/hdmi/DelayedMessageBuffer;->mBuffer:Ljava/util/ArrayList;
 
@@ -162,7 +144,6 @@
 
     goto :goto_0
 
-    .line 49
     nop
 
     :sswitch_data_0
@@ -178,7 +159,6 @@
     .param p1, "opcode"    # I
 
     .prologue
-    .line 78
     iget-object v2, p0, Lcom/android/server/hdmi/DelayedMessageBuffer;->mBuffer:Ljava/util/ArrayList;
 
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -199,7 +179,6 @@
 
     check-cast v0, Lcom/android/server/hdmi/HdmiCecMessage;
 
-    .line 79
     .local v0, "message":Lcom/android/server/hdmi/HdmiCecMessage;
     invoke-virtual {v0}, Lcom/android/server/hdmi/HdmiCecMessage;->getOpcode()I
 
@@ -207,12 +186,10 @@
 
     if-ne v2, p1, :cond_0
 
-    .line 80
     const/4 v2, 0x1
 
     return v2
 
-    .line 83
     .end local v0    # "message":Lcom/android/server/hdmi/HdmiCecMessage;
     :cond_1
     const/4 v2, 0x0
@@ -225,20 +202,17 @@
     .param p1, "address"    # I
 
     .prologue
-    .line 137
     new-instance v0, Ljava/util/ArrayList;
 
     iget-object v3, p0, Lcom/android/server/hdmi/DelayedMessageBuffer;->mBuffer:Ljava/util/ArrayList;
 
     invoke-direct {v0, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 138
     .local v0, "copiedBuffer":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/hdmi/HdmiCecMessage;>;"
     iget-object v3, p0, Lcom/android/server/hdmi/DelayedMessageBuffer;->mBuffer:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
 
-    .line 139
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -257,7 +231,6 @@
 
     check-cast v1, Lcom/android/server/hdmi/HdmiCecMessage;
 
-    .line 140
     .local v1, "message":Lcom/android/server/hdmi/HdmiCecMessage;
     invoke-virtual {v1}, Lcom/android/server/hdmi/HdmiCecMessage;->getOpcode()I
 
@@ -267,24 +240,21 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 141
     invoke-virtual {v1}, Lcom/android/server/hdmi/HdmiCecMessage;->getSource()I
 
     move-result v3
 
     if-ne v3, p1, :cond_0
 
-    .line 142
     iget-object v3, p0, Lcom/android/server/hdmi/DelayedMessageBuffer;->mDevice:Lcom/android/server/hdmi/HdmiCecLocalDevice;
 
     invoke-virtual {v3, v1}, Lcom/android/server/hdmi/HdmiCecLocalDevice;->onMessage(Lcom/android/server/hdmi/HdmiCecMessage;)Z
 
-    .line 143
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "Processing message:"
+    const-string v4, "Processing message:"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -306,7 +276,6 @@
 
     goto :goto_0
 
-    .line 145
     :cond_0
     iget-object v3, p0, Lcom/android/server/hdmi/DelayedMessageBuffer;->mBuffer:Ljava/util/ArrayList;
 
@@ -314,7 +283,6 @@
 
     goto :goto_0
 
-    .line 136
     .end local v1    # "message":Lcom/android/server/hdmi/HdmiCecMessage;
     :cond_1
     return-void
@@ -324,20 +292,17 @@
     .locals 5
 
     .prologue
-    .line 88
     new-instance v0, Ljava/util/ArrayList;
 
     iget-object v3, p0, Lcom/android/server/hdmi/DelayedMessageBuffer;->mBuffer:Ljava/util/ArrayList;
 
     invoke-direct {v0, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 89
     .local v0, "copiedBuffer":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/hdmi/HdmiCecMessage;>;"
     iget-object v3, p0, Lcom/android/server/hdmi/DelayedMessageBuffer;->mBuffer:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
 
-    .line 90
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -356,18 +321,16 @@
 
     check-cast v1, Lcom/android/server/hdmi/HdmiCecMessage;
 
-    .line 91
     .local v1, "message":Lcom/android/server/hdmi/HdmiCecMessage;
     iget-object v3, p0, Lcom/android/server/hdmi/DelayedMessageBuffer;->mDevice:Lcom/android/server/hdmi/HdmiCecLocalDevice;
 
     invoke-virtual {v3, v1}, Lcom/android/server/hdmi/HdmiCecLocalDevice;->onMessage(Lcom/android/server/hdmi/HdmiCecMessage;)Z
 
-    .line 92
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "Processing message:"
+    const-string v4, "Processing message:"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -389,7 +352,6 @@
 
     goto :goto_0
 
-    .line 86
     .end local v1    # "message":Lcom/android/server/hdmi/HdmiCecMessage;
     :cond_0
     return-void
@@ -402,25 +364,22 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 107
     new-instance v0, Ljava/util/ArrayList;
 
     iget-object v3, p0, Lcom/android/server/hdmi/DelayedMessageBuffer;->mBuffer:Ljava/util/ArrayList;
 
     invoke-direct {v0, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 108
     .local v0, "copiedBuffer":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/hdmi/HdmiCecMessage;>;"
     iget-object v3, p0, Lcom/android/server/hdmi/DelayedMessageBuffer;->mBuffer:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
 
-    .line 109
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "Checking message for address:"
+    const-string v4, "Checking message for address:"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -438,7 +397,6 @@
 
     invoke-static {v3, v4}, Lcom/android/server/hdmi/HdmiLogger;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 110
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -457,7 +415,6 @@
 
     check-cast v1, Lcom/android/server/hdmi/HdmiCecMessage;
 
-    .line 111
     .local v1, "message":Lcom/android/server/hdmi/HdmiCecMessage;
     invoke-virtual {v1}, Lcom/android/server/hdmi/HdmiCecMessage;->getSource()I
 
@@ -465,14 +422,12 @@
 
     if-eq v3, p1, :cond_0
 
-    .line 112
     iget-object v3, p0, Lcom/android/server/hdmi/DelayedMessageBuffer;->mBuffer:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 115
     :cond_0
     invoke-virtual {v1}, Lcom/android/server/hdmi/HdmiCecMessage;->getOpcode()I
 
@@ -482,7 +437,6 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 116
     iget-object v3, p0, Lcom/android/server/hdmi/DelayedMessageBuffer;->mDevice:Lcom/android/server/hdmi/HdmiCecLocalDevice;
 
     invoke-static {p1}, Landroid/hardware/hdmi/HdmiDeviceInfo;->idForCecDevice(I)I
@@ -495,18 +449,16 @@
 
     if-eqz v3, :cond_2
 
-    .line 120
     :cond_1
     iget-object v3, p0, Lcom/android/server/hdmi/DelayedMessageBuffer;->mDevice:Lcom/android/server/hdmi/HdmiCecLocalDevice;
 
     invoke-virtual {v3, v1}, Lcom/android/server/hdmi/HdmiCecLocalDevice;->onMessage(Lcom/android/server/hdmi/HdmiCecMessage;)Z
 
-    .line 121
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "Processing message:"
+    const-string v4, "Processing message:"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -526,7 +478,6 @@
 
     goto :goto_0
 
-    .line 117
     :cond_2
     iget-object v3, p0, Lcom/android/server/hdmi/DelayedMessageBuffer;->mBuffer:Ljava/util/ArrayList;
 
@@ -534,7 +485,6 @@
 
     goto :goto_0
 
-    .line 106
     .end local v1    # "message":Lcom/android/server/hdmi/HdmiCecMessage;
     :cond_3
     return-void

@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,10 +18,8 @@
     .param p0, "activity"    # Landroid/app/Activity;
 
     .prologue
-    .line 34
     invoke-virtual {p0}, Landroid/app/Activity;->finishAffinity()V
 
-    .line 33
     return-void
 .end method
 
@@ -33,10 +30,8 @@
     .param p2, "options"    # Landroid/os/Bundle;
 
     .prologue
-    .line 26
     invoke-virtual {p0, p1, p2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;Landroid/os/Bundle;)V
 
-    .line 25
     return-void
 .end method
 
@@ -48,9 +43,7 @@
     .param p3, "options"    # Landroid/os/Bundle;
 
     .prologue
-    .line 30
     invoke-virtual {p0, p1, p2, p3}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;ILandroid/os/Bundle;)V
 
-    .line 29
     return-void
 .end method

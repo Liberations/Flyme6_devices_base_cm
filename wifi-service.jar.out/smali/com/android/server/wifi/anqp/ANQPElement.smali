@@ -13,13 +13,10 @@
     .param p1, "id"    # Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
     .prologue
-    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 10
     iput-object p1, p0, Lcom/android/server/wifi/anqp/ANQPElement;->mID:Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
-    .line 9
     return-void
 .end method
 
@@ -29,7 +26,6 @@
     .locals 1
 
     .prologue
-    .line 14
     iget-object v0, p0, Lcom/android/server/wifi/anqp/ANQPElement;->mID:Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
     return-object v0

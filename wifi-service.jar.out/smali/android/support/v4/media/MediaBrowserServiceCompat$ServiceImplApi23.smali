@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/support/v4/media/MediaBrowserServiceCompat;
 
     .prologue
-    .line 414
     iput-object p1, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImplApi23;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
     invoke-direct {p0, p1}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImplApi21;-><init>(Landroid/support/v4/media/MediaBrowserServiceCompat;)V
@@ -53,7 +52,6 @@
     .param p2, "cb"    # Landroid/support/v4/media/MediaBrowserServiceCompatApi23$ItemCallback;
 
     .prologue
-    .line 419
     new-instance v0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImplApi23$1;
 
     iget-object v1, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImplApi23;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
@@ -64,12 +62,10 @@
 
     invoke-direct {v0, p0, v1, p2}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImplApi23$1;-><init>(Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImplApi23;Landroid/os/Handler;Landroid/support/v4/media/MediaBrowserServiceCompatApi23$ItemCallback;)V
 
-    .line 431
     .local v0, "receiverCompat":Landroid/support/v4/os/ResultReceiver;
     iget-object v1, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImplApi23;->mServiceImpl:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;
 
     invoke-virtual {v1, p1, v0}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;->getMediaItem(Ljava/lang/String;Landroid/support/v4/os/ResultReceiver;)V
 
-    .line 418
     return-void
 .end method

@@ -44,21 +44,16 @@
     .param p4, "callback"    # Landroid/print/PrintDocumentAdapter$WriteResultCallback;
 
     .prologue
-    .line 102
     iput-object p1, p0, Landroid/print/PrintFileDocumentAdapter$WriteFileAsyncTask;->this$0:Landroid/print/PrintFileDocumentAdapter;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 104
     iput-object p2, p0, Landroid/print/PrintFileDocumentAdapter$WriteFileAsyncTask;->mDestination:Landroid/os/ParcelFileDescriptor;
 
-    .line 105
     iput-object p4, p0, Landroid/print/PrintFileDocumentAdapter$WriteFileAsyncTask;->mResultCallback:Landroid/print/PrintDocumentAdapter$WriteResultCallback;
 
-    .line 106
     iput-object p3, p0, Landroid/print/PrintFileDocumentAdapter$WriteFileAsyncTask;->mCancellationSignal:Landroid/os/CancellationSignal;
 
-    .line 107
     iget-object v0, p0, Landroid/print/PrintFileDocumentAdapter$WriteFileAsyncTask;->mCancellationSignal:Landroid/os/CancellationSignal;
 
     new-instance v1, Landroid/print/PrintFileDocumentAdapter$WriteFileAsyncTask$1;
@@ -67,7 +62,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/CancellationSignal;->setOnCancelListener(Landroid/os/CancellationSignal$OnCancelListener;)V
 
-    .line 103
     return-void
 .end method
 
@@ -78,7 +72,6 @@
     .param p1, "params"    # [Ljava/lang/Object;
 
     .prologue
-    .line 116
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1    # "params":[Ljava/lang/Object;
@@ -94,10 +87,8 @@
     .param p1, "params"    # [Ljava/lang/Void;
 
     .prologue
-    .line 117
     const/4 v1, 0x0
 
-    .line 118
     .local v1, "in":Ljava/io/InputStream;
     new-instance v4, Ljava/io/FileOutputStream;
 
@@ -109,13 +100,11 @@
 
     invoke-direct {v4, v6}, Ljava/io/FileOutputStream;-><init>(Ljava/io/FileDescriptor;)V
 
-    .line 119
     .local v4, "out":Ljava/io/OutputStream;
     const/16 v6, 0x2000
 
     new-array v0, v6, [B
 
-    .line 121
     .local v0, "buffer":[B
     :try_start_0
     new-instance v2, Ljava/io/FileInputStream;
@@ -131,7 +120,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 123
     .end local v1    # "in":Ljava/io/InputStream;
     .local v2, "in":Ljava/io/InputStream;
     :goto_0
@@ -145,23 +133,19 @@
 
     if-eqz v6, :cond_1
 
-    .line 137
     :cond_0
     invoke-static {v2}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 138
     invoke-static {v4}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
     move-object v1, v2
 
-    .line 140
     .end local v2    # "in":Ljava/io/InputStream;
     :goto_1
     const/4 v6, 0x0
 
     return-object v6
 
-    .line 126
     .restart local v2    # "in":Ljava/io/InputStream;
     :cond_1
     :try_start_2
@@ -169,11 +153,9 @@
 
     move-result v5
 
-    .line 127
     .local v5, "readByteCount":I
     if-ltz v5, :cond_0
 
-    .line 130
     const/4 v6, 0x0
 
     invoke-virtual {v4, v0, v6, v5}, Ljava/io/OutputStream;->write([BII)V
@@ -183,7 +165,6 @@
 
     goto :goto_0
 
-    .line 132
     .end local v5    # "readByteCount":I
     :catch_0
     move-exception v3
@@ -191,17 +172,15 @@
     .local v3, "ioe":Ljava/io/IOException;
     move-object v1, v2
 
-    .line 133
     .end local v2    # "in":Ljava/io/InputStream;
     :goto_2
     :try_start_3
-    const-string/jumbo v6, "PrintedFileDocumentAdapter"
+    const-string v6, "PrintedFileDocumentAdapter"
 
-    const-string/jumbo v7, "Error writing data!"
+    const-string v7, "Error writing data!"
 
     invoke-static {v6, v7, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 134
     iget-object v6, p0, Landroid/print/PrintFileDocumentAdapter$WriteFileAsyncTask;->mResultCallback:Landroid/print/PrintDocumentAdapter$WriteResultCallback;
 
     iget-object v7, p0, Landroid/print/PrintFileDocumentAdapter$WriteFileAsyncTask;->this$0:Landroid/print/PrintFileDocumentAdapter;
@@ -210,10 +189,8 @@
 
     move-result-object v7
 
-    .line 135
-    const v8, 0x10405cb
+    const v8, 0x10405d6
 
-    .line 134
     invoke-virtual {v7, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v7
@@ -222,27 +199,21 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 137
     invoke-static {v1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 138
     invoke-static {v4}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
     goto :goto_1
 
-    .line 136
     .end local v3    # "ioe":Ljava/io/IOException;
     :catchall_0
     move-exception v6
 
-    .line 137
     :goto_3
     invoke-static {v1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 138
     invoke-static {v4}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 136
     throw v6
 
     .restart local v2    # "in":Ljava/io/InputStream;
@@ -255,7 +226,6 @@
     .local v1, "in":Ljava/io/InputStream;
     goto :goto_3
 
-    .line 132
     .local v1, "in":Ljava/io/InputStream;
     :catch_1
     move-exception v3
@@ -269,7 +239,6 @@
     .param p1, "result"    # Ljava/lang/Object;
 
     .prologue
-    .line 149
     check-cast p1, Ljava/lang/Void;
 
     .end local p1    # "result":Ljava/lang/Object;
@@ -283,7 +252,6 @@
     .param p1, "result"    # Ljava/lang/Void;
 
     .prologue
-    .line 150
     iget-object v0, p0, Landroid/print/PrintFileDocumentAdapter$WriteFileAsyncTask;->mResultCallback:Landroid/print/PrintDocumentAdapter$WriteResultCallback;
 
     iget-object v1, p0, Landroid/print/PrintFileDocumentAdapter$WriteFileAsyncTask;->this$0:Landroid/print/PrintFileDocumentAdapter;
@@ -292,17 +260,14 @@
 
     move-result-object v1
 
-    .line 151
-    const v2, 0x10405ca
+    const v2, 0x10405d5
 
-    .line 150
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/print/PrintDocumentAdapter$WriteResultCallback;->onWriteFailed(Ljava/lang/CharSequence;)V
 
-    .line 149
     return-void
 .end method
 
@@ -311,7 +276,6 @@
     .param p1, "result"    # Ljava/lang/Object;
 
     .prologue
-    .line 144
     check-cast p1, Ljava/lang/Void;
 
     .end local p1    # "result":Ljava/lang/Object;
@@ -325,7 +289,6 @@
     .param p1, "result"    # Ljava/lang/Void;
 
     .prologue
-    .line 145
     iget-object v0, p0, Landroid/print/PrintFileDocumentAdapter$WriteFileAsyncTask;->mResultCallback:Landroid/print/PrintDocumentAdapter$WriteResultCallback;
 
     const/4 v1, 0x1
@@ -340,6 +303,5 @@
 
     invoke-virtual {v0, v1}, Landroid/print/PrintDocumentAdapter$WriteResultCallback;->onWriteFinished([Landroid/print/PageRange;)V
 
-    .line 144
     return-void
 .end method

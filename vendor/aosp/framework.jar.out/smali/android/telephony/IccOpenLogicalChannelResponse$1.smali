@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 114
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 118
     new-instance v0, Landroid/telephony/IccOpenLogicalChannelResponse;
 
     const/4 v1, 0x0
@@ -60,7 +58,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 117
     invoke-virtual {p0, p1}, Landroid/telephony/IccOpenLogicalChannelResponse$1;->createFromParcel(Landroid/os/Parcel;)Landroid/telephony/IccOpenLogicalChannelResponse;
 
     move-result-object v0
@@ -73,7 +70,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 122
     new-array v0, p1, [Landroid/telephony/IccOpenLogicalChannelResponse;
 
     return-object v0
@@ -84,7 +80,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 121
     invoke-virtual {p0, p1}, Landroid/telephony/IccOpenLogicalChannelResponse$1;->newArray(I)[Landroid/telephony/IccOpenLogicalChannelResponse;
 
     move-result-object v0

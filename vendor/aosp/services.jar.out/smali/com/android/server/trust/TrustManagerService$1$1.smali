@@ -32,7 +32,6 @@
     .param p2, "val$fout"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 700
     .local p3, "val$userInfos":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     iput-object p1, p0, Lcom/android/server/trust/TrustManagerService$1$1;->this$1:Lcom/android/server/trust/TrustManagerService$1;
 
@@ -51,14 +50,12 @@
     .locals 6
 
     .prologue
-    .line 703
     iget-object v2, p0, Lcom/android/server/trust/TrustManagerService$1$1;->val$fout:Ljava/io/PrintWriter;
 
-    const-string/jumbo v3, "Trust manager state:"
+    const-string v3, "Trust manager state:"
 
     invoke-virtual {v2, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 704
     iget-object v2, p0, Lcom/android/server/trust/TrustManagerService$1$1;->val$userInfos:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -79,7 +76,6 @@
 
     check-cast v0, Landroid/content/pm/UserInfo;
 
-    .line 705
     .local v0, "user":Landroid/content/pm/UserInfo;
     iget-object v3, p0, Lcom/android/server/trust/TrustManagerService$1$1;->this$1:Lcom/android/server/trust/TrustManagerService$1;
 
@@ -109,7 +105,6 @@
 
     goto :goto_1
 
-    .line 702
     .end local v0    # "user":Landroid/content/pm/UserInfo;
     :cond_1
     return-void

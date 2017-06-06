@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,7 +34,6 @@
     .param p1, "popupWindow"    # Landroid/widget/PopupWindow;
 
     .prologue
-    .line 56
     const/4 v0, 0x0
 
     return v0
@@ -46,7 +44,6 @@
     .param p1, "popupWindow"    # Landroid/widget/PopupWindow;
 
     .prologue
-    .line 66
     const/4 v0, 0x0
 
     return v0
@@ -58,7 +55,6 @@
     .param p2, "overlapAnchor"    # Z
 
     .prologue
-    .line 50
     return-void
 .end method
 
@@ -68,7 +64,6 @@
     .param p2, "layoutType"    # I
 
     .prologue
-    .line 60
     return-void
 .end method
 
@@ -81,9 +76,7 @@
     .param p5, "gravity"    # I
 
     .prologue
-    .line 46
     invoke-virtual {p1, p2, p3, p4}, Landroid/widget/PopupWindow;->showAsDropDown(Landroid/view/View;II)V
 
-    .line 45
     return-void
 .end method

@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 72
     invoke-direct {p0}, Landroid/hardware/camera2/CameraCaptureSession;-><init>()V
 
     return-void

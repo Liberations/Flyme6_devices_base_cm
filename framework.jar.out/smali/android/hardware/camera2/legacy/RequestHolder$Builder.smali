@@ -59,31 +59,23 @@
     .end annotation
 
     .prologue
-    .line 69
     .local p5, "jpegSurfaceIds":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/lang/Long;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 71
-    const-string/jumbo v0, "request must not be null"
+    const-string v0, "request must not be null"
 
     invoke-static {p3, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 72
     iput p1, p0, Landroid/hardware/camera2/legacy/RequestHolder$Builder;->mRequestId:I
 
-    .line 73
     iput p2, p0, Landroid/hardware/camera2/legacy/RequestHolder$Builder;->mSubsequenceId:I
 
-    .line 74
     iput-object p3, p0, Landroid/hardware/camera2/legacy/RequestHolder$Builder;->mRequest:Landroid/hardware/camera2/CaptureRequest;
 
-    .line 75
     iput-boolean p4, p0, Landroid/hardware/camera2/legacy/RequestHolder$Builder;->mRepeating:Z
 
-    .line 76
     iput-object p5, p0, Landroid/hardware/camera2/legacy/RequestHolder$Builder;->mJpegSurfaceIds:Ljava/util/Collection;
 
-    .line 77
     iget-object v0, p0, Landroid/hardware/camera2/legacy/RequestHolder$Builder;->mRequest:Landroid/hardware/camera2/CaptureRequest;
 
     invoke-direct {p0, v0}, Landroid/hardware/camera2/legacy/RequestHolder$Builder;->numJpegTargets(Landroid/hardware/camera2/CaptureRequest;)I
@@ -92,7 +84,6 @@
 
     iput v0, p0, Landroid/hardware/camera2/legacy/RequestHolder$Builder;->mNumJpegTargets:I
 
-    .line 78
     iget-object v0, p0, Landroid/hardware/camera2/legacy/RequestHolder$Builder;->mRequest:Landroid/hardware/camera2/CaptureRequest;
 
     invoke-direct {p0, v0}, Landroid/hardware/camera2/legacy/RequestHolder$Builder;->numPreviewTargets(Landroid/hardware/camera2/CaptureRequest;)I
@@ -101,7 +92,6 @@
 
     iput v0, p0, Landroid/hardware/camera2/legacy/RequestHolder$Builder;->mNumPreviewTargets:I
 
-    .line 70
     return-void
 .end method
 
@@ -115,7 +105,6 @@
     .end annotation
 
     .prologue
-    .line 89
     iget-object v0, p0, Landroid/hardware/camera2/legacy/RequestHolder$Builder;->mJpegSurfaceIds:Ljava/util/Collection;
 
     invoke-static {p1, v0}, Landroid/hardware/camera2/legacy/LegacyCameraDevice;->containsSurfaceId(Landroid/view/Surface;Ljava/util/Collection;)Z
@@ -130,10 +119,8 @@
     .param p1, "request"    # Landroid/hardware/camera2/CaptureRequest;
 
     .prologue
-    .line 114
     const/4 v0, 0x0
 
-    .line 115
     .local v0, "count":I
     invoke-virtual {p1}, Landroid/hardware/camera2/CaptureRequest;->getTargets()Ljava/util/Collection;
 
@@ -158,7 +145,6 @@
 
     check-cast v2, Landroid/view/Surface;
 
-    .line 117
     .local v2, "s":Landroid/view/Surface;
     :try_start_0
     invoke-direct {p0, v2}, Landroid/hardware/camera2/legacy/RequestHolder$Builder;->jpegType(Landroid/view/Surface;)Z
@@ -169,26 +155,22 @@
 
     if-eqz v4, :cond_0
 
-    .line 118
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 120
     :catch_0
     move-exception v1
 
-    .line 121
     .local v1, "e":Landroid/hardware/camera2/legacy/LegacyExceptionUtils$BufferQueueAbandonedException;
-    const-string/jumbo v4, "RequestHolder"
+    const-string v4, "RequestHolder"
 
-    const-string/jumbo v5, "Surface abandoned, skipping..."
+    const-string v5, "Surface abandoned, skipping..."
 
     invoke-static {v4, v5, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
-    .line 124
     .end local v1    # "e":Landroid/hardware/camera2/legacy/LegacyExceptionUtils$BufferQueueAbandonedException;
     .end local v2    # "s":Landroid/view/Surface;
     :cond_1
@@ -200,10 +182,8 @@
     .param p1, "request"    # Landroid/hardware/camera2/CaptureRequest;
 
     .prologue
-    .line 131
     const/4 v0, 0x0
 
-    .line 132
     .local v0, "count":I
     invoke-virtual {p1}, Landroid/hardware/camera2/CaptureRequest;->getTargets()Ljava/util/Collection;
 
@@ -228,7 +208,6 @@
 
     check-cast v2, Landroid/view/Surface;
 
-    .line 134
     .local v2, "s":Landroid/view/Surface;
     :try_start_0
     invoke-direct {p0, v2}, Landroid/hardware/camera2/legacy/RequestHolder$Builder;->previewType(Landroid/view/Surface;)Z
@@ -239,26 +218,22 @@
 
     if-eqz v4, :cond_0
 
-    .line 135
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 137
     :catch_0
     move-exception v1
 
-    .line 138
     .local v1, "e":Landroid/hardware/camera2/legacy/LegacyExceptionUtils$BufferQueueAbandonedException;
-    const-string/jumbo v4, "RequestHolder"
+    const-string v4, "RequestHolder"
 
-    const-string/jumbo v5, "Surface abandoned, skipping..."
+    const-string v5, "Surface abandoned, skipping..."
 
     invoke-static {v4, v5, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
-    .line 141
     .end local v1    # "e":Landroid/hardware/camera2/legacy/LegacyExceptionUtils$BufferQueueAbandonedException;
     .end local v2    # "s":Landroid/view/Surface;
     :cond_1
@@ -275,7 +250,6 @@
     .end annotation
 
     .prologue
-    .line 107
     invoke-direct {p0, p1}, Landroid/hardware/camera2/legacy/RequestHolder$Builder;->jpegType(Landroid/view/Surface;)Z
 
     move-result v0
@@ -300,7 +274,6 @@
     .param p1, "frameNumber"    # J
 
     .prologue
-    .line 152
     new-instance v1, Landroid/hardware/camera2/legacy/RequestHolder;
 
     iget v2, p0, Landroid/hardware/camera2/legacy/RequestHolder$Builder;->mRequestId:I
@@ -311,12 +284,10 @@
 
     iget-boolean v5, p0, Landroid/hardware/camera2/legacy/RequestHolder$Builder;->mRepeating:Z
 
-    .line 153
     iget v8, p0, Landroid/hardware/camera2/legacy/RequestHolder$Builder;->mNumJpegTargets:I
 
     iget v9, p0, Landroid/hardware/camera2/legacy/RequestHolder$Builder;->mNumPreviewTargets:I
 
-    .line 152
     const/4 v10, 0x0
 
     move-wide v6, p1

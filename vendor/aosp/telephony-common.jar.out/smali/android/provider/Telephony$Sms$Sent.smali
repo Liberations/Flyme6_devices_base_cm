@@ -29,8 +29,7 @@
     .locals 1
 
     .prologue
-    .line 612
-    const-string/jumbo v0, "content://sms/sent"
+    const-string v0, "content://sms/sent"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -38,7 +37,6 @@
 
     sput-object v0, Landroid/provider/Telephony$Sms$Sent;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 600
     return-void
 .end method
 
@@ -46,7 +44,6 @@
     .locals 0
 
     .prologue
-    .line 606
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -62,10 +59,8 @@
     .param p5, "date"    # Ljava/lang/Long;
 
     .prologue
-    .line 650
     sget-object v2, Landroid/provider/Telephony$Sms$Sent;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 651
     const/4 v7, 0x1
 
     const/4 v8, 0x0
@@ -82,7 +77,6 @@
 
     move-object v6, p5
 
-    .line 650
     invoke-static/range {v0 .. v8}, Landroid/provider/Telephony$Sms;->addMessageToUri(ILandroid/content/ContentResolver;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;ZZ)Landroid/net/Uri;
 
     move-result-object v0
@@ -99,12 +93,10 @@
     .param p4, "date"    # Ljava/lang/Long;
 
     .prologue
-    .line 632
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultSmsSubId()I
 
     move-result v0
 
-    .line 633
     sget-object v2, Landroid/provider/Telephony$Sms$Sent;->CONTENT_URI:Landroid/net/Uri;
 
     const/4 v7, 0x1
@@ -121,7 +113,6 @@
 
     move-object v6, p4
 
-    .line 632
     invoke-static/range {v0 .. v8}, Landroid/provider/Telephony$Sms;->addMessageToUri(ILandroid/content/ContentResolver;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;ZZ)Landroid/net/Uri;
 
     move-result-object v0

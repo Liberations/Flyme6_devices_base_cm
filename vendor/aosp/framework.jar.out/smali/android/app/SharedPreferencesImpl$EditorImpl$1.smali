@@ -30,7 +30,6 @@
     .param p2, "val$mcr"    # Landroid/app/SharedPreferencesImpl$MemoryCommitResult;
 
     .prologue
-    .line 363
     iput-object p1, p0, Landroid/app/SharedPreferencesImpl$EditorImpl$1;->this$1:Landroid/app/SharedPreferencesImpl$EditorImpl;
 
     iput-object p2, p0, Landroid/app/SharedPreferencesImpl$EditorImpl$1;->val$mcr:Landroid/app/SharedPreferencesImpl$MemoryCommitResult;
@@ -46,7 +45,6 @@
     .locals 2
 
     .prologue
-    .line 366
     :try_start_0
     iget-object v1, p0, Landroid/app/SharedPreferencesImpl$EditorImpl$1;->val$mcr:Landroid/app/SharedPreferencesImpl$MemoryCommitResult;
 
@@ -56,11 +54,9 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 364
     :goto_0
     return-void
 
-    .line 367
     :catch_0
     move-exception v0
 

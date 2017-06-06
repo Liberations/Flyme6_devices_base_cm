@@ -28,17 +28,14 @@
     .param p1, "this$0"    # Landroid/filterfw/core/AsyncRunner;
 
     .prologue
-    .line 38
     iput-object p1, p0, Landroid/filterfw/core/AsyncRunner$RunnerResult;->this$0:Landroid/filterfw/core/AsyncRunner;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/filterfw/core/AsyncRunner$RunnerResult;->status:I
 
-    .line 38
     return-void
 .end method
 

@@ -14,7 +14,6 @@
     .locals 0
 
     .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,20 +24,16 @@
     .param p1, "source"    # Landroid/renderscript/Short2;
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     iget-short v0, p1, Landroid/renderscript/Short2;->x:S
 
     iput-short v0, p0, Landroid/renderscript/Short2;->x:S
 
-    .line 46
     iget-short v0, p1, Landroid/renderscript/Short2;->y:S
 
     iput-short v0, p0, Landroid/renderscript/Short2;->y:S
 
-    .line 44
     return-void
 .end method
 
@@ -47,15 +42,12 @@
     .param p1, "i"    # S
 
     .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
     iput-short p1, p0, Landroid/renderscript/Short2;->y:S
 
     iput-short p1, p0, Landroid/renderscript/Short2;->x:S
 
-    .line 34
     return-void
 .end method
 
@@ -65,16 +57,12 @@
     .param p2, "y"    # S
 
     .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     iput-short p1, p0, Landroid/renderscript/Short2;->x:S
 
-    .line 40
     iput-short p2, p0, Landroid/renderscript/Short2;->y:S
 
-    .line 38
     return-void
 .end method
 
@@ -84,12 +72,10 @@
     .param p1, "b"    # Landroid/renderscript/Short2;
 
     .prologue
-    .line 67
     new-instance v0, Landroid/renderscript/Short2;
 
     invoke-direct {v0}, Landroid/renderscript/Short2;-><init>()V
 
-    .line 68
     .local v0, "result":Landroid/renderscript/Short2;
     iget-short v1, p0, Landroid/renderscript/Short2;->x:S
 
@@ -101,7 +87,6 @@
 
     iput-short v1, v0, Landroid/renderscript/Short2;->x:S
 
-    .line 69
     iget-short v1, p0, Landroid/renderscript/Short2;->y:S
 
     iget-short v2, p1, Landroid/renderscript/Short2;->y:S
@@ -112,7 +97,6 @@
 
     iput-short v1, v0, Landroid/renderscript/Short2;->y:S
 
-    .line 71
     return-object v0
 .end method
 
@@ -122,12 +106,10 @@
     .param p1, "b"    # S
 
     .prologue
-    .line 92
     new-instance v0, Landroid/renderscript/Short2;
 
     invoke-direct {v0}, Landroid/renderscript/Short2;-><init>()V
 
-    .line 93
     .local v0, "result":Landroid/renderscript/Short2;
     iget-short v1, p0, Landroid/renderscript/Short2;->x:S
 
@@ -137,7 +119,6 @@
 
     iput-short v1, v0, Landroid/renderscript/Short2;->x:S
 
-    .line 94
     iget-short v1, p0, Landroid/renderscript/Short2;->y:S
 
     add-int/2addr v1, p1
@@ -146,7 +127,6 @@
 
     iput-short v1, v0, Landroid/renderscript/Short2;->y:S
 
-    .line 96
     return-object v0
 .end method
 
@@ -156,12 +136,10 @@
     .param p1, "b"    # Landroid/renderscript/Short2;
 
     .prologue
-    .line 217
     new-instance v0, Landroid/renderscript/Short2;
 
     invoke-direct {v0}, Landroid/renderscript/Short2;-><init>()V
 
-    .line 218
     .local v0, "result":Landroid/renderscript/Short2;
     iget-short v1, p0, Landroid/renderscript/Short2;->x:S
 
@@ -173,7 +151,6 @@
 
     iput-short v1, v0, Landroid/renderscript/Short2;->x:S
 
-    .line 219
     iget-short v1, p0, Landroid/renderscript/Short2;->y:S
 
     iget-short v2, p1, Landroid/renderscript/Short2;->y:S
@@ -184,7 +161,6 @@
 
     iput-short v1, v0, Landroid/renderscript/Short2;->y:S
 
-    .line 221
     return-object v0
 .end method
 
@@ -194,12 +170,10 @@
     .param p1, "b"    # S
 
     .prologue
-    .line 242
     new-instance v0, Landroid/renderscript/Short2;
 
     invoke-direct {v0}, Landroid/renderscript/Short2;-><init>()V
 
-    .line 243
     .local v0, "result":Landroid/renderscript/Short2;
     iget-short v1, p0, Landroid/renderscript/Short2;->x:S
 
@@ -209,7 +183,6 @@
 
     iput-short v1, v0, Landroid/renderscript/Short2;->x:S
 
-    .line 244
     iget-short v1, p0, Landroid/renderscript/Short2;->y:S
 
     div-int/2addr v1, p1
@@ -218,7 +191,6 @@
 
     iput-short v1, v0, Landroid/renderscript/Short2;->y:S
 
-    .line 246
     return-object v0
 .end method
 
@@ -228,7 +200,6 @@
     .param p1, "b"    # Landroid/renderscript/Short2;
 
     .prologue
-    .line 334
     iget-short v0, p1, Landroid/renderscript/Short2;->x:S
 
     iget-short v1, p0, Landroid/renderscript/Short2;->x:S
@@ -254,12 +225,10 @@
     .param p1, "b"    # Landroid/renderscript/Short2;
 
     .prologue
-    .line 267
     new-instance v0, Landroid/renderscript/Short2;
 
     invoke-direct {v0}, Landroid/renderscript/Short2;-><init>()V
 
-    .line 268
     .local v0, "result":Landroid/renderscript/Short2;
     iget-short v1, p0, Landroid/renderscript/Short2;->x:S
 
@@ -271,7 +240,6 @@
 
     iput-short v1, v0, Landroid/renderscript/Short2;->x:S
 
-    .line 269
     iget-short v1, p0, Landroid/renderscript/Short2;->y:S
 
     iget-short v2, p1, Landroid/renderscript/Short2;->y:S
@@ -282,7 +250,6 @@
 
     iput-short v1, v0, Landroid/renderscript/Short2;->y:S
 
-    .line 271
     return-object v0
 .end method
 
@@ -292,12 +259,10 @@
     .param p1, "b"    # S
 
     .prologue
-    .line 292
     new-instance v0, Landroid/renderscript/Short2;
 
     invoke-direct {v0}, Landroid/renderscript/Short2;-><init>()V
 
-    .line 293
     .local v0, "result":Landroid/renderscript/Short2;
     iget-short v1, p0, Landroid/renderscript/Short2;->x:S
 
@@ -307,7 +272,6 @@
 
     iput-short v1, v0, Landroid/renderscript/Short2;->x:S
 
-    .line 294
     iget-short v1, p0, Landroid/renderscript/Short2;->y:S
 
     rem-int/2addr v1, p1
@@ -316,7 +280,6 @@
 
     iput-short v1, v0, Landroid/renderscript/Short2;->y:S
 
-    .line 296
     return-object v0
 .end method
 
@@ -326,12 +289,10 @@
     .param p1, "b"    # Landroid/renderscript/Short2;
 
     .prologue
-    .line 167
     new-instance v0, Landroid/renderscript/Short2;
 
     invoke-direct {v0}, Landroid/renderscript/Short2;-><init>()V
 
-    .line 168
     .local v0, "result":Landroid/renderscript/Short2;
     iget-short v1, p0, Landroid/renderscript/Short2;->x:S
 
@@ -343,7 +304,6 @@
 
     iput-short v1, v0, Landroid/renderscript/Short2;->x:S
 
-    .line 169
     iget-short v1, p0, Landroid/renderscript/Short2;->y:S
 
     iget-short v2, p1, Landroid/renderscript/Short2;->y:S
@@ -354,7 +314,6 @@
 
     iput-short v1, v0, Landroid/renderscript/Short2;->y:S
 
-    .line 171
     return-object v0
 .end method
 
@@ -364,12 +323,10 @@
     .param p1, "b"    # S
 
     .prologue
-    .line 192
     new-instance v0, Landroid/renderscript/Short2;
 
     invoke-direct {v0}, Landroid/renderscript/Short2;-><init>()V
 
-    .line 193
     .local v0, "result":Landroid/renderscript/Short2;
     iget-short v1, p0, Landroid/renderscript/Short2;->x:S
 
@@ -379,7 +336,6 @@
 
     iput-short v1, v0, Landroid/renderscript/Short2;->x:S
 
-    .line 194
     iget-short v1, p0, Landroid/renderscript/Short2;->y:S
 
     mul-int/2addr v1, p1
@@ -388,7 +344,6 @@
 
     iput-short v1, v0, Landroid/renderscript/Short2;->y:S
 
-    .line 196
     return-object v0
 .end method
 
@@ -398,12 +353,10 @@
     .param p1, "b"    # Landroid/renderscript/Short2;
 
     .prologue
-    .line 117
     new-instance v0, Landroid/renderscript/Short2;
 
     invoke-direct {v0}, Landroid/renderscript/Short2;-><init>()V
 
-    .line 118
     .local v0, "result":Landroid/renderscript/Short2;
     iget-short v1, p0, Landroid/renderscript/Short2;->x:S
 
@@ -415,7 +368,6 @@
 
     iput-short v1, v0, Landroid/renderscript/Short2;->x:S
 
-    .line 119
     iget-short v1, p0, Landroid/renderscript/Short2;->y:S
 
     iget-short v2, p1, Landroid/renderscript/Short2;->y:S
@@ -426,7 +378,6 @@
 
     iput-short v1, v0, Landroid/renderscript/Short2;->y:S
 
-    .line 121
     return-object v0
 .end method
 
@@ -436,12 +387,10 @@
     .param p1, "b"    # S
 
     .prologue
-    .line 142
     new-instance v0, Landroid/renderscript/Short2;
 
     invoke-direct {v0}, Landroid/renderscript/Short2;-><init>()V
 
-    .line 143
     .local v0, "result":Landroid/renderscript/Short2;
     iget-short v1, p0, Landroid/renderscript/Short2;->x:S
 
@@ -451,7 +400,6 @@
 
     iput-short v1, v0, Landroid/renderscript/Short2;->x:S
 
-    .line 144
     iget-short v1, p0, Landroid/renderscript/Short2;->y:S
 
     sub-int/2addr v1, p1
@@ -460,7 +408,6 @@
 
     iput-short v1, v0, Landroid/renderscript/Short2;->y:S
 
-    .line 146
     return-object v0
 .end method
 
@@ -471,7 +418,6 @@
     .param p1, "a"    # Landroid/renderscript/Short2;
 
     .prologue
-    .line 55
     iget-short v0, p0, Landroid/renderscript/Short2;->x:S
 
     iget-short v1, p1, Landroid/renderscript/Short2;->x:S
@@ -482,7 +428,6 @@
 
     iput-short v0, p0, Landroid/renderscript/Short2;->x:S
 
-    .line 56
     iget-short v0, p0, Landroid/renderscript/Short2;->y:S
 
     iget-short v1, p1, Landroid/renderscript/Short2;->y:S
@@ -493,7 +438,6 @@
 
     iput-short v0, p0, Landroid/renderscript/Short2;->y:S
 
-    .line 54
     return-void
 .end method
 
@@ -502,7 +446,6 @@
     .param p1, "value"    # S
 
     .prologue
-    .line 80
     iget-short v0, p0, Landroid/renderscript/Short2;->x:S
 
     add-int/2addr v0, p1
@@ -511,7 +454,6 @@
 
     iput-short v0, p0, Landroid/renderscript/Short2;->x:S
 
-    .line 81
     iget-short v0, p0, Landroid/renderscript/Short2;->y:S
 
     add-int/2addr v0, p1
@@ -520,7 +462,6 @@
 
     iput-short v0, p0, Landroid/renderscript/Short2;->y:S
 
-    .line 79
     return-void
 .end method
 
@@ -530,19 +471,16 @@
     .param p2, "value"    # S
 
     .prologue
-    .line 421
     packed-switch p1, :pswitch_data_0
 
-    .line 429
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
-    const-string/jumbo v1, "Index: i"
+    const-string v1, "Index: i"
 
     invoke-direct {v0, v1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 423
     :pswitch_0
     iget-short v0, p0, Landroid/renderscript/Short2;->x:S
 
@@ -552,10 +490,8 @@
 
     iput-short v0, p0, Landroid/renderscript/Short2;->x:S
 
-    .line 424
     return-void
 
-    .line 426
     :pswitch_1
     iget-short v0, p0, Landroid/renderscript/Short2;->y:S
 
@@ -565,10 +501,8 @@
 
     iput-short v0, p0, Landroid/renderscript/Short2;->y:S
 
-    .line 427
     return-void
 
-    .line 421
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -582,7 +516,6 @@
     .param p2, "factor"    # S
 
     .prologue
-    .line 344
     iget-short v0, p0, Landroid/renderscript/Short2;->x:S
 
     iget-short v1, p1, Landroid/renderscript/Short2;->x:S
@@ -595,7 +528,6 @@
 
     iput-short v0, p0, Landroid/renderscript/Short2;->x:S
 
-    .line 345
     iget-short v0, p0, Landroid/renderscript/Short2;->y:S
 
     iget-short v1, p1, Landroid/renderscript/Short2;->y:S
@@ -608,7 +540,6 @@
 
     iput-short v0, p0, Landroid/renderscript/Short2;->y:S
 
-    .line 343
     return-void
 .end method
 
@@ -618,19 +549,16 @@
     .param p2, "offset"    # I
 
     .prologue
-    .line 440
     iget-short v0, p0, Landroid/renderscript/Short2;->x:S
 
     aput-short v0, p1, p2
 
-    .line 441
     add-int/lit8 v0, p2, 0x1
 
     iget-short v1, p0, Landroid/renderscript/Short2;->y:S
 
     aput-short v1, p1, v0
 
-    .line 439
     return-void
 .end method
 
@@ -639,7 +567,6 @@
     .param p1, "a"    # Landroid/renderscript/Short2;
 
     .prologue
-    .line 205
     iget-short v0, p0, Landroid/renderscript/Short2;->x:S
 
     iget-short v1, p1, Landroid/renderscript/Short2;->x:S
@@ -650,7 +577,6 @@
 
     iput-short v0, p0, Landroid/renderscript/Short2;->x:S
 
-    .line 206
     iget-short v0, p0, Landroid/renderscript/Short2;->y:S
 
     iget-short v1, p1, Landroid/renderscript/Short2;->y:S
@@ -661,7 +587,6 @@
 
     iput-short v0, p0, Landroid/renderscript/Short2;->y:S
 
-    .line 204
     return-void
 .end method
 
@@ -670,7 +595,6 @@
     .param p1, "value"    # S
 
     .prologue
-    .line 230
     iget-short v0, p0, Landroid/renderscript/Short2;->x:S
 
     div-int/2addr v0, p1
@@ -679,7 +603,6 @@
 
     iput-short v0, p0, Landroid/renderscript/Short2;->x:S
 
-    .line 231
     iget-short v0, p0, Landroid/renderscript/Short2;->y:S
 
     div-int/2addr v0, p1
@@ -688,7 +611,6 @@
 
     iput-short v0, p0, Landroid/renderscript/Short2;->y:S
 
-    .line 229
     return-void
 .end method
 
@@ -697,7 +619,6 @@
     .param p1, "a"    # Landroid/renderscript/Short2;
 
     .prologue
-    .line 323
     iget-short v0, p0, Landroid/renderscript/Short2;->x:S
 
     iget-short v1, p1, Landroid/renderscript/Short2;->x:S
@@ -721,7 +642,6 @@
     .locals 2
 
     .prologue
-    .line 375
     iget-short v0, p0, Landroid/renderscript/Short2;->x:S
 
     iget-short v1, p0, Landroid/renderscript/Short2;->y:S
@@ -738,31 +658,26 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 385
     packed-switch p1, :pswitch_data_0
 
-    .line 391
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
-    const-string/jumbo v1, "Index: i"
+    const-string v1, "Index: i"
 
     invoke-direct {v0, v1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 387
     :pswitch_0
     iget-short v0, p0, Landroid/renderscript/Short2;->x:S
 
     return v0
 
-    .line 389
     :pswitch_1
     iget-short v0, p0, Landroid/renderscript/Short2;->y:S
 
     return v0
 
-    .line 385
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -774,7 +689,6 @@
     .locals 1
 
     .prologue
-    .line 305
     const/4 v0, 0x2
 
     return v0
@@ -785,7 +699,6 @@
     .param p1, "a"    # Landroid/renderscript/Short2;
 
     .prologue
-    .line 255
     iget-short v0, p0, Landroid/renderscript/Short2;->x:S
 
     iget-short v1, p1, Landroid/renderscript/Short2;->x:S
@@ -796,7 +709,6 @@
 
     iput-short v0, p0, Landroid/renderscript/Short2;->x:S
 
-    .line 256
     iget-short v0, p0, Landroid/renderscript/Short2;->y:S
 
     iget-short v1, p1, Landroid/renderscript/Short2;->y:S
@@ -807,7 +719,6 @@
 
     iput-short v0, p0, Landroid/renderscript/Short2;->y:S
 
-    .line 254
     return-void
 .end method
 
@@ -816,7 +727,6 @@
     .param p1, "value"    # S
 
     .prologue
-    .line 280
     iget-short v0, p0, Landroid/renderscript/Short2;->x:S
 
     rem-int/2addr v0, p1
@@ -825,7 +735,6 @@
 
     iput-short v0, p0, Landroid/renderscript/Short2;->x:S
 
-    .line 281
     iget-short v0, p0, Landroid/renderscript/Short2;->y:S
 
     rem-int/2addr v0, p1
@@ -834,7 +743,6 @@
 
     iput-short v0, p0, Landroid/renderscript/Short2;->y:S
 
-    .line 279
     return-void
 .end method
 
@@ -843,7 +751,6 @@
     .param p1, "a"    # Landroid/renderscript/Short2;
 
     .prologue
-    .line 155
     iget-short v0, p0, Landroid/renderscript/Short2;->x:S
 
     iget-short v1, p1, Landroid/renderscript/Short2;->x:S
@@ -854,7 +761,6 @@
 
     iput-short v0, p0, Landroid/renderscript/Short2;->x:S
 
-    .line 156
     iget-short v0, p0, Landroid/renderscript/Short2;->y:S
 
     iget-short v1, p1, Landroid/renderscript/Short2;->y:S
@@ -865,7 +771,6 @@
 
     iput-short v0, p0, Landroid/renderscript/Short2;->y:S
 
-    .line 154
     return-void
 .end method
 
@@ -874,7 +779,6 @@
     .param p1, "value"    # S
 
     .prologue
-    .line 180
     iget-short v0, p0, Landroid/renderscript/Short2;->x:S
 
     mul-int/2addr v0, p1
@@ -883,7 +787,6 @@
 
     iput-short v0, p0, Landroid/renderscript/Short2;->x:S
 
-    .line 181
     iget-short v0, p0, Landroid/renderscript/Short2;->y:S
 
     mul-int/2addr v0, p1
@@ -892,7 +795,6 @@
 
     iput-short v0, p0, Landroid/renderscript/Short2;->y:S
 
-    .line 179
     return-void
 .end method
 
@@ -900,7 +802,6 @@
     .locals 1
 
     .prologue
-    .line 312
     iget-short v0, p0, Landroid/renderscript/Short2;->x:S
 
     neg-int v0, v0
@@ -909,7 +810,6 @@
 
     iput-short v0, p0, Landroid/renderscript/Short2;->x:S
 
-    .line 313
     iget-short v0, p0, Landroid/renderscript/Short2;->y:S
 
     neg-int v0, v0
@@ -918,7 +818,6 @@
 
     iput-short v0, p0, Landroid/renderscript/Short2;->y:S
 
-    .line 311
     return-void
 .end method
 
@@ -927,17 +826,14 @@
     .param p1, "a"    # Landroid/renderscript/Short2;
 
     .prologue
-    .line 354
     iget-short v0, p1, Landroid/renderscript/Short2;->x:S
 
     iput-short v0, p0, Landroid/renderscript/Short2;->x:S
 
-    .line 355
     iget-short v0, p1, Landroid/renderscript/Short2;->y:S
 
     iput-short v0, p0, Landroid/renderscript/Short2;->y:S
 
-    .line 353
     return-void
 .end method
 
@@ -947,33 +843,26 @@
     .param p2, "value"    # S
 
     .prologue
-    .line 402
     packed-switch p1, :pswitch_data_0
 
-    .line 410
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
-    const-string/jumbo v1, "Index: i"
+    const-string v1, "Index: i"
 
     invoke-direct {v0, v1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 404
     :pswitch_0
     iput-short p2, p0, Landroid/renderscript/Short2;->x:S
 
-    .line 405
     return-void
 
-    .line 407
     :pswitch_1
     iput-short p2, p0, Landroid/renderscript/Short2;->y:S
 
-    .line 408
     return-void
 
-    .line 402
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -987,13 +876,10 @@
     .param p2, "b"    # S
 
     .prologue
-    .line 365
     iput-short p1, p0, Landroid/renderscript/Short2;->x:S
 
-    .line 366
     iput-short p2, p0, Landroid/renderscript/Short2;->y:S
 
-    .line 364
     return-void
 .end method
 
@@ -1002,7 +888,6 @@
     .param p1, "a"    # Landroid/renderscript/Short2;
 
     .prologue
-    .line 105
     iget-short v0, p0, Landroid/renderscript/Short2;->x:S
 
     iget-short v1, p1, Landroid/renderscript/Short2;->x:S
@@ -1013,7 +898,6 @@
 
     iput-short v0, p0, Landroid/renderscript/Short2;->x:S
 
-    .line 106
     iget-short v0, p0, Landroid/renderscript/Short2;->y:S
 
     iget-short v1, p1, Landroid/renderscript/Short2;->y:S
@@ -1024,7 +908,6 @@
 
     iput-short v0, p0, Landroid/renderscript/Short2;->y:S
 
-    .line 104
     return-void
 .end method
 
@@ -1033,7 +916,6 @@
     .param p1, "value"    # S
 
     .prologue
-    .line 130
     iget-short v0, p0, Landroid/renderscript/Short2;->x:S
 
     sub-int/2addr v0, p1
@@ -1042,7 +924,6 @@
 
     iput-short v0, p0, Landroid/renderscript/Short2;->x:S
 
-    .line 131
     iget-short v0, p0, Landroid/renderscript/Short2;->y:S
 
     sub-int/2addr v0, p1
@@ -1051,6 +932,5 @@
 
     iput-short v0, p0, Landroid/renderscript/Short2;->y:S
 
-    .line 129
     return-void
 .end method

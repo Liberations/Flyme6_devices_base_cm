@@ -52,10 +52,9 @@
 
     const/4 v2, 0x0
 
-    .line 33
     new-instance v0, Lcyanogenmod/weatherservice/ServiceRequest$Status;
 
-    const-string/jumbo v1, "IN_PROGRESS"
+    const-string v1, "IN_PROGRESS"
 
     invoke-direct {v0, v1, v2}, Lcyanogenmod/weatherservice/ServiceRequest$Status;-><init>(Ljava/lang/String;I)V
 
@@ -63,7 +62,7 @@
 
     new-instance v0, Lcyanogenmod/weatherservice/ServiceRequest$Status;
 
-    const-string/jumbo v1, "COMPLETED"
+    const-string v1, "COMPLETED"
 
     invoke-direct {v0, v1, v3}, Lcyanogenmod/weatherservice/ServiceRequest$Status;-><init>(Ljava/lang/String;I)V
 
@@ -71,7 +70,7 @@
 
     new-instance v0, Lcyanogenmod/weatherservice/ServiceRequest$Status;
 
-    const-string/jumbo v1, "CANCELLED"
+    const-string v1, "CANCELLED"
 
     invoke-direct {v0, v1, v4}, Lcyanogenmod/weatherservice/ServiceRequest$Status;-><init>(Ljava/lang/String;I)V
 
@@ -79,7 +78,7 @@
 
     new-instance v0, Lcyanogenmod/weatherservice/ServiceRequest$Status;
 
-    const-string/jumbo v1, "FAILED"
+    const-string v1, "FAILED"
 
     invoke-direct {v0, v1, v5}, Lcyanogenmod/weatherservice/ServiceRequest$Status;-><init>(Ljava/lang/String;I)V
 
@@ -87,13 +86,12 @@
 
     new-instance v0, Lcyanogenmod/weatherservice/ServiceRequest$Status;
 
-    const-string/jumbo v1, "REJECTED"
+    const-string v1, "REJECTED"
 
     invoke-direct {v0, v1, v6}, Lcyanogenmod/weatherservice/ServiceRequest$Status;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcyanogenmod/weatherservice/ServiceRequest$Status;->REJECTED:Lcyanogenmod/weatherservice/ServiceRequest$Status;
 
-    .line 32
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcyanogenmod/weatherservice/ServiceRequest$Status;
@@ -127,7 +125,6 @@
     .locals 0
 
     .prologue
-    .line 32
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -138,7 +135,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 32
     const-class v0, Lcyanogenmod/weatherservice/ServiceRequest$Status;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -154,7 +150,6 @@
     .locals 1
 
     .prologue
-    .line 32
     sget-object v0, Lcyanogenmod/weatherservice/ServiceRequest$Status;->$VALUES:[Lcyanogenmod/weatherservice/ServiceRequest$Status;
 
     return-object v0

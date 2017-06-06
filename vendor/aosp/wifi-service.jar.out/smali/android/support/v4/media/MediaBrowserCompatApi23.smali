@@ -17,7 +17,6 @@
     .locals 0
 
     .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,7 +27,6 @@
     .param p0, "callback"    # Landroid/support/v4/media/MediaBrowserCompatApi23$ItemCallback;
 
     .prologue
-    .line 26
     new-instance v0, Landroid/support/v4/media/MediaBrowserCompatApi23$ItemCallbackProxy;
 
     invoke-direct {v0, p0}, Landroid/support/v4/media/MediaBrowserCompatApi23$ItemCallbackProxy;-><init>(Landroid/support/v4/media/MediaBrowserCompatApi23$ItemCallback;)V
@@ -43,7 +41,6 @@
     .param p2, "itemCallbackObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 30
     check-cast p0, Landroid/media/browse/MediaBrowser;
 
     .end local p0    # "browserObj":Ljava/lang/Object;
@@ -52,6 +49,5 @@
     .end local p2    # "itemCallbackObj":Ljava/lang/Object;
     invoke-virtual {p0, p1, p2}, Landroid/media/browse/MediaBrowser;->getItem(Ljava/lang/String;Landroid/media/browse/MediaBrowser$ItemCallback;)V
 
-    .line 29
     return-void
 .end method

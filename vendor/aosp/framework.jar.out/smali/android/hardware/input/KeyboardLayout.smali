@@ -54,15 +54,12 @@
     .locals 1
 
     .prologue
-    .line 35
     new-instance v0, Landroid/hardware/input/KeyboardLayout$1;
 
     invoke-direct {v0}, Landroid/hardware/input/KeyboardLayout$1;-><init>()V
 
-    .line 34
     sput-object v0, Landroid/hardware/input/KeyboardLayout;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 27
     return-void
 .end method
 
@@ -71,38 +68,32 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/hardware/input/KeyboardLayout;->mDescriptor:Ljava/lang/String;
 
-    .line 53
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/hardware/input/KeyboardLayout;->mLabel:Ljava/lang/String;
 
-    .line 54
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/hardware/input/KeyboardLayout;->mCollection:Ljava/lang/String;
 
-    .line 55
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/hardware/input/KeyboardLayout;->mPriority:I
 
-    .line 51
     return-void
 .end method
 
@@ -124,22 +115,16 @@
     .param p4, "priority"    # I
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     iput-object p1, p0, Landroid/hardware/input/KeyboardLayout;->mDescriptor:Ljava/lang/String;
 
-    .line 46
     iput-object p2, p0, Landroid/hardware/input/KeyboardLayout;->mLabel:Ljava/lang/String;
 
-    .line 47
     iput-object p3, p0, Landroid/hardware/input/KeyboardLayout;->mCollection:Ljava/lang/String;
 
-    .line 48
     iput p4, p0, Landroid/hardware/input/KeyboardLayout;->mPriority:I
 
-    .line 44
     return-void
 .end method
 
@@ -150,7 +135,6 @@
     .param p1, "another"    # Landroid/hardware/input/KeyboardLayout;
 
     .prologue
-    .line 103
     iget v1, p1, Landroid/hardware/input/KeyboardLayout;->mPriority:I
 
     iget v2, p0, Landroid/hardware/input/KeyboardLayout;->mPriority:I
@@ -159,11 +143,9 @@
 
     move-result v0
 
-    .line 104
     .local v0, "result":I
     if-nez v0, :cond_0
 
-    .line 105
     iget-object v1, p0, Landroid/hardware/input/KeyboardLayout;->mLabel:Ljava/lang/String;
 
     iget-object v2, p1, Landroid/hardware/input/KeyboardLayout;->mLabel:Ljava/lang/String;
@@ -172,11 +154,9 @@
 
     move-result v0
 
-    .line 107
     :cond_0
     if-nez v0, :cond_1
 
-    .line 108
     iget-object v1, p0, Landroid/hardware/input/KeyboardLayout;->mCollection:Ljava/lang/String;
 
     iget-object v2, p1, Landroid/hardware/input/KeyboardLayout;->mCollection:Ljava/lang/String;
@@ -185,7 +165,6 @@
 
     move-result v0
 
-    .line 110
     :cond_1
     return v0
 .end method
@@ -195,7 +174,6 @@
     .param p1, "another"    # Ljava/lang/Object;
 
     .prologue
-    .line 100
     check-cast p1, Landroid/hardware/input/KeyboardLayout;
 
     .end local p1    # "another":Ljava/lang/Object;
@@ -210,7 +188,6 @@
     .locals 1
 
     .prologue
-    .line 88
     const/4 v0, 0x0
 
     return v0
@@ -220,7 +197,6 @@
     .locals 1
 
     .prologue
-    .line 83
     iget-object v0, p0, Landroid/hardware/input/KeyboardLayout;->mCollection:Ljava/lang/String;
 
     return-object v0
@@ -230,7 +206,6 @@
     .locals 1
 
     .prologue
-    .line 66
     iget-object v0, p0, Landroid/hardware/input/KeyboardLayout;->mDescriptor:Ljava/lang/String;
 
     return-object v0
@@ -240,7 +215,6 @@
     .locals 1
 
     .prologue
-    .line 74
     iget-object v0, p0, Landroid/hardware/input/KeyboardLayout;->mLabel:Ljava/lang/String;
 
     return-object v0
@@ -250,7 +224,6 @@
     .locals 2
 
     .prologue
-    .line 115
     iget-object v0, p0, Landroid/hardware/input/KeyboardLayout;->mCollection:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
@@ -259,12 +232,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 116
     iget-object v0, p0, Landroid/hardware/input/KeyboardLayout;->mLabel:Ljava/lang/String;
 
     return-object v0
 
-    .line 118
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -276,7 +247,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, " - "
+    const-string v1, " - "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -301,26 +272,21 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 93
     iget-object v0, p0, Landroid/hardware/input/KeyboardLayout;->mDescriptor:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 94
     iget-object v0, p0, Landroid/hardware/input/KeyboardLayout;->mLabel:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 95
     iget-object v0, p0, Landroid/hardware/input/KeyboardLayout;->mCollection:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 96
     iget v0, p0, Landroid/hardware/input/KeyboardLayout;->mPriority:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 92
     return-void
 .end method

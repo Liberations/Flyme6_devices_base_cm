@@ -1,14 +1,11 @@
 .class Lcom/android/server/NetworkManagementService$2;
-.super Ljava/lang/Object;
+.super Landroid/telephony/PhoneStateListener;
 .source "NetworkManagementService.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/NetworkManagementService;->addIdleTimer(Ljava/lang/String;II)V
+    value = Lcom/android/server/NetworkManagementService;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,50 +17,77 @@
 # instance fields
 .field final synthetic this$0:Lcom/android/server/NetworkManagementService;
 
-.field final synthetic val$type:I
-
 
 # direct methods
-.method constructor <init>(Lcom/android/server/NetworkManagementService;I)V
+.method constructor <init>(Lcom/android/server/NetworkManagementService;ILandroid/os/Looper;)V
     .locals 0
     .param p1, "this$0"    # Lcom/android/server/NetworkManagementService;
-    .param p2, "val$type"    # I
+    .param p2, "$anonymous0"    # I
+    .param p3, "$anonymous1"    # Landroid/os/Looper;
 
     .prologue
-    .line 1620
     iput-object p1, p0, Lcom/android/server/NetworkManagementService$2;->this$0:Lcom/android/server/NetworkManagementService;
 
-    iput p2, p0, Lcom/android/server/NetworkManagementService$2;->val$type:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p3}, Landroid/telephony/PhoneStateListener;-><init>(ILandroid/os/Looper;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
+.method public onDataConnectionRealTimeInfoChanged(Landroid/telephony/DataConnectionRealTimeInfo;)V
     .locals 7
+    .param p1, "dcRtInfo"    # Landroid/telephony/DataConnectionRealTimeInfo;
 
     .prologue
-    .line 1622
+    invoke-static {}, Lcom/android/server/NetworkManagementService;->-get0()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "NetworkManagement"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "onDataConnectionRealTimeInfoChanged: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementService$2;->this$0:Lcom/android/server/NetworkManagementService;
 
-    iget v2, p0, Lcom/android/server/NetworkManagementService$2;->val$type:I
+    invoke-virtual {p1}, Landroid/telephony/DataConnectionRealTimeInfo;->getDcPowerState()I
 
-    .line 1623
-    sget v3, Landroid/telephony/DataConnectionRealTimeInfo;->DC_POWER_STATE_HIGH:I
+    move-result v3
 
-    .line 1624
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
+    invoke-virtual {p1}, Landroid/telephony/DataConnectionRealTimeInfo;->getTime()J
 
     move-result-wide v4
 
-    const/4 v6, 0x0
+    const/4 v2, 0x0
 
-    .line 1622
+    const/4 v6, 0x1
+
     invoke-static/range {v1 .. v6}, Lcom/android/server/NetworkManagementService;->-wrap3(Lcom/android/server/NetworkManagementService;IIJZ)V
 
-    .line 1621
+    iget-object v0, p0, Lcom/android/server/NetworkManagementService$2;->this$0:Lcom/android/server/NetworkManagementService;
+
+    invoke-static {v0}, Lcom/android/server/NetworkManagementService;->-wrap12(Lcom/android/server/NetworkManagementService;)V
+
     return-void
 .end method

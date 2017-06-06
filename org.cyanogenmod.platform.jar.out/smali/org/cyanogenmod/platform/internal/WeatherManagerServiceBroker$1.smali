@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker;
 
     .prologue
-    .line 43
     iput-object p1, p0, Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker$1;->this$0:Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker;
 
     invoke-direct {p0}, Lcyanogenmod/weather/ICMWeatherManager$Stub;-><init>()V
@@ -44,12 +43,10 @@
     .end annotation
 
     .prologue
-    .line 79
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker$1;->this$0:Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker;->-wrap0(Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker;)V
 
-    .line 80
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker$1;->this$0:Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker;
 
     invoke-virtual {v0}, Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker;->getBrokeredService()Landroid/os/IInterface;
@@ -60,7 +57,6 @@
 
     invoke-interface {v0, p1}, Lcyanogenmod/weather/ICMWeatherManager;->cancelRequest(I)V
 
-    .line 78
     return-void
 .end method
 
@@ -73,12 +69,10 @@
     .end annotation
 
     .prologue
-    .line 73
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker$1;->this$0:Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker;->-wrap0(Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker;)V
 
-    .line 74
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker$1;->this$0:Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker;
 
     invoke-virtual {v0}, Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker;->getBrokeredService()Landroid/os/IInterface;
@@ -104,12 +98,10 @@
     .end annotation
 
     .prologue
-    .line 53
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker$1;->this$0:Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker;->-wrap0(Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker;)V
 
-    .line 54
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker$1;->this$0:Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker;
 
     invoke-virtual {v0}, Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker;->getBrokeredService()Landroid/os/IInterface;
@@ -120,7 +112,6 @@
 
     invoke-interface {v0, p1}, Lcyanogenmod/weather/ICMWeatherManager;->lookupCity(Lcyanogenmod/weather/RequestInfo;)V
 
-    .line 52
     return-void
 .end method
 
@@ -134,12 +125,10 @@
     .end annotation
 
     .prologue
-    .line 60
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker$1;->this$0:Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker;->-wrap0(Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker;)V
 
-    .line 61
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker$1;->this$0:Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker;
 
     invoke-virtual {v0}, Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker;->getBrokeredService()Landroid/os/IInterface;
@@ -150,7 +139,6 @@
 
     invoke-interface {v0, p1}, Lcyanogenmod/weather/ICMWeatherManager;->registerWeatherServiceProviderChangeListener(Lcyanogenmod/weather/IWeatherServiceProviderChangeListener;)V
 
-    .line 59
     return-void
 .end method
 
@@ -164,12 +152,10 @@
     .end annotation
 
     .prologue
-    .line 67
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker$1;->this$0:Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker;->-wrap0(Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker;)V
 
-    .line 68
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker$1;->this$0:Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker;
 
     invoke-virtual {v0}, Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker;->getBrokeredService()Landroid/os/IInterface;
@@ -180,7 +166,6 @@
 
     invoke-interface {v0, p1}, Lcyanogenmod/weather/ICMWeatherManager;->unregisterWeatherServiceProviderChangeListener(Lcyanogenmod/weather/IWeatherServiceProviderChangeListener;)V
 
-    .line 66
     return-void
 .end method
 
@@ -194,12 +179,10 @@
     .end annotation
 
     .prologue
-    .line 47
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker$1;->this$0:Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker;->-wrap0(Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker;)V
 
-    .line 48
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker$1;->this$0:Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker;
 
     invoke-virtual {v0}, Lorg/cyanogenmod/platform/internal/WeatherManagerServiceBroker;->getBrokeredService()Landroid/os/IInterface;
@@ -210,6 +193,5 @@
 
     invoke-interface {v0, p1}, Lcyanogenmod/weather/ICMWeatherManager;->updateWeather(Lcyanogenmod/weather/RequestInfo;)V
 
-    .line 46
     return-void
 .end method

@@ -43,7 +43,6 @@
     .locals 0
 
     .prologue
-    .line 5750
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -66,31 +65,25 @@
     .param p4, "sb"    # Ljava/lang/StringBuilder;
 
     .prologue
-    .line 5801
     iget v0, p0, Landroid/view/ViewRootImpl$QueuedInputEvent;->mFlags:I
 
     and-int/2addr v0, p2
 
     if-eqz v0, :cond_1
 
-    .line 5802
     if-eqz p3, :cond_0
 
-    .line 5803
-    const-string/jumbo v0, "|"
+    const-string v0, "|"
 
     invoke-virtual {p4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 5805
     :cond_0
     invoke-virtual {p4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 5806
     const/4 v0, 0x1
 
     return v0
 
-    .line 5808
     :cond_1
     return p3
 .end method
@@ -103,19 +96,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 5773
     iget v0, p0, Landroid/view/ViewRootImpl$QueuedInputEvent;->mFlags:I
 
     and-int/lit8 v0, v0, 0x20
 
     if-eqz v0, :cond_0
 
-    .line 5774
     const/4 v0, 0x1
 
     return v0
 
-    .line 5777
     :cond_0
     return v1
 .end method
@@ -126,19 +116,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 5765
     iget v1, p0, Landroid/view/ViewRootImpl$QueuedInputEvent;->mFlags:I
 
     and-int/lit8 v1, v1, 0x1
 
     if-eqz v1, :cond_0
 
-    .line 5766
     const/4 v0, 0x1
 
     return v0
 
-    .line 5768
     :cond_0
     iget-object v1, p0, Landroid/view/ViewRootImpl$QueuedInputEvent;->mEvent:Landroid/view/InputEvent;
 
@@ -146,7 +133,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 5769
     iget-object v0, p0, Landroid/view/ViewRootImpl$QueuedInputEvent;->mEvent:Landroid/view/InputEvent;
 
     const/4 v1, 0x2
@@ -155,7 +141,6 @@
 
     move-result v0
 
-    .line 5768
     :cond_1
     return v0
 .end method
@@ -164,20 +149,17 @@
     .locals 4
 
     .prologue
-    .line 5782
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v2, "QueuedInputEvent{flags="
+    const-string v2, "QueuedInputEvent{flags="
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 5783
     .local v1, "sb":Ljava/lang/StringBuilder;
     const/4 v0, 0x0
 
-    .line 5784
     .local v0, "hasPrevious":Z
-    const-string/jumbo v2, "DELIVER_POST_IME"
+    const-string v2, "DELIVER_POST_IME"
 
     const/4 v3, 0x1
 
@@ -185,9 +167,8 @@
 
     move-result v0
 
-    .line 5785
     .local v0, "hasPrevious":Z
-    const-string/jumbo v2, "DEFERRED"
+    const-string v2, "DEFERRED"
 
     const/4 v3, 0x2
 
@@ -195,8 +176,7 @@
 
     move-result v0
 
-    .line 5786
-    const-string/jumbo v2, "FINISHED"
+    const-string v2, "FINISHED"
 
     const/4 v3, 0x4
 
@@ -204,8 +184,7 @@
 
     move-result v0
 
-    .line 5787
-    const-string/jumbo v2, "FINISHED_HANDLED"
+    const-string v2, "FINISHED_HANDLED"
 
     const/16 v3, 0x8
 
@@ -213,8 +192,7 @@
 
     move-result v0
 
-    .line 5788
-    const-string/jumbo v2, "RESYNTHESIZED"
+    const-string v2, "RESYNTHESIZED"
 
     const/16 v3, 0x10
 
@@ -222,8 +200,7 @@
 
     move-result v0
 
-    .line 5789
-    const-string/jumbo v2, "UNHANDLED"
+    const-string v2, "UNHANDLED"
 
     const/16 v3, 0x20
 
@@ -231,17 +208,14 @@
 
     move-result v0
 
-    .line 5790
     if-nez v0, :cond_0
 
-    .line 5791
-    const-string/jumbo v2, "0"
+    const-string v2, "0"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 5793
     :cond_0
-    const-string/jumbo v2, ", hasNextQueuedEvent="
+    const-string v2, ", hasNextQueuedEvent="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -251,13 +225,12 @@
 
     if-eqz v2, :cond_1
 
-    const-string/jumbo v2, "true"
+    const-string v2, "true"
 
     :goto_0
     invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 5794
-    const-string/jumbo v2, ", hasInputEventReceiver="
+    const-string v2, ", hasInputEventReceiver="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -267,13 +240,12 @@
 
     if-eqz v2, :cond_2
 
-    const-string/jumbo v2, "true"
+    const-string v2, "true"
 
     :goto_1
     invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 5795
-    const-string/jumbo v2, ", mEvent="
+    const-string v2, ", mEvent="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -285,26 +257,23 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "}"
+    const-string v3, "}"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 5796
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
 
     return-object v2
 
-    .line 5793
     :cond_1
-    const-string/jumbo v2, "false"
+    const-string v2, "false"
 
     goto :goto_0
 
-    .line 5794
     :cond_2
-    const-string/jumbo v2, "false"
+    const-string v2, "false"
 
     goto :goto_1
 .end method

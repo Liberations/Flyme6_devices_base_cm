@@ -17,15 +17,12 @@
 
     const/4 v7, 0x1
 
-    .line 31
     const v3, 0x1030483
 
     invoke-direct {p0, p1, v3}, Landroid/app/Dialog;-><init>(Landroid/content/Context;I)V
 
-    .line 33
     invoke-virtual {p0, v5}, Lcom/android/server/am/LaunchWarningWindow;->requestWindowFeature(I)Z
 
-    .line 34
     invoke-virtual {p0}, Lcom/android/server/am/LaunchWarningWindow;->getWindow()Landroid/view/Window;
 
     move-result-object v3
@@ -34,7 +31,6 @@
 
     invoke-virtual {v3, v4}, Landroid/view/Window;->setType(I)V
 
-    .line 35
     invoke-virtual {p0}, Lcom/android/server/am/LaunchWarningWindow;->getWindow()Landroid/view/Window;
 
     move-result-object v3
@@ -43,13 +39,11 @@
 
     invoke-virtual {v3, v4}, Landroid/view/Window;->addFlags(I)V
 
-    .line 38
     const v3, 0x1090071
 
     invoke-virtual {p0, v3}, Lcom/android/server/am/LaunchWarningWindow;->setContentView(I)V
 
-    .line 39
-    const v3, 0x10403ea
+    const v3, 0x10403f5
 
     invoke-virtual {p1, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -57,12 +51,10 @@
 
     invoke-virtual {p0, v3}, Lcom/android/server/am/LaunchWarningWindow;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 41
     new-instance v1, Landroid/util/TypedValue;
 
     invoke-direct {v1}, Landroid/util/TypedValue;-><init>()V
 
-    .line 42
     .local v1, "out":Landroid/util/TypedValue;
     invoke-virtual {p0}, Lcom/android/server/am/LaunchWarningWindow;->getContext()Landroid/content/Context;
 
@@ -76,7 +68,6 @@
 
     invoke-virtual {v3, v4, v1, v7}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
 
-    .line 43
     invoke-virtual {p0}, Lcom/android/server/am/LaunchWarningWindow;->getWindow()Landroid/view/Window;
 
     move-result-object v3
@@ -85,7 +76,6 @@
 
     invoke-virtual {v3, v5, v4}, Landroid/view/Window;->setFeatureDrawableResource(II)V
 
-    .line 45
     const v3, 0x1020359
 
     invoke-virtual {p0, v3}, Lcom/android/server/am/LaunchWarningWindow;->findViewById(I)Landroid/view/View;
@@ -94,7 +84,6 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    .line 46
     .local v0, "icon":Landroid/widget/ImageView;
     iget-object v3, p3, Lcom/android/server/am/ActivityRecord;->info:Landroid/content/pm/ActivityInfo;
 
@@ -110,7 +99,6 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 47
     const v3, 0x102035a
 
     invoke-virtual {p0, v3}, Lcom/android/server/am/LaunchWarningWindow;->findViewById(I)Landroid/view/View;
@@ -119,7 +107,6 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    .line 48
     .local v2, "text":Landroid/widget/TextView;
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -127,7 +114,6 @@
 
     new-array v4, v7, [Ljava/lang/Object;
 
-    .line 49
     iget-object v5, p3, Lcom/android/server/am/ActivityRecord;->info:Landroid/content/pm/ActivityInfo;
 
     iget-object v5, v5, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -146,8 +132,7 @@
 
     aput-object v5, v4, v8
 
-    .line 48
-    const v5, 0x10403eb
+    const v5, 0x10403f6
 
     invoke-virtual {v3, v5, v4}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -155,7 +140,6 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 50
     const v3, 0x102035b
 
     invoke-virtual {p0, v3}, Lcom/android/server/am/LaunchWarningWindow;->findViewById(I)Landroid/view/View;
@@ -165,7 +149,6 @@
     .end local v0    # "icon":Landroid/widget/ImageView;
     check-cast v0, Landroid/widget/ImageView;
 
-    .line 51
     .restart local v0    # "icon":Landroid/widget/ImageView;
     iget-object v3, p2, Lcom/android/server/am/ActivityRecord;->info:Landroid/content/pm/ActivityInfo;
 
@@ -181,7 +164,6 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 52
     const v3, 0x102035c
 
     invoke-virtual {p0, v3}, Lcom/android/server/am/LaunchWarningWindow;->findViewById(I)Landroid/view/View;
@@ -191,7 +173,6 @@
     .end local v2    # "text":Landroid/widget/TextView;
     check-cast v2, Landroid/widget/TextView;
 
-    .line 53
     .restart local v2    # "text":Landroid/widget/TextView;
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -199,7 +180,6 @@
 
     new-array v4, v7, [Ljava/lang/Object;
 
-    .line 54
     iget-object v5, p2, Lcom/android/server/am/ActivityRecord;->info:Landroid/content/pm/ActivityInfo;
 
     iget-object v5, v5, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -218,8 +198,7 @@
 
     aput-object v5, v4, v8
 
-    .line 53
-    const v5, 0x10403ec
+    const v5, 0x10403f7
 
     invoke-virtual {v3, v5, v4}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -227,6 +206,5 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 30
     return-void
 .end method

@@ -37,7 +37,6 @@
     .param p1, "this$0"    # Landroid/speech/tts/TextToSpeech;
 
     .prologue
-    .line 1317
     iput-object p1, p0, Landroid/speech/tts/TextToSpeech$6;->this$0:Landroid/speech/tts/TextToSpeech;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -57,7 +56,6 @@
     .end annotation
 
     .prologue
-    .line 1320
     invoke-interface {p1}, Landroid/speech/tts/ITextToSpeechService;->isSpeaking()Z
 
     move-result v0
@@ -79,7 +77,6 @@
     .end annotation
 
     .prologue
-    .line 1319
     invoke-virtual {p0, p1}, Landroid/speech/tts/TextToSpeech$6;->run(Landroid/speech/tts/ITextToSpeechService;)Ljava/lang/Boolean;
 
     move-result-object v0

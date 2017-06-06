@@ -20,31 +20,26 @@
     .prologue
     const/16 v3, 0xff
 
-    .line 37
     new-array v1, v3, [B
 
     sput-object v1, Lcom/google/android/mms/pdu/Base64;->base64Alphabet:[B
 
-    .line 41
     const/4 v0, 0x0
 
     .local v0, "i":I
     :goto_0
     if-ge v0, v3, :cond_0
 
-    .line 42
     sget-object v1, Lcom/google/android/mms/pdu/Base64;->base64Alphabet:[B
 
     const/4 v2, -0x1
 
     aput-byte v2, v1, v0
 
-    .line 41
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 44
     :cond_0
     const/16 v0, 0x5a
 
@@ -53,7 +48,6 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 45
     sget-object v1, Lcom/google/android/mms/pdu/Base64;->base64Alphabet:[B
 
     add-int/lit8 v2, v0, -0x41
@@ -62,12 +56,10 @@
 
     aput-byte v2, v1, v0
 
-    .line 44
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_1
 
-    .line 47
     :cond_1
     const/16 v0, 0x7a
 
@@ -76,7 +68,6 @@
 
     if-lt v0, v1, :cond_2
 
-    .line 48
     sget-object v1, Lcom/google/android/mms/pdu/Base64;->base64Alphabet:[B
 
     add-int/lit8 v2, v0, -0x61
@@ -87,12 +78,10 @@
 
     aput-byte v2, v1, v0
 
-    .line 47
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_2
 
-    .line 50
     :cond_2
     const/16 v0, 0x39
 
@@ -101,7 +90,6 @@
 
     if-lt v0, v1, :cond_3
 
-    .line 51
     sget-object v1, Lcom/google/android/mms/pdu/Base64;->base64Alphabet:[B
 
     add-int/lit8 v2, v0, -0x30
@@ -112,12 +100,10 @@
 
     aput-byte v2, v1, v0
 
-    .line 50
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_3
 
-    .line 54
     :cond_3
     sget-object v1, Lcom/google/android/mms/pdu/Base64;->base64Alphabet:[B
 
@@ -127,7 +113,6 @@
 
     aput-byte v3, v1, v2
 
-    .line 55
     sget-object v1, Lcom/google/android/mms/pdu/Base64;->base64Alphabet:[B
 
     const/16 v2, 0x2f
@@ -136,7 +121,6 @@
 
     aput-byte v3, v1, v2
 
-    .line 20
     return-void
 .end method
 
@@ -144,7 +128,6 @@
     .locals 0
 
     .prologue
-    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -155,34 +138,28 @@
     .param p0, "base64Data"    # [B
 
     .prologue
-    .line 66
     invoke-static {p0}, Lcom/google/android/mms/pdu/Base64;->discardNonBase64([B)[B
 
     move-result-object p0
 
-    .line 69
     array-length v12, p0
 
     if-nez v12, :cond_0
 
-    .line 70
     const/4 v12, 0x0
 
     new-array v12, v12, [B
 
     return-object v12
 
-    .line 73
     :cond_0
     array-length v12, p0
 
     div-int/lit8 v11, v12, 0x4
 
-    .line 74
     .local v11, "numberQuadruple":I
     const/4 v5, 0x0
 
-    .line 75
     .local v5, "decodedData":[B
     const/4 v0, 0x0
 
@@ -201,19 +178,15 @@
     .local v9, "marker0":B
     const/4 v10, 0x0
 
-    .line 79
     .local v10, "marker1":B
     const/4 v6, 0x0
 
-    .line 80
     .local v6, "encodedIndex":I
     const/4 v4, 0x0
 
-    .line 83
     .local v4, "dataIndex":I
     array-length v8, p0
 
-    .line 85
     .local v8, "lastData":I
     :cond_1
     add-int/lit8 v12, v8, -0x1
@@ -224,25 +197,21 @@
 
     if-ne v12, v13, :cond_2
 
-    .line 86
     add-int/lit8 v8, v8, -0x1
 
     if-nez v8, :cond_1
 
-    .line 87
     const/4 v12, 0x0
 
     new-array v12, v12, [B
 
     return-object v12
 
-    .line 90
     :cond_2
     sub-int v12, v8, v11
 
     new-array v5, v12, [B
 
-    .line 93
     .local v5, "decodedData":[B
     const/4 v7, 0x0
 
@@ -256,21 +225,17 @@
     :goto_0
     if-ge v7, v11, :cond_6
 
-    .line 94
     mul-int/lit8 v4, v7, 0x4
 
-    .line 95
     add-int/lit8 v12, v4, 0x2
 
     aget-byte v9, p0, v12
 
-    .line 96
     .local v9, "marker0":B
     add-int/lit8 v12, v4, 0x3
 
     aget-byte v10, p0, v12
 
-    .line 98
     .local v10, "marker1":B
     sget-object v12, Lcom/google/android/mms/pdu/Base64;->base64Alphabet:[B
 
@@ -278,7 +243,6 @@
 
     aget-byte v0, v12, v13
 
-    .line 99
     .local v0, "b1":B
     sget-object v12, Lcom/google/android/mms/pdu/Base64;->base64Alphabet:[B
 
@@ -288,7 +252,6 @@
 
     aget-byte v1, v12, v13
 
-    .line 101
     .local v1, "b2":B
     const/16 v12, 0x3d
 
@@ -298,18 +261,15 @@
 
     if-eq v10, v12, :cond_4
 
-    .line 103
     sget-object v12, Lcom/google/android/mms/pdu/Base64;->base64Alphabet:[B
 
     aget-byte v2, v12, v9
 
-    .line 104
     .local v2, "b3":B
     sget-object v12, Lcom/google/android/mms/pdu/Base64;->base64Alphabet:[B
 
     aget-byte v3, v12, v10
 
-    .line 106
     .local v3, "b4":B
     shl-int/lit8 v12, v0, 0x2
 
@@ -321,10 +281,8 @@
 
     aput-byte v12, v5, v6
 
-    .line 107
     add-int/lit8 v12, v6, 0x1
 
-    .line 108
     and-int/lit8 v13, v1, 0xf
 
     shl-int/lit8 v13, v13, 0x4
@@ -337,10 +295,8 @@
 
     int-to-byte v13, v13
 
-    .line 107
     aput-byte v13, v5, v12
 
-    .line 109
     add-int/lit8 v12, v6, 0x2
 
     shl-int/lit8 v13, v2, 0x6
@@ -351,25 +307,21 @@
 
     aput-byte v13, v5, v12
 
-    .line 121
     .end local v2    # "b3":B
     .end local v3    # "b4":B
     :cond_3
     :goto_1
     add-int/lit8 v6, v6, 0x3
 
-    .line 93
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
-    .line 110
     :cond_4
     const/16 v12, 0x3d
 
     if-ne v9, v12, :cond_5
 
-    .line 112
     shl-int/lit8 v12, v0, 0x2
 
     shr-int/lit8 v13, v1, 0x4
@@ -382,18 +334,15 @@
 
     goto :goto_1
 
-    .line 113
     :cond_5
     const/16 v12, 0x3d
 
     if-ne v10, v12, :cond_3
 
-    .line 115
     sget-object v12, Lcom/google/android/mms/pdu/Base64;->base64Alphabet:[B
 
     aget-byte v2, v12, v9
 
-    .line 117
     .restart local v2    # "b3":B
     shl-int/lit8 v12, v0, 0x2
 
@@ -405,10 +354,8 @@
 
     aput-byte v12, v5, v6
 
-    .line 118
     add-int/lit8 v12, v6, 0x1
 
-    .line 119
     and-int/lit8 v13, v1, 0xf
 
     shl-int/lit8 v13, v13, 0x4
@@ -421,12 +368,10 @@
 
     int-to-byte v13, v13
 
-    .line 118
     aput-byte v13, v5, v12
 
     goto :goto_1
 
-    .line 123
     .end local v0    # "b1":B
     .end local v1    # "b2":B
     .end local v2    # "b3":B
@@ -443,16 +388,13 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 152
     array-length v5, p0
 
     new-array v2, v5, [B
 
-    .line 153
     .local v2, "groomedData":[B
     const/4 v0, 0x0
 
-    .line 155
     .local v0, "bytesCopied":I
     const/4 v3, 0x0
 
@@ -462,7 +404,6 @@
 
     if-ge v3, v5, :cond_1
 
-    .line 156
     aget-byte v5, p0, v3
 
     invoke-static {v5}, Lcom/google/android/mms/pdu/Base64;->isBase64(B)Z
@@ -471,7 +412,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 157
     add-int/lit8 v1, v0, 0x1
 
     .end local v0    # "bytesCopied":I
@@ -482,7 +422,6 @@
 
     move v0, v1
 
-    .line 155
     .end local v1    # "bytesCopied":I
     .restart local v0    # "bytesCopied":I
     :cond_0
@@ -490,15 +429,12 @@
 
     goto :goto_0
 
-    .line 161
     :cond_1
     new-array v4, v0, [B
 
-    .line 163
     .local v4, "packedData":[B
     invoke-static {v2, v6, v4, v6, v0}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 165
     return-object v4
 .end method
 
@@ -509,15 +445,12 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 133
     const/16 v0, 0x3d
 
     if-ne p0, v0, :cond_0
 
-    .line 134
     return v2
 
-    .line 135
     :cond_0
     sget-object v0, Lcom/google/android/mms/pdu/Base64;->base64Alphabet:[B
 
@@ -527,12 +460,10 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 136
     const/4 v0, 0x0
 
     return v0
 
-    .line 138
     :cond_1
     return v2
 .end method

@@ -43,7 +43,6 @@
     .param p7, "val$callback"    # Lcom/android/server/hdmi/HdmiControlService$DevicePollingCallback;
 
     .prologue
-    .line 450
     .local p5, "val$allocated":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     .local p6, "val$candidates":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecController$5;->this$0:Lcom/android/server/hdmi/HdmiCecController;
@@ -71,7 +70,6 @@
     .locals 8
 
     .prologue
-    .line 453
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecController$5;->this$0:Lcom/android/server/hdmi/HdmiCecController;
 
     iget v1, p0, Lcom/android/server/hdmi/HdmiCecController$5;->val$sourceAddress:I
@@ -90,14 +88,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 454
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecController$5;->val$allocated:Ljava/util/List;
 
     iget-object v1, p0, Lcom/android/server/hdmi/HdmiCecController$5;->val$candidate:Ljava/lang/Integer;
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 456
     :cond_0
     iget-object v7, p0, Lcom/android/server/hdmi/HdmiCecController$5;->this$0:Lcom/android/server/hdmi/HdmiCecController;
 
@@ -119,6 +115,5 @@
 
     invoke-static {v7, v0}, Lcom/android/server/hdmi/HdmiCecController;->-wrap6(Lcom/android/server/hdmi/HdmiCecController;Ljava/lang/Runnable;)V
 
-    .line 452
     return-void
 .end method

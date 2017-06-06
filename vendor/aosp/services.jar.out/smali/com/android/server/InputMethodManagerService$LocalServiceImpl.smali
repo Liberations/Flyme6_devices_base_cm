@@ -27,13 +27,10 @@
     .param p1, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 3900
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3901
     iput-object p1, p0, Lcom/android/server/InputMethodManagerService$LocalServiceImpl;->mHandler:Landroid/os/Handler;
 
-    .line 3900
     return-void
 .end method
 
@@ -46,17 +43,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 3907
     iget-object v2, p0, Lcom/android/server/InputMethodManagerService$LocalServiceImpl;->mHandler:Landroid/os/Handler;
 
     iget-object v3, p0, Lcom/android/server/InputMethodManagerService$LocalServiceImpl;->mHandler:Landroid/os/Handler;
 
-    .line 3908
     if-eqz p1, :cond_0
 
     const/4 v0, 0x1
 
-    .line 3907
     :goto_0
     const/16 v4, 0xbd6
 
@@ -66,12 +60,10 @@
 
     invoke-virtual {v2, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 3905
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 3908
     goto :goto_0
 .end method

@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p2, "view"    # Landroid/view/View;
 
     .prologue
-    .line 68
     invoke-virtual {p2}, Landroid/view/View;->getTranslationX()F
 
     move-result v0

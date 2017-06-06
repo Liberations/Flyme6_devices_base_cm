@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/notification/NotificationManagerService;
 
     .prologue
-    .line 2357
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,7 +49,6 @@
     .param p9, "userId"    # I
 
     .prologue
-    .line 2361
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     move-object v1, p1
@@ -73,7 +71,6 @@
 
     invoke-virtual/range {v0 .. v9}, Lcom/android/server/notification/NotificationManagerService;->enqueueNotificationInternal(Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;ILandroid/app/Notification;[II)V
 
-    .line 2360
     return-void
 .end method
 
@@ -84,17 +81,14 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 2368
-    invoke-static {}, Lcom/android/server/notification/NotificationManagerService;->-wrap15()V
+    invoke-static {}, Lcom/android/server/notification/NotificationManagerService;->-wrap17()V
 
-    .line 2369
     iget-object v3, p0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iget-object v4, v3, Lcom/android/server/notification/NotificationManagerService;->mNotificationList:Ljava/util/ArrayList;
 
     monitor-enter v4
 
-    .line 2370
     :try_start_0
     iget-object v3, p0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
@@ -104,18 +98,16 @@
 
     move-result v0
 
-    .line 2371
     .local v0, "i":I
     if-gez v0, :cond_0
 
-    .line 2372
-    const-string/jumbo v3, "NotificationService"
+    const-string v3, "NotificationService"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "stripForegroundServiceFlag: Could not find notification with pkg="
+    const-string v6, "stripForegroundServiceFlag: Could not find notification with pkg="
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -125,10 +117,8 @@
 
     move-result-object v5
 
-    .line 2373
-    const-string/jumbo v6, " / id="
+    const-string v6, " / id="
 
-    .line 2372
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v5
@@ -137,10 +127,8 @@
 
     move-result-object v5
 
-    .line 2373
-    const-string/jumbo v6, " / userId="
+    const-string v6, " / userId="
 
-    .line 2372
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v5
@@ -159,10 +147,8 @@
 
     monitor-exit v4
 
-    .line 2374
     return-void
 
-    .line 2376
     :cond_0
     :try_start_1
     iget-object v3, p0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
@@ -175,25 +161,20 @@
 
     check-cast v1, Lcom/android/server/notification/NotificationRecord;
 
-    .line 2377
     .local v1, "r":Lcom/android/server/notification/NotificationRecord;
     iget-object v2, v1, Lcom/android/server/notification/NotificationRecord;->sbn:Landroid/service/notification/StatusBarNotification;
 
-    .line 2382
     .local v2, "sbn":Landroid/service/notification/StatusBarNotification;
     invoke-virtual {v2}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 
     move-result-object v3
 
-    .line 2383
     iget v5, v1, Lcom/android/server/notification/NotificationRecord;->mOriginalFlags:I
 
     and-int/lit8 v5, v5, -0x41
 
-    .line 2382
     iput v5, v3, Landroid/app/Notification;->flags:I
 
-    .line 2384
     iget-object v3, p0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v3}, Lcom/android/server/notification/NotificationManagerService;->-get24(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/RankingHelper;
@@ -206,7 +187,6 @@
 
     invoke-virtual {v3, v5}, Lcom/android/server/notification/RankingHelper;->sort(Ljava/util/ArrayList;)V
 
-    .line 2385
     iget-object v3, p0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-static {v3}, Lcom/android/server/notification/NotificationManagerService;->-get19(Lcom/android/server/notification/NotificationManagerService;)Lcom/android/server/notification/NotificationManagerService$NotificationListeners;
@@ -219,10 +199,8 @@
 
     monitor-exit v4
 
-    .line 2367
     return-void
 
-    .line 2369
     .end local v0    # "i":I
     .end local v1    # "r":Lcom/android/server/notification/NotificationRecord;
     .end local v2    # "sbn":Landroid/service/notification/StatusBarNotification;

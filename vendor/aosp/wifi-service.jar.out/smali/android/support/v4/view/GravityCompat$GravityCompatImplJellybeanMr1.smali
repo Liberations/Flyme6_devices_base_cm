@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,10 +41,8 @@
     .param p8, "layoutDirection"    # I
 
     .prologue
-    .line 77
     invoke-static/range {p1 .. p8}, Landroid/support/v4/view/GravityCompatJellybeanMr1;->apply(IIILandroid/graphics/Rect;IILandroid/graphics/Rect;I)V
 
-    .line 76
     return-void
 .end method
 
@@ -59,10 +56,8 @@
     .param p6, "layoutDirection"    # I
 
     .prologue
-    .line 71
     invoke-static/range {p1 .. p6}, Landroid/support/v4/view/GravityCompatJellybeanMr1;->apply(IIILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
 
-    .line 70
     return-void
 .end method
 
@@ -74,10 +69,8 @@
     .param p4, "layoutDirection"    # I
 
     .prologue
-    .line 83
     invoke-static {p1, p2, p3, p4}, Landroid/support/v4/view/GravityCompatJellybeanMr1;->applyDisplay(ILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
 
-    .line 82
     return-void
 .end method
 
@@ -87,7 +80,6 @@
     .param p2, "layoutDirection"    # I
 
     .prologue
-    .line 65
     invoke-static {p1, p2}, Landroid/support/v4/view/GravityCompatJellybeanMr1;->getAbsoluteGravity(II)I
 
     move-result v0

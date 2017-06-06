@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/widget/RadialTimePickerView;
 
     .prologue
-    .line 873
     iput-object p1, p0, Landroid/widget/RadialTimePickerView$InvalidateUpdateListener;->this$0:Landroid/widget/RadialTimePickerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,11 +51,9 @@
     .param p1, "animation"    # Landroid/animation/ValueAnimator;
 
     .prologue
-    .line 876
     iget-object v0, p0, Landroid/widget/RadialTimePickerView$InvalidateUpdateListener;->this$0:Landroid/widget/RadialTimePickerView;
 
     invoke-virtual {v0}, Landroid/widget/RadialTimePickerView;->invalidate()V
 
-    .line 875
     return-void
 .end method

@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 309
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,7 +46,6 @@
     .param p4, "rectHeight"    # I
 
     .prologue
-    .line 313
     mul-int v0, p3, p2
 
     mul-int v1, p1, p4

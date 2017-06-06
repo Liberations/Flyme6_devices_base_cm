@@ -302,7 +302,6 @@
     .param p1, "this$0"    # Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     .prologue
-    .line 487
     iput-object p1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$WatchdogDisabledState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -316,7 +315,6 @@
     .locals 0
 
     .prologue
-    .line 489
     return-void
 .end method
 
@@ -327,18 +325,15 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 495
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 515
     :goto_0
     const/4 v2, 0x0
 
     return v2
 
-    .line 497
     :pswitch_0
     iget-object v2, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$WatchdogDisabledState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
@@ -348,7 +343,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 498
     iget-object v2, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$WatchdogDisabledState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     iget-object v3, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$WatchdogDisabledState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -359,19 +353,16 @@
 
     invoke-static {v2, v3}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->-wrap5(Lcom/android/server/wifi/WifiWatchdogStateMachine;Lcom/android/internal/util/IState;)V
 
-    .line 499
     :cond_0
     return v4
 
-    .line 501
     :pswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/content/Intent;
 
-    .line 503
     .local v0, "intent":Landroid/content/Intent;
-    const-string/jumbo v2, "networkInfo"
+    const-string v2, "networkInfo"
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -379,7 +370,6 @@
 
     check-cast v1, Landroid/net/NetworkInfo;
 
-    .line 505
     .local v1, "networkInfo":Landroid/net/NetworkInfo;
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine$WatchdogDisabledState;->-getandroid_net_NetworkInfo$DetailedStateSwitchesValues()[I
 
@@ -399,7 +389,6 @@
 
     goto :goto_0
 
-    .line 508
     :pswitch_2
     iget-object v2, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$WatchdogDisabledState;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
@@ -407,7 +396,6 @@
 
     goto :goto_0
 
-    .line 495
     nop
 
     :pswitch_data_0
@@ -416,7 +404,6 @@
         :pswitch_1
     .end packed-switch
 
-    .line 505
     :pswitch_data_1
     .packed-switch 0x1
         :pswitch_2

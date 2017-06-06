@@ -16,7 +16,6 @@
     .locals 0
 
     .prologue
-    .line 22
     invoke-direct {p0}, Lcyanogenmod/hardware/IThermalListenerCallback$Stub;-><init>()V
 
     return-void

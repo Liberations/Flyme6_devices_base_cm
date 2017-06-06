@@ -21,22 +21,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 25
     iput-boolean v0, p0, Lcom/android/server/wifi/NetworkUpdateResult;->isNewNetwork:Z
 
-    .line 28
     iput p1, p0, Lcom/android/server/wifi/NetworkUpdateResult;->netId:I
 
-    .line 29
     iput-boolean v0, p0, Lcom/android/server/wifi/NetworkUpdateResult;->ipChanged:Z
 
-    .line 30
     iput-boolean v0, p0, Lcom/android/server/wifi/NetworkUpdateResult;->proxyChanged:Z
 
-    .line 27
     return-void
 .end method
 
@@ -46,26 +40,20 @@
     .param p2, "proxy"    # Z
 
     .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 25
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/wifi/NetworkUpdateResult;->isNewNetwork:Z
 
-    .line 34
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/wifi/NetworkUpdateResult;->netId:I
 
-    .line 35
     iput-boolean p1, p0, Lcom/android/server/wifi/NetworkUpdateResult;->ipChanged:Z
 
-    .line 36
     iput-boolean p2, p0, Lcom/android/server/wifi/NetworkUpdateResult;->proxyChanged:Z
 
-    .line 33
     return-void
 .end method
 
@@ -75,7 +63,6 @@
     .locals 1
 
     .prologue
-    .line 44
     iget v0, p0, Lcom/android/server/wifi/NetworkUpdateResult;->netId:I
 
     return v0
@@ -85,7 +72,6 @@
     .locals 1
 
     .prologue
-    .line 52
     iget-boolean v0, p0, Lcom/android/server/wifi/NetworkUpdateResult;->ipChanged:Z
 
     return v0
@@ -95,7 +81,6 @@
     .locals 1
 
     .prologue
-    .line 60
     iget-boolean v0, p0, Lcom/android/server/wifi/NetworkUpdateResult;->proxyChanged:Z
 
     return v0
@@ -105,7 +90,6 @@
     .locals 1
 
     .prologue
-    .line 64
     iget-boolean v0, p0, Lcom/android/server/wifi/NetworkUpdateResult;->isNewNetwork:Z
 
     return v0
@@ -116,10 +100,8 @@
     .param p1, "ip"    # Z
 
     .prologue
-    .line 48
     iput-boolean p1, p0, Lcom/android/server/wifi/NetworkUpdateResult;->ipChanged:Z
 
-    .line 47
     return-void
 .end method
 
@@ -128,10 +110,8 @@
     .param p1, "isNew"    # Z
 
     .prologue
-    .line 68
     iput-boolean p1, p0, Lcom/android/server/wifi/NetworkUpdateResult;->isNewNetwork:Z
 
-    .line 67
     return-void
 .end method
 
@@ -140,10 +120,8 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 40
     iput p1, p0, Lcom/android/server/wifi/NetworkUpdateResult;->netId:I
 
-    .line 39
     return-void
 .end method
 
@@ -152,9 +130,7 @@
     .param p1, "proxy"    # Z
 
     .prologue
-    .line 56
     iput-boolean p1, p0, Lcom/android/server/wifi/NetworkUpdateResult;->proxyChanged:Z
 
-    .line 55
     return-void
 .end method

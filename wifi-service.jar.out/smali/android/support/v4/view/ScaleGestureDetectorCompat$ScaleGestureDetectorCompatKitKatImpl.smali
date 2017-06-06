@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +43,6 @@
     .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
-    .line 53
     invoke-static {p1}, Landroid/support/v4/view/ScaleGestureDetectorCompatKitKat;->isQuickScaleEnabled(Ljava/lang/Object;)Z
 
     move-result v0
@@ -58,9 +56,7 @@
     .param p2, "enabled"    # Z
 
     .prologue
-    .line 48
     invoke-static {p1, p2}, Landroid/support/v4/view/ScaleGestureDetectorCompatKitKat;->setQuickScaleEnabled(Ljava/lang/Object;Z)V
 
-    .line 47
     return-void
 .end method

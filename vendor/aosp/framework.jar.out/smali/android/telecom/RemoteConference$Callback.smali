@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,7 +41,6 @@
     .end annotation
 
     .prologue
-    .line 115
     .local p2, "conferenceableConnections":Ljava/util/List;, "Ljava/util/List<Landroid/telecom/RemoteConnection;>;"
     return-void
 .end method
@@ -53,7 +51,6 @@
     .param p2, "connection"    # Landroid/telecom/RemoteConnection;
 
     .prologue
-    .line 73
     return-void
 .end method
 
@@ -63,7 +60,6 @@
     .param p2, "connectionCapabilities"    # I
 
     .prologue
-    .line 92
     return-void
 .end method
 
@@ -73,7 +69,6 @@
     .param p2, "connectionProperties"    # I
 
     .prologue
-    .line 104
     return-void
 .end method
 
@@ -83,7 +78,6 @@
     .param p2, "connection"    # Landroid/telecom/RemoteConnection;
 
     .prologue
-    .line 81
     return-void
 .end method
 
@@ -92,7 +86,6 @@
     .param p1, "conference"    # Landroid/telecom/RemoteConference;
 
     .prologue
-    .line 123
     return-void
 .end method
 
@@ -102,7 +95,6 @@
     .param p2, "disconnectCause"    # Landroid/telecom/DisconnectCause;
 
     .prologue
-    .line 65
     return-void
 .end method
 
@@ -112,7 +104,6 @@
     .param p2, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 131
     return-void
 .end method
 
@@ -123,6 +114,5 @@
     .param p3, "newState"    # I
 
     .prologue
-    .line 56
     return-void
 .end method

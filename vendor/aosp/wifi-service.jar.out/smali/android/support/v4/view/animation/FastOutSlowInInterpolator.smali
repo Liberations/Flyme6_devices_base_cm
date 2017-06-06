@@ -12,7 +12,6 @@
     .locals 1
 
     .prologue
-    .line 34
     const/16 v0, 0xc9
 
     new-array v0, v0, [F
@@ -21,10 +20,8 @@
 
     sput-object v0, Landroid/support/v4/view/animation/FastOutSlowInInterpolator;->VALUES:[F
 
-    .line 28
     return-void
 
-    .line 34
     :array_0
     .array-data 4
         0x0
@@ -235,12 +232,10 @@
     .locals 1
 
     .prologue
-    .line 67
     sget-object v0, Landroid/support/v4/view/animation/FastOutSlowInInterpolator;->VALUES:[F
 
     invoke-direct {p0, v0}, Landroid/support/v4/view/animation/LookupTableInterpolator;-><init>([F)V
 
-    .line 66
     return-void
 .end method
 

@@ -35,13 +35,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 504
     iput-object p1, p0, Lorg/cyanogenmod/platform/internal/ManagedServices$SettingsObserver;->this$0:Lorg/cyanogenmod/platform/internal/ManagedServices;
 
-    .line 505
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 502
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ManagedServices$SettingsObserver;->this$0:Lorg/cyanogenmod/platform/internal/ManagedServices;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/ManagedServices;->-get0(Lorg/cyanogenmod/platform/internal/ManagedServices;)Lorg/cyanogenmod/platform/internal/ManagedServices$Config;
@@ -56,7 +53,6 @@
 
     iput-object v0, p0, Lorg/cyanogenmod/platform/internal/ManagedServices$SettingsObserver;->mSecureSettingsUri:Landroid/net/Uri;
 
-    .line 504
     return-void
 .end method
 
@@ -75,7 +71,6 @@
     .locals 4
 
     .prologue
-    .line 509
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/ManagedServices$SettingsObserver;->this$0:Lorg/cyanogenmod/platform/internal/ManagedServices;
 
     iget-object v1, v1, Lorg/cyanogenmod/platform/internal/ManagedServices;->mContext:Landroid/content/Context;
@@ -84,24 +79,19 @@
 
     move-result-object v0
 
-    .line 510
     .local v0, "resolver":Landroid/content/ContentResolver;
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/ManagedServices$SettingsObserver;->mSecureSettingsUri:Landroid/net/Uri;
 
-    .line 511
     const/4 v2, 0x0
 
     const/4 v3, -0x1
 
-    .line 510
     invoke-virtual {v0, v1, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 512
     const/4 v1, 0x0
 
     invoke-direct {p0, v1}, Lorg/cyanogenmod/platform/internal/ManagedServices$SettingsObserver;->update(Landroid/net/Uri;)V
 
-    .line 508
     return-void
 .end method
 
@@ -110,7 +100,6 @@
     .param p1, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 521
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ManagedServices$SettingsObserver;->mSecureSettingsUri:Landroid/net/Uri;
@@ -121,7 +110,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 522
     :cond_0
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ManagedServices$SettingsObserver;->this$0:Lorg/cyanogenmod/platform/internal/ManagedServices;
 
@@ -137,7 +125,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "Setting changed: mSecureSettingsUri="
+    const-string v2, "Setting changed: mSecureSettingsUri="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -149,10 +137,8 @@
 
     move-result-object v1
 
-    .line 523
-    const-string/jumbo v2, " / uri="
+    const-string v2, " / uri="
 
-    .line 522
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -167,13 +153,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 524
     :cond_1
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/ManagedServices$SettingsObserver;->this$0:Lorg/cyanogenmod/platform/internal/ManagedServices;
 
     invoke-static {v0}, Lorg/cyanogenmod/platform/internal/ManagedServices;->-wrap3(Lorg/cyanogenmod/platform/internal/ManagedServices;)V
 
-    .line 520
     :cond_2
     return-void
 .end method
@@ -186,9 +170,7 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 517
     invoke-direct {p0, p2}, Lorg/cyanogenmod/platform/internal/ManagedServices$SettingsObserver;->update(Landroid/net/Uri;)V
 
-    .line 516
     return-void
 .end method

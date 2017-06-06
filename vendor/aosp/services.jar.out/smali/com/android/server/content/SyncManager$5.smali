@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/content/SyncManager;
 
     .prologue
-    .line 351
     iput-object p1, p0, Lcom/android/server/content/SyncManager$5;->this$0:Lcom/android/server/content/SyncManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,14 +39,12 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 354
     iget-object v1, p0, Lcom/android/server/content/SyncManager$5;->this$0:Lcom/android/server/content/SyncManager;
 
     invoke-static {v1}, Lcom/android/server/content/SyncManager;->-get9(Lcom/android/server/content/SyncManager;)Z
 
     move-result v0
 
-    .line 358
     .local v0, "wasConnected":Z
     iget-object v1, p0, Lcom/android/server/content/SyncManager$5;->this$0:Lcom/android/server/content/SyncManager;
 
@@ -59,7 +56,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/content/SyncManager;->-set1(Lcom/android/server/content/SyncManager;Z)Z
 
-    .line 359
     iget-object v1, p0, Lcom/android/server/content/SyncManager$5;->this$0:Lcom/android/server/content/SyncManager;
 
     invoke-static {v1}, Lcom/android/server/content/SyncManager;->-get9(Lcom/android/server/content/SyncManager;)Z
@@ -68,11 +64,9 @@
 
     if-eqz v1, :cond_2
 
-    .line 360
     if-nez v0, :cond_1
 
-    .line 361
-    const-string/jumbo v1, "SyncManager"
+    const-string v1, "SyncManager"
 
     const/4 v2, 0x2
 
@@ -82,14 +76,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 362
-    const-string/jumbo v1, "SyncManager"
+    const-string v1, "SyncManager"
 
-    const-string/jumbo v2, "Reconnection detected: clearing all backoffs"
+    const-string v2, "Reconnection detected: clearing all backoffs"
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 364
     :cond_0
     iget-object v1, p0, Lcom/android/server/content/SyncManager$5;->this$0:Lcom/android/server/content/SyncManager;
 
@@ -99,7 +91,6 @@
 
     monitor-enter v2
 
-    .line 365
     :try_start_0
     iget-object v1, p0, Lcom/android/server/content/SyncManager$5;->this$0:Lcom/android/server/content/SyncManager;
 
@@ -119,17 +110,14 @@
 
     monitor-exit v2
 
-    .line 368
     :cond_1
     iget-object v1, p0, Lcom/android/server/content/SyncManager$5;->this$0:Lcom/android/server/content/SyncManager;
 
     invoke-static {v1}, Lcom/android/server/content/SyncManager;->-wrap16(Lcom/android/server/content/SyncManager;)V
 
-    .line 353
     :cond_2
     return-void
 
-    .line 364
     :catchall_0
     move-exception v1
 

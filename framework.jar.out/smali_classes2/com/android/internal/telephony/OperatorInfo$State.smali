@@ -48,43 +48,38 @@
 
     const/4 v2, 0x0
 
-    .line 27
     new-instance v0, Lcom/android/internal/telephony/OperatorInfo$State;
 
-    const-string/jumbo v1, "UNKNOWN"
+    const-string v1, "UNKNOWN"
 
     invoke-direct {v0, v1, v2}, Lcom/android/internal/telephony/OperatorInfo$State;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/OperatorInfo$State;->UNKNOWN:Lcom/android/internal/telephony/OperatorInfo$State;
 
-    .line 28
     new-instance v0, Lcom/android/internal/telephony/OperatorInfo$State;
 
-    const-string/jumbo v1, "AVAILABLE"
+    const-string v1, "AVAILABLE"
 
     invoke-direct {v0, v1, v3}, Lcom/android/internal/telephony/OperatorInfo$State;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/OperatorInfo$State;->AVAILABLE:Lcom/android/internal/telephony/OperatorInfo$State;
 
-    .line 29
     new-instance v0, Lcom/android/internal/telephony/OperatorInfo$State;
 
-    const-string/jumbo v1, "CURRENT"
+    const-string v1, "CURRENT"
 
     invoke-direct {v0, v1, v4}, Lcom/android/internal/telephony/OperatorInfo$State;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/OperatorInfo$State;->CURRENT:Lcom/android/internal/telephony/OperatorInfo$State;
 
-    .line 30
     new-instance v0, Lcom/android/internal/telephony/OperatorInfo$State;
 
-    const-string/jumbo v1, "FORBIDDEN"
+    const-string v1, "FORBIDDEN"
 
     invoke-direct {v0, v1, v5}, Lcom/android/internal/telephony/OperatorInfo$State;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/OperatorInfo$State;->FORBIDDEN:Lcom/android/internal/telephony/OperatorInfo$State;
 
-    .line 26
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/android/internal/telephony/OperatorInfo$State;
@@ -114,7 +109,6 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -125,7 +119,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 26
     const-class v0, Lcom/android/internal/telephony/OperatorInfo$State;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -141,7 +134,6 @@
     .locals 1
 
     .prologue
-    .line 26
     sget-object v0, Lcom/android/internal/telephony/OperatorInfo$State;->$VALUES:[Lcom/android/internal/telephony/OperatorInfo$State;
 
     return-object v0

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/audio/AudioService;
 
     .prologue
-    .line 380
     iput-object p1, p0, Lcom/android/server/audio/AudioService$1;->this$0:Lcom/android/server/audio/AudioService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,14 +43,11 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 382
     packed-switch p1, :pswitch_data_0
 
-    .line 381
     :goto_0
     return-void
 
-    .line 384
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/audio/AudioService$1;->this$0:Lcom/android/server/audio/AudioService;
 
@@ -61,7 +57,6 @@
 
     const/4 v1, 0x4
 
-    .line 385
     const/4 v2, 0x1
 
     const/4 v5, 0x0
@@ -70,12 +65,10 @@
 
     move v6, v3
 
-    .line 384
     invoke-static/range {v0 .. v6}, Lcom/android/server/audio/AudioService;->-wrap36(Landroid/os/Handler;IIIILjava/lang/Object;I)V
 
     goto :goto_0
 
-    .line 382
     :pswitch_data_0
     .packed-switch 0x64
         :pswitch_0

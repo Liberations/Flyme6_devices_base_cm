@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/internal/telephony/PhoneProxy;
 
     .prologue
-    .line 137
     iput-object p1, p0, Lcom/android/internal/telephony/PhoneProxy$2;->this$0:Lcom/android/internal/telephony/PhoneProxy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,19 +39,17 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 140
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneProxy$2;->this$0:Lcom/android/internal/telephony/PhoneProxy;
 
-    const-string/jumbo v1, "Carrier config changed. Reloading config"
+    const-string v1, "Carrier config changed. Reloading config"
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/PhoneProxy;->logd(Ljava/lang/String;)V
 
-    .line 141
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string/jumbo v1, "android.telephony.action.CARRIER_CONFIG_CHANGED"
+    const-string v1, "android.telephony.action.CARRIER_CONFIG_CHANGED"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -60,14 +57,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 142
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneProxy$2;->this$0:Lcom/android/internal/telephony/PhoneProxy;
 
     invoke-static {v0}, Lcom/android/internal/telephony/PhoneProxy;->-get0(Lcom/android/internal/telephony/PhoneProxy;)Lcom/android/internal/telephony/CommandsInterface;
 
     move-result-object v0
 
-    .line 143
     iget-object v1, p0, Lcom/android/internal/telephony/PhoneProxy$2;->this$0:Lcom/android/internal/telephony/PhoneProxy;
 
     const/4 v2, 0x3
@@ -76,10 +71,8 @@
 
     move-result-object v1
 
-    .line 142
     invoke-interface {v0, v1}, Lcom/android/internal/telephony/CommandsInterface;->getVoiceRadioTechnology(Landroid/os/Message;)V
 
-    .line 139
     :cond_0
     return-void
 .end method

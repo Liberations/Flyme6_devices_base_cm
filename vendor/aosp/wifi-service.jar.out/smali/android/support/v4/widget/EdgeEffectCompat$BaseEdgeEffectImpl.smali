@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +35,6 @@
     .param p2, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 89
     const/4 v0, 0x0
 
     return v0
@@ -47,7 +45,6 @@
     .param p1, "edgeEffect"    # Ljava/lang/Object;
 
     .prologue
-    .line 73
     return-void
 .end method
 
@@ -56,7 +53,6 @@
     .param p1, "edgeEffect"    # Ljava/lang/Object;
 
     .prologue
-    .line 70
     const/4 v0, 0x1
 
     return v0
@@ -67,7 +63,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 63
     const/4 v0, 0x0
 
     return-object v0
@@ -79,7 +74,6 @@
     .param p2, "velocity"    # I
 
     .prologue
-    .line 85
     const/4 v0, 0x0
 
     return v0
@@ -91,7 +85,6 @@
     .param p2, "deltaDistance"    # F
 
     .prologue
-    .line 77
     const/4 v0, 0x0
 
     return v0
@@ -104,7 +97,6 @@
     .param p3, "displacement"    # F
 
     .prologue
-    .line 93
     const/4 v0, 0x0
 
     return v0
@@ -115,7 +107,6 @@
     .param p1, "edgeEffect"    # Ljava/lang/Object;
 
     .prologue
-    .line 81
     const/4 v0, 0x0
 
     return v0
@@ -128,6 +119,5 @@
     .param p3, "height"    # I
 
     .prologue
-    .line 66
     return-void
 .end method

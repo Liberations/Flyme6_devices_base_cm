@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 613
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,12 +44,10 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 615
     new-instance v0, Landroid/net/wifi/passpoint/WifiPasspointCredential;
 
     invoke-direct {v0}, Landroid/net/wifi/passpoint/WifiPasspointCredential;-><init>()V
 
-    .line 616
     .local v0, "pc":Landroid/net/wifi/passpoint/WifiPasspointCredential;
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -58,42 +55,36 @@
 
     invoke-static {v0, v1}, Landroid/net/wifi/passpoint/WifiPasspointCredential;->-set5(Landroid/net/wifi/passpoint/WifiPasspointCredential;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 617
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-static {v0, v1}, Landroid/net/wifi/passpoint/WifiPasspointCredential;->-set0(Landroid/net/wifi/passpoint/WifiPasspointCredential;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 618
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-static {v0, v1}, Landroid/net/wifi/passpoint/WifiPasspointCredential;->-set4(Landroid/net/wifi/passpoint/WifiPasspointCredential;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 619
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     invoke-static {v0, v1}, Landroid/net/wifi/passpoint/WifiPasspointCredential;->-set1(Landroid/net/wifi/passpoint/WifiPasspointCredential;I)I
 
-    .line 620
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-static {v0, v1}, Landroid/net/wifi/passpoint/WifiPasspointCredential;->-set2(Landroid/net/wifi/passpoint/WifiPasspointCredential;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 621
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-static {v0, v1}, Landroid/net/wifi/passpoint/WifiPasspointCredential;->-set3(Landroid/net/wifi/passpoint/WifiPasspointCredential;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 622
     return-object v0
 .end method
 
@@ -102,7 +93,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 614
     invoke-virtual {p0, p1}, Landroid/net/wifi/passpoint/WifiPasspointCredential$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/wifi/passpoint/WifiPasspointCredential;
 
     move-result-object v0
@@ -115,7 +105,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 626
     new-array v0, p1, [Landroid/net/wifi/passpoint/WifiPasspointCredential;
 
     return-object v0
@@ -126,7 +115,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 625
     invoke-virtual {p0, p1}, Landroid/net/wifi/passpoint/WifiPasspointCredential$1;->newArray(I)[Landroid/net/wifi/passpoint/WifiPasspointCredential;
 
     move-result-object v0

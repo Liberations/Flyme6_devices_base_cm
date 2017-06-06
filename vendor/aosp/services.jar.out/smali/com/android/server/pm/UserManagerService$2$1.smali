@@ -27,7 +27,6 @@
     .param p2, "val$userHandle"    # I
 
     .prologue
-    .line 1559
     iput-object p1, p0, Lcom/android/server/pm/UserManagerService$2$1;->this$1:Lcom/android/server/pm/UserManagerService$2;
 
     iput p2, p0, Lcom/android/server/pm/UserManagerService$2$1;->val$userHandle:I
@@ -43,7 +42,6 @@
     .locals 4
 
     .prologue
-    .line 1561
     iget-object v0, p0, Lcom/android/server/pm/UserManagerService$2$1;->this$1:Lcom/android/server/pm/UserManagerService$2;
 
     iget-object v0, v0, Lcom/android/server/pm/UserManagerService$2;->this$0:Lcom/android/server/pm/UserManagerService;
@@ -54,7 +52,6 @@
 
     monitor-enter v1
 
-    .line 1562
     :try_start_0
     iget-object v0, p0, Lcom/android/server/pm/UserManagerService$2$1;->this$1:Lcom/android/server/pm/UserManagerService$2;
 
@@ -68,7 +65,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 1563
     :try_start_1
     iget-object v0, p0, Lcom/android/server/pm/UserManagerService$2$1;->this$1:Lcom/android/server/pm/UserManagerService$2;
 
@@ -87,10 +83,8 @@
 
     monitor-exit v1
 
-    .line 1560
     return-void
 
-    .line 1562
     :catchall_0
     move-exception v0
 
@@ -101,7 +95,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 1561
     :catchall_1
     move-exception v0
 

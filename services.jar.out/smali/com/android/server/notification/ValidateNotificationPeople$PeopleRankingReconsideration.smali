@@ -54,25 +54,19 @@
     .end annotation
 
     .prologue
-    .line 425
     .local p4, "pendingLookups":Ljava/util/LinkedList;, "Ljava/util/LinkedList<Ljava/lang/String;>;"
     iput-object p1, p0, Lcom/android/server/notification/ValidateNotificationPeople$PeopleRankingReconsideration;->this$0:Lcom/android/server/notification/ValidateNotificationPeople;
 
-    .line 426
     invoke-direct {p0, p3}, Lcom/android/server/notification/RankingReconsideration;-><init>(Ljava/lang/String;)V
 
-    .line 422
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/notification/ValidateNotificationPeople$PeopleRankingReconsideration;->mContactAffinity:F
 
-    .line 427
     iput-object p2, p0, Lcom/android/server/notification/ValidateNotificationPeople$PeopleRankingReconsideration;->mContext:Landroid/content/Context;
 
-    .line 428
     iput-object p4, p0, Lcom/android/server/notification/ValidateNotificationPeople$PeopleRankingReconsideration;->mPendingLookups:Ljava/util/LinkedList;
 
-    .line 425
     return-void
 .end method
 
@@ -96,12 +90,10 @@
     .param p1, "operand"    # Lcom/android/server/notification/NotificationRecord;
 
     .prologue
-    .line 475
     invoke-virtual {p1}, Lcom/android/server/notification/NotificationRecord;->getContactAffinity()F
 
     move-result v0
 
-    .line 476
     .local v0, "affinityBound":F
     iget v1, p0, Lcom/android/server/notification/ValidateNotificationPeople$PeopleRankingReconsideration;->mContactAffinity:F
 
@@ -111,20 +103,19 @@
 
     invoke-virtual {p1, v1}, Lcom/android/server/notification/NotificationRecord;->setContactAffinity(F)V
 
-    .line 477
     invoke-static {}, Lcom/android/server/notification/ValidateNotificationPeople;->-get1()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    const-string/jumbo v1, "ValidateNoPeople"
+    const-string v1, "ValidateNoPeople"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "final affinity: "
+    const-string v3, "final affinity: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -144,7 +135,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 474
     :cond_0
     return-void
 .end method
@@ -153,7 +143,6 @@
     .locals 1
 
     .prologue
-    .line 481
     iget v0, p0, Lcom/android/server/notification/ValidateNotificationPeople$PeopleRankingReconsideration;->mContactAffinity:F
 
     return v0
@@ -164,10 +153,8 @@
     .param p1, "record"    # Lcom/android/server/notification/NotificationRecord;
 
     .prologue
-    .line 485
     iput-object p1, p0, Lcom/android/server/notification/ValidateNotificationPeople$PeopleRankingReconsideration;->mRecord:Lcom/android/server/notification/NotificationRecord;
 
-    .line 484
     return-void
 .end method
 
@@ -179,20 +166,19 @@
 
     const/4 v9, 0x0
 
-    .line 433
     invoke-static {}, Lcom/android/server/notification/ValidateNotificationPeople;->-get1()Z
 
     move-result v7
 
     if-eqz v7, :cond_0
 
-    const-string/jumbo v7, "ValidateNoPeople"
+    const-string v7, "ValidateNoPeople"
 
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "Executing: validation for: "
+    const-string v11, "Executing: validation for: "
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -210,13 +196,11 @@
 
     invoke-static {v7, v10}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 434
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
-    .line 435
     .local v4, "timeStartMs":J
     iget-object v7, p0, Lcom/android/server/notification/ValidateNotificationPeople$PeopleRankingReconsideration;->mPendingLookups:Ljava/util/LinkedList;
 
@@ -239,19 +223,16 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 436
     .local v1, "handle":Ljava/lang/String;
     const/4 v3, 0x0
 
-    .line 437
     .local v3, "lookupResult":Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;
     invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v6
 
-    .line 438
     .local v6, "uri":Landroid/net/Uri;
-    const-string/jumbo v7, "tel"
+    const-string v7, "tel"
 
     invoke-virtual {v6}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
@@ -263,20 +244,19 @@
 
     if-eqz v7, :cond_4
 
-    .line 439
     invoke-static {}, Lcom/android/server/notification/ValidateNotificationPeople;->-get0()Z
 
     move-result v7
 
     if-eqz v7, :cond_2
 
-    const-string/jumbo v7, "ValidateNoPeople"
+    const-string v7, "ValidateNoPeople"
 
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "checking telephone URI: "
+    const-string v11, "checking telephone URI: "
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -292,7 +272,6 @@
 
     invoke-static {v7, v10}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 440
     :cond_2
     iget-object v7, p0, Lcom/android/server/notification/ValidateNotificationPeople$PeopleRankingReconsideration;->this$0:Lcom/android/server/notification/ValidateNotificationPeople;
 
@@ -306,12 +285,10 @@
 
     move-result-object v3
 
-    .line 451
     .local v3, "lookupResult":Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;
     :goto_1
     if-eqz v3, :cond_9
 
-    .line 452
     iget-object v7, p0, Lcom/android/server/notification/ValidateNotificationPeople$PeopleRankingReconsideration;->this$0:Lcom/android/server/notification/ValidateNotificationPeople;
 
     invoke-static {v7}, Lcom/android/server/notification/ValidateNotificationPeople;->-get3(Lcom/android/server/notification/ValidateNotificationPeople;)Landroid/util/LruCache;
@@ -320,7 +297,6 @@
 
     monitor-enter v10
 
-    .line 453
     :try_start_0
     iget-object v7, p0, Lcom/android/server/notification/ValidateNotificationPeople$PeopleRankingReconsideration;->this$0:Lcom/android/server/notification/ValidateNotificationPeople;
 
@@ -334,7 +310,6 @@
 
     move-result-object v0
 
-    .line 454
     .local v0, "cacheKey":Ljava/lang/String;
     iget-object v7, p0, Lcom/android/server/notification/ValidateNotificationPeople$PeopleRankingReconsideration;->this$0:Lcom/android/server/notification/ValidateNotificationPeople;
 
@@ -348,20 +323,19 @@
 
     monitor-exit v10
 
-    .line 456
     invoke-static {}, Lcom/android/server/notification/ValidateNotificationPeople;->-get0()Z
 
     move-result v7
 
     if-eqz v7, :cond_3
 
-    const-string/jumbo v7, "ValidateNoPeople"
+    const-string v7, "ValidateNoPeople"
 
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "lookup contactAffinity is "
+    const-string v11, "lookup contactAffinity is "
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -381,7 +355,6 @@
 
     invoke-static {v7, v10}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 457
     :cond_3
     iget v7, p0, Lcom/android/server/notification/ValidateNotificationPeople$PeopleRankingReconsideration;->mContactAffinity:F
 
@@ -397,11 +370,10 @@
 
     goto/16 :goto_0
 
-    .line 441
     .end local v0    # "cacheKey":Ljava/lang/String;
     .local v3, "lookupResult":Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;
     :cond_4
-    const-string/jumbo v7, "mailto"
+    const-string v7, "mailto"
 
     invoke-virtual {v6}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
@@ -413,20 +385,19 @@
 
     if-eqz v7, :cond_6
 
-    .line 442
     invoke-static {}, Lcom/android/server/notification/ValidateNotificationPeople;->-get0()Z
 
     move-result v7
 
     if-eqz v7, :cond_5
 
-    const-string/jumbo v7, "ValidateNoPeople"
+    const-string v7, "ValidateNoPeople"
 
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "checking mailto URI: "
+    const-string v11, "checking mailto URI: "
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -442,7 +413,6 @@
 
     invoke-static {v7, v10}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 443
     :cond_5
     iget-object v7, p0, Lcom/android/server/notification/ValidateNotificationPeople$PeopleRankingReconsideration;->this$0:Lcom/android/server/notification/ValidateNotificationPeople;
 
@@ -459,7 +429,6 @@
     .local v3, "lookupResult":Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;
     goto/16 :goto_1
 
-    .line 444
     .local v3, "lookupResult":Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;
     :cond_6
     sget-object v7, Landroid/provider/ContactsContract$Contacts;->CONTENT_LOOKUP_URI:Landroid/net/Uri;
@@ -474,20 +443,19 @@
 
     if-eqz v7, :cond_8
 
-    .line 445
     invoke-static {}, Lcom/android/server/notification/ValidateNotificationPeople;->-get0()Z
 
     move-result v7
 
     if-eqz v7, :cond_7
 
-    const-string/jumbo v7, "ValidateNoPeople"
+    const-string v7, "ValidateNoPeople"
 
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "checking lookup URI: "
+    const-string v11, "checking lookup URI: "
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -503,7 +471,6 @@
 
     invoke-static {v7, v10}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 446
     :cond_7
     iget-object v7, p0, Lcom/android/server/notification/ValidateNotificationPeople$PeopleRankingReconsideration;->this$0:Lcom/android/server/notification/ValidateNotificationPeople;
 
@@ -516,7 +483,6 @@
     .local v3, "lookupResult":Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;
     goto/16 :goto_1
 
-    .line 448
     .local v3, "lookupResult":Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;
     :cond_8
     new-instance v3, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;
@@ -524,15 +490,14 @@
     .end local v3    # "lookupResult":Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;
     invoke-direct {v3}, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;-><init>()V
 
-    .line 449
     .local v3, "lookupResult":Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;
-    const-string/jumbo v7, "ValidateNoPeople"
+    const-string v7, "ValidateNoPeople"
 
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "unsupported URI "
+    const-string v11, "unsupported URI "
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -550,7 +515,6 @@
 
     goto/16 :goto_1
 
-    .line 452
     :catchall_0
     move-exception v7
 
@@ -558,7 +522,6 @@
 
     throw v7
 
-    .line 459
     :cond_9
     invoke-static {}, Lcom/android/server/notification/ValidateNotificationPeople;->-get0()Z
 
@@ -566,15 +529,14 @@
 
     if-eqz v7, :cond_1
 
-    const-string/jumbo v7, "ValidateNoPeople"
+    const-string v7, "ValidateNoPeople"
 
-    const-string/jumbo v10, "lookupResult is null"
+    const-string v10, "lookupResult is null"
 
     invoke-static {v7, v10}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_0
 
-    .line 462
     .end local v1    # "handle":Ljava/lang/String;
     .end local v3    # "lookupResult":Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;
     .end local v6    # "uri":Landroid/net/Uri;
@@ -585,14 +547,13 @@
 
     if-eqz v7, :cond_b
 
-    .line 463
-    const-string/jumbo v7, "ValidateNoPeople"
+    const-string v7, "ValidateNoPeople"
 
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v11, "Validation finished in "
+    const-string v11, "Validation finished in "
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -608,10 +569,8 @@
 
     move-result-object v10
 
-    .line 464
-    const-string/jumbo v11, "ms"
+    const-string v11, "ms"
 
-    .line 463
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v10
@@ -622,13 +581,11 @@
 
     invoke-static {v7, v10}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 467
     :cond_b
     iget-object v7, p0, Lcom/android/server/notification/ValidateNotificationPeople$PeopleRankingReconsideration;->mRecord:Lcom/android/server/notification/NotificationRecord;
 
     if-eqz v7, :cond_c
 
-    .line 468
     iget-object v7, p0, Lcom/android/server/notification/ValidateNotificationPeople$PeopleRankingReconsideration;->this$0:Lcom/android/server/notification/ValidateNotificationPeople;
 
     invoke-static {v7}, Lcom/android/server/notification/ValidateNotificationPeople;->-get4(Lcom/android/server/notification/ValidateNotificationPeople;)Lcom/android/server/notification/NotificationUsageStats;
@@ -647,7 +604,6 @@
 
     move v7, v8
 
-    .line 469
     :goto_2
     iget v12, p0, Lcom/android/server/notification/ValidateNotificationPeople$PeopleRankingReconsideration;->mContactAffinity:F
 
@@ -657,23 +613,19 @@
 
     if-nez v12, :cond_e
 
-    .line 468
     :goto_3
     invoke-virtual {v10, v11, v7, v8, v9}, Lcom/android/server/notification/NotificationUsageStats;->registerPeopleAffinity(Lcom/android/server/notification/NotificationRecord;ZZZ)V
 
-    .line 432
     :cond_c
     return-void
 
     :cond_d
     move v7, v9
 
-    .line 468
     goto :goto_2
 
     :cond_e
     move v8, v9
 
-    .line 469
     goto :goto_3
 .end method

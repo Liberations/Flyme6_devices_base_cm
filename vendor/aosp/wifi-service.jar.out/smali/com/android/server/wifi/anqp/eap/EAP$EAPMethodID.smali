@@ -102,55 +102,49 @@
 
     const/4 v3, 0x0
 
-    .line 48
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    const-string/jumbo v1, "EAP_MD5"
+    const-string v1, "EAP_MD5"
 
     invoke-direct {v0, v1, v3}, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;->EAP_MD5:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    .line 49
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    const-string/jumbo v1, "EAP_OTP"
+    const-string v1, "EAP_OTP"
 
     invoke-direct {v0, v1, v4}, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;->EAP_OTP:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    .line 50
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    const-string/jumbo v1, "EAP_RSA"
+    const-string v1, "EAP_RSA"
 
     invoke-direct {v0, v1, v5}, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;->EAP_RSA:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    .line 51
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    const-string/jumbo v1, "EAP_KEA"
+    const-string v1, "EAP_KEA"
 
     invoke-direct {v0, v1, v6}, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;->EAP_KEA:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    .line 52
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    const-string/jumbo v1, "EAP_KEA_VALIDATE"
+    const-string v1, "EAP_KEA_VALIDATE"
 
     invoke-direct {v0, v1, v7}, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;->EAP_KEA_VALIDATE:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    .line 53
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    const-string/jumbo v1, "EAP_TLS"
+    const-string v1, "EAP_TLS"
 
     const/4 v2, 0x5
 
@@ -158,10 +152,9 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;->EAP_TLS:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    .line 54
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    const-string/jumbo v1, "EAP_LEAP"
+    const-string v1, "EAP_LEAP"
 
     const/4 v2, 0x6
 
@@ -169,10 +162,9 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;->EAP_LEAP:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    .line 55
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    const-string/jumbo v1, "EAP_SIM"
+    const-string v1, "EAP_SIM"
 
     const/4 v2, 0x7
 
@@ -180,10 +172,9 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;->EAP_SIM:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    .line 56
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    const-string/jumbo v1, "EAP_TTLS"
+    const-string v1, "EAP_TTLS"
 
     const/16 v2, 0x8
 
@@ -191,10 +182,9 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;->EAP_TTLS:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    .line 57
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    const-string/jumbo v1, "EAP_AKA"
+    const-string v1, "EAP_AKA"
 
     const/16 v2, 0x9
 
@@ -202,10 +192,9 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;->EAP_AKA:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    .line 58
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    const-string/jumbo v1, "EAP_3Com"
+    const-string v1, "EAP_3Com"
 
     const/16 v2, 0xa
 
@@ -213,10 +202,9 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;->EAP_3Com:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    .line 59
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    const-string/jumbo v1, "EAP_MSCHAPv2"
+    const-string v1, "EAP_MSCHAPv2"
 
     const/16 v2, 0xb
 
@@ -224,10 +212,9 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;->EAP_MSCHAPv2:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    .line 60
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    const-string/jumbo v1, "EAP_PEAP"
+    const-string v1, "EAP_PEAP"
 
     const/16 v2, 0xc
 
@@ -235,10 +222,9 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;->EAP_PEAP:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    .line 61
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    const-string/jumbo v1, "EAP_POTP"
+    const-string v1, "EAP_POTP"
 
     const/16 v2, 0xd
 
@@ -246,10 +232,9 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;->EAP_POTP:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    .line 62
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    const-string/jumbo v1, "EAP_ActiontecWireless"
+    const-string v1, "EAP_ActiontecWireless"
 
     const/16 v2, 0xe
 
@@ -257,10 +242,9 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;->EAP_ActiontecWireless:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    .line 63
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    const-string/jumbo v1, "EAP_HTTPDigest"
+    const-string v1, "EAP_HTTPDigest"
 
     const/16 v2, 0xf
 
@@ -268,10 +252,9 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;->EAP_HTTPDigest:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    .line 64
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    const-string/jumbo v1, "EAP_SPEKE"
+    const-string v1, "EAP_SPEKE"
 
     const/16 v2, 0x10
 
@@ -279,10 +262,9 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;->EAP_SPEKE:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    .line 65
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    const-string/jumbo v1, "EAP_MOBAC"
+    const-string v1, "EAP_MOBAC"
 
     const/16 v2, 0x11
 
@@ -290,10 +272,9 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;->EAP_MOBAC:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    .line 66
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    const-string/jumbo v1, "EAP_FAST"
+    const-string v1, "EAP_FAST"
 
     const/16 v2, 0x12
 
@@ -301,10 +282,9 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;->EAP_FAST:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    .line 67
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    const-string/jumbo v1, "EAP_ZLXEAP"
+    const-string v1, "EAP_ZLXEAP"
 
     const/16 v2, 0x13
 
@@ -312,10 +292,9 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;->EAP_ZLXEAP:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    .line 68
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    const-string/jumbo v1, "EAP_Link"
+    const-string v1, "EAP_Link"
 
     const/16 v2, 0x14
 
@@ -323,10 +302,9 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;->EAP_Link:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    .line 69
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    const-string/jumbo v1, "EAP_PAX"
+    const-string v1, "EAP_PAX"
 
     const/16 v2, 0x15
 
@@ -334,10 +312,9 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;->EAP_PAX:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    .line 70
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    const-string/jumbo v1, "EAP_PSK"
+    const-string v1, "EAP_PSK"
 
     const/16 v2, 0x16
 
@@ -345,10 +322,9 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;->EAP_PSK:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    .line 71
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    const-string/jumbo v1, "EAP_SAKE"
+    const-string v1, "EAP_SAKE"
 
     const/16 v2, 0x17
 
@@ -356,10 +332,9 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;->EAP_SAKE:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    .line 72
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    const-string/jumbo v1, "EAP_IKEv2"
+    const-string v1, "EAP_IKEv2"
 
     const/16 v2, 0x18
 
@@ -367,10 +342,9 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;->EAP_IKEv2:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    .line 73
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    const-string/jumbo v1, "EAP_AKAPrim"
+    const-string v1, "EAP_AKAPrim"
 
     const/16 v2, 0x19
 
@@ -378,10 +352,9 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;->EAP_AKAPrim:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    .line 74
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    const-string/jumbo v1, "EAP_GPSK"
+    const-string v1, "EAP_GPSK"
 
     const/16 v2, 0x1a
 
@@ -389,10 +362,9 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;->EAP_GPSK:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    .line 75
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    const-string/jumbo v1, "EAP_PWD"
+    const-string v1, "EAP_PWD"
 
     const/16 v2, 0x1b
 
@@ -400,10 +372,9 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;->EAP_PWD:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    .line 76
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    const-string/jumbo v1, "EAP_EKE"
+    const-string v1, "EAP_EKE"
 
     const/16 v2, 0x1c
 
@@ -411,10 +382,9 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;->EAP_EKE:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    .line 77
     new-instance v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    const-string/jumbo v1, "EAP_TEAP"
+    const-string v1, "EAP_TEAP"
 
     const/16 v2, 0x1d
 
@@ -422,7 +392,6 @@
 
     sput-object v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;->EAP_TEAP:Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
-    .line 47
     const/16 v0, 0x1e
 
     new-array v0, v0, [Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
@@ -606,7 +575,6 @@
     .locals 0
 
     .prologue
-    .line 47
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -617,7 +585,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 47
     const-class v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -633,7 +600,6 @@
     .locals 1
 
     .prologue
-    .line 47
     sget-object v0, Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;->$VALUES:[Lcom/android/server/wifi/anqp/eap/EAP$EAPMethodID;
 
     return-object v0

@@ -38,15 +38,12 @@
     .param p2, "listener"    # Landroid/hardware/hdmi/IHdmiHotplugEventListener;
 
     .prologue
-    .line 1094
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiControlService$HotplugEventListenerRecord;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1095
     iput-object p2, p0, Lcom/android/server/hdmi/HdmiControlService$HotplugEventListenerRecord;->mListener:Landroid/hardware/hdmi/IHdmiHotplugEventListener;
 
-    .line 1094
     return-void
 .end method
 
@@ -56,7 +53,6 @@
     .locals 2
 
     .prologue
-    .line 1100
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$HotplugEventListenerRecord;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
     invoke-static {v0}, Lcom/android/server/hdmi/HdmiControlService;->-get10(Lcom/android/server/hdmi/HdmiControlService;)Ljava/lang/Object;
@@ -65,7 +61,6 @@
 
     monitor-enter v1
 
-    .line 1101
     :try_start_0
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$HotplugEventListenerRecord;->this$0:Lcom/android/server/hdmi/HdmiControlService;
 
@@ -79,10 +74,8 @@
 
     monitor-exit v1
 
-    .line 1099
     return-void
 
-    .line 1100
     :catchall_0
     move-exception v0
 
@@ -100,14 +93,12 @@
 
     const/4 v2, 0x0
 
-    .line 1107
     instance-of v3, p1, Lcom/android/server/hdmi/HdmiControlService$HotplugEventListenerRecord;
 
     if-nez v3, :cond_0
 
     return v2
 
-    .line 1108
     :cond_0
     if-ne p1, p0, :cond_1
 
@@ -116,10 +107,8 @@
     :cond_1
     move-object v0, p1
 
-    .line 1109
     check-cast v0, Lcom/android/server/hdmi/HdmiControlService$HotplugEventListenerRecord;
 
-    .line 1110
     .local v0, "other":Lcom/android/server/hdmi/HdmiControlService$HotplugEventListenerRecord;
     iget-object v3, v0, Lcom/android/server/hdmi/HdmiControlService$HotplugEventListenerRecord;->mListener:Landroid/hardware/hdmi/IHdmiHotplugEventListener;
 
@@ -140,7 +129,6 @@
     .locals 1
 
     .prologue
-    .line 1115
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiControlService$HotplugEventListenerRecord;->mListener:Landroid/hardware/hdmi/IHdmiHotplugEventListener;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I

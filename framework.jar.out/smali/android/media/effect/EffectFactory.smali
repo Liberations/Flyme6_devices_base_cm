@@ -72,29 +72,24 @@
     .locals 3
 
     .prologue
-    .line 32
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/String;
 
-    .line 33
-    const-string/jumbo v1, "android.media.effect.effects."
+    const-string v1, "android.media.effect.effects."
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    .line 34
-    const-string/jumbo v1, ""
+    const-string v1, ""
 
     const/4 v2, 0x1
 
     aput-object v1, v0, v2
 
-    .line 32
     sput-object v0, Landroid/media/effect/EffectFactory;->EFFECT_PACKAGES:[Ljava/lang/String;
 
-    .line 28
     return-void
 .end method
 
@@ -103,13 +98,10 @@
     .param p1, "effectContext"    # Landroid/media/effect/EffectContext;
 
     .prologue
-    .line 425
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 426
     iput-object p1, p0, Landroid/media/effect/EffectFactory;->mEffectContext:Landroid/media/effect/EffectContext;
 
-    .line 425
     return-void
 .end method
 
@@ -118,10 +110,8 @@
     .param p0, "className"    # Ljava/lang/String;
 
     .prologue
-    .line 467
     const/4 v2, 0x0
 
-    .line 470
     .local v2, "effectClass":Ljava/lang/Class;
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -131,7 +121,6 @@
 
     move-result-object v0
 
-    .line 473
     .local v0, "contextClassLoader":Ljava/lang/ClassLoader;
     sget-object v5, Landroid/media/effect/EffectFactory;->EFFECT_PACKAGES:[Ljava/lang/String;
 
@@ -145,7 +134,6 @@
 
     aget-object v3, v5, v4
 
-    .line 475
     .local v3, "packageName":Ljava/lang/String;
     :try_start_0
     new-instance v7, Ljava/lang/StringBuilder;
@@ -170,22 +158,18 @@
 
     move-result-object v2
 
-    .line 480
     .local v2, "effectClass":Ljava/lang/Class;
     if-eqz v2, :cond_1
 
-    .line 484
     .end local v2    # "effectClass":Ljava/lang/Class;
     .end local v3    # "packageName":Ljava/lang/String;
     :cond_0
     return-object v2
 
-    .line 476
     .restart local v3    # "packageName":Ljava/lang/String;
     :catch_0
     move-exception v1
 
-    .line 473
     :cond_1
     add-int/lit8 v4, v4, 0x1
 
@@ -198,7 +182,6 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 490
     :try_start_0
     const-class v5, Landroid/media/effect/Effect;
 
@@ -206,10 +189,8 @@
     :try_end_0
     .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 497
     const/4 v3, 0x0
 
-    .line 499
     .local v3, "effectConstructor":Ljava/lang/reflect/Constructor;
     const/4 v5, 0x2
 
@@ -234,11 +215,9 @@
 
     move-result-object v3
 
-    .line 506
     .local v3, "effectConstructor":Ljava/lang/reflect/Constructor;
     const/4 v2, 0x0
 
-    .line 508
     .local v2, "effect":Landroid/media/effect/Effect;
     const/4 v5, 0x2
 
@@ -264,17 +243,14 @@
     :try_end_2
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 514
     .local v2, "effect":Landroid/media/effect/Effect;
     return-object v2
 
-    .line 491
     .end local v2    # "effect":Landroid/media/effect/Effect;
     .end local v3    # "effectConstructor":Ljava/lang/reflect/Constructor;
     :catch_0
     move-exception v0
 
-    .line 492
     .local v0, "e":Ljava/lang/ClassCastException;
     new-instance v5, Ljava/lang/IllegalArgumentException;
 
@@ -282,7 +258,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "Attempting to allocate effect \'"
+    const-string v7, "Attempting to allocate effect \'"
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -292,10 +268,8 @@
 
     move-result-object v6
 
-    .line 493
-    const-string/jumbo v7, "\' which is not a subclass of Effect!"
+    const-string v7, "\' which is not a subclass of Effect!"
 
-    .line 492
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v6
@@ -308,13 +282,11 @@
 
     throw v5
 
-    .line 500
     .end local v0    # "e":Ljava/lang/ClassCastException;
     .local v3, "effectConstructor":Ljava/lang/reflect/Constructor;
     :catch_1
     move-exception v1
 
-    .line 501
     .local v1, "e":Ljava/lang/NoSuchMethodException;
     new-instance v5, Ljava/lang/RuntimeException;
 
@@ -322,7 +294,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "The effect class \'"
+    const-string v7, "The effect class \'"
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -332,16 +304,14 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, "\' does not have "
+    const-string v7, "\' does not have "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v6
 
-    .line 502
-    const-string/jumbo v7, "the required constructor."
+    const-string v7, "the required constructor."
 
-    .line 501
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v6
@@ -354,13 +324,11 @@
 
     throw v5
 
-    .line 509
     .end local v1    # "e":Ljava/lang/NoSuchMethodException;
     .local v3, "effectConstructor":Ljava/lang/reflect/Constructor;
     :catch_2
     move-exception v4
 
-    .line 510
     .local v4, "t":Ljava/lang/Throwable;
     new-instance v5, Ljava/lang/RuntimeException;
 
@@ -368,7 +336,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "There was an error constructing the effect \'"
+    const-string v7, "There was an error constructing the effect \'"
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -378,10 +346,8 @@
 
     move-result-object v6
 
-    .line 511
-    const-string/jumbo v7, "\'!"
+    const-string v7, "\'!"
 
-    .line 510
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v6
@@ -400,7 +366,6 @@
     .param p0, "effectName"    # Ljava/lang/String;
 
     .prologue
-    .line 463
     invoke-static {p0}, Landroid/media/effect/EffectFactory;->getEffectClassByName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -425,23 +390,20 @@
     .param p1, "effectName"    # Ljava/lang/String;
 
     .prologue
-    .line 444
     invoke-static {p1}, Landroid/media/effect/EffectFactory;->getEffectClassByName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 445
     .local v0, "effectClass":Ljava/lang/Class;
     if-nez v0, :cond_0
 
-    .line 446
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "Cannot instantiate unknown effect \'"
+    const-string v3, "Cannot instantiate unknown effect \'"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -451,10 +413,8 @@
 
     move-result-object v2
 
-    .line 447
-    const-string/jumbo v3, "\'!"
+    const-string v3, "\'!"
 
-    .line 446
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -467,7 +427,6 @@
 
     throw v1
 
-    .line 449
     :cond_0
     invoke-direct {p0, v0, p1}, Landroid/media/effect/EffectFactory;->instantiateEffect(Ljava/lang/Class;Ljava/lang/String;)Landroid/media/effect/Effect;
 

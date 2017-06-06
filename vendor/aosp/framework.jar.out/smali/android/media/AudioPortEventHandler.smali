@@ -45,18 +45,14 @@
     .locals 1
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 33
     iput-object v0, p0, Landroid/media/AudioPortEventHandler;->mListeners:Ljava/util/ArrayList;
 
-    .line 31
     return-void
 .end method
 
@@ -75,7 +71,6 @@
     .param p4, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 162
     check-cast p0, Ljava/lang/ref/WeakReference;
 
     .end local p0    # "module_ref":Ljava/lang/Object;
@@ -85,36 +80,28 @@
 
     check-cast v0, Landroid/media/AudioPortEventHandler;
 
-    .line 163
     .local v0, "eventHandler":Landroid/media/AudioPortEventHandler;
     if-nez v0, :cond_0
 
-    .line 164
     return-void
 
-    .line 167
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 168
     invoke-virtual {v0}, Landroid/media/AudioPortEventHandler;->handler()Landroid/os/Handler;
 
     move-result-object v1
 
-    .line 169
     .local v1, "handler":Landroid/os/Handler;
     if-eqz v1, :cond_1
 
-    .line 170
     invoke-virtual {v1, p1, p2, p3, p4}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v2
 
-    .line 171
     .local v2, "m":Landroid/os/Message;
     invoke-virtual {v1, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 160
     .end local v1    # "handler":Landroid/os/Handler;
     .end local v2    # "m":Landroid/os/Message;
     :cond_1
@@ -127,10 +114,8 @@
     .locals 0
 
     .prologue
-    .line 134
     invoke-direct {p0}, Landroid/media/AudioPortEventHandler;->native_finalize()V
 
-    .line 133
     return-void
 .end method
 
@@ -138,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 155
     iget-object v0, p0, Landroid/media/AudioPortEventHandler;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -148,10 +132,8 @@
     .locals 2
 
     .prologue
-    .line 50
     monitor-enter p0
 
-    .line 51
     :try_start_0
     iget-object v1, p0, Landroid/media/AudioPortEventHandler;->mHandler:Landroid/os/Handler;
     :try_end_0
@@ -161,28 +143,23 @@
 
     monitor-exit p0
 
-    .line 52
     return-void
 
-    .line 55
     :cond_0
     :try_start_1
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
 
-    .line 57
     .local v0, "looper":Landroid/os/Looper;
     if-eqz v0, :cond_1
 
-    .line 58
     new-instance v1, Landroid/media/AudioPortEventHandler$1;
 
     invoke-direct {v1, p0, v0}, Landroid/media/AudioPortEventHandler$1;-><init>(Landroid/media/AudioPortEventHandler;Landroid/os/Looper;)V
 
     iput-object v1, p0, Landroid/media/AudioPortEventHandler;->mHandler:Landroid/os/Handler;
 
-    .line 123
     new-instance v1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v1, p0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -194,10 +171,8 @@
     :goto_0
     monitor-exit p0
 
-    .line 49
     return-void
 
-    .line 125
     :cond_1
     const/4 v1, 0x0
 
@@ -208,7 +183,6 @@
 
     goto :goto_0
 
-    .line 50
     .end local v0    # "looper":Landroid/os/Looper;
     :catchall_0
     move-exception v1
@@ -225,10 +199,8 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 139
     monitor-enter p0
 
-    .line 140
     :try_start_0
     iget-object v1, p0, Landroid/media/AudioPortEventHandler;->mListeners:Ljava/util/ArrayList;
 
@@ -238,12 +210,10 @@
 
     monitor-exit p0
 
-    .line 142
     iget-object v1, p0, Landroid/media/AudioPortEventHandler;->mHandler:Landroid/os/Handler;
 
     if-eqz v1, :cond_0
 
-    .line 143
     iget-object v1, p0, Landroid/media/AudioPortEventHandler;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x4
@@ -252,18 +222,15 @@
 
     move-result-object v0
 
-    .line 144
     .local v0, "m":Landroid/os/Message;
     iget-object v1, p0, Landroid/media/AudioPortEventHandler;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 138
     .end local v0    # "m":Landroid/os/Message;
     :cond_0
     return-void
 
-    .line 139
     :catchall_0
     move-exception v1
 
@@ -277,10 +244,8 @@
     .param p1, "l"    # Landroid/media/AudioManager$OnAudioPortUpdateListener;
 
     .prologue
-    .line 149
     monitor-enter p0
 
-    .line 150
     :try_start_0
     iget-object v0, p0, Landroid/media/AudioPortEventHandler;->mListeners:Ljava/util/ArrayList;
 
@@ -290,10 +255,8 @@
 
     monitor-exit p0
 
-    .line 148
     return-void
 
-    .line 149
     :catchall_0
     move-exception v0
 

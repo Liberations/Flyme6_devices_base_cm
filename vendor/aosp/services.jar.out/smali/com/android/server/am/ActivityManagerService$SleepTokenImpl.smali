@@ -29,22 +29,18 @@
     .param p2, "tag"    # Ljava/lang/String;
 
     .prologue
-    .line 21166
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$SleepTokenImpl;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Landroid/app/ActivityManagerInternal$SleepToken;-><init>()V
 
-    .line 21167
     iput-object p2, p0, Lcom/android/server/am/ActivityManagerService$SleepTokenImpl;->mTag:Ljava/lang/String;
 
-    .line 21168
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/am/ActivityManagerService$SleepTokenImpl;->mAcquireTime:J
 
-    .line 21166
     return-void
 .end method
 
@@ -54,12 +50,10 @@
     .locals 2
 
     .prologue
-    .line 21173
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$SleepTokenImpl;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     monitor-enter v1
 
-    .line 21174
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$SleepTokenImpl;->this$0:Lcom/android/server/am/ActivityManagerService;
 
@@ -71,7 +65,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 21175
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$SleepTokenImpl;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/am/ActivityManagerService;->updateSleepIfNeededLocked()V
@@ -81,10 +74,8 @@
     :cond_0
     monitor-exit v1
 
-    .line 21172
     return-void
 
-    .line 21173
     :catchall_0
     move-exception v0
 
@@ -97,12 +88,11 @@
     .locals 4
 
     .prologue
-    .line 21182
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "{\""
+    const-string v1, "{\""
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -114,7 +104,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "\", acquire at "
+    const-string v1, "\", acquire at "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -130,7 +120,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

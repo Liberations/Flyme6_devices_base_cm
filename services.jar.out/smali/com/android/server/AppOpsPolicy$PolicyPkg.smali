@@ -42,22 +42,16 @@
     .param p4, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 91
     invoke-direct {p0}, Landroid/util/SparseArray;-><init>()V
 
-    .line 92
     iput-object p1, p0, Lcom/android/server/AppOpsPolicy$PolicyPkg;->packageName:Ljava/lang/String;
 
-    .line 93
     iput p2, p0, Lcom/android/server/AppOpsPolicy$PolicyPkg;->mode:I
 
-    .line 94
     iput p3, p0, Lcom/android/server/AppOpsPolicy$PolicyPkg;->show:I
 
-    .line 95
     iput-object p4, p0, Lcom/android/server/AppOpsPolicy$PolicyPkg;->type:Ljava/lang/String;
 
-    .line 91
     return-void
 .end method
 
@@ -67,12 +61,11 @@
     .locals 2
 
     .prologue
-    .line 100
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "PolicyPkg [packageName="
+    const-string v1, "PolicyPkg [packageName="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -84,7 +77,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, ", mode="
+    const-string v1, ", mode="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -96,42 +89,32 @@
 
     move-result-object v0
 
-    .line 101
-    const-string/jumbo v1, ", show="
+    const-string v1, ", show="
 
-    .line 100
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 101
     iget v1, p0, Lcom/android/server/AppOpsPolicy$PolicyPkg;->show:I
 
-    .line 100
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 101
-    const-string/jumbo v1, ", type="
+    const-string v1, ", type="
 
-    .line 100
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 101
     iget-object v1, p0, Lcom/android/server/AppOpsPolicy$PolicyPkg;->type:Ljava/lang/String;
 
-    .line 100
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 101
-    const-string/jumbo v1, "]"
+    const-string v1, "]"
 
-    .line 100
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0

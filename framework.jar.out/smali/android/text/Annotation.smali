@@ -18,24 +18,20 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/text/Annotation;->mKey:Ljava/lang/String;
 
-    .line 37
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/text/Annotation;->mValue:Ljava/lang/String;
 
-    .line 35
     return-void
 .end method
 
@@ -45,16 +41,12 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     iput-object p1, p0, Landroid/text/Annotation;->mKey:Ljava/lang/String;
 
-    .line 32
     iput-object p2, p0, Landroid/text/Annotation;->mValue:Ljava/lang/String;
 
-    .line 30
     return-void
 .end method
 
@@ -64,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 50
     const/4 v0, 0x0
 
     return v0
@@ -74,7 +65,6 @@
     .locals 1
 
     .prologue
-    .line 64
     iget-object v0, p0, Landroid/text/Annotation;->mKey:Ljava/lang/String;
 
     return-object v0
@@ -84,7 +74,6 @@
     .locals 1
 
     .prologue
-    .line 41
     invoke-virtual {p0}, Landroid/text/Annotation;->getSpanTypeIdInternal()I
 
     move-result v0
@@ -96,7 +85,6 @@
     .locals 1
 
     .prologue
-    .line 46
     const/16 v0, 0x12
 
     return v0
@@ -106,7 +94,6 @@
     .locals 1
 
     .prologue
-    .line 68
     iget-object v0, p0, Landroid/text/Annotation;->mValue:Ljava/lang/String;
 
     return-object v0
@@ -118,10 +105,8 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1, p2}, Landroid/text/Annotation;->writeToParcelInternal(Landroid/os/Parcel;I)V
 
-    .line 53
     return-void
 .end method
 
@@ -131,16 +116,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 59
     iget-object v0, p0, Landroid/text/Annotation;->mKey:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 60
     iget-object v0, p0, Landroid/text/Annotation;->mValue:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 58
     return-void
 .end method

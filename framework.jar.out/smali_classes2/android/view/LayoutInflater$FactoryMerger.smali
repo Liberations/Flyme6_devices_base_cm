@@ -36,22 +36,16 @@
     .param p4, "f22"    # Landroid/view/LayoutInflater$Factory2;
 
     .prologue
-    .line 172
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 173
     iput-object p1, p0, Landroid/view/LayoutInflater$FactoryMerger;->mF1:Landroid/view/LayoutInflater$Factory;
 
-    .line 174
     iput-object p3, p0, Landroid/view/LayoutInflater$FactoryMerger;->mF2:Landroid/view/LayoutInflater$Factory;
 
-    .line 175
     iput-object p2, p0, Landroid/view/LayoutInflater$FactoryMerger;->mF12:Landroid/view/LayoutInflater$Factory2;
 
-    .line 176
     iput-object p4, p0, Landroid/view/LayoutInflater$FactoryMerger;->mF22:Landroid/view/LayoutInflater$Factory2;
 
-    .line 172
     return-void
 .end method
 
@@ -65,7 +59,6 @@
     .param p4, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 186
     iget-object v1, p0, Landroid/view/LayoutInflater$FactoryMerger;->mF12:Landroid/view/LayoutInflater$Factory2;
 
     if-eqz v1, :cond_0
@@ -76,14 +69,12 @@
 
     move-result-object v0
 
-    .line 188
     .local v0, "v":Landroid/view/View;
     :goto_0
     if-eqz v0, :cond_1
 
     return-object v0
 
-    .line 187
     .end local v0    # "v":Landroid/view/View;
     :cond_0
     iget-object v1, p0, Landroid/view/LayoutInflater$FactoryMerger;->mF1:Landroid/view/LayoutInflater$Factory;
@@ -95,7 +86,6 @@
     .restart local v0    # "v":Landroid/view/View;
     goto :goto_0
 
-    .line 189
     :cond_1
     iget-object v1, p0, Landroid/view/LayoutInflater$FactoryMerger;->mF22:Landroid/view/LayoutInflater$Factory2;
 
@@ -110,7 +100,6 @@
     :goto_1
     return-object v1
 
-    .line 190
     :cond_2
     iget-object v1, p0, Landroid/view/LayoutInflater$FactoryMerger;->mF2:Landroid/view/LayoutInflater$Factory;
 
@@ -128,20 +117,17 @@
     .param p3, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 180
     iget-object v1, p0, Landroid/view/LayoutInflater$FactoryMerger;->mF1:Landroid/view/LayoutInflater$Factory;
 
     invoke-interface {v1, p1, p2, p3}, Landroid/view/LayoutInflater$Factory;->onCreateView(Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;
 
     move-result-object v0
 
-    .line 181
     .local v0, "v":Landroid/view/View;
     if-eqz v0, :cond_0
 
     return-object v0
 
-    .line 182
     :cond_0
     iget-object v1, p0, Landroid/view/LayoutInflater$FactoryMerger;->mF2:Landroid/view/LayoutInflater$Factory;
 

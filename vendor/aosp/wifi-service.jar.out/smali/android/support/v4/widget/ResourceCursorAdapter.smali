@@ -21,16 +21,13 @@
     .end annotation
 
     .prologue
-    .line 54
     invoke-direct {p0, p1, p3}, Landroid/support/v4/widget/CursorAdapter;-><init>(Landroid/content/Context;Landroid/database/Cursor;)V
 
-    .line 55
     iput p2, p0, Landroid/support/v4/widget/ResourceCursorAdapter;->mDropDownLayout:I
 
     iput p2, p0, Landroid/support/v4/widget/ResourceCursorAdapter;->mLayout:I
 
-    .line 56
-    const-string/jumbo v0, "layout_inflater"
+    const-string v0, "layout_inflater"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -40,7 +37,6 @@
 
     iput-object v0, p0, Landroid/support/v4/widget/ResourceCursorAdapter;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 53
     return-void
 .end method
 
@@ -52,16 +48,13 @@
     .param p4, "flags"    # I
 
     .prologue
-    .line 93
     invoke-direct {p0, p1, p3, p4}, Landroid/support/v4/widget/CursorAdapter;-><init>(Landroid/content/Context;Landroid/database/Cursor;I)V
 
-    .line 94
     iput p2, p0, Landroid/support/v4/widget/ResourceCursorAdapter;->mDropDownLayout:I
 
     iput p2, p0, Landroid/support/v4/widget/ResourceCursorAdapter;->mLayout:I
 
-    .line 95
-    const-string/jumbo v0, "layout_inflater"
+    const-string v0, "layout_inflater"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -71,7 +64,6 @@
 
     iput-object v0, p0, Landroid/support/v4/widget/ResourceCursorAdapter;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 92
     return-void
 .end method
 
@@ -83,16 +75,13 @@
     .param p4, "autoRequery"    # Z
 
     .prologue
-    .line 76
     invoke-direct {p0, p1, p3, p4}, Landroid/support/v4/widget/CursorAdapter;-><init>(Landroid/content/Context;Landroid/database/Cursor;Z)V
 
-    .line 77
     iput p2, p0, Landroid/support/v4/widget/ResourceCursorAdapter;->mDropDownLayout:I
 
     iput p2, p0, Landroid/support/v4/widget/ResourceCursorAdapter;->mLayout:I
 
-    .line 78
-    const-string/jumbo v0, "layout_inflater"
+    const-string v0, "layout_inflater"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -102,7 +91,6 @@
 
     iput-object v0, p0, Landroid/support/v4/widget/ResourceCursorAdapter;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 75
     return-void
 .end method
 
@@ -115,7 +103,6 @@
     .param p3, "parent"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 111
     iget-object v0, p0, Landroid/support/v4/widget/ResourceCursorAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     iget v1, p0, Landroid/support/v4/widget/ResourceCursorAdapter;->mDropDownLayout:I
@@ -136,7 +123,6 @@
     .param p3, "parent"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 106
     iget-object v0, p0, Landroid/support/v4/widget/ResourceCursorAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     iget v1, p0, Landroid/support/v4/widget/ResourceCursorAdapter;->mLayout:I
@@ -155,10 +141,8 @@
     .param p1, "dropDownLayout"    # I
 
     .prologue
-    .line 129
     iput p1, p0, Landroid/support/v4/widget/ResourceCursorAdapter;->mDropDownLayout:I
 
-    .line 128
     return-void
 .end method
 
@@ -167,9 +151,7 @@
     .param p1, "layout"    # I
 
     .prologue
-    .line 120
     iput p1, p0, Landroid/support/v4/widget/ResourceCursorAdapter;->mLayout:I
 
-    .line 119
     return-void
 .end method

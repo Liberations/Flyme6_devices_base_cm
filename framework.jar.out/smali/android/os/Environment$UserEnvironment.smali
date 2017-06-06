@@ -24,13 +24,10 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 80
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 81
     iput p1, p0, Landroid/os/Environment$UserEnvironment;->mUserId:I
 
-    .line 80
     return-void
 .end method
 
@@ -40,7 +37,6 @@
     .locals 4
 
     .prologue
-    .line 109
     invoke-virtual {p0}, Landroid/os/Environment$UserEnvironment;->getExternalDirs()[Ljava/io/File;
 
     move-result-object v0
@@ -49,13 +45,13 @@
 
     new-array v1, v1, [Ljava/lang/String;
 
-    const-string/jumbo v2, "Android"
+    const-string v2, "Android"
 
     const/4 v3, 0x0
 
     aput-object v2, v1, v3
 
-    const-string/jumbo v2, "data"
+    const-string v2, "data"
 
     const/4 v3, 0x1
 
@@ -72,7 +68,6 @@
     .locals 4
 
     .prologue
-    .line 113
     invoke-virtual {p0}, Landroid/os/Environment$UserEnvironment;->getExternalDirs()[Ljava/io/File;
 
     move-result-object v0
@@ -81,13 +76,13 @@
 
     new-array v1, v1, [Ljava/lang/String;
 
-    const-string/jumbo v2, "Android"
+    const-string v2, "Android"
 
     const/4 v3, 0x0
 
     aput-object v2, v1, v3
 
-    const-string/jumbo v2, "obb"
+    const-string v2, "obb"
 
     const/4 v3, 0x1
 
@@ -105,7 +100,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 133
     invoke-virtual {p0}, Landroid/os/Environment$UserEnvironment;->getExternalDirs()[Ljava/io/File;
 
     move-result-object v0
@@ -114,13 +108,13 @@
 
     new-array v1, v1, [Ljava/lang/String;
 
-    const-string/jumbo v2, "Android"
+    const-string v2, "Android"
 
     const/4 v3, 0x0
 
     aput-object v2, v1, v3
 
-    const-string/jumbo v2, "data"
+    const-string v2, "data"
 
     const/4 v3, 0x1
 
@@ -130,7 +124,7 @@
 
     aput-object p1, v1, v2
 
-    const-string/jumbo v2, "cache"
+    const-string v2, "cache"
 
     const/4 v3, 0x3
 
@@ -148,7 +142,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 117
     invoke-virtual {p0}, Landroid/os/Environment$UserEnvironment;->getExternalDirs()[Ljava/io/File;
 
     move-result-object v0
@@ -157,13 +150,13 @@
 
     new-array v1, v1, [Ljava/lang/String;
 
-    const-string/jumbo v2, "Android"
+    const-string v2, "Android"
 
     const/4 v3, 0x0
 
     aput-object v2, v1, v3
 
-    const-string/jumbo v2, "data"
+    const-string v2, "data"
 
     const/4 v3, 0x1
 
@@ -185,7 +178,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 129
     invoke-virtual {p0}, Landroid/os/Environment$UserEnvironment;->getExternalDirs()[Ljava/io/File;
 
     move-result-object v0
@@ -194,13 +186,13 @@
 
     new-array v1, v1, [Ljava/lang/String;
 
-    const-string/jumbo v2, "Android"
+    const-string v2, "Android"
 
     const/4 v3, 0x0
 
     aput-object v2, v1, v3
 
-    const-string/jumbo v2, "data"
+    const-string v2, "data"
 
     const/4 v3, 0x1
 
@@ -210,7 +202,7 @@
 
     aput-object p1, v1, v2
 
-    const-string/jumbo v2, "files"
+    const-string v2, "files"
 
     const/4 v3, 0x3
 
@@ -228,7 +220,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 121
     invoke-virtual {p0}, Landroid/os/Environment$UserEnvironment;->getExternalDirs()[Ljava/io/File;
 
     move-result-object v0
@@ -237,13 +228,13 @@
 
     new-array v1, v1, [Ljava/lang/String;
 
-    const-string/jumbo v2, "Android"
+    const-string v2, "Android"
 
     const/4 v3, 0x0
 
     aput-object v2, v1, v3
 
-    const-string/jumbo v2, "media"
+    const-string v2, "media"
 
     const/4 v3, 0x1
 
@@ -265,7 +256,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 125
     invoke-virtual {p0}, Landroid/os/Environment$UserEnvironment;->getExternalDirs()[Ljava/io/File;
 
     move-result-object v0
@@ -274,13 +264,13 @@
 
     new-array v1, v1, [Ljava/lang/String;
 
-    const-string/jumbo v2, "Android"
+    const-string v2, "Android"
 
     const/4 v3, 0x0
 
     aput-object v2, v1, v3
 
-    const-string/jumbo v2, "obb"
+    const-string v2, "obb"
 
     const/4 v3, 0x1
 
@@ -302,7 +292,6 @@
     .param p1, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 105
     invoke-virtual {p0}, Landroid/os/Environment$UserEnvironment;->getExternalDirs()[Ljava/io/File;
 
     move-result-object v0
@@ -326,24 +315,19 @@
     .locals 5
 
     .prologue
-    .line 85
     iget v3, p0, Landroid/os/Environment$UserEnvironment;->mUserId:I
 
-    .line 86
     const/4 v4, 0x1
 
-    .line 85
     invoke-static {v3, v4}, Landroid/os/storage/StorageManager;->getVolumeList(II)[Landroid/os/storage/StorageVolume;
 
     move-result-object v2
 
-    .line 87
     .local v2, "volumes":[Landroid/os/storage/StorageVolume;
     array-length v3, v2
 
     new-array v0, v3, [Ljava/io/File;
 
-    .line 88
     .local v0, "files":[Ljava/io/File;
     const/4 v1, 0x0
 
@@ -353,7 +337,6 @@
 
     if-ge v1, v3, :cond_0
 
-    .line 89
     aget-object v3, v2, v1
 
     invoke-virtual {v3}, Landroid/os/storage/StorageVolume;->getPathFile()Ljava/io/File;
@@ -362,12 +345,10 @@
 
     aput-object v3, v0, v1
 
-    .line 88
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 91
     :cond_0
     return-object v0
 .end method
@@ -378,7 +359,6 @@
     .end annotation
 
     .prologue
-    .line 96
     invoke-virtual {p0}, Landroid/os/Environment$UserEnvironment;->getExternalDirs()[Ljava/io/File;
 
     move-result-object v0
@@ -397,7 +377,6 @@
     .end annotation
 
     .prologue
-    .line 101
     invoke-virtual {p0, p1}, Landroid/os/Environment$UserEnvironment;->buildExternalStoragePublicDirs(Ljava/lang/String;)[Ljava/io/File;
 
     move-result-object v0

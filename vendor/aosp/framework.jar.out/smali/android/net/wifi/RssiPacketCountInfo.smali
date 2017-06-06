@@ -42,15 +42,12 @@
     .locals 1
 
     .prologue
-    .line 64
     new-instance v0, Landroid/net/wifi/RssiPacketCountInfo$1;
 
     invoke-direct {v0}, Landroid/net/wifi/RssiPacketCountInfo$1;-><init>()V
 
-    .line 63
     sput-object v0, Landroid/net/wifi/RssiPacketCountInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 29
     return-void
 .end method
 
@@ -60,10 +57,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     iput v0, p0, Landroid/net/wifi/RssiPacketCountInfo;->rxgood:I
 
     iput v0, p0, Landroid/net/wifi/RssiPacketCountInfo;->txbad:I
@@ -72,7 +67,6 @@
 
     iput v0, p0, Landroid/net/wifi/RssiPacketCountInfo;->rssi:I
 
-    .line 39
     return-void
 .end method
 
@@ -81,38 +75,32 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/net/wifi/RssiPacketCountInfo;->rssi:I
 
-    .line 45
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/net/wifi/RssiPacketCountInfo;->txgood:I
 
-    .line 46
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/net/wifi/RssiPacketCountInfo;->txbad:I
 
-    .line 47
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/net/wifi/RssiPacketCountInfo;->rxgood:I
 
-    .line 43
     return-void
 .end method
 
@@ -132,7 +120,6 @@
     .locals 1
 
     .prologue
-    .line 60
     const/4 v0, 0x0
 
     return v0
@@ -144,26 +131,21 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 52
     iget v0, p0, Landroid/net/wifi/RssiPacketCountInfo;->rssi:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 53
     iget v0, p0, Landroid/net/wifi/RssiPacketCountInfo;->txgood:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 54
     iget v0, p0, Landroid/net/wifi/RssiPacketCountInfo;->txbad:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 55
     iget v0, p0, Landroid/net/wifi/RssiPacketCountInfo;->rxgood:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 51
     return-void
 .end method

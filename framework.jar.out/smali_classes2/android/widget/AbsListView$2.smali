@@ -30,7 +30,6 @@
     .param p2, "val$alwaysShow"    # Z
 
     .prologue
-    .line 1326
     iput-object p1, p0, Landroid/widget/AbsListView$2;->this$0:Landroid/widget/AbsListView;
 
     iput-boolean p2, p0, Landroid/widget/AbsListView$2;->val$alwaysShow:Z
@@ -46,13 +45,11 @@
     .locals 2
 
     .prologue
-    .line 1329
     iget-object v0, p0, Landroid/widget/AbsListView$2;->this$0:Landroid/widget/AbsListView;
 
     iget-boolean v1, p0, Landroid/widget/AbsListView$2;->val$alwaysShow:Z
 
     invoke-static {v0, v1}, Landroid/widget/AbsListView;->-wrap8(Landroid/widget/AbsListView;Z)V
 
-    .line 1328
     return-void
 .end method

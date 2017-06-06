@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 33
     .local p0, "this":Landroid/hardware/camera2/marshal/impl/MarshalQueryableRange;, "Landroid/hardware/camera2/marshal/impl/MarshalQueryableRange<TT;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -63,7 +62,6 @@
     .end annotation
 
     .prologue
-    .line 128
     .local p0, "this":Landroid/hardware/camera2/marshal/impl/MarshalQueryableRange;, "Landroid/hardware/camera2/marshal/impl/MarshalQueryableRange<TT;>;"
     .local p1, "managedType":Landroid/hardware/camera2/utils/TypeReference;, "Landroid/hardware/camera2/utils/TypeReference<Landroid/util/Range<TT;>;>;"
     new-instance v0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableRange$MarshalerRange;
@@ -87,7 +85,6 @@
     .end annotation
 
     .prologue
-    .line 133
     .local p0, "this":Landroid/hardware/camera2/marshal/impl/MarshalQueryableRange;, "Landroid/hardware/camera2/marshal/impl/MarshalQueryableRange<TT;>;"
     .local p1, "managedType":Landroid/hardware/camera2/utils/TypeReference;, "Landroid/hardware/camera2/utils/TypeReference<Landroid/util/Range<TT;>;>;"
     const-class v0, Landroid/util/Range;

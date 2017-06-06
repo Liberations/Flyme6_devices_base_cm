@@ -36,24 +36,17 @@
     .param p5, "values"    # Landroid/transition/TransitionValues;
 
     .prologue
-    .line 2372
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2374
     iput-object p1, p0, Landroid/transition/Transition$AnimationInfo;->view:Landroid/view/View;
 
-    .line 2375
     iput-object p2, p0, Landroid/transition/Transition$AnimationInfo;->name:Ljava/lang/String;
 
-    .line 2376
     iput-object p5, p0, Landroid/transition/Transition$AnimationInfo;->values:Landroid/transition/TransitionValues;
 
-    .line 2377
     iput-object p4, p0, Landroid/transition/Transition$AnimationInfo;->windowId:Landroid/view/WindowId;
 
-    .line 2378
     iput-object p3, p0, Landroid/transition/Transition$AnimationInfo;->transition:Landroid/transition/Transition;
 
-    .line 2373
     return-void
 .end method

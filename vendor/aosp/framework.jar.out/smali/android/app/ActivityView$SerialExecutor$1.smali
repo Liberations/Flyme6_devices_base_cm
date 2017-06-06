@@ -30,7 +30,6 @@
     .param p2, "val$r"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 93
     iput-object p1, p0, Landroid/app/ActivityView$SerialExecutor$1;->this$1:Landroid/app/ActivityView$SerialExecutor;
 
     iput-object p2, p0, Landroid/app/ActivityView$SerialExecutor$1;->val$r:Ljava/lang/Runnable;
@@ -46,7 +45,6 @@
     .locals 2
 
     .prologue
-    .line 96
     :try_start_0
     iget-object v0, p0, Landroid/app/ActivityView$SerialExecutor$1;->val$r:Ljava/lang/Runnable;
 
@@ -54,23 +52,18 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 98
     iget-object v0, p0, Landroid/app/ActivityView$SerialExecutor$1;->this$1:Landroid/app/ActivityView$SerialExecutor;
 
     invoke-virtual {v0}, Landroid/app/ActivityView$SerialExecutor;->scheduleNext()V
 
-    .line 94
     return-void
 
-    .line 97
     :catchall_0
     move-exception v0
 
-    .line 98
     iget-object v1, p0, Landroid/app/ActivityView$SerialExecutor$1;->this$1:Landroid/app/ActivityView$SerialExecutor;
 
     invoke-virtual {v1}, Landroid/app/ActivityView$SerialExecutor;->scheduleNext()V
 
-    .line 97
     throw v0
 .end method

@@ -54,10 +54,9 @@
 
     const/4 v3, 0x0
 
-    .line 52
     new-instance v0, Landroid/net/NetworkInfo$State;
 
-    const-string/jumbo v1, "CONNECTING"
+    const-string v1, "CONNECTING"
 
     invoke-direct {v0, v1, v3}, Landroid/net/NetworkInfo$State;-><init>(Ljava/lang/String;I)V
 
@@ -65,7 +64,7 @@
 
     new-instance v0, Landroid/net/NetworkInfo$State;
 
-    const-string/jumbo v1, "CONNECTED"
+    const-string v1, "CONNECTED"
 
     invoke-direct {v0, v1, v4}, Landroid/net/NetworkInfo$State;-><init>(Ljava/lang/String;I)V
 
@@ -73,7 +72,7 @@
 
     new-instance v0, Landroid/net/NetworkInfo$State;
 
-    const-string/jumbo v1, "SUSPENDED"
+    const-string v1, "SUSPENDED"
 
     invoke-direct {v0, v1, v5}, Landroid/net/NetworkInfo$State;-><init>(Ljava/lang/String;I)V
 
@@ -81,7 +80,7 @@
 
     new-instance v0, Landroid/net/NetworkInfo$State;
 
-    const-string/jumbo v1, "DISCONNECTING"
+    const-string v1, "DISCONNECTING"
 
     invoke-direct {v0, v1, v6}, Landroid/net/NetworkInfo$State;-><init>(Ljava/lang/String;I)V
 
@@ -89,7 +88,7 @@
 
     new-instance v0, Landroid/net/NetworkInfo$State;
 
-    const-string/jumbo v1, "DISCONNECTED"
+    const-string v1, "DISCONNECTED"
 
     invoke-direct {v0, v1, v7}, Landroid/net/NetworkInfo$State;-><init>(Ljava/lang/String;I)V
 
@@ -97,7 +96,7 @@
 
     new-instance v0, Landroid/net/NetworkInfo$State;
 
-    const-string/jumbo v1, "UNKNOWN"
+    const-string v1, "UNKNOWN"
 
     const/4 v2, 0x5
 
@@ -105,7 +104,6 @@
 
     sput-object v0, Landroid/net/NetworkInfo$State;->UNKNOWN:Landroid/net/NetworkInfo$State;
 
-    .line 51
     const/4 v0, 0x6
 
     new-array v0, v0, [Landroid/net/NetworkInfo$State;
@@ -145,7 +143,6 @@
     .locals 0
 
     .prologue
-    .line 51
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -156,7 +153,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 51
     const-class v0, Landroid/net/NetworkInfo$State;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -172,7 +168,6 @@
     .locals 1
 
     .prologue
-    .line 51
     sget-object v0, Landroid/net/NetworkInfo$State;->$VALUES:[Landroid/net/NetworkInfo$State;
 
     return-object v0

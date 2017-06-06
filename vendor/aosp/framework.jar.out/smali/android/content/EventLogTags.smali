@@ -16,7 +16,6 @@
     .locals 0
 
     .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,7 +30,6 @@
     .param p4, "samplePercent"    # I
 
     .prologue
-    .line 31
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -72,7 +70,6 @@
 
     invoke-static {v1, v0}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 30
     return-void
 .end method
 
@@ -87,7 +84,6 @@
     .param p6, "samplePercent"    # I
 
     .prologue
-    .line 23
     const/4 v0, 0x7
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -132,7 +128,6 @@
 
     invoke-static {v1, v0}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 22
     return-void
 .end method
 
@@ -146,7 +141,6 @@
     .param p5, "samplePercent"    # I
 
     .prologue
-    .line 27
     const/4 v0, 0x6
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -187,6 +181,5 @@
 
     invoke-static {v1, v0}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 26
     return-void
 .end method

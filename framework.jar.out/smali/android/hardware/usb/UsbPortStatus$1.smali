@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 128
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,30 +44,25 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 131
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 132
     .local v1, "currentMode":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 133
     .local v2, "currentPowerRole":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 134
     .local v0, "currentDataRole":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 135
     .local v3, "supportedRoleCombinations":I
     new-instance v4, Landroid/hardware/usb/UsbPortStatus;
 
@@ -82,7 +76,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 130
     invoke-virtual {p0, p1}, Landroid/hardware/usb/UsbPortStatus$1;->createFromParcel(Landroid/os/Parcel;)Landroid/hardware/usb/UsbPortStatus;
 
     move-result-object v0
@@ -95,7 +88,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 141
     new-array v0, p1, [Landroid/hardware/usb/UsbPortStatus;
 
     return-object v0
@@ -106,7 +98,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 140
     invoke-virtual {p0, p1}, Landroid/hardware/usb/UsbPortStatus$1;->newArray(I)[Landroid/hardware/usb/UsbPortStatus;
 
     move-result-object v0

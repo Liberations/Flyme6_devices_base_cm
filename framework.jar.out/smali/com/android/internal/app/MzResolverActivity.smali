@@ -331,9 +331,9 @@
     move-result-object v1
 
     .local v1, "ft":Landroid/app/FragmentTransaction;
-    const/high16 v2, #android:animator@fade_in#i
+    const/high16 v2, 0x10b0000
 
-    const v3, #android:animator@fade_out#t
+    const v3, 0x10b0001
 
     invoke-virtual {v1, v2, v3}, Landroid/app/FragmentTransaction;->setCustomAnimations(II)Landroid/app/FragmentTransaction;
 

@@ -42,14 +42,12 @@
     .locals 1
 
     .prologue
-    .line 106
     new-instance v0, Landroid/content/UriPermission$1;
 
     invoke-direct {v0}, Landroid/content/UriPermission$1;-><init>()V
 
     sput-object v0, Landroid/content/UriPermission;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 31
     return-void
 .end method
 
@@ -60,19 +58,14 @@
     .param p3, "persistedTime"    # J
 
     .prologue
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     iput-object p1, p0, Landroid/content/UriPermission;->mUri:Landroid/net/Uri;
 
-    .line 44
     iput p2, p0, Landroid/content/UriPermission;->mModeFlags:I
 
-    .line 45
     iput-wide p3, p0, Landroid/content/UriPermission;->mPersistedTime:J
 
-    .line 42
     return-void
 .end method
 
@@ -81,10 +74,8 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
@@ -95,21 +86,18 @@
 
     iput-object v0, p0, Landroid/content/UriPermission;->mUri:Landroid/net/Uri;
 
-    .line 51
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/content/UriPermission;->mModeFlags:I
 
-    .line 52
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/content/UriPermission;->mPersistedTime:J
 
-    .line 49
     return-void
 .end method
 
@@ -119,7 +107,6 @@
     .locals 1
 
     .prologue
-    .line 96
     const/4 v0, 0x0
 
     return v0
@@ -129,7 +116,6 @@
     .locals 2
 
     .prologue
-    .line 85
     iget-wide v0, p0, Landroid/content/UriPermission;->mPersistedTime:J
 
     return-wide v0
@@ -139,7 +125,6 @@
     .locals 1
 
     .prologue
-    .line 59
     iget-object v0, p0, Landroid/content/UriPermission;->mUri:Landroid/net/Uri;
 
     return-object v0
@@ -151,7 +136,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 66
     iget v1, p0, Landroid/content/UriPermission;->mModeFlags:I
 
     and-int/lit8 v1, v1, 0x1
@@ -170,7 +154,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 73
     iget v1, p0, Landroid/content/UriPermission;->mModeFlags:I
 
     and-int/lit8 v1, v1, 0x2
@@ -187,12 +170,11 @@
     .locals 4
 
     .prologue
-    .line 90
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "UriPermission {uri="
+    const-string v1, "UriPermission {uri="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -204,7 +186,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, ", modeFlags="
+    const-string v1, ", modeFlags="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -216,24 +198,20 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, ", persistedTime="
+    const-string v1, ", persistedTime="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 91
     iget-wide v2, p0, Landroid/content/UriPermission;->mPersistedTime:J
 
-    .line 90
     invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 91
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
-    .line 90
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -251,21 +229,17 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 101
     iget-object v0, p0, Landroid/content/UriPermission;->mUri:Landroid/net/Uri;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 102
     iget v0, p0, Landroid/content/UriPermission;->mModeFlags:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 103
     iget-wide v0, p0, Landroid/content/UriPermission;->mPersistedTime:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 100
     return-void
 .end method

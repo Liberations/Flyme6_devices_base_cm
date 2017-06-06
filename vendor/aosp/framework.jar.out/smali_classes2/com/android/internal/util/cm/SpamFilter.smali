@@ -24,31 +24,24 @@
     .locals 2
 
     .prologue
-    .line 13
     new-instance v0, Landroid/net/Uri$Builder;
 
     invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
 
-    .line 14
-    const-string/jumbo v1, "content"
+    const-string v1, "content"
 
-    .line 13
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
 
-    .line 15
-    const-string/jumbo v1, "com.cyanogenmod.spam"
+    const-string v1, "com.cyanogenmod.spam"
 
-    .line 13
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
 
-    .line 16
-    const-string/jumbo v1, "message"
+    const-string v1, "message"
 
-    .line 13
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->appendEncodedPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
@@ -59,7 +52,6 @@
 
     sput-object v0, Lcom/android/internal/util/cm/SpamFilter;->NOTIFICATION_URI:Landroid/net/Uri;
 
-    .line 9
     return-void
 .end method
 
@@ -67,7 +59,6 @@
     .locals 0
 
     .prologue
-    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -78,14 +69,13 @@
     .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 40
     invoke-virtual {p0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string/jumbo v1, "[^\\p{L}\\p{Nd}]+"
+    const-string v1, "[^\\p{L}\\p{Nd}]+"
 
-    const-string/jumbo v2, ""
+    const-string v2, ""
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -99,12 +89,10 @@
     .param p0, "notification"    # Landroid/app/Notification;
 
     .prologue
-    .line 44
     invoke-static {p0}, Lcom/android/internal/util/cm/SpamFilter;->getNotificationContent(Landroid/app/Notification;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 45
     .local v0, "content":Ljava/lang/String;
     invoke-static {v0}, Lcom/android/internal/util/cm/SpamFilter;->getNormalizedContent(Ljava/lang/String;)Ljava/lang/String;
 
@@ -118,18 +106,15 @@
     .param p0, "notification"    # Landroid/app/Notification;
 
     .prologue
-    .line 49
     invoke-static {p0}, Lcom/android/internal/util/cm/SpamFilter;->getNotificationTitle(Landroid/app/Notification;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    .line 50
     .local v1, "notificationTitle":Ljava/lang/CharSequence;
     invoke-static {p0}, Lcom/android/internal/util/cm/SpamFilter;->getNotificationMessage(Landroid/app/Notification;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 51
     .local v0, "notificationMessage":Ljava/lang/CharSequence;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -139,7 +124,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "\n"
+    const-string v3, "\n"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -161,18 +146,15 @@
     .param p0, "notification"    # Landroid/app/Notification;
 
     .prologue
-    .line 63
     iget-object v0, p0, Landroid/app/Notification;->extras:Landroid/os/Bundle;
 
-    .line 64
     .local v0, "extras":Landroid/os/Bundle;
-    const-string/jumbo v3, "android.text"
+    const-string v3, "android.text"
 
     invoke-virtual {v0, v3}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
 
     move-result-object v2
 
-    .line 66
     .local v2, "notificationMessage":Ljava/lang/CharSequence;
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -180,14 +162,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 67
-    const-string/jumbo v3, "android.textLines"
+    const-string v3, "android.textLines"
 
     invoke-virtual {v0, v3}, Landroid/os/Bundle;->getCharSequenceArray(Ljava/lang/String;)[Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    .line 68
     .local v1, "inboxLines":[Ljava/lang/CharSequence;
     if-eqz v1, :cond_0
 
@@ -195,20 +175,17 @@
 
     if-nez v3, :cond_2
 
-    .line 69
     :cond_0
-    const-string/jumbo v2, ""
+    const-string v2, ""
 
-    .line 74
     .end local v1    # "inboxLines":[Ljava/lang/CharSequence;
     :cond_1
     :goto_0
     return-object v2
 
-    .line 71
     .restart local v1    # "inboxLines":[Ljava/lang/CharSequence;
     :cond_2
-    const-string/jumbo v3, "\n"
+    const-string v3, "\n"
 
     invoke-static {v3, v1}, Landroid/text/TextUtils;->join(Ljava/lang/CharSequence;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -222,12 +199,10 @@
     .param p0, "notification"    # Landroid/app/Notification;
 
     .prologue
-    .line 55
     iget-object v0, p0, Landroid/app/Notification;->extras:Landroid/os/Bundle;
 
-    .line 56
     .local v0, "extras":Landroid/os/Bundle;
-    const-string/jumbo v3, "android.title.big"
+    const-string v3, "android.title.big"
 
     invoke-virtual {v0, v3}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
@@ -235,25 +210,21 @@
 
     if-eqz v3, :cond_0
 
-    .line 57
-    const-string/jumbo v2, "android.title.big"
+    const-string v2, "android.title.big"
 
-    .line 58
     .local v2, "titleExtra":Ljava/lang/String;
     :goto_0
     invoke-virtual {v0, v2}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    .line 59
     .local v1, "notificationTitle":Ljava/lang/CharSequence;
     return-object v1
 
-    .line 57
     .end local v1    # "notificationTitle":Ljava/lang/CharSequence;
     .end local v2    # "titleExtra":Ljava/lang/String;
     :cond_0
-    const-string/jumbo v2, "android.title"
+    const-string v2, "android.title"
 
     .restart local v2    # "titleExtra":Ljava/lang/String;
     goto :goto_0
@@ -264,18 +235,15 @@
     .param p0, "notification"    # Landroid/app/Notification;
 
     .prologue
-    .line 78
     invoke-static {p0}, Lcom/android/internal/util/cm/SpamFilter;->getNotificationTitle(Landroid/app/Notification;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    .line 79
     .local v1, "notificationTitle":Ljava/lang/CharSequence;
     invoke-static {p0}, Lcom/android/internal/util/cm/SpamFilter;->getNotificationMessage(Landroid/app/Notification;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 80
     .local v0, "notificationMessage":Ljava/lang/CharSequence;
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 

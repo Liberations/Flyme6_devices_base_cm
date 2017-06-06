@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 267
     .local p0, "this":Landroid/util/MapCollections$KeySet;, "Landroid/util/MapCollections<TK;TV;>.KeySet;"
     .local p1, "this$0":Landroid/util/MapCollections;, "Landroid/util/MapCollections<TK;TV;>;"
     iput-object p1, p0, Landroid/util/MapCollections$KeySet;->this$0:Landroid/util/MapCollections;
@@ -55,7 +54,6 @@
     .end annotation
 
     .prologue
-    .line 271
     .local p0, "this":Landroid/util/MapCollections$KeySet;, "Landroid/util/MapCollections<TK;TV;>.KeySet;"
     .local p1, "object":Ljava/lang/Object;, "TK;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
@@ -76,7 +74,6 @@
     .end annotation
 
     .prologue
-    .line 276
     .local p0, "this":Landroid/util/MapCollections$KeySet;, "Landroid/util/MapCollections<TK;TV;>.KeySet;"
     .local p1, "collection":Ljava/util/Collection;, "Ljava/util/Collection<+TK;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
@@ -90,13 +87,11 @@
     .locals 1
 
     .prologue
-    .line 281
     .local p0, "this":Landroid/util/MapCollections$KeySet;, "Landroid/util/MapCollections<TK;TV;>.KeySet;"
     iget-object v0, p0, Landroid/util/MapCollections$KeySet;->this$0:Landroid/util/MapCollections;
 
     invoke-virtual {v0}, Landroid/util/MapCollections;->colClear()V
 
-    .line 280
     return-void
 .end method
 
@@ -108,7 +103,6 @@
     .local p0, "this":Landroid/util/MapCollections$KeySet;, "Landroid/util/MapCollections<TK;TV;>.KeySet;"
     const/4 v0, 0x0
 
-    .line 286
     iget-object v1, p0, Landroid/util/MapCollections$KeySet;->this$0:Landroid/util/MapCollections;
 
     invoke-virtual {v1, p1}, Landroid/util/MapCollections;->colIndexOfKey(Ljava/lang/Object;)I
@@ -134,7 +128,6 @@
     .end annotation
 
     .prologue
-    .line 291
     .local p0, "this":Landroid/util/MapCollections$KeySet;, "Landroid/util/MapCollections<TK;TV;>.KeySet;"
     .local p1, "collection":Ljava/util/Collection;, "Ljava/util/Collection<*>;"
     iget-object v0, p0, Landroid/util/MapCollections$KeySet;->this$0:Landroid/util/MapCollections;
@@ -155,7 +148,6 @@
     .param p1, "object"    # Ljava/lang/Object;
 
     .prologue
-    .line 341
     .local p0, "this":Landroid/util/MapCollections$KeySet;, "Landroid/util/MapCollections<TK;TV;>.KeySet;"
     invoke-static {p0, p1}, Landroid/util/MapCollections;->equalsSetHelper(Ljava/util/Set;Ljava/lang/Object;)Z
 
@@ -171,10 +163,8 @@
     .local p0, "this":Landroid/util/MapCollections$KeySet;, "Landroid/util/MapCollections<TK;TV;>.KeySet;"
     const/4 v4, 0x0
 
-    .line 346
     const/4 v2, 0x0
 
-    .line 347
     .local v2, "result":I
     iget-object v3, p0, Landroid/util/MapCollections$KeySet;->this$0:Landroid/util/MapCollections;
 
@@ -188,14 +178,12 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 348
     iget-object v3, p0, Landroid/util/MapCollections$KeySet;->this$0:Landroid/util/MapCollections;
 
     invoke-virtual {v3, v0, v4}, Landroid/util/MapCollections;->colGetEntry(II)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 349
     .local v1, "obj":Ljava/lang/Object;
     if-nez v1, :cond_0
 
@@ -204,12 +192,10 @@
     :goto_1
     add-int/2addr v2, v3
 
-    .line 347
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 349
     :cond_0
     invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
@@ -217,7 +203,6 @@
 
     goto :goto_1
 
-    .line 351
     .end local v1    # "obj":Ljava/lang/Object;
     :cond_1
     return v2
@@ -230,7 +215,6 @@
     .local p0, "this":Landroid/util/MapCollections$KeySet;, "Landroid/util/MapCollections<TK;TV;>.KeySet;"
     const/4 v0, 0x0
 
-    .line 296
     iget-object v1, p0, Landroid/util/MapCollections$KeySet;->this$0:Landroid/util/MapCollections;
 
     invoke-virtual {v1}, Landroid/util/MapCollections;->colGetSize()I
@@ -256,7 +240,6 @@
     .end annotation
 
     .prologue
-    .line 301
     .local p0, "this":Landroid/util/MapCollections$KeySet;, "Landroid/util/MapCollections<TK;TV;>.KeySet;"
     new-instance v0, Landroid/util/MapCollections$ArrayIterator;
 
@@ -277,28 +260,23 @@
     .local p0, "this":Landroid/util/MapCollections$KeySet;, "Landroid/util/MapCollections<TK;TV;>.KeySet;"
     const/4 v2, 0x0
 
-    .line 306
     iget-object v1, p0, Landroid/util/MapCollections$KeySet;->this$0:Landroid/util/MapCollections;
 
     invoke-virtual {v1, p1}, Landroid/util/MapCollections;->colIndexOfKey(Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 307
     .local v0, "index":I
     if-ltz v0, :cond_0
 
-    .line 308
     iget-object v1, p0, Landroid/util/MapCollections$KeySet;->this$0:Landroid/util/MapCollections;
 
     invoke-virtual {v1, v0}, Landroid/util/MapCollections;->colRemoveAt(I)V
 
-    .line 309
     const/4 v1, 0x1
 
     return v1
 
-    .line 311
     :cond_0
     return v2
 .end method
@@ -314,7 +292,6 @@
     .end annotation
 
     .prologue
-    .line 316
     .local p0, "this":Landroid/util/MapCollections$KeySet;, "Landroid/util/MapCollections<TK;TV;>.KeySet;"
     .local p1, "collection":Ljava/util/Collection;, "Ljava/util/Collection<*>;"
     iget-object v0, p0, Landroid/util/MapCollections$KeySet;->this$0:Landroid/util/MapCollections;
@@ -341,7 +318,6 @@
     .end annotation
 
     .prologue
-    .line 321
     .local p0, "this":Landroid/util/MapCollections$KeySet;, "Landroid/util/MapCollections<TK;TV;>.KeySet;"
     .local p1, "collection":Ljava/util/Collection;, "Ljava/util/Collection<*>;"
     iget-object v0, p0, Landroid/util/MapCollections$KeySet;->this$0:Landroid/util/MapCollections;
@@ -361,7 +337,6 @@
     .locals 1
 
     .prologue
-    .line 326
     .local p0, "this":Landroid/util/MapCollections$KeySet;, "Landroid/util/MapCollections<TK;TV;>.KeySet;"
     iget-object v0, p0, Landroid/util/MapCollections$KeySet;->this$0:Landroid/util/MapCollections;
 
@@ -376,7 +351,6 @@
     .locals 2
 
     .prologue
-    .line 331
     .local p0, "this":Landroid/util/MapCollections$KeySet;, "Landroid/util/MapCollections<TK;TV;>.KeySet;"
     iget-object v0, p0, Landroid/util/MapCollections$KeySet;->this$0:Landroid/util/MapCollections;
 
@@ -400,7 +374,6 @@
     .end annotation
 
     .prologue
-    .line 336
     .local p0, "this":Landroid/util/MapCollections$KeySet;, "Landroid/util/MapCollections<TK;TV;>.KeySet;"
     .local p1, "array":[Ljava/lang/Object;, "[TT;"
     iget-object v0, p0, Landroid/util/MapCollections$KeySet;->this$0:Landroid/util/MapCollections;

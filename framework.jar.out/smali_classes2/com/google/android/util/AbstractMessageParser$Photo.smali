@@ -31,17 +31,14 @@
     .locals 1
 
     .prologue
-    .line 958
-    const-string/jumbo v0, "http://picasaweb.google.com/([^/?#&]+)/+((?!searchbrowse)[^/?#&]+)(?:/|/photo)?(?:\\?[^#]*)?(?:#(.*))?"
+    const-string v0, "http://picasaweb.google.com/([^/?#&]+)/+((?!searchbrowse)[^/?#&]+)(?:/|/photo)?(?:\\?[^#]*)?(?:#(.*))?"
 
-    .line 957
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/android/util/AbstractMessageParser$Photo;->URL_PATTERN:Ljava/util/regex/Pattern;
 
-    .line 953
     return-void
 .end method
 
@@ -53,21 +50,16 @@
     .param p4, "text"    # Ljava/lang/String;
 
     .prologue
-    .line 965
     sget-object v0, Lcom/google/android/util/AbstractMessageParser$Token$Type;->PHOTO:Lcom/google/android/util/AbstractMessageParser$Token$Type;
 
     invoke-direct {p0, v0, p4}, Lcom/google/android/util/AbstractMessageParser$Token;-><init>(Lcom/google/android/util/AbstractMessageParser$Token$Type;Ljava/lang/String;)V
 
-    .line 966
     iput-object p1, p0, Lcom/google/android/util/AbstractMessageParser$Photo;->user:Ljava/lang/String;
 
-    .line 967
     iput-object p2, p0, Lcom/google/android/util/AbstractMessageParser$Photo;->album:Ljava/lang/String;
 
-    .line 968
     iput-object p3, p0, Lcom/google/android/util/AbstractMessageParser$Photo;->photo:Ljava/lang/String;
 
-    .line 964
     return-void
 .end method
 
@@ -77,12 +69,11 @@
     .param p1, "album"    # Ljava/lang/String;
 
     .prologue
-    .line 1008
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "http://picasaweb.google.com/"
+    const-string v1, "http://picasaweb.google.com/"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -92,7 +83,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "/"
+    const-string v1, "/"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -116,12 +107,11 @@
     .param p2, "photo"    # Ljava/lang/String;
 
     .prologue
-    .line 1013
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "http://picasaweb.google.com/"
+    const-string v1, "http://picasaweb.google.com/"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -131,7 +121,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "/"
+    const-string v1, "/"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -141,7 +131,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "/photo#"
+    const-string v1, "/photo#"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -163,12 +153,11 @@
     .param p0, "user"    # Ljava/lang/String;
 
     .prologue
-    .line 1002
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "http://picasaweb.google.com/data/feed/api/user/"
+    const-string v1, "http://picasaweb.google.com/data/feed/api/user/"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -178,10 +167,8 @@
 
     move-result-object v0
 
-    .line 1003
-    const-string/jumbo v1, "?category=album&alt=rss"
+    const-string v1, "?category=album&alt=rss"
 
-    .line 1002
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -199,14 +186,12 @@
     .param p1, "text"    # Ljava/lang/String;
 
     .prologue
-    .line 980
     sget-object v1, Lcom/google/android/util/AbstractMessageParser$Photo;->URL_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v1, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
-    .line 981
     .local v0, "m":Ljava/util/regex/Matcher;
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
@@ -214,7 +199,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 982
     new-instance v1, Lcom/google/android/util/AbstractMessageParser$Photo;
 
     const/4 v2, 0x1
@@ -239,7 +223,6 @@
 
     return-object v1
 
-    .line 984
     :cond_0
     const/4 v1, 0x0
 
@@ -252,7 +235,6 @@
     .locals 1
 
     .prologue
-    .line 972
     iget-object v0, p0, Lcom/google/android/util/AbstractMessageParser$Photo;->album:Ljava/lang/String;
 
     return-object v0
@@ -273,12 +255,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 989
     invoke-super {p0}, Lcom/google/android/util/AbstractMessageParser$Token;->getInfo()Ljava/util/List;
 
     move-result-object v0
 
-    .line 990
     .local v0, "info":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-virtual {p0}, Lcom/google/android/util/AbstractMessageParser$Photo;->getUser()Ljava/lang/String;
 
@@ -290,7 +270,6 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 991
     invoke-virtual {p0}, Lcom/google/android/util/AbstractMessageParser$Photo;->getUser()Ljava/lang/String;
 
     move-result-object v2
@@ -305,14 +284,12 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 992
     invoke-virtual {p0}, Lcom/google/android/util/AbstractMessageParser$Photo;->getPhoto()Ljava/lang/String;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 993
     invoke-virtual {p0}, Lcom/google/android/util/AbstractMessageParser$Photo;->getUser()Ljava/lang/String;
 
     move-result-object v1
@@ -331,11 +308,9 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 997
     :goto_0
     return-object v0
 
-    .line 995
     :cond_0
     check-cast v1, Ljava/lang/String;
 
@@ -348,7 +323,6 @@
     .locals 1
 
     .prologue
-    .line 973
     iget-object v0, p0, Lcom/google/android/util/AbstractMessageParser$Photo;->photo:Ljava/lang/String;
 
     return-object v0
@@ -358,7 +332,6 @@
     .locals 1
 
     .prologue
-    .line 971
     iget-object v0, p0, Lcom/google/android/util/AbstractMessageParser$Photo;->user:Ljava/lang/String;
 
     return-object v0
@@ -368,7 +341,6 @@
     .locals 1
 
     .prologue
-    .line 975
     const/4 v0, 0x0
 
     return v0
@@ -378,7 +350,6 @@
     .locals 1
 
     .prologue
-    .line 976
     const/4 v0, 0x1
 
     return v0

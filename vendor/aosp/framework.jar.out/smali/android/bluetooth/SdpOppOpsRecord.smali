@@ -35,14 +35,12 @@
     .locals 1
 
     .prologue
-    .line 109
     new-instance v0, Landroid/bluetooth/SdpOppOpsRecord$1;
 
     invoke-direct {v0}, Landroid/bluetooth/SdpOppOpsRecord$1;-><init>()V
 
     sput-object v0, Landroid/bluetooth/SdpOppOpsRecord;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 26
     return-void
 .end method
 
@@ -51,62 +49,50 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 70
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 71
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     iput v2, p0, Landroid/bluetooth/SdpOppOpsRecord;->mRfcommChannel:I
 
-    .line 72
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     iput v2, p0, Landroid/bluetooth/SdpOppOpsRecord;->mL2capPsm:I
 
-    .line 73
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     iput v2, p0, Landroid/bluetooth/SdpOppOpsRecord;->mProfileVersion:I
 
-    .line 74
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, p0, Landroid/bluetooth/SdpOppOpsRecord;->mServiceName:Ljava/lang/String;
 
-    .line 75
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 76
     .local v0, "arrayLength":I
     if-lez v0, :cond_0
 
-    .line 77
     new-array v1, v0, [B
 
-    .line 78
     .local v1, "bytes":[B
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->readByteArray([B)V
 
-    .line 79
     iput-object v1, p0, Landroid/bluetooth/SdpOppOpsRecord;->mFormatsList:[B
 
-    .line 70
     .end local v1    # "bytes":[B
     :goto_0
     return-void
 
-    .line 81
     :cond_0
     const/4 v2, 0x0
 
@@ -124,25 +110,18 @@
     .param p5, "formatsList"    # [B
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     iput-object p1, p0, Landroid/bluetooth/SdpOppOpsRecord;->mServiceName:Ljava/lang/String;
 
-    .line 38
     iput p2, p0, Landroid/bluetooth/SdpOppOpsRecord;->mRfcommChannel:I
 
-    .line 39
     iput p3, p0, Landroid/bluetooth/SdpOppOpsRecord;->mL2capPsm:I
 
-    .line 40
     iput p4, p0, Landroid/bluetooth/SdpOppOpsRecord;->mProfileVersion:I
 
-    .line 41
     iput-object p5, p0, Landroid/bluetooth/SdpOppOpsRecord;->mFormatsList:[B
 
-    .line 35
     return-void
 .end method
 
@@ -152,7 +131,6 @@
     .locals 1
 
     .prologue
-    .line 67
     const/4 v0, 0x0
 
     return v0
@@ -162,7 +140,6 @@
     .locals 1
 
     .prologue
-    .line 61
     iget-object v0, p0, Landroid/bluetooth/SdpOppOpsRecord;->mFormatsList:[B
 
     return-object v0
@@ -172,7 +149,6 @@
     .locals 1
 
     .prologue
-    .line 53
     iget v0, p0, Landroid/bluetooth/SdpOppOpsRecord;->mL2capPsm:I
 
     return v0
@@ -182,7 +158,6 @@
     .locals 1
 
     .prologue
-    .line 57
     iget v0, p0, Landroid/bluetooth/SdpOppOpsRecord;->mProfileVersion:I
 
     return v0
@@ -192,7 +167,6 @@
     .locals 1
 
     .prologue
-    .line 49
     iget v0, p0, Landroid/bluetooth/SdpOppOpsRecord;->mRfcommChannel:I
 
     return v0
@@ -202,7 +176,6 @@
     .locals 1
 
     .prologue
-    .line 45
     iget-object v0, p0, Landroid/bluetooth/SdpOppOpsRecord;->mServiceName:Ljava/lang/String;
 
     return-object v0
@@ -212,16 +185,14 @@
     .locals 3
 
     .prologue
-    .line 100
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v1, "Bluetooth OPP Server SDP Record:\n"
+    const-string v1, "Bluetooth OPP Server SDP Record:\n"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 101
     .local v0, "sb":Ljava/lang/StringBuilder;
-    const-string/jumbo v1, "  RFCOMM Chan Number: "
+    const-string v1, "  RFCOMM Chan Number: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -231,8 +202,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 102
-    const-string/jumbo v1, "\n  L2CAP PSM: "
+    const-string v1, "\n  L2CAP PSM: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -242,8 +212,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 103
-    const-string/jumbo v1, "\n  Profile version: "
+    const-string v1, "\n  Profile version: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -253,8 +222,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 104
-    const-string/jumbo v1, "\n  Service Name: "
+    const-string v1, "\n  Service Name: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -264,8 +232,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 105
-    const-string/jumbo v1, "\n  Formats List: "
+    const-string v1, "\n  Formats List: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -279,7 +246,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 106
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -295,27 +261,22 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 87
     iget v0, p0, Landroid/bluetooth/SdpOppOpsRecord;->mRfcommChannel:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 88
     iget v0, p0, Landroid/bluetooth/SdpOppOpsRecord;->mL2capPsm:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 89
     iget v0, p0, Landroid/bluetooth/SdpOppOpsRecord;->mProfileVersion:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 90
     iget-object v0, p0, Landroid/bluetooth/SdpOppOpsRecord;->mServiceName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 91
     iget-object v0, p0, Landroid/bluetooth/SdpOppOpsRecord;->mFormatsList:[B
 
     if-eqz v0, :cond_0
@@ -326,23 +287,19 @@
 
     if-lez v0, :cond_0
 
-    .line 92
     iget-object v0, p0, Landroid/bluetooth/SdpOppOpsRecord;->mFormatsList:[B
 
     array-length v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 93
     iget-object v0, p0, Landroid/bluetooth/SdpOppOpsRecord;->mFormatsList:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 86
     :goto_0
     return-void
 
-    .line 95
     :cond_0
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 

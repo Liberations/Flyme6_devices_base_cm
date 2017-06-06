@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/MountService;
 
     .prologue
-    .line 678
     iput-object p1, p0, Lcom/android/server/MountService$1;->this$0:Lcom/android/server/MountService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,14 +39,12 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 681
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 682
     .local v0, "action":Ljava/lang/String;
-    const-string/jumbo v5, "android.intent.extra.user_handle"
+    const-string v5, "android.intent.extra.user_handle"
 
     const/4 v6, -0x1
 
@@ -55,10 +52,9 @@
 
     move-result v3
 
-    .line 685
     .local v3, "userId":I
     :try_start_0
-    const-string/jumbo v5, "android.intent.action.USER_ADDED"
+    const-string v5, "android.intent.action.USER_ADDED"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -66,7 +62,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 686
     iget-object v5, p0, Lcom/android/server/MountService$1;->this$0:Lcom/android/server/MountService;
 
     invoke-static {v5}, Lcom/android/server/MountService;->-get2(Lcom/android/server/MountService;)Landroid/content/Context;
@@ -81,13 +76,11 @@
 
     check-cast v2, Landroid/os/UserManager;
 
-    .line 687
     .local v2, "um":Landroid/os/UserManager;
     invoke-virtual {v2, v3}, Landroid/os/UserManager;->getUserSerialNumber(I)I
 
     move-result v4
 
-    .line 688
     .local v4, "userSerialNumber":I
     iget-object v5, p0, Lcom/android/server/MountService$1;->this$0:Lcom/android/server/MountService;
 
@@ -95,13 +88,13 @@
 
     move-result-object v5
 
-    const-string/jumbo v6, "volume"
+    const-string v6, "volume"
 
     const/4 v7, 0x3
 
     new-array v7, v7, [Ljava/lang/Object;
 
-    const-string/jumbo v8, "user_added"
+    const-string v8, "user_added"
 
     const/4 v9, 0x0
 
@@ -125,16 +118,14 @@
 
     invoke-virtual {v5, v6, v7}, Lcom/android/server/NativeDaemonConnector;->execute(Ljava/lang/String;[Ljava/lang/Object;)Lcom/android/server/NativeDaemonEvent;
 
-    .line 680
     .end local v2    # "um":Landroid/os/UserManager;
     .end local v4    # "userSerialNumber":I
     :cond_0
     :goto_0
     return-void
 
-    .line 689
     :cond_1
-    const-string/jumbo v5, "android.intent.action.USER_REMOVED"
+    const-string v5, "android.intent.action.USER_REMOVED"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -142,20 +133,19 @@
 
     if-eqz v5, :cond_0
 
-    .line 690
     iget-object v5, p0, Lcom/android/server/MountService$1;->this$0:Lcom/android/server/MountService;
 
     invoke-static {v5}, Lcom/android/server/MountService;->-get0(Lcom/android/server/MountService;)Lcom/android/server/NativeDaemonConnector;
 
     move-result-object v5
 
-    const-string/jumbo v6, "volume"
+    const-string v6, "volume"
 
     const/4 v7, 0x2
 
     new-array v7, v7, [Ljava/lang/Object;
 
-    const-string/jumbo v8, "user_removed"
+    const-string v8, "user_removed"
 
     const/4 v9, 0x0
 
@@ -175,15 +165,13 @@
 
     goto :goto_0
 
-    .line 692
     :catch_0
     move-exception v1
 
-    .line 693
     .local v1, "e":Lcom/android/server/NativeDaemonConnectorException;
-    const-string/jumbo v5, "MountService"
+    const-string v5, "MountService"
 
-    const-string/jumbo v6, "Failed to send user details to vold"
+    const-string v6, "Failed to send user details to vold"
 
     invoke-static {v5, v6, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 

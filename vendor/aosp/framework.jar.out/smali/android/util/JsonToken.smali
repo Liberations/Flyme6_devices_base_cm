@@ -53,117 +53,96 @@
 
     const/4 v3, 0x0
 
-    .line 24
     new-instance v0, Landroid/util/JsonToken;
 
-    const-string/jumbo v1, "BEGIN_ARRAY"
+    const-string v1, "BEGIN_ARRAY"
 
     invoke-direct {v0, v1, v3}, Landroid/util/JsonToken;-><init>(Ljava/lang/String;I)V
 
-    .line 28
     sput-object v0, Landroid/util/JsonToken;->BEGIN_ARRAY:Landroid/util/JsonToken;
 
-    .line 30
     new-instance v0, Landroid/util/JsonToken;
 
-    const-string/jumbo v1, "END_ARRAY"
+    const-string v1, "END_ARRAY"
 
     invoke-direct {v0, v1, v4}, Landroid/util/JsonToken;-><init>(Ljava/lang/String;I)V
 
-    .line 34
     sput-object v0, Landroid/util/JsonToken;->END_ARRAY:Landroid/util/JsonToken;
 
-    .line 36
     new-instance v0, Landroid/util/JsonToken;
 
-    const-string/jumbo v1, "BEGIN_OBJECT"
+    const-string v1, "BEGIN_OBJECT"
 
     invoke-direct {v0, v1, v5}, Landroid/util/JsonToken;-><init>(Ljava/lang/String;I)V
 
-    .line 40
     sput-object v0, Landroid/util/JsonToken;->BEGIN_OBJECT:Landroid/util/JsonToken;
 
-    .line 42
     new-instance v0, Landroid/util/JsonToken;
 
-    const-string/jumbo v1, "END_OBJECT"
+    const-string v1, "END_OBJECT"
 
     invoke-direct {v0, v1, v6}, Landroid/util/JsonToken;-><init>(Ljava/lang/String;I)V
 
-    .line 46
     sput-object v0, Landroid/util/JsonToken;->END_OBJECT:Landroid/util/JsonToken;
 
-    .line 48
     new-instance v0, Landroid/util/JsonToken;
 
-    const-string/jumbo v1, "NAME"
+    const-string v1, "NAME"
 
     invoke-direct {v0, v1, v7}, Landroid/util/JsonToken;-><init>(Ljava/lang/String;I)V
 
-    .line 53
     sput-object v0, Landroid/util/JsonToken;->NAME:Landroid/util/JsonToken;
 
-    .line 55
     new-instance v0, Landroid/util/JsonToken;
 
-    const-string/jumbo v1, "STRING"
+    const-string v1, "STRING"
 
     const/4 v2, 0x5
 
     invoke-direct {v0, v1, v2}, Landroid/util/JsonToken;-><init>(Ljava/lang/String;I)V
 
-    .line 58
     sput-object v0, Landroid/util/JsonToken;->STRING:Landroid/util/JsonToken;
 
-    .line 60
     new-instance v0, Landroid/util/JsonToken;
 
-    const-string/jumbo v1, "NUMBER"
+    const-string v1, "NUMBER"
 
     const/4 v2, 0x6
 
     invoke-direct {v0, v1, v2}, Landroid/util/JsonToken;-><init>(Ljava/lang/String;I)V
 
-    .line 64
     sput-object v0, Landroid/util/JsonToken;->NUMBER:Landroid/util/JsonToken;
 
-    .line 66
     new-instance v0, Landroid/util/JsonToken;
 
-    const-string/jumbo v1, "BOOLEAN"
+    const-string v1, "BOOLEAN"
 
     const/4 v2, 0x7
 
     invoke-direct {v0, v1, v2}, Landroid/util/JsonToken;-><init>(Ljava/lang/String;I)V
 
-    .line 69
     sput-object v0, Landroid/util/JsonToken;->BOOLEAN:Landroid/util/JsonToken;
 
-    .line 71
     new-instance v0, Landroid/util/JsonToken;
 
-    const-string/jumbo v1, "NULL"
+    const-string v1, "NULL"
 
     const/16 v2, 0x8
 
     invoke-direct {v0, v1, v2}, Landroid/util/JsonToken;-><init>(Ljava/lang/String;I)V
 
-    .line 74
     sput-object v0, Landroid/util/JsonToken;->NULL:Landroid/util/JsonToken;
 
-    .line 76
     new-instance v0, Landroid/util/JsonToken;
 
-    const-string/jumbo v1, "END_DOCUMENT"
+    const-string v1, "END_DOCUMENT"
 
     const/16 v2, 0x9
 
     invoke-direct {v0, v1, v2}, Landroid/util/JsonToken;-><init>(Ljava/lang/String;I)V
 
-    .line 81
     sput-object v0, Landroid/util/JsonToken;->END_DOCUMENT:Landroid/util/JsonToken;
 
-    .line 22
     const/16 v0, 0xa
 
     new-array v0, v0, [Landroid/util/JsonToken;
@@ -227,7 +206,6 @@
     .locals 0
 
     .prologue
-    .line 22
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -238,7 +216,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 22
     const-class v0, Landroid/util/JsonToken;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -254,7 +231,6 @@
     .locals 1
 
     .prologue
-    .line 22
     sget-object v0, Landroid/util/JsonToken;->$VALUES:[Landroid/util/JsonToken;
 
     return-object v0

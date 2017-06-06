@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/location/ComprehensiveCountryDetector;
 
     .prologue
-    .line 437
     iput-object p1, p0, Lcom/android/server/location/ComprehensiveCountryDetector$4;->this$0:Lcom/android/server/location/ComprehensiveCountryDetector;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 440
     iget-object v0, p0, Lcom/android/server/location/ComprehensiveCountryDetector$4;->this$0:Lcom/android/server/location/ComprehensiveCountryDetector;
 
     invoke-static {v0}, Lcom/android/server/location/ComprehensiveCountryDetector;->-get0(Lcom/android/server/location/ComprehensiveCountryDetector;)I
@@ -52,7 +50,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/location/ComprehensiveCountryDetector;->-set0(Lcom/android/server/location/ComprehensiveCountryDetector;I)I
 
-    .line 441
     iget-object v0, p0, Lcom/android/server/location/ComprehensiveCountryDetector$4;->this$0:Lcom/android/server/location/ComprehensiveCountryDetector;
 
     invoke-static {v0}, Lcom/android/server/location/ComprehensiveCountryDetector;->-get1(Lcom/android/server/location/ComprehensiveCountryDetector;)I
@@ -63,7 +60,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/location/ComprehensiveCountryDetector;->-set2(Lcom/android/server/location/ComprehensiveCountryDetector;I)I
 
-    .line 443
     iget-object v0, p0, Lcom/android/server/location/ComprehensiveCountryDetector$4;->this$0:Lcom/android/server/location/ComprehensiveCountryDetector;
 
     invoke-static {v0}, Lcom/android/server/location/ComprehensiveCountryDetector;->-wrap1(Lcom/android/server/location/ComprehensiveCountryDetector;)Z
@@ -72,15 +68,12 @@
 
     if-nez v0, :cond_0
 
-    .line 444
     return-void
 
-    .line 448
     :cond_0
     iget-object v0, p0, Lcom/android/server/location/ComprehensiveCountryDetector$4;->this$0:Lcom/android/server/location/ComprehensiveCountryDetector;
 
     invoke-static {v0, v2, v2}, Lcom/android/server/location/ComprehensiveCountryDetector;->-wrap0(Lcom/android/server/location/ComprehensiveCountryDetector;ZZ)Landroid/location/Country;
 
-    .line 439
     return-void
 .end method

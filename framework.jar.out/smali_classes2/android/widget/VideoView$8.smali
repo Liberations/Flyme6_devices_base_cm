@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Landroid/widget/VideoView;
 
     .prologue
-    .line 889
     iput-object p1, p0, Landroid/widget/VideoView$8;->this$0:Landroid/widget/VideoView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,11 +41,9 @@
     .param p1, "renderingWidget"    # Landroid/media/SubtitleTrack$RenderingWidget;
 
     .prologue
-    .line 892
     iget-object v0, p0, Landroid/widget/VideoView$8;->this$0:Landroid/widget/VideoView;
 
     invoke-virtual {v0}, Landroid/widget/VideoView;->invalidate()V
 
-    .line 891
     return-void
 .end method

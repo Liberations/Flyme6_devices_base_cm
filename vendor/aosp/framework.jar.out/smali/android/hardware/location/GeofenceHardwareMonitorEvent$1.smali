@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,32 +44,27 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 79
     const-class v5, Landroid/hardware/location/GeofenceHardwareMonitorEvent;
 
     invoke-virtual {v5}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v0
 
-    .line 80
     .local v0, "classLoader":Ljava/lang/ClassLoader;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 81
     .local v3, "monitoringType":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 82
     .local v2, "monitoringStatus":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 83
     .local v4, "sourceTechnologies":I
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
@@ -78,7 +72,6 @@
 
     check-cast v1, Landroid/location/Location;
 
-    .line 85
     .local v1, "location":Landroid/location/Location;
     new-instance v5, Landroid/hardware/location/GeofenceHardwareMonitorEvent;
 
@@ -92,7 +85,6 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 78
     invoke-virtual {p0, p1}, Landroid/hardware/location/GeofenceHardwareMonitorEvent$1;->createFromParcel(Landroid/os/Parcel;)Landroid/hardware/location/GeofenceHardwareMonitorEvent;
 
     move-result-object v0
@@ -105,7 +97,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 94
     new-array v0, p1, [Landroid/hardware/location/GeofenceHardwareMonitorEvent;
 
     return-object v0
@@ -116,7 +107,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 93
     invoke-virtual {p0, p1}, Landroid/hardware/location/GeofenceHardwareMonitorEvent$1;->newArray(I)[Landroid/hardware/location/GeofenceHardwareMonitorEvent;
 
     move-result-object v0

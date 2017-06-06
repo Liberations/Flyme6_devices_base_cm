@@ -26,22 +26,18 @@
     .param p1, "count"    # I
 
     .prologue
-    .line 58
     const-wide/16 v0, 0x0
 
     invoke-direct {p0, v0, v1}, Lcom/android/internal/midi/EventScheduler$SchedulableEvent;-><init>(J)V
 
-    .line 54
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/internal/midi/MidiEventScheduler$MidiEvent;->count:I
 
-    .line 59
     new-array v0, p1, [B
 
     iput-object v0, p0, Lcom/android/internal/midi/MidiEventScheduler$MidiEvent;->data:[B
 
-    .line 57
     return-void
 .end method
 
@@ -65,26 +61,20 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 63
     invoke-direct {p0, p4, p5}, Lcom/android/internal/midi/EventScheduler$SchedulableEvent;-><init>(J)V
 
-    .line 54
     iput v1, p0, Lcom/android/internal/midi/MidiEventScheduler$MidiEvent;->count:I
 
-    .line 64
     new-array v0, p3, [B
 
     iput-object v0, p0, Lcom/android/internal/midi/MidiEventScheduler$MidiEvent;->data:[B
 
-    .line 65
     iget-object v0, p0, Lcom/android/internal/midi/MidiEventScheduler$MidiEvent;->data:[B
 
     invoke-static {p1, p2, v0, v1, p3}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 66
     iput p3, p0, Lcom/android/internal/midi/MidiEventScheduler$MidiEvent;->count:I
 
-    .line 62
     return-void
 .end method
 
@@ -107,10 +97,8 @@
     .locals 4
 
     .prologue
-    .line 71
-    const-string/jumbo v1, "Event: "
+    const-string v1, "Event: "
 
-    .line 72
     .local v1, "text":Ljava/lang/String;
     const/4 v0, 0x0
 
@@ -120,7 +108,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 73
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -137,7 +124,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, ", "
+    const-string v3, ", "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -147,12 +134,10 @@
 
     move-result-object v1
 
-    .line 72
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 75
     :cond_0
     return-object v1
 .end method

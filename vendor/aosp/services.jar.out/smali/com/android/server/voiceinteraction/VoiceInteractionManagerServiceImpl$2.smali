@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/voiceinteraction/VoiceInteractionManagerServiceImpl;
 
     .prologue
-    .line 90
     iput-object p1, p0, Lcom/android/server/voiceinteraction/VoiceInteractionManagerServiceImpl$2;->this$0:Lcom/android/server/voiceinteraction/VoiceInteractionManagerServiceImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,14 +42,12 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 93
     iget-object v1, p0, Lcom/android/server/voiceinteraction/VoiceInteractionManagerServiceImpl$2;->this$0:Lcom/android/server/voiceinteraction/VoiceInteractionManagerServiceImpl;
 
     iget-object v2, v1, Lcom/android/server/voiceinteraction/VoiceInteractionManagerServiceImpl;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 94
     :try_start_0
     iget-object v1, p0, Lcom/android/server/voiceinteraction/VoiceInteractionManagerServiceImpl$2;->this$0:Lcom/android/server/voiceinteraction/VoiceInteractionManagerServiceImpl;
 
@@ -62,7 +59,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 96
     :try_start_1
     iget-object v1, p0, Lcom/android/server/voiceinteraction/VoiceInteractionManagerServiceImpl$2;->this$0:Lcom/android/server/voiceinteraction/VoiceInteractionManagerServiceImpl;
 
@@ -76,10 +72,8 @@
     :goto_0
     monitor-exit v2
 
-    .line 92
     return-void
 
-    .line 93
     :catchall_0
     move-exception v1
 
@@ -87,7 +81,6 @@
 
     throw v1
 
-    .line 97
     :catch_0
     move-exception v0
 
@@ -100,13 +93,11 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 104
     iget-object v0, p0, Lcom/android/server/voiceinteraction/VoiceInteractionManagerServiceImpl$2;->this$0:Lcom/android/server/voiceinteraction/VoiceInteractionManagerServiceImpl;
 
     const/4 v1, 0x0
 
     iput-object v1, v0, Lcom/android/server/voiceinteraction/VoiceInteractionManagerServiceImpl;->mService:Landroid/service/voice/IVoiceInteractionService;
 
-    .line 103
     return-void
 .end method

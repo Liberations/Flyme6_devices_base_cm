@@ -19,7 +19,6 @@
     .locals 1
 
     .prologue
-    .line 79
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/transition/Slide$CalculateSlideHorizontal;-><init>(Landroid/transition/Slide$CalculateSlideHorizontal;)V
@@ -35,7 +34,6 @@
     .param p2, "view"    # Landroid/view/View;
 
     .prologue
-    .line 82
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getLayoutDirection()I
 
     move-result v2
@@ -46,12 +44,10 @@
 
     const/4 v0, 0x1
 
-    .line 84
     .local v0, "isRtl":Z
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 85
     invoke-virtual {p2}, Landroid/view/View;->getTranslationX()F
 
     move-result v2
@@ -64,12 +60,10 @@
 
     add-float v1, v2, v3
 
-    .line 89
     .local v1, "x":F
     :goto_1
     return v1
 
-    .line 82
     .end local v0    # "isRtl":Z
     .end local v1    # "x":F
     :cond_0
@@ -78,7 +72,6 @@
     .restart local v0    # "isRtl":Z
     goto :goto_0
 
-    .line 87
     :cond_1
     invoke-virtual {p2}, Landroid/view/View;->getTranslationX()F
 

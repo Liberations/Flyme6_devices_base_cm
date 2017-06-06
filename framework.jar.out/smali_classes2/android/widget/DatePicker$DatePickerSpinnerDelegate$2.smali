@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
     .prologue
-    .line 660
     iput-object p1, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$2;->this$1:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,21 +44,17 @@
     .param p4, "monthDay"    # I
 
     .prologue
-    .line 662
     iget-object v0, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$2;->this$1:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
     invoke-static {v0, p2, p3, p4}, Landroid/widget/DatePicker$DatePickerSpinnerDelegate;->-wrap1(Landroid/widget/DatePicker$DatePickerSpinnerDelegate;III)V
 
-    .line 663
     iget-object v0, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$2;->this$1:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
     invoke-static {v0}, Landroid/widget/DatePicker$DatePickerSpinnerDelegate;->-wrap4(Landroid/widget/DatePicker$DatePickerSpinnerDelegate;)V
 
-    .line 664
     iget-object v0, p0, Landroid/widget/DatePicker$DatePickerSpinnerDelegate$2;->this$1:Landroid/widget/DatePicker$DatePickerSpinnerDelegate;
 
     invoke-static {v0}, Landroid/widget/DatePicker$DatePickerSpinnerDelegate;->-wrap0(Landroid/widget/DatePicker$DatePickerSpinnerDelegate;)V
 
-    .line 661
     return-void
 .end method

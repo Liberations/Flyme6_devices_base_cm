@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,7 +20,6 @@
     .param p1, "addedDevices"    # [Landroid/media/AudioDeviceInfo;
 
     .prologue
-    .line 31
     return-void
 .end method
 
@@ -30,6 +28,5 @@
     .param p1, "removedDevices"    # [Landroid/media/AudioDeviceInfo;
 
     .prologue
-    .line 39
     return-void
 .end method

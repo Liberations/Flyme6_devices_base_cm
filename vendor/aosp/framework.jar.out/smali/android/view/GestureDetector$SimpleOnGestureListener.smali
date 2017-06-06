@@ -24,7 +24,6 @@
     .locals 0
 
     .prologue
-    .line 175
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,7 +36,6 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 215
     const/4 v0, 0x0
 
     return v0
@@ -48,7 +46,6 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 203
     const/4 v0, 0x0
 
     return v0
@@ -59,7 +56,6 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 207
     const/4 v0, 0x0
 
     return v0
@@ -70,7 +66,6 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 199
     const/4 v0, 0x0
 
     return v0
@@ -84,7 +79,6 @@
     .param p4, "velocityY"    # F
 
     .prologue
-    .line 192
     const/4 v0, 0x0
 
     return v0
@@ -95,7 +89,6 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 182
     return-void
 .end method
 
@@ -107,7 +100,6 @@
     .param p4, "distanceY"    # F
 
     .prologue
-    .line 187
     const/4 v0, 0x0
 
     return v0
@@ -118,7 +110,6 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 195
     return-void
 .end method
 
@@ -127,7 +118,6 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 211
     const/4 v0, 0x0
 
     return v0
@@ -138,7 +128,6 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 179
     const/4 v0, 0x0
 
     return v0

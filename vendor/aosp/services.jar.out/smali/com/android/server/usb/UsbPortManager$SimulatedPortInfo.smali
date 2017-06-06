@@ -39,15 +39,11 @@
     .param p2, "supportedModes"    # I
 
     .prologue
-    .line 778
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 779
     iput-object p1, p0, Lcom/android/server/usb/UsbPortManager$SimulatedPortInfo;->mPortId:Ljava/lang/String;
 
-    .line 780
     iput p2, p0, Lcom/android/server/usb/UsbPortManager$SimulatedPortInfo;->mSupportedModes:I
 
-    .line 778
     return-void
 .end method

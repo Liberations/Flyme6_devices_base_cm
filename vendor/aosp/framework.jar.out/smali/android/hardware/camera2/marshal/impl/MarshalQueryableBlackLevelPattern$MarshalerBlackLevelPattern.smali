@@ -43,14 +43,11 @@
     .end annotation
 
     .prologue
-    .line 35
     .local p2, "typeReference":Landroid/hardware/camera2/utils/TypeReference;, "Landroid/hardware/camera2/utils/TypeReference<Landroid/hardware/camera2/params/BlackLevelPattern;>;"
     iput-object p1, p0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableBlackLevelPattern$MarshalerBlackLevelPattern;->this$0:Landroid/hardware/camera2/marshal/impl/MarshalQueryableBlackLevelPattern;
 
-    .line 37
     invoke-direct {p0, p1, p2, p3}, Landroid/hardware/camera2/marshal/Marshaler;-><init>(Landroid/hardware/camera2/marshal/MarshalQueryable;Landroid/hardware/camera2/utils/TypeReference;I)V
 
-    .line 36
     return-void
 .end method
 
@@ -60,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 60
     const/16 v0, 0x10
 
     return v0
@@ -74,39 +70,33 @@
     .prologue
     const/4 v3, 0x2
 
-    .line 42
     const/4 v0, 0x0
 
     .local v0, "i":I
     :goto_0
     if-ge v0, v3, :cond_1
 
-    .line 43
     const/4 v1, 0x0
 
     .local v1, "j":I
     :goto_1
     if-ge v1, v3, :cond_0
 
-    .line 44
     invoke-virtual {p1, v1, v0}, Landroid/hardware/camera2/params/BlackLevelPattern;->getOffsetForIndex(II)I
 
     move-result v2
 
     invoke-virtual {p2, v2}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 43
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 42
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 41
     .end local v1    # "j":I
     :cond_1
     return-void
@@ -118,7 +108,6 @@
     .param p2, "buffer"    # Ljava/nio/ByteBuffer;
 
     .prologue
-    .line 41
     check-cast p1, Landroid/hardware/camera2/params/BlackLevelPattern;
 
     .end local p1    # "value":Ljava/lang/Object;
@@ -134,10 +123,8 @@
     .prologue
     const/4 v3, 0x4
 
-    .line 51
     new-array v0, v3, [I
 
-    .line 52
     .local v0, "channelOffsets":[I
     const/4 v1, 0x0
 
@@ -145,19 +132,16 @@
     :goto_0
     if-ge v1, v3, :cond_0
 
-    .line 53
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v2
 
     aput v2, v0, v1
 
-    .line 52
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 55
     :cond_0
     new-instance v2, Landroid/hardware/camera2/params/BlackLevelPattern;
 
@@ -171,7 +155,6 @@
     .param p1, "buffer"    # Ljava/nio/ByteBuffer;
 
     .prologue
-    .line 50
     invoke-virtual {p0, p1}, Landroid/hardware/camera2/marshal/impl/MarshalQueryableBlackLevelPattern$MarshalerBlackLevelPattern;->unmarshal(Ljava/nio/ByteBuffer;)Landroid/hardware/camera2/params/BlackLevelPattern;
 
     move-result-object v0

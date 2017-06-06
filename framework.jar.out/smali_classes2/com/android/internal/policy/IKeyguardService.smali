@@ -103,14 +103,6 @@
     .end annotation
 .end method
 
-.method public abstract onScreenTurningOff()V
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-.end method
-
 .method public abstract onScreenTurningOn(Lcom/android/internal/policy/IKeyguardDrawnCallback;)V
     .annotation system Ldalvik/annotation/Throws;
         value = {

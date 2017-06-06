@@ -75,7 +75,6 @@
     .locals 0
 
     .prologue
-    .line 80
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -87,12 +86,11 @@
     .param p1, "parentDocumentId"    # Ljava/lang/String;
 
     .prologue
-    .line 669
     new-instance v0, Landroid/net/Uri$Builder;
 
     invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
 
-    const-string/jumbo v1, "content"
+    const-string v1, "content"
 
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
@@ -102,10 +100,8 @@
 
     move-result-object v0
 
-    .line 670
-    const-string/jumbo v1, "document"
+    const-string v1, "document"
 
-    .line 669
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
@@ -114,10 +110,8 @@
 
     move-result-object v0
 
-    .line 670
-    const-string/jumbo v1, "children"
+    const-string v1, "children"
 
-    .line 669
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
@@ -135,49 +129,40 @@
     .param p1, "parentDocumentId"    # Ljava/lang/String;
 
     .prologue
-    .line 699
     new-instance v0, Landroid/net/Uri$Builder;
 
     invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
 
-    const-string/jumbo v1, "content"
+    const-string v1, "content"
 
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
 
-    .line 700
     invoke-virtual {p0}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 699
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
 
-    .line 700
-    const-string/jumbo v1, "tree"
+    const-string v1, "tree"
 
-    .line 699
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
 
-    .line 701
     invoke-static {p0}, Landroid/provider/DocumentsContract;->getTreeDocumentId(Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 699
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
 
-    .line 701
-    const-string/jumbo v1, "document"
+    const-string v1, "document"
 
-    .line 699
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
@@ -186,10 +171,8 @@
 
     move-result-object v0
 
-    .line 702
-    const-string/jumbo v1, "children"
+    const-string v1, "children"
 
-    .line 699
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
@@ -207,12 +190,11 @@
     .param p1, "documentId"    # Ljava/lang/String;
 
     .prologue
-    .line 614
     new-instance v0, Landroid/net/Uri$Builder;
 
     invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
 
-    const-string/jumbo v1, "content"
+    const-string v1, "content"
 
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
@@ -222,10 +204,8 @@
 
     move-result-object v0
 
-    .line 615
-    const-string/jumbo v1, "document"
+    const-string v1, "document"
 
-    .line 614
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
@@ -247,21 +227,18 @@
     .param p1, "documentId"    # Ljava/lang/String;
 
     .prologue
-    .line 650
     invoke-static {p0}, Landroid/provider/DocumentsContract;->isTreeUri(Landroid/net/Uri;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 651
     invoke-static {p0, p1}, Landroid/provider/DocumentsContract;->buildDocumentUriUsingTree(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
     return-object v0
 
-    .line 653
     :cond_0
     invoke-virtual {p0}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
 
@@ -280,49 +257,40 @@
     .param p1, "documentId"    # Ljava/lang/String;
 
     .prologue
-    .line 642
     new-instance v0, Landroid/net/Uri$Builder;
 
     invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
 
-    const-string/jumbo v1, "content"
+    const-string v1, "content"
 
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
 
-    .line 643
     invoke-virtual {p0}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 642
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
 
-    .line 643
-    const-string/jumbo v1, "tree"
+    const-string v1, "tree"
 
-    .line 642
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
 
-    .line 644
     invoke-static {p0}, Landroid/provider/DocumentsContract;->getTreeDocumentId(Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 642
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
 
-    .line 644
-    const-string/jumbo v1, "document"
+    const-string v1, "document"
 
-    .line 642
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
@@ -344,12 +312,11 @@
     .param p1, "rootId"    # Ljava/lang/String;
 
     .prologue
-    .line 589
     new-instance v0, Landroid/net/Uri$Builder;
 
     invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
 
-    const-string/jumbo v1, "content"
+    const-string v1, "content"
 
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
@@ -359,10 +326,8 @@
 
     move-result-object v0
 
-    .line 590
-    const-string/jumbo v1, "root"
+    const-string v1, "root"
 
-    .line 589
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
@@ -371,10 +336,8 @@
 
     move-result-object v0
 
-    .line 591
-    const-string/jumbo v1, "recent"
+    const-string v1, "recent"
 
-    .line 589
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
@@ -392,12 +355,11 @@
     .param p1, "rootId"    # Ljava/lang/String;
 
     .prologue
-    .line 576
     new-instance v0, Landroid/net/Uri$Builder;
 
     invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
 
-    const-string/jumbo v1, "content"
+    const-string v1, "content"
 
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
@@ -407,10 +369,8 @@
 
     move-result-object v0
 
-    .line 577
-    const-string/jumbo v1, "root"
+    const-string v1, "root"
 
-    .line 576
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
@@ -431,12 +391,11 @@
     .param p0, "authority"    # Ljava/lang/String;
 
     .prologue
-    .line 565
     new-instance v0, Landroid/net/Uri$Builder;
 
     invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
 
-    const-string/jumbo v1, "content"
+    const-string v1, "content"
 
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
@@ -446,10 +405,8 @@
 
     move-result-object v0
 
-    .line 566
-    const-string/jumbo v1, "root"
+    const-string v1, "root"
 
-    .line 565
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
@@ -468,12 +425,11 @@
     .param p2, "query"    # Ljava/lang/String;
 
     .prologue
-    .line 716
     new-instance v0, Landroid/net/Uri$Builder;
 
     invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
 
-    const-string/jumbo v1, "content"
+    const-string v1, "content"
 
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
@@ -483,10 +439,8 @@
 
     move-result-object v0
 
-    .line 717
-    const-string/jumbo v1, "root"
+    const-string v1, "root"
 
-    .line 716
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
@@ -495,18 +449,14 @@
 
     move-result-object v0
 
-    .line 717
-    const-string/jumbo v1, "search"
+    const-string v1, "search"
 
-    .line 716
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
 
-    .line 718
-    const-string/jumbo v1, "query"
+    const-string v1, "query"
 
-    .line 716
     invoke-virtual {v0, v1, p2}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
@@ -524,12 +474,11 @@
     .param p1, "documentId"    # Ljava/lang/String;
 
     .prologue
-    .line 601
     new-instance v0, Landroid/net/Uri$Builder;
 
     invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
 
-    const-string/jumbo v1, "content"
+    const-string v1, "content"
 
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
@@ -539,10 +488,8 @@
 
     move-result-object v0
 
-    .line 602
-    const-string/jumbo v1, "tree"
+    const-string v1, "tree"
 
-    .line 601
     invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
@@ -571,29 +518,24 @@
     .end annotation
 
     .prologue
-    .line 944
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 945
     .local v0, "in":Landroid/os/Bundle;
-    const-string/jumbo v2, "uri"
+    const-string v2, "uri"
 
     invoke-virtual {v0, v2, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 946
-    const-string/jumbo v2, "mime_type"
+    const-string v2, "mime_type"
 
     invoke-virtual {v0, v2, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 947
-    const-string/jumbo v2, "_display_name"
+    const-string v2, "_display_name"
 
     invoke-virtual {v0, v2, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 949
-    const-string/jumbo v2, "android:createDocument"
+    const-string v2, "android:createDocument"
 
     const/4 v3, 0x0
 
@@ -601,9 +543,8 @@
 
     move-result-object v1
 
-    .line 950
     .local v1, "out":Landroid/os/Bundle;
-    const-string/jumbo v2, "uri"
+    const-string v2, "uri"
 
     invoke-virtual {v1, v2}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -622,17 +563,14 @@
     .param p3, "displayName"    # Ljava/lang/String;
 
     .prologue
-    .line 930
     invoke-virtual {p1}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 929
     invoke-virtual {p0, v2}, Landroid/content/ContentResolver;->acquireUnstableContentProviderClient(Ljava/lang/String;)Landroid/content/ContentProviderClient;
 
     move-result-object v0
 
-    .line 932
     .local v0, "client":Landroid/content/ContentProviderClient;
     :try_start_0
     invoke-static {v0, p1, p2, p3}, Landroid/provider/DocumentsContract;->createDocument(Landroid/content/ContentProviderClient;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
@@ -642,45 +580,35 @@
 
     move-result-object v2
 
-    .line 937
     invoke-static {v0}, Landroid/content/ContentProviderClient;->releaseQuietly(Landroid/content/ContentProviderClient;)V
 
-    .line 932
     return-object v2
 
-    .line 933
     :catch_0
     move-exception v1
 
-    .line 934
     .local v1, "e":Ljava/lang/Exception;
     :try_start_1
-    const-string/jumbo v2, "Documents"
+    const-string v2, "Documents"
 
-    const-string/jumbo v3, "Failed to create document"
+    const-string v3, "Failed to create document"
 
     invoke-static {v2, v3, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 935
     const/4 v2, 0x0
 
-    .line 937
     invoke-static {v0}, Landroid/content/ContentProviderClient;->releaseQuietly(Landroid/content/ContentProviderClient;)V
 
-    .line 935
     return-object v2
 
-    .line 936
     .end local v1    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v2
 
-    .line 937
     invoke-static {v0}, Landroid/content/ContentProviderClient;->releaseQuietly(Landroid/content/ContentProviderClient;)V
 
-    .line 936
     throw v2
 .end method
 
@@ -695,25 +623,21 @@
     .end annotation
 
     .prologue
-    .line 1015
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 1016
     .local v0, "in":Landroid/os/Bundle;
-    const-string/jumbo v1, "uri"
+    const-string v1, "uri"
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 1018
-    const-string/jumbo v1, "android:deleteDocument"
+    const-string v1, "android:deleteDocument"
 
     const/4 v2, 0x0
 
     invoke-virtual {p0, v1, v2, v0}, Landroid/content/ContentProviderClient;->call(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
 
-    .line 1014
     return-void
 .end method
 
@@ -723,17 +647,14 @@
     .param p1, "documentUri"    # Landroid/net/Uri;
 
     .prologue
-    .line 1000
     invoke-virtual {p1}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 999
     invoke-virtual {p0, v2}, Landroid/content/ContentResolver;->acquireUnstableContentProviderClient(Ljava/lang/String;)Landroid/content/ContentProviderClient;
 
     move-result-object v0
 
-    .line 1002
     .local v0, "client":Landroid/content/ContentProviderClient;
     :try_start_0
     invoke-static {v0, p1}, Landroid/provider/DocumentsContract;->deleteDocument(Landroid/content/ContentProviderClient;Landroid/net/Uri;)V
@@ -741,48 +662,37 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1003
     const/4 v2, 0x1
 
-    .line 1008
     invoke-static {v0}, Landroid/content/ContentProviderClient;->releaseQuietly(Landroid/content/ContentProviderClient;)V
 
-    .line 1003
     return v2
 
-    .line 1004
     :catch_0
     move-exception v1
 
-    .line 1005
     .local v1, "e":Ljava/lang/Exception;
     :try_start_1
-    const-string/jumbo v2, "Documents"
+    const-string v2, "Documents"
 
-    const-string/jumbo v3, "Failed to delete document"
+    const-string v3, "Failed to delete document"
 
     invoke-static {v2, v3, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1006
     const/4 v2, 0x0
 
-    .line 1008
     invoke-static {v0}, Landroid/content/ContentProviderClient;->releaseQuietly(Landroid/content/ContentProviderClient;)V
 
-    .line 1006
     return v2
 
-    .line 1007
     .end local v1    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v2
 
-    .line 1008
     invoke-static {v0}, Landroid/content/ContentProviderClient;->releaseQuietly(Landroid/content/ContentProviderClient;)V
 
-    .line 1007
     throw v2
 .end method
 
@@ -795,12 +705,10 @@
 
     const/4 v3, 0x0
 
-    .line 775
     invoke-virtual {p0}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
     move-result-object v0
 
-    .line 776
     .local v0, "paths":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -808,7 +716,7 @@
 
     if-lt v1, v4, :cond_0
 
-    const-string/jumbo v1, "document"
+    const-string v1, "document"
 
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -820,7 +728,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 777
     const/4 v1, 0x1
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -831,7 +738,6 @@
 
     return-object v1
 
-    .line 779
     :cond_0
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -841,7 +747,7 @@
 
     if-lt v1, v2, :cond_1
 
-    const-string/jumbo v1, "tree"
+    const-string v1, "tree"
 
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -853,8 +759,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 780
-    const-string/jumbo v1, "document"
+    const-string v1, "document"
 
     invoke-interface {v0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -864,10 +769,8 @@
 
     move-result v1
 
-    .line 779
     if-eqz v1, :cond_1
 
-    .line 781
     const/4 v1, 0x3
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -878,7 +781,6 @@
 
     return-object v1
 
-    .line 783
     :cond_1
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -886,7 +788,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "Invalid URI: "
+    const-string v3, "Invalid URI: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -919,14 +821,12 @@
     .end annotation
 
     .prologue
-    .line 850
     new-instance v17, Landroid/os/Bundle;
 
     invoke-direct/range {v17 .. v17}, Landroid/os/Bundle;-><init>()V
 
-    .line 851
     .local v17, "openOpts":Landroid/os/Bundle;
-    const-string/jumbo v5, "android.content.extra.SIZE"
+    const-string v5, "android.content.extra.SIZE"
 
     move-object/from16 v0, v17
 
@@ -934,17 +834,14 @@
 
     invoke-virtual {v0, v5, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 853
     const/4 v11, 0x0
 
-    .line 854
     .local v11, "afd":Landroid/content/res/AssetFileDescriptor;
     const/4 v4, 0x0
 
-    .line 856
     .local v4, "bitmap":Landroid/graphics/Bitmap;
     :try_start_0
-    const-string/jumbo v5, "image/*"
+    const-string v5, "image/*"
 
     move-object/from16 v0, p0
 
@@ -958,13 +855,11 @@
 
     move-result-object v11
 
-    .line 858
     .local v11, "afd":Landroid/content/res/AssetFileDescriptor;
     invoke-virtual {v11}, Landroid/content/res/AssetFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
     move-result-object v14
 
-    .line 859
     .local v14, "fd":Ljava/io/FileDescriptor;
     invoke-virtual {v11}, Landroid/content/res/AssetFileDescriptor;->getStartOffset()J
     :try_end_0
@@ -972,11 +867,9 @@
 
     move-result-wide v18
 
-    .line 863
     .local v18, "offset":J
     const/16 v16, 0x0
 
-    .line 865
     .local v16, "is":Ljava/io/BufferedInputStream;
     :try_start_1
     sget v5, Landroid/system/OsConstants;->SEEK_SET:I
@@ -988,7 +881,6 @@
     .catch Landroid/system/ErrnoException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 873
     .end local v16    # "is":Ljava/io/BufferedInputStream;
     :goto_0
     :try_start_2
@@ -996,7 +888,6 @@
 
     invoke-direct/range {v20 .. v20}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 874
     .local v20, "opts":Landroid/graphics/BitmapFactory$Options;
     const/4 v5, 0x1
 
@@ -1004,10 +895,8 @@
 
     iput-boolean v5, v0, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 875
     if-eqz v16, :cond_1
 
-    .line 876
     const/4 v5, 0x0
 
     move-object/from16 v0, v16
@@ -1016,7 +905,6 @@
 
     invoke-static {v0, v5, v1}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
-    .line 881
     :goto_1
     move-object/from16 v0, v20
 
@@ -1028,7 +916,6 @@
 
     div-int v22, v5, v6
 
-    .line 882
     .local v22, "widthSample":I
     move-object/from16 v0, v20
 
@@ -1040,7 +927,6 @@
 
     div-int v15, v5, v6
 
-    .line 884
     .local v15, "heightSample":I
     const/4 v5, 0x0
 
@@ -1048,7 +934,6 @@
 
     iput-boolean v5, v0, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 885
     move/from16 v0, v22
 
     invoke-static {v0, v15}, Ljava/lang/Math;->min(II)I
@@ -1059,13 +944,10 @@
 
     iput v5, v0, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 886
     if-eqz v16, :cond_2
 
-    .line 887
     invoke-virtual/range {v16 .. v16}, Ljava/io/BufferedInputStream;->reset()V
 
-    .line 888
     const/4 v5, 0x0
 
     move-object/from16 v0, v16
@@ -1076,18 +958,16 @@
 
     move-result-object v4
 
-    .line 901
     .local v4, "bitmap":Landroid/graphics/Bitmap;
     :goto_2
     invoke-virtual {v11}, Landroid/content/res/AssetFileDescriptor;->getExtras()Landroid/os/Bundle;
 
     move-result-object v13
 
-    .line 902
     .local v13, "extras":Landroid/os/Bundle;
     if-eqz v13, :cond_3
 
-    const-string/jumbo v5, "android.content.extra.ORIENTATION"
+    const-string v5, "android.content.extra.ORIENTATION"
 
     const/4 v6, 0x0
 
@@ -1095,29 +975,24 @@
 
     move-result v21
 
-    .line 903
     .local v21, "orientation":I
     :goto_3
     if-eqz v21, :cond_0
 
-    .line 904
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v7
 
-    .line 905
     .local v7, "width":I
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v8
 
-    .line 907
     .local v8, "height":I
     new-instance v9, Landroid/graphics/Matrix;
 
     invoke-direct {v9}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 908
     .local v9, "m":Landroid/graphics/Matrix;
     move/from16 v0, v21
 
@@ -1133,7 +1008,6 @@
 
     invoke-virtual {v9, v5, v6, v10}, Landroid/graphics/Matrix;->setRotate(FFF)V
 
-    .line 909
     const/4 v5, 0x0
 
     const/4 v6, 0x0
@@ -1146,17 +1020,14 @@
 
     move-result-object v4
 
-    .line 912
     .end local v7    # "width":I
     .end local v8    # "height":I
     .end local v9    # "m":Landroid/graphics/Matrix;
     :cond_0
     invoke-static {v11}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 915
     return-object v4
 
-    .line 866
     .end local v13    # "extras":Landroid/os/Bundle;
     .end local v15    # "heightSample":I
     .end local v20    # "opts":Landroid/graphics/BitmapFactory$Options;
@@ -1167,7 +1038,6 @@
     :catch_0
     move-exception v12
 
-    .line 867
     .local v12, "e":Landroid/system/ErrnoException;
     :try_start_3
     new-instance v16, Ljava/io/BufferedInputStream;
@@ -1183,7 +1053,6 @@
 
     invoke-direct {v0, v5, v6}, Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;I)V
 
-    .line 868
     .local v16, "is":Ljava/io/BufferedInputStream;
     const/high16 v5, 0x20000
 
@@ -1195,7 +1064,6 @@
 
     goto/16 :goto_0
 
-    .line 911
     .end local v4    # "bitmap":Landroid/graphics/Bitmap;
     .end local v11    # "afd":Landroid/content/res/AssetFileDescriptor;
     .end local v12    # "e":Landroid/system/ErrnoException;
@@ -1205,13 +1073,10 @@
     :catchall_0
     move-exception v5
 
-    .line 912
     invoke-static {v11}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 911
     throw v5
 
-    .line 878
     .restart local v4    # "bitmap":Landroid/graphics/Bitmap;
     .restart local v11    # "afd":Landroid/content/res/AssetFileDescriptor;
     .restart local v14    # "fd":Ljava/io/FileDescriptor;
@@ -1229,7 +1094,6 @@
 
     goto/16 :goto_1
 
-    .line 891
     .restart local v15    # "heightSample":I
     .restart local v22    # "widthSample":I
     :cond_2
@@ -1243,7 +1107,6 @@
     .catch Landroid/system/ErrnoException; {:try_start_5 .. :try_end_5} :catch_1
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 895
     :goto_4
     const/4 v5, 0x0
 
@@ -1257,12 +1120,10 @@
     .local v4, "bitmap":Landroid/graphics/Bitmap;
     goto :goto_2
 
-    .line 892
     .local v4, "bitmap":Landroid/graphics/Bitmap;
     :catch_1
     move-exception v12
 
-    .line 893
     .restart local v12    # "e":Landroid/system/ErrnoException;
     invoke-virtual {v12}, Landroid/system/ErrnoException;->rethrowAsIOException()Ljava/io/IOException;
     :try_end_6
@@ -1270,7 +1131,6 @@
 
     goto :goto_4
 
-    .line 902
     .end local v12    # "e":Landroid/system/ErrnoException;
     .local v4, "bitmap":Landroid/graphics/Bitmap;
     .restart local v13    # "extras":Landroid/os/Bundle;
@@ -1289,17 +1149,14 @@
     .param p3, "signal"    # Landroid/os/CancellationSignal;
 
     .prologue
-    .line 833
     invoke-virtual {p1}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 832
     invoke-virtual {p0, v2}, Landroid/content/ContentResolver;->acquireUnstableContentProviderClient(Ljava/lang/String;)Landroid/content/ContentProviderClient;
 
     move-result-object v0
 
-    .line 835
     .local v0, "client":Landroid/content/ContentProviderClient;
     :try_start_0
     invoke-static {v0, p1, p2, p3}, Landroid/provider/DocumentsContract;->getDocumentThumbnail(Landroid/content/ContentProviderClient;Landroid/net/Uri;Landroid/graphics/Point;Landroid/os/CancellationSignal;)Landroid/graphics/Bitmap;
@@ -1309,31 +1166,26 @@
 
     move-result-object v2
 
-    .line 842
     invoke-static {v0}, Landroid/content/ContentProviderClient;->releaseQuietly(Landroid/content/ContentProviderClient;)V
 
-    .line 835
     return-object v2
 
-    .line 836
     :catch_0
     move-exception v1
 
-    .line 837
     .local v1, "e":Ljava/lang/Exception;
     :try_start_1
     instance-of v2, v1, Landroid/os/OperationCanceledException;
 
     if-nez v2, :cond_0
 
-    .line 838
-    const-string/jumbo v2, "Documents"
+    const-string v2, "Documents"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "Failed to load thumbnail for "
+    const-string v4, "Failed to load thumbnail for "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1343,7 +1195,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, ": "
+    const-string v4, ": "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1361,25 +1213,19 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 840
     :cond_0
     const/4 v2, 0x0
 
-    .line 842
     invoke-static {v0}, Landroid/content/ContentProviderClient;->releaseQuietly(Landroid/content/ContentProviderClient;)V
 
-    .line 840
     return-object v2
 
-    .line 841
     .end local v1    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v2
 
-    .line 842
     invoke-static {v0}, Landroid/content/ContentProviderClient;->releaseQuietly(Landroid/content/ContentProviderClient;)V
 
-    .line 841
     throw v2
 .end method
 
@@ -1388,12 +1234,10 @@
     .param p0, "rootUri"    # Landroid/net/Uri;
 
     .prologue
-    .line 762
     invoke-virtual {p0}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
     move-result-object v0
 
-    .line 763
     .local v0, "paths":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -1403,7 +1247,7 @@
 
     if-lt v1, v2, :cond_0
 
-    const-string/jumbo v1, "root"
+    const-string v1, "root"
 
     const/4 v2, 0x0
 
@@ -1417,7 +1261,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 764
     const/4 v1, 0x1
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1428,7 +1271,6 @@
 
     return-object v1
 
-    .line 766
     :cond_0
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -1436,7 +1278,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "Invalid URI: "
+    const-string v3, "Invalid URI: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1460,8 +1302,7 @@
     .param p0, "searchDocumentsUri"    # Landroid/net/Uri;
 
     .prologue
-    .line 802
-    const-string/jumbo v0, "query"
+    const-string v0, "query"
 
     invoke-virtual {p0, v0}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1475,12 +1316,10 @@
     .param p0, "documentUri"    # Landroid/net/Uri;
 
     .prologue
-    .line 790
     invoke-virtual {p0}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
     move-result-object v0
 
-    .line 791
     .local v0, "paths":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -1490,7 +1329,7 @@
 
     if-lt v1, v2, :cond_0
 
-    const-string/jumbo v1, "tree"
+    const-string v1, "tree"
 
     const/4 v2, 0x0
 
@@ -1504,7 +1343,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 792
     const/4 v1, 0x1
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1515,7 +1353,6 @@
 
     return-object v1
 
-    .line 794
     :cond_0
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -1523,7 +1360,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "Invalid URI: "
+    const-string v3, "Invalid URI: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1552,12 +1389,10 @@
 
     const/4 v3, 0x0
 
-    .line 729
     invoke-virtual {p1}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
     move-result-object v0
 
-    .line 730
     .local v0, "paths":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -1565,7 +1400,7 @@
 
     if-ne v1, v4, :cond_0
 
-    const-string/jumbo v1, "document"
+    const-string v1, "document"
 
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1577,7 +1412,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 731
     invoke-virtual {p1}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
 
     move-result-object v1
@@ -1588,7 +1422,6 @@
 
     return v1
 
-    .line 733
     :cond_0
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -1598,7 +1431,7 @@
 
     if-ne v1, v2, :cond_1
 
-    const-string/jumbo v1, "tree"
+    const-string v1, "tree"
 
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1610,8 +1443,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 734
-    const-string/jumbo v1, "document"
+    const-string v1, "document"
 
     invoke-interface {v0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1621,10 +1453,8 @@
 
     move-result v1
 
-    .line 733
     if-eqz v1, :cond_1
 
-    .line 735
     invoke-virtual {p1}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
 
     move-result-object v1
@@ -1635,7 +1465,6 @@
 
     return v1
 
-    .line 737
     :cond_1
     return v3
 .end method
@@ -1648,14 +1477,12 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 747
     new-instance v3, Landroid/content/Intent;
 
-    const-string/jumbo v4, "android.content.action.DOCUMENTS_PROVIDER"
+    const-string v4, "android.content.action.DOCUMENTS_PROVIDER"
 
     invoke-direct {v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 748
     .local v3, "intent":Landroid/content/Intent;
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -1665,7 +1492,6 @@
 
     move-result-object v2
 
-    .line 750
     .local v2, "infos":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -1685,7 +1511,6 @@
 
     check-cast v0, Landroid/content/pm/ResolveInfo;
 
-    .line 751
     .local v0, "info":Landroid/content/pm/ResolveInfo;
     iget-object v4, v0, Landroid/content/pm/ResolveInfo;->providerInfo:Landroid/content/pm/ProviderInfo;
 
@@ -1697,12 +1522,10 @@
 
     if-eqz v4, :cond_0
 
-    .line 752
     const/4 v4, 0x1
 
     return v4
 
-    .line 755
     .end local v0    # "info":Landroid/content/pm/ResolveInfo;
     :cond_1
     return v5
@@ -1713,8 +1536,7 @@
     .param p0, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 812
-    const-string/jumbo v0, "manage"
+    const-string v0, "manage"
 
     const/4 v1, 0x0
 
@@ -1732,12 +1554,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 742
     invoke-virtual {p0}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
     move-result-object v0
 
-    .line 743
     .local v0, "paths":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -1747,7 +1567,7 @@
 
     if-lt v2, v3, :cond_0
 
-    const-string/jumbo v2, "tree"
+    const-string v2, "tree"
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1771,19 +1591,15 @@
     .end annotation
 
     .prologue
-    .line 1030
     const/high16 v0, 0x10000000
 
-    .line 1029
     invoke-static {p0, v0}, Landroid/os/ParcelFileDescriptor;->open(Ljava/io/File;I)Landroid/os/ParcelFileDescriptor;
 
     move-result-object v1
 
-    .line 1031
     .local v1, "pfd":Landroid/os/ParcelFileDescriptor;
     const/4 v6, 0x0
 
-    .line 1034
     .local v6, "extras":Landroid/os/Bundle;
     :try_start_0
     new-instance v8, Landroid/media/ExifInterface;
@@ -1794,9 +1610,8 @@
 
     invoke-direct {v8, v0}, Landroid/media/ExifInterface;-><init>(Ljava/lang/String;)V
 
-    .line 1036
     .local v8, "exif":Landroid/media/ExifInterface;
-    const-string/jumbo v0, "Orientation"
+    const-string v0, "Orientation"
 
     const/4 v2, -0x1
 
@@ -1806,7 +1621,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1051
     .end local v6    # "extras":Landroid/os/Bundle;
     :goto_0
     :pswitch_0
@@ -1814,11 +1628,9 @@
 
     move-result-object v10
 
-    .line 1052
     .local v10, "thumb":[J
     if-eqz v10, :cond_0
 
-    .line 1053
     new-instance v0, Landroid/content/res/AssetFileDescriptor;
 
     const/4 v2, 0x0
@@ -1833,7 +1645,6 @@
 
     return-object v0
 
-    .line 1038
     .end local v10    # "thumb":[J
     .restart local v6    # "extras":Landroid/os/Bundle;
     :pswitch_1
@@ -1845,10 +1656,9 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1039
     .local v9, "extras":Landroid/os/Bundle;
     :try_start_1
-    const-string/jumbo v0, "android.content.extra.ORIENTATION"
+    const-string v0, "android.content.extra.ORIENTATION"
 
     .end local v6    # "extras":Landroid/os/Bundle;
     const/16 v2, 0x5a
@@ -1859,12 +1669,10 @@
 
     move-object v6, v9
 
-    .line 1040
     .end local v9    # "extras":Landroid/os/Bundle;
     .local v6, "extras":Landroid/os/Bundle;
     goto :goto_0
 
-    .line 1042
     .local v6, "extras":Landroid/os/Bundle;
     :pswitch_2
     :try_start_2
@@ -1876,10 +1684,9 @@
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 1043
     .restart local v9    # "extras":Landroid/os/Bundle;
     :try_start_3
-    const-string/jumbo v0, "android.content.extra.ORIENTATION"
+    const-string v0, "android.content.extra.ORIENTATION"
 
     .end local v6    # "extras":Landroid/os/Bundle;
     const/16 v2, 0xb4
@@ -1890,12 +1697,10 @@
 
     move-object v6, v9
 
-    .line 1044
     .end local v9    # "extras":Landroid/os/Bundle;
     .local v6, "extras":Landroid/os/Bundle;
     goto :goto_0
 
-    .line 1046
     .local v6, "extras":Landroid/os/Bundle;
     :pswitch_3
     :try_start_4
@@ -1907,10 +1712,9 @@
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 1047
     .restart local v9    # "extras":Landroid/os/Bundle;
     :try_start_5
-    const-string/jumbo v0, "android.content.extra.ORIENTATION"
+    const-string v0, "android.content.extra.ORIENTATION"
 
     .end local v6    # "extras":Landroid/os/Bundle;
     const/16 v2, 0x10e
@@ -1921,18 +1725,15 @@
 
     move-object v6, v9
 
-    .line 1048
     .end local v9    # "extras":Landroid/os/Bundle;
     .local v6, "extras":Landroid/os/Bundle;
     goto :goto_0
 
-    .line 1055
     .end local v6    # "extras":Landroid/os/Bundle;
     .end local v8    # "exif":Landroid/media/ExifInterface;
     :catch_0
     move-exception v7
 
-    .line 1058
     :cond_0
     :goto_1
     new-instance v0, Landroid/content/res/AssetFileDescriptor;
@@ -1945,7 +1746,6 @@
 
     return-object v0
 
-    .line 1055
     .restart local v8    # "exif":Landroid/media/ExifInterface;
     .restart local v9    # "extras":Landroid/os/Bundle;
     :catch_1
@@ -1958,7 +1758,6 @@
     .restart local v6    # "extras":Landroid/os/Bundle;
     goto :goto_1
 
-    .line 1036
     nop
 
     :pswitch_data_0
@@ -1986,32 +1785,27 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 983
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 984
     .local v0, "in":Landroid/os/Bundle;
-    const-string/jumbo v3, "uri"
+    const-string v3, "uri"
 
     invoke-virtual {v0, v3, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 985
-    const-string/jumbo v3, "_display_name"
+    const-string v3, "_display_name"
 
     invoke-virtual {v0, v3, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 987
-    const-string/jumbo v3, "android:renameDocument"
+    const-string v3, "android:renameDocument"
 
     invoke-virtual {p0, v3, v4, v0}, Landroid/content/ContentProviderClient;->call(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 988
     .local v1, "out":Landroid/os/Bundle;
-    const-string/jumbo v3, "uri"
+    const-string v3, "uri"
 
     invoke-virtual {v1, v3}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -2019,7 +1813,6 @@
 
     check-cast v2, Landroid/net/Uri;
 
-    .line 989
     .local v2, "outUri":Landroid/net/Uri;
     if-eqz v2, :cond_0
 
@@ -2041,17 +1834,14 @@
     .param p2, "displayName"    # Ljava/lang/String;
 
     .prologue
-    .line 969
     invoke-virtual {p1}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 968
     invoke-virtual {p0, v2}, Landroid/content/ContentResolver;->acquireUnstableContentProviderClient(Ljava/lang/String;)Landroid/content/ContentProviderClient;
 
     move-result-object v0
 
-    .line 971
     .local v0, "client":Landroid/content/ContentProviderClient;
     :try_start_0
     invoke-static {v0, p1, p2}, Landroid/provider/DocumentsContract;->renameDocument(Landroid/content/ContentProviderClient;Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
@@ -2061,45 +1851,35 @@
 
     move-result-object v2
 
-    .line 976
     invoke-static {v0}, Landroid/content/ContentProviderClient;->releaseQuietly(Landroid/content/ContentProviderClient;)V
 
-    .line 971
     return-object v2
 
-    .line 972
     :catch_0
     move-exception v1
 
-    .line 973
     .local v1, "e":Ljava/lang/Exception;
     :try_start_1
-    const-string/jumbo v2, "Documents"
+    const-string v2, "Documents"
 
-    const-string/jumbo v3, "Failed to rename document"
+    const-string v3, "Failed to rename document"
 
     invoke-static {v2, v3, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 974
     const/4 v2, 0x0
 
-    .line 976
     invoke-static {v0}, Landroid/content/ContentProviderClient;->releaseQuietly(Landroid/content/ContentProviderClient;)V
 
-    .line 974
     return-object v2
 
-    .line 975
     .end local v1    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v2
 
-    .line 976
     invoke-static {v0}, Landroid/content/ContentProviderClient;->releaseQuietly(Landroid/content/ContentProviderClient;)V
 
-    .line 975
     throw v2
 .end method
 
@@ -2108,14 +1888,13 @@
     .param p0, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 807
     invoke-virtual {p0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v0
 
-    const-string/jumbo v1, "manage"
+    const-string v1, "manage"
 
-    const-string/jumbo v2, "true"
+    const-string v2, "true"
 
     invoke-virtual {v0, v1, v2}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 

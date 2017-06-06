@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Landroid/widget/VideoView$5;
 
     .prologue
-    .line 533
     iput-object p1, p0, Landroid/widget/VideoView$5$1;->this$1:Landroid/widget/VideoView$5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "whichButton"    # I
 
     .prologue
-    .line 538
     iget-object v0, p0, Landroid/widget/VideoView$5$1;->this$1:Landroid/widget/VideoView$5;
 
     iget-object v0, v0, Landroid/widget/VideoView$5;->this$0:Landroid/widget/VideoView;
@@ -54,7 +52,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 539
     iget-object v0, p0, Landroid/widget/VideoView$5$1;->this$1:Landroid/widget/VideoView$5;
 
     iget-object v0, v0, Landroid/widget/VideoView$5;->this$0:Landroid/widget/VideoView;
@@ -73,7 +70,6 @@
 
     invoke-interface {v0, v1}, Landroid/media/MediaPlayer$OnCompletionListener;->onCompletion(Landroid/media/MediaPlayer;)V
 
-    .line 534
     :cond_0
     return-void
 .end method

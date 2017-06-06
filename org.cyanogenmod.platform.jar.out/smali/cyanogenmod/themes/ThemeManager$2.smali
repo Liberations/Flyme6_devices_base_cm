@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcyanogenmod/themes/ThemeManager;
 
     .prologue
-    .line 136
     iput-object p1, p0, Lcyanogenmod/themes/ThemeManager$2;->this$0:Lcyanogenmod/themes/ThemeManager;
 
     invoke-direct {p0}, Lcyanogenmod/themes/IThemeProcessingListener$Stub;-><init>()V
@@ -44,7 +43,6 @@
     .end annotation
 
     .prologue
-    .line 139
     invoke-static {}, Lcyanogenmod/themes/ThemeManager;->-get2()Landroid/os/Handler;
 
     move-result-object v0
@@ -55,6 +53,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 138
     return-void
 .end method

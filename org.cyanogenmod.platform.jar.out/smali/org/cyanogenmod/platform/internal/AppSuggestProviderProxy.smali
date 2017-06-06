@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 36
     const-class v0, Lorg/cyanogenmod/platform/internal/AppSuggestProviderProxy;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -32,12 +31,10 @@
 
     sput-object v0, Lorg/cyanogenmod/platform/internal/AppSuggestProviderProxy;->TAG:Ljava/lang/String;
 
-    .line 37
     sget-boolean v0, Lorg/cyanogenmod/platform/internal/AppSuggestManagerService;->DEBUG:Z
 
     sput-boolean v0, Lorg/cyanogenmod/platform/internal/AppSuggestProviderProxy;->DEBUG:Z
 
-    .line 35
     return-void
 .end method
 
@@ -53,13 +50,10 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 58
     iput-object p1, p0, Lorg/cyanogenmod/platform/internal/AppSuggestProviderProxy;->mContext:Landroid/content/Context;
 
-    .line 59
     new-instance v0, Lcom/android/server/ServiceWatcher;
 
     iget-object v1, p0, Lorg/cyanogenmod/platform/internal/AppSuggestProviderProxy;->mContext:Landroid/content/Context;
@@ -74,7 +68,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "-"
+    const-string v3, "-"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -102,7 +96,6 @@
 
     iput-object v0, p0, Lorg/cyanogenmod/platform/internal/AppSuggestProviderProxy;->mServiceWatcher:Lcom/android/server/ServiceWatcher;
 
-    .line 57
     return-void
 .end method
 
@@ -110,7 +103,6 @@
     .locals 1
 
     .prologue
-    .line 64
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/AppSuggestProviderProxy;->mServiceWatcher:Lcom/android/server/ServiceWatcher;
 
     invoke-virtual {v0}, Lcom/android/server/ServiceWatcher;->start()Z
@@ -130,7 +122,6 @@
     .param p5, "initialPackageNamesResId"    # I
 
     .prologue
-    .line 43
     new-instance v0, Lorg/cyanogenmod/platform/internal/AppSuggestProviderProxy;
 
     move-object v1, p0
@@ -147,7 +138,6 @@
 
     invoke-direct/range {v0 .. v6}, Lorg/cyanogenmod/platform/internal/AppSuggestProviderProxy;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;III)V
 
-    .line 45
     .local v0, "proxy":Lorg/cyanogenmod/platform/internal/AppSuggestProviderProxy;
     invoke-direct {v0}, Lorg/cyanogenmod/platform/internal/AppSuggestProviderProxy;->bind()Z
 
@@ -155,10 +145,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 46
     return-object v0
 
-    .line 48
     :cond_0
     const/4 v1, 0x0
 
@@ -169,7 +157,6 @@
     .locals 1
 
     .prologue
-    .line 68
     iget-object v0, p0, Lorg/cyanogenmod/platform/internal/AppSuggestProviderProxy;->mServiceWatcher:Lcom/android/server/ServiceWatcher;
 
     invoke-virtual {v0}, Lcom/android/server/ServiceWatcher;->getBinder()Landroid/os/IBinder;
@@ -203,12 +190,10 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 89
     invoke-direct {p0}, Lorg/cyanogenmod/platform/internal/AppSuggestProviderProxy;->getService()Lcyanogenmod/app/suggest/IAppSuggestProvider;
 
     move-result-object v2
 
-    .line 90
     .local v2, "service":Lcyanogenmod/app/suggest/IAppSuggestProvider;
     if-nez v2, :cond_0
 
@@ -218,7 +203,6 @@
 
     return-object v3
 
-    .line 93
     :cond_0
     :try_start_0
     invoke-interface {v2, p1}, Lcyanogenmod/app/suggest/IAppSuggestProvider;->getSuggestions(Landroid/content/Intent;)Ljava/util/List;
@@ -230,11 +214,9 @@
 
     return-object v3
 
-    .line 96
     :catch_0
     move-exception v1
 
-    .line 98
     .local v1, "e":Ljava/lang/Exception;
     sget-object v3, Lorg/cyanogenmod/platform/internal/AppSuggestProviderProxy;->TAG:Ljava/lang/String;
 
@@ -242,7 +224,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "Exception from "
+    const-string v5, "Exception from "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -264,7 +246,6 @@
 
     invoke-static {v3, v4, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 100
     .end local v1    # "e":Ljava/lang/Exception;
     :goto_0
     new-instance v3, Ljava/util/ArrayList;
@@ -273,11 +254,9 @@
 
     return-object v3
 
-    .line 94
     :catch_1
     move-exception v0
 
-    .line 95
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v3, Lorg/cyanogenmod/platform/internal/AppSuggestProviderProxy;->TAG:Ljava/lang/String;
 
@@ -293,18 +272,15 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 73
     invoke-direct {p0}, Lorg/cyanogenmod/platform/internal/AppSuggestProviderProxy;->getService()Lcyanogenmod/app/suggest/IAppSuggestProvider;
 
     move-result-object v2
 
-    .line 74
     .local v2, "service":Lcyanogenmod/app/suggest/IAppSuggestProvider;
     if-nez v2, :cond_0
 
     return v6
 
-    .line 77
     :cond_0
     :try_start_0
     invoke-interface {v2, p1}, Lcyanogenmod/app/suggest/IAppSuggestProvider;->handles(Landroid/content/Intent;)Z
@@ -316,11 +292,9 @@
 
     return v3
 
-    .line 80
     :catch_0
     move-exception v1
 
-    .line 82
     .local v1, "e":Ljava/lang/Exception;
     sget-object v3, Lorg/cyanogenmod/platform/internal/AppSuggestProviderProxy;->TAG:Ljava/lang/String;
 
@@ -328,7 +302,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "Exception from "
+    const-string v5, "Exception from "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -350,16 +324,13 @@
 
     invoke-static {v3, v4, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 84
     .end local v1    # "e":Ljava/lang/Exception;
     :goto_0
     return v6
 
-    .line 78
     :catch_1
     move-exception v0
 
-    .line 79
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v3, Lorg/cyanogenmod/platform/internal/AppSuggestProviderProxy;->TAG:Ljava/lang/String;
 

@@ -20,16 +20,14 @@
     .locals 2
 
     .prologue
-    .line 39
     new-instance v0, Lcom/android/server/firewall/AndFilter$1;
 
-    const-string/jumbo v1, "and"
+    const-string v1, "and"
 
     invoke-direct {v0, v1}, Lcom/android/server/firewall/AndFilter$1;-><init>(Ljava/lang/String;)V
 
     sput-object v0, Lcom/android/server/firewall/AndFilter;->FACTORY:Lcom/android/server/firewall/FilterFactory;
 
-    .line 26
     return-void
 .end method
 
@@ -37,7 +35,6 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0}, Lcom/android/server/firewall/FilterList;-><init>()V
 
     return-void
@@ -56,7 +53,6 @@
     .param p7, "receivingUid"    # I
 
     .prologue
-    .line 30
     const/4 v8, 0x0
 
     .local v8, "i":I
@@ -69,7 +65,6 @@
 
     if-ge v8, v0, :cond_1
 
-    .line 31
     iget-object v0, p0, Lcom/android/server/firewall/AndFilter;->children:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -98,18 +93,15 @@
 
     if-nez v0, :cond_0
 
-    .line 33
     const/4 v0, 0x0
 
     return v0
 
-    .line 30
     :cond_0
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_0
 
-    .line 36
     :cond_1
     const/4 v0, 0x1
 

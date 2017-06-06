@@ -48,10 +48,9 @@
 
     const/4 v2, 0x0
 
-    .line 50
     new-instance v0, Lcom/android/internal/telephony/PhoneConstants$DataState;
 
-    const-string/jumbo v1, "CONNECTED"
+    const-string v1, "CONNECTED"
 
     invoke-direct {v0, v1, v2}, Lcom/android/internal/telephony/PhoneConstants$DataState;-><init>(Ljava/lang/String;I)V
 
@@ -59,7 +58,7 @@
 
     new-instance v0, Lcom/android/internal/telephony/PhoneConstants$DataState;
 
-    const-string/jumbo v1, "CONNECTING"
+    const-string v1, "CONNECTING"
 
     invoke-direct {v0, v1, v3}, Lcom/android/internal/telephony/PhoneConstants$DataState;-><init>(Ljava/lang/String;I)V
 
@@ -67,7 +66,7 @@
 
     new-instance v0, Lcom/android/internal/telephony/PhoneConstants$DataState;
 
-    const-string/jumbo v1, "DISCONNECTED"
+    const-string v1, "DISCONNECTED"
 
     invoke-direct {v0, v1, v4}, Lcom/android/internal/telephony/PhoneConstants$DataState;-><init>(Ljava/lang/String;I)V
 
@@ -75,13 +74,12 @@
 
     new-instance v0, Lcom/android/internal/telephony/PhoneConstants$DataState;
 
-    const-string/jumbo v1, "SUSPENDED"
+    const-string v1, "SUSPENDED"
 
     invoke-direct {v0, v1, v5}, Lcom/android/internal/telephony/PhoneConstants$DataState;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/android/internal/telephony/PhoneConstants$DataState;->SUSPENDED:Lcom/android/internal/telephony/PhoneConstants$DataState;
 
-    .line 49
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/android/internal/telephony/PhoneConstants$DataState;
@@ -111,7 +109,6 @@
     .locals 0
 
     .prologue
-    .line 49
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -122,7 +119,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 49
     const-class v0, Lcom/android/internal/telephony/PhoneConstants$DataState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -138,7 +134,6 @@
     .locals 1
 
     .prologue
-    .line 49
     sget-object v0, Lcom/android/internal/telephony/PhoneConstants$DataState;->$VALUES:[Lcom/android/internal/telephony/PhoneConstants$DataState;
 
     return-object v0

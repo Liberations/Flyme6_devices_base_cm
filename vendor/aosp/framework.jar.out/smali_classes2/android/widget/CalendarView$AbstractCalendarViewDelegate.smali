@@ -38,23 +38,18 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 621
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 622
     iput-object p1, p0, Landroid/widget/CalendarView$AbstractCalendarViewDelegate;->mDelegator:Landroid/widget/CalendarView;
 
-    .line 623
     iput-object p2, p0, Landroid/widget/CalendarView$AbstractCalendarViewDelegate;->mContext:Landroid/content/Context;
 
-    .line 626
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Landroid/widget/CalendarView$AbstractCalendarViewDelegate;->setCurrentLocale(Ljava/util/Locale;)V
 
-    .line 621
     return-void
 .end method
 
@@ -64,7 +59,6 @@
     .locals 1
 
     .prologue
-    .line 666
     const/4 v0, 0x0
 
     return v0
@@ -74,7 +68,6 @@
     .locals 1
 
     .prologue
-    .line 717
     const/4 v0, 0x0
 
     return-object v0
@@ -84,7 +77,6 @@
     .locals 1
 
     .prologue
-    .line 655
     const/4 v0, 0x0
 
     return v0
@@ -94,7 +86,6 @@
     .locals 1
 
     .prologue
-    .line 728
     const/4 v0, 0x0
 
     return v0
@@ -104,7 +95,6 @@
     .locals 1
 
     .prologue
-    .line 644
     const/4 v0, 0x0
 
     return v0
@@ -114,7 +104,6 @@
     .locals 1
 
     .prologue
-    .line 677
     const/4 v0, 0x0
 
     return v0
@@ -124,7 +113,6 @@
     .locals 1
 
     .prologue
-    .line 689
     const/4 v0, 0x0
 
     return v0
@@ -134,7 +122,6 @@
     .locals 1
 
     .prologue
-    .line 701
     const/4 v0, 0x0
 
     return v0
@@ -145,7 +132,6 @@
     .param p1, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
-    .line 732
     return-void
 .end method
 
@@ -154,7 +140,6 @@
     .param p1, "locale"    # Ljava/util/Locale;
 
     .prologue
-    .line 630
     iget-object v0, p0, Landroid/widget/CalendarView$AbstractCalendarViewDelegate;->mCurrentLocale:Ljava/util/Locale;
 
     invoke-virtual {p1, v0}, Ljava/util/Locale;->equals(Ljava/lang/Object;)Z
@@ -163,14 +148,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 631
     return-void
 
-    .line 633
     :cond_0
     iput-object p1, p0, Landroid/widget/CalendarView$AbstractCalendarViewDelegate;->mCurrentLocale:Ljava/util/Locale;
 
-    .line 629
     return-void
 .end method
 
@@ -179,7 +161,6 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 659
     return-void
 .end method
 
@@ -188,7 +169,6 @@
     .param p1, "resId"    # I
 
     .prologue
-    .line 705
     return-void
 .end method
 
@@ -197,7 +177,6 @@
     .param p1, "drawable"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 710
     return-void
 .end method
 
@@ -206,7 +185,6 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 648
     return-void
 .end method
 
@@ -215,7 +193,6 @@
     .param p1, "showWeekNumber"    # Z
 
     .prologue
-    .line 721
     return-void
 .end method
 
@@ -224,7 +201,6 @@
     .param p1, "count"    # I
 
     .prologue
-    .line 637
     return-void
 .end method
 
@@ -233,7 +209,6 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 670
     return-void
 .end method
 
@@ -242,7 +217,6 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 681
     return-void
 .end method
 
@@ -251,6 +225,5 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 693
     return-void
 .end method

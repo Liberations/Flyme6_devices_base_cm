@@ -46,17 +46,14 @@
     .param p2, "uId"    # I
 
     .prologue
-    .line 94
     const/4 v2, 0x0
 
     invoke-direct {p0, p1, p2, v2}, Lcom/android/server/job/controllers/JobStatus;-><init>(Landroid/app/job/JobInfo;II)V
 
-    .line 96
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 98
     .local v0, "elapsedNow":J
     invoke-virtual {p1}, Landroid/app/job/JobInfo;->isPeriodic()Z
 
@@ -64,10 +61,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 99
     iput-wide v0, p0, Lcom/android/server/job/controllers/JobStatus;->earliestRunTimeElapsedMillis:J
 
-    .line 100
     invoke-virtual {p1}, Landroid/app/job/JobInfo;->getIntervalMillis()J
 
     move-result-wide v2
@@ -76,11 +71,9 @@
 
     iput-wide v2, p0, Lcom/android/server/job/controllers/JobStatus;->latestRunTimeElapsedMillis:J
 
-    .line 93
     :goto_0
     return-void
 
-    .line 102
     :cond_0
     invoke-virtual {p1}, Landroid/app/job/JobInfo;->hasEarlyConstraint()Z
 
@@ -88,44 +81,37 @@
 
     if-eqz v2, :cond_1
 
-    .line 103
     invoke-virtual {p1}, Landroid/app/job/JobInfo;->getMinLatencyMillis()J
 
     move-result-wide v2
 
     add-long/2addr v2, v0
 
-    .line 102
     :goto_1
     iput-wide v2, p0, Lcom/android/server/job/controllers/JobStatus;->earliestRunTimeElapsedMillis:J
 
-    .line 104
     invoke-virtual {p1}, Landroid/app/job/JobInfo;->hasLateConstraint()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 105
     invoke-virtual {p1}, Landroid/app/job/JobInfo;->getMaxExecutionDelayMillis()J
 
     move-result-wide v2
 
     add-long/2addr v2, v0
 
-    .line 104
     :goto_2
     iput-wide v2, p0, Lcom/android/server/job/controllers/JobStatus;->latestRunTimeElapsedMillis:J
 
     goto :goto_0
 
-    .line 103
     :cond_1
     const-wide/16 v2, 0x0
 
     goto :goto_1
 
-    .line 105
     :cond_2
     const-wide v2, 0x7fffffffffffffffL
 
@@ -139,65 +125,54 @@
     .param p3, "numFailures"    # I
 
     .prologue
-    .line 77
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 51
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/job/controllers/JobStatus;->chargingConstraintSatisfied:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 52
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/job/controllers/JobStatus;->timeDelayConstraintSatisfied:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 53
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/job/controllers/JobStatus;->deadlineConstraintSatisfied:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 54
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/job/controllers/JobStatus;->idleConstraintSatisfied:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 55
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/job/controllers/JobStatus;->unmeteredConstraintSatisfied:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 56
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/job/controllers/JobStatus;->connectivityConstraintSatisfied:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 57
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/job/controllers/JobStatus;->appNotIdleConstraintSatisfied:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 78
     iput-object p1, p0, Lcom/android/server/job/controllers/JobStatus;->job:Landroid/app/job/JobInfo;
 
-    .line 79
     iput p2, p0, Lcom/android/server/job/controllers/JobStatus;->uId:I
 
-    .line 80
     invoke-virtual {p1}, Landroid/app/job/JobInfo;->getService()Landroid/content/ComponentName;
 
     move-result-object v0
@@ -208,12 +183,11 @@
 
     iput-object v0, p0, Lcom/android/server/job/controllers/JobStatus;->name:Ljava/lang/String;
 
-    .line 81
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "*job*/"
+    const-string v1, "*job*/"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -231,10 +205,8 @@
 
     iput-object v0, p0, Lcom/android/server/job/controllers/JobStatus;->tag:Ljava/lang/String;
 
-    .line 82
     iput p3, p0, Lcom/android/server/job/controllers/JobStatus;->numFailures:I
 
-    .line 77
     return-void
 .end method
 
@@ -246,18 +218,14 @@
     .param p5, "latestRunTimeElapsedMillis"    # J
 
     .prologue
-    .line 118
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/android/server/job/controllers/JobStatus;-><init>(Landroid/app/job/JobInfo;II)V
 
-    .line 120
     iput-wide p3, p0, Lcom/android/server/job/controllers/JobStatus;->earliestRunTimeElapsedMillis:J
 
-    .line 121
     iput-wide p5, p0, Lcom/android/server/job/controllers/JobStatus;->latestRunTimeElapsedMillis:J
 
-    .line 117
     return-void
 .end method
 
@@ -266,7 +234,6 @@
     .param p1, "jobStatus"    # Lcom/android/server/job/controllers/JobStatus;
 
     .prologue
-    .line 87
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getJob()Landroid/app/job/JobInfo;
 
     move-result-object v0
@@ -281,21 +248,18 @@
 
     invoke-direct {p0, v0, v1, v2}, Lcom/android/server/job/controllers/JobStatus;-><init>(Landroid/app/job/JobInfo;II)V
 
-    .line 88
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getEarliestRunTime()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/job/controllers/JobStatus;->earliestRunTimeElapsedMillis:J
 
-    .line 89
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getLatestRunTimeElapsed()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/job/controllers/JobStatus;->latestRunTimeElapsedMillis:J
 
-    .line 86
     return-void
 .end method
 
@@ -307,7 +271,6 @@
     .param p6, "backoffAttempt"    # I
 
     .prologue
-    .line 127
     iget-object v0, p1, Lcom/android/server/job/controllers/JobStatus;->job:Landroid/app/job/JobInfo;
 
     invoke-virtual {p1}, Lcom/android/server/job/controllers/JobStatus;->getUid()I
@@ -316,13 +279,10 @@
 
     invoke-direct {p0, v0, v1, p6}, Lcom/android/server/job/controllers/JobStatus;-><init>(Landroid/app/job/JobInfo;II)V
 
-    .line 129
     iput-wide p2, p0, Lcom/android/server/job/controllers/JobStatus;->earliestRunTimeElapsedMillis:J
 
-    .line 130
     iput-wide p4, p0, Lcom/android/server/job/controllers/JobStatus;->latestRunTimeElapsedMillis:J
 
-    .line 126
     return-void
 .end method
 
@@ -332,27 +292,22 @@
     .param p3, "defaultValue"    # J
 
     .prologue
-    .line 249
     cmp-long v4, p1, p3
 
     if-nez v4, :cond_0
 
-    .line 250
-    const-string/jumbo v4, "none"
+    const-string v4, "none"
 
     return-object v4
 
-    .line 252
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 253
     .local v0, "elapsedNow":J
     sub-long v2, p1, v0
 
-    .line 254
     .local v2, "nextRuntime":J
     const-wide/16 v4, 0x0
 
@@ -360,7 +315,6 @@
 
     if-lez v4, :cond_1
 
-    .line 255
     const-wide/16 v4, 0x3e8
 
     div-long v4, v2, v4
@@ -371,13 +325,12 @@
 
     return-object v4
 
-    .line 257
     :cond_1
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "-"
+    const-string v5, "-"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -410,17 +363,14 @@
     .param p2, "prefix"    # Ljava/lang/String;
 
     .prologue
-    .line 273
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 274
     invoke-virtual {p0}, Lcom/android/server/job/controllers/JobStatus;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 272
     return-void
 .end method
 
@@ -428,7 +378,6 @@
     .locals 2
 
     .prologue
-    .line 198
     iget-wide v0, p0, Lcom/android/server/job/controllers/JobStatus;->earliestRunTimeElapsedMillis:J
 
     return-wide v0
@@ -438,7 +387,6 @@
     .locals 1
 
     .prologue
-    .line 166
     iget-object v0, p0, Lcom/android/server/job/controllers/JobStatus;->job:Landroid/app/job/JobInfo;
 
     invoke-virtual {v0}, Landroid/app/job/JobInfo;->getExtras()Landroid/os/PersistableBundle;
@@ -452,7 +400,6 @@
     .locals 1
 
     .prologue
-    .line 134
     iget-object v0, p0, Lcom/android/server/job/controllers/JobStatus;->job:Landroid/app/job/JobInfo;
 
     return-object v0
@@ -462,7 +409,6 @@
     .locals 1
 
     .prologue
-    .line 138
     iget-object v0, p0, Lcom/android/server/job/controllers/JobStatus;->job:Landroid/app/job/JobInfo;
 
     invoke-virtual {v0}, Landroid/app/job/JobInfo;->getId()I
@@ -476,7 +422,6 @@
     .locals 2
 
     .prologue
-    .line 202
     iget-wide v0, p0, Lcom/android/server/job/controllers/JobStatus;->latestRunTimeElapsedMillis:J
 
     return-wide v0
@@ -486,7 +431,6 @@
     .locals 1
 
     .prologue
-    .line 158
     iget-object v0, p0, Lcom/android/server/job/controllers/JobStatus;->name:Ljava/lang/String;
 
     return-object v0
@@ -496,7 +440,6 @@
     .locals 1
 
     .prologue
-    .line 142
     iget v0, p0, Lcom/android/server/job/controllers/JobStatus;->numFailures:I
 
     return v0
@@ -506,7 +449,6 @@
     .locals 1
 
     .prologue
-    .line 146
     iget-object v0, p0, Lcom/android/server/job/controllers/JobStatus;->job:Landroid/app/job/JobInfo;
 
     invoke-virtual {v0}, Landroid/app/job/JobInfo;->getService()Landroid/content/ComponentName;
@@ -520,7 +462,6 @@
     .locals 1
 
     .prologue
-    .line 74
     iget v0, p0, Lcom/android/server/job/controllers/JobStatus;->uId:I
 
     return v0
@@ -530,7 +471,6 @@
     .locals 1
 
     .prologue
-    .line 162
     iget-object v0, p0, Lcom/android/server/job/controllers/JobStatus;->tag:Ljava/lang/String;
 
     return-object v0
@@ -540,7 +480,6 @@
     .locals 1
 
     .prologue
-    .line 154
     iget v0, p0, Lcom/android/server/job/controllers/JobStatus;->uId:I
 
     return v0
@@ -550,7 +489,6 @@
     .locals 1
 
     .prologue
-    .line 150
     iget v0, p0, Lcom/android/server/job/controllers/JobStatus;->uId:I
 
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
@@ -564,7 +502,6 @@
     .locals 1
 
     .prologue
-    .line 178
     iget-object v0, p0, Lcom/android/server/job/controllers/JobStatus;->job:Landroid/app/job/JobInfo;
 
     invoke-virtual {v0}, Landroid/app/job/JobInfo;->isRequireCharging()Z
@@ -580,7 +517,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 170
     iget-object v1, p0, Lcom/android/server/job/controllers/JobStatus;->job:Landroid/app/job/JobInfo;
 
     invoke-virtual {v1}, Landroid/app/job/JobInfo;->getNetworkType()I
@@ -602,7 +538,6 @@
     .locals 4
 
     .prologue
-    .line 186
     iget-wide v0, p0, Lcom/android/server/job/controllers/JobStatus;->latestRunTimeElapsedMillis:J
 
     const-wide v2, 0x7fffffffffffffffL
@@ -626,7 +561,6 @@
     .locals 1
 
     .prologue
-    .line 190
     iget-object v0, p0, Lcom/android/server/job/controllers/JobStatus;->job:Landroid/app/job/JobInfo;
 
     invoke-virtual {v0}, Landroid/app/job/JobInfo;->isRequireDeviceIdle()Z
@@ -640,7 +574,6 @@
     .locals 4
 
     .prologue
-    .line 182
     iget-wide v0, p0, Lcom/android/server/job/controllers/JobStatus;->earliestRunTimeElapsedMillis:J
 
     const-wide/16 v2, 0x0
@@ -664,7 +597,6 @@
     .locals 2
 
     .prologue
-    .line 174
     iget-object v0, p0, Lcom/android/server/job/controllers/JobStatus;->job:Landroid/app/job/JobInfo;
 
     invoke-virtual {v0}, Landroid/app/job/JobInfo;->getNetworkType()I
@@ -692,7 +624,6 @@
     .prologue
     monitor-enter p0
 
-    .line 221
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/job/controllers/JobStatus;->hasChargingConstraint()Z
 
@@ -708,7 +639,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 222
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/job/controllers/JobStatus;->hasTimingDelayConstraint()Z
 
@@ -722,10 +652,8 @@
 
     move-result v0
 
-    .line 221
     if-eqz v0, :cond_5
 
-    .line 223
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/job/controllers/JobStatus;->hasConnectivityConstraint()Z
 
@@ -739,10 +667,8 @@
 
     move-result v0
 
-    .line 221
     if-eqz v0, :cond_5
 
-    .line 224
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/job/controllers/JobStatus;->hasUnmeteredConstraint()Z
 
@@ -756,10 +682,8 @@
 
     move-result v0
 
-    .line 221
     if-eqz v0, :cond_5
 
-    .line 225
     :cond_3
     invoke-virtual {p0}, Lcom/android/server/job/controllers/JobStatus;->hasIdleConstraint()Z
 
@@ -778,16 +702,13 @@
     :goto_0
     monitor-exit p0
 
-    .line 221
     return v0
 
-    .line 225
     :cond_4
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 221
     :cond_5
     const/4 v0, 0x0
 
@@ -805,7 +726,6 @@
     .locals 1
 
     .prologue
-    .line 194
     iget-object v0, p0, Lcom/android/server/job/controllers/JobStatus;->job:Landroid/app/job/JobInfo;
 
     invoke-virtual {v0}, Landroid/app/job/JobInfo;->isPersisted()Z
@@ -821,7 +741,6 @@
     .prologue
     monitor-enter p0
 
-    .line 212
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/job/controllers/JobStatus;->isConstraintsSatisfied()Z
 
@@ -829,7 +748,6 @@
 
     if-nez v0, :cond_0
 
-    .line 213
     invoke-virtual {p0}, Lcom/android/server/job/controllers/JobStatus;->hasDeadlineConstraint()Z
 
     move-result v0
@@ -842,10 +760,8 @@
 
     move-result v0
 
-    .line 212
     if-eqz v0, :cond_1
 
-    .line 214
     :cond_0
     iget-object v0, p0, Lcom/android/server/job/controllers/JobStatus;->appNotIdleConstraintSatisfied:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -858,7 +774,6 @@
     :goto_0
     monitor-exit p0
 
-    .line 212
     return v0
 
     :cond_1
@@ -882,7 +797,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 229
     iget-object v1, p0, Lcom/android/server/job/controllers/JobStatus;->job:Landroid/app/job/JobInfo;
 
     invoke-virtual {v1}, Landroid/app/job/JobInfo;->getId()I
@@ -905,7 +819,6 @@
     .locals 2
 
     .prologue
-    .line 267
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -924,7 +837,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, " jId="
+    const-string v1, " jId="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -940,20 +853,16 @@
 
     move-result-object v0
 
-    .line 268
-    const-string/jumbo v1, ", u"
+    const-string v1, ", u"
 
-    .line 267
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 268
     invoke-virtual {p0}, Lcom/android/server/job/controllers/JobStatus;->getUserId()I
 
     move-result v1
 
-    .line 267
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -969,7 +878,6 @@
     .locals 6
 
     .prologue
-    .line 234
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -994,79 +902,64 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, ".."
+    const-string v1, ".."
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 235
-    const-string/jumbo v1, ":["
+    const-string v1, ":["
 
-    .line 234
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 235
     iget-object v1, p0, Lcom/android/server/job/controllers/JobStatus;->job:Landroid/app/job/JobInfo;
 
     invoke-virtual {v1}, Landroid/app/job/JobInfo;->getService()Landroid/content/ComponentName;
 
     move-result-object v1
 
-    .line 234
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 236
-    const-string/jumbo v1, ",jId="
+    const-string v1, ",jId="
 
-    .line 234
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 236
     iget-object v1, p0, Lcom/android/server/job/controllers/JobStatus;->job:Landroid/app/job/JobInfo;
 
     invoke-virtual {v1}, Landroid/app/job/JobInfo;->getId()I
 
     move-result v1
 
-    .line 234
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 237
-    const-string/jumbo v1, ",u"
+    const-string v1, ",u"
 
-    .line 234
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 237
     invoke-virtual {p0}, Lcom/android/server/job/controllers/JobStatus;->getUserId()I
 
     move-result v1
 
-    .line 234
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 238
-    const-string/jumbo v1, ",R=("
+    const-string v1, ",R=("
 
-    .line 234
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 238
     iget-wide v2, p0, Lcom/android/server/job/controllers/JobStatus;->earliestRunTimeElapsedMillis:J
 
     const-wide/16 v4, 0x0
@@ -1075,20 +968,16 @@
 
     move-result-object v1
 
-    .line 234
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 239
-    const-string/jumbo v1, ","
+    const-string v1, ","
 
-    .line 234
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 239
     iget-wide v2, p0, Lcom/android/server/job/controllers/JobStatus;->latestRunTimeElapsedMillis:J
 
     const-wide v4, 0x7fffffffffffffffL
@@ -1097,154 +986,123 @@
 
     move-result-object v1
 
-    .line 234
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 239
-    const-string/jumbo v1, ")"
+    const-string v1, ")"
 
-    .line 234
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 240
-    const-string/jumbo v1, ",N="
+    const-string v1, ",N="
 
-    .line 234
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 240
     iget-object v1, p0, Lcom/android/server/job/controllers/JobStatus;->job:Landroid/app/job/JobInfo;
 
     invoke-virtual {v1}, Landroid/app/job/JobInfo;->getNetworkType()I
 
     move-result v1
 
-    .line 234
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 240
-    const-string/jumbo v1, ",C="
+    const-string v1, ",C="
 
-    .line 234
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 240
     iget-object v1, p0, Lcom/android/server/job/controllers/JobStatus;->job:Landroid/app/job/JobInfo;
 
     invoke-virtual {v1}, Landroid/app/job/JobInfo;->isRequireCharging()Z
 
     move-result v1
 
-    .line 234
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 241
-    const-string/jumbo v1, ",I="
+    const-string v1, ",I="
 
-    .line 234
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 241
     iget-object v1, p0, Lcom/android/server/job/controllers/JobStatus;->job:Landroid/app/job/JobInfo;
 
     invoke-virtual {v1}, Landroid/app/job/JobInfo;->isRequireDeviceIdle()Z
 
     move-result v1
 
-    .line 234
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 241
-    const-string/jumbo v1, ",F="
+    const-string v1, ",F="
 
-    .line 234
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 241
     iget v1, p0, Lcom/android/server/job/controllers/JobStatus;->numFailures:I
 
-    .line 234
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 242
-    const-string/jumbo v1, ",P="
+    const-string v1, ",P="
 
-    .line 234
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 242
     iget-object v1, p0, Lcom/android/server/job/controllers/JobStatus;->job:Landroid/app/job/JobInfo;
 
     invoke-virtual {v1}, Landroid/app/job/JobInfo;->isPersisted()Z
 
     move-result v1
 
-    .line 234
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 243
-    const-string/jumbo v1, ",ANI="
+    const-string v1, ",ANI="
 
-    .line 234
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 243
     iget-object v1, p0, Lcom/android/server/job/controllers/JobStatus;->appNotIdleConstraintSatisfied:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
     move-result v1
 
-    .line 234
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 244
     invoke-virtual {p0}, Lcom/android/server/job/controllers/JobStatus;->isReady()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    const-string/jumbo v0, "(READY)"
+    const-string v0, "(READY)"
 
-    .line 234
     :goto_0
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 245
-    const-string/jumbo v1, "]"
+    const-string v1, "]"
 
-    .line 234
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -1255,9 +1113,8 @@
 
     return-object v0
 
-    .line 244
     :cond_0
-    const-string/jumbo v0, ""
+    const-string v0, ""
 
     goto :goto_0
 .end method

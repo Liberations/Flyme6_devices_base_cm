@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 34
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -39,12 +38,11 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 42
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
 
-    const-string/jumbo v2, "com.google.android.c2dm.intent.RECEIVE"
+    const-string v2, "com.google.android.c2dm.intent.RECEIVE"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -52,10 +50,9 @@
 
     if-eqz v1, :cond_0
 
-    .line 43
-    const-string/jumbo v1, "google.com"
+    const-string v1, "google.com"
 
-    const-string/jumbo v2, "from"
+    const-string v2, "from"
 
     invoke-virtual {p2, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
@@ -126,11 +123,9 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/server/MasterClearReceiver$1;-><init>(Lcom/android/server/MasterClearReceiver;Ljava/lang/String;Landroid/content/Intent;Landroid/content/Context;ZLjava/lang/String;)V
 
-    .line 71
     .local v0, "thr":Ljava/lang/Thread;
     if-eqz v7, :cond_1
 
-    .line 73
     new-instance v1, Lcom/android/server/MasterClearReceiver$WipeAdoptableDisksTask;
 
     invoke-direct {v1, p0, p1, v0}, Lcom/android/server/MasterClearReceiver$WipeAdoptableDisksTask;-><init>(Lcom/android/server/MasterClearReceiver;Landroid/content/Context;Ljava/lang/Thread;)V
@@ -139,11 +134,9 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/MasterClearReceiver$WipeAdoptableDisksTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 41
     :goto_0
     return-void
 
-    .line 75
     :cond_1
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 

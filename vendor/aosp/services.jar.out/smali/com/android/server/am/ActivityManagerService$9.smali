@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/am/ActivityManagerService;
 
     .prologue
-    .line 6712
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$9;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Landroid/content/IIntentReceiver$Stub;-><init>()V
@@ -45,12 +44,10 @@
     .param p7, "sendingUser"    # I
 
     .prologue
-    .line 6717
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$9;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     monitor-enter v1
 
-    .line 6718
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$9;->this$0:Lcom/android/server/am/ActivityManagerService;
 
@@ -58,22 +55,18 @@
 
     move-result-wide v2
 
-    .line 6719
     const/4 v4, 0x1
 
     const/4 v5, 0x0
 
-    .line 6718
     invoke-virtual {v0, v2, v3, v4, v5}, Lcom/android/server/am/ActivityManagerService;->requestPssAllProcsLocked(JZZ)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     monitor-exit v1
 
-    .line 6716
     return-void
 
-    .line 6717
     :catchall_0
     move-exception v0
 

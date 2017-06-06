@@ -59,15 +59,12 @@
     .locals 1
 
     .prologue
-    .line 2036
     new-instance v0, Landroid/media/MediaPlayer$TrackInfo$1;
 
     invoke-direct {v0}, Landroid/media/MediaPlayer$TrackInfo$1;-><init>()V
 
-    .line 2035
     sput-object v0, Landroid/media/MediaPlayer$TrackInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 1918
     return-void
 .end method
 
@@ -77,16 +74,12 @@
     .param p2, "format"    # Landroid/media/MediaFormat;
 
     .prologue
-    .line 1976
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1977
     iput p1, p0, Landroid/media/MediaPlayer$TrackInfo;->mTrackType:I
 
-    .line 1978
     iput-object p2, p0, Landroid/media/MediaPlayer$TrackInfo;->mFormat:Landroid/media/MediaFormat;
 
-    .line 1976
     return-void
 .end method
 
@@ -95,28 +88,23 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 1960
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1961
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     iput v2, p0, Landroid/media/MediaPlayer$TrackInfo;->mTrackType:I
 
-    .line 1964
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1965
     .local v1, "mime":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1966
     .local v0, "language":Ljava/lang/String;
     invoke-static {v1, v0}, Landroid/media/MediaFormat;->createSubtitleFormat(Ljava/lang/String;Ljava/lang/String;)Landroid/media/MediaFormat;
 
@@ -124,17 +112,15 @@
 
     iput-object v2, p0, Landroid/media/MediaPlayer$TrackInfo;->mFormat:Landroid/media/MediaFormat;
 
-    .line 1968
     iget v2, p0, Landroid/media/MediaPlayer$TrackInfo;->mTrackType:I
 
     const/4 v3, 0x4
 
     if-ne v2, v3, :cond_0
 
-    .line 1969
     iget-object v2, p0, Landroid/media/MediaPlayer$TrackInfo;->mFormat:Landroid/media/MediaFormat;
 
-    const-string/jumbo v3, "is-autoselect"
+    const-string v3, "is-autoselect"
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -142,10 +128,9 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
 
-    .line 1970
     iget-object v2, p0, Landroid/media/MediaPlayer$TrackInfo;->mFormat:Landroid/media/MediaFormat;
 
-    const-string/jumbo v3, "is-default"
+    const-string v3, "is-default"
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -153,10 +138,9 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
 
-    .line 1971
     iget-object v2, p0, Landroid/media/MediaPlayer$TrackInfo;->mFormat:Landroid/media/MediaFormat;
 
-    const-string/jumbo v3, "is-forced-subtitle"
+    const-string v3, "is-forced-subtitle"
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -164,7 +148,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
 
-    .line 1960
     :cond_0
     return-void
 .end method
@@ -175,7 +158,6 @@
     .locals 1
 
     .prologue
-    .line 1986
     const/4 v0, 0x0
 
     return v0
@@ -185,27 +167,23 @@
     .locals 2
 
     .prologue
-    .line 1943
     iget v0, p0, Landroid/media/MediaPlayer$TrackInfo;->mTrackType:I
 
     const/4 v1, 0x3
 
     if-eq v0, v1, :cond_0
 
-    .line 1944
     iget v0, p0, Landroid/media/MediaPlayer$TrackInfo;->mTrackType:I
 
     const/4 v1, 0x4
 
     if-ne v0, v1, :cond_1
 
-    .line 1945
     :cond_0
     iget-object v0, p0, Landroid/media/MediaPlayer$TrackInfo;->mFormat:Landroid/media/MediaFormat;
 
     return-object v0
 
-    .line 1947
     :cond_1
     const/4 v0, 0x0
 
@@ -216,20 +194,18 @@
     .locals 3
 
     .prologue
-    .line 1934
     iget-object v1, p0, Landroid/media/MediaPlayer$TrackInfo;->mFormat:Landroid/media/MediaFormat;
 
-    const-string/jumbo v2, "language"
+    const-string v2, "language"
 
     invoke-virtual {v1, v2}, Landroid/media/MediaFormat;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1935
     .local v0, "language":Ljava/lang/String;
     if-nez v0, :cond_0
 
-    const-string/jumbo v0, "und"
+    const-string v0, "und"
 
     .end local v0    # "language":Ljava/lang/String;
     :cond_0
@@ -240,7 +216,6 @@
     .locals 1
 
     .prologue
-    .line 1924
     iget v0, p0, Landroid/media/MediaPlayer$TrackInfo;->mTrackType:I
 
     return v0
@@ -250,14 +225,12 @@
     .locals 3
 
     .prologue
-    .line 2007
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x80
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 2008
     .local v0, "out":Ljava/lang/StringBuilder;
     invoke-virtual {p0}, Landroid/media/MediaPlayer$TrackInfo;->getClass()Ljava/lang/Class;
 
@@ -269,24 +242,20 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2009
     const/16 v1, 0x7b
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 2010
     iget v1, p0, Landroid/media/MediaPlayer$TrackInfo;->mTrackType:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 2024
-    const-string/jumbo v1, "UNKNOWN"
+    const-string v1, "UNKNOWN"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2027
     :goto_0
-    const-string/jumbo v1, ", "
+    const-string v1, ", "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -300,51 +269,44 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2028
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2029
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     return-object v1
 
-    .line 2012
     :pswitch_0
-    const-string/jumbo v1, "VIDEO"
+    const-string v1, "VIDEO"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 2015
     :pswitch_1
-    const-string/jumbo v1, "AUDIO"
+    const-string v1, "AUDIO"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 2018
     :pswitch_2
-    const-string/jumbo v1, "TIMEDTEXT"
+    const-string v1, "TIMEDTEXT"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 2021
     :pswitch_3
-    const-string/jumbo v1, "SUBTITLE"
+    const-string v1, "SUBTITLE"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 2010
     nop
 
     :pswitch_data_0
@@ -362,29 +324,25 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 1994
     iget v0, p0, Landroid/media/MediaPlayer$TrackInfo;->mTrackType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1995
     invoke-virtual {p0}, Landroid/media/MediaPlayer$TrackInfo;->getLanguage()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 1997
     iget v0, p0, Landroid/media/MediaPlayer$TrackInfo;->mTrackType:I
 
     const/4 v1, 0x4
 
     if-ne v0, v1, :cond_0
 
-    .line 1998
     iget-object v0, p0, Landroid/media/MediaPlayer$TrackInfo;->mFormat:Landroid/media/MediaFormat;
 
-    const-string/jumbo v1, "mime"
+    const-string v1, "mime"
 
     invoke-virtual {v0, v1}, Landroid/media/MediaFormat;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -392,10 +350,9 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 1999
     iget-object v0, p0, Landroid/media/MediaPlayer$TrackInfo;->mFormat:Landroid/media/MediaFormat;
 
-    const-string/jumbo v1, "is-autoselect"
+    const-string v1, "is-autoselect"
 
     invoke-virtual {v0, v1}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;)I
 
@@ -403,10 +360,9 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2000
     iget-object v0, p0, Landroid/media/MediaPlayer$TrackInfo;->mFormat:Landroid/media/MediaFormat;
 
-    const-string/jumbo v1, "is-default"
+    const-string v1, "is-default"
 
     invoke-virtual {v0, v1}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;)I
 
@@ -414,10 +370,9 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2001
     iget-object v0, p0, Landroid/media/MediaPlayer$TrackInfo;->mFormat:Landroid/media/MediaFormat;
 
-    const-string/jumbo v1, "is-forced-subtitle"
+    const-string v1, "is-forced-subtitle"
 
     invoke-virtual {v0, v1}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;)I
 
@@ -425,7 +380,6 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1993
     :cond_0
     return-void
 .end method

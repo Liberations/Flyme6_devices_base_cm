@@ -30,18 +30,15 @@
     .prologue
     const/4 v2, 0x2
 
-    .line 906
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 907
     const/4 v0, 0x0
 
     aget-object v0, p1, v0
 
     iput-object v0, p0, Landroid/telephony/SmsMessage$NoEmsSupportConfig;->mOperatorNumber:Ljava/lang/String;
 
-    .line 908
-    const-string/jumbo v0, "prefix"
+    const-string v0, "prefix"
 
     const/4 v1, 0x1
 
@@ -53,7 +50,6 @@
 
     iput-boolean v0, p0, Landroid/telephony/SmsMessage$NoEmsSupportConfig;->mIsPrefix:Z
 
-    .line 909
     array-length v0, p1
 
     if-le v0, v2, :cond_0
@@ -63,10 +59,8 @@
     :goto_0
     iput-object v0, p0, Landroid/telephony/SmsMessage$NoEmsSupportConfig;->mGid1:Ljava/lang/String;
 
-    .line 906
     return-void
 
-    .line 909
     :cond_0
     const/4 v0, 0x0
 
@@ -79,12 +73,11 @@
     .locals 2
 
     .prologue
-    .line 914
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "NoEmsSupportConfig { mOperatorNumber = "
+    const-string v1, "NoEmsSupportConfig { mOperatorNumber = "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -96,42 +89,32 @@
 
     move-result-object v0
 
-    .line 915
-    const-string/jumbo v1, ", mIsPrefix = "
+    const-string v1, ", mIsPrefix = "
 
-    .line 914
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 915
     iget-boolean v1, p0, Landroid/telephony/SmsMessage$NoEmsSupportConfig;->mIsPrefix:Z
 
-    .line 914
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 915
-    const-string/jumbo v1, ", mGid1 = "
+    const-string v1, ", mGid1 = "
 
-    .line 914
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 915
     iget-object v1, p0, Landroid/telephony/SmsMessage$NoEmsSupportConfig;->mGid1:Ljava/lang/String;
 
-    .line 914
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 915
-    const-string/jumbo v1, " }"
+    const-string v1, " }"
 
-    .line 914
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0

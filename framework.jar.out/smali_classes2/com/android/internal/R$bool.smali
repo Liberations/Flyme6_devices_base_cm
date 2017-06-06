@@ -177,7 +177,7 @@
 
 .field public static final config_enable_puk_unlock_screen:I = 0x1120052
 
-.field public static final config_fetch_apn_from_omh_card:I = 0x11200c3
+.field public static final config_fetch_apn_from_omh_card:I = 0x11200c4
 
 .field public static final config_fingerprintRestrictedToSystemAndOwner:I = 0x11200af
 
@@ -365,7 +365,9 @@
 
 .field public static final config_windowShowCircularMask:I = 0x1120093
 
-.field public static final def_custom_dateformat:I = 0x11200c4
+.field public static final config_zero_balance_operator:I = 0x11200c3
+
+.field public static final def_custom_dateformat:I = 0x11200c5
 
 .field public static final editable_voicemailnumber:I = 0x11200a4
 
@@ -393,7 +395,6 @@
     .locals 0
 
     .prologue
-    .line 14556
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

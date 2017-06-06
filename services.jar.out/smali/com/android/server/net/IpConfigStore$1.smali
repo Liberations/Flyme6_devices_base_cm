@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lcom/android/server/net/IpConfigStore;
 
     .prologue
-    .line 160
     .local p2, "val$networks":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Landroid/net/IpConfiguration;>;"
     iput-object p1, p0, Lcom/android/server/net/IpConfigStore$1;->this$0:Lcom/android/server/net/IpConfigStore;
 
@@ -52,12 +51,10 @@
     .end annotation
 
     .prologue
-    .line 162
     const/4 v1, 0x2
 
     invoke-virtual {p1, v1}, Ljava/io/DataOutputStream;->writeInt(I)V
 
-    .line 163
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -70,7 +67,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 164
     iget-object v2, p0, Lcom/android/server/net/IpConfigStore$1;->this$0:Lcom/android/server/net/IpConfigStore;
 
     iget-object v1, p0, Lcom/android/server/net/IpConfigStore$1;->val$networks:Landroid/util/SparseArray;
@@ -89,12 +85,10 @@
 
     invoke-static {v2, p1, v3, v1}, Lcom/android/server/net/IpConfigStore;->-wrap0(Lcom/android/server/net/IpConfigStore;Ljava/io/DataOutputStream;ILandroid/net/IpConfiguration;)Z
 
-    .line 163
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 161
     :cond_0
     return-void
 .end method

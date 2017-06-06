@@ -74,44 +74,38 @@
     .locals 2
 
     .prologue
-    .line 58
     new-instance v0, Lcom/android/server/firewall/SenderFilter$1;
 
-    const-string/jumbo v1, "sender"
+    const-string v1, "sender"
 
     invoke-direct {v0, v1}, Lcom/android/server/firewall/SenderFilter$1;-><init>(Ljava/lang/String;)V
 
     sput-object v0, Lcom/android/server/firewall/SenderFilter;->FACTORY:Lcom/android/server/firewall/FilterFactory;
 
-    .line 80
     new-instance v0, Lcom/android/server/firewall/SenderFilter$2;
 
     invoke-direct {v0}, Lcom/android/server/firewall/SenderFilter$2;-><init>()V
 
     sput-object v0, Lcom/android/server/firewall/SenderFilter;->SIGNATURE:Lcom/android/server/firewall/Filter;
 
-    .line 88
     new-instance v0, Lcom/android/server/firewall/SenderFilter$3;
 
     invoke-direct {v0}, Lcom/android/server/firewall/SenderFilter$3;-><init>()V
 
     sput-object v0, Lcom/android/server/firewall/SenderFilter;->SYSTEM:Lcom/android/server/firewall/Filter;
 
-    .line 96
     new-instance v0, Lcom/android/server/firewall/SenderFilter$4;
 
     invoke-direct {v0}, Lcom/android/server/firewall/SenderFilter$4;-><init>()V
 
     sput-object v0, Lcom/android/server/firewall/SenderFilter;->SYSTEM_OR_SIGNATURE:Lcom/android/server/firewall/Filter;
 
-    .line 105
     new-instance v0, Lcom/android/server/firewall/SenderFilter$5;
 
     invoke-direct {v0}, Lcom/android/server/firewall/SenderFilter$5;-><init>()V
 
     sput-object v0, Lcom/android/server/firewall/SenderFilter;->USER_ID:Lcom/android/server/firewall/Filter;
 
-    .line 32
     return-void
 .end method
 
@@ -119,7 +113,6 @@
     .locals 0
 
     .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -135,18 +128,15 @@
 
     const/4 v3, 0x0
 
-    .line 41
     const/16 v4, 0x3e8
 
     if-eq p0, v4, :cond_0
 
     if-nez p0, :cond_1
 
-    .line 43
     :cond_0
     return v2
 
-    .line 42
     :cond_1
     invoke-static {}, Landroid/os/Process;->myPid()I
 
@@ -156,12 +146,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 46
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v1
 
-    .line 48
     .local v1, "pm":Landroid/content/pm/IPackageManager;
     :try_start_0
     invoke-interface {v1, p0}, Landroid/content/pm/IPackageManager;->getPrivateFlagsForUid(I)I
@@ -182,18 +170,15 @@
 
     goto :goto_0
 
-    .line 50
     :catch_0
     move-exception v0
 
-    .line 51
     .local v0, "ex":Landroid/os/RemoteException;
-    const-string/jumbo v2, "IntentFirewall"
+    const-string v2, "IntentFirewall"
 
-    const-string/jumbo v4, "Remote exception while retrieving uid flags"
+    const-string v4, "Remote exception while retrieving uid flags"
 
     invoke-static {v2, v4, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 55
     return v3
 .end method

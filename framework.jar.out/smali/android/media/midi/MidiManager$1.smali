@@ -33,7 +33,6 @@
     .param p3, "val$device"    # Landroid/media/midi/MidiDevice;
 
     .prologue
-    .line 228
     iput-object p1, p0, Landroid/media/midi/MidiManager$1;->this$0:Landroid/media/midi/MidiManager;
 
     iput-object p2, p0, Landroid/media/midi/MidiManager$1;->val$listener:Landroid/media/midi/MidiManager$OnDeviceOpenedListener;
@@ -51,13 +50,11 @@
     .locals 2
 
     .prologue
-    .line 230
     iget-object v0, p0, Landroid/media/midi/MidiManager$1;->val$listener:Landroid/media/midi/MidiManager$OnDeviceOpenedListener;
 
     iget-object v1, p0, Landroid/media/midi/MidiManager$1;->val$device:Landroid/media/midi/MidiDevice;
 
     invoke-interface {v0, v1}, Landroid/media/midi/MidiManager$OnDeviceOpenedListener;->onDeviceOpened(Landroid/media/midi/MidiDevice;)V
 
-    .line 229
     return-void
 .end method

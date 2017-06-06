@@ -28,14 +28,11 @@
     .param p1, "owner"    # Landroid/content/UndoOwner;
 
     .prologue
-    .line 37
     .local p0, "this":Landroid/content/UndoOperation;, "Landroid/content/UndoOperation<TDATA;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     iput-object p1, p0, Landroid/content/UndoOperation;->mOwner:Landroid/content/UndoOwner;
 
-    .line 37
     return-void
 .end method
 
@@ -45,7 +42,6 @@
     .param p2, "loader"    # Ljava/lang/ClassLoader;
 
     .prologue
-    .line 44
     .local p0, "this":Landroid/content/UndoOperation;, "Landroid/content/UndoOperation<TDATA;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -58,7 +54,6 @@
     .locals 1
 
     .prologue
-    .line 85
     .local p0, "this":Landroid/content/UndoOperation;, "Landroid/content/UndoOperation<TDATA;>;"
     const/4 v0, 0x1
 
@@ -72,7 +67,6 @@
     .locals 1
 
     .prologue
-    .line 110
     .local p0, "this":Landroid/content/UndoOperation;, "Landroid/content/UndoOperation<TDATA;>;"
     const/4 v0, 0x0
 
@@ -83,7 +77,6 @@
     .locals 1
 
     .prologue
-    .line 51
     .local p0, "this":Landroid/content/UndoOperation;, "Landroid/content/UndoOperation<TDATA;>;"
     iget-object v0, p0, Landroid/content/UndoOperation;->mOwner:Landroid/content/UndoOwner;
 
@@ -99,7 +92,6 @@
     .end annotation
 
     .prologue
-    .line 58
     .local p0, "this":Landroid/content/UndoOperation;, "Landroid/content/UndoOperation<TDATA;>;"
     iget-object v0, p0, Landroid/content/UndoOperation;->mOwner:Landroid/content/UndoOwner;
 
@@ -114,7 +106,6 @@
     .locals 1
 
     .prologue
-    .line 77
     .local p0, "this":Landroid/content/UndoOperation;, "Landroid/content/UndoOperation<TDATA;>;"
     const/4 v0, 0x1
 
@@ -126,7 +117,6 @@
     .param p1, "owner"    # Landroid/content/UndoOwner;
 
     .prologue
-    .line 68
     .local p0, "this":Landroid/content/UndoOperation;, "Landroid/content/UndoOperation<TDATA;>;"
     invoke-virtual {p0}, Landroid/content/UndoOperation;->getOwner()Landroid/content/UndoOwner;
 

@@ -30,7 +30,6 @@
     .param p2, "val$showing"    # Z
 
     .prologue
-    .line 202
     iput-object p1, p0, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider$ProviderImpl$5;->this$2:Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider$ProviderImpl;
 
     iput-boolean p2, p0, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider$ProviderImpl$5;->val$showing:Z
@@ -46,7 +45,6 @@
     .locals 2
 
     .prologue
-    .line 205
     iget-object v0, p0, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider$ProviderImpl$5;->this$2:Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider$ProviderImpl;
 
     iget-object v0, v0, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider$ProviderImpl;->this$1:Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider;
@@ -55,6 +53,5 @@
 
     invoke-virtual {v0, v1}, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider;->onBouncerShowing(Z)V
 
-    .line 204
     return-void
 .end method

@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/net/NetworkPolicyManagerService;
 
     .prologue
-    .line 590
     iput-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$5;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -42,28 +41,24 @@
     .prologue
     const/4 v3, -0x1
 
-    .line 595
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 596
     .local v0, "action":Ljava/lang/String;
-    const-string/jumbo v2, "android.intent.extra.UID"
+    const-string v2, "android.intent.extra.UID"
 
     invoke-virtual {p2, v2, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 597
     .local v1, "uid":I
     if-ne v1, v3, :cond_0
 
     return-void
 
-    .line 599
     :cond_0
-    const-string/jumbo v2, "android.intent.action.PACKAGE_ADDED"
+    const-string v2, "android.intent.action.PACKAGE_ADDED"
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -71,14 +66,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 603
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$5;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object v3, v2, Lcom/android/server/net/NetworkPolicyManagerService;->mRulesLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 604
     :try_start_0
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$5;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -88,11 +81,9 @@
 
     monitor-exit v3
 
-    .line 592
     :cond_1
     return-void
 
-    .line 603
     :catchall_0
     move-exception v2
 

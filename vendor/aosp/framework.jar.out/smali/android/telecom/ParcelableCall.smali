@@ -111,15 +111,12 @@
     .locals 1
 
     .prologue
-    .line 282
     new-instance v0, Landroid/telecom/ParcelableCall$1;
 
     invoke-direct {v0}, Landroid/telecom/ParcelableCall$1;-><init>()V
 
-    .line 281
     sput-object v0, Landroid/telecom/ParcelableCall;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 35
     return-void
 .end method
 
@@ -182,115 +179,89 @@
     .end annotation
 
     .prologue
-    .line 62
     .local p4, "cannedSmsResponses":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .local p20, "childCallIds":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .local p23, "conferenceableCallIds":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 87
     iput-object p1, p0, Landroid/telecom/ParcelableCall;->mId:Ljava/lang/String;
 
-    .line 88
     iput p2, p0, Landroid/telecom/ParcelableCall;->mState:I
 
-    .line 89
     iput-object p3, p0, Landroid/telecom/ParcelableCall;->mDisconnectCause:Landroid/telecom/DisconnectCause;
 
-    .line 90
     iput-object p4, p0, Landroid/telecom/ParcelableCall;->mCannedSmsResponses:Ljava/util/List;
 
-    .line 91
     iput p5, p0, Landroid/telecom/ParcelableCall;->mCapabilities:I
 
-    .line 92
     iput p6, p0, Landroid/telecom/ParcelableCall;->mProperties:I
 
-    .line 93
     iput-wide p7, p0, Landroid/telecom/ParcelableCall;->mCreateTimeMillis:J
 
-    .line 94
     iput-wide p9, p0, Landroid/telecom/ParcelableCall;->mConnectTimeMillis:J
 
-    .line 95
     iput-object p11, p0, Landroid/telecom/ParcelableCall;->mHandle:Landroid/net/Uri;
 
-    .line 96
     iput p12, p0, Landroid/telecom/ParcelableCall;->mHandlePresentation:I
 
-    .line 97
     move-object/from16 v0, p13
 
     iput-object v0, p0, Landroid/telecom/ParcelableCall;->mCallerDisplayName:Ljava/lang/String;
 
-    .line 98
     move/from16 v0, p14
 
     iput v0, p0, Landroid/telecom/ParcelableCall;->mCallerDisplayNamePresentation:I
 
-    .line 99
     move-object/from16 v0, p15
 
     iput-object v0, p0, Landroid/telecom/ParcelableCall;->mGatewayInfo:Landroid/telecom/GatewayInfo;
 
-    .line 100
     move-object/from16 v0, p16
 
     iput-object v0, p0, Landroid/telecom/ParcelableCall;->mAccountHandle:Landroid/telecom/PhoneAccountHandle;
 
-    .line 101
     move/from16 v0, p17
 
     iput-boolean v0, p0, Landroid/telecom/ParcelableCall;->mIsVideoCallProviderChanged:Z
 
-    .line 102
     move-object/from16 v0, p18
 
     iput-object v0, p0, Landroid/telecom/ParcelableCall;->mVideoCallProvider:Lcom/android/internal/telecom/IVideoProvider;
 
-    .line 103
     move-object/from16 v0, p19
 
     iput-object v0, p0, Landroid/telecom/ParcelableCall;->mParentCallId:Ljava/lang/String;
 
-    .line 104
     move-object/from16 v0, p20
 
     iput-object v0, p0, Landroid/telecom/ParcelableCall;->mChildCallIds:Ljava/util/List;
 
-    .line 105
     move-object/from16 v0, p21
 
     iput-object v0, p0, Landroid/telecom/ParcelableCall;->mStatusHints:Landroid/telecom/StatusHints;
 
-    .line 106
     move/from16 v0, p22
 
     iput v0, p0, Landroid/telecom/ParcelableCall;->mVideoState:I
 
-    .line 107
     invoke-static/range {p23 .. p23}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/telecom/ParcelableCall;->mConferenceableCallIds:Ljava/util/List;
 
-    .line 108
     move-object/from16 v0, p24
 
     iput-object v0, p0, Landroid/telecom/ParcelableCall;->mIntentExtras:Landroid/os/Bundle;
 
-    .line 109
     move-object/from16 v0, p25
 
     iput-object v0, p0, Landroid/telecom/ParcelableCall;->mExtras:Landroid/os/Bundle;
 
-    .line 110
     move/from16 v0, p26
 
     iput-boolean v0, p0, Landroid/telecom/ParcelableCall;->mIsActiveSub:Z
 
-    .line 86
     return-void
 .end method
 
@@ -300,7 +271,6 @@
     .locals 1
 
     .prologue
-    .line 350
     const/4 v0, 0x0
 
     return v0
@@ -310,7 +280,6 @@
     .locals 1
 
     .prologue
-    .line 188
     iget-object v0, p0, Landroid/telecom/ParcelableCall;->mAccountHandle:Landroid/telecom/PhoneAccountHandle;
 
     return-object v0
@@ -320,7 +289,6 @@
     .locals 1
 
     .prologue
-    .line 170
     iget-object v0, p0, Landroid/telecom/ParcelableCall;->mCallerDisplayName:Ljava/lang/String;
 
     return-object v0
@@ -330,7 +298,6 @@
     .locals 1
 
     .prologue
-    .line 178
     iget v0, p0, Landroid/telecom/ParcelableCall;->mCallerDisplayNamePresentation:I
 
     return v0
@@ -349,7 +316,6 @@
     .end annotation
 
     .prologue
-    .line 135
     iget-object v0, p0, Landroid/telecom/ParcelableCall;->mCannedSmsResponses:Ljava/util/List;
 
     return-object v0
@@ -359,7 +325,6 @@
     .locals 1
 
     .prologue
-    .line 140
     iget v0, p0, Landroid/telecom/ParcelableCall;->mCapabilities:I
 
     return v0
@@ -378,7 +343,6 @@
     .end annotation
 
     .prologue
-    .line 219
     iget-object v0, p0, Landroid/telecom/ParcelableCall;->mChildCallIds:Ljava/util/List;
 
     return-object v0
@@ -397,7 +361,6 @@
     .end annotation
 
     .prologue
-    .line 223
     iget-object v0, p0, Landroid/telecom/ParcelableCall;->mConferenceableCallIds:Ljava/util/List;
 
     return-object v0
@@ -407,7 +370,6 @@
     .locals 2
 
     .prologue
-    .line 153
     iget-wide v0, p0, Landroid/telecom/ParcelableCall;->mConnectTimeMillis:J
 
     return-wide v0
@@ -417,7 +379,6 @@
     .locals 2
 
     .prologue
-    .line 148
     iget-wide v0, p0, Landroid/telecom/ParcelableCall;->mCreateTimeMillis:J
 
     return-wide v0
@@ -427,7 +388,6 @@
     .locals 1
 
     .prologue
-    .line 128
     iget-object v0, p0, Landroid/telecom/ParcelableCall;->mDisconnectCause:Landroid/telecom/DisconnectCause;
 
     return-object v0
@@ -437,7 +397,6 @@
     .locals 1
 
     .prologue
-    .line 249
     iget-object v0, p0, Landroid/telecom/ParcelableCall;->mExtras:Landroid/os/Bundle;
 
     return-object v0
@@ -447,7 +406,6 @@
     .locals 1
 
     .prologue
-    .line 183
     iget-object v0, p0, Landroid/telecom/ParcelableCall;->mGatewayInfo:Landroid/telecom/GatewayInfo;
 
     return-object v0
@@ -457,7 +415,6 @@
     .locals 1
 
     .prologue
-    .line 158
     iget-object v0, p0, Landroid/telecom/ParcelableCall;->mHandle:Landroid/net/Uri;
 
     return-object v0
@@ -467,7 +424,6 @@
     .locals 1
 
     .prologue
-    .line 165
     iget v0, p0, Landroid/telecom/ParcelableCall;->mHandlePresentation:I
 
     return v0
@@ -477,7 +433,6 @@
     .locals 1
 
     .prologue
-    .line 115
     iget-object v0, p0, Landroid/telecom/ParcelableCall;->mId:Ljava/lang/String;
 
     return-object v0
@@ -487,7 +442,6 @@
     .locals 1
 
     .prologue
-    .line 258
     iget-object v0, p0, Landroid/telecom/ParcelableCall;->mIntentExtras:Landroid/os/Bundle;
 
     return-object v0
@@ -497,7 +451,6 @@
     .locals 1
 
     .prologue
-    .line 211
     iget-object v0, p0, Landroid/telecom/ParcelableCall;->mParentCallId:Ljava/lang/String;
 
     return-object v0
@@ -507,7 +460,6 @@
     .locals 1
 
     .prologue
-    .line 144
     iget v0, p0, Landroid/telecom/ParcelableCall;->mProperties:I
 
     return v0
@@ -517,7 +469,6 @@
     .locals 1
 
     .prologue
-    .line 120
     iget v0, p0, Landroid/telecom/ParcelableCall;->mState:I
 
     return v0
@@ -527,7 +478,6 @@
     .locals 1
 
     .prologue
-    .line 232
     iget-object v0, p0, Landroid/telecom/ParcelableCall;->mStatusHints:Landroid/telecom/StatusHints;
 
     return-object v0
@@ -538,7 +488,6 @@
     .param p1, "call"    # Landroid/telecom/Call;
 
     .prologue
-    .line 196
     iget-object v1, p0, Landroid/telecom/ParcelableCall;->mVideoCall:Landroid/telecom/InCallService$VideoCall;
 
     if-nez v1, :cond_0
@@ -547,7 +496,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 198
     :try_start_0
     new-instance v1, Landroid/telecom/VideoCallImpl;
 
@@ -559,14 +507,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 204
     :cond_0
     :goto_0
     iget-object v1, p0, Landroid/telecom/ParcelableCall;->mVideoCall:Landroid/telecom/InCallService$VideoCall;
 
     return-object v1
 
-    .line 199
     :catch_0
     move-exception v0
 
@@ -578,7 +524,6 @@
     .locals 1
 
     .prologue
-    .line 240
     iget v0, p0, Landroid/telecom/ParcelableCall;->mVideoState:I
 
     return v0
@@ -588,7 +533,6 @@
     .locals 1
 
     .prologue
-    .line 277
     iget-boolean v0, p0, Landroid/telecom/ParcelableCall;->mIsActiveSub:Z
 
     return v0
@@ -598,7 +542,6 @@
     .locals 1
 
     .prologue
-    .line 270
     iget-boolean v0, p0, Landroid/telecom/ParcelableCall;->mIsVideoCallProviderChanged:Z
 
     return v0
@@ -608,8 +551,7 @@
     .locals 4
 
     .prologue
-    .line 385
-    const-string/jumbo v0, "[%s, parent:%s, children:%s]"
+    const-string v0, "[%s, parent:%s, children:%s]"
 
     const/4 v1, 0x3
 
@@ -652,77 +594,62 @@
 
     const/4 v2, 0x0
 
-    .line 356
     iget-object v0, p0, Landroid/telecom/ParcelableCall;->mId:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 357
     iget v0, p0, Landroid/telecom/ParcelableCall;->mState:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 358
     iget-object v0, p0, Landroid/telecom/ParcelableCall;->mDisconnectCause:Landroid/telecom/DisconnectCause;
 
     invoke-virtual {p1, v0, v2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 359
     iget-object v0, p0, Landroid/telecom/ParcelableCall;->mCannedSmsResponses:Ljava/util/List;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeList(Ljava/util/List;)V
 
-    .line 360
     iget v0, p0, Landroid/telecom/ParcelableCall;->mCapabilities:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 361
     iget v0, p0, Landroid/telecom/ParcelableCall;->mProperties:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 362
     iget-wide v4, p0, Landroid/telecom/ParcelableCall;->mCreateTimeMillis:J
 
     invoke-virtual {p1, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 363
     iget-wide v4, p0, Landroid/telecom/ParcelableCall;->mConnectTimeMillis:J
 
     invoke-virtual {p1, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 364
     iget-object v0, p0, Landroid/telecom/ParcelableCall;->mHandle:Landroid/net/Uri;
 
     invoke-virtual {p1, v0, v2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 365
     iget v0, p0, Landroid/telecom/ParcelableCall;->mHandlePresentation:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 366
     iget-object v0, p0, Landroid/telecom/ParcelableCall;->mCallerDisplayName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 367
     iget v0, p0, Landroid/telecom/ParcelableCall;->mCallerDisplayNamePresentation:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 368
     iget-object v0, p0, Landroid/telecom/ParcelableCall;->mGatewayInfo:Landroid/telecom/GatewayInfo;
 
     invoke-virtual {p1, v0, v2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 369
     iget-object v0, p0, Landroid/telecom/ParcelableCall;->mAccountHandle:Landroid/telecom/PhoneAccountHandle;
 
     invoke-virtual {p1, v0, v2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 370
     iget-boolean v0, p0, Landroid/telecom/ParcelableCall;->mIsVideoCallProviderChanged:Z
 
     if-eqz v0, :cond_0
@@ -734,7 +661,6 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 372
     iget-object v0, p0, Landroid/telecom/ParcelableCall;->mVideoCallProvider:Lcom/android/internal/telecom/IVideoProvider;
 
     if-eqz v0, :cond_1
@@ -745,46 +671,37 @@
 
     move-result-object v0
 
-    .line 371
     :goto_1
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 373
     iget-object v0, p0, Landroid/telecom/ParcelableCall;->mParentCallId:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 374
     iget-object v0, p0, Landroid/telecom/ParcelableCall;->mChildCallIds:Ljava/util/List;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeList(Ljava/util/List;)V
 
-    .line 375
     iget-object v0, p0, Landroid/telecom/ParcelableCall;->mStatusHints:Landroid/telecom/StatusHints;
 
     invoke-virtual {p1, v0, v2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 376
     iget v0, p0, Landroid/telecom/ParcelableCall;->mVideoState:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 377
     iget-object v0, p0, Landroid/telecom/ParcelableCall;->mConferenceableCallIds:Ljava/util/List;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeList(Ljava/util/List;)V
 
-    .line 378
     iget-object v0, p0, Landroid/telecom/ParcelableCall;->mIntentExtras:Landroid/os/Bundle;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
-    .line 379
     iget-object v0, p0, Landroid/telecom/ParcelableCall;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
-    .line 380
     iget-boolean v0, p0, Landroid/telecom/ParcelableCall;->mIsActiveSub:Z
 
     if-eqz v0, :cond_2
@@ -792,24 +709,20 @@
     :goto_2
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 355
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 370
     goto :goto_0
 
     :cond_1
     move-object v0, v3
 
-    .line 372
     goto :goto_1
 
     :cond_2
     move v1, v2
 
-    .line 380
     goto :goto_2
 .end method

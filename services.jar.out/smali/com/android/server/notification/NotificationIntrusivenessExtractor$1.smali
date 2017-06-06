@@ -26,7 +26,6 @@
     .param p3, "$anonymous1"    # J
 
     .prologue
-    .line 55
     iput-object p1, p0, Lcom/android/server/notification/NotificationIntrusivenessExtractor$1;->this$0:Lcom/android/server/notification/NotificationIntrusivenessExtractor;
 
     invoke-direct {p0, p2, p3, p4}, Lcom/android/server/notification/RankingReconsideration;-><init>(Ljava/lang/String;J)V
@@ -41,12 +40,10 @@
     .param p1, "record"    # Lcom/android/server/notification/NotificationRecord;
 
     .prologue
-    .line 63
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Lcom/android/server/notification/NotificationRecord;->setRecentlyIntrusive(Z)V
 
-    .line 62
     return-void
 .end method
 
@@ -54,6 +51,5 @@
     .locals 0
 
     .prologue
-    .line 57
     return-void
 .end method

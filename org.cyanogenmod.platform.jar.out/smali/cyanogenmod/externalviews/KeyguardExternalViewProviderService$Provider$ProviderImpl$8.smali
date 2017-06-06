@@ -30,7 +30,6 @@
     .param p2, "val$swipeProgress"    # F
 
     .prologue
-    .line 233
     iput-object p1, p0, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider$ProviderImpl$8;->this$2:Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider$ProviderImpl;
 
     iput p2, p0, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider$ProviderImpl$8;->val$swipeProgress:F
@@ -46,7 +45,6 @@
     .locals 2
 
     .prologue
-    .line 236
     iget-object v0, p0, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider$ProviderImpl$8;->this$2:Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider$ProviderImpl;
 
     iget-object v0, v0, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider$ProviderImpl;->this$1:Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider;
@@ -55,6 +53,5 @@
 
     invoke-virtual {v0, v1}, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider;->onLockscreenSlideOffsetChanged(F)V
 
-    .line 235
     return-void
 .end method

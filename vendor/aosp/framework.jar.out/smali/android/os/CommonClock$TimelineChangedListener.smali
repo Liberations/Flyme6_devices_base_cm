@@ -28,7 +28,6 @@
     .param p1, "this$0"    # Landroid/os/CommonClock;
 
     .prologue
-    .line 314
     iput-object p1, p0, Landroid/os/CommonClock$TimelineChangedListener;->this$0:Landroid/os/CommonClock;
 
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
@@ -61,28 +60,23 @@
     .end annotation
 
     .prologue
-    .line 318
     packed-switch p1, :pswitch_data_0
 
-    .line 329
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v2
 
     return v2
 
-    .line 320
     :pswitch_0
-    const-string/jumbo v2, "android.os.ICommonClockListener"
+    const-string v2, "android.os.ICommonClockListener"
 
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 321
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
-    .line 322
     .local v0, "timelineId":J
     iget-object v2, p0, Landroid/os/CommonClock$TimelineChangedListener;->this$0:Landroid/os/CommonClock;
 
@@ -92,7 +86,6 @@
 
     monitor-enter v3
 
-    .line 323
     :try_start_0
     iget-object v2, p0, Landroid/os/CommonClock$TimelineChangedListener;->this$0:Landroid/os/CommonClock;
 
@@ -102,7 +95,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 324
     iget-object v2, p0, Landroid/os/CommonClock$TimelineChangedListener;->this$0:Landroid/os/CommonClock;
 
     invoke-static {v2}, Landroid/os/CommonClock;->-get2(Landroid/os/CommonClock;)Landroid/os/CommonClock$OnTimelineChangedListener;
@@ -116,12 +108,10 @@
     :cond_0
     monitor-exit v3
 
-    .line 326
     const/4 v2, 0x1
 
     return v2
 
-    .line 322
     :catchall_0
     move-exception v2
 
@@ -129,7 +119,6 @@
 
     throw v2
 
-    .line 318
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

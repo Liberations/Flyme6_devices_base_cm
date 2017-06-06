@@ -182,7 +182,6 @@
     .locals 9
 
     .prologue
-    .line 65
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v0
@@ -193,7 +192,6 @@
 
     sput v0, Landroid/app/ActivityView;->CPU_COUNT:I
 
-    .line 67
     sget v0, Landroid/app/ActivityView;->CPU_COUNT:I
 
     mul-int/lit8 v0, v0, 0x2
@@ -202,27 +200,22 @@
 
     sput v0, Landroid/app/ActivityView;->MAXIMUM_POOL_SIZE:I
 
-    .line 70
     new-instance v0, Landroid/app/ActivityView$1;
 
     invoke-direct {v0}, Landroid/app/ActivityView$1;-><init>()V
 
     sput-object v0, Landroid/app/ActivityView;->sThreadFactory:Ljava/util/concurrent/ThreadFactory;
 
-    .line 79
     new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
 
     const/16 v1, 0x80
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>(I)V
 
-    .line 78
     sput-object v0, Landroid/app/ActivityView;->sPoolWorkQueue:Ljava/util/concurrent/BlockingQueue;
 
-    .line 84
     new-instance v1, Ljava/util/concurrent/ThreadPoolExecutor;
 
-    .line 85
     sget v3, Landroid/app/ActivityView;->MAXIMUM_POOL_SIZE:I
 
     const-wide/16 v4, 0x1
@@ -233,14 +226,12 @@
 
     sget-object v8, Landroid/app/ActivityView;->sThreadFactory:Ljava/util/concurrent/ThreadFactory;
 
-    .line 84
     const/4 v2, 0x1
 
     invoke-direct/range {v1 .. v8}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
 
     sput-object v1, Landroid/app/ActivityView;->sExecutor:Ljava/util/concurrent/Executor;
 
-    .line 59
     return-void
 .end method
 
@@ -249,12 +240,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 132
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Landroid/app/ActivityView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 131
     return-void
 .end method
 
@@ -264,12 +253,10 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 136
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Landroid/app/ActivityView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 135
     return-void
 .end method
 
@@ -282,57 +269,48 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 140
     invoke-direct {p0, p1, p2, p3}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 114
     new-instance v3, Landroid/app/ActivityView$SerialExecutor;
 
     invoke-direct {v3, v7}, Landroid/app/ActivityView$SerialExecutor;-><init>(Landroid/app/ActivityView$SerialExecutor;)V
 
     iput-object v3, p0, Landroid/app/ActivityView;->mExecutor:Landroid/app/ActivityView$SerialExecutor;
 
-    .line 121
     new-instance v3, Ljava/lang/Object;
 
     invoke-direct {v3}, Ljava/lang/Object;-><init>()V
 
     iput-object v3, p0, Landroid/app/ActivityView;->mActivityContainerLock:Ljava/lang/Object;
 
-    .line 142
     :goto_0
     instance-of v3, p1, Landroid/content/ContextWrapper;
 
     if-eqz v3, :cond_0
 
-    .line 143
     instance-of v3, p1, Landroid/app/Activity;
 
     if-eqz v3, :cond_1
 
     move-object v3, p1
 
-    .line 144
     check-cast v3, Landroid/app/Activity;
 
     iput-object v3, p0, Landroid/app/ActivityView;->mActivity:Landroid/app/Activity;
 
-    .line 149
     :cond_0
     iget-object v3, p0, Landroid/app/ActivityView;->mActivity:Landroid/app/Activity;
 
     if-nez v3, :cond_2
 
-    .line 150
     new-instance v3, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v4, "The ActivityView\'s Context is not an Activity."
+    const-string v4, "The ActivityView\'s Context is not an Activity."
 
     invoke-direct {v3, v4}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v3
 
-    .line 147
     :cond_1
     check-cast p1, Landroid/content/ContextWrapper;
 
@@ -344,17 +322,14 @@
     .restart local p1    # "context":Landroid/content/Context;
     goto :goto_0
 
-    .line 154
     :cond_2
     :try_start_0
     new-instance v3, Landroid/app/ActivityView$ActivityContainerWrapper;
 
-    .line 155
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
     move-result-object v4
 
-    .line 156
     iget-object v5, p0, Landroid/app/ActivityView;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v5}, Landroid/app/Activity;->getActivityToken()Landroid/os/IBinder;
@@ -365,26 +340,22 @@
 
     invoke-direct {v6, p0}, Landroid/app/ActivityView$ActivityContainerCallback;-><init>(Landroid/app/ActivityView;)V
 
-    .line 155
     invoke-interface {v4, v5, v6}, Landroid/app/IActivityManager;->createVirtualActivityContainer(Landroid/os/IBinder;Landroid/app/IActivityContainerCallback;)Landroid/app/IActivityContainer;
 
     move-result-object v4
 
-    .line 154
     invoke-direct {v3, v4}, Landroid/app/ActivityView$ActivityContainerWrapper;-><init>(Landroid/app/IActivityContainer;)V
 
     iput-object v3, p0, Landroid/app/ActivityView;->mActivityContainer:Landroid/app/ActivityView$ActivityContainerWrapper;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 162
     new-instance v3, Landroid/view/TextureView;
 
     invoke-direct {v3, p1}, Landroid/view/TextureView;-><init>(Landroid/content/Context;)V
 
     iput-object v3, p0, Landroid/app/ActivityView;->mTextureView:Landroid/view/TextureView;
 
-    .line 163
     iget-object v3, p0, Landroid/app/ActivityView;->mTextureView:Landroid/view/TextureView;
 
     new-instance v4, Landroid/app/ActivityView$ActivityViewSurfaceTextureListener;
@@ -393,15 +364,13 @@
 
     invoke-virtual {v3, v4}, Landroid/view/TextureView;->setSurfaceTextureListener(Landroid/view/TextureView$SurfaceTextureListener;)V
 
-    .line 164
     iget-object v3, p0, Landroid/app/ActivityView;->mTextureView:Landroid/view/TextureView;
 
     invoke-virtual {p0, v3}, Landroid/app/ActivityView;->addView(Landroid/view/View;)V
 
-    .line 166
     iget-object v3, p0, Landroid/app/ActivityView;->mActivity:Landroid/app/Activity;
 
-    const-string/jumbo v4, "window"
+    const-string v4, "window"
 
     invoke-virtual {v3, v4}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -409,13 +378,11 @@
 
     check-cast v2, Landroid/view/WindowManager;
 
-    .line 167
     .local v2, "wm":Landroid/view/WindowManager;
     new-instance v1, Landroid/util/DisplayMetrics;
 
     invoke-direct {v1}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 168
     .local v1, "metrics":Landroid/util/DisplayMetrics;
     invoke-interface {v2}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
@@ -423,28 +390,23 @@
 
     invoke-virtual {v3, v1}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 169
     iget v3, v1, Landroid/util/DisplayMetrics;->densityDpi:I
 
     iput v3, p0, Landroid/app/ActivityView;->mDensityDpi:I
 
-    .line 171
     invoke-virtual {p0}, Landroid/app/ActivityView;->getVisibility()I
 
     move-result v3
 
     iput v3, p0, Landroid/app/ActivityView;->mLastVisibility:I
 
-    .line 139
     return-void
 
-    .line 157
     .end local v1    # "metrics":Landroid/util/DisplayMetrics;
     .end local v2    # "wm":Landroid/view/WindowManager;
     :catch_0
     move-exception v0
 
-    .line 158
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v3, Ljava/lang/RuntimeException;
 
@@ -452,7 +414,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "ActivityView: Unable to create ActivityContainer. "
+    const-string v5, "ActivityView: Unable to create ActivityContainer. "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -476,7 +438,6 @@
     .param p1, "event"    # Landroid/view/InputEvent;
 
     .prologue
-    .line 194
     iget-object v0, p0, Landroid/app/ActivityView;->mActivityContainer:Landroid/app/ActivityView$ActivityContainerWrapper;
 
     if-eqz v0, :cond_0
@@ -505,7 +466,6 @@
     .param p5, "callback"    # Z
 
     .prologue
-    .line 294
     iget-object v7, p0, Landroid/app/ActivityView;->mExecutor:Landroid/app/ActivityView$SerialExecutor;
 
     new-instance v0, Landroid/app/ActivityView$2;
@@ -526,7 +486,6 @@
 
     invoke-virtual {v7, v0}, Landroid/app/ActivityView$SerialExecutor;->execute(Ljava/lang/Runnable;)V
 
-    .line 293
     return-void
 .end method
 
@@ -536,7 +495,6 @@
     .locals 1
 
     .prologue
-    .line 225
     iget-object v0, p0, Landroid/app/ActivityView;->mSurface:Landroid/view/Surface;
 
     if-eqz v0, :cond_0
@@ -556,7 +514,6 @@
     .locals 0
 
     .prologue
-    .line 213
     return-void
 .end method
 
@@ -564,7 +521,6 @@
     .locals 0
 
     .prologue
-    .line 219
     return-void
 .end method
 
@@ -573,7 +529,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 204
     const/4 v0, 0x2
 
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->isFromSource(I)Z
@@ -582,19 +537,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 205
     invoke-direct {p0, p1}, Landroid/app/ActivityView;->injectInputEvent(Landroid/view/InputEvent;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 206
     const/4 v0, 0x1
 
     return v0
 
-    .line 209
     :cond_0
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->onGenericMotionEvent(Landroid/view/MotionEvent;)Z
 
@@ -614,7 +566,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 178
     iget-object v0, p0, Landroid/app/ActivityView;->mTextureView:Landroid/view/TextureView;
 
     sub-int v1, p4, p2
@@ -623,7 +574,6 @@
 
     invoke-virtual {v0, v3, v3, v1, v2}, Landroid/view/TextureView;->layout(IIII)V
 
-    .line 177
     return-void
 .end method
 
@@ -632,7 +582,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 199
     invoke-direct {p0, p1}, Landroid/app/ActivityView;->injectInputEvent(Landroid/view/InputEvent;)Z
 
     move-result v0
@@ -660,10 +609,8 @@
     .prologue
     const/16 v2, 0x8
 
-    .line 183
     invoke-super {p0, p1, p2}, Landroid/view/ViewGroup;->onVisibilityChanged(Landroid/view/View;I)V
 
-    .line 185
     iget-object v0, p0, Landroid/app/ActivityView;->mSurface:Landroid/view/Surface;
 
     if-eqz v0, :cond_1
@@ -674,13 +621,11 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 187
     :cond_0
     if-ne p2, v2, :cond_2
 
     const/4 v1, 0x0
 
-    .line 188
     :goto_0
     iget v2, p0, Landroid/app/ActivityView;->mWidth:I
 
@@ -694,14 +639,11 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/app/ActivityView;->setSurfaceAsync(Landroid/view/Surface;IIIZ)V
 
-    .line 190
     :cond_1
     iput p2, p0, Landroid/app/ActivityView;->mLastVisibility:I
 
-    .line 182
     return-void
 
-    .line 187
     :cond_2
     iget-object v1, p0, Landroid/app/ActivityView;->mSurface:Landroid/view/Surface;
 
@@ -715,34 +657,28 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 275
     iget-object v0, p0, Landroid/app/ActivityView;->mActivityContainer:Landroid/app/ActivityView$ActivityContainerWrapper;
 
     if-nez v0, :cond_0
 
-    .line 276
-    const-string/jumbo v0, "ActivityView"
+    const-string v0, "ActivityView"
 
-    const-string/jumbo v1, "Duplicate call to release"
+    const-string v1, "Duplicate call to release"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 277
     return-void
 
-    .line 279
     :cond_0
     iget-object v1, p0, Landroid/app/ActivityView;->mActivityContainerLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 280
     :try_start_0
     iget-object v0, p0, Landroid/app/ActivityView;->mActivityContainer:Landroid/app/ActivityView$ActivityContainerWrapper;
 
     invoke-virtual {v0}, Landroid/app/ActivityView$ActivityContainerWrapper;->release()V
 
-    .line 281
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/app/ActivityView;->mActivityContainer:Landroid/app/ActivityView$ActivityContainerWrapper;
@@ -751,29 +687,23 @@
 
     monitor-exit v1
 
-    .line 284
     iget-object v0, p0, Landroid/app/ActivityView;->mSurface:Landroid/view/Surface;
 
     if-eqz v0, :cond_1
 
-    .line 285
     iget-object v0, p0, Landroid/app/ActivityView;->mSurface:Landroid/view/Surface;
 
     invoke-virtual {v0}, Landroid/view/Surface;->release()V
 
-    .line 286
     iput-object v2, p0, Landroid/app/ActivityView;->mSurface:Landroid/view/Surface;
 
-    .line 289
     :cond_1
     iget-object v0, p0, Landroid/app/ActivityView;->mTextureView:Landroid/view/TextureView;
 
     invoke-virtual {v0, v2}, Landroid/view/TextureView;->setSurfaceTextureListener(Landroid/view/TextureView$SurfaceTextureListener;)V
 
-    .line 272
     return-void
 
-    .line 279
     :catchall_0
     move-exception v0
 
@@ -787,20 +717,16 @@
     .param p1, "callback"    # Landroid/app/ActivityView$ActivityViewCallback;
 
     .prologue
-    .line 336
     iput-object p1, p0, Landroid/app/ActivityView;->mActivityViewCallback:Landroid/app/ActivityView$ActivityViewCallback;
 
-    .line 338
     iget-object v0, p0, Landroid/app/ActivityView;->mSurface:Landroid/view/Surface;
 
     if-eqz v0, :cond_0
 
-    .line 339
     iget-object v0, p0, Landroid/app/ActivityView;->mActivityViewCallback:Landroid/app/ActivityView$ActivityViewCallback;
 
     invoke-virtual {v0, p0}, Landroid/app/ActivityView$ActivityViewCallback;->onSurfaceAvailable(Landroid/app/ActivityView;)V
 
-    .line 335
     :cond_0
     return-void
 .end method
@@ -810,42 +736,36 @@
     .param p1, "pendingIntent"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 258
     iget-object v1, p0, Landroid/app/ActivityView;->mActivityContainer:Landroid/app/ActivityView$ActivityContainerWrapper;
 
     if-nez v1, :cond_0
 
-    .line 259
     new-instance v1, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v2, "Attempt to call startActivity after release"
+    const-string v2, "Attempt to call startActivity after release"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 261
     :cond_0
     iget-object v1, p0, Landroid/app/ActivityView;->mSurface:Landroid/view/Surface;
 
     if-nez v1, :cond_1
 
-    .line 262
     new-instance v1, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v2, "Surface not yet created."
+    const-string v2, "Surface not yet created."
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 266
     :cond_1
     invoke-virtual {p1}, Landroid/app/PendingIntent;->getTarget()Landroid/content/IIntentSender;
 
     move-result-object v0
 
-    .line 267
     .local v0, "iIntentSender":Landroid/content/IIntentSender;
     iget-object v1, p0, Landroid/app/ActivityView;->mActivityContainer:Landroid/app/ActivityView$ActivityContainerWrapper;
 
@@ -857,14 +777,12 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 268
     new-instance v1, Landroid/os/OperationCanceledException;
 
     invoke-direct {v1}, Landroid/os/OperationCanceledException;-><init>()V
 
     throw v1
 
-    .line 257
     :cond_2
     return-void
 .end method
@@ -874,36 +792,31 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 229
     iget-object v0, p0, Landroid/app/ActivityView;->mActivityContainer:Landroid/app/ActivityView$ActivityContainerWrapper;
 
     if-nez v0, :cond_0
 
-    .line 230
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v1, "Attempt to call startActivity after release"
+    const-string v1, "Attempt to call startActivity after release"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 232
     :cond_0
     iget-object v0, p0, Landroid/app/ActivityView;->mSurface:Landroid/view/Surface;
 
     if-nez v0, :cond_1
 
-    .line 233
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v1, "Surface not yet created."
+    const-string v1, "Surface not yet created."
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 237
     :cond_1
     iget-object v0, p0, Landroid/app/ActivityView;->mActivityContainer:Landroid/app/ActivityView$ActivityContainerWrapper;
 
@@ -915,14 +828,12 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 238
     new-instance v0, Landroid/os/OperationCanceledException;
 
     invoke-direct {v0}, Landroid/os/OperationCanceledException;-><init>()V
 
     throw v0
 
-    .line 228
     :cond_2
     return-void
 .end method
@@ -932,42 +843,36 @@
     .param p1, "intentSender"    # Landroid/content/IntentSender;
 
     .prologue
-    .line 243
     iget-object v1, p0, Landroid/app/ActivityView;->mActivityContainer:Landroid/app/ActivityView$ActivityContainerWrapper;
 
     if-nez v1, :cond_0
 
-    .line 244
     new-instance v1, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v2, "Attempt to call startActivity after release"
+    const-string v2, "Attempt to call startActivity after release"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 246
     :cond_0
     iget-object v1, p0, Landroid/app/ActivityView;->mSurface:Landroid/view/Surface;
 
     if-nez v1, :cond_1
 
-    .line 247
     new-instance v1, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v2, "Surface not yet created."
+    const-string v2, "Surface not yet created."
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 251
     :cond_1
     invoke-virtual {p1}, Landroid/content/IntentSender;->getTarget()Landroid/content/IIntentSender;
 
     move-result-object v0
 
-    .line 252
     .local v0, "iIntentSender":Landroid/content/IIntentSender;
     iget-object v1, p0, Landroid/app/ActivityView;->mActivityContainer:Landroid/app/ActivityView$ActivityContainerWrapper;
 
@@ -979,14 +884,12 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 253
     new-instance v1, Landroid/os/OperationCanceledException;
 
     invoke-direct {v1}, Landroid/os/OperationCanceledException;-><init>()V
 
     throw v1
 
-    .line 242
     :cond_2
     return-void
 .end method

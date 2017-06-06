@@ -16,10 +16,8 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 41
     invoke-direct {p0}, Landroid/text/style/MetricAffectingSpan;-><init>()V
 
-    .line 42
     new-instance v0, Ljava/util/Locale;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -38,7 +36,6 @@
 
     iput-object v0, p0, Landroid/text/style/LocaleSpan;->mLocale:Ljava/util/Locale;
 
-    .line 41
     return-void
 .end method
 
@@ -47,13 +44,10 @@
     .param p1, "locale"    # Ljava/util/Locale;
 
     .prologue
-    .line 37
     invoke-direct {p0}, Landroid/text/style/MetricAffectingSpan;-><init>()V
 
-    .line 38
     iput-object p1, p0, Landroid/text/style/LocaleSpan;->mLocale:Ljava/util/Locale;
 
-    .line 37
     return-void
 .end method
 
@@ -63,10 +57,8 @@
     .param p1, "locale"    # Ljava/util/Locale;
 
     .prologue
-    .line 92
     invoke-virtual {p0, p1}, Landroid/graphics/Paint;->setTextLocale(Ljava/util/Locale;)V
 
-    .line 91
     return-void
 .end method
 
@@ -76,7 +68,6 @@
     .locals 1
 
     .prologue
-    .line 57
     const/4 v0, 0x0
 
     return v0
@@ -86,7 +77,6 @@
     .locals 1
 
     .prologue
-    .line 78
     iget-object v0, p0, Landroid/text/style/LocaleSpan;->mLocale:Ljava/util/Locale;
 
     return-object v0
@@ -96,7 +86,6 @@
     .locals 1
 
     .prologue
-    .line 47
     invoke-virtual {p0}, Landroid/text/style/LocaleSpan;->getSpanTypeIdInternal()I
 
     move-result v0
@@ -108,7 +97,6 @@
     .locals 1
 
     .prologue
-    .line 52
     const/16 v0, 0x17
 
     return v0
@@ -119,12 +107,10 @@
     .param p1, "ds"    # Landroid/text/TextPaint;
 
     .prologue
-    .line 83
     iget-object v0, p0, Landroid/text/style/LocaleSpan;->mLocale:Ljava/util/Locale;
 
     invoke-static {p1, v0}, Landroid/text/style/LocaleSpan;->apply(Landroid/graphics/Paint;Ljava/util/Locale;)V
 
-    .line 82
     return-void
 .end method
 
@@ -133,12 +119,10 @@
     .param p1, "paint"    # Landroid/text/TextPaint;
 
     .prologue
-    .line 88
     iget-object v0, p0, Landroid/text/style/LocaleSpan;->mLocale:Ljava/util/Locale;
 
     invoke-static {p1, v0}, Landroid/text/style/LocaleSpan;->apply(Landroid/graphics/Paint;Ljava/util/Locale;)V
 
-    .line 87
     return-void
 .end method
 
@@ -148,10 +132,8 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 62
     invoke-virtual {p0, p1, p2}, Landroid/text/style/LocaleSpan;->writeToParcelInternal(Landroid/os/Parcel;I)V
 
-    .line 61
     return-void
 .end method
 
@@ -161,7 +143,6 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 67
     iget-object v0, p0, Landroid/text/style/LocaleSpan;->mLocale:Ljava/util/Locale;
 
     invoke-virtual {v0}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
@@ -170,7 +151,6 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 68
     iget-object v0, p0, Landroid/text/style/LocaleSpan;->mLocale:Ljava/util/Locale;
 
     invoke-virtual {v0}, Ljava/util/Locale;->getCountry()Ljava/lang/String;
@@ -179,7 +159,6 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 69
     iget-object v0, p0, Landroid/text/style/LocaleSpan;->mLocale:Ljava/util/Locale;
 
     invoke-virtual {v0}, Ljava/util/Locale;->getVariant()Ljava/lang/String;
@@ -188,6 +167,5 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 66
     return-void
 .end method

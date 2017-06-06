@@ -30,10 +30,8 @@
 
     move v8, p4
 
-    .line 34
     invoke-direct/range {v0 .. v8}, Landroid/view/animation/ClipRectAnimation;-><init>(IIIIIIII)V
 
-    .line 33
     return-void
 .end method
 
@@ -45,12 +43,10 @@
     .param p2, "tr"    # Landroid/view/animation/Transformation;
 
     .prologue
-    .line 43
     invoke-virtual {p2}, Landroid/view/animation/Transformation;->getClipRect()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 44
     .local v0, "oldClipRect":Landroid/graphics/Rect;
     iget v1, v0, Landroid/graphics/Rect;->left:I
 
@@ -76,10 +72,8 @@
 
     add-int/2addr v2, v3
 
-    .line 45
     iget v3, v0, Landroid/graphics/Rect;->right:I
 
-    .line 46
     iget-object v4, p0, Landroid/view/animation/ClipRectTBAnimation;->mFromRect:Landroid/graphics/Rect;
 
     iget v4, v4, Landroid/graphics/Rect;->bottom:I
@@ -102,9 +96,7 @@
 
     add-int/2addr v4, v5
 
-    .line 44
     invoke-virtual {p2, v1, v2, v3, v4}, Landroid/view/animation/Transformation;->setClipRect(IIII)V
 
-    .line 42
     return-void
 .end method

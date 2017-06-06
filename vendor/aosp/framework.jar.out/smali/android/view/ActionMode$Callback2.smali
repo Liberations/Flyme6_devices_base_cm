@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 347
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,10 +38,8 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 361
     if-eqz p2, :cond_0
 
-    .line 362
     invoke-virtual {p2}, Landroid/view/View;->getWidth()I
 
     move-result v0
@@ -53,11 +50,9 @@
 
     invoke-virtual {p3, v2, v2, v0, v1}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 360
     :goto_0
     return-void
 
-    .line 364
     :cond_0
     invoke-virtual {p3, v2, v2, v2, v2}, Landroid/graphics/Rect;->set(IIII)V
 

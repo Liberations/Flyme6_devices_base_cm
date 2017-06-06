@@ -21,10 +21,8 @@
     .param p2, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 38
     invoke-direct {p0, p1, p2}, Landroid/support/v4/graphics/drawable/RoundedBitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
-    .line 37
     return-void
 .end method
 
@@ -39,7 +37,6 @@
     .param p5, "outRect"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 58
     const/4 v5, 0x0
 
     move v0, p1
@@ -52,10 +49,8 @@
 
     move-object v4, p5
 
-    .line 57
     invoke-static/range {v0 .. v5}, Landroid/support/v4/view/GravityCompat;->apply(IIILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
 
-    .line 56
     return-void
 .end method
 
@@ -63,7 +58,6 @@
     .locals 1
 
     .prologue
-    .line 51
     iget-object v0, p0, Landroid/support/v4/graphics/drawable/RoundedBitmapDrawableFactory$DefaultRoundedBitmapDrawable;->mBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
@@ -88,20 +82,16 @@
     .param p1, "mipMap"    # Z
 
     .prologue
-    .line 43
     iget-object v0, p0, Landroid/support/v4/graphics/drawable/RoundedBitmapDrawableFactory$DefaultRoundedBitmapDrawable;->mBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
-    .line 44
     iget-object v0, p0, Landroid/support/v4/graphics/drawable/RoundedBitmapDrawableFactory$DefaultRoundedBitmapDrawable;->mBitmap:Landroid/graphics/Bitmap;
 
     invoke-static {v0, p1}, Landroid/support/v4/graphics/BitmapCompat;->setHasMipMap(Landroid/graphics/Bitmap;Z)V
 
-    .line 45
     invoke-virtual {p0}, Landroid/support/v4/graphics/drawable/RoundedBitmapDrawableFactory$DefaultRoundedBitmapDrawable;->invalidateSelf()V
 
-    .line 42
     :cond_0
     return-void
 .end method

@@ -24,7 +24,6 @@
     .param p1, "val$condition"    # Landroid/os/ConditionVariable;
 
     .prologue
-    .line 424
     iput-object p1, p0, Landroid/os/RecoverySystem$1;->val$condition:Landroid/os/ConditionVariable;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,11 +39,9 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 427
     iget-object v0, p0, Landroid/os/RecoverySystem$1;->val$condition:Landroid/os/ConditionVariable;
 
     invoke-virtual {v0}, Landroid/os/ConditionVariable;->open()V
 
-    .line 426
     return-void
 .end method

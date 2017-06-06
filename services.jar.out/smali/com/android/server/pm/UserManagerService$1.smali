@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/pm/UserManagerService;
 
     .prologue
-    .line 1522
     iput-object p1, p0, Lcom/android/server/pm/UserManagerService$1;->this$0:Lcom/android/server/pm/UserManagerService;
 
     invoke-direct {p0}, Landroid/app/IStopUserCallback$Stub;-><init>()V
@@ -39,7 +38,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 1528
     return-void
 .end method
 
@@ -48,11 +46,9 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 1525
     iget-object v0, p0, Lcom/android/server/pm/UserManagerService$1;->this$0:Lcom/android/server/pm/UserManagerService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/pm/UserManagerService;->finishRemoveUser(I)V
 
-    .line 1524
     return-void
 .end method

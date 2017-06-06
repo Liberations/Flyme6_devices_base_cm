@@ -46,35 +46,28 @@
     .locals 1
 
     .prologue
-    .line 31
     const/4 v0, 0x1
 
     sput v0, Landroid/telephony/DataConnectionRealTimeInfo;->DC_POWER_STATE_LOW:I
 
-    .line 32
     const/4 v0, 0x2
 
     sput v0, Landroid/telephony/DataConnectionRealTimeInfo;->DC_POWER_STATE_MEDIUM:I
 
-    .line 33
     const/4 v0, 0x3
 
     sput v0, Landroid/telephony/DataConnectionRealTimeInfo;->DC_POWER_STATE_HIGH:I
 
-    .line 34
     const v0, 0x7fffffff
 
     sput v0, Landroid/telephony/DataConnectionRealTimeInfo;->DC_POWER_STATE_UNKNOWN:I
 
-    .line 92
     new-instance v0, Landroid/telephony/DataConnectionRealTimeInfo$1;
 
     invoke-direct {v0}, Landroid/telephony/DataConnectionRealTimeInfo$1;-><init>()V
 
-    .line 91
     sput-object v0, Landroid/telephony/DataConnectionRealTimeInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 28
     return-void
 .end method
 
@@ -82,20 +75,16 @@
     .locals 2
 
     .prologue
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     const-wide v0, 0x7fffffffffffffffL
 
     iput-wide v0, p0, Landroid/telephony/DataConnectionRealTimeInfo;->mTime:J
 
-    .line 55
     sget v0, Landroid/telephony/DataConnectionRealTimeInfo;->DC_POWER_STATE_UNKNOWN:I
 
     iput v0, p0, Landroid/telephony/DataConnectionRealTimeInfo;->mDcPowerState:I
 
-    .line 53
     return-void
 .end method
 
@@ -105,16 +94,12 @@
     .param p3, "dcPowerState"    # I
 
     .prologue
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
     iput-wide p1, p0, Landroid/telephony/DataConnectionRealTimeInfo;->mTime:J
 
-    .line 45
     iput p3, p0, Landroid/telephony/DataConnectionRealTimeInfo;->mDcPowerState:I
 
-    .line 43
     return-void
 .end method
 
@@ -123,24 +108,20 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 62
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/telephony/DataConnectionRealTimeInfo;->mTime:J
 
-    .line 63
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/telephony/DataConnectionRealTimeInfo;->mDcPowerState:I
 
-    .line 61
     return-void
 .end method
 
@@ -160,7 +141,6 @@
     .locals 1
 
     .prologue
-    .line 82
     const/4 v0, 0x0
 
     return v0
@@ -175,20 +155,15 @@
 
     const/4 v2, 0x0
 
-    .line 116
     if-ne p0, p1, :cond_0
 
-    .line 117
     return v1
 
-    .line 119
     :cond_0
     if-nez p1, :cond_1
 
-    .line 120
     return v2
 
-    .line 122
     :cond_1
     invoke-virtual {p0}, Landroid/telephony/DataConnectionRealTimeInfo;->getClass()Ljava/lang/Class;
 
@@ -200,16 +175,13 @@
 
     if-eq v3, v4, :cond_2
 
-    .line 123
     return v2
 
     :cond_2
     move-object v0, p1
 
-    .line 125
     check-cast v0, Landroid/telephony/DataConnectionRealTimeInfo;
 
-    .line 126
     .local v0, "other":Landroid/telephony/DataConnectionRealTimeInfo;
     iget-wide v4, p0, Landroid/telephony/DataConnectionRealTimeInfo;->mTime:J
 
@@ -219,27 +191,23 @@
 
     if-nez v3, :cond_4
 
-    .line 127
     iget v3, p0, Landroid/telephony/DataConnectionRealTimeInfo;->mDcPowerState:I
 
     iget v4, v0, Landroid/telephony/DataConnectionRealTimeInfo;->mDcPowerState:I
 
     if-ne v3, v4, :cond_3
 
-    .line 126
     :goto_0
     return v1
 
     :cond_3
     move v1, v2
 
-    .line 127
     goto :goto_0
 
     :cond_4
     move v1, v2
 
-    .line 126
     goto :goto_0
 .end method
 
@@ -247,7 +215,6 @@
     .locals 1
 
     .prologue
-    .line 77
     iget v0, p0, Landroid/telephony/DataConnectionRealTimeInfo;->mDcPowerState:I
 
     return v0
@@ -257,7 +224,6 @@
     .locals 2
 
     .prologue
-    .line 70
     iget-wide v0, p0, Landroid/telephony/DataConnectionRealTimeInfo;->mTime:J
 
     return-wide v0
@@ -269,16 +235,13 @@
     .prologue
     const-wide/16 v6, 0x11
 
-    .line 107
     const-wide/16 v0, 0x11
 
-    .line 109
     .local v0, "prime":J
     iget-wide v4, p0, Landroid/telephony/DataConnectionRealTimeInfo;->mTime:J
 
     add-long v2, v6, v4
 
-    .line 110
     .local v2, "result":J
     mul-long v4, v6, v2
 
@@ -290,7 +253,6 @@
 
     add-long/2addr v2, v4
 
-    .line 111
     long-to-int v4, v2
 
     return v4
@@ -300,14 +262,12 @@
     .locals 4
 
     .prologue
-    .line 132
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 134
     .local v0, "sb":Ljava/lang/StringBuffer;
-    const-string/jumbo v1, "mTime="
+    const-string v1, "mTime="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -317,8 +277,7 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuffer;->append(J)Ljava/lang/StringBuffer;
 
-    .line 135
-    const-string/jumbo v1, " mDcPowerState="
+    const-string v1, " mDcPowerState="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -328,7 +287,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
-    .line 137
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -342,16 +300,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 87
     iget-wide v0, p0, Landroid/telephony/DataConnectionRealTimeInfo;->mTime:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 88
     iget v0, p0, Landroid/telephony/DataConnectionRealTimeInfo;->mDcPowerState:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 86
     return-void
 .end method

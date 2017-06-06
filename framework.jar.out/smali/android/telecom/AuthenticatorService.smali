@@ -20,7 +20,6 @@
     .locals 0
 
     .prologue
-    .line 34
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
     return-void
@@ -33,7 +32,6 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 44
     sget-object v0, Landroid/telecom/AuthenticatorService;->mAuthenticator:Landroid/telecom/AuthenticatorService$Authenticator;
 
     invoke-virtual {v0}, Landroid/telecom/AuthenticatorService$Authenticator;->getIBinder()Landroid/os/IBinder;
@@ -47,13 +45,11 @@
     .locals 1
 
     .prologue
-    .line 39
     new-instance v0, Landroid/telecom/AuthenticatorService$Authenticator;
 
     invoke-direct {v0, p0, p0}, Landroid/telecom/AuthenticatorService$Authenticator;-><init>(Landroid/telecom/AuthenticatorService;Landroid/content/Context;)V
 
     sput-object v0, Landroid/telecom/AuthenticatorService;->mAuthenticator:Landroid/telecom/AuthenticatorService$Authenticator;
 
-    .line 38
     return-void
 .end method

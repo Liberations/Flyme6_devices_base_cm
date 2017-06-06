@@ -33,7 +33,6 @@
     .param p3, "val$receiver"    # Landroid/os/ResultReceiver;
 
     .prologue
-    .line 280
     iput-object p1, p0, Landroid/service/media/MediaBrowserService$ServiceBinder$5;->this$1:Landroid/service/media/MediaBrowserService$ServiceBinder;
 
     iput-object p2, p0, Landroid/service/media/MediaBrowserService$ServiceBinder$5;->val$mediaId:Ljava/lang/String;
@@ -51,7 +50,6 @@
     .locals 3
 
     .prologue
-    .line 283
     iget-object v0, p0, Landroid/service/media/MediaBrowserService$ServiceBinder$5;->this$1:Landroid/service/media/MediaBrowserService$ServiceBinder;
 
     iget-object v0, v0, Landroid/service/media/MediaBrowserService$ServiceBinder;->this$0:Landroid/service/media/MediaBrowserService;
@@ -62,6 +60,5 @@
 
     invoke-static {v0, v1, v2}, Landroid/service/media/MediaBrowserService;->-wrap3(Landroid/service/media/MediaBrowserService;Ljava/lang/String;Landroid/os/ResultReceiver;)V
 
-    .line 282
     return-void
 .end method

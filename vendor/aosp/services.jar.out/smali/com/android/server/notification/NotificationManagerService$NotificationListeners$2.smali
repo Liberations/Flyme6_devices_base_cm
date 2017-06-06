@@ -36,7 +36,6 @@
     .param p4, "val$update"    # Landroid/service/notification/NotificationRankingUpdate;
 
     .prologue
-    .line 3838
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$NotificationListeners$2;->this$1:Lcom/android/server/notification/NotificationManagerService$NotificationListeners;
 
     iput-object p2, p0, Lcom/android/server/notification/NotificationManagerService$NotificationListeners$2;->val$info:Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;
@@ -56,7 +55,6 @@
     .locals 4
 
     .prologue
-    .line 3841
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$NotificationListeners$2;->this$1:Lcom/android/server/notification/NotificationManagerService$NotificationListeners;
 
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$NotificationListeners$2;->val$info:Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;
@@ -67,6 +65,5 @@
 
     invoke-static {v0, v1, v2, v3}, Lcom/android/server/notification/NotificationManagerService$NotificationListeners;->-wrap3(Lcom/android/server/notification/NotificationManagerService$NotificationListeners;Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;Landroid/service/notification/StatusBarNotification;Landroid/service/notification/NotificationRankingUpdate;)V
 
-    .line 3840
     return-void
 .end method

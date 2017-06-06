@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 606
     invoke-direct {p0}, Landroid/support/v4/view/ViewPropertyAnimatorCompat$JBViewPropertyAnimatorCompatImpl;-><init>()V
 
     return-void
@@ -33,7 +32,6 @@
     .param p2, "view"    # Landroid/view/View;
 
     .prologue
-    .line 610
     invoke-static {p2}, Landroid/support/v4/view/ViewPropertyAnimatorCompatJellybeanMr2;->getInterpolator(Landroid/view/View;)Landroid/view/animation/Interpolator;
 
     move-result-object v0

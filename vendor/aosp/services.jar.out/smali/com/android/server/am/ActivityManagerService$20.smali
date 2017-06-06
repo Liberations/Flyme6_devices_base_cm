@@ -35,7 +35,6 @@
     .locals 0
 
     .prologue
-    .line 14689
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -68,7 +67,6 @@
 
     const/4 v1, -0x1
 
-    .line 14693
     iget-object v0, p1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/server/am/ProcessRecord;
@@ -83,7 +81,6 @@
 
     if-eq v3, v0, :cond_1
 
-    .line 14694
     iget-object v0, p1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/server/am/ProcessRecord;
@@ -108,7 +105,6 @@
 
     goto :goto_0
 
-    .line 14696
     :cond_1
     iget-object v0, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
@@ -128,7 +124,6 @@
 
     if-eq v3, v0, :cond_3
 
-    .line 14697
     iget-object v0, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Integer;
@@ -155,7 +150,6 @@
 
     goto :goto_1
 
-    .line 14699
     :cond_3
     const/4 v0, 0x0
 
@@ -168,7 +162,6 @@
     .param p2, "object2"    # Ljava/lang/Object;
 
     .prologue
-    .line 14691
     check-cast p1, Landroid/util/Pair;
 
     .end local p1    # "object1":Ljava/lang/Object;

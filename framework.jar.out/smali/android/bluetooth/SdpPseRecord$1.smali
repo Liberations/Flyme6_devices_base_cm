@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 117
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,7 +34,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 119
     new-instance v0, Landroid/bluetooth/SdpPseRecord;
 
     invoke-direct {v0, p1}, Landroid/bluetooth/SdpPseRecord;-><init>(Landroid/os/Parcel;)V
@@ -48,7 +46,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 118
     invoke-virtual {p0, p1}, Landroid/bluetooth/SdpPseRecord$1;->createFromParcel(Landroid/os/Parcel;)Landroid/bluetooth/SdpPseRecord;
 
     move-result-object v0
@@ -61,7 +58,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 122
     new-array v0, p1, [Landroid/bluetooth/SdpPseRecord;
 
     return-object v0
@@ -72,7 +68,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 121
     invoke-virtual {p0, p1}, Landroid/bluetooth/SdpPseRecord$1;->newArray(I)[Landroid/bluetooth/SdpPseRecord;
 
     move-result-object v0

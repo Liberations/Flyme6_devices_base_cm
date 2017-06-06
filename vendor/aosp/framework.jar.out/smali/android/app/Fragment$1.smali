@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Landroid/app/Fragment;
 
     .prologue
-    .line 2176
     iput-object p1, p0, Landroid/app/Fragment$1;->this$0:Landroid/app/Fragment;
 
     invoke-direct {p0}, Landroid/app/FragmentContainer;-><init>()V
@@ -39,23 +38,20 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 2180
     iget-object v0, p0, Landroid/app/Fragment$1;->this$0:Landroid/app/Fragment;
 
     iget-object v0, v0, Landroid/app/Fragment;->mView:Landroid/view/View;
 
     if-nez v0, :cond_0
 
-    .line 2181
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v1, "Fragment does not have a view"
+    const-string v1, "Fragment does not have a view"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 2183
     :cond_0
     iget-object v0, p0, Landroid/app/Fragment$1;->this$0:Landroid/app/Fragment;
 
@@ -72,7 +68,6 @@
     .locals 1
 
     .prologue
-    .line 2188
     iget-object v0, p0, Landroid/app/Fragment$1;->this$0:Landroid/app/Fragment;
 
     iget-object v0, v0, Landroid/app/Fragment;->mView:Landroid/view/View;

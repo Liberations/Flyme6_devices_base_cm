@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/EntropyMixer;
 
     .prologue
-    .line 86
     iput-object p1, p0, Lcom/android/server/EntropyMixer$2;->this$0:Lcom/android/server/EntropyMixer;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,11 +39,9 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 89
     iget-object v0, p0, Lcom/android/server/EntropyMixer$2;->this$0:Lcom/android/server/EntropyMixer;
 
     invoke-static {v0}, Lcom/android/server/EntropyMixer;->-wrap2(Lcom/android/server/EntropyMixer;)V
 
-    .line 88
     return-void
 .end method

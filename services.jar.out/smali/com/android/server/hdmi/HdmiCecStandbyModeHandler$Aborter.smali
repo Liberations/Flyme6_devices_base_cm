@@ -30,15 +30,12 @@
     .param p2, "reason"    # I
 
     .prologue
-    .line 46
     iput-object p1, p0, Lcom/android/server/hdmi/HdmiCecStandbyModeHandler$Aborter;->this$0:Lcom/android/server/hdmi/HdmiCecStandbyModeHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
     iput p2, p0, Lcom/android/server/hdmi/HdmiCecStandbyModeHandler$Aborter;->mReason:I
 
-    .line 46
     return-void
 .end method
 
@@ -49,7 +46,6 @@
     .param p1, "message"    # Lcom/android/server/hdmi/HdmiCecMessage;
 
     .prologue
-    .line 51
     iget-object v0, p0, Lcom/android/server/hdmi/HdmiCecStandbyModeHandler$Aborter;->this$0:Lcom/android/server/hdmi/HdmiCecStandbyModeHandler;
 
     invoke-static {v0}, Lcom/android/server/hdmi/HdmiCecStandbyModeHandler;->-get2(Lcom/android/server/hdmi/HdmiCecStandbyModeHandler;)Lcom/android/server/hdmi/HdmiControlService;
@@ -60,7 +56,6 @@
 
     invoke-virtual {v0, p1, v1}, Lcom/android/server/hdmi/HdmiControlService;->maySendFeatureAbortCommand(Lcom/android/server/hdmi/HdmiCecMessage;I)V
 
-    .line 52
     const/4 v0, 0x1
 
     return v0

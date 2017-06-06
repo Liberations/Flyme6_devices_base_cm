@@ -48,43 +48,38 @@
 
     const/4 v2, 0x0
 
-    .line 139
     new-instance v0, Landroid/bluetooth/BluetoothSocket$SocketState;
 
-    const-string/jumbo v1, "INIT"
+    const-string v1, "INIT"
 
     invoke-direct {v0, v1, v2}, Landroid/bluetooth/BluetoothSocket$SocketState;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Landroid/bluetooth/BluetoothSocket$SocketState;->INIT:Landroid/bluetooth/BluetoothSocket$SocketState;
 
-    .line 140
     new-instance v0, Landroid/bluetooth/BluetoothSocket$SocketState;
 
-    const-string/jumbo v1, "CONNECTED"
+    const-string v1, "CONNECTED"
 
     invoke-direct {v0, v1, v3}, Landroid/bluetooth/BluetoothSocket$SocketState;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Landroid/bluetooth/BluetoothSocket$SocketState;->CONNECTED:Landroid/bluetooth/BluetoothSocket$SocketState;
 
-    .line 141
     new-instance v0, Landroid/bluetooth/BluetoothSocket$SocketState;
 
-    const-string/jumbo v1, "LISTENING"
+    const-string v1, "LISTENING"
 
     invoke-direct {v0, v1, v4}, Landroid/bluetooth/BluetoothSocket$SocketState;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Landroid/bluetooth/BluetoothSocket$SocketState;->LISTENING:Landroid/bluetooth/BluetoothSocket$SocketState;
 
-    .line 142
     new-instance v0, Landroid/bluetooth/BluetoothSocket$SocketState;
 
-    const-string/jumbo v1, "CLOSED"
+    const-string v1, "CLOSED"
 
     invoke-direct {v0, v1, v5}, Landroid/bluetooth/BluetoothSocket$SocketState;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Landroid/bluetooth/BluetoothSocket$SocketState;->CLOSED:Landroid/bluetooth/BluetoothSocket$SocketState;
 
-    .line 138
     const/4 v0, 0x4
 
     new-array v0, v0, [Landroid/bluetooth/BluetoothSocket$SocketState;
@@ -114,7 +109,6 @@
     .locals 0
 
     .prologue
-    .line 138
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -125,7 +119,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 138
     const-class v0, Landroid/bluetooth/BluetoothSocket$SocketState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -141,7 +134,6 @@
     .locals 1
 
     .prologue
-    .line 138
     sget-object v0, Landroid/bluetooth/BluetoothSocket$SocketState;->$VALUES:[Landroid/bluetooth/BluetoothSocket$SocketState;
 
     return-object v0

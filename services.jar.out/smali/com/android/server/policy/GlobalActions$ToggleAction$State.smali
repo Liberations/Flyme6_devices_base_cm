@@ -52,43 +52,38 @@
 
     const/4 v2, 0x0
 
-    .line 1063
     new-instance v0, Lcom/android/server/policy/GlobalActions$ToggleAction$State;
 
-    const-string/jumbo v1, "Off"
+    const-string v1, "Off"
 
     invoke-direct {v0, v1, v2, v2}, Lcom/android/server/policy/GlobalActions$ToggleAction$State;-><init>(Ljava/lang/String;IZ)V
 
     sput-object v0, Lcom/android/server/policy/GlobalActions$ToggleAction$State;->Off:Lcom/android/server/policy/GlobalActions$ToggleAction$State;
 
-    .line 1064
     new-instance v0, Lcom/android/server/policy/GlobalActions$ToggleAction$State;
 
-    const-string/jumbo v1, "TurningOn"
+    const-string v1, "TurningOn"
 
     invoke-direct {v0, v1, v3, v3}, Lcom/android/server/policy/GlobalActions$ToggleAction$State;-><init>(Ljava/lang/String;IZ)V
 
     sput-object v0, Lcom/android/server/policy/GlobalActions$ToggleAction$State;->TurningOn:Lcom/android/server/policy/GlobalActions$ToggleAction$State;
 
-    .line 1065
     new-instance v0, Lcom/android/server/policy/GlobalActions$ToggleAction$State;
 
-    const-string/jumbo v1, "TurningOff"
+    const-string v1, "TurningOff"
 
     invoke-direct {v0, v1, v4, v3}, Lcom/android/server/policy/GlobalActions$ToggleAction$State;-><init>(Ljava/lang/String;IZ)V
 
     sput-object v0, Lcom/android/server/policy/GlobalActions$ToggleAction$State;->TurningOff:Lcom/android/server/policy/GlobalActions$ToggleAction$State;
 
-    .line 1066
     new-instance v0, Lcom/android/server/policy/GlobalActions$ToggleAction$State;
 
-    const-string/jumbo v1, "On"
+    const-string v1, "On"
 
     invoke-direct {v0, v1, v5, v2}, Lcom/android/server/policy/GlobalActions$ToggleAction$State;-><init>(Ljava/lang/String;IZ)V
 
     sput-object v0, Lcom/android/server/policy/GlobalActions$ToggleAction$State;->On:Lcom/android/server/policy/GlobalActions$ToggleAction$State;
 
-    .line 1062
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/android/server/policy/GlobalActions$ToggleAction$State;
@@ -119,13 +114,10 @@
     .param p3, "intermediate"    # Z
 
     .prologue
-    .line 1070
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 1071
     iput-boolean p3, p0, Lcom/android/server/policy/GlobalActions$ToggleAction$State;->inTransition:Z
 
-    .line 1070
     return-void
 .end method
 
@@ -134,7 +126,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 1062
     const-class v0, Lcom/android/server/policy/GlobalActions$ToggleAction$State;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -150,7 +141,6 @@
     .locals 1
 
     .prologue
-    .line 1062
     sget-object v0, Lcom/android/server/policy/GlobalActions$ToggleAction$State;->$VALUES:[Lcom/android/server/policy/GlobalActions$ToggleAction$State;
 
     return-object v0
@@ -162,7 +152,6 @@
     .locals 1
 
     .prologue
-    .line 1075
     iget-boolean v0, p0, Lcom/android/server/policy/GlobalActions$ToggleAction$State;->inTransition:Z
 
     return v0

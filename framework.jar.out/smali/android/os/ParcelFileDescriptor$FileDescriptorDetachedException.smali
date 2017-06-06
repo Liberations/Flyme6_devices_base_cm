@@ -23,11 +23,9 @@
     .locals 1
 
     .prologue
-    .line 989
-    const-string/jumbo v0, "Remote side is detached"
+    const-string v0, "Remote side is detached"
 
     invoke-direct {p0, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    .line 988
     return-void
 .end method

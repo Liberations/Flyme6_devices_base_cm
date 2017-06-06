@@ -12,14 +12,12 @@
     .locals 1
 
     .prologue
-    .line 27
     new-instance v0, Landroid/os/NullVibrator;
 
     invoke-direct {v0}, Landroid/os/NullVibrator;-><init>()V
 
     sput-object v0, Landroid/os/NullVibrator;->sInstance:Landroid/os/NullVibrator;
 
-    .line 26
     return-void
 .end method
 
@@ -27,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 29
     invoke-direct {p0}, Landroid/os/Vibrator;-><init>()V
 
     return-void
@@ -37,7 +34,6 @@
     .locals 1
 
     .prologue
-    .line 33
     sget-object v0, Landroid/os/NullVibrator;->sInstance:Landroid/os/NullVibrator;
 
     return-object v0
@@ -49,7 +45,6 @@
     .locals 0
 
     .prologue
-    .line 60
     return-void
 .end method
 
@@ -57,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 38
     const/4 v0, 0x0
 
     return v0
@@ -71,7 +65,6 @@
     .param p5, "attributes"    # Landroid/media/AudioAttributes;
 
     .prologue
-    .line 45
     return-void
 .end method
 
@@ -84,19 +77,16 @@
     .param p5, "attributes"    # Landroid/media/AudioAttributes;
 
     .prologue
-    .line 54
     array-length v0, p3
 
     if-lt p4, v0, :cond_0
 
-    .line 55
     new-instance v0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
     invoke-direct {v0}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>()V
 
     throw v0
 
-    .line 53
     :cond_0
     return-void
 .end method

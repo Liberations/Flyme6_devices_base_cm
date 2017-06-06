@@ -29,16 +29,12 @@
     .param p4, "color"    # I
 
     .prologue
-    .line 459
     invoke-direct {p0, p3, p4}, Landroid/media/CCParser$StyleCode;-><init>(II)V
 
-    .line 460
     iput p1, p0, Landroid/media/CCParser$PAC;->mRow:I
 
-    .line 461
     iput p2, p0, Landroid/media/CCParser$PAC;->mCol:I
 
-    .line 458
     return-void
 .end method
 
@@ -50,7 +46,6 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 435
     const/16 v5, 0x8
 
     new-array v3, v5, [I
@@ -58,7 +53,6 @@
     .local v3, "rowTable":[I
     fill-array-data v3, :array_0
 
-    .line 436
     and-int/lit8 v5, p0, 0x7
 
     aget v5, v3, v5
@@ -69,31 +63,25 @@
 
     add-int v2, v5, v6
 
-    .line 437
     .local v2, "row":I
     const/4 v4, 0x0
 
-    .line 438
     .local v4, "style":I
     and-int/lit8 v5, p1, 0x1
 
     if-eqz v5, :cond_0
 
-    .line 439
     const/4 v4, 0x2
 
-    .line 441
     :cond_0
     and-int/lit8 v5, p1, 0x10
 
     if-eqz v5, :cond_1
 
-    .line 443
     shr-int/lit8 v5, p1, 0x1
 
     and-int/lit8 v1, v5, 0x7
 
-    .line 444
     .local v1, "indent":I
     new-instance v5, Landroid/media/CCParser$PAC;
 
@@ -103,26 +91,21 @@
 
     return-object v5
 
-    .line 447
     .end local v1    # "indent":I
     :cond_1
     shr-int/lit8 v5, p1, 0x1
 
     and-int/lit8 v0, v5, 0x7
 
-    .line 449
     .local v0, "color":I
     const/4 v5, 0x7
 
     if-ne v0, v5, :cond_2
 
-    .line 451
     const/4 v0, 0x0
 
-    .line 452
     or-int/lit8 v4, v4, 0x1
 
-    .line 454
     :cond_2
     new-instance v5, Landroid/media/CCParser$PAC;
 
@@ -132,7 +115,6 @@
 
     return-object v5
 
-    .line 435
     nop
 
     :array_0
@@ -154,7 +136,6 @@
     .locals 1
 
     .prologue
-    .line 473
     iget v0, p0, Landroid/media/CCParser$PAC;->mCol:I
 
     return v0
@@ -164,7 +145,6 @@
     .locals 1
 
     .prologue
-    .line 469
     iget v0, p0, Landroid/media/CCParser$PAC;->mRow:I
 
     return v0
@@ -176,7 +156,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 465
     iget v1, p0, Landroid/media/CCParser$PAC;->mCol:I
 
     if-ltz v1, :cond_0
@@ -191,14 +170,12 @@
     .locals 4
 
     .prologue
-    .line 478
-    const-string/jumbo v0, "{%d, %d}, %s"
+    const-string v0, "{%d, %d}, %s"
 
     const/4 v1, 0x3
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    .line 479
     iget v2, p0, Landroid/media/CCParser$PAC;->mRow:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -227,7 +204,6 @@
 
     aput-object v2, v1, v3
 
-    .line 478
     invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0

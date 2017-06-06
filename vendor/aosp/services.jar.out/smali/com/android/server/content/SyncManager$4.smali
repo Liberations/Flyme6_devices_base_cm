@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/content/SyncManager;
 
     .prologue
-    .line 282
     iput-object p1, p0, Lcom/android/server/content/SyncManager$4;->this$0:Lcom/android/server/content/SyncManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -44,19 +43,16 @@
 
     const/4 v1, 0x0
 
-    .line 285
     iget-object v0, p0, Lcom/android/server/content/SyncManager$4;->this$0:Lcom/android/server/content/SyncManager;
 
     invoke-virtual {v0}, Lcom/android/server/content/SyncManager;->updateRunningAccounts()V
 
-    .line 288
     iget-object v0, p0, Lcom/android/server/content/SyncManager$4;->this$0:Lcom/android/server/content/SyncManager;
 
     const/4 v2, -0x1
 
     const/4 v3, -0x2
 
-    .line 289
     const/4 v10, 0x0
 
     move-object v4, v1
@@ -65,9 +61,7 @@
 
     move-wide v8, v6
 
-    .line 288
     invoke-virtual/range {v0 .. v10}, Lcom/android/server/content/SyncManager;->scheduleSync(Landroid/accounts/Account;IILjava/lang/String;Landroid/os/Bundle;JJZ)V
 
-    .line 284
     return-void
 .end method

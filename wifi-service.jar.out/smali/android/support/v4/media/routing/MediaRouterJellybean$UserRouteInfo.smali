@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 194
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,13 +30,11 @@
     .param p1, "icon"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 204
     check-cast p0, Landroid/media/MediaRouter$UserRouteInfo;
 
     .end local p0    # "routeObj":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Landroid/media/MediaRouter$UserRouteInfo;->setIconDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 203
     return-void
 .end method
 
@@ -47,13 +44,11 @@
     .param p1, "name"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 196
     check-cast p0, Landroid/media/MediaRouter$UserRouteInfo;
 
     .end local p0    # "routeObj":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Landroid/media/MediaRouter$UserRouteInfo;->setName(Ljava/lang/CharSequence;)V
 
-    .line 195
     return-void
 .end method
 
@@ -63,13 +58,11 @@
     .param p1, "stream"    # I
 
     .prologue
-    .line 212
     check-cast p0, Landroid/media/MediaRouter$UserRouteInfo;
 
     .end local p0    # "routeObj":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Landroid/media/MediaRouter$UserRouteInfo;->setPlaybackStream(I)V
 
-    .line 211
     return-void
 .end method
 
@@ -79,13 +72,11 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 208
     check-cast p0, Landroid/media/MediaRouter$UserRouteInfo;
 
     .end local p0    # "routeObj":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Landroid/media/MediaRouter$UserRouteInfo;->setPlaybackType(I)V
 
-    .line 207
     return-void
 .end method
 
@@ -95,18 +86,14 @@
     .param p1, "rccObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 233
     check-cast p0, Landroid/media/MediaRouter$UserRouteInfo;
 
-    .line 234
     .end local p0    # "routeObj":Ljava/lang/Object;
     check-cast p1, Landroid/media/RemoteControlClient;
 
-    .line 233
     .end local p1    # "rccObj":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Landroid/media/MediaRouter$UserRouteInfo;->setRemoteControlClient(Landroid/media/RemoteControlClient;)V
 
-    .line 232
     return-void
 .end method
 
@@ -116,13 +103,11 @@
     .param p1, "status"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 200
     check-cast p0, Landroid/media/MediaRouter$UserRouteInfo;
 
     .end local p0    # "routeObj":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Landroid/media/MediaRouter$UserRouteInfo;->setStatus(Ljava/lang/CharSequence;)V
 
-    .line 199
     return-void
 .end method
 
@@ -132,13 +117,11 @@
     .param p1, "volume"    # I
 
     .prologue
-    .line 216
     check-cast p0, Landroid/media/MediaRouter$UserRouteInfo;
 
     .end local p0    # "routeObj":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Landroid/media/MediaRouter$UserRouteInfo;->setVolume(I)V
 
-    .line 215
     return-void
 .end method
 
@@ -148,18 +131,14 @@
     .param p1, "volumeCallbackObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 228
     check-cast p0, Landroid/media/MediaRouter$UserRouteInfo;
 
-    .line 229
     .end local p0    # "routeObj":Ljava/lang/Object;
     check-cast p1, Landroid/media/MediaRouter$VolumeCallback;
 
-    .line 228
     .end local p1    # "volumeCallbackObj":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Landroid/media/MediaRouter$UserRouteInfo;->setVolumeCallback(Landroid/media/MediaRouter$VolumeCallback;)V
 
-    .line 227
     return-void
 .end method
 
@@ -169,13 +148,11 @@
     .param p1, "volumeHandling"    # I
 
     .prologue
-    .line 224
     check-cast p0, Landroid/media/MediaRouter$UserRouteInfo;
 
     .end local p0    # "routeObj":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Landroid/media/MediaRouter$UserRouteInfo;->setVolumeHandling(I)V
 
-    .line 223
     return-void
 .end method
 
@@ -185,12 +162,10 @@
     .param p1, "volumeMax"    # I
 
     .prologue
-    .line 220
     check-cast p0, Landroid/media/MediaRouter$UserRouteInfo;
 
     .end local p0    # "routeObj":Ljava/lang/Object;
     invoke-virtual {p0, p1}, Landroid/media/MediaRouter$UserRouteInfo;->setVolumeMax(I)V
 
-    .line 219
     return-void
 .end method

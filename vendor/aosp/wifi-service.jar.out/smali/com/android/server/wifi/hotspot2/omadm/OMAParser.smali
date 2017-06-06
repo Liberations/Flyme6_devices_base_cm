@@ -14,7 +14,6 @@
     .locals 0
 
     .prologue
-    .line 17
     invoke-direct {p0}, Lorg/xml/sax/helpers/DefaultHandler;-><init>()V
 
     return-void
@@ -34,12 +33,10 @@
     .end annotation
 
     .prologue
-    .line 61
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/omadm/OMAParser;->mCurrent:Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/server/wifi/hotspot2/omadm/XMLNode;->addText([CII)V
 
-    .line 60
     return-void
 .end method
 
@@ -55,7 +52,6 @@
     .end annotation
 
     .prologue
-    .line 46
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/omadm/OMAParser;->mCurrent:Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
 
     invoke-virtual {v1}, Lcom/android/server/wifi/hotspot2/omadm/XMLNode;->getTag()Ljava/lang/String;
@@ -68,14 +64,13 @@
 
     if-nez v1, :cond_0
 
-    .line 47
     new-instance v1, Lorg/xml/sax/SAXException;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "End tag \'"
+    const-string v3, "End tag \'"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -85,16 +80,14 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "\' doesn\'t match current node: "
+    const-string v3, "\' doesn\'t match current node: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    .line 48
     iget-object v3, p0, Lcom/android/server/wifi/hotspot2/omadm/OMAParser;->mCurrent:Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
 
-    .line 47
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -107,7 +100,6 @@
 
     throw v1
 
-    .line 51
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/omadm/OMAParser;->mCurrent:Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
@@ -116,7 +108,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 56
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/omadm/OMAParser;->mCurrent:Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
 
     invoke-virtual {v1}, Lcom/android/server/wifi/hotspot2/omadm/XMLNode;->getParent()Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
@@ -125,18 +116,15 @@
 
     iput-object v1, p0, Lcom/android/server/wifi/hotspot2/omadm/OMAParser;->mCurrent:Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
 
-    .line 45
     return-void
 
-    .line 52
     :catch_0
     move-exception v0
 
-    .line 53
     .local v0, "ioe":Ljava/io/IOException;
     new-instance v1, Lorg/xml/sax/SAXException;
 
-    const-string/jumbo v2, "Failed to close element"
+    const-string v2, "Failed to close element"
 
     invoke-direct {v1, v2, v0}, Lorg/xml/sax/SAXException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
@@ -155,7 +143,6 @@
     .end annotation
 
     .prologue
-    .line 23
     :try_start_0
     invoke-static {}, Ljavax/xml/parsers/SAXParserFactory;->newInstance()Ljavax/xml/parsers/SAXParserFactory;
 
@@ -165,7 +152,6 @@
 
     move-result-object v0
 
-    .line 24
     .local v0, "parser":Ljavax/xml/parsers/SAXParser;
     new-instance v2, Lorg/xml/sax/InputSource;
 
@@ -177,7 +163,6 @@
 
     invoke-virtual {v0, v2, p0}, Ljavax/xml/parsers/SAXParser;->parse(Lorg/xml/sax/InputSource;Lorg/xml/sax/helpers/DefaultHandler;)V
 
-    .line 25
     new-instance v2, Lcom/android/server/wifi/hotspot2/omadm/MOTree;
 
     iget-object v3, p0, Lcom/android/server/wifi/hotspot2/omadm/OMAParser;->mRoot:Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
@@ -188,12 +173,10 @@
 
     return-object v2
 
-    .line 26
     .end local v0    # "parser":Ljavax/xml/parsers/SAXParser;
     :catch_0
     move-exception v1
 
-    .line 27
     .local v1, "pce":Ljavax/xml/parsers/ParserConfigurationException;
     new-instance v2, Lorg/xml/sax/SAXException;
 
@@ -215,10 +198,8 @@
     .end annotation
 
     .prologue
-    .line 34
     iget-object v0, p0, Lcom/android/server/wifi/hotspot2/omadm/OMAParser;->mCurrent:Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
 
-    .line 36
     .local v0, "parent":Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
     new-instance v1, Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
 
@@ -228,21 +209,17 @@
 
     iput-object v1, p0, Lcom/android/server/wifi/hotspot2/omadm/OMAParser;->mCurrent:Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
 
-    .line 38
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/omadm/OMAParser;->mRoot:Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
 
     if-nez v1, :cond_0
 
-    .line 39
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/omadm/OMAParser;->mCurrent:Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
 
     iput-object v1, p0, Lcom/android/server/wifi/hotspot2/omadm/OMAParser;->mRoot:Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
 
-    .line 33
     :goto_0
     return-void
 
-    .line 41
     :cond_0
     iget-object v1, p0, Lcom/android/server/wifi/hotspot2/omadm/OMAParser;->mCurrent:Lcom/android/server/wifi/hotspot2/omadm/XMLNode;
 

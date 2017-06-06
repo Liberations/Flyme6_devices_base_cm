@@ -14,7 +14,6 @@
     .locals 0
 
     .prologue
-    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,7 +25,6 @@
     .locals 2
 
     .prologue
-    .line 25
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -39,34 +37,26 @@
 
     move-result-object v0
 
-    .line 26
-    const-string/jumbo v1, " causeCode: "
+    const-string v1, " causeCode: "
 
-    .line 25
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 26
     iget v1, p0, Lcom/android/internal/telephony/LastCallFailCause;->causeCode:I
 
-    .line 25
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 27
-    const-string/jumbo v1, " vendorCause: "
+    const-string v1, " vendorCause: "
 
-    .line 25
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 27
     iget-object v1, p0, Lcom/android/internal/telephony/LastCallFailCause;->vendorCause:Ljava/lang/String;
 
-    .line 25
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0

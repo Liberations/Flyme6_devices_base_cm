@@ -43,22 +43,18 @@
     .param p2, "options"    # Landroid/os/Bundle;
 
     .prologue
-    .line 474
     iput-object p1, p0, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider;->this$0:Lcyanogenmod/externalviews/KeyguardExternalViewProviderService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 471
     new-instance v0, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider$ProviderImpl;
 
     invoke-direct {v0, p0, p0}, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider$ProviderImpl;-><init>(Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider;Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider;)V
 
     iput-object v0, p0, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider;->mImpl:Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider$ProviderImpl;
 
-    .line 475
     iput-object p2, p0, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider;->mOptions:Landroid/os/Bundle;
 
-    .line 474
     return-void
 .end method
 
@@ -70,7 +66,6 @@
     .end annotation
 
     .prologue
-    .line 602
     return-void
 .end method
 
@@ -78,7 +73,6 @@
     .locals 1
 
     .prologue
-    .line 479
     iget-object v0, p0, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider;->mOptions:Landroid/os/Bundle;
 
     return-object v0
@@ -88,7 +82,6 @@
     .locals 1
 
     .prologue
-    .line 632
     const v0, 0x80720
 
     return v0
@@ -98,7 +91,6 @@
     .locals 1
 
     .prologue
-    .line 628
     const/16 v0, 0xbb6
 
     return v0
@@ -108,7 +100,6 @@
     .locals 0
 
     .prologue
-    .line 485
     return-void
 .end method
 
@@ -122,7 +113,6 @@
     .locals 0
 
     .prologue
-    .line 490
     return-void
 .end method
 
@@ -137,7 +127,6 @@
     .param p1, "swipeProgress"    # F
 
     .prologue
-    .line 554
     return-void
 .end method
 
@@ -151,7 +140,6 @@
     .locals 1
 
     .prologue
-    .line 571
     iget-object v0, p0, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider;->mImpl:Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider$ProviderImpl;
 
     invoke-virtual {v0}, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider$ProviderImpl;->requestDismiss()Z
@@ -166,7 +154,6 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 588
     iget-object v0, p0, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider;->mImpl:Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider$ProviderImpl;
 
     invoke-virtual {v0, p1}, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider$ProviderImpl;->requestDismissAndStartActivity(Landroid/content/Intent;)Z
@@ -181,12 +168,10 @@
     .param p1, "isInteractive"    # Z
 
     .prologue
-    .line 615
     iget-object v0, p0, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider;->mImpl:Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider$ProviderImpl;
 
     invoke-virtual {v0, p1}, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider$ProviderImpl;->setInteractivity(Z)V
 
-    .line 614
     return-void
 .end method
 
@@ -194,11 +179,9 @@
     .locals 1
 
     .prologue
-    .line 624
     iget-object v0, p0, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider;->mImpl:Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider$ProviderImpl;
 
     invoke-virtual {v0}, Lcyanogenmod/externalviews/KeyguardExternalViewProviderService$Provider$ProviderImpl;->slideLockscreenIn()V
 
-    .line 623
     return-void
 .end method

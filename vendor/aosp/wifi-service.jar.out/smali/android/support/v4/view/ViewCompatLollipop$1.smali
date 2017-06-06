@@ -27,7 +27,6 @@
     .param p1, "val$listener"    # Landroid/support/v4/view/OnApplyWindowInsetsListener;
 
     .prologue
-    .line 56
     iput-object p1, p0, Landroid/support/v4/view/ViewCompatLollipop$1;->val$listener:Landroid/support/v4/view/OnApplyWindowInsetsListener;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,12 +42,10 @@
     .param p2, "windowInsets"    # Landroid/view/WindowInsets;
 
     .prologue
-    .line 60
     new-instance v0, Landroid/support/v4/view/WindowInsetsCompatApi21;
 
     invoke-direct {v0, p2}, Landroid/support/v4/view/WindowInsetsCompatApi21;-><init>(Landroid/view/WindowInsets;)V
 
-    .line 62
     .local v0, "insets":Landroid/support/v4/view/WindowInsetsCompatApi21;
     iget-object v1, p0, Landroid/support/v4/view/ViewCompatLollipop$1;->val$listener:Landroid/support/v4/view/OnApplyWindowInsetsListener;
 
@@ -59,7 +56,6 @@
     .end local v0    # "insets":Landroid/support/v4/view/WindowInsetsCompatApi21;
     check-cast v0, Landroid/support/v4/view/WindowInsetsCompatApi21;
 
-    .line 64
     .restart local v0    # "insets":Landroid/support/v4/view/WindowInsetsCompatApi21;
     invoke-virtual {v0}, Landroid/support/v4/view/WindowInsetsCompatApi21;->unwrap()Landroid/view/WindowInsets;
 

@@ -38,15 +38,12 @@
     .locals 1
 
     .prologue
-    .line 82
     new-instance v0, Landroid/media/projection/MediaProjectionInfo$1;
 
     invoke-direct {v0}, Landroid/media/projection/MediaProjectionInfo$1;-><init>()V
 
-    .line 81
     sput-object v0, Landroid/media/projection/MediaProjectionInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 26
     return-void
 .end method
 
@@ -55,24 +52,20 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/media/projection/MediaProjectionInfo;->mPackageName:Ljava/lang/String;
 
-    .line 37
     invoke-static {p1}, Landroid/os/UserHandle;->readFromParcel(Landroid/os/Parcel;)Landroid/os/UserHandle;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/media/projection/MediaProjectionInfo;->mUserHandle:Landroid/os/UserHandle;
 
-    .line 35
     return-void
 .end method
 
@@ -82,16 +75,12 @@
     .param p2, "handle"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     iput-object p1, p0, Landroid/media/projection/MediaProjectionInfo;->mPackageName:Ljava/lang/String;
 
-    .line 32
     iput-object p2, p0, Landroid/media/projection/MediaProjectionInfo;->mUserHandle:Landroid/os/UserHandle;
 
-    .line 30
     return-void
 .end method
 
@@ -101,7 +90,6 @@
     .locals 1
 
     .prologue
-    .line 72
     const/4 v0, 0x0
 
     return v0
@@ -114,17 +102,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 50
     instance-of v2, p1, Landroid/media/projection/MediaProjectionInfo;
 
     if-eqz v2, :cond_1
 
     move-object v0, p1
 
-    .line 51
     check-cast v0, Landroid/media/projection/MediaProjectionInfo;
 
-    .line 52
     .local v0, "other":Landroid/media/projection/MediaProjectionInfo;
     iget-object v2, v0, Landroid/media/projection/MediaProjectionInfo;->mPackageName:Ljava/lang/String;
 
@@ -136,7 +121,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 53
     iget-object v1, v0, Landroid/media/projection/MediaProjectionInfo;->mUserHandle:Landroid/os/UserHandle;
 
     iget-object v2, p0, Landroid/media/projection/MediaProjectionInfo;->mUserHandle:Landroid/os/UserHandle;
@@ -145,11 +129,9 @@
 
     move-result v1
 
-    .line 52
     :cond_0
     return v1
 
-    .line 55
     .end local v0    # "other":Landroid/media/projection/MediaProjectionInfo;
     :cond_1
     return v1
@@ -159,7 +141,6 @@
     .locals 1
 
     .prologue
-    .line 41
     iget-object v0, p0, Landroid/media/projection/MediaProjectionInfo;->mPackageName:Ljava/lang/String;
 
     return-object v0
@@ -169,7 +150,6 @@
     .locals 1
 
     .prologue
-    .line 45
     iget-object v0, p0, Landroid/media/projection/MediaProjectionInfo;->mUserHandle:Landroid/os/UserHandle;
 
     return-object v0
@@ -179,7 +159,6 @@
     .locals 3
 
     .prologue
-    .line 60
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -207,45 +186,36 @@
     .locals 2
 
     .prologue
-    .line 65
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "MediaProjectionInfo{mPackageName="
+    const-string v1, "MediaProjectionInfo{mPackageName="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 66
     iget-object v1, p0, Landroid/media/projection/MediaProjectionInfo;->mPackageName:Ljava/lang/String;
 
-    .line 65
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 66
-    const-string/jumbo v1, ", mUserHandle="
+    const-string v1, ", mUserHandle="
 
-    .line 65
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 67
     iget-object v1, p0, Landroid/media/projection/MediaProjectionInfo;->mUserHandle:Landroid/os/UserHandle;
 
-    .line 65
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 67
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
-    .line 65
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -263,16 +233,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 77
     iget-object v0, p0, Landroid/media/projection/MediaProjectionInfo;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 78
     iget-object v0, p0, Landroid/media/projection/MediaProjectionInfo;->mUserHandle:Landroid/os/UserHandle;
 
     invoke-static {v0, p1}, Landroid/os/UserHandle;->writeToParcel(Landroid/os/UserHandle;Landroid/os/Parcel;)V
 
-    .line 76
     return-void
 .end method

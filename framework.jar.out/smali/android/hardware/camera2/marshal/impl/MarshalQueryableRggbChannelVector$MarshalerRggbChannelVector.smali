@@ -43,14 +43,11 @@
     .end annotation
 
     .prologue
-    .line 35
     .local p2, "typeReference":Landroid/hardware/camera2/utils/TypeReference;, "Landroid/hardware/camera2/utils/TypeReference<Landroid/hardware/camera2/params/RggbChannelVector;>;"
     iput-object p1, p0, Landroid/hardware/camera2/marshal/impl/MarshalQueryableRggbChannelVector$MarshalerRggbChannelVector;->this$0:Landroid/hardware/camera2/marshal/impl/MarshalQueryableRggbChannelVector;
 
-    .line 37
     invoke-direct {p0, p1, p2, p3}, Landroid/hardware/camera2/marshal/Marshaler;-><init>(Landroid/hardware/camera2/marshal/MarshalQueryable;Landroid/hardware/camera2/utils/TypeReference;I)V
 
-    .line 36
     return-void
 .end method
 
@@ -60,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 59
     const/16 v0, 0x10
 
     return v0
@@ -72,7 +68,6 @@
     .param p2, "buffer"    # Ljava/nio/ByteBuffer;
 
     .prologue
-    .line 42
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -81,19 +76,16 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 43
     invoke-virtual {p1, v0}, Landroid/hardware/camera2/params/RggbChannelVector;->getComponent(I)F
 
     move-result v1
 
     invoke-virtual {p2, v1}, Ljava/nio/ByteBuffer;->putFloat(F)Ljava/nio/ByteBuffer;
 
-    .line 42
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 41
     :cond_0
     return-void
 .end method
@@ -104,7 +96,6 @@
     .param p2, "buffer"    # Ljava/nio/ByteBuffer;
 
     .prologue
-    .line 41
     check-cast p1, Landroid/hardware/camera2/params/RggbChannelVector;
 
     .end local p1    # "value":Ljava/lang/Object;
@@ -118,30 +109,25 @@
     .param p1, "buffer"    # Ljava/nio/ByteBuffer;
 
     .prologue
-    .line 49
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getFloat()F
 
     move-result v3
 
-    .line 50
     .local v3, "red":F
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getFloat()F
 
     move-result v1
 
-    .line 51
     .local v1, "gEven":F
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getFloat()F
 
     move-result v2
 
-    .line 52
     .local v2, "gOdd":F
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getFloat()F
 
     move-result v0
 
-    .line 54
     .local v0, "blue":F
     new-instance v4, Landroid/hardware/camera2/params/RggbChannelVector;
 
@@ -155,7 +141,6 @@
     .param p1, "buffer"    # Ljava/nio/ByteBuffer;
 
     .prologue
-    .line 48
     invoke-virtual {p0, p1}, Landroid/hardware/camera2/marshal/impl/MarshalQueryableRggbChannelVector$MarshalerRggbChannelVector;->unmarshal(Ljava/nio/ByteBuffer;)Landroid/hardware/camera2/params/RggbChannelVector;
 
     move-result-object v0

@@ -44,15 +44,12 @@
     .locals 1
 
     .prologue
-    .line 142
     new-instance v0, Landroid/view/textservice/TextInfo$1;
 
     invoke-direct {v0}, Landroid/view/textservice/TextInfo$1;-><init>()V
 
-    .line 141
     sput-object v0, Landroid/view/textservice/TextInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 29
     return-void
 .end method
 
@@ -61,10 +58,8 @@
     .param p1, "source"    # Landroid/os/Parcel;
 
     .prologue
-    .line 87
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 88
     sget-object v0, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -75,21 +70,18 @@
 
     iput-object v0, p0, Landroid/view/textservice/TextInfo;->mCharSequence:Ljava/lang/CharSequence;
 
-    .line 89
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/view/textservice/TextInfo;->mCookie:I
 
-    .line 90
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/view/textservice/TextInfo;->mSequenceNumber:I
 
-    .line 87
     return-void
 .end method
 
@@ -102,41 +94,34 @@
     .param p5, "sequenceNumber"    # I
 
     .prologue
-    .line 68
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 69
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 70
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v4, "charSequence is empty"
+    const-string v4, "charSequence is empty"
 
     invoke-direct {v3, v4}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v3
 
-    .line 74
     :cond_0
     new-instance v1, Landroid/text/SpannableStringBuilder;
 
     invoke-direct {v1, p1, p2, p3}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;II)V
 
-    .line 76
     .local v1, "spannableString":Landroid/text/SpannableStringBuilder;
     invoke-virtual {v1}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v3
 
-    .line 77
     const-class v4, Landroid/text/style/SpellCheckSpan;
 
-    .line 76
     const/4 v5, 0x0
 
     invoke-virtual {v1, v5, v3, v4}, Landroid/text/SpannableStringBuilder;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
@@ -145,7 +130,6 @@
 
     check-cast v2, [Landroid/text/style/SpellCheckSpan;
 
-    .line 78
     .local v2, "spans":[Landroid/text/style/SpellCheckSpan;
     const/4 v0, 0x0
 
@@ -155,27 +139,21 @@
 
     if-ge v0, v3, :cond_1
 
-    .line 79
     aget-object v3, v2, v0
 
     invoke-virtual {v1, v3}, Landroid/text/SpannableStringBuilder;->removeSpan(Ljava/lang/Object;)V
 
-    .line 78
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 82
     :cond_1
     iput-object v1, p0, Landroid/view/textservice/TextInfo;->mCharSequence:Ljava/lang/CharSequence;
 
-    .line 83
     iput p4, p0, Landroid/view/textservice/TextInfo;->mCookie:I
 
-    .line 84
     iput p5, p0, Landroid/view/textservice/TextInfo;->mSequenceNumber:I
 
-    .line 68
     return-void
 .end method
 
@@ -186,7 +164,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 42
     invoke-static {p1}, Landroid/view/textservice/TextInfo;->getStringLengthOrZero(Ljava/lang/String;)I
 
     move-result v3
@@ -201,7 +178,6 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/view/textservice/TextInfo;-><init>(Ljava/lang/CharSequence;IIII)V
 
-    .line 41
     return-void
 .end method
 
@@ -212,7 +188,6 @@
     .param p3, "sequenceNumber"    # I
 
     .prologue
-    .line 52
     invoke-static {p1}, Landroid/view/textservice/TextInfo;->getStringLengthOrZero(Ljava/lang/String;)I
 
     move-result v3
@@ -229,7 +204,6 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/view/textservice/TextInfo;-><init>(Ljava/lang/CharSequence;IIII)V
 
-    .line 51
     return-void
 .end method
 
@@ -238,7 +212,6 @@
     .param p0, "text"    # Ljava/lang/String;
 
     .prologue
-    .line 56
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -264,7 +237,6 @@
     .locals 1
 
     .prologue
-    .line 159
     const/4 v0, 0x0
 
     return v0
@@ -274,7 +246,6 @@
     .locals 1
 
     .prologue
-    .line 121
     iget-object v0, p0, Landroid/view/textservice/TextInfo;->mCharSequence:Ljava/lang/CharSequence;
 
     return-object v0
@@ -284,7 +255,6 @@
     .locals 1
 
     .prologue
-    .line 128
     iget v0, p0, Landroid/view/textservice/TextInfo;->mCookie:I
 
     return v0
@@ -294,7 +264,6 @@
     .locals 1
 
     .prologue
-    .line 135
     iget v0, p0, Landroid/view/textservice/TextInfo;->mSequenceNumber:I
 
     return v0
@@ -306,15 +275,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 110
     iget-object v0, p0, Landroid/view/textservice/TextInfo;->mCharSequence:Ljava/lang/CharSequence;
 
     if-nez v0, :cond_0
 
-    .line 111
     return-object v1
 
-    .line 113
     :cond_0
     iget-object v0, p0, Landroid/view/textservice/TextInfo;->mCharSequence:Ljava/lang/CharSequence;
 
@@ -331,21 +297,17 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 101
     iget-object v0, p0, Landroid/view/textservice/TextInfo;->mCharSequence:Ljava/lang/CharSequence;
 
     invoke-static {v0, p1, p2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
-    .line 102
     iget v0, p0, Landroid/view/textservice/TextInfo;->mCookie:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 103
     iget v0, p0, Landroid/view/textservice/TextInfo;->mSequenceNumber:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 100
     return-void
 .end method

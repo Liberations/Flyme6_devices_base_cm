@@ -30,13 +30,10 @@
     .param p5, "f"    # Landroid/net/NetworkCapabilities;
 
     .prologue
-    .line 5698
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$UntrustedWifiNetworkFactory;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
-    .line 5699
     invoke-direct {p0, p2, p3, p4, p5}, Landroid/net/NetworkFactory;-><init>(Landroid/os/Looper;Landroid/content/Context;Ljava/lang/String;Landroid/net/NetworkCapabilities;)V
 
-    .line 5698
     return-void
 .end method
 
@@ -49,12 +46,11 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 5723
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "mUntrustedReqCount "
+    const-string v1, "mUntrustedReqCount "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -72,7 +68,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 5722
     return-void
 .end method
 
@@ -84,20 +79,16 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 5704
     iget-object v0, p1, Landroid/net/NetworkRequest;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
-    .line 5705
     const/16 v1, 0xe
 
-    .line 5704
     invoke-virtual {v0, v1}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 5706
     iget v0, p0, Lcom/android/server/wifi/WifiStateMachine$UntrustedWifiNetworkFactory;->mUntrustedReqCount:I
 
     add-int/lit8 v0, v0, 0x1
@@ -106,7 +97,6 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 5707
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$UntrustedWifiNetworkFactory;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-static {v0}, Lcom/android/server/wifi/WifiStateMachine;->-get109(Lcom/android/server/wifi/WifiStateMachine;)Lcom/android/server/wifi/WifiAutoJoinController;
@@ -115,7 +105,6 @@
 
     invoke-virtual {v0, v2}, Lcom/android/server/wifi/WifiAutoJoinController;->setAllowUntrustedConnections(Z)V
 
-    .line 5703
     :cond_0
     return-void
 .end method
@@ -127,20 +116,16 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 5714
     iget-object v0, p1, Landroid/net/NetworkRequest;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
-    .line 5715
     const/16 v1, 0xe
 
-    .line 5714
     invoke-virtual {v0, v1}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 5716
     iget v0, p0, Lcom/android/server/wifi/WifiStateMachine$UntrustedWifiNetworkFactory;->mUntrustedReqCount:I
 
     add-int/lit8 v0, v0, -0x1
@@ -149,7 +134,6 @@
 
     if-nez v0, :cond_0
 
-    .line 5717
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$UntrustedWifiNetworkFactory;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-static {v0}, Lcom/android/server/wifi/WifiStateMachine;->-get109(Lcom/android/server/wifi/WifiStateMachine;)Lcom/android/server/wifi/WifiAutoJoinController;
@@ -158,7 +142,6 @@
 
     invoke-virtual {v0, v2}, Lcom/android/server/wifi/WifiAutoJoinController;->setAllowUntrustedConnections(Z)V
 
-    .line 5713
     :cond_0
     return-void
 .end method

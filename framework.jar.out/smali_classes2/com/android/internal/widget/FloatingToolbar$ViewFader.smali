@@ -44,10 +44,8 @@
 
     const/4 v4, 0x0
 
-    .line 1391
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1392
     invoke-static {p1}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -56,7 +54,6 @@
 
     iput-object v0, p0, Lcom/android/internal/widget/FloatingToolbar$ViewFader;->mView:Landroid/view/View;
 
-    .line 1393
     sget-object v0, Landroid/view/View;->ALPHA:Landroid/util/Property;
 
     new-array v1, v8, [F
@@ -69,17 +66,14 @@
 
     move-result-object v0
 
-    .line 1394
     const-wide/16 v2, 0xfa
 
-    .line 1393
     invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/widget/FloatingToolbar$ViewFader;->mFadeOutAnimation:Landroid/animation/ObjectAnimator;
 
-    .line 1395
     sget-object v0, Landroid/view/View;->ALPHA:Landroid/util/Property;
 
     new-array v1, v8, [F
@@ -92,17 +86,14 @@
 
     move-result-object v0
 
-    .line 1396
     const-wide/16 v2, 0x96
 
-    .line 1395
     invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/widget/FloatingToolbar$ViewFader;->mFadeInAnimation:Landroid/animation/ObjectAnimator;
 
-    .line 1391
     return-void
 .end method
 
@@ -120,17 +111,14 @@
     .locals 1
 
     .prologue
-    .line 1418
     iget-object v0, p0, Lcom/android/internal/widget/FloatingToolbar$ViewFader;->mFadeInAnimation:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 1419
     iget-object v0, p0, Lcom/android/internal/widget/FloatingToolbar$ViewFader;->mFadeOutAnimation:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 1417
     return-void
 .end method
 
@@ -141,22 +129,17 @@
     .param p1, "animate"    # Z
 
     .prologue
-    .line 1400
     invoke-direct {p0}, Lcom/android/internal/widget/FloatingToolbar$ViewFader;->cancelFadeAnimations()V
 
-    .line 1401
     if-eqz p1, :cond_0
 
-    .line 1402
     iget-object v0, p0, Lcom/android/internal/widget/FloatingToolbar$ViewFader;->mFadeInAnimation:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 1399
     :goto_0
     return-void
 
-    .line 1404
     :cond_0
     iget-object v0, p0, Lcom/android/internal/widget/FloatingToolbar$ViewFader;->mView:Landroid/view/View;
 
@@ -172,22 +155,17 @@
     .param p1, "animate"    # Z
 
     .prologue
-    .line 1409
     invoke-direct {p0}, Lcom/android/internal/widget/FloatingToolbar$ViewFader;->cancelFadeAnimations()V
 
-    .line 1410
     if-eqz p1, :cond_0
 
-    .line 1411
     iget-object v0, p0, Lcom/android/internal/widget/FloatingToolbar$ViewFader;->mFadeOutAnimation:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 1408
     :goto_0
     return-void
 
-    .line 1413
     :cond_0
     iget-object v0, p0, Lcom/android/internal/widget/FloatingToolbar$ViewFader;->mView:Landroid/view/View;
 

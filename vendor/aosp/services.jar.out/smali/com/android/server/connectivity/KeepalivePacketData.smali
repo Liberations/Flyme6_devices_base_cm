@@ -50,30 +50,22 @@
     .prologue
     const/16 v2, -0x15
 
-    .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
     iput-object p1, p0, Lcom/android/server/connectivity/KeepalivePacketData;->srcAddress:Ljava/net/InetAddress;
 
-    .line 66
     iput-object p3, p0, Lcom/android/server/connectivity/KeepalivePacketData;->dstAddress:Ljava/net/InetAddress;
 
-    .line 67
     iput p2, p0, Lcom/android/server/connectivity/KeepalivePacketData;->srcPort:I
 
-    .line 68
     iput p4, p0, Lcom/android/server/connectivity/KeepalivePacketData;->dstPort:I
 
-    .line 69
     iput-object p5, p0, Lcom/android/server/connectivity/KeepalivePacketData;->data:[B
 
-    .line 72
     if-eqz p1, :cond_0
 
     if-nez p3, :cond_1
 
-    .line 74
     :cond_0
     new-instance v0, Lcom/android/server/connectivity/KeepalivePacketData$InvalidPacketException;
 
@@ -81,7 +73,6 @@
 
     throw v0
 
-    .line 73
     :cond_1
     invoke-virtual {p1}, Ljava/net/InetAddress;->getClass()Ljava/lang/Class;
 
@@ -105,19 +96,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 78
     iget-object v0, p0, Lcom/android/server/connectivity/KeepalivePacketData;->dstAddress:Ljava/net/InetAddress;
 
     instance-of v0, v0, Ljava/net/Inet4Address;
 
     if-eqz v0, :cond_2
 
-    .line 79
     sget v0, Landroid/system/OsConstants;->ETH_P_IP:I
 
     iput v0, p0, Lcom/android/server/connectivity/KeepalivePacketData;->protocol:I
 
-    .line 87
     :goto_0
     invoke-static {p2}, Landroid/net/util/IpUtils;->isValidUdpOrTcpPort(I)Z
 
@@ -131,10 +119,8 @@
 
     if-eqz v0, :cond_4
 
-    .line 64
     return-void
 
-    .line 80
     :cond_2
     iget-object v0, p0, Lcom/android/server/connectivity/KeepalivePacketData;->dstAddress:Ljava/net/InetAddress;
 
@@ -142,14 +128,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 81
     sget v0, Landroid/system/OsConstants;->ETH_P_IPV6:I
 
     iput v0, p0, Lcom/android/server/connectivity/KeepalivePacketData;->protocol:I
 
     goto :goto_0
 
-    .line 83
     :cond_3
     new-instance v0, Lcom/android/server/connectivity/KeepalivePacketData$InvalidPacketException;
 
@@ -157,7 +141,6 @@
 
     throw v0
 
-    .line 88
     :cond_4
     new-instance v0, Lcom/android/server/connectivity/KeepalivePacketData$InvalidPacketException;
 
@@ -183,7 +166,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 106
     instance-of v0, p0, Ljava/net/Inet4Address;
 
     if-eqz v0, :cond_0
@@ -192,12 +174,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 110
     const/16 v0, 0x1194
 
     if-eq p3, v0, :cond_1
 
-    .line 111
     new-instance v0, Lcom/android/server/connectivity/KeepalivePacketData$InvalidPacketException;
 
     const/16 v1, -0x16
@@ -206,7 +186,6 @@
 
     throw v0
 
-    .line 107
     :cond_0
     new-instance v0, Lcom/android/server/connectivity/KeepalivePacketData$InvalidPacketException;
 
@@ -216,109 +195,89 @@
 
     throw v0
 
-    .line 114
     :cond_1
     const/16 v8, 0x1d
 
-    .line 115
     .local v8, "length":I
     invoke-static {v8}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v6
 
-    .line 116
     .local v6, "buf":Ljava/nio/ByteBuffer;
     sget-object v0, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
 
     invoke-virtual {v6, v0}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    .line 117
     const/16 v0, 0x4500
 
     invoke-virtual {v6, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 118
     const/16 v0, 0x1d
 
     invoke-virtual {v6, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 119
     invoke-virtual {v6, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 120
     const/16 v0, 0x40
 
     invoke-virtual {v6, v0}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 121
     sget v0, Landroid/system/OsConstants;->IPPROTO_UDP:I
 
     int-to-byte v0, v0
 
     invoke-virtual {v6, v0}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 122
     invoke-virtual {v6}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v7
 
-    .line 123
     .local v7, "ipChecksumOffset":I
     invoke-virtual {v6, v1}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 124
     invoke-virtual {p0}, Ljava/net/InetAddress;->getAddress()[B
 
     move-result-object v0
 
     invoke-virtual {v6, v0}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 125
     invoke-virtual {p2}, Ljava/net/InetAddress;->getAddress()[B
 
     move-result-object v0
 
     invoke-virtual {v6, v0}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 126
     int-to-short v0, p1
 
     invoke-virtual {v6, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 127
     int-to-short v0, p3
 
     invoke-virtual {v6, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 128
     const/16 v0, 0x9
 
     int-to-short v0, v0
 
     invoke-virtual {v6, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 129
     invoke-virtual {v6}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v9
 
-    .line 130
     .local v9, "udpChecksumOffset":I
     invoke-virtual {v6, v1}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 131
     const/4 v0, -0x1
 
     invoke-virtual {v6, v0}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 132
     invoke-static {v6, v1}, Landroid/net/util/IpUtils;->ipChecksum(Ljava/nio/ByteBuffer;I)S
 
     move-result v0
 
     invoke-virtual {v6, v7, v0}, Ljava/nio/ByteBuffer;->putShort(IS)Ljava/nio/ByteBuffer;
 
-    .line 133
     const/16 v0, 0x14
 
     invoke-static {v6, v1, v0}, Landroid/net/util/IpUtils;->udpChecksum(Ljava/nio/ByteBuffer;II)S
@@ -327,7 +286,6 @@
 
     invoke-virtual {v6, v9, v0}, Ljava/nio/ByteBuffer;->putShort(IS)Ljava/nio/ByteBuffer;
 
-    .line 135
     new-instance v0, Lcom/android/server/connectivity/KeepalivePacketData;
 
     invoke-virtual {v6}, Ljava/nio/ByteBuffer;->array()[B

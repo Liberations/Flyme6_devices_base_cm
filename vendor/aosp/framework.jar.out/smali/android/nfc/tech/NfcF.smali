@@ -32,26 +32,20 @@
 
     const/4 v1, 0x0
 
-    .line 68
     invoke-direct {p0, p1, v2}, Landroid/nfc/tech/BasicTagTechnology;-><init>(Landroid/nfc/Tag;I)V
 
-    .line 45
     iput-object v1, p0, Landroid/nfc/tech/NfcF;->mSystemCode:[B
 
-    .line 46
     iput-object v1, p0, Landroid/nfc/tech/NfcF;->mManufacturer:[B
 
-    .line 69
     invoke-virtual {p1, v2}, Landroid/nfc/Tag;->getTechExtras(I)Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 70
     .local v0, "extras":Landroid/os/Bundle;
     if-eqz v0, :cond_0
 
-    .line 71
-    const-string/jumbo v1, "systemcode"
+    const-string v1, "systemcode"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getByteArray(Ljava/lang/String;)[B
 
@@ -59,8 +53,7 @@
 
     iput-object v1, p0, Landroid/nfc/tech/NfcF;->mSystemCode:[B
 
-    .line 72
-    const-string/jumbo v1, "pmm"
+    const-string v1, "pmm"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getByteArray(Ljava/lang/String;)[B
 
@@ -68,7 +61,6 @@
 
     iput-object v1, p0, Landroid/nfc/tech/NfcF;->mManufacturer:[B
 
-    .line 67
     :cond_0
     return-void
 .end method
@@ -80,7 +72,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 58
     const/4 v1, 0x4
 
     invoke-virtual {p0, v1}, Landroid/nfc/Tag;->hasTech(I)Z
@@ -91,7 +82,6 @@
 
     return-object v2
 
-    .line 60
     :cond_0
     :try_start_0
     new-instance v1, Landroid/nfc/tech/NfcF;
@@ -102,11 +92,9 @@
 
     return-object v1
 
-    .line 61
     :catch_0
     move-exception v0
 
-    .line 62
     .local v0, "e":Landroid/os/RemoteException;
     return-object v2
 .end method
@@ -135,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 95
     iget-object v0, p0, Landroid/nfc/tech/NfcF;->mManufacturer:[B
 
     return-object v0
@@ -145,7 +132,6 @@
     .locals 1
 
     .prologue
-    .line 127
     invoke-virtual {p0}, Landroid/nfc/tech/NfcF;->getMaxTransceiveLengthInternal()I
 
     move-result v0
@@ -157,7 +143,6 @@
     .locals 1
 
     .prologue
-    .line 84
     iget-object v0, p0, Landroid/nfc/tech/NfcF;->mSystemCode:[B
 
     return-object v0
@@ -178,7 +163,6 @@
     .locals 3
 
     .prologue
-    .line 164
     :try_start_0
     iget-object v1, p0, Landroid/nfc/tech/NfcF;->mTag:Landroid/nfc/Tag;
 
@@ -196,19 +180,16 @@
 
     return v1
 
-    .line 165
     :catch_0
     move-exception v0
 
-    .line 166
     .local v0, "e":Landroid/os/RemoteException;
-    const-string/jumbo v1, "NFC"
+    const-string v1, "NFC"
 
-    const-string/jumbo v2, "NFC service dead"
+    const-string v2, "NFC service dead"
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 167
     const/4 v1, 0x0
 
     return v1
@@ -239,7 +220,6 @@
     .param p1, "timeout"    # I
 
     .prologue
-    .line 146
     :try_start_0
     iget-object v2, p0, Landroid/nfc/tech/NfcF;->mTag:Landroid/nfc/Tag;
 
@@ -253,14 +233,12 @@
 
     move-result v1
 
-    .line 147
     .local v1, "err":I
     if-eqz v1, :cond_0
 
-    .line 148
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v3, "The supplied timeout is not valid"
+    const-string v3, "The supplied timeout is not valid"
 
     invoke-direct {v2, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
@@ -268,20 +246,17 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 150
     .end local v1    # "err":I
     :catch_0
     move-exception v0
 
-    .line 151
     .local v0, "e":Landroid/os/RemoteException;
-    const-string/jumbo v2, "NFC"
+    const-string v2, "NFC"
 
-    const-string/jumbo v3, "NFC service dead"
+    const-string v3, "NFC service dead"
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 144
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     return-void
@@ -297,7 +272,6 @@
     .end annotation
 
     .prologue
-    .line 119
     const/4 v0, 0x1
 
     invoke-virtual {p0, p1, v0}, Landroid/nfc/tech/NfcF;->transceive([BZ)[B

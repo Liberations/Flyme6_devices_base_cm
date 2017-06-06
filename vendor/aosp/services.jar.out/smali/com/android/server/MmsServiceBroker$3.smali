@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/android/server/MmsServiceBroker;
 
     .prologue
-    .line 117
     iput-object p1, p0, Lcom/android/server/MmsServiceBroker$3;->this$0:Lcom/android/server/MmsServiceBroker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p1, "pendingIntent"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 208
     :try_start_0
     iget-object v1, p0, Lcom/android/server/MmsServiceBroker$3;->this$0:Lcom/android/server/MmsServiceBroker;
 
@@ -56,19 +54,16 @@
     :try_end_0
     .catch Landroid/app/PendingIntent$CanceledException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 206
     :goto_0
     return-void
 
-    .line 209
     :catch_0
     move-exception v0
 
-    .line 210
     .local v0, "e":Landroid/app/PendingIntent$CanceledException;
-    const-string/jumbo v1, "MmsServiceBroker"
+    const-string v1, "MmsServiceBroker"
 
-    const-string/jumbo v2, "Failed to return pending intent result"
+    const-string v2, "Failed to return pending intent result"
 
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
@@ -88,7 +83,6 @@
     .end annotation
 
     .prologue
-    .line 187
     const/4 v0, 0x0
 
     return-object v0
@@ -106,7 +100,6 @@
     .end annotation
 
     .prologue
-    .line 181
     const/4 v0, 0x0
 
     return-object v0
@@ -124,7 +117,6 @@
     .end annotation
 
     .prologue
-    .line 175
     const/4 v0, 0x0
 
     return v0
@@ -134,7 +126,6 @@
     .locals 1
 
     .prologue
-    .line 121
     const/4 v0, 0x0
 
     return-object v0
@@ -151,7 +142,6 @@
     .end annotation
 
     .prologue
-    .line 163
     const/4 v0, 0x0
 
     return v0
@@ -168,7 +158,6 @@
     .end annotation
 
     .prologue
-    .line 157
     const/4 v0, 0x0
 
     return v0
@@ -189,10 +178,8 @@
     .end annotation
 
     .prologue
-    .line 134
     invoke-direct {p0, p6}, Lcom/android/server/MmsServiceBroker$3;->returnPendingIntentWithError(Landroid/app/PendingIntent;)V
 
-    .line 133
     return-void
 .end method
 
@@ -205,7 +192,6 @@
     .end annotation
 
     .prologue
-    .line 203
     const/4 v0, 0x0
 
     return v0
@@ -221,7 +207,6 @@
     .end annotation
 
     .prologue
-    .line 139
     const/4 v0, 0x0
 
     return-object v0
@@ -242,7 +227,6 @@
     .end annotation
 
     .prologue
-    .line 151
     const/4 v0, 0x0
 
     return-object v0
@@ -264,7 +248,6 @@
     .end annotation
 
     .prologue
-    .line 145
     const/4 v0, 0x0
 
     return-object v0
@@ -285,10 +268,8 @@
     .end annotation
 
     .prologue
-    .line 127
     invoke-direct {p0, p6}, Lcom/android/server/MmsServiceBroker$3;->returnPendingIntentWithError(Landroid/app/PendingIntent;)V
 
-    .line 126
     return-void
 .end method
 
@@ -306,10 +287,8 @@
     .end annotation
 
     .prologue
-    .line 193
     invoke-direct {p0, p5}, Lcom/android/server/MmsServiceBroker$3;->returnPendingIntentWithError(Landroid/app/PendingIntent;)V
 
-    .line 192
     return-void
 .end method
 
@@ -324,7 +303,6 @@
     .end annotation
 
     .prologue
-    .line 197
     return-void
 .end method
 
@@ -340,7 +318,6 @@
     .end annotation
 
     .prologue
-    .line 169
     const/4 v0, 0x0
 
     return v0

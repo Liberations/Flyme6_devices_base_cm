@@ -73,55 +73,49 @@
 
     const/4 v4, 0x0
 
-    .line 60
     new-instance v0, Landroid/renderscript/Type$CubemapFace;
 
-    const-string/jumbo v1, "POSITIVE_X"
+    const-string v1, "POSITIVE_X"
 
     invoke-direct {v0, v1, v4, v4}, Landroid/renderscript/Type$CubemapFace;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Landroid/renderscript/Type$CubemapFace;->POSITIVE_X:Landroid/renderscript/Type$CubemapFace;
 
-    .line 61
     new-instance v0, Landroid/renderscript/Type$CubemapFace;
 
-    const-string/jumbo v1, "NEGATIVE_X"
+    const-string v1, "NEGATIVE_X"
 
     invoke-direct {v0, v1, v7, v7}, Landroid/renderscript/Type$CubemapFace;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Landroid/renderscript/Type$CubemapFace;->NEGATIVE_X:Landroid/renderscript/Type$CubemapFace;
 
-    .line 62
     new-instance v0, Landroid/renderscript/Type$CubemapFace;
 
-    const-string/jumbo v1, "POSITIVE_Y"
+    const-string v1, "POSITIVE_Y"
 
     invoke-direct {v0, v1, v5, v5}, Landroid/renderscript/Type$CubemapFace;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Landroid/renderscript/Type$CubemapFace;->POSITIVE_Y:Landroid/renderscript/Type$CubemapFace;
 
-    .line 63
     new-instance v0, Landroid/renderscript/Type$CubemapFace;
 
-    const-string/jumbo v1, "NEGATIVE_Y"
+    const-string v1, "NEGATIVE_Y"
 
     invoke-direct {v0, v1, v8, v8}, Landroid/renderscript/Type$CubemapFace;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Landroid/renderscript/Type$CubemapFace;->NEGATIVE_Y:Landroid/renderscript/Type$CubemapFace;
 
-    .line 64
     new-instance v0, Landroid/renderscript/Type$CubemapFace;
 
-    const-string/jumbo v1, "POSITIVE_Z"
+    const-string v1, "POSITIVE_Z"
 
     invoke-direct {v0, v1, v6, v6}, Landroid/renderscript/Type$CubemapFace;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Landroid/renderscript/Type$CubemapFace;->POSITIVE_Z:Landroid/renderscript/Type$CubemapFace;
 
-    .line 65
     new-instance v0, Landroid/renderscript/Type$CubemapFace;
 
-    const-string/jumbo v1, "NEGATIVE_Z"
+    const-string v1, "NEGATIVE_Z"
 
     const/4 v2, 0x5
 
@@ -131,43 +125,36 @@
 
     sput-object v0, Landroid/renderscript/Type$CubemapFace;->NEGATIVE_Z:Landroid/renderscript/Type$CubemapFace;
 
-    .line 66
     new-instance v0, Landroid/renderscript/Type$CubemapFace;
 
-    const-string/jumbo v1, "POSITVE_X"
+    const-string v1, "POSITVE_X"
 
     const/4 v2, 0x6
 
     invoke-direct {v0, v1, v2, v4}, Landroid/renderscript/Type$CubemapFace;-><init>(Ljava/lang/String;II)V
 
-    .line 67
     sput-object v0, Landroid/renderscript/Type$CubemapFace;->POSITVE_X:Landroid/renderscript/Type$CubemapFace;
 
-    .line 68
     new-instance v0, Landroid/renderscript/Type$CubemapFace;
 
-    const-string/jumbo v1, "POSITVE_Y"
+    const-string v1, "POSITVE_Y"
 
     const/4 v2, 0x7
 
     invoke-direct {v0, v1, v2, v5}, Landroid/renderscript/Type$CubemapFace;-><init>(Ljava/lang/String;II)V
 
-    .line 69
     sput-object v0, Landroid/renderscript/Type$CubemapFace;->POSITVE_Y:Landroid/renderscript/Type$CubemapFace;
 
-    .line 70
     new-instance v0, Landroid/renderscript/Type$CubemapFace;
 
-    const-string/jumbo v1, "POSITVE_Z"
+    const-string v1, "POSITVE_Z"
 
     const/16 v2, 0x8
 
     invoke-direct {v0, v1, v2, v6}, Landroid/renderscript/Type$CubemapFace;-><init>(Ljava/lang/String;II)V
 
-    .line 71
     sput-object v0, Landroid/renderscript/Type$CubemapFace;->POSITVE_Z:Landroid/renderscript/Type$CubemapFace;
 
-    .line 59
     const/16 v0, 0x9
 
     new-array v0, v0, [Landroid/renderscript/Type$CubemapFace;
@@ -226,13 +213,10 @@
     .param p3, "id"    # I
 
     .prologue
-    .line 74
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 75
     iput p3, p0, Landroid/renderscript/Type$CubemapFace;->mID:I
 
-    .line 74
     return-void
 .end method
 
@@ -241,7 +225,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 59
     const-class v0, Landroid/renderscript/Type$CubemapFace;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -257,7 +240,6 @@
     .locals 1
 
     .prologue
-    .line 59
     sget-object v0, Landroid/renderscript/Type$CubemapFace;->$VALUES:[Landroid/renderscript/Type$CubemapFace;
 
     return-object v0

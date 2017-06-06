@@ -29,16 +29,13 @@
     .locals 2
 
     .prologue
-    .line 51
     invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
 
-    .line 52
-    const-string/jumbo v0, "405854"
+    const-string v0, "405854"
 
     sget-object v1, Lcom/android/internal/telephony/CarrierAppUtils$CARRIER;->TELEPHONY_CARRIER_ONE:Lcom/android/internal/telephony/CarrierAppUtils$CARRIER;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telephony/CarrierAppUtils$1;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 51
     return-void
 .end method

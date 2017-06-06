@@ -30,7 +30,6 @@
     .param p2, "$anonymous1"    # Ljava/lang/String;
 
     .prologue
-    .line 100
     .local p1, "$anonymous0":Ljava/lang/Class;, "Ljava/lang/Class<Landroid/graphics/PointF;>;"
     invoke-direct {p0, p1, p2}, Landroid/util/Property;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
@@ -44,7 +43,6 @@
     .param p1, "viewBounds"    # Landroid/transition/ChangeBounds$ViewBounds;
 
     .prologue
-    .line 108
     const/4 v0, 0x0
 
     return-object v0
@@ -55,7 +53,6 @@
     .param p1, "viewBounds"    # Ljava/lang/Object;
 
     .prologue
-    .line 107
     check-cast p1, Landroid/transition/ChangeBounds$ViewBounds;
 
     .end local p1    # "viewBounds":Ljava/lang/Object;
@@ -72,10 +69,8 @@
     .param p2, "bottomRight"    # Landroid/graphics/PointF;
 
     .prologue
-    .line 103
     invoke-virtual {p1, p2}, Landroid/transition/ChangeBounds$ViewBounds;->setBottomRight(Landroid/graphics/PointF;)V
 
-    .line 102
     return-void
 .end method
 
@@ -85,7 +80,6 @@
     .param p2, "bottomRight"    # Ljava/lang/Object;
 
     .prologue
-    .line 102
     check-cast p1, Landroid/transition/ChangeBounds$ViewBounds;
 
     .end local p1    # "viewBounds":Ljava/lang/Object;

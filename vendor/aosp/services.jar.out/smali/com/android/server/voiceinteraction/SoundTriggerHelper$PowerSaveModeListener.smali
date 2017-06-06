@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/voiceinteraction/SoundTriggerHelper;
 
     .prologue
-    .line 559
     iput-object p1, p0, Lcom/android/server/voiceinteraction/SoundTriggerHelper$PowerSaveModeListener;->this$0:Lcom/android/server/voiceinteraction/SoundTriggerHelper;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,8 +39,7 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 562
-    const-string/jumbo v1, "android.os.action.POWER_SAVE_MODE_CHANGED"
+    const-string v1, "android.os.action.POWER_SAVE_MODE_CHANGED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -53,10 +51,8 @@
 
     if-nez v1, :cond_0
 
-    .line 563
     return-void
 
-    .line 565
     :cond_0
     iget-object v1, p0, Lcom/android/server/voiceinteraction/SoundTriggerHelper$PowerSaveModeListener;->this$0:Lcom/android/server/voiceinteraction/SoundTriggerHelper;
 
@@ -68,7 +64,6 @@
 
     move-result v0
 
-    .line 567
     .local v0, "active":Z
     iget-object v1, p0, Lcom/android/server/voiceinteraction/SoundTriggerHelper$PowerSaveModeListener;->this$0:Lcom/android/server/voiceinteraction/SoundTriggerHelper;
 
@@ -78,7 +73,6 @@
 
     monitor-enter v2
 
-    .line 568
     :try_start_0
     iget-object v1, p0, Lcom/android/server/voiceinteraction/SoundTriggerHelper$PowerSaveModeListener;->this$0:Lcom/android/server/voiceinteraction/SoundTriggerHelper;
 
@@ -88,10 +82,8 @@
 
     monitor-exit v2
 
-    .line 561
     return-void
 
-    .line 567
     :catchall_0
     move-exception v1
 

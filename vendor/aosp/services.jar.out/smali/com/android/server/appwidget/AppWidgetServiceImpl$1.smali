@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
     .prologue
-    .line 135
     iput-object p1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$1;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -42,12 +41,10 @@
     .prologue
     const/16 v4, -0x2710
 
-    .line 137
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 139
     .local v0, "action":Ljava/lang/String;
     invoke-static {}, Lcom/android/server/appwidget/AppWidgetServiceImpl;->-get0()Z
 
@@ -55,14 +52,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 140
-    const-string/jumbo v1, "AppWidgetServiceImpl"
+    const-string v1, "AppWidgetServiceImpl"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "Received broadcast: "
+    const-string v3, "Received broadcast: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -78,9 +74,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 143
     :cond_0
-    const-string/jumbo v1, "android.intent.action.CONFIGURATION_CHANGED"
+    const-string v1, "android.intent.action.CONFIGURATION_CHANGED"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -88,18 +83,15 @@
 
     if-eqz v1, :cond_1
 
-    .line 144
     iget-object v1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$1;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
     invoke-static {v1}, Lcom/android/server/appwidget/AppWidgetServiceImpl;->-wrap8(Lcom/android/server/appwidget/AppWidgetServiceImpl;)V
 
-    .line 136
     :goto_0
     return-void
 
-    .line 145
     :cond_1
-    const-string/jumbo v1, "android.intent.action.USER_STARTED"
+    const-string v1, "android.intent.action.USER_STARTED"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -107,10 +99,9 @@
 
     if-eqz v1, :cond_2
 
-    .line 146
     iget-object v1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$1;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
-    const-string/jumbo v2, "android.intent.extra.user_handle"
+    const-string v2, "android.intent.extra.user_handle"
 
     invoke-virtual {p2, v2, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
@@ -120,9 +111,8 @@
 
     goto :goto_0
 
-    .line 148
     :cond_2
-    const-string/jumbo v1, "android.intent.action.USER_STOPPED"
+    const-string v1, "android.intent.action.USER_STOPPED"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -130,10 +120,9 @@
 
     if-eqz v1, :cond_3
 
-    .line 149
     iget-object v1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$1;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
-    const-string/jumbo v2, "android.intent.extra.user_handle"
+    const-string v2, "android.intent.extra.user_handle"
 
     invoke-virtual {p2, v2, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
@@ -143,14 +132,11 @@
 
     goto :goto_0
 
-    .line 152
     :cond_3
     iget-object v1, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$1;->this$0:Lcom/android/server/appwidget/AppWidgetServiceImpl;
 
-    .line 153
-    const-string/jumbo v2, "android.intent.extra.user_handle"
+    const-string v2, "android.intent.extra.user_handle"
 
-    .line 152
     invoke-virtual {p2, v2, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v2

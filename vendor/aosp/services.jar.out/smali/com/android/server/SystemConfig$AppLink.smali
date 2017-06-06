@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 535
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +37,6 @@
     .param p1, "other"    # Ljava/lang/Object;
 
     .prologue
-    .line 544
     instance-of v0, p1, Lcom/android/server/SystemConfig$AppLink;
 
     if-nez v0, :cond_0
@@ -47,7 +45,6 @@
 
     return v0
 
-    .line 545
     :cond_0
     iget-object v0, p0, Lcom/android/server/SystemConfig$AppLink;->pkgname:Ljava/lang/String;
 
@@ -67,7 +64,6 @@
     .locals 1
 
     .prologue
-    .line 540
     iget-object v0, p0, Lcom/android/server/SystemConfig$AppLink;->pkgname:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I

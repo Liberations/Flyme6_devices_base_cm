@@ -44,17 +44,14 @@
     .locals 1
 
     .prologue
-    .line 3174
-    const-string/jumbo v0, "content://cdma/calloption"
+    const-string v0, "content://cdma/calloption"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 3173
     sput-object v0, Landroid/provider/Telephony$CdmaCallOptions;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 3169
     return-void
 .end method
 
@@ -62,7 +59,6 @@
     .locals 0
 
     .prologue
-    .line 3169
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

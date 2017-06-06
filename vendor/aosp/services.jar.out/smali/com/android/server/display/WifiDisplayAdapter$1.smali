@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/display/WifiDisplayAdapter;
 
     .prologue
-    .line 431
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayAdapter$1;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +39,11 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 434
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string/jumbo v1, "android.server.display.wfd.DISCONNECT"
+    const-string v1, "android.server.display.wfd.DISCONNECT"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -53,7 +51,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 435
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter$1;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-virtual {v0}, Lcom/android/server/display/WifiDisplayAdapter;->getSyncRoot()Lcom/android/server/display/DisplayManagerService$SyncRoot;
@@ -62,7 +59,6 @@
 
     monitor-enter v1
 
-    .line 436
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter$1;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
@@ -72,11 +68,9 @@
 
     monitor-exit v1
 
-    .line 433
     :cond_0
     return-void
 
-    .line 435
     :catchall_0
     move-exception v0
 

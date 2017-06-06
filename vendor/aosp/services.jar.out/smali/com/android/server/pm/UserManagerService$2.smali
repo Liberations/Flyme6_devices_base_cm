@@ -27,7 +27,6 @@
     .param p2, "val$userHandle"    # I
 
     .prologue
-    .line 1551
     iput-object p1, p0, Lcom/android/server/pm/UserManagerService$2;->this$0:Lcom/android/server/pm/UserManagerService;
 
     iput p2, p0, Lcom/android/server/pm/UserManagerService$2;->val$userHandle:I
@@ -45,7 +44,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1559
     new-instance v0, Lcom/android/server/pm/UserManagerService$2$1;
 
     iget v1, p0, Lcom/android/server/pm/UserManagerService$2;->val$userHandle:I
@@ -54,6 +52,5 @@
 
     invoke-virtual {v0}, Lcom/android/server/pm/UserManagerService$2$1;->start()V
 
-    .line 1553
     return-void
 .end method

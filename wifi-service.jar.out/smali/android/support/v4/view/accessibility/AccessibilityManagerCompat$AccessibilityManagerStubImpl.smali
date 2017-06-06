@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +35,6 @@
     .param p2, "listener"    # Landroid/support/v4/view/accessibility/AccessibilityManagerCompat$AccessibilityStateChangeListenerCompat;
 
     .prologue
-    .line 55
     const/4 v0, 0x0
 
     return v0
@@ -59,7 +57,6 @@
     .end annotation
 
     .prologue
-    .line 65
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
@@ -83,7 +80,6 @@
     .end annotation
 
     .prologue
-    .line 70
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
@@ -96,7 +92,6 @@
     .param p1, "manager"    # Landroid/view/accessibility/AccessibilityManager;
 
     .prologue
-    .line 74
     const/4 v0, 0x0
 
     return v0
@@ -107,7 +102,6 @@
     .param p1, "listener"    # Landroid/support/v4/view/accessibility/AccessibilityManagerCompat$AccessibilityStateChangeListenerCompat;
 
     .prologue
-    .line 50
     const/4 v0, 0x0
 
     return-object v0
@@ -119,7 +113,6 @@
     .param p2, "listener"    # Landroid/support/v4/view/accessibility/AccessibilityManagerCompat$AccessibilityStateChangeListenerCompat;
 
     .prologue
-    .line 60
     const/4 v0, 0x0
 
     return v0

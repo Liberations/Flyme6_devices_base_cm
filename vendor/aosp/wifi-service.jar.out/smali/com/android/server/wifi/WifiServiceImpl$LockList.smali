@@ -87,19 +87,16 @@
     .param p1, "this$0"    # Lcom/android/server/wifi/WifiServiceImpl;
 
     .prologue
-    .line 1627
     iput-object p1, p0, Lcom/android/server/wifi/WifiServiceImpl$LockList;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1628
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wifi/WifiServiceImpl$LockList;->mList:Ljava/util/List;
 
-    .line 1627
     return-void
 .end method
 
@@ -118,7 +115,6 @@
     .param p1, "lock"    # Lcom/android/server/wifi/WifiServiceImpl$WifiLock;
 
     .prologue
-    .line 1658
     iget-object v0, p1, Lcom/android/server/wifi/WifiServiceImpl$WifiLock;->mBinder:Landroid/os/IBinder;
 
     invoke-direct {p0, v0}, Lcom/android/server/wifi/WifiServiceImpl$LockList;->findLockByBinder(Landroid/os/IBinder;)I
@@ -127,12 +123,10 @@
 
     if-gez v0, :cond_0
 
-    .line 1659
     iget-object v0, p0, Lcom/android/server/wifi/WifiServiceImpl$LockList;->mList:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1657
     :cond_0
     return-void
 .end method
@@ -142,7 +136,6 @@
     .param p1, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 1684
     iget-object v2, p0, Lcom/android/server/wifi/WifiServiceImpl$LockList;->mList:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -163,18 +156,15 @@
 
     check-cast v0, Lcom/android/server/wifi/WifiServiceImpl$WifiLock;
 
-    .line 1685
     .local v0, "l":Lcom/android/server/wifi/WifiServiceImpl$WifiLock;
-    const-string/jumbo v2, "    "
+    const-string v2, "    "
 
     invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1686
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 1683
     .end local v0    # "l":Lcom/android/server/wifi/WifiServiceImpl$WifiLock;
     :cond_0
     return-void
@@ -185,14 +175,12 @@
     .param p1, "binder"    # Landroid/os/IBinder;
 
     .prologue
-    .line 1675
     iget-object v2, p0, Lcom/android/server/wifi/WifiServiceImpl$LockList;->mList:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 1676
     .local v1, "size":I
     add-int/lit8 v0, v1, -0x1
 
@@ -200,7 +188,6 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 1677
     iget-object v2, p0, Lcom/android/server/wifi/WifiServiceImpl$LockList;->mList:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -213,16 +200,13 @@
 
     if-ne v2, p1, :cond_0
 
-    .line 1678
     return v0
 
-    .line 1676
     :cond_0
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 1680
     :cond_1
     const/4 v2, -0x1
 
@@ -234,16 +218,13 @@
     .param p1, "binder"    # Landroid/os/IBinder;
 
     .prologue
-    .line 1664
     invoke-direct {p0, p1}, Lcom/android/server/wifi/WifiServiceImpl$LockList;->findLockByBinder(Landroid/os/IBinder;)I
 
     move-result v0
 
-    .line 1665
     .local v0, "index":I
     if-ltz v0, :cond_0
 
-    .line 1666
     iget-object v2, p0, Lcom/android/server/wifi/WifiServiceImpl$LockList;->mList:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->remove(I)Ljava/lang/Object;
@@ -252,14 +233,11 @@
 
     check-cast v1, Lcom/android/server/wifi/WifiServiceImpl$WifiLock;
 
-    .line 1667
     .local v1, "ret":Lcom/android/server/wifi/WifiServiceImpl$WifiLock;
     invoke-virtual {v1}, Lcom/android/server/wifi/WifiServiceImpl$WifiLock;->unlinkDeathRecipient()V
 
-    .line 1668
     return-object v1
 
-    .line 1670
     .end local v1    # "ret":Lcom/android/server/wifi/WifiServiceImpl$WifiLock;
     :cond_0
     const/4 v2, 0x0
@@ -277,7 +255,6 @@
 
     monitor-enter p0
 
-    .line 1636
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiServiceImpl$LockList;->mList:Ljava/util/List;
 
@@ -291,10 +268,8 @@
 
     monitor-exit p0
 
-    .line 1637
     return v2
 
-    .line 1640
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/android/server/wifi/WifiServiceImpl$LockList;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
@@ -313,14 +288,12 @@
 
     if-le v0, v1, :cond_1
 
-    .line 1641
     const/4 v0, 0x3
 
     monitor-exit p0
 
     return v0
 
-    .line 1644
     :cond_1
     :try_start_2
     iget-object v0, p0, Lcom/android/server/wifi/WifiServiceImpl$LockList;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
@@ -341,10 +314,8 @@
 
     monitor-exit p0
 
-    .line 1645
     return v2
 
-    .line 1648
     :cond_2
     const/4 v0, 0x2
 
@@ -366,7 +337,6 @@
     .prologue
     monitor-enter p0
 
-    .line 1632
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiServiceImpl$LockList;->mList:Ljava/util/List;
 
@@ -405,7 +375,6 @@
     .prologue
     monitor-enter p0
 
-    .line 1652
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -423,7 +392,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 1653
     iget-object v1, p0, Lcom/android/server/wifi/WifiServiceImpl$LockList;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     iget-object v1, v1, Lcom/android/server/wifi/WifiServiceImpl;->mLocks:Lcom/android/server/wifi/WifiServiceImpl$LockList;
@@ -442,7 +410,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1652
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
@@ -450,7 +417,6 @@
     :cond_0
     monitor-exit p0
 
-    .line 1651
     return-void
 
     :catchall_0

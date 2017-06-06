@@ -27,7 +27,6 @@
     .param p2, "val$view"    # Landroid/view/View;
 
     .prologue
-    .line 123
     iput-object p1, p0, Landroid/transition/Fade$1;->this$0:Landroid/transition/Fade;
 
     iput-object p2, p0, Landroid/transition/Fade$1;->val$view:Landroid/view/View;
@@ -44,13 +43,11 @@
     .param p1, "transition"    # Landroid/transition/Transition;
 
     .prologue
-    .line 126
     iget-object v0, p0, Landroid/transition/Fade$1;->val$view:Landroid/view/View;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTransitionAlpha(F)V
 
-    .line 125
     return-void
 .end method

@@ -22,27 +22,22 @@
     .locals 2
 
     .prologue
-    .line 76
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .line 77
     .local v0, "version":I
     const/16 v1, 0x10
 
     if-lt v0, v1, :cond_0
 
-    .line 78
     new-instance v1, Landroid/support/v4/content/ContentResolverCompat$ContentResolverCompatImplJB;
 
     invoke-direct {v1}, Landroid/support/v4/content/ContentResolverCompat$ContentResolverCompatImplJB;-><init>()V
 
     sput-object v1, Landroid/support/v4/content/ContentResolverCompat;->IMPL:Landroid/support/v4/content/ContentResolverCompat$ContentResolverCompatImpl;
 
-    .line 30
     :goto_0
     return-void
 
-    .line 80
     :cond_0
     new-instance v1, Landroid/support/v4/content/ContentResolverCompat$ContentResolverCompatImplBase;
 
@@ -57,7 +52,6 @@
     .locals 0
 
     .prologue
-    .line 84
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -74,7 +68,6 @@
     .param p6, "cancellationSignal"    # Landroid/support/v4/os/CancellationSignal;
 
     .prologue
-    .line 125
     sget-object v0, Landroid/support/v4/content/ContentResolverCompat;->IMPL:Landroid/support/v4/content/ContentResolverCompat$ContentResolverCompatImpl;
 
     move-object v1, p0

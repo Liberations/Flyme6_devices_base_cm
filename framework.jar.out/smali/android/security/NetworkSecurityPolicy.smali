@@ -12,14 +12,12 @@
     .locals 1
 
     .prologue
-    .line 30
     new-instance v0, Landroid/security/NetworkSecurityPolicy;
 
     invoke-direct {v0}, Landroid/security/NetworkSecurityPolicy;-><init>()V
 
     sput-object v0, Landroid/security/NetworkSecurityPolicy;->INSTANCE:Landroid/security/NetworkSecurityPolicy;
 
-    .line 28
     return-void
 .end method
 
@@ -27,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,7 +34,6 @@
     .locals 1
 
     .prologue
-    .line 41
     sget-object v0, Landroid/security/NetworkSecurityPolicy;->INSTANCE:Landroid/security/NetworkSecurityPolicy;
 
     return-object v0
@@ -49,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 63
     invoke-static {}, Llibcore/net/NetworkSecurityPolicy;->isCleartextTrafficPermitted()Z
 
     move-result v0
@@ -62,9 +57,7 @@
     .param p1, "permitted"    # Z
 
     .prologue
-    .line 75
     invoke-static {p1}, Llibcore/net/NetworkSecurityPolicy;->setCleartextTrafficPermitted(Z)V
 
-    .line 74
     return-void
 .end method

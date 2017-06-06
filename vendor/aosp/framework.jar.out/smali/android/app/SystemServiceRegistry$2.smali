@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 149
     invoke-direct {p0}, Landroid/app/SystemServiceRegistry$CachedServiceFetcher;-><init>()V
 
     return-void
@@ -41,7 +40,6 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 152
     new-instance v0, Landroid/view/accessibility/CaptioningManager;
 
     invoke-direct {v0, p1}, Landroid/view/accessibility/CaptioningManager;-><init>(Landroid/content/Context;)V
@@ -54,7 +52,6 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 151
     invoke-virtual {p0, p1}, Landroid/app/SystemServiceRegistry$2;->createService(Landroid/app/ContextImpl;)Landroid/view/accessibility/CaptioningManager;
 
     move-result-object v0

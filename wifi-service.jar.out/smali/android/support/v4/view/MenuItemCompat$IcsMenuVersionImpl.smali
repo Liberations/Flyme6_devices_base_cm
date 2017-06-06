@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 200
     invoke-direct {p0}, Landroid/support/v4/view/MenuItemCompat$HoneycombMenuVersionImpl;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
     .param p1, "item"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 208
     invoke-static {p1}, Landroid/support/v4/view/MenuItemCompatIcs;->collapseActionView(Landroid/view/MenuItem;)Z
 
     move-result v0
@@ -45,7 +43,6 @@
     .param p1, "item"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 203
     invoke-static {p1}, Landroid/support/v4/view/MenuItemCompatIcs;->expandActionView(Landroid/view/MenuItem;)Z
 
     move-result v0
@@ -58,7 +55,6 @@
     .param p1, "item"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 213
     invoke-static {p1}, Landroid/support/v4/view/MenuItemCompatIcs;->isActionViewExpanded(Landroid/view/MenuItem;)Z
 
     move-result v0
@@ -74,23 +70,19 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 219
     if-nez p2, :cond_0
 
-    .line 220
     invoke-static {p1, v0}, Landroid/support/v4/view/MenuItemCompatIcs;->setOnActionExpandListener(Landroid/view/MenuItem;Landroid/support/v4/view/MenuItemCompatIcs$SupportActionExpandProxy;)Landroid/view/MenuItem;
 
     move-result-object v0
 
     return-object v0
 
-    .line 228
     :cond_0
     new-instance v0, Landroid/support/v4/view/MenuItemCompat$IcsMenuVersionImpl$1;
 
     invoke-direct {v0, p0, p2}, Landroid/support/v4/view/MenuItemCompat$IcsMenuVersionImpl$1;-><init>(Landroid/support/v4/view/MenuItemCompat$IcsMenuVersionImpl;Landroid/support/v4/view/MenuItemCompat$OnActionExpandListener;)V
 
-    .line 227
     invoke-static {p1, v0}, Landroid/support/v4/view/MenuItemCompatIcs;->setOnActionExpandListener(Landroid/view/MenuItem;Landroid/support/v4/view/MenuItemCompatIcs$SupportActionExpandProxy;)Landroid/view/MenuItem;
 
     move-result-object v0

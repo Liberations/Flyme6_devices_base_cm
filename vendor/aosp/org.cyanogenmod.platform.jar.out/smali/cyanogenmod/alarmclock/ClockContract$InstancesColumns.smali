@@ -61,8 +61,7 @@
     .locals 1
 
     .prologue
-    .line 155
-    const-string/jumbo v0, "content://com.android.deskclock/instances"
+    const-string v0, "content://com.android.deskclock/instances"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -70,6 +69,5 @@
 
     sput-object v0, Lcyanogenmod/alarmclock/ClockContract$InstancesColumns;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 151
     return-void
 .end method

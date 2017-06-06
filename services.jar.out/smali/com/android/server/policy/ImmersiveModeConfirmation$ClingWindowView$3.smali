@@ -24,7 +24,6 @@
     .param p1, "this$1"    # Lcom/android/server/policy/ImmersiveModeConfirmation$ClingWindowView;
 
     .prologue
-    .line 224
     iput-object p1, p0, Lcom/android/server/policy/ImmersiveModeConfirmation$ClingWindowView$3;->this$1:Lcom/android/server/policy/ImmersiveModeConfirmation$ClingWindowView;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +39,11 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 227
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string/jumbo v1, "android.intent.action.CONFIGURATION_CHANGED"
+    const-string v1, "android.intent.action.CONFIGURATION_CHANGED"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -53,7 +51,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 228
     iget-object v0, p0, Lcom/android/server/policy/ImmersiveModeConfirmation$ClingWindowView$3;->this$1:Lcom/android/server/policy/ImmersiveModeConfirmation$ClingWindowView;
 
     iget-object v1, p0, Lcom/android/server/policy/ImmersiveModeConfirmation$ClingWindowView$3;->this$1:Lcom/android/server/policy/ImmersiveModeConfirmation$ClingWindowView;
@@ -64,7 +61,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/policy/ImmersiveModeConfirmation$ClingWindowView;->post(Ljava/lang/Runnable;)Z
 
-    .line 226
     :cond_0
     return-void
 .end method

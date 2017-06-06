@@ -28,7 +28,6 @@
     .param p1, "this$0"    # Lcom/android/server/wifi/WifiServiceImpl;
 
     .prologue
-    .line 1290
     iput-object p1, p0, Lcom/android/server/wifi/WifiServiceImpl$TdlsTaskParams;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

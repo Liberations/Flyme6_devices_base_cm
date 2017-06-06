@@ -33,7 +33,6 @@
     .param p3, "val$callback"    # Landroid/media/tv/ITvInputManagerCallback;
 
     .prologue
-    .line 860
     iput-object p1, p0, Lcom/android/server/tv/TvInputManagerService$BinderService$1;->this$1:Lcom/android/server/tv/TvInputManagerService$BinderService;
 
     iput-object p2, p0, Lcom/android/server/tv/TvInputManagerService$BinderService$1;->val$userState:Lcom/android/server/tv/TvInputManagerService$UserState;
@@ -51,7 +50,6 @@
     .locals 3
 
     .prologue
-    .line 863
     iget-object v0, p0, Lcom/android/server/tv/TvInputManagerService$BinderService$1;->this$1:Lcom/android/server/tv/TvInputManagerService$BinderService;
 
     iget-object v0, v0, Lcom/android/server/tv/TvInputManagerService$BinderService;->this$0:Lcom/android/server/tv/TvInputManagerService;
@@ -62,7 +60,6 @@
 
     monitor-enter v1
 
-    .line 864
     :try_start_0
     iget-object v0, p0, Lcom/android/server/tv/TvInputManagerService$BinderService$1;->val$userState:Lcom/android/server/tv/TvInputManagerService$UserState;
 
@@ -72,7 +69,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 865
     iget-object v0, p0, Lcom/android/server/tv/TvInputManagerService$BinderService$1;->val$userState:Lcom/android/server/tv/TvInputManagerService$UserState;
 
     invoke-static {v0}, Lcom/android/server/tv/TvInputManagerService$UserState;->-get0(Lcom/android/server/tv/TvInputManagerService$UserState;)Ljava/util/Set;
@@ -88,10 +84,8 @@
     :cond_0
     monitor-exit v1
 
-    .line 862
     return-void
 
-    .line 863
     :catchall_0
     move-exception v0
 

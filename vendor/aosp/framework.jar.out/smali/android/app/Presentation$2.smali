@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Landroid/app/Presentation;
 
     .prologue
-    .line 345
     iput-object p1, p0, Landroid/app/Presentation$2;->this$0:Landroid/app/Presentation;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,16 +38,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 348
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 347
     :goto_0
     return-void
 
-    .line 350
     :pswitch_0
     iget-object v0, p0, Landroid/app/Presentation$2;->this$0:Landroid/app/Presentation;
 
@@ -56,7 +52,6 @@
 
     goto :goto_0
 
-    .line 348
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

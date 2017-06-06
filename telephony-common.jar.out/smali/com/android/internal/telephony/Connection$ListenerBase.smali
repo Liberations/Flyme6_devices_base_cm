@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 73
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,7 +34,6 @@
     .param p1, "audioQuality"    # I
 
     .prologue
-    .line 84
     return-void
 .end method
 
@@ -44,7 +42,6 @@
     .param p1, "callSubstate"    # I
 
     .prologue
-    .line 88
     return-void
 .end method
 
@@ -52,7 +49,6 @@
     .locals 0
 
     .prologue
-    .line 92
     return-void
 .end method
 
@@ -69,7 +65,6 @@
     .end annotation
 
     .prologue
-    .line 86
     .local p1, "participants":Ljava/util/List;, "Ljava/util/List<Landroid/telecom/ConferenceParticipant;>;"
     return-void
 .end method
@@ -79,7 +74,6 @@
     .param p1, "capability"    # I
 
     .prologue
-    .line 77
     return-void
 .end method
 
@@ -88,7 +82,6 @@
     .param p1, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 94
     return-void
 .end method
 
@@ -97,7 +90,6 @@
     .param p1, "isMultiParty"    # Z
 
     .prologue
-    .line 90
     return-void
 .end method
 
@@ -106,7 +98,6 @@
     .param p1, "videoProvider"    # Landroid/telecom/Connection$VideoProvider;
 
     .prologue
-    .line 82
     return-void
 .end method
 
@@ -115,7 +106,6 @@
     .param p1, "videoState"    # I
 
     .prologue
-    .line 75
     return-void
 .end method
 
@@ -124,6 +114,5 @@
     .param p1, "isWifi"    # Z
 
     .prologue
-    .line 79
     return-void
 .end method

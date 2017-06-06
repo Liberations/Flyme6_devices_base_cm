@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,7 +18,6 @@
     .param p0, "group"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 32
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getNestedScrollAxes()I
 
     move-result v0
@@ -32,7 +30,6 @@
     .param p0, "group"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 28
     invoke-virtual {p0}, Landroid/view/ViewGroup;->isTransitionGroup()Z
 
     move-result v0
@@ -46,9 +43,7 @@
     .param p1, "isTransitionGroup"    # Z
 
     .prologue
-    .line 24
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setTransitionGroup(Z)V
 
-    .line 23
     return-void
 .end method

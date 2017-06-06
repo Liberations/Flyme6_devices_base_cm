@@ -40,7 +40,6 @@
     .param p2, "val$callback"    # Landroid/service/carrier/ICarrierMessagingCallback;
 
     .prologue
-    .line 411
     iput-object p1, p0, Landroid/service/carrier/CarrierMessagingService$ICarrierMessagingWrapper$1;->this$1:Landroid/service/carrier/CarrierMessagingService$ICarrierMessagingWrapper;
 
     iput-object p2, p0, Landroid/service/carrier/CarrierMessagingService$ICarrierMessagingWrapper$1;->val$callback:Landroid/service/carrier/ICarrierMessagingCallback;
@@ -62,7 +61,6 @@
     .end annotation
 
     .prologue
-    .line 414
     iget-object v0, p0, Landroid/service/carrier/CarrierMessagingService$ICarrierMessagingWrapper$1;->val$callback:Landroid/service/carrier/ICarrierMessagingCallback;
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
@@ -71,7 +69,6 @@
 
     invoke-interface {v0, v1}, Landroid/service/carrier/ICarrierMessagingCallback;->onFilterComplete(Z)V
 
-    .line 413
     return-void
 .end method
 
@@ -85,7 +82,6 @@
     .end annotation
 
     .prologue
-    .line 413
     check-cast p1, Ljava/lang/Boolean;
 
     .end local p1    # "result":Ljava/lang/Object;

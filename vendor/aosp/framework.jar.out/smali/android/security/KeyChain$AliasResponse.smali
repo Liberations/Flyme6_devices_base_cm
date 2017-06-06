@@ -24,13 +24,10 @@
     .param p1, "keyChainAliasResponse"    # Landroid/security/KeyChainAliasCallback;
 
     .prologue
-    .line 343
     invoke-direct {p0}, Landroid/security/IKeyChainAliasCallback$Stub;-><init>()V
 
-    .line 344
     iput-object p1, p0, Landroid/security/KeyChain$AliasResponse;->keyChainAliasResponse:Landroid/security/KeyChainAliasCallback;
 
-    .line 343
     return-void
 .end method
 
@@ -51,11 +48,9 @@
     .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 347
     iget-object v0, p0, Landroid/security/KeyChain$AliasResponse;->keyChainAliasResponse:Landroid/security/KeyChainAliasCallback;
 
     invoke-interface {v0, p1}, Landroid/security/KeyChainAliasCallback;->alias(Ljava/lang/String;)V
 
-    .line 346
     return-void
 .end method

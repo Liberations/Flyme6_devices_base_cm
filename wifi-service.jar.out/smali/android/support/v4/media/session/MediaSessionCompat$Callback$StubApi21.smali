@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 
     .prologue
-    .line 666
     iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi21;->this$1:Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -54,12 +53,10 @@
     .param p3, "cb"    # Landroid/os/ResultReceiver;
 
     .prologue
-    .line 670
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi21;->this$1:Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onCommand(Ljava/lang/String;Landroid/os/Bundle;Landroid/os/ResultReceiver;)V
 
-    .line 669
     return-void
 .end method
 
@@ -69,8 +66,7 @@
     .param p2, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 740
-    const-string/jumbo v2, "android.support.v4.media.session.action.PLAY_FROM_URI"
+    const-string v2, "android.support.v4.media.session.action.PLAY_FROM_URI"
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -78,8 +74,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 741
-    const-string/jumbo v2, "android.support.v4.media.session.action.ARGUMENT_URI"
+    const-string v2, "android.support.v4.media.session.action.ARGUMENT_URI"
 
     invoke-virtual {p2, v2}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -87,9 +82,8 @@
 
     check-cast v1, Landroid/net/Uri;
 
-    .line 742
     .local v1, "uri":Landroid/net/Uri;
-    const-string/jumbo v2, "android.support.v4.media.session.action.ARGUMENT_EXTRAS"
+    const-string v2, "android.support.v4.media.session.action.ARGUMENT_EXTRAS"
 
     invoke-virtual {p2, v2}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -97,19 +91,16 @@
 
     check-cast v0, Landroid/os/Bundle;
 
-    .line 743
     .local v0, "bundle":Landroid/os/Bundle;
     iget-object v2, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi21;->this$1:Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 
     invoke-virtual {v2, v1, v0}, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onPlayFromUri(Landroid/net/Uri;Landroid/os/Bundle;)V
 
-    .line 739
     .end local v0    # "bundle":Landroid/os/Bundle;
     .end local v1    # "uri":Landroid/net/Uri;
     :goto_0
     return-void
 
-    .line 745
     :cond_0
     iget-object v2, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi21;->this$1:Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 
@@ -122,12 +113,10 @@
     .locals 1
 
     .prologue
-    .line 715
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi21;->this$1:Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 
     invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onFastForward()V
 
-    .line 714
     return-void
 .end method
 
@@ -136,7 +125,6 @@
     .param p1, "mediaButtonIntent"    # Landroid/content/Intent;
 
     .prologue
-    .line 675
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi21;->this$1:Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 
     invoke-virtual {v0, p1}, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onMediaButtonEvent(Landroid/content/Intent;)Z
@@ -150,12 +138,10 @@
     .locals 1
 
     .prologue
-    .line 700
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi21;->this$1:Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 
     invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onPause()V
 
-    .line 699
     return-void
 .end method
 
@@ -163,12 +149,10 @@
     .locals 1
 
     .prologue
-    .line 680
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi21;->this$1:Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 
     invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onPlay()V
 
-    .line 679
     return-void
 .end method
 
@@ -178,12 +162,10 @@
     .param p2, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 685
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi21;->this$1:Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 
     invoke-virtual {v0, p1, p2}, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onPlayFromMediaId(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 684
     return-void
 .end method
 
@@ -193,12 +175,10 @@
     .param p2, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 690
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi21;->this$1:Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 
     invoke-virtual {v0, p1, p2}, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onPlayFromSearch(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 689
     return-void
 .end method
 
@@ -206,12 +186,10 @@
     .locals 1
 
     .prologue
-    .line 720
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi21;->this$1:Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 
     invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onRewind()V
 
-    .line 719
     return-void
 .end method
 
@@ -220,12 +198,10 @@
     .param p1, "pos"    # J
 
     .prologue
-    .line 730
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi21;->this$1:Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 
     invoke-virtual {v0, p1, p2}, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onSeekTo(J)V
 
-    .line 729
     return-void
 .end method
 
@@ -234,7 +210,6 @@
     .param p1, "ratingObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 735
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi21;->this$1:Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 
     invoke-static {p1}, Landroid/support/v4/media/RatingCompat;->fromRating(Ljava/lang/Object;)Landroid/support/v4/media/RatingCompat;
@@ -243,7 +218,6 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onSetRating(Landroid/support/v4/media/RatingCompat;)V
 
-    .line 734
     return-void
 .end method
 
@@ -251,12 +225,10 @@
     .locals 1
 
     .prologue
-    .line 705
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi21;->this$1:Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 
     invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onSkipToNext()V
 
-    .line 704
     return-void
 .end method
 
@@ -264,12 +236,10 @@
     .locals 1
 
     .prologue
-    .line 710
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi21;->this$1:Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 
     invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onSkipToPrevious()V
 
-    .line 709
     return-void
 .end method
 
@@ -278,12 +248,10 @@
     .param p1, "id"    # J
 
     .prologue
-    .line 695
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi21;->this$1:Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 
     invoke-virtual {v0, p1, p2}, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onSkipToQueueItem(J)V
 
-    .line 694
     return-void
 .end method
 
@@ -291,11 +259,9 @@
     .locals 1
 
     .prologue
-    .line 725
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi21;->this$1:Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 
     invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onStop()V
 
-    .line 724
     return-void
 .end method

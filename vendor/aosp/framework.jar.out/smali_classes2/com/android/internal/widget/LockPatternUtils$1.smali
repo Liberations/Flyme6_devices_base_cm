@@ -44,7 +44,6 @@
     .param p4, "val$password"    # Ljava/lang/String;
 
     .prologue
-    .line 698
     iput-object p1, p0, Lcom/android/internal/widget/LockPatternUtils$1;->this$0:Lcom/android/internal/widget/LockPatternUtils;
 
     iput-object p2, p0, Lcom/android/internal/widget/LockPatternUtils$1;->val$service:Landroid/os/IBinder;
@@ -65,7 +64,6 @@
     .param p1, "dummy"    # [Ljava/lang/Object;
 
     .prologue
-    .line 700
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1    # "dummy":[Ljava/lang/Object;
@@ -81,14 +79,12 @@
     .param p1, "dummy"    # [Ljava/lang/Void;
 
     .prologue
-    .line 701
     iget-object v2, p0, Lcom/android/internal/widget/LockPatternUtils$1;->val$service:Landroid/os/IBinder;
 
     invoke-static {v2}, Landroid/os/storage/IMountService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/storage/IMountService;
 
     move-result-object v1
 
-    .line 703
     .local v1, "mountService":Landroid/os/storage/IMountService;
     :try_start_0
     iget v2, p0, Lcom/android/internal/widget/LockPatternUtils$1;->val$type:I
@@ -99,21 +95,18 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 707
     :goto_0
     const/4 v2, 0x0
 
     return-object v2
 
-    .line 704
     :catch_0
     move-exception v0
 
-    .line 705
     .local v0, "e":Landroid/os/RemoteException;
-    const-string/jumbo v2, "LockPatternUtils"
+    const-string v2, "LockPatternUtils"
 
-    const-string/jumbo v3, "Error changing encryption password"
+    const-string v3, "Error changing encryption password"
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 

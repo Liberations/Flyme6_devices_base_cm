@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 27
     invoke-direct {p0}, Landroid/support/v4/app/BaseFragmentActivityDonut;-><init>()V
 
     return-void
@@ -24,12 +23,10 @@
     .param p4, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 31
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/support/v4/app/BaseFragmentActivityHoneycomb;->dispatchFragmentsOnCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;
 
     move-result-object v0
 
-    .line 32
     .local v0, "v":Landroid/view/View;
     if-nez v0, :cond_0
 
@@ -39,14 +36,12 @@
 
     if-lt v1, v2, :cond_0
 
-    .line 34
     invoke-super {p0, p1, p2, p3, p4}, Landroid/support/v4/app/BaseFragmentActivityDonut;->onCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;
 
     move-result-object v1
 
     return-object v1
 
-    .line 36
     :cond_0
     return-object v0
 .end method

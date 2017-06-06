@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2954
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +40,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 2959
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -52,10 +50,8 @@
 
     if-le v1, v2, :cond_0
 
-    .line 2960
     return v0
 
-    .line 2962
     :cond_0
     invoke-static {p1}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 

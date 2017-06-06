@@ -33,17 +33,14 @@
     .param p1, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 71
     invoke-direct {p0}, Lcom/android/internal/appwidget/IAppWidgetHost$Stub;-><init>()V
 
-    .line 72
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Landroid/appwidget/AppWidgetHost$Callbacks;->mWeakHandler:Ljava/lang/ref/WeakReference;
 
-    .line 71
     return-void
 .end method
 
@@ -51,7 +48,6 @@
     .locals 2
 
     .prologue
-    .line 119
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v0
@@ -81,7 +77,6 @@
     .param p2, "info"    # Landroid/appwidget/AppWidgetProviderInfo;
 
     .prologue
-    .line 88
     invoke-static {}, Landroid/appwidget/AppWidgetHost$Callbacks;->isLocalBinder()Z
 
     move-result v2
@@ -90,12 +85,10 @@
 
     if-eqz p2, :cond_0
 
-    .line 89
     invoke-virtual {p2}, Landroid/appwidget/AppWidgetProviderInfo;->clone()Landroid/appwidget/AppWidgetProviderInfo;
 
     move-result-object p2
 
-    .line 91
     :cond_0
     iget-object v2, p0, Landroid/appwidget/AppWidgetHost$Callbacks;->mWeakHandler:Ljava/lang/ref/WeakReference;
 
@@ -105,30 +98,23 @@
 
     check-cast v0, Landroid/os/Handler;
 
-    .line 92
     .local v0, "handler":Landroid/os/Handler;
     if-nez v0, :cond_1
 
-    .line 93
     return-void
 
-    .line 95
     :cond_1
     const/4 v2, 0x2
 
-    .line 96
     const/4 v3, 0x0
 
-    .line 95
     invoke-virtual {v0, v2, p1, v3, p2}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v1
 
-    .line 97
     .local v1, "msg":Landroid/os/Message;
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 87
     return-void
 .end method
 
@@ -136,7 +122,6 @@
     .locals 2
 
     .prologue
-    .line 101
     iget-object v1, p0, Landroid/appwidget/AppWidgetHost$Callbacks;->mWeakHandler:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -145,14 +130,11 @@
 
     check-cast v0, Landroid/os/Handler;
 
-    .line 102
     .local v0, "handler":Landroid/os/Handler;
     if-nez v0, :cond_0
 
-    .line 103
     return-void
 
-    .line 105
     :cond_0
     const/4 v1, 0x3
 
@@ -162,7 +144,6 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 100
     return-void
 .end method
 
@@ -172,7 +153,6 @@
     .param p2, "views"    # Landroid/widget/RemoteViews;
 
     .prologue
-    .line 76
     invoke-static {}, Landroid/appwidget/AppWidgetHost$Callbacks;->isLocalBinder()Z
 
     move-result v2
@@ -181,12 +161,10 @@
 
     if-eqz p2, :cond_0
 
-    .line 77
     invoke-virtual {p2}, Landroid/widget/RemoteViews;->clone()Landroid/widget/RemoteViews;
 
     move-result-object p2
 
-    .line 79
     :cond_0
     iget-object v2, p0, Landroid/appwidget/AppWidgetHost$Callbacks;->mWeakHandler:Ljava/lang/ref/WeakReference;
 
@@ -196,14 +174,11 @@
 
     check-cast v0, Landroid/os/Handler;
 
-    .line 80
     .local v0, "handler":Landroid/os/Handler;
     if-nez v0, :cond_1
 
-    .line 81
     return-void
 
-    .line 83
     :cond_1
     const/4 v2, 0x1
 
@@ -213,11 +188,9 @@
 
     move-result-object v1
 
-    .line 84
     .local v1, "msg":Landroid/os/Message;
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 75
     return-void
 .end method
 
@@ -227,7 +200,6 @@
     .param p2, "viewId"    # I
 
     .prologue
-    .line 109
     iget-object v2, p0, Landroid/appwidget/AppWidgetHost$Callbacks;->mWeakHandler:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -236,14 +208,11 @@
 
     check-cast v0, Landroid/os/Handler;
 
-    .line 110
     .local v0, "handler":Landroid/os/Handler;
     if-nez v0, :cond_0
 
-    .line 111
     return-void
 
-    .line 113
     :cond_0
     const/4 v2, 0x4
 
@@ -251,10 +220,8 @@
 
     move-result-object v1
 
-    .line 115
     .local v1, "msg":Landroid/os/Message;
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 108
     return-void
 .end method

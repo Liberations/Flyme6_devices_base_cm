@@ -30,7 +30,6 @@
     .param p2, "val$result"    # Z
 
     .prologue
-    .line 167
     iput-object p1, p0, Lcom/android/server/policy/FlymeConfirmPasswordView$4;->this$0:Lcom/android/server/policy/FlymeConfirmPasswordView;
 
     iput-boolean p2, p0, Lcom/android/server/policy/FlymeConfirmPasswordView$4;->val$result:Z
@@ -46,12 +45,10 @@
     .locals 2
 
     .prologue
-    .line 170
     iget-boolean v0, p0, Lcom/android/server/policy/FlymeConfirmPasswordView$4;->val$result:Z
 
     if-eqz v0, :cond_1
 
-    .line 171
     iget-object v0, p0, Lcom/android/server/policy/FlymeConfirmPasswordView$4;->this$0:Lcom/android/server/policy/FlymeConfirmPasswordView;
 
     invoke-static {v0}, Lcom/android/server/policy/FlymeConfirmPasswordView;->-get1(Lcom/android/server/policy/FlymeConfirmPasswordView;)Ljava/lang/Runnable;
@@ -60,7 +57,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 172
     iget-object v0, p0, Lcom/android/server/policy/FlymeConfirmPasswordView$4;->this$0:Lcom/android/server/policy/FlymeConfirmPasswordView;
 
     invoke-static {v0}, Lcom/android/server/policy/FlymeConfirmPasswordView;->-get1(Lcom/android/server/policy/FlymeConfirmPasswordView;)Ljava/lang/Runnable;
@@ -69,12 +65,10 @@
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 169
     :cond_0
     :goto_0
     return-void
 
-    .line 184
     :cond_1
     iget-object v0, p0, Lcom/android/server/policy/FlymeConfirmPasswordView$4;->this$0:Lcom/android/server/policy/FlymeConfirmPasswordView;
 
@@ -86,7 +80,6 @@
 
     invoke-virtual {v0, v1}, Lcom/meizu/widget/ShutdownLockView;->clearCell(Z)V
 
-    .line 185
     iget-object v0, p0, Lcom/android/server/policy/FlymeConfirmPasswordView$4;->this$0:Lcom/android/server/policy/FlymeConfirmPasswordView;
 
     invoke-static {v0}, Lcom/android/server/policy/FlymeConfirmPasswordView;->-get2(Lcom/android/server/policy/FlymeConfirmPasswordView;)Lcom/meizu/widget/ShutdownLockView;

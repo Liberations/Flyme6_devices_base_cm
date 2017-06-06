@@ -35,19 +35,16 @@
     .param p1, "this$1"    # Lcom/android/server/accounts/TokenCache$TokenLruCache;
 
     .prologue
-    .line 88
     iput-object p1, p0, Lcom/android/server/accounts/TokenCache$TokenLruCache$Evictor;->this$1:Lcom/android/server/accounts/TokenCache$TokenLruCache;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 89
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/accounts/TokenCache$TokenLruCache$Evictor;->mKeys:Ljava/util/List;
 
-    .line 88
     return-void
 .end method
 
@@ -58,12 +55,10 @@
     .param p1, "k"    # Lcom/android/server/accounts/TokenCache$Key;
 
     .prologue
-    .line 93
     iget-object v0, p0, Lcom/android/server/accounts/TokenCache$TokenLruCache$Evictor;->mKeys:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 92
     return-void
 .end method
 
@@ -71,7 +66,6 @@
     .locals 3
 
     .prologue
-    .line 97
     iget-object v2, p0, Lcom/android/server/accounts/TokenCache$TokenLruCache$Evictor;->mKeys:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -92,7 +86,6 @@
 
     check-cast v0, Lcom/android/server/accounts/TokenCache$Key;
 
-    .line 98
     .local v0, "k":Lcom/android/server/accounts/TokenCache$Key;
     iget-object v2, p0, Lcom/android/server/accounts/TokenCache$TokenLruCache$Evictor;->this$1:Lcom/android/server/accounts/TokenCache$TokenLruCache;
 
@@ -100,7 +93,6 @@
 
     goto :goto_0
 
-    .line 96
     .end local v0    # "k":Lcom/android/server/accounts/TokenCache$Key;
     :cond_0
     return-void

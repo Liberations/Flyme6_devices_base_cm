@@ -38,18 +38,14 @@
     .param p3, "callingUid"    # I
 
     .prologue
-    .line 236
     iput-object p1, p0, Landroid/speech/RecognitionService$Callback;->this$0:Landroid/speech/RecognitionService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 237
     iput-object p2, p0, Landroid/speech/RecognitionService$Callback;->mListener:Landroid/speech/IRecognitionListener;
 
-    .line 238
     iput p3, p0, Landroid/speech/RecognitionService$Callback;->mCallingUid:I
 
-    .line 236
     return-void
 .end method
 
@@ -76,12 +72,10 @@
     .end annotation
 
     .prologue
-    .line 246
     iget-object v0, p0, Landroid/speech/RecognitionService$Callback;->mListener:Landroid/speech/IRecognitionListener;
 
     invoke-interface {v0}, Landroid/speech/IRecognitionListener;->onBeginningOfSpeech()V
 
-    .line 244
     return-void
 .end method
 
@@ -95,12 +89,10 @@
     .end annotation
 
     .prologue
-    .line 257
     iget-object v0, p0, Landroid/speech/RecognitionService$Callback;->mListener:Landroid/speech/IRecognitionListener;
 
     invoke-interface {v0, p1}, Landroid/speech/IRecognitionListener;->onBufferReceived([B)V
 
-    .line 256
     return-void
 .end method
 
@@ -113,12 +105,10 @@
     .end annotation
 
     .prologue
-    .line 264
     iget-object v0, p0, Landroid/speech/RecognitionService$Callback;->mListener:Landroid/speech/IRecognitionListener;
 
     invoke-interface {v0}, Landroid/speech/IRecognitionListener;->onEndOfSpeech()V
 
-    .line 263
     return-void
 .end method
 
@@ -132,7 +122,6 @@
     .end annotation
 
     .prologue
-    .line 273
     iget-object v0, p0, Landroid/speech/RecognitionService$Callback;->this$0:Landroid/speech/RecognitionService;
 
     invoke-static {v0}, Landroid/speech/RecognitionService;->-get0(Landroid/speech/RecognitionService;)Landroid/os/Handler;
@@ -147,12 +136,10 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 274
     iget-object v0, p0, Landroid/speech/RecognitionService$Callback;->mListener:Landroid/speech/IRecognitionListener;
 
     invoke-interface {v0, p1}, Landroid/speech/IRecognitionListener;->onError(I)V
 
-    .line 272
     return-void
 .end method
 
@@ -160,7 +147,6 @@
     .locals 1
 
     .prologue
-    .line 329
     iget v0, p0, Landroid/speech/RecognitionService$Callback;->mCallingUid:I
 
     return v0
@@ -176,12 +162,10 @@
     .end annotation
 
     .prologue
-    .line 289
     iget-object v0, p0, Landroid/speech/RecognitionService$Callback;->mListener:Landroid/speech/IRecognitionListener;
 
     invoke-interface {v0, p1}, Landroid/speech/IRecognitionListener;->onPartialResults(Landroid/os/Bundle;)V
 
-    .line 288
     return-void
 .end method
 
@@ -195,12 +179,10 @@
     .end annotation
 
     .prologue
-    .line 299
     iget-object v0, p0, Landroid/speech/RecognitionService$Callback;->mListener:Landroid/speech/IRecognitionListener;
 
     invoke-interface {v0, p1}, Landroid/speech/IRecognitionListener;->onReadyForSpeech(Landroid/os/Bundle;)V
 
-    .line 298
     return-void
 .end method
 
@@ -214,7 +196,6 @@
     .end annotation
 
     .prologue
-    .line 310
     iget-object v0, p0, Landroid/speech/RecognitionService$Callback;->this$0:Landroid/speech/RecognitionService;
 
     invoke-static {v0}, Landroid/speech/RecognitionService;->-get0(Landroid/speech/RecognitionService;)Landroid/os/Handler;
@@ -229,12 +210,10 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 311
     iget-object v0, p0, Landroid/speech/RecognitionService$Callback;->mListener:Landroid/speech/IRecognitionListener;
 
     invoke-interface {v0, p1}, Landroid/speech/IRecognitionListener;->onResults(Landroid/os/Bundle;)V
 
-    .line 309
     return-void
 .end method
 
@@ -248,11 +227,9 @@
     .end annotation
 
     .prologue
-    .line 321
     iget-object v0, p0, Landroid/speech/RecognitionService$Callback;->mListener:Landroid/speech/IRecognitionListener;
 
     invoke-interface {v0, p1}, Landroid/speech/IRecognitionListener;->onRmsChanged(F)V
 
-    .line 320
     return-void
 .end method

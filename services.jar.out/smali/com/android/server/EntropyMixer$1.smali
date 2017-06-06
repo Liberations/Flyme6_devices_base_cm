@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lcom/android/server/EntropyMixer;
 
     .prologue
-    .line 73
     iput-object p1, p0, Lcom/android/server/EntropyMixer$1;->this$0:Lcom/android/server/EntropyMixer;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,39 +38,32 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 76
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 77
-    const-string/jumbo v0, "EntropyMixer"
+    const-string v0, "EntropyMixer"
 
-    const-string/jumbo v1, "Will not process invalid message"
+    const-string v1, "Will not process invalid message"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 78
     return-void
 
-    .line 80
     :cond_0
     iget-object v0, p0, Lcom/android/server/EntropyMixer$1;->this$0:Lcom/android/server/EntropyMixer;
 
     invoke-static {v0}, Lcom/android/server/EntropyMixer;->-wrap0(Lcom/android/server/EntropyMixer;)V
 
-    .line 81
     iget-object v0, p0, Lcom/android/server/EntropyMixer$1;->this$0:Lcom/android/server/EntropyMixer;
 
     invoke-static {v0}, Lcom/android/server/EntropyMixer;->-wrap2(Lcom/android/server/EntropyMixer;)V
 
-    .line 82
     iget-object v0, p0, Lcom/android/server/EntropyMixer$1;->this$0:Lcom/android/server/EntropyMixer;
 
     invoke-static {v0}, Lcom/android/server/EntropyMixer;->-wrap1(Lcom/android/server/EntropyMixer;)V
 
-    .line 75
     return-void
 .end method

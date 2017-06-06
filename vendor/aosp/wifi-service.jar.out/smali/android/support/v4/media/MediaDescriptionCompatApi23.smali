@@ -16,7 +16,6 @@
     .locals 0
 
     .prologue
-    .line 24
     invoke-direct {p0}, Landroid/support/v4/media/MediaDescriptionCompatApi21;-><init>()V
 
     return-void
@@ -27,7 +26,6 @@
     .param p0, "descriptionObj"    # Ljava/lang/Object;
 
     .prologue
-    .line 26
     check-cast p0, Landroid/media/MediaDescription;
 
     .end local p0    # "descriptionObj":Ljava/lang/Object;

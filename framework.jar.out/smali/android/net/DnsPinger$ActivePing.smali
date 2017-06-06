@@ -36,19 +36,16 @@
     .param p1, "this$0"    # Landroid/net/DnsPinger;
 
     .prologue
-    .line 99
     iput-object p1, p0, Landroid/net/DnsPinger$ActivePing;->this$0:Landroid/net/DnsPinger;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 105
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/net/DnsPinger$ActivePing;->start:J
 
-    .line 99
     return-void
 .end method
 

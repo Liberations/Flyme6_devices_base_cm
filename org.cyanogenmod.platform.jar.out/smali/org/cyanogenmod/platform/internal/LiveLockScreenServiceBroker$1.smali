@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;
 
     .prologue
-    .line 78
     iput-object p1, p0, Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker$1;->this$0:Lorg/cyanogenmod/platform/internal/LiveLockScreenServiceBroker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 117
     const/4 v0, 0x0
 
     return-object v0
@@ -59,7 +57,6 @@
     .end annotation
 
     .prologue
-    .line 85
     return-void
 .end method
 
@@ -77,7 +74,6 @@
     .end annotation
 
     .prologue
-    .line 81
     return-void
 .end method
 
@@ -90,7 +86,6 @@
     .end annotation
 
     .prologue
-    .line 90
     const/4 v0, 0x0
 
     return-object v0
@@ -105,7 +100,6 @@
     .end annotation
 
     .prologue
-    .line 100
     const/4 v0, 0x0
 
     return v0
@@ -121,7 +115,6 @@
     .end annotation
 
     .prologue
-    .line 106
     const/4 v0, 0x0
 
     return v0
@@ -137,7 +130,6 @@
     .end annotation
 
     .prologue
-    .line 112
     const/4 v0, 0x0
 
     return v0
@@ -153,6 +145,5 @@
     .end annotation
 
     .prologue
-    .line 94
     return-void
 .end method

@@ -138,61 +138,44 @@
     .param p17, "intentExtras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 649
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 665
     iput-object p1, p0, Landroid/telecom/Call$Details;->mHandle:Landroid/net/Uri;
 
-    .line 666
     iput p2, p0, Landroid/telecom/Call$Details;->mHandlePresentation:I
 
-    .line 667
     iput-object p3, p0, Landroid/telecom/Call$Details;->mCallerDisplayName:Ljava/lang/String;
 
-    .line 668
     iput p4, p0, Landroid/telecom/Call$Details;->mCallerDisplayNamePresentation:I
 
-    .line 669
     iput-object p5, p0, Landroid/telecom/Call$Details;->mAccountHandle:Landroid/telecom/PhoneAccountHandle;
 
-    .line 670
     iput p6, p0, Landroid/telecom/Call$Details;->mCallCapabilities:I
 
-    .line 671
     iput p7, p0, Landroid/telecom/Call$Details;->mCallProperties:I
 
-    .line 672
     iput-object p8, p0, Landroid/telecom/Call$Details;->mDisconnectCause:Landroid/telecom/DisconnectCause;
 
-    .line 673
     iput-wide p9, p0, Landroid/telecom/Call$Details;->mCreateTimeMillis:J
 
-    .line 674
     iput-wide p11, p0, Landroid/telecom/Call$Details;->mConnectTimeMillis:J
 
-    .line 675
     iput-object p13, p0, Landroid/telecom/Call$Details;->mGatewayInfo:Landroid/telecom/GatewayInfo;
 
-    .line 676
     iput p14, p0, Landroid/telecom/Call$Details;->mVideoState:I
 
-    .line 677
     move-object/from16 v0, p15
 
     iput-object v0, p0, Landroid/telecom/Call$Details;->mStatusHints:Landroid/telecom/StatusHints;
 
-    .line 678
     move-object/from16 v0, p16
 
     iput-object v0, p0, Landroid/telecom/Call$Details;->mExtras:Landroid/os/Bundle;
 
-    .line 679
     move-object/from16 v0, p17
 
     iput-object v0, p0, Landroid/telecom/Call$Details;->mIntentExtras:Landroid/os/Bundle;
 
-    .line 664
     return-void
 .end method
 
@@ -204,7 +187,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 333
     and-int v1, p0, p1
 
     if-eqz v1, :cond_0
@@ -220,18 +202,15 @@
     .param p0, "capabilities"    # I
 
     .prologue
-    .line 353
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 354
     .local v0, "builder":Ljava/lang/StringBuilder;
-    const-string/jumbo v1, "[Capabilities:"
+    const-string v1, "[Capabilities:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 355
     const/4 v1, 0x1
 
     invoke-static {p0, v1}, Landroid/telecom/Call$Details;->can(II)Z
@@ -240,12 +219,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 356
-    const-string/jumbo v1, " CAPABILITY_HOLD"
+    const-string v1, " CAPABILITY_HOLD"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 358
     :cond_0
     const/4 v1, 0x2
 
@@ -255,12 +232,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 359
-    const-string/jumbo v1, " CAPABILITY_SUPPORT_HOLD"
+    const-string v1, " CAPABILITY_SUPPORT_HOLD"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 361
     :cond_1
     const/4 v1, 0x4
 
@@ -270,12 +245,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 362
-    const-string/jumbo v1, " CAPABILITY_MERGE_CONFERENCE"
+    const-string v1, " CAPABILITY_MERGE_CONFERENCE"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 364
     :cond_2
     const/16 v1, 0x8
 
@@ -285,12 +258,10 @@
 
     if-eqz v1, :cond_3
 
-    .line 365
-    const-string/jumbo v1, " CAPABILITY_SWAP_CONFERENCE"
+    const-string v1, " CAPABILITY_SWAP_CONFERENCE"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 367
     :cond_3
     const/16 v1, 0x20
 
@@ -300,12 +271,10 @@
 
     if-eqz v1, :cond_4
 
-    .line 368
-    const-string/jumbo v1, " CAPABILITY_RESPOND_VIA_TEXT"
+    const-string v1, " CAPABILITY_RESPOND_VIA_TEXT"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 370
     :cond_4
     const/16 v1, 0x40
 
@@ -315,12 +284,10 @@
 
     if-eqz v1, :cond_5
 
-    .line 371
-    const-string/jumbo v1, " CAPABILITY_MUTE"
+    const-string v1, " CAPABILITY_MUTE"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 373
     :cond_5
     const/16 v1, 0x80
 
@@ -330,12 +297,10 @@
 
     if-eqz v1, :cond_6
 
-    .line 374
-    const-string/jumbo v1, " CAPABILITY_MANAGE_CONFERENCE"
+    const-string v1, " CAPABILITY_MANAGE_CONFERENCE"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 376
     :cond_6
     const/16 v1, 0x100
 
@@ -345,12 +310,10 @@
 
     if-eqz v1, :cond_7
 
-    .line 377
-    const-string/jumbo v1, " CAPABILITY_SUPPORTS_VT_LOCAL_RX"
+    const-string v1, " CAPABILITY_SUPPORTS_VT_LOCAL_RX"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 379
     :cond_7
     const/16 v1, 0x200
 
@@ -360,12 +323,10 @@
 
     if-eqz v1, :cond_8
 
-    .line 380
-    const-string/jumbo v1, " CAPABILITY_SUPPORTS_VT_LOCAL_TX"
+    const-string v1, " CAPABILITY_SUPPORTS_VT_LOCAL_TX"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 382
     :cond_8
     const/16 v1, 0x300
 
@@ -375,12 +336,10 @@
 
     if-eqz v1, :cond_9
 
-    .line 383
-    const-string/jumbo v1, " CAPABILITY_SUPPORTS_VT_LOCAL_BIDIRECTIONAL"
+    const-string v1, " CAPABILITY_SUPPORTS_VT_LOCAL_BIDIRECTIONAL"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 385
     :cond_9
     const/16 v1, 0x400
 
@@ -390,12 +349,10 @@
 
     if-eqz v1, :cond_a
 
-    .line 386
-    const-string/jumbo v1, " CAPABILITY_SUPPORTS_VT_REMOTE_RX"
+    const-string v1, " CAPABILITY_SUPPORTS_VT_REMOTE_RX"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 388
     :cond_a
     const/16 v1, 0x800
 
@@ -405,12 +362,10 @@
 
     if-eqz v1, :cond_b
 
-    .line 389
-    const-string/jumbo v1, " CAPABILITY_SUPPORTS_VT_REMOTE_TX"
+    const-string v1, " CAPABILITY_SUPPORTS_VT_REMOTE_TX"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 391
     :cond_b
     const/high16 v1, 0x800000
 
@@ -420,12 +375,10 @@
 
     if-eqz v1, :cond_c
 
-    .line 392
-    const-string/jumbo v1, " CAPABILITY_SUPPORTS_DOWNGRADE_TO_VOICE_LOCAL"
+    const-string v1, " CAPABILITY_SUPPORTS_DOWNGRADE_TO_VOICE_LOCAL"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 394
     :cond_c
     const/high16 v1, 0x1000000
 
@@ -435,12 +388,10 @@
 
     if-eqz v1, :cond_d
 
-    .line 395
-    const-string/jumbo v1, " CAPABILITY_SUPPORTS_DOWNGRADE_TO_VOICE_REMOTE"
+    const-string v1, " CAPABILITY_SUPPORTS_DOWNGRADE_TO_VOICE_REMOTE"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 397
     :cond_d
     const/16 v1, 0xc00
 
@@ -450,12 +401,10 @@
 
     if-eqz v1, :cond_e
 
-    .line 398
-    const-string/jumbo v1, " CAPABILITY_SUPPORTS_VT_REMOTE_BIDIRECTIONAL"
+    const-string v1, " CAPABILITY_SUPPORTS_VT_REMOTE_BIDIRECTIONAL"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 400
     :cond_e
     const/high16 v1, 0x40000
 
@@ -465,12 +414,10 @@
 
     if-eqz v1, :cond_f
 
-    .line 401
-    const-string/jumbo v1, " CAPABILITY_SPEED_UP_MT_AUDIO"
+    const-string v1, " CAPABILITY_SPEED_UP_MT_AUDIO"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 403
     :cond_f
     const/high16 v1, 0x80000
 
@@ -480,12 +427,10 @@
 
     if-eqz v1, :cond_10
 
-    .line 404
-    const-string/jumbo v1, " CAPABILITY_CAN_UPGRADE_TO_VIDEO"
+    const-string v1, " CAPABILITY_CAN_UPGRADE_TO_VIDEO"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 406
     :cond_10
     const/high16 v1, 0x100000
 
@@ -495,12 +440,10 @@
 
     if-eqz v1, :cond_11
 
-    .line 407
-    const-string/jumbo v1, " CAPABILITY_CAN_PAUSE_VIDEO"
+    const-string v1, " CAPABILITY_CAN_PAUSE_VIDEO"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 409
     :cond_11
     const/high16 v1, 0x400000
 
@@ -510,12 +453,10 @@
 
     if-eqz v1, :cond_12
 
-    .line 410
-    const-string/jumbo v1, " CAPABILITY_VOICE_PRIVACY"
+    const-string v1, " CAPABILITY_VOICE_PRIVACY"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 412
     :cond_12
     const/high16 v1, 0x2000000
 
@@ -525,12 +466,10 @@
 
     if-eqz v1, :cond_13
 
-    .line 413
-    const-string/jumbo v1, " CAPABILITY_ADD_PARTICIPANT"
+    const-string v1, " CAPABILITY_ADD_PARTICIPANT"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 415
     :cond_13
     const/high16 v1, 0x4000000
 
@@ -540,18 +479,15 @@
 
     if-eqz v1, :cond_14
 
-    .line 416
-    const-string/jumbo v1, " CAPABILITY_SUPPORTS_TRANSFER"
+    const-string v1, " CAPABILITY_SUPPORTS_TRANSFER"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 418
     :cond_14
-    const-string/jumbo v1, "]"
+    const-string v1, "]"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 419
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -567,7 +503,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 430
     and-int v1, p0, p1
 
     if-eqz v1, :cond_0
@@ -583,18 +518,15 @@
     .param p0, "properties"    # I
 
     .prologue
-    .line 450
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 451
     .local v0, "builder":Ljava/lang/StringBuilder;
-    const-string/jumbo v1, "[Properties:"
+    const-string v1, "[Properties:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 452
     const/4 v1, 0x1
 
     invoke-static {p0, v1}, Landroid/telecom/Call$Details;->hasProperty(II)Z
@@ -603,12 +535,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 453
-    const-string/jumbo v1, " PROPERTY_CONFERENCE"
+    const-string v1, " PROPERTY_CONFERENCE"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 455
     :cond_0
     const/4 v1, 0x2
 
@@ -618,12 +548,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 456
-    const-string/jumbo v1, " PROPERTY_GENERIC_CONFERENCE"
+    const-string v1, " PROPERTY_GENERIC_CONFERENCE"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 458
     :cond_1
     const/16 v1, 0x8
 
@@ -633,12 +561,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 459
-    const-string/jumbo v1, " PROPERTY_WIFI"
+    const-string v1, " PROPERTY_WIFI"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 461
     :cond_2
     const/16 v1, 0x10
 
@@ -648,12 +574,10 @@
 
     if-eqz v1, :cond_3
 
-    .line 462
-    const-string/jumbo v1, " PROPERTY_HIGH_DEF_AUDIO"
+    const-string v1, " PROPERTY_HIGH_DEF_AUDIO"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 464
     :cond_3
     const/4 v1, 0x4
 
@@ -663,12 +587,10 @@
 
     if-eqz v1, :cond_4
 
-    .line 465
-    const-string/jumbo v1, " PROPERTY_EMERGENCY_CALLBACK_MODE"
+    const-string v1, " PROPERTY_EMERGENCY_CALLBACK_MODE"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 467
     :cond_4
     const/16 v1, 0x20
 
@@ -678,12 +600,10 @@
 
     if-eqz v1, :cond_5
 
-    .line 468
-    const-string/jumbo v1, " PROPERTY_WAS_FORWARDED"
+    const-string v1, " PROPERTY_WAS_FORWARDED"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 470
     :cond_5
     const/16 v1, 0x40
 
@@ -693,12 +613,10 @@
 
     if-eqz v1, :cond_6
 
-    .line 471
-    const-string/jumbo v1, " PROPERTY_HELD_REMOTELY"
+    const-string v1, " PROPERTY_HELD_REMOTELY"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 473
     :cond_6
     const/16 v1, 0x80
 
@@ -708,12 +626,10 @@
 
     if-eqz v1, :cond_7
 
-    .line 474
-    const-string/jumbo v1, " PROPERTY_DIALING_IS_WAITING"
+    const-string v1, " PROPERTY_DIALING_IS_WAITING"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 476
     :cond_7
     const/16 v1, 0x100
 
@@ -723,12 +639,10 @@
 
     if-eqz v1, :cond_8
 
-    .line 477
-    const-string/jumbo v1, " PROPERTY_ADDITIONAL_CALL_FORWARDED"
+    const-string v1, " PROPERTY_ADDITIONAL_CALL_FORWARDED"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 479
     :cond_8
     const/16 v1, 0x200
 
@@ -738,18 +652,15 @@
 
     if-eqz v1, :cond_9
 
-    .line 480
-    const-string/jumbo v1, " PROPERTY_REMOTE_INCOMING_CALLS_BARRED"
+    const-string v1, " PROPERTY_REMOTE_INCOMING_CALLS_BARRED"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 483
     :cond_9
-    const-string/jumbo v1, "]"
+    const-string v1, "]"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 484
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -764,7 +675,6 @@
     .param p1, "capability"    # I
 
     .prologue
-    .line 343
     iget v0, p0, Landroid/telecom/Call$Details;->mCallCapabilities:I
 
     invoke-static {v0, p1}, Landroid/telecom/Call$Details;->can(II)Z
@@ -781,17 +691,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 605
     instance-of v2, p1, Landroid/telecom/Call$Details;
 
     if-eqz v2, :cond_1
 
     move-object v0, p1
 
-    .line 606
     check-cast v0, Landroid/telecom/Call$Details;
 
-    .line 608
     .local v0, "d":Landroid/telecom/Call$Details;
     iget-object v2, p0, Landroid/telecom/Call$Details;->mHandle:Landroid/net/Uri;
 
@@ -803,7 +710,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 609
     iget v2, p0, Landroid/telecom/Call$Details;->mHandlePresentation:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -820,10 +726,8 @@
 
     move-result v2
 
-    .line 608
     if-eqz v2, :cond_0
 
-    .line 610
     iget-object v2, p0, Landroid/telecom/Call$Details;->mCallerDisplayName:Ljava/lang/String;
 
     iget-object v3, v0, Landroid/telecom/Call$Details;->mCallerDisplayName:Ljava/lang/String;
@@ -832,32 +736,26 @@
 
     move-result v2
 
-    .line 608
     if-eqz v2, :cond_0
 
-    .line 611
     iget v2, p0, Landroid/telecom/Call$Details;->mCallerDisplayNamePresentation:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    .line 612
     iget v3, v0, Landroid/telecom/Call$Details;->mCallerDisplayNamePresentation:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
-    .line 611
     invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
-    .line 608
     if-eqz v2, :cond_0
 
-    .line 613
     iget-object v2, p0, Landroid/telecom/Call$Details;->mAccountHandle:Landroid/telecom/PhoneAccountHandle;
 
     iget-object v3, v0, Landroid/telecom/Call$Details;->mAccountHandle:Landroid/telecom/PhoneAccountHandle;
@@ -866,10 +764,8 @@
 
     move-result v2
 
-    .line 608
     if-eqz v2, :cond_0
 
-    .line 614
     iget v2, p0, Landroid/telecom/Call$Details;->mCallCapabilities:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -886,10 +782,8 @@
 
     move-result v2
 
-    .line 608
     if-eqz v2, :cond_0
 
-    .line 615
     iget v2, p0, Landroid/telecom/Call$Details;->mCallProperties:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -906,10 +800,8 @@
 
     move-result v2
 
-    .line 608
     if-eqz v2, :cond_0
 
-    .line 616
     iget-object v2, p0, Landroid/telecom/Call$Details;->mDisconnectCause:Landroid/telecom/DisconnectCause;
 
     iget-object v3, v0, Landroid/telecom/Call$Details;->mDisconnectCause:Landroid/telecom/DisconnectCause;
@@ -918,10 +810,8 @@
 
     move-result v2
 
-    .line 608
     if-eqz v2, :cond_0
 
-    .line 617
     iget-wide v2, p0, Landroid/telecom/Call$Details;->mCreateTimeMillis:J
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -938,10 +828,8 @@
 
     move-result v2
 
-    .line 608
     if-eqz v2, :cond_0
 
-    .line 618
     iget-wide v2, p0, Landroid/telecom/Call$Details;->mConnectTimeMillis:J
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -958,10 +846,8 @@
 
     move-result v2
 
-    .line 608
     if-eqz v2, :cond_0
 
-    .line 619
     iget-object v2, p0, Landroid/telecom/Call$Details;->mGatewayInfo:Landroid/telecom/GatewayInfo;
 
     iget-object v3, v0, Landroid/telecom/Call$Details;->mGatewayInfo:Landroid/telecom/GatewayInfo;
@@ -970,10 +856,8 @@
 
     move-result v2
 
-    .line 608
     if-eqz v2, :cond_0
 
-    .line 620
     iget v2, p0, Landroid/telecom/Call$Details;->mVideoState:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -990,10 +874,8 @@
 
     move-result v2
 
-    .line 608
     if-eqz v2, :cond_0
 
-    .line 621
     iget-object v2, p0, Landroid/telecom/Call$Details;->mStatusHints:Landroid/telecom/StatusHints;
 
     iget-object v3, v0, Landroid/telecom/Call$Details;->mStatusHints:Landroid/telecom/StatusHints;
@@ -1002,10 +884,8 @@
 
     move-result v2
 
-    .line 608
     if-eqz v2, :cond_0
 
-    .line 622
     iget-object v2, p0, Landroid/telecom/Call$Details;->mExtras:Landroid/os/Bundle;
 
     iget-object v3, v0, Landroid/telecom/Call$Details;->mExtras:Landroid/os/Bundle;
@@ -1014,10 +894,8 @@
 
     move-result v2
 
-    .line 608
     if-eqz v2, :cond_0
 
-    .line 623
     iget-object v1, p0, Landroid/telecom/Call$Details;->mIntentExtras:Landroid/os/Bundle;
 
     iget-object v2, v0, Landroid/telecom/Call$Details;->mIntentExtras:Landroid/os/Bundle;
@@ -1026,11 +904,9 @@
 
     move-result v1
 
-    .line 607
     :cond_0
     return v1
 
-    .line 625
     .end local v0    # "d":Landroid/telecom/Call$Details;
     :cond_1
     return v1
@@ -1040,7 +916,6 @@
     .locals 1
 
     .prologue
-    .line 523
     iget-object v0, p0, Landroid/telecom/Call$Details;->mAccountHandle:Landroid/telecom/PhoneAccountHandle;
 
     return-object v0
@@ -1050,7 +925,6 @@
     .locals 1
 
     .prologue
-    .line 531
     iget v0, p0, Landroid/telecom/Call$Details;->mCallCapabilities:I
 
     return v0
@@ -1060,7 +934,6 @@
     .locals 1
 
     .prologue
-    .line 539
     iget v0, p0, Landroid/telecom/Call$Details;->mCallProperties:I
 
     return v0
@@ -1070,7 +943,6 @@
     .locals 1
 
     .prologue
-    .line 507
     iget-object v0, p0, Landroid/telecom/Call$Details;->mCallerDisplayName:Ljava/lang/String;
 
     return-object v0
@@ -1080,7 +952,6 @@
     .locals 1
 
     .prologue
-    .line 515
     iget v0, p0, Landroid/telecom/Call$Details;->mCallerDisplayNamePresentation:I
 
     return v0
@@ -1090,7 +961,6 @@
     .locals 2
 
     .prologue
-    .line 556
     iget-wide v0, p0, Landroid/telecom/Call$Details;->mConnectTimeMillis:J
 
     return-wide v0
@@ -1100,7 +970,6 @@
     .locals 2
 
     .prologue
-    .line 564
     iget-wide v0, p0, Landroid/telecom/Call$Details;->mCreateTimeMillis:J
 
     return-wide v0
@@ -1110,7 +979,6 @@
     .locals 1
 
     .prologue
-    .line 547
     iget-object v0, p0, Landroid/telecom/Call$Details;->mDisconnectCause:Landroid/telecom/DisconnectCause;
 
     return-object v0
@@ -1120,7 +988,6 @@
     .locals 1
 
     .prologue
-    .line 593
     iget-object v0, p0, Landroid/telecom/Call$Details;->mExtras:Landroid/os/Bundle;
 
     return-object v0
@@ -1130,7 +997,6 @@
     .locals 1
 
     .prologue
-    .line 571
     iget-object v0, p0, Landroid/telecom/Call$Details;->mGatewayInfo:Landroid/telecom/GatewayInfo;
 
     return-object v0
@@ -1140,7 +1006,6 @@
     .locals 1
 
     .prologue
-    .line 492
     iget-object v0, p0, Landroid/telecom/Call$Details;->mHandle:Landroid/net/Uri;
 
     return-object v0
@@ -1150,7 +1015,6 @@
     .locals 1
 
     .prologue
-    .line 500
     iget v0, p0, Landroid/telecom/Call$Details;->mHandlePresentation:I
 
     return v0
@@ -1160,7 +1024,6 @@
     .locals 1
 
     .prologue
-    .line 600
     iget-object v0, p0, Landroid/telecom/Call$Details;->mIntentExtras:Landroid/os/Bundle;
 
     return-object v0
@@ -1170,7 +1033,6 @@
     .locals 1
 
     .prologue
-    .line 586
     iget-object v0, p0, Landroid/telecom/Call$Details;->mStatusHints:Landroid/telecom/StatusHints;
 
     return-object v0
@@ -1180,7 +1042,6 @@
     .locals 1
 
     .prologue
-    .line 578
     iget v0, p0, Landroid/telecom/Call$Details;->mVideoState:I
 
     return v0
@@ -1191,7 +1052,6 @@
     .param p1, "property"    # I
 
     .prologue
-    .line 440
     iget v0, p0, Landroid/telecom/Call$Details;->mCallProperties:I
 
     invoke-static {v0, p1}, Landroid/telecom/Call$Details;->hasProperty(II)Z
@@ -1205,14 +1065,12 @@
     .locals 4
 
     .prologue
-    .line 631
     iget-object v0, p0, Landroid/telecom/Call$Details;->mHandle:Landroid/net/Uri;
 
     invoke-static {v0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 632
     iget v1, p0, Landroid/telecom/Call$Details;->mHandlePresentation:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1223,20 +1081,16 @@
 
     move-result v1
 
-    .line 631
     add-int/2addr v0, v1
 
-    .line 633
     iget-object v1, p0, Landroid/telecom/Call$Details;->mCallerDisplayName:Ljava/lang/String;
 
     invoke-static {v1}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
 
     move-result v1
 
-    .line 631
     add-int/2addr v0, v1
 
-    .line 634
     iget v1, p0, Landroid/telecom/Call$Details;->mCallerDisplayNamePresentation:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1247,20 +1101,16 @@
 
     move-result v1
 
-    .line 631
     add-int/2addr v0, v1
 
-    .line 635
     iget-object v1, p0, Landroid/telecom/Call$Details;->mAccountHandle:Landroid/telecom/PhoneAccountHandle;
 
     invoke-static {v1}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
 
     move-result v1
 
-    .line 631
     add-int/2addr v0, v1
 
-    .line 636
     iget v1, p0, Landroid/telecom/Call$Details;->mCallCapabilities:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1271,10 +1121,8 @@
 
     move-result v1
 
-    .line 631
     add-int/2addr v0, v1
 
-    .line 637
     iget v1, p0, Landroid/telecom/Call$Details;->mCallProperties:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1285,20 +1133,16 @@
 
     move-result v1
 
-    .line 631
     add-int/2addr v0, v1
 
-    .line 638
     iget-object v1, p0, Landroid/telecom/Call$Details;->mDisconnectCause:Landroid/telecom/DisconnectCause;
 
     invoke-static {v1}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
 
     move-result v1
 
-    .line 631
     add-int/2addr v0, v1
 
-    .line 639
     iget-wide v2, p0, Landroid/telecom/Call$Details;->mCreateTimeMillis:J
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -1309,10 +1153,8 @@
 
     move-result v1
 
-    .line 631
     add-int/2addr v0, v1
 
-    .line 640
     iget-wide v2, p0, Landroid/telecom/Call$Details;->mConnectTimeMillis:J
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -1323,20 +1165,16 @@
 
     move-result v1
 
-    .line 631
     add-int/2addr v0, v1
 
-    .line 641
     iget-object v1, p0, Landroid/telecom/Call$Details;->mGatewayInfo:Landroid/telecom/GatewayInfo;
 
     invoke-static {v1}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
 
     move-result v1
 
-    .line 631
     add-int/2addr v0, v1
 
-    .line 642
     iget v1, p0, Landroid/telecom/Call$Details;->mVideoState:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1347,39 +1185,31 @@
 
     move-result v1
 
-    .line 631
     add-int/2addr v0, v1
 
-    .line 643
     iget-object v1, p0, Landroid/telecom/Call$Details;->mStatusHints:Landroid/telecom/StatusHints;
 
     invoke-static {v1}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
 
     move-result v1
 
-    .line 631
     add-int/2addr v0, v1
 
-    .line 644
     iget-object v1, p0, Landroid/telecom/Call$Details;->mExtras:Landroid/os/Bundle;
 
     invoke-static {v1}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
 
     move-result v1
 
-    .line 631
     add-int/2addr v0, v1
 
-    .line 645
     iget-object v1, p0, Landroid/telecom/Call$Details;->mIntentExtras:Landroid/os/Bundle;
 
     invoke-static {v1}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
 
     move-result v1
 
-    .line 631
     add-int/2addr v0, v1
 
-    .line 630
     return v0
 .end method

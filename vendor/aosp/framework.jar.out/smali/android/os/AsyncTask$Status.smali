@@ -44,37 +44,30 @@
 
     const/4 v2, 0x0
 
-    .line 257
     new-instance v0, Landroid/os/AsyncTask$Status;
 
-    const-string/jumbo v1, "PENDING"
+    const-string v1, "PENDING"
 
     invoke-direct {v0, v1, v2}, Landroid/os/AsyncTask$Status;-><init>(Ljava/lang/String;I)V
 
-    .line 260
     sput-object v0, Landroid/os/AsyncTask$Status;->PENDING:Landroid/os/AsyncTask$Status;
 
-    .line 261
     new-instance v0, Landroid/os/AsyncTask$Status;
 
-    const-string/jumbo v1, "RUNNING"
+    const-string v1, "RUNNING"
 
     invoke-direct {v0, v1, v3}, Landroid/os/AsyncTask$Status;-><init>(Ljava/lang/String;I)V
 
-    .line 264
     sput-object v0, Landroid/os/AsyncTask$Status;->RUNNING:Landroid/os/AsyncTask$Status;
 
-    .line 265
     new-instance v0, Landroid/os/AsyncTask$Status;
 
-    const-string/jumbo v1, "FINISHED"
+    const-string v1, "FINISHED"
 
     invoke-direct {v0, v1, v4}, Landroid/os/AsyncTask$Status;-><init>(Ljava/lang/String;I)V
 
-    .line 268
     sput-object v0, Landroid/os/AsyncTask$Status;->FINISHED:Landroid/os/AsyncTask$Status;
 
-    .line 256
     const/4 v0, 0x3
 
     new-array v0, v0, [Landroid/os/AsyncTask$Status;
@@ -100,7 +93,6 @@
     .locals 0
 
     .prologue
-    .line 256
     .local p0, "this":Landroid/os/AsyncTask$Status;, "Landroid/os/AsyncTask<TParams;TProgress;TResult;>.Status;"
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
@@ -112,7 +104,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 256
     const-class v0, Landroid/os/AsyncTask$Status;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -128,7 +119,6 @@
     .locals 1
 
     .prologue
-    .line 256
     sget-object v0, Landroid/os/AsyncTask$Status;->$VALUES:[Landroid/os/AsyncTask$Status;
 
     return-object v0
