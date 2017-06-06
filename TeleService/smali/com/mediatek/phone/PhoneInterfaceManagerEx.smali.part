@@ -1,0 +1,198 @@
+
+.method private constructor <init>(Lcom/android/phone/PhoneGlobals;Lcom/android/internal/telephony/Phone;)V
+    .locals 2
+    .param p1, "app"    # Lcom/android/phone/PhoneGlobals;
+    .param p2, "phone"    # Lcom/android/internal/telephony/Phone;
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 219
+    invoke-direct {p0}, Lcom/mediatek/internal/telephony/ITelephonyEx$Stub;-><init>()V
+
+    .line 161
+    iput-object v1, p0, Lcom/mediatek/phone/PhoneInterfaceManagerEx;->mAdnInfoThread:Lcom/mediatek/phone/PhoneInterfaceManagerEx$QueryAdnInfoThread;
+
+    .line 164
+    iput-object v1, p0, Lcom/mediatek/phone/PhoneInterfaceManagerEx;->mSimAuthThread:Lcom/mediatek/phone/PhoneInterfaceManagerEx$SimAuth;
+
+    .line 167
+    iput-object v1, p0, Lcom/mediatek/phone/PhoneInterfaceManagerEx;->mOmhOperators:[Ljava/lang/String;
+
+    .line 200
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/mediatek/phone/PhoneInterfaceManagerEx;->mIsEccInProgress:Z
+
+    .line 220
+    iput-object p1, p0, Lcom/mediatek/phone/PhoneInterfaceManagerEx;->mApp:Lcom/android/phone/PhoneGlobals;
+
+    .line 221
+    iput-object p2, p0, Lcom/mediatek/phone/PhoneInterfaceManagerEx;->mPhone:Lcom/android/internal/telephony/Phone;
+
+    .line 222
+    new-instance v0, Lcom/mediatek/phone/PhoneInterfaceManagerEx$MainThreadHandler;
+
+    invoke-direct {v0, p0, v1}, Lcom/mediatek/phone/PhoneInterfaceManagerEx$MainThreadHandler;-><init>(Lcom/mediatek/phone/PhoneInterfaceManagerEx;Lcom/mediatek/phone/PhoneInterfaceManagerEx$MainThreadHandler;)V
+
+    iput-object v0, p0, Lcom/mediatek/phone/PhoneInterfaceManagerEx;->mMainThreadHandler:Lcom/mediatek/phone/PhoneInterfaceManagerEx$MainThreadHandler;
+
+    .line 223
+    invoke-virtual {p0}, Lcom/mediatek/phone/PhoneInterfaceManagerEx;->getUserCustomizedEccList()Landroid/os/Bundle;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/mediatek/phone/PhoneInterfaceManagerEx;->updateUserCustomizedEccList(Landroid/os/Bundle;)Z
+
+    .line 224
+    const-string/jumbo v0, "appops"
+
+    invoke-virtual {p1, v0}, Lcom/android/phone/PhoneGlobals;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/AppOpsManager;
+
+    iput-object v0, p0, Lcom/mediatek/phone/PhoneInterfaceManagerEx;->mAppOps:Landroid/app/AppOpsManager;
+
+    .line 225
+    invoke-static {}, Lcom/android/internal/telephony/SubscriptionController;->getInstance()Lcom/android/internal/telephony/SubscriptionController;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/mediatek/phone/PhoneInterfaceManagerEx;->mSubscriptionController:Lcom/android/internal/telephony/SubscriptionController;
+
+    .line 226
+    invoke-direct {p0}, Lcom/mediatek/phone/PhoneInterfaceManagerEx;->publish()V
+
+    .line 228
+    .line 219
+    return-void
+.end method
+.method public getSubscriberIdForLteDcPhone(I)Ljava/lang/String;
+    .locals 7
+    .param p1, "subId"    # I
+
+    .prologue
+    .line 2396
+    invoke-static {p1}, Landroid/telephony/SubscriptionManager;->getPhoneId(I)I
+
+    move-result v2
+
+    .line 2397
+    .local v2, "phoneId":I
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v6, "getSubscriberIdForLteDcPhone, subId:"
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    const-string/jumbo v6, ", phoneId:"
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v5}, Lcom/mediatek/phone/PhoneInterfaceManagerEx;->log(Ljava/lang/String;)V
+
+    .line 2398
+    const/4 v1, 0x0
+
+    .line 2400
+    .local v1, "imsi":Ljava/lang/String;
+    :try_start_0
+    invoke-static {}, Lcom/android/internal/telephony/uicc/UiccController;->getInstance()Lcom/android/internal/telephony/uicc/UiccController;
+
+    move-result-object v4
+
+    .line 2401
+    .local v4, "uc":Lcom/android/internal/telephony/uicc/UiccController;
+    const/4 v5, 0x1
+
+    invoke-virtual {v4, v2, v5}, Lcom/android/internal/telephony/uicc/UiccController;->getIccRecords(II)Lcom/android/internal/telephony/uicc/IccRecords;
+
+    move-result-object v3
+
+    .line 2402
+    .local v3, "records":Lcom/android/internal/telephony/uicc/IccRecords;
+    if-eqz v3, :cond_0
+
+    .line 2403
+    invoke-virtual {v3}, Lcom/android/internal/telephony/uicc/IccRecords;->getIMSI()Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v1
+
+    .line 2410
+    .end local v1    # "imsi":Ljava/lang/String;
+    .end local v3    # "records":Lcom/android/internal/telephony/uicc/IccRecords;
+    .end local v4    # "uc":Lcom/android/internal/telephony/uicc/UiccController;
+    :goto_0
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v6, "getSubscriberIdForLteDcPhone, imsi of 3gpp:"
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v5}, Lcom/mediatek/phone/PhoneInterfaceManagerEx;->log(Ljava/lang/String;)V
+
+    .line 2411
+    return-object v1
+
+    .line 2405
+    .restart local v1    # "imsi":Ljava/lang/String;
+    .restart local v3    # "records":Lcom/android/internal/telephony/uicc/IccRecords;
+    .restart local v4    # "uc":Lcom/android/internal/telephony/uicc/UiccController;
+    :cond_0
+    :try_start_1
+    const-string/jumbo v5, "getSubscriberIdForLteDcPhone, 3gpp records is null"
+
+    invoke-static {v5}, Lcom/mediatek/phone/PhoneInterfaceManagerEx;->log(Ljava/lang/String;)V
+    :try_end_1
+    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_0
+
+    goto :goto_0
+
+    .line 2407
+    .end local v3    # "records":Lcom/android/internal/telephony/uicc/IccRecords;
+    .end local v4    # "uc":Lcom/android/internal/telephony/uicc/UiccController;
+    :catch_0
+    move-exception v0
+
+    .line 2408
+    .local v0, "e":Ljava/lang/RuntimeException;
+    const-string/jumbo v5, "getSubscriberIdForLteDcPhone, UiccController is not ready"
+
+    invoke-static {v5}, Lcom/mediatek/phone/PhoneInterfaceManagerEx;->log(Ljava/lang/String;)V
+
+    goto :goto_0
+.end method

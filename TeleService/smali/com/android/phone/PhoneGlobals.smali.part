@@ -1,0 +1,662 @@
+
+.method public onCreate()V
+    .locals 14
+
+    .prologue
+    const/4 v13, 0x0
+
+    const/4 v9, 0x0
+
+    .line 403
+    invoke-virtual {p0}, Lcom/android/phone/PhoneGlobals;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v7
+
+    .line 409
+    .local v7, "resolver":Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Lcom/android/phone/PhoneGlobals;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v8
+
+    const v10, 0x1120065
+
+    invoke-virtual {v8, v10}, Landroid/content/res/Resources;->getBoolean(I)Z
+
+    move-result v8
+
+    .line 408
+    sput-boolean v8, Lcom/android/phone/PhoneGlobals;->sVoiceCapable:Z
+
+    .line 415
+    iget-object v8, p0, Lcom/android/phone/PhoneGlobals;->mCM:Lcom/android/internal/telephony/CallManager;
+
+    if-nez v8, :cond_1
+
+    .line 417
+    invoke-static {p0}, Lcom/android/internal/telephony/TelephonyPluginDelegate;->init(Landroid/content/Context;)V
+
+    invoke-static {}, Lcom/android/internal/telephony/TelephonyPluginDelegate;->getInstance()Lcom/android/internal/telephony/TelephonyPluginDelegate;
+
+    move-result-object v8
+
+    invoke-virtual {v8, p0}, Lcom/android/internal/telephony/TelephonyPluginDelegate;->makeDefaultPhones(Landroid/content/Context;)V
+
+    .line 425
+    iget-object v8, p0, Lcom/android/phone/PhoneGlobals;->mHandler:Landroid/os/Handler;
+
+    const/16 v10, 0x15
+
+    invoke-virtual {v8, v10}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    .line 428
+    invoke-static {}, Lcom/android/internal/telephony/CallManager;->getInstance()Lcom/android/internal/telephony/CallManager;
+
+    move-result-object v8
+
+    iput-object v8, p0, Lcom/android/phone/PhoneGlobals;->mCM:Lcom/android/internal/telephony/CallManager;
+
+    .line 429
+    invoke-static {}, Lcom/android/internal/telephony/PhoneFactory;->getPhones()[Lcom/android/internal/telephony/Phone;
+
+    move-result-object v10
+
+    array-length v11, v10
+
+    move v8, v9
+
+    :goto_0
+    if-ge v8, v11, :cond_0
+
+    aget-object v6, v10, v8
+
+    .line 430
+    .local v6, "phone":Lcom/android/internal/telephony/Phone;
+    iget-object v12, p0, Lcom/android/phone/PhoneGlobals;->mCM:Lcom/android/internal/telephony/CallManager;
+
+    invoke-virtual {v12, v6}, Lcom/android/internal/telephony/CallManager;->registerPhone(Lcom/android/internal/telephony/Phone;)Z
+
+    .line 429
+    add-int/lit8 v8, v8, 0x1
+
+    goto :goto_0
+
+    .line 435
+    .end local v6    # "phone":Lcom/android/internal/telephony/Phone;
+    :cond_0
+    invoke-static {p0}, Lcom/android/phone/NotificationMgr;->init(Lcom/android/phone/PhoneGlobals;)Lcom/android/phone/NotificationMgr;
+
+    move-result-object v8
+
+    iput-object v8, p0, Lcom/android/phone/PhoneGlobals;->notificationMgr:Lcom/android/phone/NotificationMgr;
+
+    .line 437
+    iget-object v8, p0, Lcom/android/phone/PhoneGlobals;->mHandler:Landroid/os/Handler;
+
+    const/16 v10, 0xe
+
+    invoke-virtual {v8, v10}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    .line 440
+    new-instance v8, Lcom/android/phone/CdmaPhoneCallState;
+
+    invoke-direct {v8}, Lcom/android/phone/CdmaPhoneCallState;-><init>()V
+
+    iput-object v8, p0, Lcom/android/phone/PhoneGlobals;->cdmaPhoneCallState:Lcom/android/phone/CdmaPhoneCallState;
+
+    .line 441
+    iget-object v8, p0, Lcom/android/phone/PhoneGlobals;->cdmaPhoneCallState:Lcom/android/phone/CdmaPhoneCallState;
+
+    invoke-virtual {v8}, Lcom/android/phone/CdmaPhoneCallState;->CdmaPhoneCallStateInit()V
+
+    .line 444
+    const-string/jumbo v8, "power"
+
+    invoke-virtual {p0, v8}, Lcom/android/phone/PhoneGlobals;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Landroid/os/PowerManager;
+
+    iput-object v8, p0, Lcom/android/phone/PhoneGlobals;->mPowerManager:Landroid/os/PowerManager;
+
+    .line 445
+    iget-object v8, p0, Lcom/android/phone/PhoneGlobals;->mPowerManager:Landroid/os/PowerManager;
+
+    const-string/jumbo v10, "PhoneApp"
+
+    const/16 v11, 0x1a
+
+    invoke-virtual {v8, v11, v10}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
+
+    move-result-object v8
+
+    iput-object v8, p0, Lcom/android/phone/PhoneGlobals;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+
+    .line 447
+    iget-object v8, p0, Lcom/android/phone/PhoneGlobals;->mPowerManager:Landroid/os/PowerManager;
+
+    .line 448
+    const-string/jumbo v10, "PhoneApp"
+
+    .line 447
+    const v11, 0x20000001
+
+    invoke-virtual {v8, v11, v10}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
+
+    move-result-object v8
+
+    iput-object v8, p0, Lcom/android/phone/PhoneGlobals;->mPartialWakeLock:Landroid/os/PowerManager$WakeLock;
+
+    .line 450
+    const-string/jumbo v8, "keyguard"
+
+    invoke-virtual {p0, v8}, Lcom/android/phone/PhoneGlobals;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Landroid/app/KeyguardManager;
+
+    iput-object v8, p0, Lcom/android/phone/PhoneGlobals;->mKeyguardManager:Landroid/app/KeyguardManager;
+
+    .line 455
+    const-string/jumbo v8, "power"
+
+    invoke-static {v8}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+
+    move-result-object v8
+
+    .line 454
+    invoke-static {v8}, Landroid/os/IPowerManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/IPowerManager;
+
+    move-result-object v8
+
+    iput-object v8, p0, Lcom/android/phone/PhoneGlobals;->mPowerManagerService:Landroid/os/IPowerManager;
+
+    .line 459
+    new-instance v8, Landroid/os/UpdateLock;
+
+    const-string/jumbo v10, "phone"
+
+    invoke-direct {v8, v10}, Landroid/os/UpdateLock;-><init>(Ljava/lang/String;)V
+
+    iput-object v8, p0, Lcom/android/phone/PhoneGlobals;->mUpdateLock:Landroid/os/UpdateLock;
+
+    .line 461
+    const-string/jumbo v8, "PhoneApp"
+
+    new-instance v10, Ljava/lang/StringBuilder;
+
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v11, "onCreate: mUpdateLock: "
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v10
+
+    iget-object v11, p0, Lcom/android/phone/PhoneGlobals;->mUpdateLock:Landroid/os/UpdateLock;
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v10
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-static {v8, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 463
+    new-instance v1, Lcom/android/phone/CallLogger;
+
+    invoke-direct {v1, p0}, Lcom/android/phone/CallLogger;-><init>(Lcom/android/phone/PhoneGlobals;)V
+
+    .line 465
+    .local v1, "callLogger":Lcom/android/phone/CallLogger;
+    invoke-static {}, Lcom/android/phone/CallGatewayManager;->getInstance()Lcom/android/phone/CallGatewayManager;
+
+    move-result-object v8
+
+    iput-object v8, p0, Lcom/android/phone/PhoneGlobals;->callGatewayManager:Lcom/android/phone/CallGatewayManager;
+
+    .line 470
+    iget-object v8, p0, Lcom/android/phone/PhoneGlobals;->callGatewayManager:Lcom/android/phone/CallGatewayManager;
+
+    invoke-static {p0, v1, v8}, Lcom/android/phone/CallController;->init(Lcom/android/phone/PhoneGlobals;Lcom/android/phone/CallLogger;Lcom/android/phone/CallGatewayManager;)Lcom/android/phone/CallController;
+
+    move-result-object v8
+
+    iput-object v8, p0, Lcom/android/phone/PhoneGlobals;->callController:Lcom/android/phone/CallController;
+
+    .line 473
+    new-instance v8, Lcom/android/phone/CallStateMonitor;
+
+    iget-object v10, p0, Lcom/android/phone/PhoneGlobals;->mCM:Lcom/android/internal/telephony/CallManager;
+
+    invoke-direct {v8, v10}, Lcom/android/phone/CallStateMonitor;-><init>(Lcom/android/internal/telephony/CallManager;)V
+
+    iput-object v8, p0, Lcom/android/phone/PhoneGlobals;->callStateMonitor:Lcom/android/phone/CallStateMonitor;
+
+    .line 476
+    new-instance v8, Lcom/android/phone/BluetoothManager;
+
+    invoke-direct {v8}, Lcom/android/phone/BluetoothManager;-><init>()V
+
+    iput-object v8, p0, Lcom/android/phone/PhoneGlobals;->bluetoothManager:Lcom/android/phone/BluetoothManager;
+
+    .line 478
+    invoke-static {}, Lcom/android/internal/telephony/PhoneFactory;->getDefaultPhone()Lcom/android/internal/telephony/Phone;
+
+    move-result-object v8
+
+    invoke-static {p0, v8}, Lcom/android/phone/PhoneInterfaceManager;->init(Lcom/android/phone/PhoneGlobals;Lcom/android/internal/telephony/Phone;)Lcom/android/phone/PhoneInterfaceManager;
+
+    move-result-object v8
+
+    iput-object v8, p0, Lcom/android/phone/PhoneGlobals;->phoneMgr:Lcom/android/phone/PhoneInterfaceManager;
+
+    .line 479
+    sget-boolean v8, Lcom/meizu/phone/utils/MzBuildUtils;->IS_MTK:Z
+
+    if-eqz v8, :cond_4
+
+    .line 480
+    invoke-static {}, Lcom/android/internal/telephony/PhoneFactory;->getDefaultPhone()Lcom/android/internal/telephony/Phone;
+
+    move-result-object v8
+
+    invoke-static {p0, v8}, Lcom/mediatek/phone/PhoneInterfaceManagerEx;->init(Lcom/android/phone/PhoneGlobals;Lcom/android/internal/telephony/Phone;)Lcom/mediatek/phone/PhoneInterfaceManagerEx;
+
+    move-result-object v8
+
+    iput-object v8, p0, Lcom/android/phone/PhoneGlobals;->phoneMgrEx:Lcom/mediatek/phone/PhoneInterfaceManagerEx;
+
+    .line 488
+    :goto_1
+    invoke-static {}, Lcom/android/phone/PhoneGlobals;->getPhone()Lcom/android/internal/telephony/Phone;
+
+    move-result-object v8
+
+    invoke-static {p0, v8}, Lcom/android/phone/MzPhoneInterfaceManager;->init(Lcom/android/phone/PhoneGlobals;Lcom/android/internal/telephony/Phone;)Lcom/android/phone/MzPhoneInterfaceManager;
+
+    move-result-object v8
+
+    iput-object v8, p0, Lcom/android/phone/PhoneGlobals;->mMzphoneMgrExt:Lcom/android/phone/MzPhoneInterfaceManager;
+
+    .line 490
+    invoke-static {p0}, Lcom/android/phone/CarrierConfigLoader;->init(Landroid/content/Context;)Lcom/android/phone/CarrierConfigLoader;
+
+    move-result-object v8
+
+    iput-object v8, p0, Lcom/android/phone/PhoneGlobals;->configLoader:Lcom/android/phone/CarrierConfigLoader;
+
+    .line 496
+    invoke-static {}, Lcom/android/internal/telephony/PhoneFactory;->getDefaultPhone()Lcom/android/internal/telephony/Phone;
+
+    move-result-object v8
+
+    iget-object v10, p0, Lcom/android/phone/PhoneGlobals;->callStateMonitor:Lcom/android/phone/CallStateMonitor;
+
+    .line 497
+    iget-object v11, p0, Lcom/android/phone/PhoneGlobals;->bluetoothManager:Lcom/android/phone/BluetoothManager;
+
+    .line 496
+    invoke-static {p0, v8, v1, v10, v11}, Lcom/android/phone/CallNotifier;->init(Lcom/android/phone/PhoneGlobals;Lcom/android/internal/telephony/Phone;Lcom/android/phone/CallLogger;Lcom/android/phone/CallStateMonitor;Lcom/android/phone/BluetoothManager;)Lcom/android/phone/CallNotifier;
+
+    move-result-object v8
+
+    iput-object v8, p0, Lcom/android/phone/PhoneGlobals;->notifier:Lcom/android/phone/CallNotifier;
+
+    .line 500
+    iget-object v8, p0, Lcom/android/phone/PhoneGlobals;->mHandler:Landroid/os/Handler;
+
+    const/4 v10, 0x3
+
+    invoke-static {v8, v10}, Lcom/android/phone/PhoneUtils;->registerIccStatus(Landroid/os/Handler;I)V
+
+    .line 503
+    iget-object v8, p0, Lcom/android/phone/PhoneGlobals;->mCM:Lcom/android/internal/telephony/CallManager;
+
+    iget-object v10, p0, Lcom/android/phone/PhoneGlobals;->mHandler:Landroid/os/Handler;
+
+    const/16 v11, 0x34
+
+    invoke-virtual {v8, v10, v11, v13}, Lcom/android/internal/telephony/CallManager;->registerForMmiComplete(Landroid/os/Handler;ILjava/lang/Object;)V
+
+    .line 506
+    iget-object v8, p0, Lcom/android/phone/PhoneGlobals;->mCM:Lcom/android/internal/telephony/CallManager;
+
+    invoke-static {v8}, Lcom/android/phone/PhoneUtils;->initializeConnectionHandler(Lcom/android/internal/telephony/CallManager;)V
+
+    .line 510
+    new-instance v3, Landroid/content/IntentFilter;
+
+    const-string/jumbo v8, "android.intent.action.AIRPLANE_MODE"
+
+    invoke-direct {v3, v8}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+
+    .line 511
+    .local v3, "intentFilter":Landroid/content/IntentFilter;
+    const-string/jumbo v8, "android.intent.action.ANY_DATA_STATE"
+
+    invoke-virtual {v3, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    .line 512
+    const-string/jumbo v8, "android.intent.action.DOCK_EVENT"
+
+    invoke-virtual {v3, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    .line 513
+    const-string/jumbo v8, "android.intent.action.SIM_STATE_CHANGED"
+
+    invoke-virtual {v3, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    .line 514
+    const-string/jumbo v8, "android.intent.action.RADIO_TECHNOLOGY"
+
+    invoke-virtual {v3, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    .line 515
+    const-string/jumbo v8, "android.intent.action.SERVICE_STATE"
+
+    invoke-virtual {v3, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    .line 516
+    const-string/jumbo v8, "android.intent.action.EMERGENCY_CALLBACK_MODE_CHANGED"
+
+    invoke-virtual {v3, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    .line 517
+    const-string/jumbo v8, "android.media.RINGER_MODE_CHANGED"
+
+    invoke-virtual {v3, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    .line 519
+    const-string/jumbo v8, "android.intent.action.CONFIGURATION_CHANGED"
+
+    invoke-virtual {v3, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    .line 522
+    const-string/jumbo v8, "android.intent.action.ACTION_SUBINFO_RECORD_UPDATED"
+
+    invoke-virtual {v3, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    .line 524
+    const-string/jumbo v8, "android.intent.action.LOCALE_CHANGED"
+
+    invoke-virtual {v3, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    .line 526
+    const-string/jumbo v8, "android.intent.action.MSIM_MODE"
+
+    invoke-virtual {v3, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    .line 527
+    const-string/jumbo v8, "com.android.ims.IMS_STATE_CHANGED"
+
+    invoke-virtual {v3, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    .line 529
+    const-string/jumbo v8, "android.intent.action.MSIM_MODE"
+
+    invoke-virtual {v3, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    .line 530
+    const-string/jumbo v8, "android.intent.action.ACTION_SHUTDOWN_IPO"
+
+    invoke-virtual {v3, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    .line 531
+    const-string/jumbo v8, "android.intent.action.ACTION_PREBOOT_IPO"
+
+    invoke-virtual {v3, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    .line 533
+    iget-object v8, p0, Lcom/android/phone/PhoneGlobals;->mReceiver:Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {p0, v8, v3}, Lcom/android/phone/PhoneGlobals;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    .line 536
+    invoke-static {p0}, Landroid/telephony/SubscriptionManager;->from(Landroid/content/Context;)Landroid/telephony/SubscriptionManager;
+
+    move-result-object v8
+
+    .line 537
+    iget-object v10, p0, Lcom/android/phone/PhoneGlobals;->mOnSubscriptionsChangeListener:Landroid/telephony/SubscriptionManager$OnSubscriptionsChangedListener;
+
+    .line 536
+    invoke-virtual {v8, v10}, Landroid/telephony/SubscriptionManager;->addOnSubscriptionsChangedListener(Landroid/telephony/SubscriptionManager$OnSubscriptionsChangedListener;)V
+
+    .line 538
+    invoke-static {}, Lcom/android/phone/PhoneUtils;->getActiveSubInfoList()Ljava/util/List;
+
+    move-result-object v8
+
+    iput-object v8, p0, Lcom/android/phone/PhoneGlobals;->mSubscriptionInfos:Ljava/util/List;
+
+    .line 541
+    invoke-virtual {p0}, Lcom/android/phone/PhoneGlobals;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v8
+
+    const-string/jumbo v10, "airplane_mode_on"
+
+    invoke-static {v8, v10, v9}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v8
+
+    if-eqz v8, :cond_5
+
+    const/4 v4, 0x1
+
+    .line 543
+    .local v4, "isAirplaneMode":Z
+    :goto_2
+    const-string/jumbo v8, "PhoneApp"
+
+    new-instance v10, Ljava/lang/StringBuilder;
+
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v11, "Notify RadioManager with airplane mode:"
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v10
+
+    invoke-virtual {v10, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v10
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-static {v8, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 545
+    invoke-static {}, Lcom/meizu/phone/api/wrapper/mediatek/RadioManager;->getInstance()Lcom/meizu/phone/api/wrapper/mediatek/RadioManager;
+
+    move-result-object v8
+
+    invoke-virtual {v8, v4}, Lcom/meizu/phone/api/wrapper/mediatek/RadioManager;->notifyAirplaneModeChange(Z)V
+
+    .line 548
+    const v8, 0x7f08001a
+
+    invoke-static {p0, v8, v9}, Landroid/preference/PreferenceManager;->setDefaultValues(Landroid/content/Context;IZ)V
+
+    .line 550
+    const v8, 0x7f080001
+
+    invoke-static {p0, v8, v9}, Landroid/preference/PreferenceManager;->setDefaultValues(Landroid/content/Context;IZ)V
+
+    .line 555
+    iget-object v8, p0, Lcom/android/phone/PhoneGlobals;->mCM:Lcom/android/internal/telephony/CallManager;
+
+    invoke-static {v8}, Lcom/android/phone/PhoneUtils;->setAudioMode(Lcom/android/internal/telephony/CallManager;)V
+
+    .line 558
+    .end local v1    # "callLogger":Lcom/android/phone/CallLogger;
+    .end local v3    # "intentFilter":Landroid/content/IntentFilter;
+    .end local v4    # "isAirplaneMode":Z
+    :cond_1
+    new-instance v8, Lcom/android/phone/OtaUtils$CdmaOtaProvisionData;
+
+    invoke-direct {v8}, Lcom/android/phone/OtaUtils$CdmaOtaProvisionData;-><init>()V
+
+    iput-object v8, p0, Lcom/android/phone/PhoneGlobals;->cdmaOtaProvisionData:Lcom/android/phone/OtaUtils$CdmaOtaProvisionData;
+
+    .line 559
+    new-instance v8, Lcom/android/phone/OtaUtils$CdmaOtaConfigData;
+
+    invoke-direct {v8}, Lcom/android/phone/OtaUtils$CdmaOtaConfigData;-><init>()V
+
+    iput-object v8, p0, Lcom/android/phone/PhoneGlobals;->cdmaOtaConfigData:Lcom/android/phone/OtaUtils$CdmaOtaConfigData;
+
+    .line 560
+    new-instance v8, Lcom/android/phone/OtaUtils$CdmaOtaScreenState;
+
+    invoke-direct {v8}, Lcom/android/phone/OtaUtils$CdmaOtaScreenState;-><init>()V
+
+    iput-object v8, p0, Lcom/android/phone/PhoneGlobals;->cdmaOtaScreenState:Lcom/android/phone/OtaUtils$CdmaOtaScreenState;
+
+    .line 561
+    new-instance v8, Lcom/android/phone/OtaUtils$CdmaOtaInCallScreenUiState;
+
+    invoke-direct {v8}, Lcom/android/phone/OtaUtils$CdmaOtaInCallScreenUiState;-><init>()V
+
+    iput-object v8, p0, Lcom/android/phone/PhoneGlobals;->cdmaOtaInCallScreenUiState:Lcom/android/phone/OtaUtils$CdmaOtaInCallScreenUiState;
+
+    .line 563
+    new-instance v8, Lcom/android/services/telephony/activation/SimActivationManager;
+
+    invoke-direct {v8}, Lcom/android/services/telephony/activation/SimActivationManager;-><init>()V
+
+    iput-object v8, p0, Lcom/android/phone/PhoneGlobals;->simActivationManager:Lcom/android/services/telephony/activation/SimActivationManager;
+
+    .line 566
+    const-string/jumbo v8, "content://icc/adn"
+
+    invoke-static {v8}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v8
+
+    invoke-virtual {v7, v8}, Landroid/content/ContentResolver;->getType(Landroid/net/Uri;)Ljava/lang/String;
+
+    .line 569
+    iput-boolean v9, p0, Lcom/android/phone/PhoneGlobals;->mShouldRestoreMuteOnInCallResume:Z
+
+    .line 575
+    invoke-static {}, Lcom/mediatek/settings/TelephonyUtils;->isHacSupport()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_2
+
+    .line 577
+    invoke-static {}, Lcom/android/phone/PhoneGlobals;->getPhone()Lcom/android/internal/telephony/Phone;
+
+    move-result-object v8
+
+    invoke-interface {v8}, Lcom/android/internal/telephony/Phone;->getContext()Landroid/content/Context;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v8
+
+    .line 578
+    const-string/jumbo v10, "hearing_aid"
+
+    .line 576
+    invoke-static {v8, v10, v9}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v2
+
+    .line 580
+    .local v2, "hac":I
+    const-string/jumbo v8, "audio"
+
+    invoke-virtual {p0, v8}, Lcom/android/phone/PhoneGlobals;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/media/AudioManager;
+
+    .line 581
+    .local v0, "audioManager":Landroid/media/AudioManager;
+    const-string/jumbo v9, "HACSetting"
+
+    .line 582
+    const/4 v8, 0x1
+
+    if-ne v2, v8, :cond_6
+
+    .line 583
+    const-string/jumbo v8, "ON"
+
+    .line 581
+    :goto_3
+    invoke-virtual {v0, v9, v8}, Landroid/media/AudioManager;->setParameter(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 586
+    .end local v0    # "audioManager":Landroid/media/AudioManager;
+    .end local v2    # "hac":I
+    :cond_2
+    invoke-direct {p0}, Lcom/android/phone/PhoneGlobals;->preLoadInCallUi()V
+
+    .line 587
+    sget-boolean v8, Lcom/meizu/phone/utils/MzFeatures;->FEATURE_SUPPORT_WBAMROTA:Z
+
+    if-eqz v8, :cond_3
+
+    .line 588
+    invoke-static {}, Lcom/meizu/phone/MzwbAmrOta;->registerWbAmrOtaObserver()V
+
+    .line 592
+    :cond_3
+    invoke-static {p0}, Lcom/meizu/phone/FlymeTelecomBinderHelper;->initFlymeTelecom(Landroid/content/Context;)V
+
+    .line 400
+    return-void
+
+    .line 483
+    .restart local v1    # "callLogger":Lcom/android/phone/CallLogger;
+    :cond_4
+    invoke-static {}, Lcom/meizu/phone/utils/MzPhoneUtils;->getTelephonyManager()Landroid/telephony/TelephonyManager;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Landroid/telephony/TelephonyManager;->getPhoneCount()I
+
+    move-result v5
+
+    .line 484
+    .local v5, "numPhones":I
+    invoke-static {p0, v5}, Lcom/meizu/phone/MzRadioManager;->init(Landroid/content/Context;I)Lcom/meizu/phone/MzRadioManager;
+
+    goto/16 :goto_1
+
+    .line 541
+    .end local v5    # "numPhones":I
+    .restart local v3    # "intentFilter":Landroid/content/IntentFilter;
+    :cond_5
+    const/4 v4, 0x0
+
+    .restart local v4    # "isAirplaneMode":Z
+    goto/16 :goto_2
+
+    .line 583
+    .end local v1    # "callLogger":Lcom/android/phone/CallLogger;
+    .end local v3    # "intentFilter":Landroid/content/IntentFilter;
+    .end local v4    # "isAirplaneMode":Z
+    .restart local v0    # "audioManager":Landroid/media/AudioManager;
+    .restart local v2    # "hac":I
+    :cond_6
+    const-string/jumbo v8, "OFF"
+
+    goto :goto_3
+.end method
+
