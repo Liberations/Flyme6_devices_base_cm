@@ -118,10 +118,10 @@
 
     iget v3, p0, Lcom/android/server/am/ProcessRecord;->curAdj:I
 
-    if-nez v6, :cond_2
+    if-nez v6, :cond_3
 
     :goto_0
-    if-nez v6, :cond_3
+    if-nez v6, :cond_4
 
     const/4 v5, 0x0
 
@@ -129,14 +129,29 @@
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/shrinker/Shrinker;->setAdj(Landroid/content/pm/ApplicationInfo;IILandroid/content/pm/ApplicationInfo;I)V
 
     :cond_1
-    return-void
+    const-string v0, "com.meizu.flyme.xtemui"
+
+    iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    const/4 v0, 0x2
+
+    iput v0, p0, Lcom/android/server/am/ProcessRecord;->curSchedGroup:I
 
     :cond_2
+    return-void
+
+    :cond_3
     iget-object v4, v6, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
     goto :goto_0
 
-    :cond_3
+    :cond_4
     iget v5, v6, Lcom/android/server/am/ProcessRecord;->pid:I
 
     goto :goto_1
