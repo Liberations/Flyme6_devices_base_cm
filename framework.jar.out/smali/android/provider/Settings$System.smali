@@ -2520,12 +2520,13 @@
     const-string v1, "ringtone_sound_phone_2"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    invoke-static {}, Landroid/provider/Settings$System;->addFlymePublicSettings()V
 
-    sget-object v0, Landroid/provider/Settings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
+    #sget-object v0, Landroid/provider/Settings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
 
-    const-string v1, "power_off_alarm_mode"
+    #const-string v1, "power_off_alarm_mode"
 
-    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    #invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     new-instance v0, Landroid/util/ArraySet;
 
@@ -4760,4 +4761,23 @@
     const/4 v0, 0x0
 
     goto :goto_0
+.end method
+
+.method private static addFlymePublicSettings()V
+    .locals 2
+
+    .prologue
+    sget-object v0, Landroid/provider/Settings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
+
+    const-string v1, "ringtone_sound_phone_1"
+
+    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Landroid/provider/Settings$System;->PUBLIC_SETTINGS:Ljava/util/Set;
+
+    const-string v1, "ringtone_sound_phone_2"
+
+    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    return-void
 .end method
